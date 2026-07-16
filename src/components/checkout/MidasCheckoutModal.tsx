@@ -1547,9 +1547,10 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           </div>
                         </div>
                       </div>
+                      )}
 
                       {/* PayFast - Only for Pakistan */}
-                      {isPakistan && (
+                      {isPakistan && payfastEnabled && (
                         <div className="space-y-0">
                           <div 
                             onClick={() => setSelectedMethod('payfast')}
