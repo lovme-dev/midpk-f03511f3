@@ -208,9 +208,9 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
   // Banners state - loaded from database
   const [mobileBanner, setMobileBanner] = useState<string | null>(null);
   const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [desktopBanner, setDesktopBanner] = useState<string | null>("/images/pubg-desktop-banner-new.jpeg");
+  const [desktopBanner, setDesktopBanner] = useState<string | null>(null);
   const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [charactersImage, setCharactersImage] = useState<string>("/assets/pubg-characters-banner.png");
+  const [charactersImage, setCharactersImage] = useState<string | null>(null);
   const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
   const [bannersLoaded, setBannersLoaded] = useState(false);
   
@@ -742,8 +742,8 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               <div className={`w-full bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80 ${gameBrand === 'BGMI' ? 'h-[100px]' : 'h-[180px]'}`} />
             )}
             
-            {/* PUBG Characters Image - positioned OVER banner like reference - ONLY for PUBG, not BGMI */}
-            {gameBrand !== 'BGMI' && (
+            {/* Characters Image - only show if admin uploaded one */}
+            {gameBrand !== 'BGMI' && charactersImage && (
               <img 
                 src={charactersImage} 
                 alt="PUBG Characters" 
@@ -766,7 +766,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               
               {/* Title and Badges - Always LTR, never translate */}
               <div className="flex flex-col gap-1.5">
-                <h1 className="text-white text-base font-bold tracking-wide drop-shadow-lg">Midasbuy {brandDisplayName} UC Top Up</h1>
+                <h1 className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</h1>
                 <div className="flex items-center gap-1.5">
                   {/* Official Badge - white background with shield icon - thinner like subscribe */}
                   <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
