@@ -18,6 +18,7 @@ import { NotificationSettings } from '@/components/admin/NotificationSettings';
 import { CustomerInquiries } from '@/components/admin/CustomerInquiries';
 import { RevenueAnalytics } from '@/components/admin/RevenueAnalytics';
 import { RedeemCodesManagement } from '@/components/admin/RedeemCodesManagement';
+import PaymentMethodsManagement from '@/components/admin/PaymentMethodsManagement';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
