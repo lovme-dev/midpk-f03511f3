@@ -43,6 +43,7 @@ import {
   ttqPlaceAnOrder,
   ttqIdentify
 } from "@/utils/tiktokTracking";
+import { usePaymentMethodSettings } from "@/hooks/usePaymentMethodSettings";
 
 interface MidasCheckoutModalProps {
   open: boolean;
