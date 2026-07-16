@@ -50,6 +50,7 @@ const sidebarItems = [
   { id: 'orders', label: 'Orders', icon: ShoppingCart },
   { id: 'assets', label: 'Site Assets', icon: Image },
   { id: 'payment', label: 'Payment Settings', icon: CreditCard },
+  { id: 'payment-methods', label: 'Payment Methods', icon: CreditCard },
   { id: 'content', label: 'Content Blocks', icon: Settings },
   { id: 'admins', label: 'Admin Management', icon: Settings },
 ];
