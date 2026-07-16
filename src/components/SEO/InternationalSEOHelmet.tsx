@@ -20,7 +20,7 @@ const InternationalSEOHelmet = ({
   description, 
   keywords, 
   canonicalUrl = "/",
-  ogImage = "/og-image.png",
+  ogImage = "https://www.midasbuy.com.pk/og-image.png",
   ogType = "website",
   structuredData,
   countryCode,
@@ -40,7 +40,7 @@ const InternationalSEOHelmet = ({
   const finalTitle = title || metaData?.meta_title || countrySEOConfig.title;
   const finalDescription = description || metaData?.meta_description || countrySEOConfig.description;
   const finalKeywords = keywords || metaData?.meta_keywords || countrySEOConfig.keywords;
-  const finalOgImage = ogImage !== "/og-image.png" ? ogImage : (metaData?.og_image_url || ogImage);
+  const finalOgImage = (ogImage && ogImage !== "/og-image.png" && ogImage !== "https://www.midasbuy.com.pk/og-image.png") ? ogImage : (metaData?.og_image_url || ogImage);
   
   const fullCanonicalUrl = `${baseUrl}${canonicalUrl}`;
   const fullOgImage = finalOgImage.startsWith('http') ? finalOgImage : `${baseUrl}${finalOgImage}`;

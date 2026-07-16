@@ -21,7 +21,7 @@ const AdvancedSEOHelmet = ({
   description, 
   keywords, 
   canonicalUrl,
-  ogImage = "/og-image.png",
+  ogImage = "https://www.midasbuy.com.pk/og-image.png",
   ogType = "website",
   structuredData,
   productStructuredData,
