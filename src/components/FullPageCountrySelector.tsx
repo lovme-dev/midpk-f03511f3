@@ -235,9 +235,14 @@ const FullPageCountrySelector = ({
                                   : "bg-[#2a3248] border-2 border-transparent hover:border-gray-600"
                               )}
                             >
-                              <span className="text-xl md:text-2xl flex-shrink-0 select-none">
-                                {getFlag(country.code)}
-                              </span>
+                              <img
+                                src={`https://flagcdn.com/w40/${country.code.toLowerCase()}.png`}
+                                srcSet={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png 2x`}
+                                alt={country.name}
+                                loading="lazy"
+                                className="w-6 h-4 md:w-8 md:h-6 object-cover rounded-[2px] flex-shrink-0"
+                                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                              />
                               <span className="text-white text-xs md:text-sm font-medium truncate">
                                 {country.name}
                               </span>
