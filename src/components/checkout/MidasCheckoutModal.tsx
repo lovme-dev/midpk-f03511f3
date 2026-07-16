@@ -1479,6 +1479,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                    {/* Payment Methods */}
                    <div className="px-4 space-y-3 md:px-0">
                       {/* Credit Card / Global Payment */}
+                      {cardEnabled && (
                       <div 
                         onClick={() => setSelectedMethod('card')}
                         className={`relative rounded-xl p-4 pt-6 transition-all duration-200 border-[1.5px] overflow-hidden cursor-pointer ${
