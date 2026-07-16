@@ -766,7 +766,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               
               {/* Title and Badges - Always LTR, never translate */}
               <div className="flex flex-col gap-1.5">
-                <h1 className="text-white text-base font-bold tracking-wide drop-shadow-lg">Midasbuy {brandDisplayName} UC Top Up</h1>
+                <h1 className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</h1>
                 <div className="flex items-center gap-1.5">
                   {/* Official Badge - white background with shield icon - thinner like subscribe */}
                   <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
