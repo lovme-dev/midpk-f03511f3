@@ -1693,8 +1693,15 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           </div>
                         )}
                       </div>
+                      )}
+                      {!cardEnabled && !payfastEnabled && !binanceEnabled && (
+                        <div className="text-center text-gray-400 text-sm py-8 border border-dashed border-[#2a3042] rounded-xl">
+                          {t('checkout.noMethods', 'All payment methods are currently disabled. Please check back soon.')}
+                        </div>
+                      )}
                    </div>
                 </div>
+
 
                 {/* RIGHT COLUMN (Order Summary) - Desktop Only */}
                 <div className="hidden md:block w-[400px] shrink-0">
