@@ -28,16 +28,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   // Try to get cached session from localStorage immediately for faster initial render
   const getCachedSession = (): { user: User | null; session: Session | null } => {
     try {
-      const stored = localStorage.getItem('sb-vecburzoqlivoctpkdhk-auth-token');
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const storageKey = projectId ? `sb-${projectId}-auth-token` : null;
+      if (!storageKey) return { user: null, session: null };
+      const stored = localStorage.getItem(storageKey);
       if (stored) {
         const parsed = JSON.parse(stored);
         if (parsed?.user && parsed?.access_token) {
-          // Check if token is not expired (with 60 second buffer)
           const expiresAt = parsed.expires_at;
           if (expiresAt && expiresAt * 1000 > Date.now() + 60000) {
-            return { 
-              user: parsed.user as User, 
-              session: parsed as Session 
+            return {
+              user: parsed.user as User,
+              session: parsed as Session,
             };
           }
         }
