@@ -1,0 +1,20 @@
+ALTER TABLE public.site_banners
+  ADD COLUMN IF NOT EXISTS description TEXT,
+  ADD COLUMN IF NOT EXISTS device_type TEXT,
+  ADD COLUMN IF NOT EXISTS display_order INTEGER DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS position_x NUMERIC DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS position_y NUMERIC DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS zoom_level NUMERIC DEFAULT 100,
+  ADD COLUMN IF NOT EXISTS light_intensity NUMERIC DEFAULT 45,
+  ADD COLUMN IF NOT EXISTS light_color TEXT DEFAULT '#003C78',
+  ADD COLUMN IF NOT EXISTS light_spread NUMERIC DEFAULT 70,
+  ADD COLUMN IF NOT EXISTS light_enabled BOOLEAN DEFAULT true;
+
+UPDATE public.site_banners
+SET display_order = COALESCE(display_order, sort_order, 0)
+WHERE display_order IS NULL;
+
+ALTER TABLE public.inquiry_email_log
+  ADD COLUMN IF NOT EXISTS customer_email TEXT,
+  ADD COLUMN IF NOT EXISTS template_type TEXT,
+  ADD COLUMN IF NOT EXISTS sent_by UUID;
