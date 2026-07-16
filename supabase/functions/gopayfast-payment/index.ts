@@ -60,6 +60,27 @@ serve(async (req) => {
   }
 
   try {
+    // Server-side kill switch: check payment_method_settings
+    try {
+      const sbUrl = Deno.env.get("SUPABASE_URL");
+      const sbKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+      if (sbUrl && sbKey) {
+        const admin = createClient(sbUrl, sbKey);
+        const { data: pm } = await admin
+          .from("payment_method_settings")
+          .select("enabled")
+          .in("method_key", ["gopayfast", "paypro"])
+          .eq("enabled", true)
+          .limit(1);
+        if (!pm || pm.length === 0) {
+          return new Response(
+            JSON.stringify({ success: false, error: "This payment method is currently disabled by the admin." }),
+            { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          );
+        }
+      }
+    } catch (_e) { /* fail-open on lookup error */ }
+
     const merchantId = Deno.env.get("GOPAYFAST_MERCHANT_ID");
     const securedKey = Deno.env.get("GOPAYFAST_SECURED_KEY");
 
