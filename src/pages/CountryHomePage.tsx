@@ -21,7 +21,7 @@ const CountryHomePage = ({ onLogout = () => {} }: CountryHomePageProps) => {
   // Get base SEO data
   const baseSeoConfig = COUNTRY_SEO_CONFIGS[upperCountryCode] || COUNTRY_SEO_CONFIGS.GLOBAL;
   
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const canonicalUrl = `/midasbuy/${countryCode?.toLowerCase()}`;
   
   // Generate all alternate URLs for hreflang

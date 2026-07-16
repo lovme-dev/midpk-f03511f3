@@ -93,15 +93,15 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
     'BGMI new update UC', 'BGMI latest UC', 'BGMI trending 2026', 'BGMI 3.0 UC'
   ].join(', ');
   
-  const canonicalUrl = 'https://www.middasbuy.com/bgmi';
+  const canonicalUrl = 'https://www.midasbuy.com.pk/bgmi';
   
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/bgmi",
-        "url": "https://www.middasbuy.com/bgmi",
+        "@id": "https://www.midasbuy.com.pk/bgmi",
+        "url": "https://www.midasbuy.com.pk/bgmi",
         "name": title,
         "description": description,
         "inLanguage": "en-IN",
@@ -109,9 +109,9 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
         "dateModified": "2026-01-01",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com",
+          "@id": "https://www.midasbuy.com.pk",
           "name": "Midasbuy",
-          "url": "https://www.middasbuy.com"
+          "url": "https://www.midasbuy.com.pk"
         },
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -120,13 +120,13 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.middasbuy.com"
+              "item": "https://www.midasbuy.com.pk"
             },
             {
               "@type": "ListItem", 
               "position": 2,
               "name": "BGMI UC",
-              "item": "https://www.middasbuy.com/bgmi"
+              "item": "https://www.midasbuy.com.pk/bgmi"
             }
           ]
         }
@@ -261,7 +261,7 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
         }
       ].map((pkg) => ({
         "@type": "Product",
-        "@id": `https://middasbuy.com/bgmi/purchase/${pkg.id}#product`,
+        "@id": `https://midasbuy.com.pk/bgmi/purchase/${pkg.id}#product`,
         "name": `BGMI ${pkg.baseAmount} UC ${pkg.bonusAmount > 0 ? `+${pkg.bonusAmount} Bonus` : ''}`,
         "description": `Buy ${pkg.baseAmount} UC ${pkg.bonusAmount > 0 ? `with ${pkg.bonusAmount} bonus UC` : ''} for Battlegrounds Mobile India (BGMI) at best price. Instant delivery with secure payment.`,
         "image": pkg.image,
@@ -274,7 +274,7 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
         "category": "Video Game Currency",
         "offers": {
           "@type": "Offer",
-          "url": `https://middasbuy.com/bgmi/purchase/${pkg.id}`,
+          "url": `https://midasbuy.com.pk/bgmi/purchase/${pkg.id}`,
           "priceCurrency": "INR",
           "price": (pkg.price / 280 * 83).toFixed(0), // Convert PKR to INR
           "priceValidUntil": "2026-12-31",
@@ -299,10 +299,10 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
       })),
       {
         "@type": "LocalBusiness",
-        "@id": "https://middasbuy.com#localbusiness", 
+        "@id": "https://midasbuy.com.pk#localbusiness", 
         "name": "Midasbuy BGMI UC Store",
         "description": "India's #1 BGMI UC Store - Buy BGMI Unknown Cash at lowest prices with instant delivery",
-        "url": "https://middasbuy.com/bgmi",
+        "url": "https://midasbuy.com.pk/bgmi",
         "telephone": "+44 7476 966269",
         "email": "help@midasbuy.com.co",
         "address": {
@@ -328,7 +328,7 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
       },
       {
         "@type": "FAQ",
-        "@id": "https://middasbuy.com/bgmi#faq",
+        "@id": "https://midasbuy.com.pk/bgmi#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -366,10 +366,10 @@ const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
       },
       {
         "@type": "Organization",
-        "@id": "https://www.middasbuy.com#organization",
+        "@id": "https://www.midasbuy.com.pk#organization",
         "name": "Midasbuy",
-        "url": "https://www.middasbuy.com",
-        "logo": "https://www.middasbuy.com/og-image.png",
+        "url": "https://www.midasbuy.com.pk",
+        "logo": "https://www.midasbuy.com.pk/og-image.png",
         "foundingDate": "2020",
         "sameAs": [
           "https://www.facebook.com/midasbuy",

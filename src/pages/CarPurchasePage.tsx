@@ -39,22 +39,22 @@ const CarPurchasePage = ({ onLogout, disableSeo = false }: CarPurchasePageProps)
     "@graph": [
       {
         "@type": "Store",
-        "@id": `https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car#store`,
+        "@id": `https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car#store`,
         "name": `Midasbuy PUBG Car Skins Store ${countryData.name}`,
         "description": `Official store for PUBG Mobile premium car skins in ${countryData.name}`,
-        "url": `https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`,
+        "url": `https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`,
         "parentOrganization": {
-          "@id": "https://www.middasbuy.com/#organization"
+          "@id": "https://www.midasbuy.com.pk/#organization"
         }
       },
       {
         "@type": "WebPage",
-        "@id": `https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car#webpage`,
-        "url": `https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`,
+        "@id": `https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car#webpage`,
+        "url": `https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`,
         "name": seoTitle,
         "description": seoDescription,
         "isPartOf": {
-          "@id": "https://www.middasbuy.com/#website"
+          "@id": "https://www.midasbuy.com.pk/#website"
         },
         "about": {
           "@type": "Thing",
@@ -129,21 +129,21 @@ const CarPurchasePage = ({ onLogout, disableSeo = false }: CarPurchasePageProps)
           <meta name="description" content={seoDescription} />
           <meta name="keywords" content={seoKeywords} />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href={`https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`} />
+          <link rel="canonical" href={`https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`} />
           
           {/* Open Graph Tags */}
           <meta property="og:title" content={seoTitle} />
           <meta property="og:description" content={seoDescription} />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content={`https://www.middasbuy.com/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`} />
-          <meta property="og:image" content="https://www.middasbuy.com/lovable-uploads/porsche-cayenne-red.jpeg" />
+          <meta property="og:url" content={`https://www.midasbuy.com.pk/midasbuy/${countryCode?.toLowerCase() || 'us'}/buy/car`} />
+          <meta property="og:image" content="https://www.midasbuy.com.pk/lovable-uploads/porsche-cayenne-red.jpeg" />
           <meta property="og:site_name" content="Midasbuy Official Store" />
           
           {/* Twitter Cards */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={seoTitle} />
           <meta name="twitter:description" content={seoDescription} />
-          <meta name="twitter:image" content="https://www.middasbuy.com/lovable-uploads/porsche-cayenne-red.jpeg" />
+          <meta name="twitter:image" content="https://www.midasbuy.com.pk/lovable-uploads/porsche-cayenne-red.jpeg" />
           
           {/* Additional SEO Tags */}
           <meta name="theme-color" content="#1E40AF" />

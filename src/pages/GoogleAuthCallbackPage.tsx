@@ -62,7 +62,7 @@ const GoogleAuthCallbackPage = () => {
         // Verify session and redirect to home page on current domain
         const { data } = await supabase.auth.getSession();
         if (data.session) {
-          // Redirect to home page - this will be on the current domain (e.g., middasbuy.com)
+          // Redirect to home page - this will be on the current domain (e.g., midasbuy.com.pk)
           navigate("/", { replace: true });
         } else if (!errorMsg) {
           setErrorMsg("Login session could not be established. Please try again.");

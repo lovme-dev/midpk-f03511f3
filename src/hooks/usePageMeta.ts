@@ -26,7 +26,7 @@ export const usePageMeta = (pathOrPageId: string) => {
             meta_title: localMetadata.title,
             meta_description: localMetadata.description,
             meta_keywords: localMetadata.keywords.join(', '),
-            canonical_url: `https://middasbuy.com${localMetadata.url}`,
+            canonical_url: `https://midasbuy.com.pk${localMetadata.url}`,
             og_image_url: undefined, // Can be added to UrlMetadata interface if needed
           });
           setIsLoading(false);

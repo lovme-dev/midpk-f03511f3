@@ -453,7 +453,7 @@ export const getCountrySEOConfig = (countryCode?: string): CountrySEOConfig => {
 
 // Generate simplified hreflang tags (only for main markets to avoid spam)
 export const getHreflangTags = (canonicalUrl: string) => {
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const mainMarkets = ["PK", "IN", "US", "GB", "DE", "FR", "TR", "SA", "AU"]; // Only major markets
 
   const hreflangTags = mainMarkets.map((country) => {
@@ -479,7 +479,7 @@ export const getInternationalStructuredData = (config: CountrySEOConfig, canonic
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Midasbuy Official",
-    url: `https://www.middasbuy.com${canonicalUrl}`,
+    url: `https://www.midasbuy.com.pk${canonicalUrl}`,
     description: config.description,
     inLanguage: config.language,
     author: {
@@ -488,7 +488,7 @@ export const getInternationalStructuredData = (config: CountrySEOConfig, canonic
     },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://www.middasbuy.com/search?q={search_term_string}",
+      target: "https://www.midasbuy.com.pk/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

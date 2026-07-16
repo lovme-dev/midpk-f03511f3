@@ -1,5 +1,5 @@
 // Complete country to currency mapping for 176+ countries
-// Based on sitemap: https://www.middasbuy.com/sitemap_countries_pubg.xml
+// Based on sitemap: https://www.midasbuy.com.pk/sitemap_countries_pubg.xml
 
 export interface CountryConfig {
   name: string;

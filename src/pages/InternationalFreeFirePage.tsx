@@ -36,15 +36,15 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
     'Battle Royale game currency'
   ].join(', ');
   
-  const canonicalUrl = 'https://www.middasbuy.com/midasbuy/buy/freefire';
+  const canonicalUrl = 'https://www.midasbuy.com.pk/midasbuy/buy/freefire';
   
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/freefire",
-        "url": "https://www.middasbuy.com/midasbuy/buy/freefire",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/freefire",
+        "url": "https://www.midasbuy.com.pk/midasbuy/buy/freefire",
         "name": title,
         "description": description,
         "inLanguage": "en-US",
@@ -52,9 +52,9 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
         "dateModified": "2026-01-01",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com",
+          "@id": "https://www.midasbuy.com.pk",
           "name": "Midasbuy",
-          "url": "https://www.middasbuy.com"
+          "url": "https://www.midasbuy.com.pk"
         },
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -63,31 +63,31 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.middasbuy.com"
+              "item": "https://www.midasbuy.com.pk"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Free Fire Diamonds",
-              "item": "https://www.middasbuy.com/midasbuy/buy/freefire"
+              "item": "https://www.midasbuy.com.pk/midasbuy/buy/freefire"
             }
           ]
         }
       },
       {
         "@type": "Product",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/freefire#product",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/freefire#product",
         "name": "Free Fire Diamonds",
         "description": description,
         "image": [
-          "https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
-          "https://www.middasbuy.com/lovable-uploads/139a3a0d-82c6-4a5f-b365-f5d25aa75dee.png"
+          "https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
+          "https://www.midasbuy.com.pk/lovable-uploads/139a3a0d-82c6-4a5f-b365-f5d25aa75dee.png"
         ],
         "brand": {
           "@type": "Brand",
           "name": "Garena",
           "alternateName": "Free Fire",
-          "logo": "https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
+          "logo": "https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
           "identifier": "Midasbuy"
         },
         "category": "Video Game Currency",
@@ -106,8 +106,8 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
             "name": "Midasbuy",
             "legalName": "Midasbuy",
             "identifier": "Midasbuy",
-            "url": "https://www.middasbuy.com",
-            "logo": "https://www.middasbuy.com/og-image.png"
+            "url": "https://www.midasbuy.com.pk",
+            "logo": "https://www.midasbuy.com.pk/og-image.png"
           }
         },
         "aggregateRating": {
@@ -164,7 +164,7 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
       },
       {
         "@type": "FAQ",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/freefire#faq",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/freefire#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -202,12 +202,12 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
       },
       {
         "@type": "Organization",
-        "@id": "https://www.middasbuy.com#organization",
+        "@id": "https://www.midasbuy.com.pk#organization",
         "name": "Midasbuy",
         "legalName": "Midasbuy",
         "identifier": "Midasbuy",
-        "url": "https://www.middasbuy.com",
-        "logo": "https://www.middasbuy.com/og-image.png",
+        "url": "https://www.midasbuy.com.pk",
+        "logo": "https://www.midasbuy.com.pk/og-image.png",
         "foundingDate": "2020",
         "sameAs": [
           "https://www.facebook.com/midasbuy",
@@ -219,7 +219,7 @@ const InternationalFreeFirePage: React.FC<InternationalFreeFirePageProps> = ({ o
             "@type": "ContactPoint",
             "contactType": "customer service",
             "availableLanguage": ["English"],
-            "email": "support@middasbuy.com"
+            "email": "support@midasbuy.com.pk"
           }
         ]
       }

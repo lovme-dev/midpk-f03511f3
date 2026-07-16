@@ -67,14 +67,14 @@ const ContactUsPage = ({ onLogout }: ContactUsPageProps) => {
         title="Contact Midasbuy - 24/7 Customer Support | PUBG UC Help"
         description="Get instant help from Midasbuy support for PUBG Mobile UC and Free Fire orders. 24/7 WhatsApp and email assistance with fast response."
         keywords="Midasbuy contact, customer support, PUBG UC help, gaming credits support, WhatsApp support, 24/7 support, contact Midasbuy, gaming help"
-        canonicalUrl="https://www.middasbuy.com/contact-us"
+        canonicalUrl="https://www.midasbuy.com.pk/contact-us"
         ogType="website"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: "Contact Midasbuy",
           description: "Get instant help from Midasbuy support team for PUBG Mobile UC and gaming credits",
-          url: "https://www.middasbuy.com/contact-us",
+          url: "https://www.midasbuy.com.pk/contact-us",
         }}
       />
       <Header onLogout={onLogout} />

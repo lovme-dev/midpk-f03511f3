@@ -23,7 +23,7 @@ const CouponsPage = ({ onLogout }: CouponsPageProps) => {
       <Helmet>
         <title>My Coupons | Discount Codes for PUBG UC & Gaming Currency | Midasbuy</title>
         <meta name="description" content="View and redeem your Midasbuy coupons for discounts on PUBG UC, Free Fire diamonds, Roblox Robux, and more gaming currencies. Get exclusive deals and save more." />
-        <link rel="canonical" href="https://www.middasbuy.com/coupons" />
+        <link rel="canonical" href="https://www.midasbuy.com.pk/coupons" />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
       </Helmet>

@@ -27,7 +27,7 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
   
   useCurrencyFromURL();
   
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const canonicalUrl = `/midasbuy/${normalizedCountryCode}/buy/pubgm`;
 
   const interpVars = {

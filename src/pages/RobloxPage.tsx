@@ -263,25 +263,25 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/roblox#webpage",
-        "url": "https://www.middasbuy.com/roblox",
+        "@id": "https://www.midasbuy.com.pk/roblox#webpage",
+        "url": "https://www.midasbuy.com.pk/roblox",
         "name": "Midasbuy - Roblox Robux Store",
         "description": "Buy Roblox Robux instantly at the best prices. Official Roblox Robux top up service with secure payments and instant delivery.",
         "inLanguage": "en",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com/#website",
+          "@id": "https://www.midasbuy.com.pk/#website",
           "name": "Midasbuy"
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.middasbuy.com/#website",
+        "@id": "https://www.midasbuy.com.pk/#website",
         "name": "Midasbuy",
-        "url": "https://www.middasbuy.com",
+        "url": "https://www.midasbuy.com.pk",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://www.middasbuy.com/search?q={search_term_string}",
+          "target": "https://www.midasbuy.com.pk/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         },
         "publisher": {
@@ -289,13 +289,13 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
           "name": "Midasbuy",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.middasbuy.com/og-image.png"
+            "url": "https://www.midasbuy.com.pk/og-image.png"
           }
         }
       },
       ...robuxPackages.map((pkg) => ({
         "@type": "Product",
-        "@id": `https://www.middasbuy.com/roblox/purchase/${pkg.id}#product`,
+        "@id": `https://www.midasbuy.com.pk/roblox/purchase/${pkg.id}#product`,
         "name": `Roblox ${pkg.baseAmount} Robux ${pkg.bonusAmount > 0 ? `+${pkg.bonusAmount} Bonus` : ''}`,
         "description": `Buy ${pkg.baseAmount} Robux ${pkg.bonusAmount > 0 ? `with ${pkg.bonusAmount} bonus Robux` : ''} for Roblox at best price. Instant delivery with secure payment.`,
         "image": pkg.image,
@@ -306,7 +306,7 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://www.middasbuy.com/roblox/purchase/${pkg.id}`,
+          "url": `https://www.midasbuy.com.pk/roblox/purchase/${pkg.id}`,
           "priceCurrency": "PKR",
           "price": pkg.price,
           "priceValidUntil": "2026-12-31",
@@ -374,7 +374,7 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
     description: "Midasbuy Official - Trusted gaming store for authentic Roblox Robux. Trusted by 10M+ gamers worldwide with instant delivery and secure payments.",
     price: "1.99",
     currency: "USD",
-    image: "https://middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
+    image: "https://midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
     category: "Gaming Currency"
   });
 
@@ -431,7 +431,7 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
           description="⚡ Buy Roblox Robux at the CHEAPEST prices! 💎 Get up to 55% OFF + Bonus Robux on every purchase. ✅ Instant 2-min delivery | 🔒 100% Secure | Trusted by 5M+ Roblox players worldwide. Official Midasbuy Robux Store - #1 Choice for Roblox Currency!"
           keywords={robloxSeoKeywords}
           canonicalUrl="/roblox"
-          ogImage="https://middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
+          ogImage="https://midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
           jsonLdSchema={[enhancedStructuredData, getRobloxMerchantSchema()]}
           breadcrumbSchema={generateBreadcrumbSchema([
             { name: "Home", url: "/" },

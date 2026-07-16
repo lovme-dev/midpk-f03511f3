@@ -44,8 +44,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Midasbuy Official - #1 PUBG Mobile UC Store | Buy PUBG UC Cheapest Price Worldwide',
       metaDescription: '⚡ #1 Official Midasbuy PUBG Mobile UC Store - Buy PUBG UC at lowest prices worldwide | Instant delivery in 2 minutes | 100% secure payments | Trusted by 10M+ PUBG Mobile players',
       metaKeywords: 'pubg mobile uc, buy pubg uc, pubg uc store, midasbuy pubg, pubg mobile, pubg uc cheap, pubg uc instant delivery, pubg unknown cash, buy pubg mobile uc, pubg uc official store, pubg uc best price',
-      canonicalUrl: 'https://www.middasbuy.com/',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'pubg-mobile',
@@ -56,8 +56,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Buy PUBG Mobile UC Cheap & Safe - Instant Delivery | Midasbuy Official Store',
       metaDescription: 'Buy PUBG Mobile UC at lowest prices with instant delivery. 100% safe transactions, 24/7 support. Get your PUBG UC now from official Midasbuy store.',
       metaKeywords: 'PUBG Mobile UC, buy PUBG UC, cheap PUBG UC, instant PUBG UC, PUBG Mobile currency',
-      canonicalUrl: 'https://www.middasbuy.com/pubg-mobile',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/pubg-mobile',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'free-fire', 
@@ -68,8 +68,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Buy Free Fire Diamonds Cheap - Instant Delivery | Midasbuy Official',
       metaDescription: 'Buy Free Fire Diamonds at best prices with instant delivery. Safe & secure payments, 24/7 customer support. Get your diamonds now!',
       metaKeywords: 'Free Fire Diamonds, buy FF diamonds, cheap Free Fire diamonds, instant diamonds',
-      canonicalUrl: 'https://www.middasbuy.com/free-fire',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/free-fire',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'bgmi', 
@@ -80,8 +80,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Buy BGMI UC - Battlegrounds Mobile India Unknown Cash | Midasbuy',
       metaDescription: 'Buy BGMI UC at lowest prices in India - From ₹83 only with instant delivery. Safe payments, 24/7 support for BGMI Unknown Cash.',
       metaKeywords: 'BGMI UC, BGMI Unknown Cash, buy BGMI UC, cheap BGMI UC, India BGMI UC',
-      canonicalUrl: 'https://www.middasbuy.com/bgmi',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/5b1c2388-538d-4898-9cfa-21f6551e25ef.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/bgmi',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/5b1c2388-538d-4898-9cfa-21f6551e25ef.png'
     },
     { 
       id: 'gaming-shop', 
@@ -92,8 +92,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Gaming Shop - Buy Gaming Currency for All Games | Midasbuy Store',
       metaDescription: 'Your one-stop gaming shop for all popular games. Buy PUBG UC, Free Fire Diamonds, BGMI UC and more with instant delivery.',
       metaKeywords: 'gaming shop, gaming currency, buy gaming items, PUBG, Free Fire, BGMI',
-      canonicalUrl: 'https://www.middasbuy.com/gaming-shop',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/gaming-shop',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'honor-of-kings', 
@@ -104,8 +104,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Buy Honor of Kings Tokens & Items - Best Prices | Midasbuy',
       metaDescription: 'Get Honor of Kings tokens and premium items at best prices. Secure payments, instant delivery, 24/7 support.',
       metaKeywords: 'Honor of Kings, HOK tokens, Honor of Kings items, buy HOK currency',
-      canonicalUrl: 'https://www.middasbuy.com/honor-of-kings',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/honor-of-kings',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'pubg-accounts', 
@@ -116,8 +116,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Buy PUBG Mobile Accounts - Premium Accounts for Sale | Midasbuy',
       metaDescription: 'Buy premium PUBG Mobile accounts with rare skins, high tiers & exclusive items. Safe & secure account marketplace.',
       metaKeywords: 'PUBG accounts, buy PUBG account, PUBG Mobile accounts, premium PUBG accounts',
-      canonicalUrl: 'https://www.middasbuy.com/pubg-accounts',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/pubg-accounts',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'about-midasbuy', 
@@ -128,8 +128,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'About Midasbuy - Leading Gaming Currency Provider Since 2019',
       metaDescription: 'Learn about Midasbuy - trusted by 10M+ gamers worldwide. Our mission is to provide safe, instant gaming currency for all popular games.',
       metaKeywords: 'about midasbuy, gaming currency provider, trusted gaming store, midasbuy history',
-      canonicalUrl: 'https://www.middasbuy.com/about-midasbuy',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/about-midasbuy',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'help-center', 
@@ -140,8 +140,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Help Center - Customer Support & FAQ | Midasbuy',
       metaDescription: 'Get help with your orders, payments, and account. 24/7 customer support, comprehensive FAQ, and troubleshooting guides.',
       metaKeywords: 'midasbuy help, customer support, FAQ, payment help, order support',
-      canonicalUrl: 'https://www.middasbuy.com/help-center',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/help-center',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'contact-us', 
@@ -152,8 +152,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Contact Midasbuy - 24/7 Customer Support & Help',
       metaDescription: 'Contact Midasbuy customer support team. Live chat, email support, WhatsApp - we\'re here to help 24/7 with all your gaming needs.',
       metaKeywords: 'contact midasbuy, customer support, live chat, help, gaming support',
-      canonicalUrl: 'https://www.middasbuy.com/contact-us',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/contact-us',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'faqs', 
@@ -164,8 +164,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'FAQ - Frequently Asked Questions | Midasbuy Gaming Store',
       metaDescription: 'Find answers to common questions about buying gaming currency, payments, delivery times, and account safety at Midasbuy.',
       metaKeywords: 'midasbuy FAQ, gaming currency questions, payment FAQ, delivery questions',
-      canonicalUrl: 'https://www.middasbuy.com/faqs',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/faqs',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'terms-of-service', 
@@ -176,8 +176,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Terms of Service - Midasbuy Gaming Store Legal Terms',
       metaDescription: 'Read Midasbuy terms of service, user agreement, and conditions for using our gaming currency store and services.',
       metaKeywords: 'midasbuy terms, terms of service, user agreement, legal terms',
-      canonicalUrl: 'https://www.middasbuy.com/terms-of-service',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/terms-of-service',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'refund-policy', 
@@ -188,8 +188,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Refund Policy - Returns & Refunds | Midasbuy Gaming Store',
       metaDescription: 'Learn about Midasbuy refund policy, return process, and conditions for gaming currency purchases and digital products.',
       metaKeywords: 'midasbuy refund, return policy, gaming currency refund, digital refunds',
-      canonicalUrl: 'https://www.middasbuy.com/refund-policy',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/refund-policy',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'payment-issues', 
@@ -200,8 +200,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Payment Issues & Solutions - Troubleshooting | Midasbuy Help',
       metaDescription: 'Resolve payment issues quickly. Get help with failed payments, refunds, and billing problems for your gaming purchases.',
       metaKeywords: 'payment issues, payment failed, billing problems, transaction help, payment support',
-      canonicalUrl: 'https://www.middasbuy.com/payment-issues',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/payment-issues',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'security', 
@@ -212,8 +212,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Security & Privacy Policy - Safe Gaming Transactions | Midasbuy',
       metaDescription: 'Learn about Midasbuy security measures, privacy policy, and how we protect your gaming transactions and personal data.',
       metaKeywords: 'midasbuy security, privacy policy, safe transactions, data protection, secure gaming',
-      canonicalUrl: 'https://www.middasbuy.com/security',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/security',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'careers', 
@@ -224,8 +224,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Careers at Midasbuy - Join Our Gaming Technology Team',
       metaDescription: 'Join Midasbuy team! Explore career opportunities in gaming industry. We\'re hiring talented professionals to build the future of gaming.',
       metaKeywords: 'midasbuy careers, gaming jobs, tech jobs, join midasbuy, gaming industry careers',
-      canonicalUrl: 'https://www.middasbuy.com/careers',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/careers',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'press', 
@@ -236,8 +236,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Midasbuy Official Press Releases',
       metaDescription: 'Access Midasbuy press releases, media kit, company news, and media resources for journalists and partners.',
       metaKeywords: 'midasbuy press, media kit, company news, press releases, gaming news',
-      canonicalUrl: 'https://www.middasbuy.com/press',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/press',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'partners', 
@@ -248,8 +248,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Partners & Affiliates - Join Midasbuy Partnership Program',
       metaDescription: 'Become a Midasbuy partner! Explore partnership opportunities, affiliate programs, and business collaborations in gaming industry.',
       metaKeywords: 'midasbuy partners, affiliate program, gaming partnerships, business collaboration',
-      canonicalUrl: 'https://www.middasbuy.com/partners',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/partners',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'copyright-notice', 
@@ -260,8 +260,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Copyright Notice - Midasbuy Official PUBG Mobile UC Store',
       metaDescription: 'Midasbuy copyright notice, trademark information, and intellectual property rights. Respect for game developers and content creators.',
       metaKeywords: 'midasbuy copyright, trademark notice, intellectual property, gaming rights',
-      canonicalUrl: 'https://www.middasbuy.com/copyright-notice',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/copyright-notice',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     },
     { 
       id: 'blogs', 
@@ -272,8 +272,8 @@ const ComprehensiveSEOManager = () => {
       metaTitle: 'Gaming Blog & News - Latest Updates & Tips | Midasbuy',
       metaDescription: 'Stay updated with latest gaming news, tips, guides, and industry insights. Read Midasbuy gaming blog for expert gaming content.',
       metaKeywords: 'gaming blog, gaming news, PUBG tips, Free Fire guides, gaming updates, midasbuy blog',
-      canonicalUrl: 'https://www.middasbuy.com/blogs',
-      ogImageUrl: 'https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
+      canonicalUrl: 'https://www.midasbuy.com.pk/blogs',
+      ogImageUrl: 'https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png'
     }
   ];
 
@@ -334,8 +334,8 @@ const ComprehensiveSEOManager = () => {
         
         return {
           ...page,
-          canonicalUrl: page.canonicalUrl?.replace('midasbuy.com', 'middasbuy.com'),
-          ogImageUrl: page.ogImageUrl?.replace('midasbuy.com', 'middasbuy.com')
+          canonicalUrl: page.canonicalUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
+          ogImageUrl: page.ogImageUrl?.replace('midasbuy.com', 'midasbuy.com.pk')
         };
       });
 
@@ -444,8 +444,8 @@ const ComprehensiveSEOManager = () => {
       page.id === pageId 
         ? { 
             ...originalPage, 
-            canonicalUrl: originalPage.canonicalUrl?.replace('midasbuy.com', 'middasbuy.com'),
-            ogImageUrl: originalPage.ogImageUrl?.replace('midasbuy.com', 'middasbuy.com'),
+            canonicalUrl: originalPage.canonicalUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
+            ogImageUrl: originalPage.ogImageUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
             dirty: false 
           }
         : page
@@ -619,8 +619,8 @@ const ComprehensiveSEOManager = () => {
                     <div>
                       <Label className="text-white text-sm font-medium mb-2 block">Canonical URL</Label>
                       <Input
-        placeholder={`https://middasbuy.com${page.path}`}
-        value={page.canonicalUrl || `https://middasbuy.com${page.path}`}
+        placeholder={`https://midasbuy.com.pk${page.path}`}
+        value={page.canonicalUrl || `https://midasbuy.com.pk${page.path}`}
         onChange={(e) => updatePageField(page.id, 'canonicalUrl', e.target.value)}
                         className="bg-gray-600 border-gray-500 text-white placeholder-gray-400"
                       />

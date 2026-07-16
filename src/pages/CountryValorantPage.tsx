@@ -17,7 +17,7 @@ const CountryValorantPage = ({ onLogout }: CountryValorantPageProps) => {
   const seoConfig = getGameSEOConfig(countryCodeUpper, 'valorant');
   const countryData = COUNTRY_DATA[countryCodeUpper] || COUNTRY_DATA['US'];
   
-  const baseUrl = 'https://www.middasbuy.com';
+  const baseUrl = 'https://www.midasbuy.com.pk';
   const canonicalUrl = `${baseUrl}/midasbuy/${countryCode?.toLowerCase()}/buy/valorant`;
   
   // Country-specific FAQs
@@ -97,7 +97,7 @@ const CountryValorantPage = ({ onLogout }: CountryValorantPageProps) => {
         description={seoConfig.description}
         keywords={seoConfig.keywords}
         canonicalUrl={`/midasbuy/${countryCode?.toLowerCase()}/buy/valorant`}
-        ogImage="https://www.middasbuy.com/lovable-uploads/valorant-points-logo.webp"
+        ogImage="https://www.midasbuy.com.pk/lovable-uploads/valorant-points-logo.webp"
         ogType="product"
         jsonLdSchema={[productStructuredData, breadcrumbSchema]}
         alternateUrls={allAlternateUrls}

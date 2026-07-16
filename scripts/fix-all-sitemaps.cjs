@@ -24,32 +24,32 @@ const REPLACEMENTS = [
   // PUBG Mobile
   { 
     pattern: /href="https:\/\/www\.middasbuy\.com\/pubg-mobile"/g, 
-    replacement: 'href="https://www.middasbuy.com/midasbuy/us/buy/pubgm"' 
+    replacement: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"' 
   },
   // Free Fire
   { 
     pattern: /href="https:\/\/www\.middasbuy\.com\/free-fire"/g, 
-    replacement: 'href="https://www.middasbuy.com/midasbuy/us/buy/freefire"' 
+    replacement: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/freefire"' 
   },
   // Roblox
   { 
     pattern: /href="https:\/\/www\.middasbuy\.com\/roblox"/g, 
-    replacement: 'href="https://www.middasbuy.com/midasbuy/us/buy/roblox"' 
+    replacement: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/roblox"' 
   },
   // Valorant
   { 
     pattern: /href="https:\/\/www\.middasbuy\.com\/valorant"/g, 
-    replacement: 'href="https://www.middasbuy.com/midasbuy/us/buy/valorant"' 
+    replacement: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/valorant"' 
   },
   // Car Purchase
   { 
     pattern: /href="https:\/\/www\.middasbuy\.com\/car-purchase"/g, 
-    replacement: 'href="https://www.middasbuy.com/midasbuy/us/buy/car"' 
+    replacement: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/car"' 
   },
   // Home page - root "/" to /midasbuy/us
   { 
     pattern: /hreflang="x-default" href="https:\/\/www\.middasbuy\.com\/"/g, 
-    replacement: 'hreflang="x-default" href="https://www.middasbuy.com/midasbuy/us"' 
+    replacement: 'hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us"' 
   }
 ];
 

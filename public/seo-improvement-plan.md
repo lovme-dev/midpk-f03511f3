@@ -250,7 +250,7 @@ Current: 3.7% → Target: 6-8%
 ## 🛠️ Google Search Console Actions Required
 
 ### Immediate Actions:
-1. **Submit Updated Sitemap**: https://middasbuy.com/sitemap.xml
+1. **Submit Updated Sitemap**: https://midasbuy.com.pk/sitemap.xml
 2. **Request Indexing**: For all 18 PUBG UC package pages
 3. **Check Coverage Report**: Fix any errors
 4. **Review Mobile Usability**: Fix any mobile issues

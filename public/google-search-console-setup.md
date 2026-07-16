@@ -10,12 +10,12 @@
 
 - Click "Add Property"
 - Select "URL prefix"
-- Enter: `https://www.middasbuy.com`
+- Enter: `https://www.midasbuy.com.pk`
 - Verify ownership using HTML file method or DNS
 
 ### 3. SUBMIT SITEMAP
 
-**Sitemap URL to submit:** `https://www.middasbuy.com/sitemap.xml`
+**Sitemap URL to submit:** `https://www.midasbuy.com.pk/sitemap.xml`
 
 **Steps:**
 
@@ -26,7 +26,7 @@
 
 ### 4. ROBOTS.TXT VERIFICATION
 
-**Check robots.txt:** https://www.middasbuy.com/robots.txt
+**Check robots.txt:** https://www.midasbuy.com.pk/robots.txt
 
 - Should be automatically accessible
 - Contains sitemap reference
@@ -38,31 +38,31 @@
 ### HIGH PRIORITY GAMING PAGES
 
 ```
-https://www.middasbuy.com/
-https://www.middasbuy.com/bgmi
-https://www.middasbuy.com/pubg-mobile
-https://www.middasbuy.com/free-fire
-https://www.middasbuy.com/gaming-shop
-https://www.middasbuy.com/pubg-accounts
+https://www.midasbuy.com.pk/
+https://www.midasbuy.com.pk/bgmi
+https://www.midasbuy.com.pk/pubg-mobile
+https://www.midasbuy.com.pk/free-fire
+https://www.midasbuy.com.pk/gaming-shop
+https://www.midasbuy.com.pk/pubg-accounts
 ```
 
 ### SUPPORT & LEGAL PAGES
 
 ```
-https://www.middasbuy.com/help-center
+https://www.midasbuy.com.pk/help-center
 https://www.midasbuy.com/contact-us
-https://www.middasbuy.com/faqs
-https://www.middasbuy.com/about-midasbuy
-https://www.middasbuy.com/terms-of-service
-https://www.middasbuy.com/refund-policy
+https://www.midasbuy.com.pk/faqs
+https://www.midasbuy.com.pk/about-midasbuy
+https://www.midasbuy.com.pk/terms-of-service
+https://www.midasbuy.com.pk/refund-policy
 ```
 
 ### CONTENT PAGES
 
 ```
-https://www.middasbuy.com/blogs
-https://www.middasbuy.com/honor-of-kings
-https://www.middasbuy.com/security
+https://www.midasbuy.com.pk/blogs
+https://www.midasbuy.com.pk/honor-of-kings
+https://www.midasbuy.com.pk/security
 ```
 
 ---
@@ -103,10 +103,10 @@ https://www.middasbuy.com/security
 If expanding to specific countries:
 
 ```
-https://www.middasbuy.com/in/ (India)
-https://www.middasbuy.com/pk/ (Pakistan)
-https://www.middasbuy.com/us/ (United States)
-https://www.middasbuy.com/global/ (Global)
+https://www.midasbuy.com.pk/in/ (India)
+https://www.midasbuy.com.pk/pk/ (Pakistan)
+https://www.midasbuy.com.pk/us/ (United States)
+https://www.midasbuy.com.pk/global/ (Global)
 ```
 
 ### Country-Specific Search Console Properties

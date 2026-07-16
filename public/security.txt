@@ -1,19 +1,19 @@
 # Security Contact Information for Midasbuy Gaming Store
 
 Contact: mailto:MidasbuyHelpline@Gmail.com
-Contact: https://middasbuy.com/contact
+Contact: https://midasbuy.com.pk/contact
 
 # Preferred Languages
 Preferred-Languages: en, hi, ur, ar
 
 # Canonical URL
-Canonical: https://www.middasbuy.com/.well-known/security.txt
+Canonical: https://www.midasbuy.com.pk/.well-known/security.txt
 
 # Policy
-Policy: https://www.middasbuy.com/privacy-policy
+Policy: https://www.midasbuy.com.pk/privacy-policy
 
 # Acknowledgments
-Acknowledgments: https://www.middasbuy.com/about
+Acknowledgments: https://www.midasbuy.com.pk/about
 
 # Company Information
 # Midasbuy is a legitimate gaming currency store

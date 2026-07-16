@@ -215,7 +215,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       <Helmet>
         <title>Redeem Coupon | Enter Voucher Code for PUBG UC Discount | Midasbuy</title>
         <meta name="description" content="Redeem your Midasbuy coupon or voucher code to get discounts on PUBG UC, Free Fire diamonds, Roblox Robux, and more. Enter your code and save instantly." />
-        <link rel="canonical" href="https://www.middasbuy.com/redeem" />
+        <link rel="canonical" href="https://www.midasbuy.com.pk/redeem" />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
       </Helmet>

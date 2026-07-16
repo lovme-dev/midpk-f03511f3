@@ -27,7 +27,7 @@ const InternationalSEOHelmet = ({
   pageType = 'homepage'
 }: InternationalSEOHelmetProps) => {
   const params = useParams();
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   
   // Fetch meta data from database
   const { metaData } = usePageMeta(canonicalUrl);

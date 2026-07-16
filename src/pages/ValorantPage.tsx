@@ -154,7 +154,7 @@ const ValorantPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false
     description: "Midasbuy Official - Trusted gaming store for authentic Valorant Points. Trusted by 10M+ gamers worldwide with instant delivery and secure payments.",
     price: "1.99",
     currency: "USD",
-    image: "https://middasbuy.com/lovable-uploads/valorant-points-logo.webp",
+    image: "https://midasbuy.com.pk/lovable-uploads/valorant-points-logo.webp",
     category: "Gaming Currency"
   });
 
@@ -166,7 +166,7 @@ const ValorantPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false
           description="⚡ Buy Valorant Points at the CHEAPEST prices! 💎 Get up to 60% OFF + Bonus VP on every purchase. ✅ Instant 2-min delivery | 🔒 100% Secure | Trusted by 5M+ Valorant players worldwide."
           keywords={valorantSeoKeywords}
           canonicalUrl="/valorant"
-          ogImage="https://middasbuy.com/lovable-uploads/valorant-points-logo.webp"
+          ogImage="https://midasbuy.com.pk/lovable-uploads/valorant-points-logo.webp"
           jsonLdSchema={[enhancedStructuredData]}
           breadcrumbSchema={generateBreadcrumbSchema([
             { name: "Home", url: "/" },

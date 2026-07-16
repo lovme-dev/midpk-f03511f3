@@ -31,7 +31,7 @@ const AdvancedSEOHelmet = ({
   websiteSchema,
   organizationSchema
 }: AdvancedSEOHelmetProps) => {
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const fullCanonicalUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
@@ -108,7 +108,7 @@ const AdvancedSEOHelmet = ({
       <meta name="summary" content={description} />
       <meta name="Classification" content="Gaming, E-commerce" />
       <meta name="designer" content="Midasbuy Team" />
-      <meta name="reply-to" content="support@middasbuy.com" />
+      <meta name="reply-to" content="support@midasbuy.com.pk" />
       <meta name="owner" content="Midasbuy" />
       <meta name="url" content={fullCanonicalUrl} />
       <meta name="identifier-URL" content={fullCanonicalUrl} />

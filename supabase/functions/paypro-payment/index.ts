@@ -132,7 +132,7 @@ serve(async (req: Request) => {
       product_type = "pubg_uc",
       product_name,
       product_amount,
-      return_base_url = "https://www.middasbuy.com",
+      return_base_url = "https://www.midasbuy.com.pk",
       currency,
       currency_amount,
       is_converted,

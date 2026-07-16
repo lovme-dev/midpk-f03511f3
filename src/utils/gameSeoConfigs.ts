@@ -450,7 +450,7 @@ export const getHreflangFromLocale = (countryCode: string): string => {
 
 // Generate all alternate URLs for a game page
 // IMPORTANT: Use full language-country format (e.g., en-pk, ar-sa) to avoid duplicate hreflang errors
-export const generateAlternateUrls = (game: string, baseUrl: string = 'https://www.middasbuy.com'): Array<{hreflang: string; href: string}> => {
+export const generateAlternateUrls = (game: string, baseUrl: string = 'https://www.midasbuy.com.pk'): Array<{hreflang: string; href: string}> => {
   const gameSlug = game === 'pubgm' ? 'pubgm' : game === 'freefire' ? 'freefire' : game === 'roblox' ? 'roblox' : game === 'valorant' ? 'valorant' : game === 'car' ? 'car' : 'honorofkings';
   const defaultUrl = `/midasbuy/us/buy/${gameSlug}`;
   

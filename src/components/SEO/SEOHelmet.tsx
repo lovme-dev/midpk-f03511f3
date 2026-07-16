@@ -23,7 +23,7 @@ const SEOHelmet = ({
   structuredData,
   noIndex = false
 }: SEOHelmetProps) => {
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const location = useLocation();
   
   // Use canonicalUrl prop if provided, otherwise use current location pathname

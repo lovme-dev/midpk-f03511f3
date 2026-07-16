@@ -197,7 +197,7 @@ export const FREE_FIRE_KEYWORDS = [
 
 export const MIDASBUY_KEYWORDS = [
   // Midasbuy Brand Keywords (HIGH PRIORITY - Targeting #1 Ranking)
-  "Midasbuy", "Midasbuy official", "Midasbuy.com", "middasbuy.com", "official Midasbuy", "Midasbuy store", "Midasbuy shop", 
+  "Midasbuy", "Midasbuy official", "Midasbuy.com", "midasbuy.com.pk", "official Midasbuy", "Midasbuy store", "Midasbuy shop", 
   "Midasbuy gaming", "Midasbuy PUBG UC", "Midasbuy PUBG Mobile", "Midasbuy Free Fire", "Midasbuy gaming store",
   "Midasbuy official website", "Midasbuy Pakistan", "Midasbuy India", "Midasbuy global", "Midasbuy international",
   "Midasbuy review", "Midasbuy legit", "Midasbuy safe", "Midasbuy trusted", "Midasbuy customer service",
