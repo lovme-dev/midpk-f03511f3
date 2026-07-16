@@ -4,7 +4,8 @@ import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { useMobile } from '@/hooks/use-mobile';
 import { useTranslation } from 'react-i18next';
 import videoBannerBg from '@/assets/video-banner-bg.png';
-import ageOfEmpiresLiveBanner from '@/assets/age-of-empires-live-banner.mp4';
+import ageOfEmpiresLiveBannerAsset from '@/assets/age-of-empires-live-banner.mp4.asset.json';
+const ageOfEmpiresLiveBanner = ageOfEmpiresLiveBannerAsset.url;
 import ageOfEmpiresLivePoster from '@/assets/age-of-empires-live-banner-poster.jpeg';
 
 

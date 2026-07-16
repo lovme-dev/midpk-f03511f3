@@ -168,7 +168,7 @@ export function DashboardOverview() {
             return acc;
           }, {});
           
-          topPages = Object.entries(pathCounts)
+          topPages = (Object.entries(pathCounts) as [string, number][])
             .map(([path, views]) => ({ path, views }))
             .sort((a, b) => b.views - a.views)
             .slice(0, 5);
