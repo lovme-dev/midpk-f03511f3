@@ -34,7 +34,7 @@ async function generateVapidJWT(endpoint: string, vapidPrivateKey: string, vapid
   const exp = iat + 12 * 60 * 60;
 
   const header = { alg: 'ES256', typ: 'JWT' };
-  const payload = { aud: origin, exp, sub: 'mailto:support@midasbuy.com' };
+  const payload = { aud: origin, exp, sub: 'mailto:support@midasbuy.com.pk' };
 
   const enc = new TextEncoder();
   const headerB64 = uint8ArrayToBase64Url(enc.encode(JSON.stringify(header)));

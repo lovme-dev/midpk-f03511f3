@@ -49,7 +49,7 @@
       "@id": "https://www.midasbuy.com.pk/#store",
       "name": "Midasbuy Official Gaming Store",
       "description": "Official store for gaming currency and in-game items",
-      "url": "https://www.midasbuy.com",
+      "url": "https://www.midasbuy.com.pk",
       "parentOrganization": {
         "@id": "https://www.midasbuy.com.pk/#organization"
       },

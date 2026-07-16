@@ -258,7 +258,7 @@ const PartnersPage = ({ onLogout }: PartnersPageProps) => {
 
             <div className="mt-6 p-4 bg-midasbuy-navy/30 rounded-lg">
               <p className="text-sm text-gray-400">Partnership Inquiries:</p>
-              <p className="text-midasbuy-blue font-medium">partnerships@midasbuy.com</p>
+              <p className="text-midasbuy-blue font-medium">partnerships@midasbuy.com.pk</p>
             </div>
           </div>
         </motion.div>

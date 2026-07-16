@@ -144,7 +144,7 @@ const SecurityPage = ({ onLogout }: SecurityPageProps) => {
                   <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-white">Only Use Official Websites and Apps</h3>
-                    <p className="text-sm text-gray-300">Always ensure you're on the official Midasbuy website (midasbuy.com) before entering any personal or payment information.</p>
+                    <p className="text-sm text-gray-300">Always ensure you're on the official Midasbuy website (midasbuy.com.pk) before entering any personal or payment information.</p>
                   </div>
                 </div>
                 
@@ -196,7 +196,7 @@ const SecurityPage = ({ onLogout }: SecurityPageProps) => {
           </div>
           
           <div className="text-center text-sm text-gray-400">
-            <p>For urgent security matters, please contact our security team directly at security@midasbuy.com</p>
+            <p>For urgent security matters, please contact our security team directly at security@midasbuy.com.pk</p>
           </div>
         </motion.div>
       </div>

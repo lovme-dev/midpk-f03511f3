@@ -527,7 +527,7 @@
             "A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf"
           ],
           "contactTitle": "Midasbuy's Copyright Agent for notice of claims of copyright infringement:",
-          "contactInfo": "Copyright Agent, Legal Department\nMidasbuy Inc.\nOne Midasbuy Plaza, Gaming District, CA 90210, USA\nEmail: copyright@midasbuy.com"
+          "contactInfo": "Copyright Agent, Legal Department\nMidasbuy Inc.\nOne Midasbuy Plaza, Gaming District, CA 90210, USA\nEmail: copyright@midasbuy.com.pk"
         },
         "dmca": {
           "title": "6. Digital Millennium Copyright Act (DMCA) Policy",
@@ -546,7 +546,7 @@
         "contactUs": {
           "title": "8. Contact Information",
           "intro": "If you have any questions about this Copyright Notice, please contact us at:",
-          "contactInfo": "Email: legal@midasbuy.com\nAddress: One Midasbuy Plaza, Gaming District, CA 90210, USA"
+          "contactInfo": "Email: legal@midasbuy.com.pk\nAddress: One Midasbuy Plaza, Gaming District, CA 90210, USA"
         }
       },
       "lastUpdated": "Last Updated: March 1, 2026",
@@ -664,7 +664,7 @@
       "enable2FA": "Enable Two-Factor Authentication When Available",
       "enable2FADesc": "Add an extra layer of security by enabling 2FA on your gaming accounts and payment platforms.",
       "useOfficialSites": "Only Use Official Websites and Apps",
-      "useOfficialSitesDesc": "Always ensure you're on the official Midasbuy website (midasbuy.com) before entering any personal or payment information.",
+      "useOfficialSitesDesc": "Always ensure you're on the official Midasbuy website (midasbuy.com.pk) before entering any personal or payment information.",
       "keepDevicesSecure": "Keep Your Devices Secure",
       "keepDevicesSecureDesc": "Regularly update your devices' operating systems and applications to patch security vulnerabilities.",
       "bewarePhishing": "Be Wary of Phishing Attempts",
@@ -675,7 +675,7 @@
       "reportConcernsDesc": "If you suspect any unauthorized access to your account, unusual transactions, or other security issues, please report them immediately.",
       "reportSecurityIssue": "Report Security Issue",
       "securityFAQ": "Security FAQ",
-      "urgentContact": "For urgent security matters, please contact our security team directly at security@midasbuy.com"
+      "urgentContact": "For urgent security matters, please contact our security team directly at security@midasbuy.com.pk"
     },
     "paymentIssues": {
       "title": "Payment Issues",
