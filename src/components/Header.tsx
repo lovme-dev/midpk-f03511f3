@@ -683,9 +683,16 @@ const Header = ({ onLogout, showNavigation = false, activeSection = "popular-gam
               onClick={handleOpenCountryMenu}
               aria-label="Select Country"
             >
-              <span className="text-base select-none" role="img" aria-label={currentCountry.name}>
-                {getFlag(currentCountry.code)}
-              </span>
+              <img
+                src={`https://flagcdn.com/w40/${currentCountry.code.toLowerCase()}.png`}
+                srcSet={`https://flagcdn.com/w80/${currentCountry.code.toLowerCase()}.png 2x`}
+                width={20}
+                height={15}
+                alt={currentCountry.name}
+                className="inline-block rounded-[2px] object-cover"
+                loading="lazy"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
               <span className="text-xs ml-1 text-midasbuy-gold">{currentCountry.currency}</span>
               <ChevronDown className="w-3 h-3 ml-1" />
             </button>
