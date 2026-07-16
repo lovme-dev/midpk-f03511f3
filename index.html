@@ -303,9 +303,57 @@
       window.addEventListener('beforeinstallprompt', function(e) {
         e.preventDefault();
         window.__pwaInstallPrompt = e;
-        console.log('[PWA] Install prompt captured globally');
       });
     </script>
+
+    <!-- ===== ANTI-INSPECT / SOURCE PROTECTION ===== -->
+    <script>
+      (function () {
+        // Block right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+          return false;
+        }, { capture: true });
+
+        // Block image drag & text selection copy shortcuts
+        document.addEventListener('dragstart', function (e) {
+          if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+        }, { capture: true });
+
+        // Block DevTools keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+          var k = (e.key || '').toLowerCase();
+          // F12
+          if (e.key === 'F12') { e.preventDefault(); return false; }
+          // Ctrl+U (view source)
+          if (e.ctrlKey && k === 'u') { e.preventDefault(); return false; }
+          // Ctrl+S (save page)
+          if (e.ctrlKey && k === 's') { e.preventDefault(); return false; }
+          // Ctrl+Shift+I / J / C / K (devtools/console)
+          if ((e.ctrlKey && e.shiftKey) && ['i','j','c','k'].indexOf(k) !== -1) {
+            e.preventDefault(); return false;
+          }
+          // Cmd+Opt+I / J / C / U on Mac
+          if (e.metaKey && e.altKey && ['i','j','c'].indexOf(k) !== -1) {
+            e.preventDefault(); return false;
+          }
+          if (e.metaKey && k === 'u') { e.preventDefault(); return false; }
+        }, { capture: true });
+
+        // Suppress console output on production hostnames
+        try {
+          var h = location.hostname;
+          if (h && h.indexOf('lovable') === -1 && h.indexOf('localhost') === -1) {
+            var noop = function () {};
+            ['log','info','warn','error','debug','table','trace'].forEach(function (m) {
+              try { console[m] = noop; } catch (_) {}
+            });
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+
     
   
   
