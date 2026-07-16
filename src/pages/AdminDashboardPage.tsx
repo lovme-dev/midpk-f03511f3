@@ -353,6 +353,8 @@ export default function AdminDashboardPage() {
         return renderSiteAssets();
       case 'payment':
         return renderPaymentCredentials();
+      case 'payment-methods':
+        return <PaymentMethodsManagement />;
       case 'content':
         return renderContentBlocks();
       case 'admins':
