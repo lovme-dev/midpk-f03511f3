@@ -764,7 +764,9 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               
               {/* Title and Badges - Always LTR, never translate */}
               <div className="flex flex-col gap-1.5">
-                <h1 className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store'}</h1>
+                <h1 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h1>
+                <div aria-hidden="true" className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
+
                 <div className="flex items-center gap-1.5">
                   {/* Official Badge - white background with shield icon - thinner like subscribe */}
                   <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
