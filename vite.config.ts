@@ -24,18 +24,18 @@ const asyncCssPlugin = (): Plugin => ({
 // CRITICAL: All redirect URLs must be replaced with their FINAL destination URLs
 const SITEMAP_REPLACEMENTS = [
   // PUBG Mobile - redirect URL to final URL (180+ occurrences per sitemap)
-  { from: 'href="https://www.middasbuy.com/pubg-mobile"', to: 'href="https://www.middasbuy.com/midasbuy/us/buy/pubgm"' },
+  { from: 'href="https://www.midasbuy.com.pk/pubg-mobile"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"' },
   // Free Fire (180+ occurrences)
-  { from: 'href="https://www.middasbuy.com/free-fire"', to: 'href="https://www.middasbuy.com/midasbuy/us/buy/freefire"' },
+  { from: 'href="https://www.midasbuy.com.pk/free-fire"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/freefire"' },
   // Roblox (180+ occurrences)
-  { from: 'href="https://www.middasbuy.com/roblox"', to: 'href="https://www.middasbuy.com/midasbuy/us/buy/roblox"' },
+  { from: 'href="https://www.midasbuy.com.pk/roblox"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/roblox"' },
   // Valorant (180+ occurrences)
-  { from: 'href="https://www.middasbuy.com/valorant"', to: 'href="https://www.middasbuy.com/midasbuy/us/buy/valorant"' },
+  { from: 'href="https://www.midasbuy.com.pk/valorant"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/valorant"' },
   // Car Purchase (190+ occurrences)
-  { from: 'href="https://www.middasbuy.com/car-purchase"', to: 'href="https://www.middasbuy.com/midasbuy/us/buy/car"' },
+  { from: 'href="https://www.midasbuy.com.pk/car-purchase"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/car"' },
   // Home page - root "/" to /midasbuy/us (180+ occurrences)
   // Match x-default with trailing /" to avoid matching country-specific URLs
-  { from: 'hreflang="x-default" href="https://www.middasbuy.com/"', to: 'hreflang="x-default" href="https://www.middasbuy.com/midasbuy/us"' }
+  { from: 'hreflang="x-default" href="https://www.midasbuy.com.pk/"', to: 'hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us"' }
 ];
 
 const SITEMAP_FILES = [
@@ -185,7 +185,7 @@ const countryPrerenderPlugin = (): Plugin => ({
     if (!fs.existsSync(distIndexPath)) return;
 
     const template = fs.readFileSync(distIndexPath, 'utf8');
-    const baseUrl = 'https://www.middasbuy.com';
+    const baseUrl = 'https://www.midasbuy.com.pk';
     const countryEntries = Object.entries(COUNTRY_DATA);
 
     for (const [code, country] of countryEntries) {

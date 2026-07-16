@@ -1,48 +1,48 @@
 # MIDASBUY SITEMAP URLS - Copy these directly to Google Search Console
 
 # Main sitemap
-https://www.middasbuy.com/sitemap.xml
+https://www.midasbuy.com.pk/sitemap.xml
 
 # Individual page URLs for manual submission
-https://www.middasbuy.com/
-https://www.middasbuy.com/pubg-mobile
-https://www.middasbuy.com/free-fire
-https://www.middasbuy.com/bgmi
-https://www.middasbuy.com/gaming-shop
-https://www.middasbuy.com/pubg-accounts
-https://www.middasbuy.com/honor-of-kings
-https://www.middasbuy.com/about-midasbuy
-https://www.middasbuy.com/contact-us
-https://www.middasbuy.com/help-center
-https://www.middasbuy.com/faqs
-https://www.middasbuy.com/blogs
-https://www.middasbuy.com/security
-https://www.middasbuy.com/terms-of-service
-https://www.middasbuy.com/refund-policy
-https://www.middasbuy.com/track-orders
+https://www.midasbuy.com.pk/
+https://www.midasbuy.com.pk/pubg-mobile
+https://www.midasbuy.com.pk/free-fire
+https://www.midasbuy.com.pk/bgmi
+https://www.midasbuy.com.pk/gaming-shop
+https://www.midasbuy.com.pk/pubg-accounts
+https://www.midasbuy.com.pk/honor-of-kings
+https://www.midasbuy.com.pk/about-midasbuy
+https://www.midasbuy.com.pk/contact-us
+https://www.midasbuy.com.pk/help-center
+https://www.midasbuy.com.pk/faqs
+https://www.midasbuy.com.pk/blogs
+https://www.midasbuy.com.pk/security
+https://www.midasbuy.com.pk/terms-of-service
+https://www.midasbuy.com.pk/refund-policy
+https://www.midasbuy.com.pk/track-orders
 
 # Priority URLs for PUBG UC packages (18 packages)
-https://www.middasbuy.com/purchase/2250uc
-https://www.middasbuy.com/purchase/4250uc
-https://www.middasbuy.com/purchase/10904uc
-https://www.middasbuy.com/purchase/14668uc
-https://www.middasbuy.com/purchase/18341uc
-https://www.middasbuy.com/purchase/22014uc
-https://www.middasbuy.com/purchase/25687uc
-https://www.middasbuy.com/purchase/29360uc
-https://www.middasbuy.com/purchase/33033uc
-https://www.middasbuy.com/purchase/36706uc
-https://www.middasbuy.com/purchase/40379uc
-https://www.middasbuy.com/purchase/44052uc
-https://www.middasbuy.com/purchase/47725uc
-https://www.middasbuy.com/purchase/51398uc
-https://www.middasbuy.com/purchase/55071uc
-https://www.middasbuy.com/purchase/58744uc
-https://www.middasbuy.com/purchase/62417uc
-https://www.middasbuy.com/purchase/66090uc
+https://www.midasbuy.com.pk/purchase/2250uc
+https://www.midasbuy.com.pk/purchase/4250uc
+https://www.midasbuy.com.pk/purchase/10904uc
+https://www.midasbuy.com.pk/purchase/14668uc
+https://www.midasbuy.com.pk/purchase/18341uc
+https://www.midasbuy.com.pk/purchase/22014uc
+https://www.midasbuy.com.pk/purchase/25687uc
+https://www.midasbuy.com.pk/purchase/29360uc
+https://www.midasbuy.com.pk/purchase/33033uc
+https://www.midasbuy.com.pk/purchase/36706uc
+https://www.midasbuy.com.pk/purchase/40379uc
+https://www.midasbuy.com.pk/purchase/44052uc
+https://www.midasbuy.com.pk/purchase/47725uc
+https://www.midasbuy.com.pk/purchase/51398uc
+https://www.midasbuy.com.pk/purchase/55071uc
+https://www.midasbuy.com.pk/purchase/58744uc
+https://www.midasbuy.com.pk/purchase/62417uc
+https://www.midasbuy.com.pk/purchase/66090uc
 
 # International URLs
-https://www.middasbuy.com/midasbuy/pk/buy/pubgm
-https://www.middasbuy.com/midasbuy/in/buy/pubgm
-https://www.middasbuy.com/midasbuy/us/buy/pubgm
-https://www.middasbuy.com/midasbuy/global/buy/pubgm
+https://www.midasbuy.com.pk/midasbuy/pk/buy/pubgm
+https://www.midasbuy.com.pk/midasbuy/in/buy/pubgm
+https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm
+https://www.midasbuy.com.pk/midasbuy/global/buy/pubgm

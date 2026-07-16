@@ -97,7 +97,7 @@ export const generateProductSchema = (product: {
     "brand": {
       "@type": "Brand",
       "name": "Midasbuy",
-      "logo": "https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
+      "logo": "https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
       "identifier": "Midasbuy"
     },
     "offers": {
@@ -113,7 +113,7 @@ export const generateProductSchema = (product: {
         "name": "Midasbuy",
         "legalName": "Midasbuy",
         "identifier": "Midasbuy",
-        "url": "https://www.middasbuy.com"
+        "url": "https://www.midasbuy.com.pk"
       }
     },
     "aggregateRating": {
@@ -179,7 +179,7 @@ export const generateBreadcrumbSchema = (breadcrumbs: Array<{ name: string; url:
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.name,
-      "item": `https://www.middasbuy.com${crumb.url}`
+      "item": `https://www.midasbuy.com.pk${crumb.url}`
     }))
   };
 };
@@ -243,7 +243,7 @@ export const generateLocalBusinessSchema = (location: string) => {
     "alternateName": `Midasbuy ${location}`,
     "identifier": "Midasbuy",
     "description": `Official Midasbuy gaming store serving ${location}. Buy PUBG UC, Free Fire Diamonds, and gaming currency with local payment methods.`,
-    "url": "https://www.middasbuy.com",
+    "url": "https://www.midasbuy.com.pk",
     "areaServed": location,
     "serviceArea": location,
     "currenciesAccepted": "USD, PKR, INR, EUR, GBP",

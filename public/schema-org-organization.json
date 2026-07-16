@@ -4,8 +4,8 @@
   "name": "Midasbuy Official",
   "legalName": "Midasbuy Gaming Store",
   "alternateName": ["Middasbuy", "Midasbuy Official", "Midasbuy Gaming Store"],
-  "url": "https://www.middasbuy.com",
-  "logo": "https://www.middasbuy.com/favicon.png",
+  "url": "https://www.midasbuy.com.pk",
+  "logo": "https://www.midasbuy.com.pk/favicon.png",
   "description": "Midasbuy is the world's most trusted official gaming store specializing exclusively in mobile gaming currency. We are an authorized partner of PUBG Mobile (Tencent Games) and verified Stripe merchant. We DO NOT offer cryptocurrency, bitcoin, or any blockchain services. We only sell legitimate in-game currency for PUBG Mobile UC, Free Fire Diamonds, and BGMI UC with instant delivery and 100% secure transactions.",
   "foundingDate": "2020",
   "slogan": "Your #1 Choice for Gaming Currency - Official Tencent Partner",
@@ -44,7 +44,7 @@
   "brand": {
     "@type": "Brand",
     "name": "Midasbuy",
-    "logo": "https://www.middasbuy.com/favicon.png"
+    "logo": "https://www.midasbuy.com.pk/favicon.png"
   },
   "address": {
     "@type": "PostalAddress",

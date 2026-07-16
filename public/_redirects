@@ -1,6 +1,6 @@
 # Force HTTPS and www (canonical domain)
-http://middasbuy.com/* https://www.middasbuy.com/:splat 301!
-https://middasbuy.com/* https://www.middasbuy.com/:splat 301!
+http://midasbuy.com.pk/* https://www.midasbuy.com.pk/:splat 301!
+https://midasbuy.com.pk/* https://www.midasbuy.com.pk/:splat 301!
 
 # Serve prerendered country HTML files (build-time generated for SEO)
 # These MUST be matched BEFORE the SPA fallback so Googlebot gets unique HTML

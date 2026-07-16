@@ -553,7 +553,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         <title>Order Record - Order Center | Midasbuy</title>
         <meta name="description" content="View your PUBG UC order history and track order status. Check completed, pending, and cancelled orders in one place." />
         <meta name="keywords" content="order center, order record, PUBG UC orders, midasbuy orders, order history" />
-        <link rel="canonical" href="https://www.middasbuy.com/order-center" />
+        <link rel="canonical" href="https://www.midasbuy.com.pk/order-center" />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
       </Helmet>

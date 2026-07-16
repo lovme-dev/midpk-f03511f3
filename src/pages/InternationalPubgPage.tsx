@@ -37,15 +37,15 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
     'Battle Royale game currency'
   ].join(', ');
   
-  const canonicalUrl = 'https://www.middasbuy.com/midasbuy/buy/pubgm';
+  const canonicalUrl = 'https://www.midasbuy.com.pk/midasbuy/buy/pubgm';
   
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/pubgm",
-        "url": "https://www.middasbuy.com/midasbuy/buy/pubgm",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/pubgm",
+        "url": "https://www.midasbuy.com.pk/midasbuy/buy/pubgm",
         "name": title,
         "description": description,
         "inLanguage": "en-US",
@@ -53,9 +53,9 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
         "dateModified": "2026-01-01",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com",
+          "@id": "https://www.midasbuy.com.pk",
           "name": "Midasbuy",
-          "url": "https://www.middasbuy.com"
+          "url": "https://www.midasbuy.com.pk"
         },
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -64,31 +64,31 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.middasbuy.com"
+              "item": "https://www.midasbuy.com.pk"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "PUBG Mobile UC",
-              "item": "https://www.middasbuy.com/midasbuy/buy/pubgm"
+              "item": "https://www.midasbuy.com.pk/midasbuy/buy/pubgm"
             }
           ]
         }
       },
       {
         "@type": "Product",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/pubgm#product",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/pubgm#product",
         "name": "PUBG Mobile UC (Unknown Cash)",
         "description": description,
         "image": [
-          "https://www.middasbuy.com/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png",
-          "https://www.middasbuy.com/og-image.png"
+          "https://www.midasbuy.com.pk/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png",
+          "https://www.midasbuy.com.pk/og-image.png"
         ],
         "brand": {
           "@type": "Brand",
           "name": "Tencent Games",
           "alternateName": "PUBG Mobile",
-          "logo": "https://www.middasbuy.com/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png",
+          "logo": "https://www.midasbuy.com.pk/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png",
           "identifier": "Midasbuy"
         },
         "category": "Video Game Currency",
@@ -107,8 +107,8 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
             "name": "Midasbuy",
             "legalName": "Midasbuy",
             "identifier": "Midasbuy",
-            "url": "https://www.middasbuy.com",
-            "logo": "https://www.middasbuy.com/og-image.png"
+            "url": "https://www.midasbuy.com.pk",
+            "logo": "https://www.midasbuy.com.pk/og-image.png"
           }
         },
         "aggregateRating": {
@@ -165,7 +165,7 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
       },
       {
         "@type": "FAQ",
-        "@id": "https://www.middasbuy.com/midasbuy/buy/pubgm#faq",
+        "@id": "https://www.midasbuy.com.pk/midasbuy/buy/pubgm#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -203,12 +203,12 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
       },
       {
         "@type": "Organization",
-        "@id": "https://www.middasbuy.com#organization",
+        "@id": "https://www.midasbuy.com.pk#organization",
         "name": "Midasbuy",
         "legalName": "Midasbuy",
         "identifier": "Midasbuy",
-        "url": "https://www.middasbuy.com",
-        "logo": "https://www.middasbuy.com/og-image.png",
+        "url": "https://www.midasbuy.com.pk",
+        "logo": "https://www.midasbuy.com.pk/og-image.png",
         "foundingDate": "2020",
         "sameAs": [
           "https://www.facebook.com/midasbuy",

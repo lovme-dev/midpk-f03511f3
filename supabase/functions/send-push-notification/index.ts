@@ -32,7 +32,7 @@ function uint8ArrayToBase64Url(bytes: Uint8Array): string {
 // Generate VAPID JWT for authorization
 async function generateVapidJWT(endpoint: string, vapidPrivateKey: string, vapidPublicKey: string): Promise<string> {
   const audience = new URL(endpoint).origin;
-  const subject = 'mailto:support@middasbuy.com';
+  const subject = 'mailto:support@midasbuy.com.pk';
 
   const header = { typ: 'JWT', alg: 'ES256' };
   const now = Math.floor(Date.now() / 1000);

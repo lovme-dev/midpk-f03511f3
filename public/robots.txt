@@ -65,14 +65,14 @@ Allow: /security
 Allow: /copyright-notice
 
 # Sitemaps
-Sitemap: https://www.middasbuy.com/sitemap.xml
-Sitemap: https://www.middasbuy.com/sitemap_static.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_home.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_pubg.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_freefire.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_roblox.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_valorant.xml
-Sitemap: https://www.middasbuy.com/sitemap_countries_car.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_static.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_home.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_pubg.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_freefire.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_roblox.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_valorant.xml
+Sitemap: https://www.midasbuy.com.pk/sitemap_countries_car.xml
 
 # Crawl settings
 User-agent: Googlebot

@@ -405,13 +405,13 @@ const GamingShopPage = ({ onLogout, disableSeo = false, beforeFooterSlot }: Gami
     "@type": "WebPage",
     "name": "Midasbuy Gaming Shop - Game Currency Store",
     "description": "Your ultimate gaming destination for PUBG UC, Free Fire diamonds, and more game currencies. Secure, instant delivery with 24/7 support.",
-    "url": "https://www.middasbuy.com/gaming-shop",
+    "url": "https://www.midasbuy.com.pk/gaming-shop",
     "publisher": {
       "@type": "Organization",
       "name": "Midasbuy",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.middasbuy.com/og-image.png"
+        "url": "https://www.midasbuy.com.pk/og-image.png"
       }
     }
   };

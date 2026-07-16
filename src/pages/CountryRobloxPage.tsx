@@ -17,7 +17,7 @@ const CountryRobloxPage = ({ onLogout }: CountryRobloxPageProps) => {
   const seoConfig = getGameSEOConfig(countryCodeUpper, 'roblox');
   const countryData = COUNTRY_DATA[countryCodeUpper] || COUNTRY_DATA['US'];
   
-  const baseUrl = 'https://www.middasbuy.com';
+  const baseUrl = 'https://www.midasbuy.com.pk';
   const canonicalUrl = `${baseUrl}/midasbuy/${countryCode?.toLowerCase()}/buy/roblox`;
   
   // Country-specific FAQs
@@ -97,7 +97,7 @@ const CountryRobloxPage = ({ onLogout }: CountryRobloxPageProps) => {
         description={seoConfig.description}
         keywords={seoConfig.keywords}
         canonicalUrl={`/midasbuy/${countryCode?.toLowerCase()}/buy/roblox`}
-        ogImage="https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
+        ogImage="https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
         ogType="product"
         jsonLdSchema={[productStructuredData, breadcrumbSchema]}
         alternateUrls={allAlternateUrls}

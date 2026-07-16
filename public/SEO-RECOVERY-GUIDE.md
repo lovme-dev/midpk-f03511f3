@@ -39,23 +39,23 @@
 Go to Google Search Console and request indexing for these HIGH PRIORITY pages:
 
 ```
-https://www.middasbuy.com/
-https://www.middasbuy.com/pubg-mobile
-https://www.middasbuy.com/bgmi
-https://www.middasbuy.com/free-fire
-https://www.middasbuy.com/roblox
-https://www.middasbuy.com/valorant
-https://www.middasbuy.com/gaming-shop
-https://www.middasbuy.com/customer-reviews
-https://www.middasbuy.com/midasbuy/pk/buy/pubgm
-https://www.middasbuy.com/midasbuy/in/buy/pubgm
+https://www.midasbuy.com.pk/
+https://www.midasbuy.com.pk/pubg-mobile
+https://www.midasbuy.com.pk/bgmi
+https://www.midasbuy.com.pk/free-fire
+https://www.midasbuy.com.pk/roblox
+https://www.midasbuy.com.pk/valorant
+https://www.midasbuy.com.pk/gaming-shop
+https://www.midasbuy.com.pk/customer-reviews
+https://www.midasbuy.com.pk/midasbuy/pk/buy/pubgm
+https://www.midasbuy.com.pk/midasbuy/in/buy/pubgm
 ```
 
 ### Step 2: Resubmit Sitemap
 
 1. Go to Sitemaps section in Search Console
 2. Delete old sitemap submission
-3. Add new: `https://www.middasbuy.com/sitemap.xml`
+3. Add new: `https://www.midasbuy.com.pk/sitemap.xml`
 4. Click Submit
 
 ### Step 3: Validate Redirect Fixes

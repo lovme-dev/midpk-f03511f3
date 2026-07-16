@@ -342,8 +342,8 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/free-fire#webpage",
-        "url": "https://www.middasbuy.com/free-fire",
+        "@id": "https://www.midasbuy.com.pk/free-fire#webpage",
+        "url": "https://www.midasbuy.com.pk/free-fire",
         "name": "Free Fire Diamonds | Buy FF Diamonds Instant Delivery - Midasbuy Official Store",
         "description": "⚡ Buy Free Fire Diamonds at Best Prices | Official Midasbuy FF Diamond Store | Instant Delivery | 100% Safe Payment",
         "inLanguage": "en",
@@ -351,14 +351,14 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
         "dateModified": "2026-01-01",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com/#website",
+          "@id": "https://www.midasbuy.com.pk/#website",
           "name": "Midasbuy",
-          "url": "https://www.middasbuy.com"
+          "url": "https://www.midasbuy.com.pk"
         }
       },
       ...diamondPackages.map((pkg) => ({
         "@type": "Product",
-        "@id": `https://www.middasbuy.com/purchase/free-fire/${pkg.id}#product`,
+        "@id": `https://www.midasbuy.com.pk/purchase/free-fire/${pkg.id}#product`,
         "name": `Free Fire ${pkg.baseAmount} Diamonds ${pkg.bonusAmount > 0 ? `+${pkg.bonusAmount} Bonus` : ''}`,
         "description": `Buy ${pkg.baseAmount} Free Fire Diamonds ${pkg.bonusAmount > 0 ? `with ${pkg.bonusAmount} bonus diamonds` : ''} at best price. Instant delivery with secure payment.`,
         "image": pkg.image,
@@ -376,7 +376,7 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://www.middasbuy.com/purchase/free-fire/${pkg.id}`,
+          "url": `https://www.midasbuy.com.pk/purchase/free-fire/${pkg.id}`,
           "priceCurrency": "PKR",
           "price": pkg.price,
           "priceValidUntil": "2026-12-31",
@@ -434,7 +434,7 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
       })),
       {
         "@type": "FAQPage",
-        "@id": "https://www.middasbuy.com/free-fire#faq",
+        "@id": "https://www.midasbuy.com.pk/free-fire#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -456,10 +456,10 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
       },
       {
         "@type": "Organization",
-        "@id": "https://www.middasbuy.com/#organization",
+        "@id": "https://www.midasbuy.com.pk/#organization",
         "name": "Midasbuy",
-        "url": "https://www.middasbuy.com",
-        "logo": "https://www.middasbuy.com/og-image.png",
+        "url": "https://www.midasbuy.com.pk",
+        "logo": "https://www.midasbuy.com.pk/og-image.png",
         "description": "Official store for Free Fire diamonds and gaming top-ups"
       }
     ]

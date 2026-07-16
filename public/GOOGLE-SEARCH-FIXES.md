@@ -10,21 +10,21 @@
 
 **Problem**: 4 pages showing "Page with redirect" errors:
 
-- ❌ http://middasbuy.com/
-- ❌ http://www.middasbuy.com/
-- ❌ https://www.middasbuy.com/
-- ❌ https://middasbuy.com/pubg-mobile
+- ❌ http://midasbuy.com.pk/
+- ❌ http://www.midasbuy.com.pk/
+- ❌ https://www.midasbuy.com.pk/
+- ❌ https://midasbuy.com.pk/pubg-mobile
 
 **Solution**: Added `_redirects` file with proper rules:
 
 ```
 # Force HTTPS and non-www
-http://middasbuy.com/* https://middasbuy.com/:splat 301!
-http://www.middasbuy.com/* https://middasbuy.com/:splat 301!
-https://www.middasbuy.com/* https://middasbuy.com/:splat 301!
+http://midasbuy.com.pk/* https://midasbuy.com.pk/:splat 301!
+http://www.midasbuy.com.pk/* https://midasbuy.com.pk/:splat 301!
+https://www.midasbuy.com.pk/* https://midasbuy.com.pk/:splat 301!
 ```
 
-✅ **Result**: All HTTP and www versions now properly redirect to https://middasbuy.com
+✅ **Result**: All HTTP and www versions now properly redirect to https://midasbuy.com.pk
 
 ---
 
@@ -78,10 +78,10 @@ https://www.middasbuy.com/* https://middasbuy.com/:splat 301!
    - Go to Google Search Console
    - URL Inspection tool
    - Submit these URLs for re-indexing:
-     • https://middasbuy.com/
-     • https://middasbuy.com/pubg-mobile
-     • https://middasbuy.com/free-fire
-     • https://middasbuy.com/bgmi
+     • https://midasbuy.com.pk/
+     • https://midasbuy.com.pk/pubg-mobile
+     • https://midasbuy.com.pk/free-fire
+     • https://midasbuy.com.pk/bgmi
    ```
 
 2. **Submit Updated Sitemap**:
@@ -89,7 +89,7 @@ https://www.middasbuy.com/* https://middasbuy.com/:splat 301!
    ```
    - Go to Sitemaps section
    - Remove old sitemap (if any)
-   - Submit: https://middasbuy.com/sitemap.xml
+   - Submit: https://midasbuy.com.pk/sitemap.xml
    ```
 
 3. **Validate Fixes**:
@@ -256,9 +256,9 @@ Week 2:
    - ☐ Wait 5-10 minutes for deployment
    - ☐ Test redirects manually:
      ```
-     http://www.middasbuy.com → https://www.middasbuy.com ✓
-     http://www.middasbuy.com → https://middasbuy.com ✓
-     https://www.middasbuy.com → https://middasbuy.com ✓
+     http://www.midasbuy.com.pk → https://www.midasbuy.com.pk ✓
+     http://www.midasbuy.com.pk → https://midasbuy.com.pk ✓
+     https://www.midasbuy.com.pk → https://midasbuy.com.pk ✓
      ```
 
 3. **Start Backlink Outreach**:

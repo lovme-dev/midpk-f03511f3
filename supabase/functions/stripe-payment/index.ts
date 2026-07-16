@@ -60,8 +60,8 @@ serve(async (req) => {
         },
       ],
       mode: 'payment',
-      success_url: `${req.headers.get('origin') || 'https://middasbuy.com'}/thankyou?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.get('origin') || 'https://middasbuy.com'}/payment/failed?reason=payment_cancelled`,
+      success_url: `${req.headers.get('origin') || 'https://midasbuy.com.pk'}/thankyou?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.get('origin') || 'https://midasbuy.com.pk'}/payment/failed?reason=payment_cancelled`,
       metadata: {
         payment_id: payment_id,
         player_id: player_id || '',

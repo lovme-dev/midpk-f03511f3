@@ -529,25 +529,25 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.middasbuy.com/#webpage",
-        "url": "https://www.middasbuy.com",
+        "@id": "https://www.midasbuy.com.pk/#webpage",
+        "url": "https://www.midasbuy.com.pk",
         "name": "Midasbuy - PUBG UC Store",
         "description": "Buy PUBG UC instantly at the best prices. Official PUBG Mobile UC top up service with secure payments and instant delivery.",
         "inLanguage": "en",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://www.middasbuy.com/#website",
+          "@id": "https://www.midasbuy.com.pk/#website",
           "name": "Midasbuy"
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.middasbuy.com/#website",
+        "@id": "https://www.midasbuy.com.pk/#website",
         "name": "Midasbuy",
-        "url": "https://www.middasbuy.com",
+        "url": "https://www.midasbuy.com.pk",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://www.middasbuy.com/search?q={search_term_string}",
+          "target": "https://www.midasbuy.com.pk/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         },
         "publisher": {
@@ -555,13 +555,13 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           "name": "Midasbuy",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.middasbuy.com/og-image.png"
+            "url": "https://www.midasbuy.com.pk/og-image.png"
           }
         }
       },
       ...ucPackages.map((pkg) => ({
         "@type": "Product",
-        "@id": `https://www.middasbuy.com/purchase/${pkg.id}#product`,
+        "@id": `https://www.midasbuy.com.pk/purchase/${pkg.id}#product`,
         "name": `PUBG Mobile ${pkg.baseAmount} UC ${pkg.bonusAmount > 0 ? `+${pkg.bonusAmount} Bonus` : ''}`,
         "description": `Buy ${pkg.baseAmount} UC ${pkg.bonusAmount > 0 ? `with ${pkg.bonusAmount} bonus UC` : ''} for PUBG Mobile at best price. Instant delivery with secure payment.`,
         "image": pkg.image,
@@ -572,7 +572,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://www.middasbuy.com/purchase/${pkg.id}`,
+          "url": `https://www.midasbuy.com.pk/purchase/${pkg.id}`,
           "priceCurrency": "PKR",
           "price": pkg.price,
           "priceValidUntil": "2026-12-31",
@@ -640,7 +640,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     description: "Midasbuy Official - Trusted gaming store for authentic PUBG Mobile UC, Free Fire Diamonds, and premium gaming currency. Trusted by 10M+ gamers worldwide with instant delivery and secure payments.",
     price: "1.99",
     currency: "USD",
-    image: "https://middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
+    image: "https://midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png",
     category: "Gaming Currency"
   });
 
@@ -654,7 +654,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             description={countrySeoData?.description || "Buy PUBG Mobile UC from $0.99 on Midasbuy. Up to 60% OFF, instant 2-5 min delivery, secure payments. Trusted by 10M+ players worldwide."}
             keywords={countrySeoData?.keywords || "buy pubg uc, pubg mobile uc, pubg uc cheap, pubg uc 2026, cheapest pubg uc, pubg uc top up, pubg uc recharge, buy pubg uc online, pubg uc purchase, pubg uc instant delivery, pubg uc midasbuy, midasbuy pubg uc, pubg uc pakistan, pubg uc india, pubg uc usa, pubg uc uae, pubg uc malaysia, pubg uc philippines, pubg uc jazzcash, pubg uc easypaisa, pubg uc upi, pubg uc paytm, pubg uc gpay, pubg uc paypal, pubg uc visa, pubg uc mastercard, pubg royal pass, pubg glacier m416, pubg awm skin, pubg mythic outfit, pubg weapon skins, pubg character skins, pubg vehicle skins, pubg premium crates, pubg classic crates, pubg 60 uc, pubg 325 uc, pubg 660 uc, pubg 1800 uc, pubg 3850 uc, pubg 8100 uc, pubg uc pack, pubg monthly pass, pubg weekly pass, tencent pubg, tencent authorized, safe pubg uc, secure pubg uc purchase, trusted pubg uc seller, verified pubg uc dealer, genuine pubg uc, official pubg uc, instant pubg uc, fast pubg uc delivery, pubg uc 2 minute delivery, pubg uc direct recharge, how to buy pubg uc, where to buy pubg uc, best place buy pubg uc, cheapest way buy pubg uc, pubg uc buying guide, codashop pubg alternative, seagm pubg, razer gold pubg, pubg top up app, pubg uc website, pubg battle royale, pubg mobile game, pubg android, pubg ios, pubg esports, pubg tournament, pubg championship, pubg uc karachi, pubg uc lahore, pubg uc delhi, pubg uc mumbai, pubg uc dubai, pubg uc riyadh, pubg uc kuala lumpur, pubg uc manila, pubg uc discount, pubg uc sale, pubg uc offer, pubg uc promo, pubg uc bonus, pubg uc double, pubg uc extra, pubg uc vip bonus, middasbuy pubg, middasbuy uc, midasbuy official, midasbuy store, pubg uc 2026, pubg new update uc, pubg latest uc, pubg trending 2026"}
             canonicalUrl={countryCode ? `/midasbuy/${countryCode}/buy/pubgm` : "/midasbuy/us/buy/pubgm"}
-            ogImage="https://middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
+            ogImage="https://midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png"
             jsonLdSchema={[enhancedStructuredData, getPubgUcMerchantSchema()]}
             breadcrumbSchema={generateBreadcrumbSchema([
               { name: "Home", url: "/" },

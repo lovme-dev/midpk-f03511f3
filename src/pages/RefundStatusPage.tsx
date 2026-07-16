@@ -553,7 +553,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
         <title>Track Orders - Order Status & Refund Tracking | Midasbuy</title>
         <meta name="description" content="Track your PUBG UC, Free Fire Diamonds & gaming orders in real-time. View order status, pending refunds, and purchase history. Search orders by Transaction ID. 24/7 Order Tracking available." />
         <meta name="keywords" content="track order, order status, refund tracking, midasbuy orders, PUBG UC order, transaction ID search, gaming order history" />
-        <link rel="canonical" href="https://www.middasbuy.com/track-orders" />
+        <link rel="canonical" href="https://www.midasbuy.com.pk/track-orders" />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
       </Helmet>

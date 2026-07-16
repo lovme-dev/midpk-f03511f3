@@ -105,7 +105,7 @@ const handler = async (req: Request): Promise<Response> => {
             Your account has been created successfully! You can now purchase UC for PUBG Mobile and other gaming items at the best prices.
           </p>
           <div style="text-align: center; margin: 30px 0;">
-            <a href="https://www.middasbuy.com" style="display: inline-block; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #ffffff; padding: 14px 40px; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 15px; letter-spacing: 0.5px;">Start Shopping</a>
+            <a href="https://www.midasbuy.com.pk" style="display: inline-block; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #ffffff; padding: 14px 40px; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 15px; letter-spacing: 0.5px;">Start Shopping</a>
           </div>
         `;
         break;

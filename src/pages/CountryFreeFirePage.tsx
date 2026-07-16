@@ -19,7 +19,7 @@ const CountryFreeFirePage = ({ onLogout }: CountryFreeFirePageProps) => {
   
   useCurrencyFromURL();
   
-  const baseUrl = "https://www.middasbuy.com";
+  const baseUrl = "https://www.midasbuy.com.pk";
   const canonicalUrl = `/midasbuy/${countryCode?.toLowerCase()}/buy/freefire`;
 
   const countryFAQs = [

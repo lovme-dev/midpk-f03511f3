@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Midasbuy Gaming Store",
-  "image": "https://www.middasbuy.com/favicon.png",
+  "image": "https://www.midasbuy.com.pk/favicon.png",
   "priceRange": "$1-$500",
   "address": {
     "@type": "PostalAddress",
@@ -14,7 +14,7 @@
     "latitude": "0",
     "longitude": "0"
   },
-  "url": "https://www.middasbuy.com",
+  "url": "https://www.midasbuy.com.pk",
   "telephone": "+1-800-MIDASBUY",
   "email": "help@midasbuy.com.co",
   "openingHoursSpecification": {

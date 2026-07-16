@@ -12,19 +12,19 @@ const FreeFireSEOContent = () => {
   const faqs = [
     {
       question: "Can you buy Free Fire Diamonds?",
-      answer: "Absolutely! You can buy Free Fire Diamonds on middasbuy.com and enjoy the best price, fastest and safest delivery no matter where you are living in. We offer diamonds for all regions including Pakistan, India, Malaysia, Singapore, Philippines, Americas, Europe and more."
+      answer: "Absolutely! You can buy Free Fire Diamonds on midasbuy.com.pk and enjoy the best price, fastest and safest delivery no matter where you are living in. We offer diamonds for all regions including Pakistan, India, Malaysia, Singapore, Philippines, Americas, Europe and more."
     },
     {
       question: "How to get Free Fire Diamonds?",
-      answer: "By choosing middasbuy.com, you can get cheap Free Fire Diamonds and enjoy one of the most affordable prices and the best services. Simply enter your Free Fire UID, select your diamond package, complete payment, and receive diamonds instantly in your game account."
+      answer: "By choosing midasbuy.com.pk, you can get cheap Free Fire Diamonds and enjoy one of the most affordable prices and the best services. Simply enter your Free Fire UID, select your diamond package, complete payment, and receive diamonds instantly in your game account."
     },
     {
       question: "How does the delivery of Free Fire Diamonds work?",
-      answer: "The delivery of Free Fire Diamonds on middasbuy.com is instant and automatic. After payment confirmation, diamonds are directly credited to your Free Fire account within 3-5 minutes. No login credentials required - just your Free Fire UID."
+      answer: "The delivery of Free Fire Diamonds on midasbuy.com.pk is instant and automatic. After payment confirmation, diamonds are directly credited to your Free Fire account within 3-5 minutes. No login credentials required - just your Free Fire UID."
     },
     {
       question: "Is it safe to buy Free Fire Diamonds?",
-      answer: "When you buy FF Diamond on middasbuy.com, our secure payment methods and reliable delivery system ensures the utmost safety for your in-game assets. We are trusted by millions of players worldwide and use encrypted transactions."
+      answer: "When you buy FF Diamond on midasbuy.com.pk, our secure payment methods and reliable delivery system ensures the utmost safety for your in-game assets. We are trusted by millions of players worldwide and use encrypted transactions."
     },
     {
       question: "What is the cheapest way to buy Free Fire Diamonds?",
@@ -32,7 +32,7 @@ const FreeFireSEOContent = () => {
     },
     {
       question: "How to find my Free Fire UID?",
-      answer: "Open Free Fire game → Tap on your profile icon (top-left corner) → Your UID is displayed below your character name. Copy this 9-12 digit number and paste it on middasbuy.com during checkout."
+      answer: "Open Free Fire game → Tap on your profile icon (top-left corner) → Your UID is displayed below your character name. Copy this 9-12 digit number and paste it on midasbuy.com.pk during checkout."
     },
     {
       question: "Can I top up Free Fire MAX using the same UID?",
@@ -210,7 +210,7 @@ const FreeFireSEOContent = () => {
             <div className="bg-black/40 rounded-xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-freefire-primary mb-3">Why Top Up at Middasbuy?</h3>
               <p className="text-gray-300 leading-relaxed">
-                <a href="https://www.middasbuy.com" className="text-freefire-primary hover:underline font-semibold">Middasbuy.com</a> offers the cheapest Free Fire Diamonds with instant delivery. Get up to 60% discount + VIP bonus on all packages. We accept local payment methods like JazzCash, Easypaisa, and support players from Pakistan, India, Malaysia, Philippines, Europe, Americas, and worldwide. Trusted by 10M+ gamers!
+                <a href="https://www.midasbuy.com.pk" className="text-freefire-primary hover:underline font-semibold">Middasbuy.com</a> offers the cheapest Free Fire Diamonds with instant delivery. Get up to 60% discount + VIP bonus on all packages. We accept local payment methods like JazzCash, Easypaisa, and support players from Pakistan, India, Malaysia, Philippines, Europe, Americas, and worldwide. Trusted by 10M+ gamers!
               </p>
             </div>
           </div>
@@ -247,7 +247,7 @@ const FreeFireSEOContent = () => {
               <div className="w-12 h-12 bg-freefire-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-freefire-primary font-bold text-xl">4</span>
               </div>
-              <p className="text-gray-300 text-sm">Copy & paste UID on middasbuy.com</p>
+              <p className="text-gray-300 text-sm">Copy & paste UID on midasbuy.com.pk</p>
             </div>
           </div>
         </motion.section>
