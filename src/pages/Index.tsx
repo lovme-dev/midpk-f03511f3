@@ -681,20 +681,19 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
         <Header onLogout={onLogout} />
       </div>
       
-      {/* Banner Section - Desktop Only */}
+      {/* Banner Section - Desktop Only - thinner strip, full image visible */}
       {!isMobile && desktopBanner && (
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden bg-midasbuy-darkBlue">
           <img 
             src={desktopBanner}
             alt="PUBG Desktop Banner"
             width={1920}
-            height={500}
-            className="w-full h-auto object-cover"
+            height={280}
+            className="w-full h-auto max-h-[280px] object-contain"
             loading="eager"
             fetchPriority="high"
             decoding="async"
             style={{
-              aspectRatio: '1920 / 500',
               transform: `translate(${desktopBannerStyle.x}px, ${desktopBannerStyle.y}px) scale(${desktopBannerStyle.zoom / 100})`,
               transformOrigin: 'center center'
             }}
@@ -707,20 +706,19 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
         <div className="w-full relative z-10">
           {/* Mobile Banner Container with Character overlay */}
           <div className="relative w-full">
-            {/* Mobile Banner - show if uploaded from admin */}
+            {/* Mobile Banner - show if uploaded from admin, full image visible with capped height */}
             {mobileBanner && (
-              <div className={`w-full overflow-hidden relative ${gameBrand === 'BGMI' ? 'max-h-[130px]' : ''}`}>
+              <div className={`w-full overflow-hidden relative bg-midasbuy-darkBlue ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}>
                 <img 
                   src={mobileBanner}
                   alt={gameBrand === 'BGMI' ? "BGMI Banner" : "PUBG Mobile Banner"}
                   width={750}
                   height={400}
-                  className={`w-full h-auto object-cover ${gameBrand === 'BGMI' ? 'max-h-[130px]' : ''}`}
+                  className={`w-full h-auto object-contain ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
                   style={{
-                    aspectRatio: gameBrand === 'BGMI' ? '750 / 260' : '750 / 400',
                     transform: `translate(${mobileBannerStyle.x}px, ${mobileBannerStyle.y}px) scale(${mobileBannerStyle.zoom / 100})`,
                     transformOrigin: 'center center'
                   }}
