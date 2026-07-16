@@ -836,7 +836,7 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
                 />
                 <div className={isMobile ? 'flex-1' : ''}>
                   <div className={`flex items-center ${isMobile ? 'flex-col items-start' : ''}`}>
-                    <h1 className={`text-white font-bold tracking-wide drop-shadow-lg ${isMobile ? 'text-sm mb-1' : 'text-2xl md:text-3xl'}`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.6)' }}>FREE FIRE</h1>
+                    <h1 className={`text-white font-bold tracking-wide drop-shadow-lg ${isMobile ? 'text-sm mb-1' : 'text-2xl md:text-3xl'}`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.6)' }}>Recharge Free Fire Diamonds — Official Midasbuy Shop</h1>
                     <div className={`flex space-x-2 ${isMobile ? 'mb-1' : 'ml-3'}`}>
                       <div className={`inline-flex items-center px-2 py-0.5 rounded-full bg-white ${isMobile ? '' : ''}`}>
                         <OptimizedImage 
