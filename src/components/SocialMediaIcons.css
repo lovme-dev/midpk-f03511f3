@@ -1,0 +1,148 @@
+
+.social-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+}
+
+.social-icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 145, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .social-icon-container {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .social-icon-container:hover {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+/* Payment methods carousel styles */
+.payment-methods-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+.payment-methods-scroll {
+  display: flex;
+  width: fit-content;
+  animation: scroll 45s linear infinite;
+}
+
+.payment-methods-scroll:hover {
+  animation-play-state: paused;
+}
+
+.payment-method-logo {
+  transition: all 0.3s ease;
+  margin: 0 1.2rem;
+  height: 22px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  min-width: 30px;
+}
+
+.payment-method-logo img {
+  display: block;
+  max-height: 19px;
+  max-width: 100%;
+  height: 19px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.payment-method-logo img.needs-bg {
+  background: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.payment-method-logo:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-methods-scroll {
+    animation: scroll 40s linear infinite;
+  }
+  
+  .payment-methods-container {
+    padding: 0.4rem 0;
+  }
+  
+  .payment-method-logo {
+    margin: 0 0.5rem;
+    height: 28px;
+    min-width: 38px;
+  }
+
+  .payment-method-logo img {
+    max-height: 24px;
+    height: 24px;
+    border-radius: 5px;
+  }
+  
+  .payment-method-logo img.needs-bg {
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-methods-scroll {
+    animation: scroll 35s linear infinite;
+  }
+  
+  .payment-methods-container {
+    padding: 0.35rem 0;
+  }
+  
+  .payment-method-logo {
+    margin: 0 0.4rem;
+    height: 26px;
+    min-width: 35px;
+  }
+
+  .payment-method-logo img {
+    max-height: 22px;
+    height: 22px;
+    border-radius: 5px;
+  }
+  
+  .payment-method-logo img.needs-bg {
+    padding: 2px 4px;
+  }
+}

@@ -1,0 +1,49 @@
+project_id = "vecburzoqlivoctpkdhk"
+
+[functions.send-push-notification]
+verify_jwt = false
+
+[functions.send-order-email]
+verify_jwt = false
+
+[functions.binance-crypto-deposit]
+verify_jwt = false
+
+[functions.broadcast-notification]
+verify_jwt = false
+
+[functions.get-vapid-public-key]
+verify_jwt = false
+
+[functions.send-order-status-notification]
+verify_jwt = false
+
+[functions.notify-admin-new-order]
+verify_jwt = false
+
+[functions.gopayfast-payment]
+verify_jwt = false
+
+[functions.gopayfast-ipn]
+verify_jwt = false
+
+[functions.create-or-get-guest-profile]
+verify_jwt = false
+
+[functions.paypro-payment]
+verify_jwt = false
+
+[functions.paypro-callback]
+verify_jwt = false
+
+[functions.xpay-create-payment]
+verify_jwt = false
+
+[functions.xpay-webhook]
+verify_jwt = false
+
+[functions.xpay-config]
+verify_jwt = false
+
+[functions.notify-admin-redeem-code]
+verify_jwt = false

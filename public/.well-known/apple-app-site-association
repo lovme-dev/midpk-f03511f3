@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "app.lovable.a9302f0d6ea6460ea23fd2a7b79740d3",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

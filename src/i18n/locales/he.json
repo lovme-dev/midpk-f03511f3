@@ -1,0 +1,750 @@
+{
+  "installApp": "התקן אפליקציה",
+  "language": "שפה",
+  "followUs": "עקבו אחרינו",
+  "home": "בית",
+  "purchase": "רכישה",
+  "dashboard": "לוח בקרה",
+  "buyUCPackages": "קנה חבילות UC",
+  "selectLanguage": "בחר שפה",
+  "support": "תמיכה",
+  "helpCenter": "מרכז עזרה",
+  "contactUs": "צור קשר",
+  "faqs": "שאלות נפוצות",
+  "paymentIssues": "בעיות תשלום",
+  "security": "אבטחה",
+  "legal": "משפטי",
+  "termsOfService": "תנאי שירות",
+  "privacyPolicy": "מדיניות פרטיות",
+  "cookiePolicy": "מדיניות עוגיות",
+  "refundPolicy": "מדיניות החזרים",
+  "copyrightNotice": "הודעת זכויות יוצרים",
+  "aboutUs": "אודותינו",
+  "aboutMidasbuy": "אודות Midasbuy",
+  "blogs": "בלוגים",
+  "careers": "קריירה",
+  "press": "עיתונות",
+  "partners": "שותפים",
+  "popularGames": "משחקים פופולריים",
+  "allGames": "כל המשחקים",
+  "latestNews": "חדשות אחרונות",
+  "viewAll": "צפה בהכל",
+  "miniGamesLabel": "משחקונים",
+  "featured": "מומלץ",
+  "goButton": "לך",
+  "games": "משחקים",
+  "all": "הכל",
+  "endsIn": "מסתיים בעוד",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR: SILENT GODS"
+  },
+  "buyNow": "קנה עכשיו",
+  "addToCart": "הוסף לעגלה",
+  "selectPackage": "בחר חבילה",
+  "enterPlayerId": "הזן מזהה שחקן",
+  "playerId": "מזהה שחקן",
+  "username": "שם משתמש",
+  "email": "אימייל",
+  "password": "סיסמה",
+  "login": "התחבר",
+  "logout": "התנתק",
+  "signUp": "הירשם",
+  "forgotPassword": "שכחת סיסמה",
+  "rememberMe": "זכור אותי",
+  "noAccount": "אין לך חשבון?",
+  "haveAccount": "כבר יש לך חשבון?",
+  "orderHistory": "היסטוריית הזמנות",
+  "orderStatus": "סטטוס הזמנה",
+  "pending": "ממתין",
+  "completed": "הושלם",
+  "failed": "נכשל",
+  "processing": "מעבד",
+  "payment": "תשלום",
+  "paymentMethod": "אמצעי תשלום",
+  "totalAmount": "סכום כולל",
+  "discount": "הנחה",
+  "couponCode": "קוד קופון",
+  "applyCoupon": "החל קופון",
+  "checkout": {
+    "enterPlayerIdNow": "הזן את מזהה השחקן שלך עכשיו",
+    "playerId": "מזהה שחקן",
+    "enterPlayerId": "הזן מזהה שחקן",
+    "enterPlayerId10": "הזן מזהה שחקן בן 10 ספרות",
+    "enterUsername": "הזן שם משתמש",
+    "enterPlayerIdToPurchase": "הזן מזהה שחקן לרכישה",
+    "selectPlayerIdToRecharge": "בחר או הזן את מזהה השחקן לטעינה",
+    "couldntFindPlayerId": "לא מצאת את מזהה השחקן שלך?",
+    "coupon": "קופון",
+    "noAvailableCoupon": "אין קופון זמין",
+    "selectPaymentChannels": "בחר ערוץ תשלום",
+    "creditDebitCard": "כרטיס אשראי/חיוב",
+    "vipExtraPoints": "נקודות VIP נוספות",
+    "payNow": "שלם עכשיו",
+    "total": "סה״כ",
+    "purchaseItem": "פריט לרכישה",
+    "extraForYou": "מיוחד עבורך",
+    "playerIdRequired": "נדרש מזהה שחקן",
+    "pleaseEnterPlayerId": "אנא הזן תחילה את מזהה השחקן שלך",
+    "invalidPlayerId": "מזהה שחקן לא תקין",
+    "enterValidPlayerId": "אנא הזן מזהה שחקן תקין",
+    "invalidUsername": "שם משתמש לא תקין",
+    "enterValidUsername": "אנא הזן שם משתמש תקין",
+    "paymentError": "שגיאת תשלום",
+    "paymentFailed": "התשלום נכשל. אנא נסה שוב.",
+    "paymentSuccessful": "התשלום הצליח!",
+    "cryptoConfirmed": "תשלום הקריפטו אושר.",
+    "recentPlayerIds": "מזהים אחרונים",
+    "enterNewPlayerId": "הזן מזהה חדש",
+    "saveAndContinue": "שמור והמשך",
+    "signInFirst": "התחבר תחילה",
+    "securityPayment": "תשלום מאובטח",
+    "orderSummary": "סיכום הזמנה"
+  },
+  "proceedToPayment": "המשך לתשלום",
+  "back": "חזרה",
+  "backToHome": "חזרה לדף הבית",
+  "next": "הבא",
+  "submit": "שלח",
+  "cancel": "ביטול",
+  "confirm": "אישור",
+  "close": "סגור",
+  "search": "חיפוש",
+  "loading": "טוען...",
+  "error": "שגיאה",
+  "success": "הצלחה",
+  "warning": "אזהרה",
+  "info": "מידע",
+  "welcome": "ברוך הבא",
+  "welcomeBack": "ברוך שובך",
+  "getStarted": "התחל",
+  "learnMore": "למד עוד",
+  "seeMore": "ראה עוד",
+  "readMore": "קרא עוד",
+  "showLess": "הצג פחות",
+  "notifications": "התראות",
+  "settings": "הגדרות",
+  "profile": "פרופיל",
+  "myOrders": "ההזמנות שלי",
+  "myAccount": "החשבון שלי",
+  "editProfile": "ערוך פרופיל",
+  "changePassword": "שנה סיסמה",
+  "saveChanges": "שמור שינויים",
+  "deleteAccount": "מחק חשבון",
+  "verifiedReviews": "ביקורות מאומתות",
+  "customerReviews": {
+    "title": "ביקורות לקוחות",
+    "verifiedReviews": "ביקורות מאומתות",
+    "writeReview": "כתוב ביקורת",
+    "loginToReview": "התחבר לכתיבת ביקורת",
+    "back": "חזרה",
+    "ratingDistribution": "התפלגות דירוג",
+    "last12Months": "12 החודשים האחרונים",
+    "filterByRating": "סנן לפי דירוג",
+    "allRatings": "הכל",
+    "loadMore": "טען עוד ביקורות",
+    "verifiedPurchase": "רכישה מאומתת",
+    "submitReview": "שלח ביקורת",
+    "yourName": "השם שלך",
+    "rating": "דירוג",
+    "review": "ביקורת",
+    "shareExperience": "שתף את החוויה שלך...",
+    "helpful": "מועיל",
+    "reply": "השב",
+    "delete": "מחק"
+  },
+  "writeReview": "כתוב ביקורת",
+  "rating": "דירוג",
+  "instantDelivery": "משלוח מיידי",
+  "securePayment": "תשלום מאובטח",
+  "bestPrice": "המחיר הטוב ביותר",
+  "officialPartner": "שותף רשמי",
+  "trustedBy": "מהימן על ידי מיליוני גיימרים",
+  "contactSupport": "צור קשר עם התמיכה",
+  "paymentIssuesHelp": "עזרה בבעיות תשלום",
+  "needHelp": "צריך עזרה?",
+  "lastUpdated": "עודכן לאחרונה",
+  "effectiveDate": "תאריך תחילה",
+  "contactEmail": "אימייל ליצירת קשר",
+  "footer": {
+    "description": "הפלטפורמה הרשמית לרכישת מטבע ופריטים במשחק עבור PUBG Mobile ומשחקים פופולריים אחרים.",
+    "copyright": "© 2026 MidasBuy. כל הזכויות שמורות.",
+    "mobileDescription": "Midasbuy הוא חנות הטעינה הרשמית של Tencent.",
+    "contactUsTitle": "צור קשר",
+    "contactUsDesc": "אם אתה צריך עזרה, אנא צור איתנו קשר.",
+    "customerService": "שירות לקוחות",
+    "cookiesPreference": "העדפות עוגיות",
+    "verifiedReviews": "80,837 ביקורות מאומתות"
+  },
+  "whyTopUp": {
+    "title": "למה לטעון משחקים ב-Midasbuy?",
+    "section1Title": "1. Midasbuy: חנות הטעינה הרשמית של PUBG MOBILE",
+    "section1Content": "כשותף התשלום הרשמי של PUBG MOBILE, Midasbuy מספקת שירותי טעינת UC בטוחים ויעילים.",
+    "section2Title": "2. מימוש בונוס UC ב-Midasbuy:",
+    "section2Content": "הפעל קודי מימוש של PUBG Mobile וקבל 3%-7% UC בונוס.",
+    "section3Title": "3. PUBG MOBILE | משחק הבאטל רויאל הטוב ביותר",
+    "section3Content": "PUBG MOBILE הוא יורה טקטי חינמי פופולרי עולמית.",
+    "section4Title": "4. שאלות ותשובות",
+    "q1": "ש: איך אני קונה ב-PUBG MOBILE?",
+    "q2": "ש: איפה אני מקבל את ה-UC שלי?",
+    "q3": "ש: איך לממש קודים ב-Midasbuy?",
+    "q4": "ש: למה לא קיבלתי את המוצר?"
+  },
+  "officialRechargeStore": "אנחנו חנות הטעינה הרשמית של Tencent",
+  "discoverOtherRegionGames": "גלה משחקים מאזורים אחרים",
+  "midasbuyVideo": "וידאו MIDASBUY",
+  "header": {
+    "midasbuyVideo": "וידאו MIDASBUY",
+    "noNotifications": "אין עדיין התראות",
+    "notificationsHint": "תראה עדכונים כאן",
+    "signInToEnjoy": "התחבר ליהנות",
+    "exclusiveService": "שירות בלעדי",
+    "signInSignUp": "התחבר / הירשם",
+    "coupon": "קופון",
+    "orderCenter": "מרכז הזמנות",
+    "accountSecurity": "חשבון ואבטחה",
+    "midasbuyEvents": "אירועי Midasbuy",
+    "liveVideo": "לייב ווידאו",
+    "adminPanel": "פאנל ניהול"
+  },
+  "miniGames": {
+    "title": "משחקונים",
+    "description": "שים לב שהמשחקונים מופעלים על ידי צדדים שלישיים.",
+    "moreDetails": "פרטים נוספים",
+    "tag": "משחקונים",
+    "noDownload": "אין צורך בהורדה! שחק מיד!",
+    "noDownloadDesktop": "אין צורך בהורדה!",
+    "playNow": "שחק עכשיו",
+    "shop": "חנות"
+  },
+  "events": {
+    "title": "אירועים",
+    "noEvents": "אין אירועים זמינים כרגע",
+    "comingSoon": "בקרוב",
+    "activeEvents": "אירועים פעילים",
+    "pastEvents": "אירועים קודמים",
+    "viewDetails": "צפה בפרטים",
+    "participate": "השתתף עכשיו",
+    "endsIn": "מסתיים בעוד",
+    "startsIn": "מתחיל בעוד"
+  },
+  "shop": {
+    "title": "חנות",
+    "categories": "קטגוריות",
+    "allItems": "כל הפריטים",
+    "featured": "מומלץ",
+    "newArrivals": "חדשים",
+    "bestSellers": "הנמכרים ביותר",
+    "onSale": "במבצע",
+    "outOfStock": "אזל מהמלאי",
+    "inStock": "במלאי",
+    "addedToCart": "נוסף לעגלה",
+    "viewCart": "צפה בעגלה",
+    "continueShopping": "המשך לקנות"
+  },
+  "redeem": {
+    "title": "מימוש קוד",
+    "enterCode": "הזן קוד מימוש",
+    "enterPlayerID": "הזן מזהה שחקן",
+    "enterUsername": "הזן שם משתמש (אופציונלי)",
+    "submitCode": "שלח קוד",
+    "placeholder": "הזן את קוד המימוש שלך כאן",
+    "playerIdPlaceholder": "הזן את מזהה השחקן שלך",
+    "usernamePlaceholder": "הזן את שם המשתמש שלך",
+    "success": "הקוד מומש בהצלחה!",
+    "error": "קוד לא תקין או שכבר נעשה בו שימוש",
+    "instructions": "הזן את קוד המימוש שלך כדי לקבל את הפרסים",
+    "processing": "מעבד את הקוד שלך..."
+  },
+  "tabs": {
+    "purchase": "רכישה",
+    "redeem": "מימוש",
+    "shop": "חנות",
+    "events": "אירועים"
+  },
+  "news": {
+    "nikkeBonus": "קבל 100% בונוס NIKKE בטעינה הראשונה!",
+    "registerFreeSkin": "הירשם וקבל סקין חינם",
+    "madDogGames": "ציד האוצרות של Mad Dog Games",
+    "hokPointsLottery": "הגרלת נקודות Honor of Kings",
+    "apexCoinBonanza": "Apex Coin: קנייה ראשונה, ערך כפול!",
+    "pubgVipBenefits": "הטבות VIP של PUBG MOBILE",
+    "purchaseBonus": "בונוס רכישה",
+    "extraBonus45": "עד 45% בונוס נוסף!",
+    "aoeDaily": "חבילות יומיות Age of Empires"
+  },
+  "promoBanner": {
+    "slide1": "הזן מזהה שחקן כדי לראות פרסים ולפתוח בונוסים בלעדיים!",
+    "slide2": "טען וסובב UC | חברים מקבלים קופונים חינם - עד 3000UC!",
+    "slide3": "100% סיכוי לזכות! נקודות כפולות ביום החברים!"
+  },
+  "videosPage": {
+    "title": "לייב ווידאו MIDASBUY",
+    "upcomingLiveStream": "שידור חי קרוב",
+    "videoAndLiveRecord": "וידאו והקלטה",
+    "video": "וידאו",
+    "liveRecord": "הקלטה",
+    "chooseGame": "בחר משחק",
+    "noLiveRecords": "אין הקלטות זמינות",
+    "loadMore": "טען עוד",
+    "videoComingSoon": "וידאו בקרוב",
+    "videoNotAvailable": "הוידאו עדיין לא זמין.",
+    "seeAll": "ראה הכל",
+    "more": "עוד"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "מדיניות פרטיות",
+      "lastUpdated": "עודכן לאחרונה: ינואר 2025",
+      "intro": "ב-Midasbuy, אנו מחויבים להגן על הפרטיות שלך ולהבטיח את אבטחת המידע האישי שלך.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "מידע שאנו אוספים",
+          "content": "אנו אוספים מידע שאתה מספק לנו ישירות."
+        },
+        "howWeUse": {
+          "title": "כיצד אנו משתמשים במידע שלך",
+          "content": "אנו משתמשים במידע שלך לעיבוד עסקאות ומתן תמיכה."
+        },
+        "informationSharing": {
+          "title": "שיתוף מידע",
+          "content": "אנחנו לא מוכרים את המידע האישי שלך."
+        },
+        "dataSecurity": {
+          "title": "אבטחת נתונים",
+          "content": "אנו מיישמים אמצעי אבטחה תעשייתיים."
+        },
+        "yourRights": {
+          "title": "זכויות הפרטיות שלך",
+          "content": "יש לך את הזכות לגשת, לתקן או למחוק את המידע האישי שלך."
+        },
+        "internationalTransfers": {
+          "title": "העברות נתונים בינלאומיות",
+          "content": "הנתונים שלך עשויים להיות מועברים למדינות אחרות."
+        },
+        "dataRetention": {
+          "title": "שמירת נתונים",
+          "content": "אנו שומרים את המידע האישי שלך כל עוד נדרש."
+        },
+        "childrensPrivacy": {
+          "title": "פרטיות ילדים",
+          "content": "השירותים שלנו לא מיועדים לילדים מתחת לגיל 13."
+        },
+        "updates": {
+          "title": "עדכונים למדיניות זו",
+          "content": "אנו עשויים לעדכן מדיניות זו."
+        },
+        "contactUs": {
+          "title": "צור קשר לגבי פרטיות",
+          "content": "אם יש לך שאלות, צור איתנו קשר."
+        }
+      }
+    },
+    "termsOfService": {
+      "title": "תנאי שירות",
+      "subtitle": "תנאים והתניות של Midasbuy",
+      "lastUpdated": "עודכן לאחרונה: ינואר 2025",
+      "intro": "על ידי שימוש ב-Midasbuy, אתה מסכים לתנאים אלה.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. סקירת שירות",
+          "content": "Midasbuy מוכרת חבילות UC עבור PUBG Mobile."
+        },
+        "userResponsibilities": {
+          "title": "2. אחריות משתמש",
+          "items": [
+            "ספק מידע מדויק",
+            "הימנע משימוש הונאתי"
+          ]
+        },
+        "delivery": {
+          "title": "3. משלוח",
+          "items": [
+            "רכישות UC בדרך כלל מסופקות מיד"
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. מדיניות החזרים",
+          "items": [
+            "יש לבקש החזר תוך 24 שעות"
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. שינויים לתנאים",
+          "content": "אנו עשויים לעדכן תנאים אלה."
+        }
+      },
+      "acknowledgment": "על ידי שימוש ב-Midasbuy, אתה מאשר שקראת והסכמת לתנאי שירות אלה."
+    },
+    "refundPolicy": {
+      "title": "מדיניות החזרים",
+      "subtitle": "תנאי החזרים של Midasbuy",
+      "lastUpdated": "עודכן לאחרונה: ינואר 2025",
+      "intro": "אין החזרים לאחר 24 שעות.",
+      "description": "המטרה שלנו היא אספקה מהירה ואמינה של UC.",
+      "sections": {
+        "eligibility": {
+          "title": "1. זכאות להחזר",
+          "items": [
+            "החזרים זמינים רק אם UC לא סופק"
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. מקרים ללא החזר",
+          "items": [
+            "UC סופק בהצלחה",
+            "מזהה שגוי"
+          ]
+        },
+        "process": {
+          "title": "3. תהליך החזר",
+          "content": "לבקשת החזר, שלח אימייל עם:",
+          "items": [
+            "מזהה הזמנה",
+            "הוכחת תשלום",
+            "סיבת הבקשה"
+          ],
+          "timeline": "החזרים יישלחו תוך 7-14 ימי עסקים."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "מרכז עזרה",
+      "subtitle": "קבל תמיכה לכל צרכי Midasbuy שלך.",
+      "contactByPhone": "יצירת קשר בטלפון",
+      "phoneDescription": "צוות התמיכה שלנו זמין 24/7.",
+      "customerSupport": "תמיכת לקוחות",
+      "clickToChat": "לחץ לצ'אט בוואטסאפ",
+      "chatWithAgent": "שוחח עם נציג",
+      "emailSupport": "תמיכה באימייל",
+      "emailDescription": "שלח לנו אימייל ונחזור אליך תוך 24 שעות.",
+      "supportEmail": "אימייל תמיכה",
+      "responseTime": "תשובה תוך 24 שעות",
+      "liveChat": "צ'אט חי",
+      "liveChatDescription": "התחבר מיד לנציג תמיכה.",
+      "startLiveChat": "התחל צ'אט חי",
+      "available247": "זמין 24/7",
+      "stillHaveQuestions": "עדיין יש שאלות? בדוק את השאלות הנפוצות."
+    },
+    "faqs": {
+      "title": "שאלות נפוצות",
+      "subtitle": "מצא תשובות לשאלות נפוצות.",
+      "searchPlaceholder": "חפש שאלות...",
+      "noResults": "לא נמצאו תוצאות",
+      "tryDifferent": "נסה מונח חיפוש אחר",
+      "cantFindAnswer": "לא מוצא את מה שאתה מחפש?",
+      "contactSupport": "צור קשר עם התמיכה",
+      "categories": {
+        "all": "הכל",
+        "purchases": "רכישות",
+        "payments": "תשלומים",
+        "account": "חשבון",
+        "security": "אבטחה",
+        "refunds": "החזרים"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "איך אני קונה UC ב-PUBG Mobile?",
+          "answer": "בחר חבילת UC, הזן מזהה ושלם."
+        },
+        "isSafe": {
+          "question": "האם בטוח לקנות מ-Midasbuy?",
+          "answer": "כן, Midasbuy היא הפלטפורמה הרשמית של PUBG Mobile."
+        },
+        "deliveryTime": {
+          "question": "כמה זמן לוקח לקבל UC?",
+          "answer": "בדרך כלל מיד, לפעמים עד 30 דקות."
+        },
+        "paymentMethods": {
+          "question": "אילו אמצעי תשלום מתקבלים?",
+          "answer": "כרטיסי אשראי, PayPal ואפשרויות אזוריות."
+        },
+        "ucNotReceived": {
+          "question": "שילמתי אבל לא קיבלתי UC. מה לעשות?",
+          "answer": "בדוק אישור תשלום, ואז צור קשר עם התמיכה."
+        },
+        "purchaseForOthers": {
+          "question": "האם אני יכול לקנות UC לשחקן אחר?",
+          "answer": "כן, פשוט הזן את המזהה שלו."
+        },
+        "findPlayerId": {
+          "question": "איך אני מוצא את מזהה PUBG Mobile שלי?",
+          "answer": "לחץ על תמונת הפרופיל במשחק."
+        },
+        "bonuses": {
+          "question": "יש בונוסים על חבילות גדולות?",
+          "answer": "כן, חבילות גדולות כוללות לעתים קרובות UC בונוס."
+        },
+        "ucExpire": {
+          "question": "האם UC פג תוקף?",
+          "answer": "לא, UC לא פג."
+        },
+        "refund": {
+          "question": "האם אני יכול לקבל החזר?",
+          "answer": "רכישות UC אינן ניתנות להחזר לאחר המסירה."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "צור קשר",
+      "subtitle": "יש שאלות? הצוות שלנו כאן לעזור.",
+      "sendMessage": "שלח הודעה",
+      "yourName": "שמך",
+      "enterName": "הזן את שמך",
+      "emailAddress": "כתובת אימייל",
+      "enterEmail": "הזן את האימייל שלך",
+      "subject": "נושא",
+      "whatIsThis": "במה מדובר?",
+      "message": "הודעה",
+      "howCanWeHelp": "איך נוכל לעזור?",
+      "sending": "שולח...",
+      "sendMessageBtn": "שלח הודעה",
+      "messageSent": "ההודעה נשלחה בהצלחה",
+      "messageSuccess": "תודה שפנית אלינו. נשיב בקרוב.",
+      "messageError": "שגיאה בשליחת ההודעה",
+      "messageErrorDesc": "הייתה בעיה בשליחת ההודעה שלך.",
+      "contactInfo": "פרטי יצירת קשר",
+      "whatsappSupport": "תמיכה בוואטסאפ",
+      "support247": "תמיכת לקוחות 24/7",
+      "emailSupportTitle": "תמיכה באימייל",
+      "forAllInquiries": "לכל הפניות",
+      "liveChatTitle": "צ'אט חי",
+      "availableOnWebsite": "זמין 24/7 באתר",
+      "startChat": "התחל צ'אט",
+      "ourOffice": "המשרד שלנו",
+      "headquarters": "מטה Midasbuy",
+      "address": "One Midasbuy Plaza, Gaming District\nלוס אנג'לס, CA 90210\nארה״ב",
+      "officeHours": "שעות פעילות: ראשון עד חמישי, 9:00-18:00"
+    },
+    "security": {
+      "title": "מרכז אבטחה",
+      "subtitle": "למד איך Midasbuy מגנה על המידע שלך.",
+      "howWeProtect": "איך אנו מגנים עליך",
+      "securePayments": "תשלומים מאובטחים",
+      "securePaymentsDesc": "כל העסקאות מוצפנות.",
+      "securePaymentsNote": "אנו לעולם לא שומרים פרטי כרטיס מלאים.",
+      "accountProtection": "הגנת חשבון",
+      "accountProtectionDesc": "החשבון שלך מוגן על ידי מערכת אימות מאובטחת.",
+      "accountProtectionNote": "אנו בודקים באופן קבוע את המערכות שלנו.",
+      "dataPrivacy": "פרטיות נתונים",
+      "dataPrivacyDesc": "אנו עוקבים אחר נהלי פרטיות קפדניים.",
+      "dataPrivacyNote": "אתה יכול לבקש גישה או מחיקה של הנתונים שלך.",
+      "fraudPrevention": "מניעת הונאות",
+      "fraudPreventionDesc": "מערכות גילוי הונאות מתקדמות מנטרות עסקאות.",
+      "fraudPreventionNote": "אנו עובדים עם ספקי תשלומים.",
+      "bestPractices": "שיטות אבטחה מומלצות למשתמשים",
+      "useStrongPasswords": "השתמש בסיסמאות חזקות",
+      "useStrongPasswordsDesc": "צור סיסמאות מורכבות עם אותיות, מספרים ותווים מיוחדים.",
+      "enable2FA": "הפעל אימות דו-שלבי",
+      "enable2FADesc": "הוסף שכבת אבטחה נוספת.",
+      "useOfficialSites": "השתמש רק באתרים רשמיים",
+      "useOfficialSitesDesc": "תמיד ודא שאתה באתר הרשמי של Midasbuy.",
+      "keepDevicesSecure": "שמור על המכשירים מאובטחים",
+      "keepDevicesSecureDesc": "עדכן את מערכת ההפעלה באופן קבוע.",
+      "bewarePhishing": "היזהר מפישינג",
+      "bewarePhishingDesc": "Midasbuy לעולם לא תבקש את הסיסמה שלך.",
+      "monitorTransactions": "נטר עסקאות",
+      "monitorTransactionsDesc": "בדוק את היסטוריית הרכישות שלך.",
+      "reportConcerns": "דווח על חששות אבטחה",
+      "reportConcernsDesc": "אם אתה חושד בגישה לא מורשית, דווח מיד.",
+      "reportSecurityIssue": "דווח על בעיית אבטחה",
+      "securityFAQ": "שאלות נפוצות בנושא אבטחה",
+      "urgentContact": "לעניינים דחופים צור קשר ב-security@midasbuy.com"
+    },
+    "paymentIssues": {
+      "title": "בעיות תשלום",
+      "subtitle": "מצא פתרונות לבעיות תשלום נפוצות.",
+      "commonIssues": "בעיות תשלום נפוצות",
+      "paymentDeclined": "תשלום נדחה",
+      "paymentDeclinedReasons": "אם התשלום שלך נדחה, זה יכול להיות בגלל:",
+      "paymentDeclinedItems": [
+        "אין מספיק כסף",
+        "פרטי כרטיס שגויים",
+        "הבנק חסם"
+      ],
+      "howToResolve": "איך לפתור:",
+      "paymentDeclinedSteps": [
+        "ודא את פרטי הכרטיס",
+        "צור קשר עם הבנק"
+      ],
+      "ucNotReceived": "תשלום הצליח אבל UC לא התקבל",
+      "ucNotReceivedReasons": "זה יכול להיות בגלל:",
+      "ucNotReceivedItems": [
+        "עיכוב שרת",
+        "מזהה שגוי"
+      ],
+      "ucNotReceivedSteps": [
+        "חכה 30 דקות",
+        "צור קשר עם התמיכה"
+      ],
+      "multipleCharges": "חיובים מרובים לרכישה אחת",
+      "multipleChargesReasons": "זה יכול להיות בגלל:",
+      "multipleChargesItems": [
+        "שגיאת עיבוד",
+        "לחיצה מרובה"
+      ],
+      "multipleChargesSteps": [
+        "חכה 3-5 ימי עסקים",
+        "צור קשר עם התמיכה"
+      ],
+      "needMoreHelp": "צריך עוד עזרה?",
+      "needMoreHelpDesc": "צוות התמיכה שלנו מוכן לסייע.",
+      "visitHelpCenter": "מרכז עזרה",
+      "paymentNote": "לבעיות משמעותיות צור קשר גם עם הבנק."
+    },
+    "aboutMidasbuy": {
+      "title": "אודות Midasbuy",
+      "subtitle": "השותף המהימן שלך לגיימינג נייד",
+      "whoWeAre": "מי אנחנו",
+      "whoWeAreContent1": "Midasbuy היא החנות הדיגיטלית המובילה בעולם לגיימינג.",
+      "whoWeAreContent2": "כשותף רשמי של מפיצי משחקים גדולים.",
+      "ourMission": "המשימה שלנו",
+      "ourMissionContent1": "המשימה שלנו היא להעצים גיימרים ברחבי העולם.",
+      "ourMissionContent2": "אנו מחויבים לשבירת מחסומים במסחר דיגיטלי של משחקים.",
+      "whyChooseUs": "למה לבחור ב-Midasbuy?",
+      "officialPartnership": "שותפות רשמית",
+      "officialPartnershipDesc": "מפיץ מורשה ל-PUBG Mobile ו-30+ משחקים.",
+      "lightningDelivery": "משלוח מהיר כברק",
+      "lightningDeliveryDesc": "זמן משלוח ממוצע של פחות מ-2 דקות.",
+      "bankGradeSecurity": "אבטחה ברמת בנק",
+      "bankGradeSecurityDesc": "הצפנת SSL ותאימות PCI DSS.",
+      "globalPayments": "אפשרויות תשלום גלובליות",
+      "globalPaymentsDesc": "תמיכה ב-150+ שיטות תשלום.",
+      "gamersServed": "גיימרים שהוגשו",
+      "countries": "מדינות",
+      "successRate": "אחוז הצלחה",
+      "avgDelivery": "זמן משלוח ממוצע",
+      "joinCommunity": "הצטרף לקהילה",
+      "joinCommunityDesc": "עקוב אחרינו ברשתות החברתיות."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "he": "עברית",
+    "ar": "العربية"
+  },
+  "authPage": {
+    "login": "התחבר",
+    "register": "הירשם",
+    "email": "אימייל",
+    "password": "סיסמה",
+    "confirmPassword": "אשר סיסמה",
+    "fullName": "שם מלא",
+    "signIn": "התחבר",
+    "signUp": "הירשם",
+    "signingIn": "מתחבר...",
+    "signingUp": "נרשם...",
+    "orContinueWith": "או המשך עם",
+    "continueWithGoogle": "המשך עם גוגל",
+    "dontHaveAccount": "אין לך חשבון?",
+    "alreadyHaveAccount": "כבר יש לך חשבון?",
+    "welcomeBack": "ברוך שובך",
+    "createAccount": "צור חשבון",
+    "secureLogin": "התחברות מאובטחת",
+    "secureRegistration": "הרשמה מאובטחת",
+    "enterEmail": "הזן את האימייל שלך",
+    "enterPassword": "הזן את הסיסמה שלך",
+    "enterFullName": "הזן את שמך המלא"
+  },
+  "profilePage": {
+    "title": "פרופיל",
+    "personalInfo": "מידע אישי",
+    "fullName": "שם מלא",
+    "email": "אימייל",
+    "phone": "טלפון",
+    "gamerTag": "תג גיימר",
+    "saveChanges": "שמור שינויים",
+    "saving": "שומר...",
+    "logout": "התנתק",
+    "editProfile": "ערוך פרופיל",
+    "cancel": "ביטול",
+    "notificationSettings": "הגדרות התראות"
+  },
+  "banners": {
+    "8ball": "שחק 8 כדורים ב-Midasbuy!",
+    "freefire": "יהלומי Free Fire במחירים הטובים ביותר!",
+    "pubgRecharge": "פרסי טעינה כוללת של PUBG Mobile!",
+    "deltaBlue": "אוסף הסוואה כחולה של Delta Force!",
+    "deltaGold": "מהדורת זהב של Delta Force!",
+    "ageOfEmpires": "טעינה ראשונה חודשית של Age of Empires!",
+    "deltaFire": "מהדורת אש של Delta Force!",
+    "deltaPink": "אוסף ורוד של Delta Force!",
+    "honorOfKings": "Honor of Kings - הזמן חברים!",
+    "apexCoin": "Apex Coin - קנייה ראשונה, ערך כפול!",
+    "pubgUcDrops": "UC יומי של PUBG Mobile!",
+    "pubgFree": "פרסים חינם של PUBG Mobile!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "הזן מזהה שחקן",
+    "signInEnterPlayerId": "התחבר והזן מזהה",
+    "player": "שחקן",
+    "signInMidasbuy": "התחבר לחשבון Midasbuy",
+    "enterRedeemCode": "הזן קוד מימוש",
+    "pleaseEnterRedeemCode": "אנא הזן קוד מימוש",
+    "submitting": "שולח...",
+    "ok": "אישור",
+    "aboutMidasbuy": "אודות MIDASBUY",
+    "paySafeLine1": "שלם בטוח ומהיר",
+    "paySafeLine2": "וכייפי עם",
+    "paySafeLine3": "MIDASBUY.",
+    "vipExtraUcFull": "קיבלת UC נוסף +3~7%",
+    "vipExtraUcShort": "+3~7% UC",
+    "completeRecharge": "אנא השלם את הטעינה!",
+    "extraBonus": "בונוס נוסף!"
+  },
+  "shopTab": {
+    "popularGames": "משחקים פופולריים",
+    "gameSelected": "{{name}} נבחר",
+    "notAvailableYet": "מוצר זה עדיין לא זמין. בקרוב!"
+  },
+  "eventsTab": {
+    "title": "אירועי PUBG Mobile",
+    "liveEvents": "אירועים חיים",
+    "upcomingEvents": "אירועים קרובים",
+    "ucBonusEvent": "אירוע בונוס UC",
+    "ucBonusDesc": "UC נוסף על כל הרכישות",
+    "endsIn": "מסתיים בעוד",
+    "threeDays": "3 ימים",
+    "royalPassSeason": "עונת Royal Pass",
+    "royalPassDesc": "עונה חדשה בקרוב",
+    "startsIn": "מתחיל בעוד",
+    "fiveDays": "5 ימים",
+    "limitedTimeOffer": "הצעה מוגבלת בזמן",
+    "limitedTimeDesc": "הנחות מיוחדות על פריטים נבחרים",
+    "availableFor": "זמין ל",
+    "twentyFourHours": "24 שעות"
+  },
+  "countryFaq": {
+    "header": "שאלות נפוצות - PUBG UC {{country}}",
+    "q1": "איך לקנות PUBG UC ב{{country}}?",
+    "a1": "בקרו בחנות הרשמית של Midasbuy, בחרו חבילת UC, הזינו את ה-PUBG Player ID שלכם, בחרו אמצעי תשלום ({{paymentMethods}}) והשלימו את התשלום. UC יימסר תוך 2-5 דקות.",
+    "q2": "מהו המחיר הזול ביותר ל-PUBG UC ב{{country}}?",
+    "a2": "Midasbuy מציע את ה-PUBG UC הזולים ביותר החל מ-{{currencySymbol}}0.99 ל-60 UC. קבלו הנחה של עד 60% + בונוס VIP של 30%.",
+    "q3": "האם Midasbuy בטוח לשחקנים מ{{country}}?",
+    "a3": "כן, Midasbuy בטוח ב-100% ומהימן על ידי יותר מ-10M שחקנים ב{{country}}.",
+    "q4": "אילו אמצעי תשלום זמינים ב{{country}}?",
+    "a4": "ב{{country}} אנו מקבלים {{paymentMethods}}. כל התשלומים מאובטחים ומוצפנים.",
+    "q5": "כמה זמן לוקחת משלוח PUBG UC ב{{country}}?",
+    "a5": "משלוח UC מיידי ולוקח רק 2-5 דקות לאחר תשלום מוצלח.",
+    "q6": "האם אני יכול לקנות Royal Pass ב-{{currency}} ב{{country}}?",
+    "a6": "כן! קנו מספיק UC ב-{{currency}} ב{{country}}. לאחר מכן קנו Royal Pass ישירות מ-PUBG Mobile.",
+    "whyBuyTitle": "למה לקנות PUBG UC מ-Midasbuy ב{{country}}?",
+    "whyBuyDesc": "Midasbuy היא הפלטפורמה המהימנה ביותר להטענת PUBG Mobile UC ב{{country}}. הנחה של עד 60% ומשלוח מיידי תוך 2-5 דקות."
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  }
+}

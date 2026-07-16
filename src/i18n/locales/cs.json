@@ -1,0 +1,947 @@
+{
+  "installApp": "Nainstalovat aplikaci",
+  "language": "Jazyk",
+  "followUs": "Sledujte nás",
+  "home": "Domů",
+  "purchase": "Koupit",
+  "dashboard": "Přehled",
+  "buyUCPackages": "Koupit UC balíčky",
+  "selectLanguage": "Vybrat jazyk",
+  "support": "Podpora",
+  "helpCenter": "Centrum nápovědy",
+  "contactUs": "Kontaktujte nás",
+  "faqs": "Časté dotazy",
+  "paymentIssues": "Problémy s platbou",
+  "security": "Bezpečnost",
+  "legal": "Právní informace",
+  "termsOfService": "Podmínky služby",
+  "privacyPolicy": "Zásady ochrany osobních údajů",
+  "cookiePolicy": "Zásady používání cookies",
+  "refundPolicy": "Zásady vrácení peněz",
+  "copyrightNotice": "Autorská práva",
+  "aboutUs": "O nás",
+  "aboutMidasbuy": "O Midasbuy",
+  "blogs": "Blogy",
+  "careers": "Kariéra",
+  "press": "Tisk",
+  "partners": "Partneři",
+  "popularGames": "Oblíbené hry",
+  "allGames": "Všechny hry",
+  "latestNews": "Nejnovější zprávy",
+  "viewAll": "Zobrazit vše",
+  "miniGamesLabel": "Mini hry",
+  "featured": "DOPORUČENÉ",
+  "goButton": "JÍT",
+  "games": "Hry",
+  "all": "Vše",
+  "endsIn": "Končí za",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR: SILENT GODS"
+  },
+  "buyNow": "Koupit nyní",
+  "addToCart": "Přidat do košíku",
+  "selectPackage": "Vybrat balíček",
+  "enterPlayerId": "Zadejte ID hráče",
+  "playerId": "ID hráče",
+  "username": "Uživatelské jméno",
+  "email": "E-mail",
+  "password": "Heslo",
+  "login": "Přihlásit se",
+  "logout": "Odhlásit se",
+  "signUp": "Registrovat se",
+  "forgotPassword": "Zapomenuté heslo?",
+  "rememberMe": "Pamatuj si mě",
+  "noAccount": "Nemáte účet?",
+  "haveAccount": "Již máte účet?",
+  "orderHistory": "Historie objednávek",
+  "orderStatus": "Stav objednávky",
+  "pending": "Čeká",
+  "completed": "Dokončeno",
+  "failed": "Selhalo",
+  "processing": "Zpracovává se",
+  "payment": "Platba",
+  "paymentMethod": "Způsob platby",
+  "totalAmount": "Celková částka",
+  "discount": "Sleva",
+  "couponCode": "Kód kuponu",
+  "applyCoupon": "Použít kupon",
+  "checkout": {
+    "enterPlayerIdNow": "Zadejte vaše ID hráče nyní",
+    "playerId": "ID hráče",
+    "enterPlayerId": "Zadejte ID hráče",
+    "enterPlayerId10": "Zadejte 10místné ID hráče",
+    "enterUsername": "Zadejte uživatelské jméno",
+    "enterPlayerIdToPurchase": "Zadejte ID hráče pro nákup",
+    "selectPlayerIdToRecharge": "Vyberte nebo vyplňte ID hráče pro dobití",
+    "couldntFindPlayerId": "Nemůžete najít vaše ID hráče?",
+    "coupon": "Kupon",
+    "noAvailableCoupon": "Žádný dostupný kupon",
+    "selectPaymentChannels": "Vyberte platební kanály",
+    "creditDebitCard": "Kreditní/ Debetní/ Předplacená karta",
+    "vipExtraPoints": "VIP extra body",
+    "payNow": "Zaplatit nyní",
+    "total": "Celkem",
+    "purchaseItem": "Nakupovaná položka",
+    "extraForYou": "Extra pro vás",
+    "playerIdRequired": "Vyžadováno ID hráče",
+    "pleaseEnterPlayerId": "Nejprve zadejte vaše ID hráče",
+    "invalidPlayerId": "Neplatné ID hráče",
+    "enterValidPlayerId": "Zadejte platné ID hráče",
+    "invalidUsername": "Neplatné uživatelské jméno",
+    "enterValidUsername": "Zadejte platné uživatelské jméno",
+    "paymentError": "Chyba platby",
+    "paymentFailed": "Nepodařilo se inicializovat platbu. Zkuste to znovu.",
+    "paymentSuccessful": "Platba úspěšná!",
+    "cryptoConfirmed": "Vaše krypto platba byla potvrzena.",
+    "recentPlayerIds": "Nedávná ID hráčů",
+    "enterNewPlayerId": "Zadejte nové ID hráče",
+    "saveAndContinue": "Uložit a pokračovat",
+    "signInFirst": "Nejprve se přihlaste",
+    "securityPayment": "BEZPEČNÁ PLATBA",
+    "orderSummary": "SOUHRN OBJEDNÁVKY"
+  },
+  "proceedToPayment": "Pokračovat k platbě",
+  "back": "Zpět",
+  "backToHome": "Zpět domů",
+  "next": "Další",
+  "submit": "Odeslat",
+  "cancel": "Zrušit",
+  "confirm": "Potvrdit",
+  "close": "Zavřít",
+  "search": "Hledat",
+  "loading": "Načítání...",
+  "error": "Chyba",
+  "success": "Úspěch",
+  "warning": "Varování",
+  "info": "Informace",
+  "welcome": "Vítejte",
+  "welcomeBack": "Vítejte zpět",
+  "getStarted": "Začít",
+  "learnMore": "Zjistit více",
+  "seeMore": "Zobrazit více",
+  "readMore": "Číst více",
+  "showLess": "Zobrazit méně",
+  "notifications": "Oznámení",
+  "settings": "Nastavení",
+  "profile": "Profil",
+  "myOrders": "Moje objednávky",
+  "myAccount": "Můj účet",
+  "editProfile": "Upravit profil",
+  "changePassword": "Změnit heslo",
+  "saveChanges": "Uložit změny",
+  "deleteAccount": "Smazat účet",
+  "verifiedReviews": "Ověřené recenze",
+  "customerReviews": {
+    "title": "Zákaznické recenze",
+    "verifiedReviews": "ověřených recenzí",
+    "writeReview": "Napsat recenzi",
+    "loginToReview": "Přihlaste se pro napsání recenze",
+    "back": "Zpět",
+    "ratingDistribution": "Rozložení hodnocení",
+    "last12Months": "Posledních 12 měsíců",
+    "filterByRating": "Filtrovat podle hodnocení",
+    "allRatings": "Všechna",
+    "loadMore": "Načíst více recenzí",
+    "verifiedPurchase": "Ověřený nákup",
+    "submitReview": "Odeslat recenzi",
+    "yourName": "Vaše jméno",
+    "rating": "Hodnocení",
+    "review": "Recenze",
+    "shareExperience": "Sdílejte vaši zkušenost...",
+    "helpful": "Užitečné",
+    "reply": "Odpovědět",
+    "delete": "Smazat"
+  },
+  "writeReview": "Napsat recenzi",
+  "rating": "Hodnocení",
+  "instantDelivery": "Okamžité doručení",
+  "securePayment": "Bezpečná platba",
+  "bestPrice": "Nejlepší cena",
+  "officialPartner": "Oficiální partner",
+  "trustedBy": "Důvěřují miliony hráčů",
+  "contactSupport": "Kontaktovat podporu",
+  "paymentIssuesHelp": "Pomoc s problémy platby",
+  "needHelp": "Potřebujete pomoc s nákupem?",
+  "lastUpdated": "Poslední aktualizace",
+  "effectiveDate": "Datum účinnosti",
+  "contactEmail": "Kontaktní e-mail",
+  "footer": {
+    "description": "Oficiální platforma pro nákup herní měny a předmětů pro PUBG Mobile a další populární hry.",
+    "copyright": "© 2026 MidasBuy. Všechna práva vyhrazena.",
+    "mobileDescription": "Midasbuy je oficiální dobíjecí obchod Tencent. Plaťte bezpečně, rychle a zábavně na Midasbuy.",
+    "contactUsTitle": "Kontaktujte nás",
+    "contactUsDesc": "Pokud potřebujete pomoc, kontaktujte nás kliknutím na \"Zákaznický servis\".",
+    "customerService": "Zákaznický servis",
+    "cookiesPreference": "Předvolby cookies",
+    "verifiedReviews": "80 837 ověřených recenzí"
+  },
+  "whyTopUp": {
+    "title": "Proč dobíjet hry na Midasbuy?",
+    "section1Title": "1. Midasbuy: Oficiální autorizovaný zahraniční dobíjecí obchod PUBG MOBILE",
+    "section1Content": "Jako exkluzivní oficiálně autorizovaný zahraniční platební partner PUBG MOBILE poskytuje Midasbuy bezpečné a efektivní dobíjecí služby UC pro hráče v regionech včetně Hongkongu, Japonska, jihovýchodní Asie, Evropy a Ameriky.",
+    "section2Title": "2. Midasbuy PUBG Mobile UC Bonus:",
+    "section2Content": "Aktivujte kódy PUBG Mobile nebo dárkové karty na oficiálním portálu Midasbuy a získejte okamžitě 3%-7% bonus UC.",
+    "section3Title": "3. PUBG MOBILE | NEJLEPŠÍ BATTLE ROYALE MOBILNÍ HRA",
+    "section3Content": "Jako globálně populární free-to-play taktická střílečka nabízí PUBG MOBILE různorodá bojiště jako Erangel, Miramar a Rondo.",
+    "section4Title": "4. Q&A",
+    "q1": "Otázka: Jak nakupuji pro PUBG MOBILE?",
+    "q2": "Otázka: Kde dostanu své UC po nákupu?",
+    "q3": "Otázka: Jak uplatním kódy na předměty na Midasbuy?",
+    "q4": "Otázka: Proč nemůžu dostat své produkty po nákupu?"
+  },
+  "officialRechargeStore": "Jsme oficiální dobíjecí obchod Tencent",
+  "discoverOtherRegionGames": "OBJEVTE HRY Z JINÝCH REGIONŮ",
+  "midasbuyVideo": "MIDASBUY VIDEO",
+  "header": {
+    "midasbuyVideo": "MIDASBUY VIDEO",
+    "noNotifications": "Zatím žádná oznámení",
+    "notificationsHint": "Zde uvidíte aktualizace",
+    "signInToEnjoy": "Přihlaste se pro",
+    "exclusiveService": "Exkluzivní službu",
+    "signInSignUp": "Přihlásit / Registrovat",
+    "coupon": "Kupon",
+    "orderCenter": "Centrum objednávek",
+    "accountSecurity": "Účet a zabezpečení",
+    "midasbuyEvents": "Události Midasbuy",
+    "liveVideo": "Živě & Video",
+    "adminPanel": "Administrátorský panel"
+  },
+  "miniGames": {
+    "title": "MINI HRY",
+    "description": "Upozorňujeme, že mini hry dostupné na webu Midasbuy provozují poskytovatelé třetích stran, nikoli Midasbuy.",
+    "moreDetails": "Více detailů",
+    "tag": "Mini hry",
+    "noDownload": "Není třeba stahovat aplikaci! Hrajte okamžitě na Midasbuy!",
+    "noDownloadDesktop": "Není třeba stahovat aplikaci! Hrajte okamžitě na",
+    "playNow": "Hrát nyní",
+    "shop": "Obchod"
+  },
+  "events": {
+    "title": "Události",
+    "noEvents": "Momentálně žádné dostupné události",
+    "comingSoon": "Již brzy",
+    "activeEvents": "Aktivní události",
+    "pastEvents": "Minulé události",
+    "viewDetails": "Zobrazit detaily",
+    "participate": "Zúčastnit se nyní",
+    "endsIn": "Končí za",
+    "startsIn": "Začíná za"
+  },
+  "shop": {
+    "title": "Obchod",
+    "categories": "Kategorie",
+    "allItems": "Všechny položky",
+    "featured": "Doporučené",
+    "newArrivals": "Novinky",
+    "bestSellers": "Nejprodávanější",
+    "onSale": "Ve slevě",
+    "outOfStock": "Vyprodáno",
+    "inStock": "Skladem",
+    "addedToCart": "Přidáno do košíku",
+    "viewCart": "Zobrazit košík",
+    "continueShopping": "Pokračovat v nákupu"
+  },
+  "redeem": {
+    "title": "Uplatnit kód",
+    "enterCode": "Zadejte kód k uplatnění",
+    "enterPlayerID": "Zadejte ID hráče",
+    "enterUsername": "Zadejte uživatelské jméno (volitelné)",
+    "submitCode": "Odeslat kód",
+    "placeholder": "Zadejte váš kód zde",
+    "playerIdPlaceholder": "Zadejte vaše ID hráče",
+    "usernamePlaceholder": "Zadejte vaše uživatelské jméno",
+    "success": "Kód úspěšně uplatněn!",
+    "error": "Neplatný kód nebo již použitý",
+    "instructions": "Zadejte váš kód pro získání odměn",
+    "processing": "Zpracování vašeho kódu..."
+  },
+  "tabs": {
+    "purchase": "KOUPIT",
+    "redeem": "UPLATNIT",
+    "shop": "OBCHOD",
+    "events": "UDÁLOSTI"
+  },
+  "news": {
+    "nikkeBonus": "Získejte extra 100% NIKKE bonus při prvním dobití!",
+    "registerFreeSkin": "Zaregistrujte se pro bezplatný skin",
+    "madDogGames": "Mad Dog Games Hon za pokladem",
+    "hokPointsLottery": "Loterie bodů Honor of Kings",
+    "apexCoinBonanza": "Apex Coin Bonanza: První nákup, 2x hodnota!",
+    "pubgVipBenefits": "PUBG MOBILE VIP výhody",
+    "purchaseBonus": "Bonus za nákup",
+    "extraBonus45": "EXTRA BONUS POUZE NA MIDASBUY UŽIJTE SI AŽ 45% BONUS",
+    "aoeDaily": "Age of Empires Denní balíčky"
+  },
+  "promoBanner": {
+    "slide1": "Zadejte ID hráče pro zobrazení odměn a odemknutí exkluzivních bonusů. Získejte speciální slevy na nákupy UC!",
+    "slide2": "Dobijte & Točte UC | Přátelé dostanou bezplatné kupony —— max 3000UC!",
+    "slide3": "100% šance na výhru! Dvojité body v Den členů, Pouze dnes! Přijďte vyhrát velkou cenu!"
+  },
+  "videosPage": {
+    "title": "MIDASBUY ŽIVĚ & VIDEO",
+    "upcomingLiveStream": "NADCHÁZEJÍCÍ ŽIVÝ PŘENOS",
+    "videoAndLiveRecord": "VIDEO & ZÁZNAM ŽIVÉHO PŘENOSU",
+    "video": "VIDEO",
+    "liveRecord": "ZÁZNAM ŽIVÉHO PŘENOSU",
+    "chooseGame": "VYBERTE HRU",
+    "noLiveRecords": "Žádné dostupné záznamy živého přenosu",
+    "loadMore": "Načíst více",
+    "videoComingSoon": "Video již brzy",
+    "videoNotAvailable": "Toto video zatím není k dispozici. Zkuste to později!",
+    "seeAll": "Zobrazit vše",
+    "more": "Více"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Zásady ochrany osobních údajů",
+      "lastUpdated": "Poslední aktualizace: Leden 2025",
+      "intro": "V Midasbuy se zavazujeme chránit vaše soukromí a zajistit bezpečnost vašich osobních údajů.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Informace, které shromažďujeme",
+          "content": "Shromažďujeme informace, které nám přímo poskytujete, například při vytváření účtu, nákupu nebo kontaktování podpory."
+        },
+        "howWeUse": {
+          "title": "Jak používáme vaše informace",
+          "content": "Vaše informace používáme ke zpracování transakcí, doručování nákupů, poskytování zákaznické podpory."
+        },
+        "informationSharing": {
+          "title": "Sdílení informací",
+          "content": "Vaše osobní údaje neprodáváme. Můžeme sdílet vaše data s důvěryhodnými třetími stranami."
+        },
+        "dataSecurity": {
+          "title": "Zabezpečení dat",
+          "content": "Implementujeme průmyslová standardní bezpečnostní opatření."
+        },
+        "yourRights": {
+          "title": "Vaše práva na soukromí",
+          "content": "Máte právo na přístup, opravu nebo smazání vašich osobních údajů."
+        },
+        "internationalTransfers": {
+          "title": "Mezinárodní přenosy dat",
+          "content": "Vaše data mohou být přenesena a uložena v zemích mimo vaši domovskou zemi."
+        },
+        "dataRetention": {
+          "title": "Uchovávání dat",
+          "content": "Vaše osobní údaje uchováváme po dobu nezbytnou k naplnění účelů."
+        },
+        "childrensPrivacy": {
+          "title": "Soukromí dětí",
+          "content": "Naše služby nejsou určeny dětem mladším 13 let."
+        },
+        "updates": {
+          "title": "Aktualizace těchto zásad",
+          "content": "Tyto zásady můžeme čas od času aktualizovat."
+        },
+        "contactUs": {
+          "title": "Kontaktujte nás ohledně soukromí",
+          "content": "Máte-li dotazy, kontaktujte nás prostřednictvím stránky Kontaktovat podporu."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Zásady používání cookies",
+      "lastUpdated": "Poslední aktualizace: Leden 2025",
+      "intro": "Tyto zásady vysvětlují, jak Midasbuy používá cookies a podobné technologie.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Co jsou cookies?",
+          "content": "Cookies jsou malé textové soubory umístěné na vašem zařízení při návštěvě našeho webu."
+        },
+        "essentialCookies": {
+          "title": "Nezbytné cookies",
+          "content": "Tyto cookies jsou nezbytné pro správné fungování webu."
+        },
+        "analyticsCookies": {
+          "title": "Analytické cookies",
+          "content": "Tyto cookies nám pomáhají pochopit, jak návštěvníci interagují s naším webem."
+        },
+        "advertisingCookies": {
+          "title": "Reklamní a marketingové cookies",
+          "content": "Tyto cookies slouží k zobrazování relevantnějších reklam."
+        },
+        "functionalityCookies": {
+          "title": "Funkční cookies",
+          "content": "Tyto cookies umožňují vylepšenou funkcionalitu a personalizaci."
+        },
+        "thirdPartyCookies": {
+          "title": "Cookies třetích stran",
+          "content": "Některé cookies jsou umístěny službami třetích stran."
+        },
+        "managingCookies": {
+          "title": "Správa předvoleb cookies",
+          "content": "Máte několik možností správy cookies."
+        },
+        "cookieRetention": {
+          "title": "Doba uchovávání cookies",
+          "content": "Různé cookies mají různou životnost."
+        }
+      },
+      "questionsTitle": "Otázky k zásadám cookies?",
+      "questionsContent": "Máte-li otázky, kontaktujte nás:"
+    },
+    "termsOfService": {
+      "title": "Podmínky služby",
+      "subtitle": "Podmínky Midasbuy",
+      "lastUpdated": "Poslední aktualizace: Leden 2025",
+      "intro": "Používáním Midasbuy souhlasíte s těmito podmínkami. Vrácení peněz pouze při nedoručení do 24 hodin.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Přehled služby",
+          "content": "Midasbuy prodává UC balíčky pro PUBG Mobile a podobné herní kredity."
+        },
+        "userResponsibilities": {
+          "title": "2. Odpovědnosti uživatele",
+          "items": [
+            "Poskytněte přesné PUBG ID a platební údaje.",
+            "Ujistěte se, že máte oprávnění k nákupům.",
+            "Vyvarujte se podvodného nebo zneužívajícího používání."
+          ]
+        },
+        "delivery": {
+          "title": "3. Doručení",
+          "items": [
+            "Nákupy UC jsou obvykle doručeny okamžitě, vzácně až do 30 minut.",
+            "V případě zpoždění kontaktujte podporu."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Zásady vrácení peněz",
+          "items": [
+            "Vrácení peněz musí být požádáno do 24 hodin.",
+            "Po 24 hodinách nebude vrácení provedeno.",
+            "Všechna vrácení podléhají našim zásadám."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Změny podmínek",
+          "content": "Tyto podmínky můžeme kdykoli aktualizovat."
+        }
+      },
+      "acknowledgment": "Používáním Midasbuy potvrzujete, že jste si přečetli a souhlasíte s těmito podmínkami."
+    },
+    "refundPolicy": {
+      "title": "Zásady vrácení peněz",
+      "subtitle": "Podmínky vrácení Midasbuy",
+      "lastUpdated": "Poslední aktualizace: Leden 2025",
+      "intro": "Po 24 hodinách žádné vrácení; vrácení pouze při nedoručení UC.",
+      "description": "V Midasbuy usilujeme o rychlé a spolehlivé doručení UC.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Způsobilost pro vrácení",
+          "items": [
+            "Vrácení pouze pokud UC nebyly doručeny ve slíbeném čase.",
+            "Žádost o vrácení do 24 hodin od nákupu.",
+            "Pokud UC již byly doručeny, vrácení není možné."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Nevratitelné případy",
+          "items": [
+            "UC úspěšně doručeny na správný účet.",
+            "Zákazník zadal špatné PUBG ID.",
+            "Žádost po 24 hodinách.",
+            "Změna názoru po platbě."
+          ]
+        },
+        "process": {
+          "title": "3. Proces vrácení",
+          "content": "Pro žádost o vrácení nám napište s:",
+          "items": [
+            "ID objednávky",
+            "Doklad o platbě",
+            "Důvod žádosti o vrácení"
+          ],
+          "timeline": "Po schválení bude vrácení zasláno na původní platební metodu do 7-14 pracovních dnů."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Centrum nápovědy",
+      "subtitle": "Získejte podporu pro všechny vaše potřeby na Midasbuy.",
+      "contactByPhone": "Kontakt telefonicky",
+      "phoneDescription": "Náš tým podpory je k dispozici 24/7.",
+      "customerSupport": "Zákaznická podpora",
+      "clickToChat": "Klikněte pro chat na WhatsApp",
+      "chatWithAgent": "Chat s agentem",
+      "emailSupport": "Podpora e-mailem",
+      "emailDescription": "Napište nám a odpovíme do 24 hodin.",
+      "supportEmail": "E-mail podpory",
+      "responseTime": "Odpověď do 24 hodin",
+      "liveChat": "Živý chat",
+      "liveChatDescription": "Spojte se s agentem okamžitě.",
+      "startLiveChat": "Zahájit živý chat",
+      "available247": "K dispozici 24/7",
+      "stillHaveQuestions": "Stále máte otázky? Podívejte se na naše FAQ."
+    },
+    "copyrightNotice": {
+      "title": "Autorská práva",
+      "subtitle": "Informace o právech duševního vlastnictví.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Ochrana autorských práv",
+          "content1": "Veškerý obsah na webu Midasbuy je majetkem Midasbuy nebo jeho poskytovatelů obsahu.",
+          "content2": "Kompilace veškerého obsahu je výhradním vlastnictvím Midasbuy."
+        },
+        "trademarks": {
+          "title": "2. Ochranné známky",
+          "content1": "Midasbuy® a logo Midasbuy jsou registrované ochranné známky.",
+          "notice": "PUBG MOBILE, PUBG a všechna související loga jsou výhradním vlastnictvím PUBG Corporation.",
+          "content2": "Nic na tomto webu by nemělo být vykládáno jako udělení licence."
+        },
+        "useOfContent": {
+          "title": "3. Použití obsahu",
+          "intro": "Můžete přistupovat, stahovat a používat obsah pouze pro osobní, nekomerční použití.",
+          "items": [
+            "Modifikovat jakékoli materiály na tomto webu",
+            "Použít materiály pro komerční účely",
+            "Pokusit se dekompilovat nebo reverzně inženýrovat software",
+            "Odstranit oznámení o autorských právech",
+            "Přenést materiály na jinou osobu"
+          ],
+          "termination": "Tato licence bude automaticky ukončena při porušení těchto omezení."
+        },
+        "userGeneratedContent": {
+          "title": "4. Obsah generovaný uživateli",
+          "content1": "Zveřejněním obsahu na Midasbuy udělujete Midasbuy právo používat, reprodukovat, upravovat.",
+          "content2": "Prohlašujete a zaručujete, že vlastníte všechna práva k obsahu."
+        },
+        "copyrightInfringement": {
+          "title": "5. Nároky z porušení autorských práv",
+          "intro": "Midasbuy respektuje duševní vlastnictví ostatních.",
+          "items": [
+            "Elektronický nebo fyzický podpis oprávněné osoby",
+            "Popis díla s autorskými právy",
+            "Popis umístění porušujícího materiálu",
+            "Vaše adresa, telefon a e-mail",
+            "Prohlášení v dobré víře",
+            "Prohlášení pod přísahou"
+          ],
+          "contactTitle": "Zástupce pro autorská práva Midasbuy:",
+          "contactInfo": "E-mail: copyright@midasbuy.com"
+        },
+        "dmca": {
+          "title": "6. Zásady DMCA",
+          "content1": "Midasbuy dodržuje ustanovení Digital Millennium Copyright Act (DMCA).",
+          "content2": "Po obdržení platného oznámení DMCA Midasbuy:",
+          "items": [
+            "Odstraní nebo znemožní přístup k materiálu",
+            "Uvědomí poskytovatele obsahu",
+            "Poskytne informace o protioznámení"
+          ]
+        },
+        "changes": {
+          "title": "7. Změny oznámení",
+          "content": "Midasbuy si vyhrazuje právo toto oznámení kdykoli upravit."
+        },
+        "contactUs": {
+          "title": "8. Kontaktní údaje",
+          "intro": "Máte-li otázky, kontaktujte nás na:",
+          "contactInfo": "E-mail: legal@midasbuy.com"
+        }
+      },
+      "lastUpdated": "Poslední aktualizace: 1. března 2026",
+      "relatedPolicies": "Pro více informací si přečtěte:"
+    },
+    "faqs": {
+      "title": "Často kladené otázky",
+      "subtitle": "Najděte odpovědi na běžné otázky.",
+      "searchPlaceholder": "Hledat otázky...",
+      "noResults": "Nebyly nalezeny žádné výsledky pro",
+      "tryDifferent": "Zkuste jiný hledaný výraz nebo procházejte podle kategorie",
+      "cantFindAnswer": "Nemůžete najít, co hledáte?",
+      "contactSupport": "Kontaktovat podporu",
+      "categories": {
+        "all": "Všechny otázky",
+        "purchases": "Nákupy",
+        "payments": "Problémy s platbou",
+        "account": "Účet",
+        "security": "Bezpečnost",
+        "refunds": "Vrácení peněz"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "Jak koupím UC v PUBG Mobile?",
+          "answer": "Pro nákup UC přes Midasbuy vyberte požadovaný UC balíček, zadejte PUBG Mobile ID, vyberte platební metodu a dokončete transakci."
+        },
+        "isSafe": {
+          "question": "Je bezpečné kupovat UC od Midasbuy?",
+          "answer": "Ano, Midasbuy je oficiální dobíjecí platforma pro PUBG Mobile."
+        },
+        "deliveryTime": {
+          "question": "Jak dlouho trvá obdržení UC po nákupu?",
+          "answer": "Ve většině případů jsou UC připsány na váš účet okamžitě po potvrzení platby."
+        },
+        "paymentMethods": {
+          "question": "Jaké platební metody jsou přijímány?",
+          "answer": "Midasbuy přijímá různé platební metody včetně kreditních/debetních karet, PayPal, Google Pay, Apple Pay."
+        },
+        "ucNotReceived": {
+          "question": "Zaplatil jsem, ale nedostal jsem UC. Co mám dělat?",
+          "answer": "Ověřte, že platba byla úspěšně zpracována. Pokud ano, počkejte 30 minut nebo kontaktujte podporu."
+        },
+        "purchaseForOthers": {
+          "question": "Mohu koupit UC pro jiného hráče?",
+          "answer": "Ano, můžete koupit UC pro jakéhokoli hráče, pokud máte správné Player ID."
+        },
+        "findPlayerId": {
+          "question": "Jak najdu své PUBG Mobile ID?",
+          "answer": "Otevřete hru, klepněte na profilový obrázek a najděte ID pod svým uživatelským jménem."
+        },
+        "bonuses": {
+          "question": "Jsou nějaké bonusy za větší UC balíčky?",
+          "answer": "Ano, větší UC balíčky často obsahují bonus UC."
+        },
+        "ucExpire": {
+          "question": "Vyprší UC, pokud je nepoužiji?",
+          "answer": "Ne, UC nevyprší. Jakmile jsou připsány, zůstávají na vašem účtu."
+        },
+        "refund": {
+          "question": "Mohu získat vrácení peněz za nákup UC?",
+          "answer": "Podle našich zásad jsou všechny nákupy UC konečné, jakmile jsou UC připsány."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Kontaktujte nás",
+      "subtitle": "Máte otázky nebo potřebujete pomoc? Náš tým je připraven vám pomoci.",
+      "sendMessage": "Pošlete nám zprávu",
+      "yourName": "Vaše jméno",
+      "enterName": "Zadejte své jméno",
+      "emailAddress": "E-mailová adresa",
+      "enterEmail": "Zadejte svůj e-mail",
+      "subject": "Předmět",
+      "whatIsThis": "O co jde?",
+      "message": "Zpráva",
+      "howCanWeHelp": "Jak vám můžeme pomoci?",
+      "sending": "Odesílání...",
+      "sendMessageBtn": "Odeslat zprávu",
+      "messageSent": "Zpráva úspěšně odeslána",
+      "messageSuccess": "Děkujeme za kontaktování. Brzy odpovíme.",
+      "messageError": "Chyba při odesílání zprávy",
+      "messageErrorDesc": "Při odesílání zprávy došlo k problému.",
+      "contactInfo": "Kontaktní informace",
+      "whatsappSupport": "Podpora WhatsApp",
+      "support247": "Zákaznická podpora 24/7 přes WhatsApp",
+      "emailSupportTitle": "Podpora e-mailem",
+      "forAllInquiries": "Pro všechny dotazy a podporu",
+      "liveChatTitle": "Živý chat",
+      "availableOnWebsite": "K dispozici 24/7 na našem webu",
+      "startChat": "Zahájit chat",
+      "ourOffice": "Naše kancelář",
+      "headquarters": "Centrála Midasbuy",
+      "address": "One Midasbuy Plaza, Gaming District\nLos Angeles, CA 90210\nUnited States",
+      "officeHours": "Úřední hodiny: Pondělí až pátek, 9:00 - 18:00 (PST)"
+    },
+    "security": {
+      "title": "Bezpečnostní centrum",
+      "subtitle": "Zjistěte, jak Midasbuy chrání vaše informace.",
+      "howWeProtect": "Jak vás chráníme",
+      "securePayments": "Bezpečné platby",
+      "securePaymentsDesc": "Všechny platební transakce jsou šifrovány standardem TLS.",
+      "securePaymentsNote": "Nikdy neukládáme úplné údaje o kartě.",
+      "accountProtection": "Ochrana účtu",
+      "accountProtectionDesc": "Váš účet je chráněn bezpečným autentizačním systémem.",
+      "accountProtectionNote": "Pravidelně kontrolujeme naše systémy.",
+      "dataPrivacy": "Ochrana osobních údajů",
+      "dataPrivacyDesc": "Dodržujeme přísné postupy ochrany osobních údajů.",
+      "dataPrivacyNote": "Můžete požádat o přístup nebo smazání vašich dat.",
+      "fraudPrevention": "Prevence podvodů",
+      "fraudPreventionDesc": "Naše systémy detekce podvodů monitorují transakce v reálném čase.",
+      "fraudPreventionNote": "Úzce spolupracujeme s poskytovateli plateb.",
+      "bestPractices": "Nejlepší bezpečnostní postupy pro uživatele",
+      "useStrongPasswords": "Používejte silná, jedinečná hesla",
+      "useStrongPasswordsDesc": "Vytvořte složitá hesla s písmeny, čísly a speciálními znaky.",
+      "enable2FA": "Povolte dvoufaktorové ověření",
+      "enable2FADesc": "Přidejte další vrstvu zabezpečení.",
+      "useOfficialSites": "Používejte pouze oficiální weby",
+      "useOfficialSitesDesc": "Vždy se ujistěte, že jste na oficiálním webu Midasbuy.",
+      "keepDevicesSecure": "Udržujte svá zařízení v bezpečí",
+      "keepDevicesSecureDesc": "Pravidelně aktualizujte operační systémy.",
+      "bewarePhishing": "Pozor na phishing",
+      "bewarePhishingDesc": "Midasbuy nikdy nebude žádat vaše heslo e-mailem.",
+      "monitorTransactions": "Sledujte své transakce",
+      "monitorTransactionsDesc": "Pravidelně kontrolujte historii nákupů.",
+      "reportConcerns": "Nahlaste bezpečnostní obavy",
+      "reportConcernsDesc": "Pokud máte podezření na neoprávněný přístup, okamžitě to nahlaste.",
+      "reportSecurityIssue": "Nahlásit bezpečnostní problém",
+      "securityFAQ": "Bezpečnostní FAQ",
+      "urgentContact": "Pro naléhavé záležitosti kontaktujte security@midasbuy.com"
+    },
+    "paymentIssues": {
+      "title": "Problémy s platbou",
+      "subtitle": "Najděte řešení běžných problémů s platbou.",
+      "commonIssues": "Běžné problémy s platbou",
+      "paymentDeclined": "Platba zamítnuta",
+      "paymentDeclinedReasons": "Pokud byla vaše platba zamítnuta, může to být z důvodu:",
+      "paymentDeclinedItems": [
+        "Nedostatečné prostředky na účtu",
+        "Nesprávné údaje karty",
+        "Banka zablokovala transakci z bezpečnostních důvodů",
+        "Karta vypršela",
+        "Limity transakcí na kartě"
+      ],
+      "howToResolve": "Jak to vyřešit:",
+      "paymentDeclinedSteps": [
+        "Ověřte správnost údajů karty",
+        "Zkontrolujte u banky, zda byla transakce zablokována",
+        "Zkuste jinou platební metodu",
+        "Ujistěte se, že máte dostatečné prostředky",
+        "Kontaktujte banku pro autorizaci"
+      ],
+      "ucNotReceived": "Platba úspěšná, ale UC nedoručeny",
+      "ucNotReceivedReasons": "Pokud byla platba úspěšná, ale nedostali jste UC:",
+      "ucNotReceivedItems": [
+        "Zpoždění serveru při zpracování",
+        "Nesprávné Player ID při nákupu",
+        "Dočasné problémy se synchronizací",
+        "Údržba systému"
+      ],
+      "ucNotReceivedSteps": [
+        "Počkejte alespoň 30 minut",
+        "Zkontrolujte in-game poštu",
+        "Ověřte správnost Player ID",
+        "Odhlaste se a přihlaste znovu",
+        "Pokud problém přetrvává, kontaktujte podporu"
+      ],
+      "multipleCharges": "Vícenásobné platby za jeden nákup",
+      "multipleChargesReasons": "Pokud vidíte vícenásobné platby:",
+      "multipleChargesItems": [
+        "Chyby zpracování platby",
+        "Vícenásobné kliknutí na tlačítko nákupu",
+        "Dočasné autorizační blokace",
+        "Problémy s prohlížečem nebo připojením"
+      ],
+      "multipleChargesSteps": [
+        "Zkontrolujte, zda jde o skutečné platby nebo blokace",
+        "Počkejte 3-5 pracovních dnů",
+        "Kontaktujte podporu se snímky obrazovky",
+        "Poskytněte výpis z banky"
+      ],
+      "needMoreHelp": "Potřebujete více pomoci?",
+      "needMoreHelpDesc": "Pokud stále máte problémy, náš tým podpory je připraven pomoci.",
+      "visitHelpCenter": "Navštívit centrum nápovědy",
+      "paymentNote": "Pro významné částky nebo vícenásobné neúspěšné transakce kontaktujte také svou banku."
+    },
+    "aboutMidasbuy": {
+      "title": "O Midasbuy",
+      "subtitle": "Váš důvěryhodný partner v mobilním hraní",
+      "whoWeAre": "Kdo jsme",
+      "whoWeAreContent1": "Midasbuy je přední světový obchod s digitálními hrami.",
+      "whoWeAreContent2": "Jako oficiální partner předních herních vydavatelů.",
+      "ourMission": "Naše mise",
+      "ourMissionContent1": "Naší misí je posilovat hráče po celém světě.",
+      "ourMissionContent2": "Zavazujeme se odstraňovat bariéry v digitálním herním obchodě.",
+      "whyChooseUs": "Proč si vybrat Midasbuy?",
+      "officialPartnership": "Oficiální partnerství",
+      "officialPartnershipDesc": "Autorizovaný distributor pro PUBG Mobile, Free Fire, Honor of Kings a 30+ titulů.",
+      "lightningDelivery": "Bleskové doručení",
+      "lightningDeliveryDesc": "Průměrná doba doručení pod 2 minuty.",
+      "bankGradeSecurity": "Bankovní zabezpečení",
+      "bankGradeSecurityDesc": "SSL šifrování, soulad s PCI DSS.",
+      "globalPayments": "Globální platební možnosti",
+      "globalPaymentsDesc": "Podpora 150+ platebních metod.",
+      "gamersServed": "Obsloužených hráčů",
+      "countries": "Zemí",
+      "successRate": "Úspěšnost",
+      "avgDelivery": "Průměrné doručení",
+      "joinCommunity": "Připojte se ke komunitě",
+      "joinCommunityDesc": "Staňte se součástí komunity Midasbuy a zůstaňte informováni."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ur": "اردو",
+    "ar": "العربية",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "pt": "Português",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "th": "ไทย",
+    "vi": "Tiếng Việt"
+  },
+  "redeemPage": {
+    "title": "UPLATNIT KUPON",
+    "enterRedeemCode": "Zadejte kód k uplatnění",
+    "codeNumber": "Číslo kódu",
+    "pasteCode": "Vložit kód",
+    "confirm": "Potvrdit",
+    "submitting": "Odesílání...",
+    "limitReached": "Dosažen limit",
+    "reminder": "Připomenutí",
+    "reminderItem1": "Získejte položky okamžitě po uplatnění.",
+    "reminderItem2": "Kód lze použít pouze jednou.",
+    "reminderItem3": "V případě dotazů kontaktujte prodejce kódů."
+  },
+  "couponsPage": {
+    "title": "MOJE KUPONY",
+    "redeem": "Uplatnit",
+    "noEligibleCoupons": "Žádné dostupné kupony",
+    "historicalCoupons": "Historie kuponů"
+  },
+  "orderCenterPage": {
+    "title": "CENTRUM OBJEDNÁVEK",
+    "all": "VŠECHNY",
+    "toPay": "K PLATBĚ",
+    "completed": "DOKONČENÉ",
+    "cancelled": "ZRUŠENÉ",
+    "trackOrder": "SLEDOVAT OBJEDNÁVKU",
+    "searchPlaceholder": "Zadejte ID transakce",
+    "search": "Hledat",
+    "noOrdersFound": "Nebyly nalezeny žádné objednávky",
+    "pending": "Čeká",
+    "processing": "Zpracovává se",
+    "failed": "Selhalo",
+    "viewDetails": "Zobrazit detaily"
+  },
+  "faqsPage": {
+    "title": "Často kladené otázky",
+    "subtitle": "Najděte odpovědi na běžné otázky.",
+    "searchPlaceholder": "Hledat otázky...",
+    "allFaqs": "Všechny otázky",
+    "purchases": "Nákupy",
+    "paymentIssues": "Problémy s platbou",
+    "account": "Účet",
+    "security": "Bezpečnost",
+    "refunds": "Vrácení peněz",
+    "noResults": "Nebyly nalezeny žádné výsledky",
+    "tryDifferent": "Zkuste jiný hledaný výraz",
+    "cantFind": "Nemůžete najít, co hledáte?",
+    "contactSupport": "Kontaktovat podporu",
+    "backToHome": "Zpět domů"
+  },
+  "authPage": {
+    "login": "Přihlášení",
+    "register": "Registrace",
+    "email": "E-mail",
+    "password": "Heslo",
+    "confirmPassword": "Potvrďte heslo",
+    "fullName": "Celé jméno",
+    "signIn": "Přihlásit se",
+    "signUp": "Registrovat se",
+    "signingIn": "Přihlašování...",
+    "signingUp": "Registrace...",
+    "orContinueWith": "Nebo pokračujte s",
+    "continueWithGoogle": "Pokračovat s Google",
+    "dontHaveAccount": "Nemáte účet?",
+    "alreadyHaveAccount": "Již máte účet?",
+    "welcomeBack": "Vítejte zpět",
+    "createAccount": "Vytvořit účet",
+    "secureLogin": "Bezpečné přihlášení",
+    "secureRegistration": "Bezpečná registrace",
+    "enterEmail": "Zadejte svůj e-mail",
+    "enterPassword": "Zadejte své heslo",
+    "enterFullName": "Zadejte celé jméno"
+  },
+  "profilePage": {
+    "title": "Profil",
+    "personalInfo": "Osobní informace",
+    "fullName": "Celé jméno",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "gamerTag": "Gamer Tag",
+    "saveChanges": "Uložit změny",
+    "saving": "Ukládání...",
+    "logout": "Odhlásit se",
+    "editProfile": "Upravit profil",
+    "cancel": "Zrušit",
+    "notificationSettings": "Nastavení oznámení"
+  },
+  "banners": {
+    "8ball": "Hrajte 8 ball na Midasbuy!",
+    "freefire": "Free Fire diamanty za nejlepší ceny - Garantované okamžité doručení!",
+    "pubgRecharge": "PUBG Mobile Celkové dobíjecí odměny - Získejte 60 UC bonus!",
+    "deltaBlue": "Delta Force Blue Camo Collection - Premium skiny zbraní!",
+    "deltaGold": "Delta Force Gold Edition - Exkluzivní mince a odměny!",
+    "ageOfEmpires": "Age of Empires Měsíční první dobití - Speciální nabídky!",
+    "deltaFire": "Delta Force Fire Edition - Limitovaný balíček vojáka!",
+    "deltaPink": "Delta Force Pink Collection - Unikátní skin zbraně!",
+    "honorOfKings": "Honor of Kings - Pozvěte přátele a získejte 4000 tokenů!",
+    "apexCoin": "Apex Coin Bonanza - První nákup, 2x hodnota!",
+    "pubgUcDrops": "PUBG Mobile Denní UC Drops - 3x Squad pomoc, max 3000 UC!",
+    "pubgFree": "PUBG Mobile Bezplatné odměny - Získejte zdarma UC, oblečení a skin zbraně!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "ZADEJTE ID HRÁČE",
+    "signInEnterPlayerId": "PŘIHLASTE SE & ZADEJTE ID HRÁČE",
+    "player": "Hráč",
+    "signInMidasbuy": "Přihlaste se k účtu Midasbuy",
+    "enterRedeemCode": "ZADEJTE KÓD K UPLATNĚNÍ",
+    "pleaseEnterRedeemCode": "Zadejte prosím kód k uplatnění",
+    "submitting": "Odesílání...",
+    "ok": "OK",
+    "aboutMidasbuy": "O MIDASBUY",
+    "paySafeLine1": "PLAŤTE BEZPEČNĚ, RYCHLE",
+    "paySafeLine2": "A ZÁBAVNĚ S",
+    "paySafeLine3": "MIDASBUY.",
+    "vipExtraUcFull": "Získali jste extra UC +3~7%",
+    "vipExtraUcShort": "+3~7% UC",
+    "completeRecharge": "Dokončete prosím dobití!",
+    "extraBonus": "Extra bonus!"
+  },
+  "shopTab": {
+    "popularGames": "OBLÍBENÉ HRY",
+    "gameSelected": "{{name}} vybráno",
+    "notAvailableYet": "Tento produkt zatím není k dispozici. Již brzy!"
+  },
+  "eventsTab": {
+    "title": "Události PUBG Mobile",
+    "liveEvents": "Živé události",
+    "upcomingEvents": "Nadcházející události",
+    "ucBonusEvent": "Událost UC bonus",
+    "ucBonusDesc": "Získejte extra UC na všechny nákupy",
+    "endsIn": "Končí za",
+    "threeDays": "3 dny",
+    "royalPassSeason": "Sezóna Royal Pass",
+    "royalPassDesc": "Nová sezóna brzy začíná",
+    "startsIn": "Začíná za",
+    "fiveDays": "5 dní",
+    "limitedTimeOffer": "Časově omezená nabídka",
+    "limitedTimeDesc": "Speciální slevy na vybrané položky",
+    "availableFor": "K dispozici pro",
+    "twentyFourHours": "24 hodin"
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  },
+  "countryFaq": {
+    "header": "Často kladené otázky - PUBG UC {{country}}",
+    "q1": "Jak koupit PUBG UC v {{country}}?",
+    "a1": "Navštivte oficiální obchod Midasbuy, vyberte balíček UC, zadejte své PUBG Player ID, zvolte platební metodu ({{paymentMethods}}) a dokončete platbu. UC bude doručeno za 2-5 minut.",
+    "q2": "Jaká je nejlevnější cena PUBG UC v {{country}}?",
+    "a2": "Midasbuy nabízí nejlevnější PUBG UC od {{currencySymbol}}0,99 za 60 UC. Získejte slevu až 60% + extra 30% VIP bonus.",
+    "q3": "Je Midasbuy bezpečný pro hráče v {{country}}?",
+    "a3": "Ano, Midasbuy je 100% bezpečný a důvěřuje mu více než 10M hráčů v {{country}}.",
+    "q4": "Jaké platební metody jsou k dispozici v {{country}}?",
+    "a4": "V {{country}} přijímáme {{paymentMethods}}. Všechny platby jsou bezpečné a šifrované.",
+    "q5": "Jak dlouho trvá doručení PUBG UC v {{country}}?",
+    "a5": "Doručení UC je okamžité a trvá pouze 2-5 minut po úspěšné platbě.",
+    "q6": "Mohu koupit Royal Pass za {{currency}} v {{country}}?",
+    "a6": "Ano! Kupte dostatek UC za {{currency}} v {{country}}. Poté si kupte Royal Pass přímo z PUBG Mobile.",
+    "whyBuyTitle": "Proč kupovat PUBG UC od Midasbuy v {{country}}?",
+    "whyBuyDesc": "Midasbuy je nejdůvěryhodnější platforma pro dobíjení PUBG Mobile UC v {{country}}. Sleva až 60% a okamžité doručení za 2-5 minut."
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  }
+}

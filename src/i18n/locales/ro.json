@@ -1,0 +1,650 @@
+{
+  "installApp": "Instalare aplicație",
+  "language": "Limbă",
+  "followUs": "Urmărește-ne",
+  "home": "Acasă",
+  "purchase": "Cumpără",
+  "dashboard": "Panou de control",
+  "buyUCPackages": "Cumpără pachete UC",
+  "selectLanguage": "Selectează limba",
+  "support": "Suport",
+  "helpCenter": "Centru de ajutor",
+  "contactUs": "Contactează-ne",
+  "faqs": "Întrebări frecvente",
+  "paymentIssues": "Probleme de plată",
+  "security": "Securitate",
+  "legal": "Legal",
+  "termsOfService": "Termeni și condiții",
+  "privacyPolicy": "Politica de confidențialitate",
+  "cookiePolicy": "Politica de cookie-uri",
+  "refundPolicy": "Politica de rambursare",
+  "copyrightNotice": "Notificare privind drepturile de autor",
+  "aboutUs": "Despre noi",
+  "aboutMidasbuy": "Despre Midasbuy",
+  "blogs": "Bloguri",
+  "careers": "Cariere",
+  "press": "Presă",
+  "partners": "Parteneri",
+  "popularGames": "Jocuri populare",
+  "allGames": "Toate jocurile",
+  "latestNews": "Ultimele știri",
+  "viewAll": "Vezi toate",
+  "miniGamesLabel": "Mini jocuri",
+  "featured": "Recomandate",
+  "goButton": "Mergi",
+  "games": "Jocuri",
+  "all": "Toate",
+  "endsIn": "Se termină în",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR"
+  },
+  "buyNow": "Cumpără acum",
+  "addToCart": "Adaugă în coș",
+  "selectPackage": "Selectează pachet",
+  "enterPlayerId": "Introdu ID-ul jucătorului",
+  "playerId": "ID jucător",
+  "username": "Nume utilizator",
+  "email": "Email",
+  "password": "Parolă",
+  "login": "Conectare",
+  "logout": "Deconectare",
+  "signUp": "Înregistrare",
+  "forgotPassword": "Ai uitat parola?",
+  "rememberMe": "Ține-mă minte",
+  "noAccount": "Nu ai cont?",
+  "haveAccount": "Ai deja un cont?",
+  "orderHistory": "Istoric comenzi",
+  "orderStatus": "Stare comandă",
+  "pending": "În așteptare",
+  "completed": "Finalizat",
+  "failed": "Eșuat",
+  "processing": "Se procesează",
+  "payment": "Plată",
+  "paymentMethod": "Metodă de plată",
+  "paymentMethods": "Metode de plată",
+  "totalAmount": "Suma totală",
+  "discount": "Reducere",
+  "couponCode": "Cod cupon",
+  "applyCoupon": "Aplică cupon",
+  "checkout": {
+    "enterPlayerIdNow": "Introdu ID-ul jucătorului acum",
+    "playerId": "ID jucător",
+    "enterPlayerId": "Introdu ID-ul jucătorului",
+    "enterUsername": "Introdu numele de utilizator",
+    "enterPlayerIdToPurchase": "Introdu ID-ul jucătorului pentru achiziție",
+    "selectPlayerIdToRecharge": "Te rugăm să selectezi sau să introduci ID-ul jucătorului pentru reîncărcare",
+    "couldntFindPlayerId": "Nu ai putut găsi ID-ul jucătorului?",
+    "coupon": "Cupon",
+    "noAvailableCoupon": "Nu există cupon disponibil",
+    "selectPaymentChannels": "Selectează metoda de plată",
+    "creditDebitCard": "Card de credit / debit / preplătit",
+    "vipExtraPoints": "Puncte VIP suplimentare",
+    "payNow": "Plătește acum",
+    "total": "Total",
+    "purchaseItem": "Articol achiziție",
+    "extraForYou": "Extra pentru tine",
+    "playerIdRequired": "ID-ul jucătorului este obligatoriu",
+    "pleaseEnterPlayerId": "Te rugăm să introduci mai întâi ID-ul jucătorului",
+    "invalidPlayerId": "ID jucător invalid",
+    "enterValidPlayerId": "Te rugăm să introduci un ID de jucător valid",
+    "invalidUsername": "Nume de utilizator invalid",
+    "enterValidUsername": "Te rugăm să introduci un nume de utilizator valid",
+    "paymentError": "Eroare de plată",
+    "paymentFailed": "Inițierea plății a eșuat. Încearcă din nou.",
+    "paymentSuccessful": "Plata a fost efectuată cu succes!",
+    "cryptoConfirmed": "Plata ta crypto a fost confirmată.",
+    "recentPlayerIds": "ID-uri jucători recente",
+    "enterNewPlayerId": "Introdu un ID de jucător nou",
+    "saveAndContinue": "Salvează și continuă",
+    "signInFirst": "Conectează-te mai întâi",
+    "securityPayment": "Plată securizată",
+    "orderSummary": "Sumar comandă"
+  },
+  "proceedToPayment": "Continuă la plată",
+  "back": "Înapoi",
+  "backToHome": "Înapoi acasă",
+  "next": "Următorul",
+  "submit": "Trimite",
+  "cancel": "Anulează",
+  "confirm": "Confirmă",
+  "close": "Închide",
+  "search": "Căutare",
+  "loading": "Se încarcă...",
+  "error": "Eroare",
+  "success": "Succes",
+  "warning": "Avertisment",
+  "info": "Informații",
+  "welcome": "Bine ai venit",
+  "welcomeBack": "Bine ai revenit",
+  "getStarted": "Începe",
+  "learnMore": "Află mai mult",
+  "seeMore": "Vezi mai mult",
+  "readMore": "Citește mai mult",
+  "showLess": "Arată mai puțin",
+  "notifications": "Notificări",
+  "settings": "Setări",
+  "profile": "Profil",
+  "myOrders": "Comenzile mele",
+  "myAccount": "Contul meu",
+  "editProfile": "Editează profilul",
+  "changePassword": "Schimbă parola",
+  "saveChanges": "Salvează modificările",
+  "deleteAccount": "Șterge contul",
+  "verifiedReviews": "Recenzii verificate",
+  "customerReviews": {
+    "title": "Recenzii clienți",
+    "verifiedReviews": "Recenzie verificată",
+    "writeReview": "Scrie o recenzie",
+    "loginToReview": "Conectează-te pentru a scrie o recenzie",
+    "back": "Înapoi",
+    "ratingDistribution": "Distribuție rating",
+    "last12Months": "Ultimele 12 luni",
+    "filterByRating": "Filtrează după rating",
+    "allRatings": "Toate",
+    "loadMore": "Încarcă mai multe recenzii",
+    "verifiedPurchase": "Achiziție verificată",
+    "submitReview": "Trimite recenzia",
+    "yourName": "Numele tău",
+    "rating": "Rating",
+    "review": "Recenzie",
+    "shareExperience": "Împărtășește experiența ta...",
+    "helpful": "Util",
+    "reply": "Răspuns",
+    "delete": "Șterge"
+  },
+  "writeReview": "Scrie o recenzie",
+  "rating": "Rating",
+  "instantDelivery": "Livrare instantă",
+  "securePayment": "Plată securizată",
+  "bestPrice": "Cel mai bun preț",
+  "officialPartner": "Partener oficial",
+  "trustedBy": "De încredere pentru milioane de jucători",
+  "contactSupport": "Contactează suportul",
+  "paymentIssuesHelp": "Ajutor pentru probleme de plată",
+  "needHelp": "Ai nevoie de ajutor cu o achiziție?",
+  "lastUpdated": "Ultima actualizare",
+  "effectiveDate": "Data intrării în vigoare",
+  "contactEmail": "Email de contact",
+  "selectYourRegion": "Selectează-ți regiunea",
+  "searchCountry": "Caută țară...",
+  "noCountriesFound": "Nu s-au găsit țări",
+  "africa": "Africa",
+  "asia": "Asia",
+  "europe": "Europa",
+  "northAmerica": "America de Nord",
+  "southAmerica": "America de Sud",
+  "oceania": "Oceania",
+  "middleEast": "Orientul Mijlociu",
+  "recommended": "Recomandat",
+  "searchPlaceholder": "Caută țară sau regiune...",
+  "selectRegion": "Selectează regiunea",
+  "allRegions": "Toate regiunile",
+  "popular": "Popular",
+  "searchGames": "Caută jocuri...",
+  "noGamesFound": "Nu s-au găsit jocuri",
+  "featuredGames": "Jocuri recomandate",
+  "newReleases": "Lansări noi",
+  "topRated": "Cele mai bine cotate",
+  "comingSoon": "În curând",
+  "seeLess": "Vezi mai puțin",
+  "viewDetails": "Vezi detalii",
+  "outOfStock": "Stoc epuizat",
+  "inStock": "În stoc",
+  "quantity": "Cantitate",
+  "subtotal": "Subtotal",
+  "tax": "Taxă",
+  "total": "Total",
+  "continueShopping": "Continuă cumpărăturile",
+  "proceedToCheckout": "Continuă la finalizare",
+  "emptyCart": "Coșul tău este gol",
+  "removeItem": "Elimină articol",
+  "updateQuantity": "Actualizează cantitatea",
+  "apply": "Aplică",
+  "promoCode": "Cod promoțional",
+  "invalidPromoCode": "Cod promoțional invalid",
+  "promoApplied": "Cod promoțional aplicat",
+  "orderConfirmation": "Confirmare comandă",
+  "orderNumber": "Număr comandă",
+  "orderDate": "Data comenzii",
+  "deliveryAddress": "Adresa de livrare",
+  "billingAddress": "Adresa de facturare",
+  "orderItems": "Articole comandă",
+  "orderTotal": "Total comandă",
+  "continueBrowsing": "Continuă să răsfoiești",
+  "accountSettings": "Setări cont",
+  "personalInfo": "Informații personale",
+  "firstName": "Prenume",
+  "lastName": "Nume",
+  "phoneNumber": "Număr de telefon",
+  "dateOfBirth": "Data nașterii",
+  "gender": "Gen",
+  "male": "Masculin",
+  "female": "Feminin",
+  "other": "Altul",
+  "preferNotToSay": "Prefer să nu spun",
+  "currentPassword": "Parola actuală",
+  "newPassword": "Parola nouă",
+  "confirmNewPassword": "Confirmă parola nouă",
+  "updatePassword": "Actualizează parola",
+  "deleteAccountWarning": "Această acțiune nu poate fi anulată. Toate datele tale vor fi șterse definitiv.",
+  "deleteAccountConfirm": "Da, șterge contul meu",
+  "subscribe": "Abonează-te",
+  "official": "Oficial",
+  "local": "Local",
+  "footer": {
+    "description": "Platforma oficială pentru achiziționarea monedei de joc pentru PUBG Mobile și alte jocuri populare.",
+    "copyright": "© 2026 MidasBuy. Toate drepturile rezervate. Toate mărcile comerciale menționate sunt proprietatea deținătorilor lor.",
+    "mobileDescription": "MidasBuy este magazinul oficial de reîncărcare al Tencent. Plătește în siguranță, rapid și cu plăcere pe MidasBuy.",
+    "contactUsTitle": "Contactează-ne",
+    "contactUsDesc": "Dacă ai nevoie de asistență, te rugăm să ne contactezi făcând clic pe \"Serviciu Clienți\".",
+    "customerService": "Serviciu Clienți",
+    "cookiesPreference": "Preferințe cookie-uri",
+    "verifiedReviews": "80.837 recenzii verificate",
+    "company": "Companie",
+    "aboutUs": "Despre noi",
+    "careers": "Cariere",
+    "press": "Presă",
+    "blog": "Blog",
+    "support": "Suport",
+    "helpCenter": "Centru de ajutor",
+    "contactUs": "Contactează-ne",
+    "faqs": "Întrebări frecvente",
+    "paymentIssues": "Probleme de plată",
+    "legal": "Legal",
+    "termsOfService": "Termeni și condiții",
+    "privacyPolicy": "Politica de confidențialitate",
+    "cookiePolicy": "Politica de cookie-uri",
+    "refundPolicy": "Politica de rambursare",
+    "followUs": "Urmărește-ne",
+    "paymentMethods": "Metode de plată",
+    "securePayment": "Plată securizată"
+  },
+  "whyTopUp": {
+    "title": "De ce să reîncarci jocuri pe Midasbuy?",
+    "section1Title": "1. Midasbuy: Magazinul oficial de reîncărcare PUBG MOBILE",
+    "section1Content": "Ca partener oficial de plăți pentru PUBG MOBILE, Midasbuy oferă servicii sigure și eficiente de reîncărcare UC pentru jucătorii din Hong Kong, Japonia, Asia de Sud-Est, Europa și America.",
+    "section2Title": "2. Obține bonus UC de la Midasbuy:",
+    "section2Content": "Activează coduri de răscumpărare sau carduri cadou în portalul oficial pentru a primi 3%-7% bonus UC instantaneu.",
+    "section3Title": "3. PUBG MOBILE | Cel mai bun joc Battle Royale pentru mobil",
+    "section3Content": "Ca joc tactic gratuit popular la nivel mondial, PUBG MOBILE prezintă diverse câmpuri de luptă precum Erangel, Miramar și Rondo.",
+    "section4Title": "4. Întrebări și răspunsuri",
+    "q1": "Î: Cum fac o achiziție pentru PUBG MOBILE?",
+    "q2": "Î: Unde primesc UC după achiziție?",
+    "q3": "Î: Cum răscumpăr coduri pentru articole pe Midasbuy?",
+    "q4": "Î: De ce nu primesc produsele după achiziție?"
+  },
+  "officialRechargeStore": "Suntem magazinul oficial de reîncărcare Tencent",
+  "discoverOtherRegionGames": "Descoperă jocuri din alte regiuni",
+  "midasbuyVideo": "Video Midasbuy",
+  "header": {
+    "midasbuyVideo": "Video Midasbuy",
+    "noNotifications": "Încă nu există notificări",
+    "notificationsHint": "Actualizările vor apărea aici",
+    "signInToEnjoy": "Conectează-te pentru a te bucura",
+    "exclusiveService": "de servicii exclusive",
+    "signInSignUp": "Conectare / Înregistrare",
+    "coupon": "Cupon",
+    "orderCenter": "Centru comenzi",
+    "accountSecurity": "Cont și securitate",
+    "midasbuyEvents": "Evenimente Midasbuy",
+    "liveVideo": "Live și video",
+    "adminPanel": "Panou admin"
+  },
+  "miniGames": {
+    "title": "Mini jocuri",
+    "description": "Te rugăm să reții că mini jocurile disponibile pe site-ul MidasBuy sunt operate de furnizori terți.",
+    "moreDetails": "Mai multe detalii",
+    "tag": "Mini jocuri",
+    "noDownload": "Nu este necesară descărcarea aplicației! Joacă instantaneu pe MidasBuy!",
+    "noDownloadDesktop": "Nu este necesară descărcarea aplicației! Joacă instantaneu pe",
+    "playNow": "Joacă acum",
+    "shop": "Magazin"
+  },
+  "events": {
+    "title": "Evenimente",
+    "noEvents": "Nu există evenimente disponibile momentan",
+    "comingSoon": "În curând",
+    "activeEvents": "Evenimente active",
+    "pastEvents": "Evenimente trecute",
+    "viewDetails": "Vezi detalii",
+    "participate": "Participă acum",
+    "endsIn": "Se termină în",
+    "startsIn": "Începe în"
+  },
+  "shop": {
+    "title": "Magazin",
+    "categories": "Categorii",
+    "allItems": "Toate articolele",
+    "featured": "Recomandate",
+    "newArrivals": "Noi sosiri",
+    "bestSellers": "Cele mai vândute",
+    "onSale": "La reducere",
+    "outOfStock": "Stoc epuizat",
+    "inStock": "În stoc",
+    "addedToCart": "Adăugat în coș",
+    "viewCart": "Vezi coșul",
+    "continueShopping": "Continuă cumpărăturile"
+  },
+  "redeem": {
+    "title": "Răscumpără cod",
+    "enterCode": "Introdu codul de răscumpărare",
+    "enterPlayerID": "Introdu ID-ul jucătorului",
+    "enterUsername": "Introdu numele de utilizator (opțional)",
+    "submitCode": "Trimite codul",
+    "placeholder": "Introdu codul de răscumpărare aici",
+    "playerIdPlaceholder": "Introdu ID-ul tău de jucător",
+    "usernamePlaceholder": "Introdu numele tău de utilizator",
+    "success": "Codul a fost răscumpărat cu succes!",
+    "error": "Cod invalid sau deja folosit",
+    "instructions": "Introdu codul de răscumpărare pentru a primi recompense",
+    "processing": "Se procesează codul..."
+  },
+  "tabs": {
+    "purchase": "Cumpără",
+    "redeem": "Răscumpără",
+    "shop": "Magazin",
+    "events": "Evenimente"
+  },
+  "news": {
+    "nikkeBonus": "Primește 100% bonus suplimentar de la NIKKE la prima reîncărcare!",
+    "registerFreeSkin": "Înregistrează-te și primește un skin gratuit",
+    "madDogGames": "Vânătoarea de comori norocoasă Mad Dog Games",
+    "hokPointsLottery": "Loterie puncte Honor of Kings",
+    "apexCoinBonanza": "Oferte Apex Coin: Prima achiziție, valoare dublă!",
+    "pubgVipBenefits": "Beneficii VIP PUBG MOBILE",
+    "purchaseBonus": "Bonus achiziție",
+    "extraBonus45": "Bonus suplimentar doar pe MIDASBUY Bucură-te de până la 45% bonus acum",
+    "aoeDaily": "Pachete zilnice Age of Empires"
+  },
+  "promoBanner": {
+    "slide1": "Introdu ID-ul jucătorului pentru a vedea recompensele și a debloca bonusuri exclusive. Obține reduceri speciale la achizițiile de UC!",
+    "slide2": "Reîncarcă și câștigă UC | Prietenii primesc cupoane gratuite —— maxim 3000UC!",
+    "slide3": "100% rată de câștig! Puncte duble în ziua membrilor, doar azi! Vino și câștigă marele premiu!"
+  },
+  "videosPage": {
+    "title": "Video și live Midasbuy",
+    "upcomingLiveStream": "Transmisiune live viitoare",
+    "videoAndLiveRecord": "Video și înregistrare live",
+    "video": "Video",
+    "liveRecord": "Înregistrare live",
+    "chooseGame": "Alege jocul",
+    "noLiveRecords": "Nu există înregistrări live disponibile",
+    "loadMore": "Încarcă mai mult",
+    "videoComingSoon": "Video în curând",
+    "videoNotAvailable": "Acest video nu este încă disponibil. Te rugăm să încerci mai târziu!",
+    "seeAll": "Vezi toate",
+    "more": "Mai mult"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Politica de confidențialitate",
+      "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+      "intro": "La MidasBuy, ne angajăm să îți protejăm confidențialitatea și să asigurăm securitatea informațiilor tale personale.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Informațiile pe care le colectăm",
+          "content": "Colectăm informații pe care ni le furnizezi direct, cum ar fi la crearea unui cont, efectuarea unei achiziții sau contactarea echipei noastre de suport."
+        },
+        "howWeUse": {
+          "title": "Cum folosim informațiile tale",
+          "content": "Folosim informațiile tale pentru a procesa tranzacții, a livra achizițiile, a oferi suport clienți și a îmbunătăți serviciile noastre."
+        },
+        "informationSharing": {
+          "title": "Partajarea informațiilor",
+          "content": "Nu vindem informațiile tale personale. Putem partaja datele tale cu terți de încredere care ne ajută să operăm platforma."
+        },
+        "dataSecurity": {
+          "title": "Securitatea datelor",
+          "content": "Implementăm măsuri de securitate standard în industrie pentru a-ți proteja datele de accesul neautorizat."
+        },
+        "yourRights": {
+          "title": "Drepturile tale de confidențialitate",
+          "content": "Ai dreptul de a accesa, corecta sau șterge informațiile tale personale."
+        },
+        "internationalTransfers": {
+          "title": "Transferuri internaționale de date",
+          "content": "Datele tale pot fi transferate și stocate în țări din afara țării tale de reședință."
+        },
+        "dataRetention": {
+          "title": "Păstrarea datelor",
+          "content": "Păstrăm informațiile tale personale atât timp cât este necesar pentru scopurile pentru care au fost colectate."
+        },
+        "childrensPrivacy": {
+          "title": "Confidențialitatea copiilor",
+          "content": "Serviciile noastre nu sunt destinate copiilor sub 13 ani."
+        },
+        "updates": {
+          "title": "Actualizări ale acestei politici",
+          "content": "Putem actualiza această Politică de confidențialitate din când în când."
+        },
+        "contactUs": {
+          "title": "Contactează-ne despre confidențialitate",
+          "content": "Dacă ai întrebări despre această Politică de confidențialitate, te rugăm să ne contactezi."
+        }
+      }
+    },
+    "termsOfService": {
+      "title": "Termeni și condiții",
+      "subtitle": "Termenii MidasBuy",
+      "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+      "intro": "Prin utilizarea MidasBuy, ești de acord cu acești termeni. Rambursare doar dacă nu se livrează în 24 de ore.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Prezentare generală a serviciului",
+          "content": "MidasBuy vinde pachete UC pentru PUBG Mobile și credite similare în joc prin tranzacții electronice securizate."
+        },
+        "userResponsibilities": {
+          "title": "2. Responsabilitățile utilizatorului",
+          "items": [
+            "Furnizează ID-ul PUBG și detaliile de plată corecte.",
+            "Asigură-te că ai autorizație să faci achiziții cu metoda de plată selectată.",
+            "Evită utilizarea frauduloasă sau abuzivă a serviciilor noastre."
+          ]
+        },
+        "delivery": {
+          "title": "3. Livrare",
+          "items": [
+            "Achizițiile de UC sunt de obicei livrate instantaneu, dar în cazuri rare pot dura până la 30 de minute.",
+            "Dacă livrarea este întârziată peste timpul specificat, poți contacta echipa noastră de suport."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Politica de rambursare",
+          "items": [
+            "Rambursarea trebuie solicitată în 24 de ore de la achiziție dacă UC nu a fost livrată.",
+            "Nu se vor emite rambursări după 24 de ore.",
+            "Toate rambursările sunt supuse Politicii noastre de rambursare."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Modificări ale termenilor",
+          "content": "Putem actualiza acești termeni în orice moment. Utilizarea continuă a site-ului nostru înseamnă acceptarea termenilor actualizați."
+        }
+      },
+      "acknowledgment": "Prin utilizarea MidasBuy, confirmi că ai citit, înțeles și ești de acord să fii legat de acești Termeni și condiții."
+    },
+    "refundPolicy": {
+      "title": "Politica de rambursare",
+      "subtitle": "Termenii de rambursare MidasBuy",
+      "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+      "intro": "Fără rambursare după 24 de ore; rambursare doar dacă UC nu este livrat în timpul promis.",
+      "description": "La MidasBuy, ne străduim să oferim livrare rapidă și fiabilă a UC.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Eligibilitate pentru rambursare",
+          "items": [
+            "Rambursarea este disponibilă doar dacă UC nu a fost livrată în timpul promis.",
+            "Cererile de rambursare trebuie trimise în 24 de ore de la achiziție.",
+            "Dacă UC a fost deja livrată în contul tău, rambursarea nu este posibilă."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Cazuri nerambursabile",
+          "items": [
+            "UC a fost livrată cu succes în contul corect.",
+            "ID PUBG sau detalii greșite furnizate de client.",
+            "Cerere de rambursare trimisă după 24 de ore de la achiziție.",
+            "Schimbarea deciziei după plată."
+          ]
+        },
+        "process": {
+          "title": "3. Procesul de rambursare",
+          "content": "Pentru a solicita o rambursare, trimite-ne un email cu:",
+          "items": [
+            "Numărul comenzii tale",
+            "Dovada plății",
+            "Motivul cererii de rambursare"
+          ],
+          "timeline": "Odată aprobată, rambursările vor fi trimise către metoda ta originală de plată în 7-14 zile lucrătoare."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Centru de ajutor",
+      "subtitle": "Primește suport pentru toate nevoile tale MidasBuy.",
+      "contactByPhone": "Contact telefonic",
+      "phoneDescription": "Echipa noastră de suport este disponibilă 24/7.",
+      "customerSupport": "Suport clienți",
+      "clickToChat": "Click pentru chat pe WhatsApp",
+      "chatWithAgent": "Chat cu un agent",
+      "emailSupport": "Suport email",
+      "emailDescription": "Trimite-ne un email și îți vom răspunde în 24 de ore.",
+      "supportEmail": "Email suport",
+      "responseTime": "Răspuns în 24 de ore",
+      "liveChat": "Suport chat live",
+      "liveChatDescription": "Conectează-te instantaneu cu un agent de suport.",
+      "startLiveChat": "Începe chat live",
+      "available247": "Disponibil 24/7",
+      "stillHaveQuestions": "Încă ai întrebări? Verifică întrebările noastre frecvente pentru răspunsuri rapide."
+    },
+    "copyrightNotice": {
+      "title": "Notificare privind drepturile de autor",
+      "subtitle": "Informații despre proprietatea intelectuală și mărcile comerciale pe MidasBuy.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Protecția drepturilor de autor",
+          "content1": "Tot conținutul de pe site-ul și platforma MidasBuy este protejat de legile internaționale privind drepturile de autor.",
+          "content2": "Compilarea întregului conținut de pe acest site este proprietatea exclusivă a MidasBuy."
+        },
+        "trademarks": {
+          "title": "2. Mărci comerciale",
+          "content1": "MidasBuy® și logo-ul MidasBuy sunt mărci comerciale înregistrate ale MidasBuy.",
+          "notice": "PUBG MOBILE, PUBG și toate logo-urile aferente sunt proprietatea exclusivă a PUBG sau a licențiatorilor săi.",
+          "content2": "Nimic din acest site nu trebuie interpretat ca acordând o licență de utilizare a unei mărci comerciale."
+        },
+        "useOfContent": {
+          "title": "3. Utilizarea conținutului",
+          "intro": "Poți accesa, descărca și utiliza conținutul doar pentru uz personal, necomercial.",
+          "items": [
+            "Modificarea materialelor de pe acest site",
+            "Utilizarea materialelor în scopuri comerciale",
+            "Încercarea de a decompila sau de a face inginerie inversă software-ului",
+            "Îndepărtarea drepturilor de autor sau a altor notificări de proprietate",
+            "Transferul materialelor către o altă persoană"
+          ],
+          "termination": "Această licență va fi terminată automat în cazul încălcării acestor restricții."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Politica de cookie-uri",
+      "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+      "intro": "Această Politică de cookie-uri explică modul în care MidasBuy folosește cookie-uri și tehnologii similare.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Ce sunt cookie-urile?",
+          "content": "Cookie-urile sunt fișiere text mici plasate pe dispozitivul tău atunci când vizitezi site-ul nostru."
+        },
+        "essentialCookies": {
+          "title": "Cookie-uri esențiale",
+          "content": "Aceste cookie-uri sunt necesare pentru funcționarea corectă a site-ului."
+        },
+        "analyticsCookies": {
+          "title": "Cookie-uri analitice",
+          "content": "Aceste cookie-uri ne ajută să înțelegem cum interacționează vizitatorii cu site-ul nostru."
+        },
+        "advertisingCookies": {
+          "title": "Cookie-uri publicitare",
+          "content": "Aceste cookie-uri sunt folosite pentru a afișa reclame mai relevante."
+        },
+        "functionalityCookies": {
+          "title": "Cookie-uri funcționale",
+          "content": "Aceste cookie-uri permit funcționalitate îmbunătățită și personalizare."
+        },
+        "thirdPartyCookies": {
+          "title": "Cookie-uri de la terți",
+          "content": "Unele cookie-uri sunt plasate de servicii terțe."
+        },
+        "managingCookies": {
+          "title": "Gestionarea preferințelor pentru cookie-uri",
+          "content": "Ai mai multe opțiuni pentru gestionarea cookie-urilor."
+        },
+        "cookieRetention": {
+          "title": "Perioada de păstrare a cookie-urilor",
+          "content": "Perioadele de valabilitate ale cookie-urilor variază."
+        }
+      },
+      "questionsTitle": "Întrebări despre Politica de cookie-uri?",
+      "questionsContent": "Dacă ai întrebări despre utilizarea cookie-urilor, te rugăm să ne contactezi."
+    }
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  },
+  "redeemTab": {
+    "title": "Cod de răscumpărare",
+    "enterPlayerId": "Introdu ID-ul jucătorului",
+    "enterRedeemCode": "Introdu codul de răscumpărare",
+    "enterUsername": "Nume utilizator (opțional)",
+    "submitCode": "Trimite codul",
+    "processing": "Se procesează...",
+    "codeSubmitted": "Cod trimis!",
+    "codeSubmittedDesc": "Codul tău a fost trimis pentru verificare."
+  },
+  "shopTab": {
+    "title": "Magazin",
+    "popularGames": "Jocuri populare",
+    "comingSoon": "În curând",
+    "newArrivals": "Noi sosiri"
+  },
+  "eventsTab": {
+    "title": "Evenimente",
+    "upcomingEvents": "Evenimente viitoare",
+    "activeEvents": "Evenimente active",
+    "noEvents": "Nu există evenimente momentan",
+    "comingSoon": "În curând!",
+    "endsIn": "Se termină în",
+    "days": "zile"
+  },
+  "countryFaq": {
+    "header": "Întrebări frecvente - PUBG UC {{country}}",
+    "q1": "Cum să cumperi PUBG UC în {{country}}?",
+    "a1": "Vizitați magazinul oficial Midasbuy, selectați pachetul UC, introduceți PUBG Player ID, alegeți metoda de plată ({{paymentMethods}}) și finalizați plata. UC va fi livrat în 2-5 minute.",
+    "q2": "Care este cel mai ieftin preț PUBG UC în {{country}}?",
+    "a2": "Midasbuy oferă cel mai ieftin PUBG UC de la {{currencySymbol}}0,99 pentru 60 UC. Obțineți reducere de până la 60% + bonus VIP de 30%.",
+    "q3": "Este Midasbuy sigur pentru jucătorii din {{country}}?",
+    "a3": "Da, Midasbuy este 100% sigur și de încredere pentru 10M+ jucători din {{country}}.",
+    "q4": "Ce metode de plată sunt disponibile în {{country}}?",
+    "a4": "În {{country}} acceptăm {{paymentMethods}}. Toate plățile sunt securizate și criptate.",
+    "q5": "Cât durează livrarea PUBG UC în {{country}}?",
+    "a5": "Livrarea UC este instantanee și durează doar 2-5 minute după plata reușită.",
+    "q6": "Pot cumpăra Royal Pass cu {{currency}} în {{country}}?",
+    "a6": "Da! Cumpărați suficient UC cu {{currency}} în {{country}}. Apoi cumpărați Royal Pass direct din PUBG Mobile.",
+    "whyBuyTitle": "De ce să cumperi PUBG UC de la Midasbuy în {{country}}?",
+    "whyBuyDesc": "Midasbuy este cea mai de încredere platformă de încărcare PUBG Mobile UC din {{country}}. Reducere de până la 60% și livrare instantanee în 2-5 minute."
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  }
+}

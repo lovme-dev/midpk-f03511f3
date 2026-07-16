@@ -1,0 +1,947 @@
+{
+  "installApp": "အက်ပ်ထည့်သွင်းပါ",
+  "language": "ဘာသာစကား",
+  "followUs": "ကျွန်ုပ်တို့ကို Follow လုပ်ပါ",
+  "home": "ပင်မစာမျက်နှာ",
+  "purchase": "ဝယ်ယူရန်",
+  "dashboard": "ဒက်ရှ်ဘုတ်",
+  "buyUCPackages": "UC ပက်ကေ့ဂျ်ဝယ်ပါ",
+  "selectLanguage": "ဘာသာစကားရွေးပါ",
+  "support": "အကူအညီ",
+  "helpCenter": "အကူအညီစင်တာ",
+  "contactUs": "ကျွန်ုပ်တို့ကိုဆက်သွယ်ပါ",
+  "faqs": "မေးလေ့ရှိသောမေးခွန်းများ",
+  "paymentIssues": "ငွေပေးချေမှုပြဿနာများ",
+  "security": "လုံခြုံရေး",
+  "legal": "ဥပဒေရေးရာ",
+  "termsOfService": "ဝန်ဆောင်မှုစည်းကမ်းချက်များ",
+  "privacyPolicy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ",
+  "cookiePolicy": "Cookie မူဝါဒ",
+  "refundPolicy": "ပြန်အမ်းငွေမူဝါဒ",
+  "copyrightNotice": "မူပိုင်ခွင့်အသိပေးချက်",
+  "aboutUs": "ကျွန်ုပ်တို့အကြောင်း",
+  "aboutMidasbuy": "Midasbuy အကြောင်း",
+  "blogs": "ဘလော့ဂ်များ",
+  "careers": "အလုပ်အကိုင်များ",
+  "press": "မီဒီယာ",
+  "partners": "မိတ်ဖက်များ",
+  "popularGames": "လူကြိုက်များဂိမ်းများ",
+  "allGames": "ဂိမ်းအားလုံး",
+  "latestNews": "နောက်ဆုံးရသတင်းများ",
+  "viewAll": "အားလုံးကြည့်ရန်",
+  "miniGamesLabel": "ဂိမ်းသေးများ",
+  "featured": "အထူးအသားပေး",
+  "goButton": "သွားမည်",
+  "games": "ဂိမ်းများ",
+  "all": "အားလုံး",
+  "endsIn": "ပြီးဆုံးရန်",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR"
+  },
+  "buyNow": "ယခုဝယ်မည်",
+  "addToCart": "ဈေးခြင်းထဲထည့်ပါ",
+  "selectPackage": "ပက်ကေ့ဂျ်ရွေးပါ",
+  "enterPlayerId": "Player ID ထည့်ပါ",
+  "playerId": "Player ID",
+  "username": "အသုံးပြုသူအမည်",
+  "email": "အီးမေးလ်",
+  "password": "စကားဝှက်",
+  "login": "ဝင်ရောက်ပါ",
+  "logout": "ထွက်ပါ",
+  "signUp": "စာရင်းသွင်းပါ",
+  "forgotPassword": "စကားဝှက်မေ့နေပါသလား",
+  "rememberMe": "ကျွန်ုပ်ကိုမှတ်ထားပါ",
+  "noAccount": "အကောင့်မရှိဘူးလား?",
+  "haveAccount": "အကောင့်ရှိပြီးသားလား?",
+  "orderHistory": "မှာယူမှုမှတ်တမ်း",
+  "orderStatus": "မှာယူမှုအခြေအနေ",
+  "pending": "စောင့်ဆိုင်းနေသည်",
+  "completed": "ပြီးဆုံးသည်",
+  "failed": "မအောင်မြင်ပါ",
+  "processing": "လုပ်ဆောင်နေသည်",
+  "payment": "ငွေပေးချေမှု",
+  "paymentMethod": "ငွေပေးချေမှုနည်းလမ်း",
+  "totalAmount": "စုစုပေါင်းပမာဏ",
+  "discount": "လျှော့စျေး",
+  "couponCode": "ကူပွန်ကုဒ်",
+  "applyCoupon": "ကူပွန်အသုံးပြုပါ",
+  "checkout": {
+    "enterPlayerIdNow": "သင့် Player ID ယခုထည့်ပါ",
+    "playerId": "Player ID",
+    "enterPlayerId": "Player ID ထည့်ပါ",
+    "enterPlayerId10": "ဂဏန်း 10 လုံး Player ID ထည့်ပါ",
+    "enterUsername": "အသုံးပြုသူအမည်ထည့်ပါ",
+    "enterPlayerIdToPurchase": "ဝယ်ယူရန် Player ID ထည့်ပါ",
+    "selectPlayerIdToRecharge": "ငွေဖြည့်လိုသော Player ID ကို ရွေးချယ် သို့မဟုတ် ထည့်ပါ",
+    "couldntFindPlayerId": "သင့် Player ID ကို မတွေ့ဘူးလား?",
+    "coupon": "ကူပွန်",
+    "noAvailableCoupon": "ကူပွန်မရှိပါ",
+    "selectPaymentChannels": "ငွေပေးချေလမ်းကြောင်း ရွေးချယ်ပါ",
+    "creditDebitCard": "အကြွေးကတ်/ ဒက်ဘစ်/ ကြိုတင်ငွေသွင်းကတ်",
+    "vipExtraPoints": "VIP အပိုအမှတ်များ",
+    "payNow": "ယခုပေးချေမည်",
+    "total": "စုစုပေါင်း",
+    "purchaseItem": "ဝယ်ယူပစ္စည်း",
+    "extraForYou": "သင့်အတွက်အပို",
+    "playerIdRequired": "Player ID လိုအပ်သည်",
+    "pleaseEnterPlayerId": "ကျေးဇူးပြု၍ သင့် Player ID ကို အရင်ထည့်ပါ",
+    "invalidPlayerId": "Player ID မမှန်ပါ",
+    "enterValidPlayerId": "ကျေးဇူးပြု၍ မှန်ကန်သော Player ID ထည့်ပါ",
+    "invalidUsername": "အသုံးပြုသူအမည် မမှန်ပါ",
+    "enterValidUsername": "ကျေးဇူးပြု၍ မှန်ကန်သော အသုံးပြုသူအမည်ထည့်ပါ",
+    "paymentError": "ငွေပေးချေမှုအမှား",
+    "paymentFailed": "ငွေပေးချေမှုစတင်ရန် မအောင်မြင်ပါ။ ထပ်ကြိုးစားပါ။",
+    "paymentSuccessful": "ငွေပေးချေမှုအောင်မြင်ပါသည်!",
+    "cryptoConfirmed": "သင့် crypto ငွေပေးချေမှုကို အတည်ပြုပြီးပါပြီ။",
+    "recentPlayerIds": "မကြာသေး Player IDs",
+    "enterNewPlayerId": "Player ID အသစ်ထည့်ပါ",
+    "saveAndContinue": "သိမ်းဆည်းပြီး ဆက်လက်လုပ်ဆောင်မည်",
+    "signInFirst": "အရင်ဝင်ရောက်ပါ",
+    "securityPayment": "လုံခြုံသောငွေပေးချေမှု",
+    "orderSummary": "မှာယူမှုအကျဉ်းချုပ်"
+  },
+  "proceedToPayment": "ငွေပေးချေမှုသို့ဆက်လက်",
+  "back": "နောက်သို့",
+  "backToHome": "ပင်မစာမျက်နှာသို့",
+  "next": "နောက်တစ်ခု",
+  "submit": "တင်သွင်းပါ",
+  "cancel": "ပယ်ဖျက်ပါ",
+  "confirm": "အတည်ပြုပါ",
+  "close": "ပိတ်ပါ",
+  "search": "ရှာဖွေပါ",
+  "loading": "ဖွင့်နေသည်...",
+  "error": "အမှား",
+  "success": "အောင်မြင်သည်",
+  "warning": "သတိပေးချက်",
+  "info": "အချက်အလက်",
+  "welcome": "ကြိုဆိုပါတယ်",
+  "welcomeBack": "ပြန်လာတာကြိုဆိုပါတယ်",
+  "getStarted": "စတင်ပါ",
+  "learnMore": "ပိုမိုလေ့လာပါ",
+  "seeMore": "ပိုမိုကြည့်ရှုပါ",
+  "readMore": "ပိုမိုဖတ်ရှုပါ",
+  "showLess": "လျှော့ပြပါ",
+  "notifications": "အကြောင်းကြားချက်များ",
+  "settings": "ဆက်တင်များ",
+  "profile": "ပရိုဖိုင်",
+  "myOrders": "ကျွန်ုပ်၏မှာယူမှုများ",
+  "myAccount": "ကျွန်ုပ်၏အကောင့်",
+  "editProfile": "ပရိုဖိုင်ပြင်ပါ",
+  "changePassword": "စကားဝှက်ပြောင်းပါ",
+  "saveChanges": "ပြောင်းလဲမှုများသိမ်းပါ",
+  "deleteAccount": "အကောင့်ဖျက်ပါ",
+  "verifiedReviews": "အတည်ပြုထားသောသုံးသပ်ချက်များ",
+  "customerReviews": {
+    "title": "ဖောက်သည်သုံးသပ်ချက်များ",
+    "verifiedReviews": "အတည်ပြုထားသောသုံးသပ်ချက်များ",
+    "writeReview": "သုံးသပ်ချက်ရေးပါ",
+    "loginToReview": "သုံးသပ်ချက်ရေးရန် ဝင်ရောက်ပါ",
+    "back": "နောက်သို့",
+    "ratingDistribution": "အဆင့်သတ်မှတ်ချက်ခွဲဝေမှု",
+    "last12Months": "လွန်ခဲ့သော ၁၂ လ",
+    "filterByRating": "အဆင့်ဖြင့်စစ်ထုတ်ပါ",
+    "allRatings": "အားလုံး",
+    "loadMore": "သုံးသပ်ချက်များထပ်ဖွင့်ရန်",
+    "verifiedPurchase": "အတည်ပြုထားသောဝယ်ယူမှု",
+    "submitReview": "သုံးသပ်ချက်တင်သွင်းပါ",
+    "yourName": "သင့်အမည်",
+    "rating": "အဆင့်သတ်မှတ်ချက်",
+    "review": "သုံးသပ်ချက်",
+    "shareExperience": "သင့်အတွေ့အကြုံမျှဝေပါ...",
+    "helpful": "အထောက်အကူဖြစ်သည်",
+    "reply": "ပြန်ကြားရန်",
+    "delete": "ဖျက်ရန်"
+  },
+  "writeReview": "သုံးသပ်ချက်ရေးပါ",
+  "rating": "အဆင့်သတ်မှတ်ချက်",
+  "instantDelivery": "ချက်ခြင်းပေးပို့",
+  "securePayment": "လုံခြုံသောငွေပေးချေမှု",
+  "bestPrice": "အကောင်းဆုံးစျေးနှုန်း",
+  "officialPartner": "တရားဝင်မိတ်ဖက်",
+  "trustedBy": "ဂိမ်းကစားသူသန်းပေါင်းများစွာကယုံကြည်သည်",
+  "contactSupport": "အကူအညီကိုဆက်သွယ်ပါ",
+  "paymentIssuesHelp": "ငွေပေးချေမှုပြဿနာအကူအညီ",
+  "needHelp": "ဝယ်ယူမှုအတွက်အကူအညီလိုပါသလား?",
+  "lastUpdated": "နောက်ဆုံးအပ်ဒိတ်",
+  "effectiveDate": "အကျိုးသက်ရောက်သည့်ရက်စွဲ",
+  "contactEmail": "ဆက်သွယ်ရန်အီးမေးလ်",
+  "footer": {
+    "description": "PUBG Mobile နှင့်အခြားလူကြိုက်များဂိမ်းများအတွက်ဂိမ်းအတွင်းငွေကြေးနှင့်ပစ္စည်းများဝယ်ယူရန်တရားဝင်ပလက်ဖောင်း။",
+    "copyright": "© ၂၀၂၆ MidasBuy. မူပိုင်ခွင့်အားလုံး။",
+    "mobileDescription": "Midasbuy သည် Tencent ၏တရားဝင်ငွေဖြည့်ဆိုင်ဖြစ်သည်။",
+    "contactUsTitle": "ကျွန်ုပ်တို့ကိုဆက်သွယ်ပါ",
+    "contactUsDesc": "အကူအညီလိုပါက \"ဖောက်သည်ဝန်ဆောင်မှု\" ကိုနှိပ်ပါ။",
+    "customerService": "ဖောက်သည်ဝန်ဆောင်မှု",
+    "cookiesPreference": "Cookies ဆက်တင်များ",
+    "verifiedReviews": "80,837 verified reviews"
+  },
+  "whyTopUp": {
+    "title": "Midasbuy မှာ ဂိမ်းငွေဖြည့်ရမည်မှာ ဘာကြောင့်လဲ?",
+    "section1Title": "၁. Midasbuy: PUBG MOBILE ၏ တရားဝင်ခွင့်ပြုထားသော ငွေဖြည့်ဆိုင်",
+    "section1Content": "PUBG MOBILE ၏ တရားဝင်ခွင့်ပြုထားသော ပြည်ပငွေပေးချေမှုမိတ်ဖက်အဖြစ်၊ Midasbuy သည် ဟောင်ကောင်၊ ဂျပန်၊ အရှေ့တောင်အာရှ၊ ဥရောပနှင့် အမေရိကရှိ ကစားသမားများအတွက် လုံခြုံပြီး ထိရောက်သော UC ငွေဖြည့်ဝန်ဆောင်မှုများကို ပံ့ပိုးပေးသည်။ Alipay, PayPal နှင့် ငွေပေးချေမှုနည်းလမ်း 10+ ကိုထောက်ပံ့သည်။",
+    "section2Title": "၂. Midasbuy UC ဘိုနပ်စ် လဲလှယ်မှု:",
+    "section2Content": "PUBG Mobile redeem ကုဒ်များ သို့မဟုတ် လက်ဆောင်ကတ်များကို Midasbuy ၏ တရားဝင် portal တွင်အသုံးပြုပြီး 3%-7% ဘိုနပ်စ် UC ကို ချက်ချင်းတောင်းဆိုပါ။ ePin ဘောက်ချာများ သို့မဟုတ် ပရိုမိုကုဒ်များမှတစ်ဆင့် သင်၏အခမဲ့ UC ဆုလာဘ်များကို ရယူပါ။",
+    "section3Title": "၃. PUBG MOBILE | အကောင်းဆုံး Battle Royale မိုဘိုင်းဂိမ်း",
+    "section3Content": "ကမ္ဘာတစ်ဝှမ်း လူကြိုက်များသော အခမဲ့ကစားနိုင်သော နည်းဗျူဟာပစ်ခတ်ဂိမ်းအဖြစ်၊ PUBG MOBILE တွင် Erangel, Miramar နှင့် Rondo ကဲ့သို့ ကွဲပြားသော စစ်မြေပြင်များ ပါဝင်သည်။ ကစားသမားများသည် Assault Rifles, Sniper Rifles နှင့် Armor များကို ရှာဖွေရန် parachute ဆင်းသက်မှုများကို စီစဉ်ကြသည်။",
+    "section4Title": "၄. မေးခွန်းနှင့်အဖြေ",
+    "q1": "မေးခွန်း: PUBG MOBILE အတွက် ဝယ်ယူမှုများကို မည်သို့ပြုလုပ်မလဲ?",
+    "q2": "မေးခွန်း: ဝယ်ပြီးနောက် UC ကို ဘယ်မှာရမလဲ?",
+    "q3": "မေးခွန်း: Midasbuy တွင် ပစ္စည်းများအတွက် ကုဒ်များကို မည်သို့လဲလှယ်မလဲ?",
+    "q4": "မေးခွန်း: ဝယ်ယူပြီးနောက် ကျွန်ုပ်၏ထုတ်ကုန်များကို ဘာကြောင့်မရရှိတာလဲ?"
+  },
+  "officialRechargeStore": "ကျွန်ုပ်တို့သည် Tencent ၏တရားဝင်ငွေဖြည့်ဆိုင်ဖြစ်သည်",
+  "discoverOtherRegionGames": "အခြားဒေသဂိမ်းများရှာဖွေပါ",
+  "midasbuyVideo": "MIDASBUY ဗီဒီယို",
+  "header": {
+    "midasbuyVideo": "MIDASBUY ဗီဒီယို",
+    "noNotifications": "အကြောင်းကြားချက်မရှိသေးပါ",
+    "notificationsHint": "ဒီမှာအပ်ဒိတ်များတွေ့ရပါမည်",
+    "signInToEnjoy": "ခံစားရန်ဝင်ရောက်ပါ",
+    "exclusiveService": "သီးသန့်ဝန်ဆောင်မှု",
+    "signInSignUp": "ဝင်ရောက် / စာရင်းသွင်း",
+    "coupon": "ကူပွန်",
+    "orderCenter": "မှာယူမှုစင်တာ",
+    "accountSecurity": "အကောင့်နှင့်လုံခြုံရေး",
+    "midasbuyEvents": "Midasbuy ပွဲများ",
+    "liveVideo": "Live & Video",
+    "adminPanel": "အက်ဒမင်ပန်နယ်"
+  },
+  "miniGames": {
+    "title": "ဂိမ်းသေးများ",
+    "description": "Midasbuy ဝဘ်ဆိုက်တွင်ရရှိနိုင်သော ဂိမ်းသေးများသည် တတိယပါတီပံ့ပိုးသူများက လည်ပတ်သည်ကို သတိပြုပါ။",
+    "moreDetails": "အသေးစိတ်ကြည့်ရန်",
+    "tag": "ဂိမ်းသေးများ",
+    "noDownload": "အက်ပ်ဒေါင်းလုဒ်မလို! Midasbuy တွင် ချက်ချင်းကစားပါ!",
+    "noDownloadDesktop": "အက်ပ်ဒေါင်းလုဒ်မလို! ချက်ချင်းကစားပါ",
+    "playNow": "ယခုကစားမည်",
+    "shop": "ဆိုင်"
+  },
+  "events": {
+    "title": "ပွဲများ",
+    "noEvents": "ယခုအချိန်တွင် ပွဲများမရှိပါ",
+    "comingSoon": "မကြာမီလာမည်",
+    "activeEvents": "လက်ရှိပွဲများ",
+    "pastEvents": "ပြီးခဲ့သောပွဲများ",
+    "viewDetails": "အသေးစိတ်ကြည့်ရန်",
+    "participate": "ယခုပါဝင်မည်",
+    "endsIn": "ပြီးဆုံးရန်",
+    "startsIn": "စတင်ရန်"
+  },
+  "shop": {
+    "title": "ဆိုင်",
+    "categories": "အမျိုးအစားများ",
+    "allItems": "ပစ္စည်းအားလုံး",
+    "featured": "အထူးအသားပေး",
+    "newArrivals": "အသစ်ရောက်ရှိ",
+    "bestSellers": "အရောင်းရဆုံး",
+    "onSale": "လျှော့စျေး",
+    "outOfStock": "ကုန်သွားပြီ",
+    "inStock": "ရှိနေသည်",
+    "addedToCart": "ခြင်းထဲထည့်ပြီး",
+    "viewCart": "ခြင်းကြည့်ရန်",
+    "continueShopping": "ဆက်လက်ဝယ်ယူမည်"
+  },
+  "redeem": {
+    "title": "ကုဒ်လဲလှယ်ရန်",
+    "enterCode": "လဲလှယ်ကုဒ်ထည့်ပါ",
+    "enterPlayerID": "Player ID ထည့်ပါ",
+    "enterUsername": "အသုံးပြုသူအမည်ထည့်ပါ (ရွေးချယ်စရာ)",
+    "submitCode": "ကုဒ်တင်သွင်းပါ",
+    "placeholder": "သင့်လဲလှယ်ကုဒ်ကို ဤနေရာတွင်ထည့်ပါ",
+    "playerIdPlaceholder": "သင့် Player ID ထည့်ပါ",
+    "usernamePlaceholder": "သင့်အသုံးပြုသူအမည်ထည့်ပါ",
+    "success": "ကုဒ်အောင်မြင်စွာလဲလှယ်ပြီးပါပြီ!",
+    "error": "ကုဒ်မှားနေသည် သို့မဟုတ် သုံးပြီးသား",
+    "instructions": "သင့်ဆုလာဘ်များရယူရန် လဲလှယ်ကုဒ်ထည့်ပါ",
+    "processing": "သင့်ကုဒ်ကို လုပ်ဆောင်နေသည်..."
+  },
+  "tabs": {
+    "purchase": "PURCHASE",
+    "redeem": "REDEEM",
+    "shop": "SHOP",
+    "events": "EVENTS"
+  },
+  "news": {
+    "nikkeBonus": "ပထမငွေဖြည့်မှုတွင် NIKKE ဘိုနပ်စ် 100% ရယူပါ!",
+    "registerFreeSkin": "အခမဲ့ skin ရရန် စာရင်းသွင်းပါ",
+    "madDogGames": "Mad Dog Games ကံထူးရှာဖွေရေး",
+    "hokPointsLottery": "Honor of Kings အမှတ်ထီ",
+    "apexCoinBonanza": "Apex Coin Bonanza: ပထမဝယ်ယူမှု, 2x တန်ဖိုး!",
+    "pubgVipBenefits": "PUBG MOBILE VIP အကျိုးကျေးဇူးများ",
+    "purchaseBonus": "ဝယ်ယူမှုဘိုနပ်စ်",
+    "extraBonus45": "MIDASBUY တွင်သာရရှိနိုင်သော အပို ဘိုနပ်စ် ယခု 45% အထိ ခံစားပါ",
+    "aoeDaily": "Age of Empires နေ့စဉ်ပက်ကေ့ဂျ်များ"
+  },
+  "promoBanner": {
+    "slide1": "ဆုလာဘ်များကြည့်ရန်နှင့် သီးသန့်ဘိုနပ်စ်များ ဖွင့်ရန် Player ID ထည့်ပါ။ UC ဝယ်ယူမှုများတွင် အထူးလျှော့စျေးရယူပါ!",
+    "slide2": "ငွေဖြည့်ပြီး UC လှည့်ပါ | သူငယ်ချင်းများ အခမဲ့ကူပွန်ရယူပါ —— အများဆုံး 3000UC!",
+    "slide3": "အနိုင်ရနှုန်း 100%! အဖွဲ့ဝင်နေ့တွင် ဆုပွင့်နှစ်ဆ, ဒီနေ့သာ! လာပြီး ဆုကြီးနိုင်ပါ!"
+  },
+  "videosPage": {
+    "title": "MIDASBUY ဗီဒီယိုနှင့် Live",
+    "upcomingLiveStream": "လာမည့် Live ထုတ်လွှင့်မှု",
+    "videoAndLiveRecord": "ဗီဒီယိုနှင့် Live မှတ်တမ်း",
+    "video": "ဗီဒီယို",
+    "liveRecord": "Live မှတ်တမ်း",
+    "chooseGame": "ဂိမ်းရွေးပါ",
+    "noLiveRecords": "Live မှတ်တမ်းများမရှိပါ",
+    "loadMore": "ထပ်ဖွင့်ရန်",
+    "videoComingSoon": "ဗီဒီယိုမကြာမီလာမည်",
+    "videoNotAvailable": "ဤဗီဒီယိုသည် မရရှိနိုင်သေးပါ။ နောက်မှပြန်စစ်ဆေးပါ!",
+    "seeAll": "အားလုံးကြည့်ရန်",
+    "more": "ပိုမို"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "At Midasbuy, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you use our services.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Information We Collect",
+          "content": "We collect information you provide directly to us, such as when you create an account, make a purchase, or contact our support team. This includes your name, email address, Player ID, payment information, and transaction history."
+        },
+        "howWeUse": {
+          "title": "How We Use Your Information",
+          "content": "We use your information to process transactions, deliver your purchases, provide customer support, send you updates about your orders, and improve our services. We may also use your data for analytics and personalization."
+        },
+        "informationSharing": {
+          "title": "Information Sharing",
+          "content": "We do not sell your personal information. We may share your data with trusted third parties who assist us in operating our platform, such as payment processors and analytics providers. All partners are bound by confidentiality agreements."
+        },
+        "dataSecurity": {
+          "title": "Data Security",
+          "content": "We implement industry-standard security measures to protect your data from unauthorized access, alteration, or destruction. This includes encryption, secure servers, and regular security audits."
+        },
+        "yourRights": {
+          "title": "Your Privacy Rights",
+          "content": "You have the right to access, correct, or delete your personal information. You can also opt out of marketing communications and request data portability. Contact us to exercise these rights."
+        },
+        "internationalTransfers": {
+          "title": "International Data Transfers",
+          "content": "Your data may be transferred to and stored in countries outside your home country. We ensure appropriate safeguards are in place to protect your information in accordance with applicable laws."
+        },
+        "dataRetention": {
+          "title": "Data Retention",
+          "content": "We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, and resolve disputes."
+        },
+        "childrensPrivacy": {
+          "title": "Children's Privacy",
+          "content": "Our services are not intended for children under 13. We do not knowingly collect personal information from children. If you believe we have collected data from a child, please contact us immediately."
+        },
+        "updates": {
+          "title": "Updates to This Policy",
+          "content": "We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy on our website and updating the 'Last Updated' date."
+        },
+        "contactUs": {
+          "title": "Contact Us About Privacy",
+          "content": "If you have any questions about this Privacy Policy or our privacy practices, please contact us through our Contact Support page."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "This Cookie Policy explains how Midasbuy uses cookies and similar technologies when you visit our website. We are committed to being transparent about the technologies we use.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "What Are Cookies?",
+          "content": "Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences, keeping you signed in, and understanding how you use our site. Cookies can be 'session' cookies (which expire when you close your browser) or 'persistent' cookies (which remain on your device until they expire or you delete them)."
+        },
+        "essentialCookies": {
+          "title": "Essential Cookies",
+          "content": "These cookies are necessary for the website to function properly and cannot be switched off. They are usually set in response to actions made by you, such as setting your privacy preferences, logging into your account, filling in forms, remembering your shopping cart, and security and fraud prevention. Without these cookies, services you have asked for cannot be provided."
+        },
+        "analyticsCookies": {
+          "title": "Analytics Cookies",
+          "content": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. They help us count visitors and traffic sources, understand which pages are most popular, see how visitors move around the site, identify and fix technical issues, and improve website performance. We use Google Analytics and similar tools that may set cookies on your device."
+        },
+        "advertisingCookies": {
+          "title": "Advertising & Marketing Cookies",
+          "content": "These cookies are used to deliver advertisements more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement, measure the effectiveness of advertising campaigns, remember that you have visited a website, and share information with third parties like advertisers. These cookies are set by our advertising partners including Google Ads, Facebook, and other networks."
+        },
+        "functionalityCookies": {
+          "title": "Functionality Cookies",
+          "content": "These cookies enable enhanced functionality and personalization, such as remembering your language preferences, remembering your region or location, personalizing content based on your preferences, remembering choices you make (username, language, region), and providing enhanced features like live chat. If you do not allow these cookies, some or all of these services may not function properly."
+        },
+        "thirdPartyCookies": {
+          "title": "Third-Party Cookies",
+          "content": "Some cookies are placed by third-party services that appear on our pages. We do not control the setting of these cookies. Third parties that may set cookies include payment processors (for secure transactions), social media platforms (Facebook, Twitter, etc.), analytics providers (Google Analytics), advertising networks, and customer support tools. Please refer to the respective privacy policies of these third parties for more information."
+        },
+        "managingCookies": {
+          "title": "Managing Your Cookie Preferences",
+          "content": "You have several options for managing cookies. Browser Settings: Most web browsers allow you to control cookies through their settings. You can set your browser to refuse all cookies or to indicate when a cookie is being sent. Our Cookie Settings: When you first visit our site, you can choose to accept or reject optional cookies using our cookie consent banner. Note: Blocking all cookies may affect your experience on our website."
+        },
+        "cookieRetention": {
+          "title": "Cookie Retention Period",
+          "content": "Different cookies have different lifespans. Session Cookies are deleted when browser closes. Essential Cookies last up to 1 year. Analytics Cookies last up to 2 years. Advertising Cookies last up to 90 days. Preference Cookies last up to 1 year. We regularly review and update our cookie practices to ensure compliance with applicable laws."
+        }
+      },
+      "questionsTitle": "Questions About Our Cookie Policy?",
+      "questionsContent": "If you have any questions about our use of cookies or this policy, please contact us:"
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "subtitle": "Midasbuy Terms & Conditions",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "By using Midasbuy, you agree to these terms. Refunds only if undelivered within 24 hours.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Service Overview",
+          "content": "Midasbuy sells UC packages for PUBG Mobile and similar in-game credits through secure online transactions."
+        },
+        "userResponsibilities": {
+          "title": "2. User Responsibilities",
+          "items": [
+            "Provide accurate PUBG ID and payment details.",
+            "Ensure you have permission to make purchases using the selected payment method.",
+            "Avoid fraudulent or abusive use of our services."
+          ]
+        },
+        "delivery": {
+          "title": "3. Delivery",
+          "items": [
+            "UC purchases are usually delivered instantly, but in rare cases may take up to 30 minutes.",
+            "If delivery is delayed beyond the stated time, you may contact our support team."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Refund Policy",
+          "items": [
+            "Refunds must be requested within 24 hours of purchase if UC has not been delivered.",
+            "No refunds will be issued after 24 hours, even if UC is undelivered due to account errors caused by the customer.",
+            "All refunds are subject to our Refund Policy."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Changes to Terms",
+          "content": "We may update these terms at any time. Continued use of our website means you accept the updated terms."
+        }
+      },
+      "acknowledgment": "By using Midasbuy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service."
+    },
+    "refundPolicy": {
+      "title": "Refund Policy",
+      "subtitle": "Midasbuy Refund Terms",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "No refunds after 24 hours; refunds only if UC is undelivered within the promised time.",
+      "description": "At Midasbuy, we aim to provide fast and reliable UC delivery. Please read this policy before making your purchase.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Eligibility for Refunds",
+          "items": [
+            "Refunds are only available if UC has not been delivered within the promised delivery time.",
+            "Refund requests must be made within 24 hours of purchase.",
+            "If the UC has already been delivered to your account, refunds are not possible."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Non-Refundable Cases",
+          "items": [
+            "UC successfully delivered to the correct account.",
+            "Wrong PUBG ID or details provided by the customer.",
+            "Refund request made after 24 hours of purchase.",
+            "Change of mind after payment."
+          ]
+        },
+        "process": {
+          "title": "3. Refund Process",
+          "content": "To request a refund, email us with:",
+          "items": [
+            "Your order ID",
+            "Payment proof",
+            "Reason for the refund request"
+          ],
+          "timeline": "Once approved, refunds will be sent to your original payment method within 7–14 working days."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Help Center",
+      "subtitle": "Get support for all your Midasbuy needs. We're here to help with your purchases, account issues, and any questions you might have.",
+      "contactByPhone": "Contact by Phone",
+      "phoneDescription": "Our support team is available 24/7 to assist you with any issues or questions.",
+      "customerSupport": "Customer Support",
+      "clickToChat": "Click to chat on WhatsApp",
+      "chatWithAgent": "Chat with Agent",
+      "emailSupport": "Email Support",
+      "emailDescription": "Send us an email and we'll get back to you within 24 hours.",
+      "supportEmail": "Support Email",
+      "responseTime": "Response within 24 hours",
+      "liveChat": "Live Chat Support",
+      "liveChatDescription": "Connect with a support agent instantly through our live chat service.",
+      "startLiveChat": "Start Live Chat",
+      "available247": "Available 24/7",
+      "stillHaveQuestions": "Still have questions? Check our FAQs for quick answers."
+    },
+    "copyrightNotice": {
+      "title": "Copyright Notice",
+      "subtitle": "Information about intellectual property rights, trademarks, and copyrighted materials on Midasbuy. Learn about our website's digital commerce platform for gaming purchases and content protection policies.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Copyright Protection",
+          "content1": "All content on the Midasbuy website and platform, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, is the property of Midasbuy or its content suppliers and is protected by international copyright laws.",
+          "content2": "The compilation of all content on this site is the exclusive property of Midasbuy and is protected by international copyright laws. All software used on this site is the property of Midasbuy or its software suppliers and is protected by international copyright laws."
+        },
+        "trademarks": {
+          "title": "2. Trademarks",
+          "content1": "Midasbuy® and the Midasbuy logo are registered trademarks of Midasbuy Inc. All other trademarks, service marks, and logos used on Midasbuy are the property of their respective owners and are used under license or with permission.",
+          "notice": "PUBG MOBILE, PUBG, and all related logos, characters, names, and distinctive likenesses thereof are the exclusive property of PUBG Corporation or its licensors. All rights reserved. Other trademarks and trade names are those of their respective owners.",
+          "content2": "Nothing contained on this website should be construed as granting, by implication, estoppel, or otherwise, any license or right to use any trademark displayed on this website without the written permission of Midasbuy or the third party that owns the trademark."
+        },
+        "useOfContent": {
+          "title": "3. Use of Content",
+          "intro": "You may access, download, and use content, information, and materials made available on Midasbuy for personal, non-commercial use only. You may not:",
+          "items": [
+            "Modify any of the materials on this website",
+            "Use the materials for any commercial purpose or for any public display",
+            "Attempt to decompile or reverse engineer any software contained on Midasbuy",
+            "Remove any copyright or other proprietary notations from the materials",
+            "Transfer the materials to another person or 'mirror' the materials on any other server"
+          ],
+          "termination": "This license shall automatically terminate if you violate any of these restrictions and may be terminated by Midasbuy at any time."
+        },
+        "userGeneratedContent": {
+          "title": "4. User-Generated Content",
+          "content1": "By posting, uploading, inputting, providing, or submitting content to Midasbuy, you grant Midasbuy and its affiliated companies a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media.",
+          "content2": "You represent and warrant that you own or otherwise control all of the rights to the content that you post; that the content is accurate; that use of the content you supply does not violate this policy and will not cause injury to any person or entity; and that you will indemnify Midasbuy for all claims resulting from content you supply."
+        },
+        "copyrightInfringement": {
+          "title": "5. Copyright Infringement Claims",
+          "intro": "Midasbuy respects the intellectual property of others. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide Midasbuy's copyright agent with the following information:",
+          "items": [
+            "An electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest",
+            "A description of the copyrighted work that you claim has been infringed",
+            "A description of where the material that you claim is infringing is located on the site",
+            "Your address, telephone number, and email address",
+            "A statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law",
+            "A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf"
+          ],
+          "contactTitle": "Midasbuy's Copyright Agent for notice of claims of copyright infringement:",
+          "contactInfo": "Copyright Agent, Legal Department\nMidasbuy Inc.\nOne Midasbuy Plaza, Gaming District, CA 90210, USA\nEmail: copyright@midasbuy.com"
+        },
+        "dmca": {
+          "title": "6. Digital Millennium Copyright Act (DMCA) Policy",
+          "content1": "Midasbuy complies with the provisions of the Digital Millennium Copyright Act (DMCA) applicable to internet service providers. If you believe that materials available on Midasbuy infringe your copyright, you may request that those materials be removed by submitting a DMCA notice to our Copyright Agent (contact information provided above).",
+          "content2": "Upon receipt of a valid DMCA notice, Midasbuy will:",
+          "items": [
+            "Remove or disable access to the material that is alleged to be infringing",
+            "Notify the content provider, member, or user that it has removed or disabled access to the material",
+            "Provide the content provider, member, or user with information about how to submit a counter-notification"
+          ]
+        },
+        "changes": {
+          "title": "7. Changes to Copyright Notice",
+          "content": "Midasbuy reserves the right to modify this Copyright Notice at any time without prior notice. Any changes will be effective immediately upon posting on our website."
+        },
+        "contactUs": {
+          "title": "8. Contact Information",
+          "intro": "If you have any questions about this Copyright Notice, please contact us at:",
+          "contactInfo": "Email: legal@midasbuy.com\nAddress: One Midasbuy Plaza, Gaming District, CA 90210, USA"
+        }
+      },
+      "lastUpdated": "Last Updated: March 1, 2026",
+      "relatedPolicies": "For more information about our policies, please review our:"
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about purchasing PUBG MOBILE UC, accessing your player information, redeeming codes for items, payment issues, and account management.",
+      "searchPlaceholder": "Search for questions...",
+      "noResults": "No results found for",
+      "tryDifferent": "Try a different search term or browse by category",
+      "cantFindAnswer": "Can't find what you're looking for?",
+      "contactSupport": "Contact Support",
+      "categories": {
+        "all": "All FAQs",
+        "purchases": "Purchases",
+        "payments": "Payment Issues",
+        "account": "Account",
+        "security": "Security",
+        "refunds": "Refunds"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "How do I purchase UC in PUBG Mobile?",
+          "answer": "To purchase UC in PUBG Mobile through Midasbuy, select your desired UC package on our homepage, enter your PUBG Mobile ID, choose your preferred payment method, and complete the transaction. Your UC will be credited to your account immediately after payment is confirmed."
+        },
+        "isSafe": {
+          "question": "Is it safe to purchase UC from Midasbuy?",
+          "answer": "Yes, Midasbuy is the official top-up platform for PUBG Mobile. We use industry-standard encryption and security measures to protect your personal and payment information. All transactions are secure and directly integrated with the game."
+        },
+        "deliveryTime": {
+          "question": "How long does it take to receive UC after purchase?",
+          "answer": "In most cases, UC is credited to your PUBG Mobile account immediately after your payment is confirmed. However, in rare cases, it might take up to 30 minutes due to server processing or high traffic. If you haven't received your UC after 30 minutes, please contact our customer support."
+        },
+        "paymentMethods": {
+          "question": "What payment methods are accepted?",
+          "answer": "Midasbuy accepts various payment methods including credit/debit cards (Visa, Mastercard, American Express), PayPal, Google Pay, Apple Pay, and various regional payment options. Available payment methods may vary depending on your location."
+        },
+        "ucNotReceived": {
+          "question": "I made a payment but didn't receive my UC. What should I do?",
+          "answer": "First, verify that your payment was successfully processed by checking your email for a payment confirmation. If the payment was successful but you haven't received your UC within 30 minutes, please contact our support team with your transaction ID and PUBG Mobile ID. We recommend checking your in-game mail as well, as sometimes notifications about UC purchases are sent there."
+        },
+        "purchaseForOthers": {
+          "question": "Can I purchase UC for another player?",
+          "answer": "Yes, you can purchase UC for any PUBG Mobile player as long as you have their correct Player ID. Simply enter their Player ID during the purchase process instead of your own."
+        },
+        "findPlayerId": {
+          "question": "How do I find my PUBG Mobile ID?",
+          "answer": "You can find your PUBG Mobile ID by opening the game, tapping on your profile picture in the top-right corner, and looking for the ID number displayed below your username. This is the number you need to enter when making purchases on Midasbuy."
+        },
+        "bonuses": {
+          "question": "Are there any bonuses for purchasing larger UC packages?",
+          "answer": "Yes, larger UC packages often come with bonus UC. The amount of bonus UC varies by package and is clearly displayed on each package option. We also run special promotions periodically that offer additional bonuses."
+        },
+        "ucExpire": {
+          "question": "Will my UC expire if I don't use it?",
+          "answer": "No, UC does not expire. Once credited to your PUBG Mobile account, it remains there until you spend it, regardless of how long you hold onto it."
+        },
+        "refund": {
+          "question": "Can I get a refund for my UC purchase?",
+          "answer": "As per our refund policy, all UC purchases are final and non-refundable once the UC has been credited to your account. If you are experiencing issues with your purchase or believe you've been charged incorrectly, please contact our customer support team immediately."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "subtitle": "Have questions or need assistance? Our team is ready to help you with any inquiries about UC purchases, account issues, or technical support.",
+      "sendMessage": "Send Us a Message",
+      "yourName": "Your Name",
+      "enterName": "Enter your name",
+      "emailAddress": "Email Address",
+      "enterEmail": "Enter your email",
+      "subject": "Subject",
+      "whatIsThis": "What is this regarding?",
+      "message": "Message",
+      "howCanWeHelp": "How can we help you?",
+      "sending": "Sending...",
+      "sendMessageBtn": "Send Message",
+      "messageSent": "Message Sent Successfully",
+      "messageSuccess": "Thank you for contacting us. We'll respond to your inquiry shortly.",
+      "messageError": "Error Sending Message",
+      "messageErrorDesc": "There was an issue sending your message. Please try again or contact us directly.",
+      "contactInfo": "Contact Information",
+      "whatsappSupport": "WhatsApp Support",
+      "support247": "24/7 Customer Support via WhatsApp",
+      "emailSupportTitle": "Email Support",
+      "forAllInquiries": "For all inquiries and support",
+      "liveChatTitle": "Live Chat",
+      "availableOnWebsite": "Available 24/7 on our website",
+      "startChat": "Start Chat",
+      "ourOffice": "Our Office",
+      "headquarters": "Midasbuy Headquarters",
+      "address": "One Midasbuy Plaza, Gaming District\nLos Angeles, CA 90210\nUnited States",
+      "officeHours": "Office Hours: Monday to Friday, 9:00 AM - 6:00 PM (PST)"
+    },
+    "security": {
+      "title": "Security Center",
+      "subtitle": "Learn how Midasbuy protects your information and what steps you can take to ensure your account remains secure.",
+      "howWeProtect": "How We Protect You",
+      "securePayments": "Secure Payments",
+      "securePaymentsDesc": "All payment transactions on Midasbuy are encrypted using industry-standard TLS (Transport Layer Security) protocols. We comply with PCI DSS (Payment Card Industry Data Security Standard) to ensure your payment information is protected.",
+      "securePaymentsNote": "We never store your complete credit card details on our servers. All sensitive information is tokenized and processed through secure payment gateways.",
+      "accountProtection": "Account Protection",
+      "accountProtectionDesc": "Your account is protected by a secure authentication system. We implement security measures like rate limiting, automated session timeouts, and suspicious activity monitoring to prevent unauthorized access.",
+      "accountProtectionNote": "We regularly audit our systems and conduct security tests to identify and address potential vulnerabilities before they can be exploited.",
+      "dataPrivacy": "Data Privacy",
+      "dataPrivacyDesc": "We follow strict data privacy practices in compliance with global standards. Your personal information is only used for the purposes stated in our Privacy Policy and is never sold to third parties.",
+      "dataPrivacyNote": "You can request access to or deletion of your personal data at any time. We maintain transparent privacy practices and regularly update our policies to align with the latest regulations.",
+      "fraudPrevention": "Fraud Prevention",
+      "fraudPreventionDesc": "Our advanced fraud detection systems monitor transactions in real-time to identify and prevent fraudulent activities. Unusual purchasing patterns or suspicious activities trigger additional verification steps.",
+      "fraudPreventionNote": "We work closely with payment providers and gaming platforms to coordinate security efforts and share information about emerging threats.",
+      "bestPractices": "Security Best Practices for Users",
+      "useStrongPasswords": "Use Strong, Unique Passwords",
+      "useStrongPasswordsDesc": "Create complex passwords that include a mix of letters, numbers, and special characters. Never reuse passwords across different platforms.",
+      "enable2FA": "Enable Two-Factor Authentication When Available",
+      "enable2FADesc": "Add an extra layer of security by enabling 2FA on your gaming accounts and payment platforms.",
+      "useOfficialSites": "Only Use Official Websites and Apps",
+      "useOfficialSitesDesc": "Always ensure you're on the official Midasbuy website (midasbuy.com) before entering any personal or payment information.",
+      "keepDevicesSecure": "Keep Your Devices Secure",
+      "keepDevicesSecureDesc": "Regularly update your devices' operating systems and applications to patch security vulnerabilities.",
+      "bewarePhishing": "Be Wary of Phishing Attempts",
+      "bewarePhishingDesc": "Midasbuy will never ask for your password via email or message. Be suspicious of any communication requesting sensitive information.",
+      "monitorTransactions": "Monitor Your Transactions",
+      "monitorTransactionsDesc": "Regularly check your purchase history and bank statements for any unauthorized transactions.",
+      "reportConcerns": "Report Security Concerns",
+      "reportConcernsDesc": "If you suspect any unauthorized access to your account, unusual transactions, or other security issues, please report them immediately.",
+      "reportSecurityIssue": "Report Security Issue",
+      "securityFAQ": "Security FAQ",
+      "urgentContact": "For urgent security matters, please contact our security team directly at security@midasbuy.com"
+    },
+    "paymentIssues": {
+      "title": "Payment Issues",
+      "subtitle": "Find solutions to common payment problems and learn how to resolve issues with your UC purchases.",
+      "commonIssues": "Common Payment Issues",
+      "paymentDeclined": "Payment Declined",
+      "paymentDeclinedReasons": "If your payment was declined, it could be due to several reasons:",
+      "paymentDeclinedItems": [
+        "Insufficient funds in your account",
+        "Incorrect card information (number, expiration date, CVV)",
+        "Your bank may have blocked the transaction for security reasons",
+        "Your card may have expired",
+        "Transaction limits on your card or account"
+      ],
+      "howToResolve": "How to resolve this:",
+      "paymentDeclinedSteps": [
+        "Verify that your card details are correct",
+        "Check with your bank if the transaction was blocked",
+        "Try using a different payment method",
+        "Ensure you have sufficient funds in your account",
+        "Contact your bank to authorize transactions with Midasbuy"
+      ],
+      "ucNotReceived": "Payment Successful but UC Not Received",
+      "ucNotReceivedReasons": "If your payment was successful but you haven't received your UC, it could be due to:",
+      "ucNotReceivedItems": [
+        "Server delays in processing your purchase",
+        "Incorrect Player ID entered during purchase",
+        "Temporary synchronization issues between Midasbuy and the game",
+        "System maintenance or technical issues"
+      ],
+      "ucNotReceivedSteps": [
+        "Wait at least 30 minutes as some transactions take time to process",
+        "Check your in-game mail for any UC delivery notifications",
+        "Verify that you entered the correct Player ID",
+        "Login and logout of the game to refresh your account data",
+        "If the issue persists for more than 2 hours, contact customer support with your transaction details"
+      ],
+      "multipleCharges": "Multiple Charges for One Purchase",
+      "multipleChargesReasons": "If you see multiple charges for a single purchase, it could be due to:",
+      "multipleChargesItems": [
+        "Payment processing errors",
+        "Clicking the purchase button multiple times",
+        "Temporary authorization holds that will be released",
+        "Browser or connection issues causing multiple submissions"
+      ],
+      "multipleChargesSteps": [
+        "Check if these are actual charges or just authorization holds",
+        "Wait 3-5 business days as temporary holds are typically released automatically",
+        "Contact customer support with screenshots of the charges and your transaction ID",
+        "Provide your bank statement showing the multiple charges"
+      ],
+      "needMoreHelp": "Need More Help?",
+      "needMoreHelpDesc": "If you're still experiencing payment issues, our customer support team is ready to assist you. Please provide your transaction details when contacting us for faster resolution.",
+      "visitHelpCenter": "Visit Help Center",
+      "paymentNote": "For payment issues involving significant amounts or multiple failed transactions, please contact your bank in addition to reaching out to our support team."
+    },
+    "aboutMidasbuy": {
+      "title": "About Midasbuy",
+      "subtitle": "Your trusted partner in mobile gaming",
+      "whoWeAre": "Who We Are",
+      "whoWeAreContent1": "Midasbuy is the world's leading digital gaming store, established as the official platform for purchasing in-game currency across multiple popular mobile gaming titles. Since our launch, we've served over 50 million gamers worldwide, processing millions of secure transactions monthly across 200+ countries and territories.",
+      "whoWeAreContent2": "As an official partner with major game publishers including Tencent Games, Garena, and Level Infinite, we provide authentic, authorized digital content directly from the source. Our platform combines cutting-edge security technology with user-friendly interfaces to deliver the safest, fastest gaming currency purchasing experience available today.",
+      "ourMission": "Our Mission",
+      "ourMissionContent1": "Our mission is to empower gamers worldwide by providing instant, secure access to the gaming content they love. We believe every gamer deserves a hassle-free experience when purchasing virtual currency, regardless of their location or preferred payment method.",
+      "ourMissionContent2": "We're committed to breaking down barriers in digital gaming commerce by supporting multiple currencies, diverse payment methods, and providing 24/7 multilingual customer support. Through innovation and dedication to excellence, we aim to be the trusted bridge connecting gamers with their favorite gaming experiences.",
+      "whyChooseUs": "Why Choose Midasbuy?",
+      "officialPartnership": "Official Partnership",
+      "officialPartnershipDesc": "Authorized distributor for PUBG Mobile, Free Fire, Honor of Kings, and 30+ gaming titles. All purchases are 100% legitimate and directly delivered through official game APIs.",
+      "lightningDelivery": "Lightning-Fast Delivery",
+      "lightningDeliveryDesc": "Average delivery time of under 2 minutes with 98.7% instant delivery rate. Our automated system processes orders immediately with real-time status tracking.",
+      "bankGradeSecurity": "Bank-Grade Security",
+      "bankGradeSecurityDesc": "SSL encryption, PCI DSS compliance, and multi-layer fraud protection. Your payment information is never stored and all transactions are encrypted end-to-end.",
+      "globalPayments": "Global Payment Options",
+      "globalPaymentsDesc": "Support for 150+ payment methods including credit cards, digital wallets, bank transfers, and regional payment systems across all major currencies.",
+      "gamersServed": "Gamers Served",
+      "countries": "Countries",
+      "successRate": "Success Rate",
+      "avgDelivery": "Avg Delivery",
+      "joinCommunity": "Join the Community",
+      "joinCommunityDesc": "Become part of the Midasbuy community and stay updated with the latest gaming trends, offers, and updates. Follow us on social media and never miss out on exclusive deals and promotions."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ur": "اردو",
+    "ar": "العربية",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "pt": "Português",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "th": "ไทย",
+    "vi": "Tiếng Việt"
+  },
+  "redeemPage": {
+    "title": "REDEEM COUPON",
+    "enterRedeemCode": "Enter Redeem code",
+    "codeNumber": "Code Number",
+    "pasteCode": "Paste code",
+    "confirm": "Confirm",
+    "submitting": "Submitting...",
+    "limitReached": "Limit Reached",
+    "reminder": "Reminder",
+    "reminderItem1": "Get corresponding items immediately after redemption.",
+    "reminderItem2": "Redemption code can only be used once.",
+    "reminderItem3": "If you have any question or you need after-sales service, please contact redeem dealer where you buy the vouchers."
+  },
+  "couponsPage": {
+    "title": "MY COUPONS",
+    "redeem": "Redeem",
+    "noEligibleCoupons": "No Eligible Coupons",
+    "historicalCoupons": "Historical Coupons"
+  },
+  "orderCenterPage": {
+    "title": "ORDER CENTER",
+    "all": "ALL",
+    "toPay": "TO PAY",
+    "completed": "COMPLETED",
+    "cancelled": "CANCELLED",
+    "trackOrder": "TRACK ORDER",
+    "searchPlaceholder": "Enter Transaction ID",
+    "search": "Search",
+    "noOrdersFound": "No orders found",
+    "pending": "Pending",
+    "processing": "Processing",
+    "failed": "Failed",
+    "viewDetails": "View Details"
+  },
+  "faqsPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about purchasing PUBG MOBILE UC, accessing your player information, redeeming codes for items, payment issues, and account management.",
+    "searchPlaceholder": "Search for questions...",
+    "allFaqs": "All FAQs",
+    "purchases": "Purchases",
+    "paymentIssues": "Payment Issues",
+    "account": "Account",
+    "security": "Security",
+    "refunds": "Refunds",
+    "noResults": "No results found",
+    "tryDifferent": "Try a different search term or browse by category",
+    "cantFind": "Can't find what you're looking for?",
+    "contactSupport": "Contact Support",
+    "backToHome": "Back to Home"
+  },
+  "authPage": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signingIn": "Signing in...",
+    "signingUp": "Signing up...",
+    "orContinueWith": "Or continue with",
+    "continueWithGoogle": "Continue with Google",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "welcomeBack": "Welcome Back",
+    "createAccount": "Create Account",
+    "secureLogin": "Secure Login",
+    "secureRegistration": "Secure Registration",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter your password",
+    "enterFullName": "Enter your full name"
+  },
+  "profilePage": {
+    "title": "Profile",
+    "personalInfo": "Personal Information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "gamerTag": "Gamer Tag",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "logout": "Logout",
+    "editProfile": "Edit Profile",
+    "cancel": "Cancel",
+    "notificationSettings": "Notification Settings"
+  },
+  "banners": {
+    "8ball": "Play 8 ball at Midasbuy!",
+    "freefire": "Free Fire diamonds at best prices - Instant delivery guaranteed!",
+    "pubgRecharge": "PUBG Mobile Total Recharge rewards - Get 60 UC bonus!",
+    "deltaBlue": "Delta Force Blue Camo Collection - Premium weapon skins!",
+    "deltaGold": "Delta Force Gold Edition - Exclusive coins & rewards!",
+    "ageOfEmpires": "Age of Empires Monthly First Top Up - Special offers!",
+    "deltaFire": "Delta Force Fire Edition - Limited time soldier pack!",
+    "deltaPink": "Delta Force Pink Collection - Unique weapon skin!",
+    "honorOfKings": "Honor of Kings - Invite friends & get 4000 tokens!",
+    "apexCoin": "Apex Coin Bonanza - First buy, 2x value!",
+    "pubgUcDrops": "PUBG Mobile Daily UC Drops - 3x Squad help, 3000 UC max!",
+    "pubgFree": "PUBG Mobile Free Rewards - Get free UC, outfit & gun skin!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "ENTER PLAYER ID",
+    "signInEnterPlayerId": "SIGN IN & ENTER PLAYER ID",
+    "player": "Player",
+    "signInMidasbuy": "Sign In Midasbuy Account",
+    "enterRedeemCode": "ENTER REDEEM CODE",
+    "pleaseEnterRedeemCode": "Please enter a redeem code",
+    "submitting": "Submitting...",
+    "ok": "OK",
+    "aboutMidasbuy": "ABOUT MIDASBUY",
+    "paySafeLine1": "PAY SAFE, FAST",
+    "paySafeLine2": "AND FUN WITH",
+    "paySafeLine3": "MIDASBUY.",
+    "vipExtraUcFull": "You got extra UC +3~7%",
+    "vipExtraUcShort": "+3~7% UC",
+    "completeRecharge": "Please complete your recharge!",
+    "extraBonus": "Extra bonus!"
+  },
+  "shopTab": {
+    "popularGames": "POPULAR GAMES",
+    "gameSelected": "{{name}} Selected",
+    "notAvailableYet": "This product is not available yet. Coming soon!"
+  },
+  "eventsTab": {
+    "title": "PUBG Mobile Events",
+    "liveEvents": "Live Events",
+    "upcomingEvents": "Upcoming Events",
+    "ucBonusEvent": "UC Bonus Event",
+    "ucBonusDesc": "Get extra UC on all purchases",
+    "endsIn": "Ends in",
+    "threeDays": "3 days",
+    "royalPassSeason": "Royal Pass Season",
+    "royalPassDesc": "New season starting soon",
+    "startsIn": "Starts in",
+    "fiveDays": "5 days",
+    "limitedTimeOffer": "Limited Time Offer",
+    "limitedTimeDesc": "Special discounts on selected items",
+    "availableFor": "Available for",
+    "twentyFourHours": "24 hours"
+  },
+  "countryFaq": {
+    "header": "မေးလေ့ရှိသော မေးခွန်းများ - PUBG UC {{country}}",
+    "q1": "{{country}} တွင် PUBG UC ဘယ်လိုဝယ်မလဲ?",
+    "a1": "Midasbuy တရားဝင်စတိုးသို့ သွားပါ၊ UC package ရွေးပါ၊ PUBG Player ID ရိုက်ထည့်ပါ၊ ငွေပေးချေနည်း ရွေးပါ ({{paymentMethods}}) နှင့် ငွေပေးချေမှုကို ပြီးစီးပါ။ UC ကို 2-5 မိနစ်အတွင်း ပေးပို့ပါမည်။",
+    "q2": "{{country}} တွင် PUBG UC အသက်သာဆုံးစျေးနှုန်းက ဘယ်လောက်လဲ?",
+    "a2": "Midasbuy သည် 60 UC အတွက် {{currencySymbol}}0.99 မှ စတင်သော အသက်သာဆုံး PUBG UC ကို ပေးသည်။ 60% အထိ လျှော့စျေး + အပို 30% VIP ဘောနပ်စ် ရယူပါ။",
+    "q3": "Midasbuy သည် {{country}} ကစားသူများအတွက် ဘေးကင်းပါသလား?",
+    "a3": "ဟုတ်ကဲ့၊ Midasbuy သည် 100% ဘေးကင်းပြီး {{country}} ရှိ 10M+ ကစားသူများ ယုံကြည်ပါသည်။",
+    "q4": "{{country}} တွင် မည်သည့် ငွေပေးချေနည်းများ ရနိုင်ပါသနည်း?",
+    "a4": "{{country}} တွင် {{paymentMethods}} ကို လက်ခံပါသည်။ ငွေပေးချေမှုအားလုံး လုံခြုံပါသည်။",
+    "q5": "{{country}} တွင် PUBG UC ပေးပို့ရန် ဘယ်လောက်ကြာမလဲ?",
+    "a5": "UC ပေးပို့ချိန်သည် ချက်ချင်းဖြစ်ပြီး အောင်မြင်သော ငွေပေးချေမှုပြီးနောက် 2-5 မိနစ်သာ ကြာပါသည်။",
+    "q6": "{{country}} တွင် {{currency}} ဖြင့် Royal Pass ဝယ်နိုင်ပါသလား?",
+    "a6": "ဟုတ်ကဲ့! {{country}} တွင် {{currency}} ငွေပေးချေနည်းများဖြင့် UC အလုံအလောက် ဝယ်ပါ။ ထို့နောက် PUBG Mobile ဂိမ်းမှ တိုက်ရိုက် Royal Pass ဝယ်ပါ။",
+    "whyBuyTitle": "{{country}} တွင် Midasbuy မှ PUBG UC ဘာကြောင့်ဝယ်ရမလဲ?",
+    "whyBuyDesc": "Midasbuy သည် {{country}} ရှိ အယုံကြည်ရဆုံး PUBG Mobile UC top-up platform ဖြစ်သည်။ 60% အထိ လျှော့စျေးနှင့် 2-5 မိနစ်အတွင်း ချက်ချင်းပေးပို့ခြင်း။"
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  }
+}

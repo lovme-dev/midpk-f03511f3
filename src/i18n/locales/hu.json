@@ -1,0 +1,650 @@
+{
+  "installApp": "Alkalmazás telepítése",
+  "language": "Nyelv",
+  "followUs": "Kövessen minket",
+  "home": "Kezdőlap",
+  "purchase": "Vásárlás",
+  "dashboard": "Irányítópult",
+  "buyUCPackages": "UC csomagok vásárlása",
+  "selectLanguage": "Nyelv kiválasztása",
+  "support": "Támogatás",
+  "helpCenter": "Súgó központ",
+  "contactUs": "Kapcsolat",
+  "faqs": "Gyakori kérdések",
+  "paymentIssues": "Fizetési problémák",
+  "security": "Biztonság",
+  "legal": "Jogi információk",
+  "termsOfService": "Szolgáltatási feltételek",
+  "privacyPolicy": "Adatvédelmi irányelvek",
+  "cookiePolicy": "Cookie szabályzat",
+  "refundPolicy": "Visszatérítési szabályzat",
+  "copyrightNotice": "Szerzői jogi közlemény",
+  "aboutUs": "Rólunk",
+  "aboutMidasbuy": "A Midasbuy-ról",
+  "blogs": "Blogok",
+  "careers": "Karrier",
+  "press": "Sajtó",
+  "partners": "Partnerek",
+  "popularGames": "Népszerű játékok",
+  "allGames": "Összes játék",
+  "latestNews": "Legfrissebb hírek",
+  "viewAll": "Összes megtekintése",
+  "miniGamesLabel": "Mini játékok",
+  "featured": "Kiemelt",
+  "goButton": "Ugrás",
+  "games": "Játékok",
+  "all": "Összes",
+  "endsIn": "Véget ér",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR"
+  },
+  "buyNow": "Vásárlás most",
+  "addToCart": "Kosárba",
+  "selectPackage": "Csomag kiválasztása",
+  "enterPlayerId": "Adja meg a játékos ID-t",
+  "playerId": "Játékos ID",
+  "username": "Felhasználónév",
+  "email": "E-mail",
+  "password": "Jelszó",
+  "login": "Bejelentkezés",
+  "logout": "Kijelentkezés",
+  "signUp": "Regisztráció",
+  "forgotPassword": "Elfelejtett jelszó?",
+  "rememberMe": "Emlékezzen rám",
+  "noAccount": "Nincs fiókja?",
+  "haveAccount": "Már van fiókja?",
+  "orderHistory": "Rendelési előzmények",
+  "orderStatus": "Rendelés állapota",
+  "pending": "Függőben",
+  "completed": "Befejezve",
+  "failed": "Sikertelen",
+  "processing": "Feldolgozás alatt",
+  "payment": "Fizetés",
+  "paymentMethod": "Fizetési mód",
+  "paymentMethods": "Fizetési módok",
+  "totalAmount": "Teljes összeg",
+  "discount": "Kedvezmény",
+  "couponCode": "Kuponkód",
+  "applyCoupon": "Kupon alkalmazása",
+  "checkout": {
+    "enterPlayerIdNow": "Adja meg a játékos ID-t most",
+    "playerId": "Játékos ID",
+    "enterPlayerId": "Adja meg a játékos ID-t",
+    "enterUsername": "Adja meg a felhasználónevet",
+    "enterPlayerIdToPurchase": "Adja meg a játékos ID-t a vásárláshoz",
+    "selectPlayerIdToRecharge": "Kérjük, válasszon vagy adjon meg játékos ID-t a feltöltéshez",
+    "couldntFindPlayerId": "Nem találta a játékos ID-t?",
+    "coupon": "Kupon",
+    "noAvailableCoupon": "Nincs elérhető kupon",
+    "selectPaymentChannels": "Válasszon fizetési módot",
+    "creditDebitCard": "Hitel / Bankkártya / Előre fizetett kártya",
+    "vipExtraPoints": "VIP extra pontok",
+    "payNow": "Fizessen most",
+    "total": "Összesen",
+    "purchaseItem": "Vásárlási tétel",
+    "extraForYou": "Extra az Ön számára",
+    "playerIdRequired": "Játékos ID szükséges",
+    "pleaseEnterPlayerId": "Kérjük, először adja meg a játékos ID-t",
+    "invalidPlayerId": "Érvénytelen játékos ID",
+    "enterValidPlayerId": "Kérjük, adjon meg érvényes játékos ID-t",
+    "invalidUsername": "Érvénytelen felhasználónév",
+    "enterValidUsername": "Kérjük, adjon meg érvényes felhasználónevet",
+    "paymentError": "Fizetési hiba",
+    "paymentFailed": "A fizetés indítása sikertelen. Próbálja újra.",
+    "paymentSuccessful": "Fizetés sikeres!",
+    "cryptoConfirmed": "A kripto fizetése megerősítve.",
+    "recentPlayerIds": "Legutóbbi játékos ID-k",
+    "enterNewPlayerId": "Új játékos ID megadása",
+    "saveAndContinue": "Mentés és folytatás",
+    "signInFirst": "Először jelentkezzen be",
+    "securityPayment": "Biztonságos fizetés",
+    "orderSummary": "Rendelés összefoglalása"
+  },
+  "proceedToPayment": "Tovább a fizetéshez",
+  "back": "Vissza",
+  "backToHome": "Vissza a kezdőlapra",
+  "next": "Következő",
+  "submit": "Küldés",
+  "cancel": "Mégse",
+  "confirm": "Megerősítés",
+  "close": "Bezárás",
+  "search": "Keresés",
+  "loading": "Betöltés...",
+  "error": "Hiba",
+  "success": "Sikeres",
+  "warning": "Figyelmeztetés",
+  "info": "Információ",
+  "welcome": "Üdvözöljük",
+  "welcomeBack": "Üdvözöljük újra",
+  "getStarted": "Kezdés",
+  "learnMore": "Tudjon meg többet",
+  "seeMore": "Több megtekintése",
+  "readMore": "Olvass tovább",
+  "showLess": "Kevesebb mutatása",
+  "notifications": "Értesítések",
+  "settings": "Beállítások",
+  "profile": "Profil",
+  "myOrders": "Rendeléseim",
+  "myAccount": "Fiókom",
+  "editProfile": "Profil szerkesztése",
+  "changePassword": "Jelszó megváltoztatása",
+  "saveChanges": "Változások mentése",
+  "deleteAccount": "Fiók törlése",
+  "verifiedReviews": "Ellenőrzött vélemények",
+  "customerReviews": {
+    "title": "Vásárlói vélemények",
+    "verifiedReviews": "Ellenőrzött vélemény",
+    "writeReview": "Vélemény írása",
+    "loginToReview": "Jelentkezzen be vélemény írásához",
+    "back": "Vissza",
+    "ratingDistribution": "Értékelés eloszlása",
+    "last12Months": "Elmúlt 12 hónap",
+    "filterByRating": "Szűrés értékelés szerint",
+    "allRatings": "Összes",
+    "loadMore": "Több vélemény betöltése",
+    "verifiedPurchase": "Ellenőrzött vásárlás",
+    "submitReview": "Vélemény beküldése",
+    "yourName": "Az Ön neve",
+    "rating": "Értékelés",
+    "review": "Vélemény",
+    "shareExperience": "Ossza meg tapasztalatát...",
+    "helpful": "Hasznos",
+    "reply": "Válasz",
+    "delete": "Törlés"
+  },
+  "writeReview": "Vélemény írása",
+  "rating": "Értékelés",
+  "instantDelivery": "Azonnali szállítás",
+  "securePayment": "Biztonságos fizetés",
+  "bestPrice": "Legjobb ár",
+  "officialPartner": "Hivatalos partner",
+  "trustedBy": "Milliók bíznak benne",
+  "contactSupport": "Kapcsolat a támogatással",
+  "paymentIssuesHelp": "Segítség fizetési problémákhoz",
+  "needHelp": "Segítségre van szüksége egy vásárlással?",
+  "lastUpdated": "Utoljára frissítve",
+  "effectiveDate": "Hatálybalépés dátuma",
+  "contactEmail": "Kapcsolattartó e-mail",
+  "selectYourRegion": "Válassza ki a régiót",
+  "searchCountry": "Ország keresése...",
+  "noCountriesFound": "Nem található ország",
+  "africa": "Afrika",
+  "asia": "Ázsia",
+  "europe": "Európa",
+  "northAmerica": "Észak-Amerika",
+  "southAmerica": "Dél-Amerika",
+  "oceania": "Óceánia",
+  "middleEast": "Közel-Kelet",
+  "recommended": "Ajánlott",
+  "searchPlaceholder": "Ország vagy régió keresése...",
+  "selectRegion": "Régió kiválasztása",
+  "allRegions": "Összes régió",
+  "popular": "Népszerű",
+  "searchGames": "Játékok keresése...",
+  "noGamesFound": "Nem található játék",
+  "featuredGames": "Kiemelt játékok",
+  "newReleases": "Új megjelenések",
+  "topRated": "Legjobban értékelt",
+  "comingSoon": "Hamarosan",
+  "seeLess": "Kevesebb megtekintése",
+  "viewDetails": "Részletek megtekintése",
+  "outOfStock": "Elfogyott",
+  "inStock": "Készleten",
+  "quantity": "Mennyiség",
+  "subtotal": "Részösszeg",
+  "tax": "Adó",
+  "total": "Összesen",
+  "continueShopping": "Vásárlás folytatása",
+  "proceedToCheckout": "Tovább a pénztárhoz",
+  "emptyCart": "A kosara üres",
+  "removeItem": "Elem eltávolítása",
+  "updateQuantity": "Mennyiség frissítése",
+  "apply": "Alkalmazás",
+  "promoCode": "Promóciós kód",
+  "invalidPromoCode": "Érvénytelen promóciós kód",
+  "promoApplied": "Promóciós kód alkalmazva",
+  "orderConfirmation": "Rendelés megerősítése",
+  "orderNumber": "Rendelés száma",
+  "orderDate": "Rendelés dátuma",
+  "deliveryAddress": "Szállítási cím",
+  "billingAddress": "Számlázási cím",
+  "orderItems": "Rendelési tételek",
+  "orderTotal": "Rendelés összesen",
+  "continueBrowsing": "Böngészés folytatása",
+  "accountSettings": "Fiókbeállítások",
+  "personalInfo": "Személyes adatok",
+  "firstName": "Keresztnév",
+  "lastName": "Vezetéknév",
+  "phoneNumber": "Telefonszám",
+  "dateOfBirth": "Születési dátum",
+  "gender": "Nem",
+  "male": "Férfi",
+  "female": "Nő",
+  "other": "Egyéb",
+  "preferNotToSay": "Inkább nem mondom meg",
+  "currentPassword": "Jelenlegi jelszó",
+  "newPassword": "Új jelszó",
+  "confirmNewPassword": "Új jelszó megerősítése",
+  "updatePassword": "Jelszó frissítése",
+  "deleteAccountWarning": "Ez a művelet nem vonható vissza. Minden adata véglegesen törlődik.",
+  "deleteAccountConfirm": "Igen, törölje a fiókomat",
+  "subscribe": "Feliratkozás",
+  "official": "Hivatalos",
+  "local": "Helyi",
+  "footer": {
+    "description": "A hivatalos platform játékbeli valuta vásárlásához a PUBG Mobile és más népszerű játékokhoz.",
+    "copyright": "© 2026 MidasBuy. Minden jog fenntartva. Az itt említett összes védjegy a tulajdonosaik tulajdona.",
+    "mobileDescription": "A MidasBuy a Tencent hivatalos feltöltési boltja. Fizessen biztonságosan, gyorsan és élvezetesen a MidasBuy-on.",
+    "contactUsTitle": "Kapcsolat",
+    "contactUsDesc": "Ha segítségre van szüksége, kérjük, lépjen kapcsolatba velünk az \"Ügyfélszolgálat\" gombra kattintva.",
+    "customerService": "Ügyfélszolgálat",
+    "cookiesPreference": "Cookie beállítások",
+    "verifiedReviews": "80 837 ellenőrzött vélemény",
+    "company": "Cég",
+    "aboutUs": "Rólunk",
+    "careers": "Karrier",
+    "press": "Sajtó",
+    "blog": "Blog",
+    "support": "Támogatás",
+    "helpCenter": "Súgó központ",
+    "contactUs": "Kapcsolat",
+    "faqs": "GYIK",
+    "paymentIssues": "Fizetési problémák",
+    "legal": "Jogi információk",
+    "termsOfService": "Szolgáltatási feltételek",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "cookiePolicy": "Cookie szabályzat",
+    "refundPolicy": "Visszatérítési szabályzat",
+    "followUs": "Kövessen minket",
+    "paymentMethods": "Fizetési módok",
+    "securePayment": "Biztonságos fizetés"
+  },
+  "whyTopUp": {
+    "title": "Miért töltsön fel játékokat a Midasbuy-on?",
+    "section1Title": "1. Midasbuy: A PUBG MOBILE hivatalos feltöltési boltja",
+    "section1Content": "A PUBG MOBILE hivatalos fizetési partnereként a Midasbuy biztonságos és hatékony UC feltöltési szolgáltatásokat nyújt a Hong Kong-i, japán, délkelet-ázsiai, európai és amerikai játékosoknak.",
+    "section2Title": "2. Szerezzen bónusz UC-t a Midasbuy-tól:",
+    "section2Content": "Aktiválja a beváltási kódokat vagy ajándékkártyákat a hivatalos beváltási portálon, hogy 3%-7% azonnali bónusz UC-t kapjon.",
+    "section3Title": "3. PUBG MOBILE | A legjobb mobil Battle Royale játék",
+    "section3Content": "Világszerte népszerű ingyenes taktikai játékként a PUBG MOBILE változatos csatatérrel rendelkezik, mint az Erangel, Miramar és Rondo.",
+    "section4Title": "4. Kérdések és válaszok",
+    "q1": "K: Hogyan vásároljak a PUBG MOBILE-hoz?",
+    "q2": "K: Hol kapom meg a UC-t vásárlás után?",
+    "q3": "K: Hogyan válthatok be kódokat tárgyakért a Midasbuy-on?",
+    "q4": "K: Miért nem kapom meg a termékeimet vásárlás után?"
+  },
+  "officialRechargeStore": "Mi vagyunk a Tencent hivatalos feltöltési boltja",
+  "discoverOtherRegionGames": "Fedezze fel más régiók játékait",
+  "midasbuyVideo": "Midasbuy videó",
+  "header": {
+    "midasbuyVideo": "Midasbuy videó",
+    "noNotifications": "Még nincsenek értesítések",
+    "notificationsHint": "A frissítések itt jelennek meg",
+    "signInToEnjoy": "Jelentkezzen be az élvezethez",
+    "exclusiveService": "exkluzív szolgáltatással",
+    "signInSignUp": "Bejelentkezés / Regisztráció",
+    "coupon": "Kupon",
+    "orderCenter": "Rendelési központ",
+    "accountSecurity": "Fiók és biztonság",
+    "midasbuyEvents": "Midasbuy események",
+    "liveVideo": "Élő és videó",
+    "adminPanel": "Admin panel"
+  },
+  "miniGames": {
+    "title": "Mini játékok",
+    "description": "Kérjük, vegye figyelembe, hogy a MidasBuy weboldalon elérhető mini játékokat harmadik fél szolgáltatók üzemeltetik.",
+    "moreDetails": "További részletek",
+    "tag": "Mini játékok",
+    "noDownload": "Nincs szükség alkalmazás letöltésére! Játsszon azonnal a MidasBuy-on!",
+    "noDownloadDesktop": "Nincs szükség alkalmazás letöltésére! Játsszon azonnal a",
+    "playNow": "Játsszon most",
+    "shop": "Bolt"
+  },
+  "events": {
+    "title": "Események",
+    "noEvents": "Jelenleg nincsenek elérhető események",
+    "comingSoon": "Hamarosan",
+    "activeEvents": "Aktív események",
+    "pastEvents": "Korábbi események",
+    "viewDetails": "Részletek megtekintése",
+    "participate": "Vegyen részt most",
+    "endsIn": "Véget ér",
+    "startsIn": "Kezdődik"
+  },
+  "shop": {
+    "title": "Bolt",
+    "categories": "Kategóriák",
+    "allItems": "Összes tétel",
+    "featured": "Kiemelt",
+    "newArrivals": "Új érkezések",
+    "bestSellers": "Legkelendőbb",
+    "onSale": "Akciós",
+    "outOfStock": "Elfogyott",
+    "inStock": "Készleten",
+    "addedToCart": "Kosárba helyezve",
+    "viewCart": "Kosár megtekintése",
+    "continueShopping": "Vásárlás folytatása"
+  },
+  "redeem": {
+    "title": "Kód beváltása",
+    "enterCode": "Adja meg a beváltási kódot",
+    "enterPlayerID": "Adja meg a játékos ID-t",
+    "enterUsername": "Adja meg a felhasználónevet (opcionális)",
+    "submitCode": "Kód beküldése",
+    "placeholder": "Adja meg a beváltási kódot itt",
+    "playerIdPlaceholder": "Adja meg a játékos ID-ját",
+    "usernamePlaceholder": "Adja meg a felhasználónevét",
+    "success": "A kód sikeresen beváltva!",
+    "error": "Érvénytelen vagy már használt kód",
+    "instructions": "Adja meg a beváltási kódot a jutalmak megszerzéséhez",
+    "processing": "Kód feldolgozása..."
+  },
+  "tabs": {
+    "purchase": "Vásárlás",
+    "redeem": "Beváltás",
+    "shop": "Bolt",
+    "events": "Események"
+  },
+  "news": {
+    "nikkeBonus": "Szerezzen 100% extra bónuszt a NIKKE első feltöltéséből!",
+    "registerFreeSkin": "Regisztráljon és szerezzen ingyenes skint",
+    "madDogGames": "Mad Dog Games szerencsés kincskeresés",
+    "hokPointsLottery": "Honor of Kings pontok sorsolása",
+    "apexCoinBonanza": "Apex Coin ajánlatok: Első vásárlás, dupla érték!",
+    "pubgVipBenefits": "PUBG MOBILE VIP előnyök",
+    "purchaseBonus": "Vásárlási bónusz",
+    "extraBonus45": "Extra bónusz csak a MIDASBUY-on Élvezzen akár 45% bónuszt most",
+    "aoeDaily": "Napi Age of Empires csomagok"
+  },
+  "promoBanner": {
+    "slide1": "Adja meg a játékos ID-t a jutalmak megtekintéséhez és exkluzív bónuszok feloldásához. Kapjon különleges kedvezményeket UC vásárlásnál!",
+    "slide2": "Töltse fel és nyerjen UC-t | A barátok ingyenes kuponokat kapnak —— maximum 3000UC!",
+    "slide3": "100%-os nyerési arány! Dupla pontok a tagsági napon, csak ma! Jöjjön és nyerje meg a fődíjat!"
+  },
+  "videosPage": {
+    "title": "Midasbuy videó és élő",
+    "upcomingLiveStream": "Közelgő élő adás",
+    "videoAndLiveRecord": "Videó és élő felvétel",
+    "video": "Videó",
+    "liveRecord": "Élő felvétel",
+    "chooseGame": "Válasszon játékot",
+    "noLiveRecords": "Nincsenek elérhető élő felvételek",
+    "loadMore": "Több betöltése",
+    "videoComingSoon": "Videó hamarosan",
+    "videoNotAvailable": "Ez a videó még nem érhető el. Kérjük, próbálja később!",
+    "seeAll": "Összes megtekintése",
+    "more": "Több"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Adatvédelmi irányelvek",
+      "lastUpdated": "Utolsó frissítés: 2025. január",
+      "intro": "A MidasBuy-nál elkötelezettek vagyunk az Ön adatainak védelme és személyes adatainak biztonsága iránt.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Általunk gyűjtött információk",
+          "content": "Olyan információkat gyűjtünk, amelyeket közvetlenül Ön ad meg nekünk, például fiók létrehozásakor, vásárláskor vagy a támogatási csapatunkkal való kapcsolatfelvételkor."
+        },
+        "howWeUse": {
+          "title": "Hogyan használjuk az Ön adatait",
+          "content": "Az Ön adatait tranzakciók feldolgozására, vásárlások kézbesítésére, ügyfélszolgálat nyújtására és szolgáltatásaink javítására használjuk."
+        },
+        "informationSharing": {
+          "title": "Információmegosztás",
+          "content": "Nem értékesítjük személyes adatait. Megoszthatjuk adatait megbízható harmadik felekkel, akik segítenek platformunk működtetésében."
+        },
+        "dataSecurity": {
+          "title": "Adatbiztonság",
+          "content": "Iparági szabványos biztonsági intézkedéseket alkalmazunk az Ön adatainak jogosulatlan hozzáféréstől való védelmére."
+        },
+        "yourRights": {
+          "title": "Az Ön adatvédelmi jogai",
+          "content": "Joga van személyes adataihoz hozzáférni, azokat kijavítani vagy törölni."
+        },
+        "internationalTransfers": {
+          "title": "Nemzetközi adattovábbítás",
+          "content": "Adatai átkerülhetnek és tárolódhatnak az Ön lakóhelyétől eltérő országokban."
+        },
+        "dataRetention": {
+          "title": "Adatmegőrzés",
+          "content": "Személyes adatait addig őrizzük meg, ameddig az a gyűjtés céljához szükséges."
+        },
+        "childrensPrivacy": {
+          "title": "Gyermekek adatvédelme",
+          "content": "Szolgáltatásaink nem 13 év alatti gyermekeknek szólnak."
+        },
+        "updates": {
+          "title": "Az irányelvek frissítései",
+          "content": "Időről időre frissíthetjük ezt az Adatvédelmi irányelvet."
+        },
+        "contactUs": {
+          "title": "Kapcsolatfelvétel az adatvédelemmel kapcsolatban",
+          "content": "Ha kérdése van az Adatvédelmi irányelvvel kapcsolatban, kérjük, lépjen kapcsolatba velünk."
+        }
+      }
+    },
+    "termsOfService": {
+      "title": "Szolgáltatási feltételek",
+      "subtitle": "MidasBuy feltételek",
+      "lastUpdated": "Utolsó frissítés: 2025. január",
+      "intro": "A MidasBuy használatával Ön elfogadja ezeket a feltételeket. Visszatérítés csak akkor, ha 24 órán belül nincs kézbesítés.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Szolgáltatás áttekintése",
+          "content": "A MidasBuy UC csomagokat értékesít a PUBG Mobile-hoz és hasonló játékon belüli krediteket biztonságos elektronikus tranzakciókon keresztül."
+        },
+        "userResponsibilities": {
+          "title": "2. Felhasználói felelősségek",
+          "items": [
+            "Helyes PUBG ID és fizetési adatok megadása.",
+            "Győződjön meg arról, hogy jogosult vásárolni a kiválasztott fizetési móddal.",
+            "Kerülje szolgáltatásaink csalárd vagy visszaélésszerű használatát."
+          ]
+        },
+        "delivery": {
+          "title": "3. Kézbesítés",
+          "items": [
+            "Az UC vásárlások általában azonnal kézbesülnek, de ritka esetekben akár 30 percig is tarthatnak.",
+            "Ha a kézbesítés a megadott időn túl késik, felveheti a kapcsolatot támogatói csapatunkkal."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Visszatérítési szabályzat",
+          "items": [
+            "A visszatérítést a vásárlástól számított 24 órán belül kell kérni, ha az UC nem került kézbesítésre.",
+            "24 óra után nem kerül sor visszatérítésre.",
+            "Minden visszatérítésre a Visszatérítési szabályzatunk vonatkozik."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Feltételek módosítása",
+          "content": "Ezeket a feltételeket bármikor frissíthetjük. Weboldalunk további használata a frissített feltételek elfogadását jelenti."
+        }
+      },
+      "acknowledgment": "A MidasBuy használatával Ön elismeri, hogy elolvasta, megértette és elfogadja, hogy kötelező érvényűek ezek a Szolgáltatási feltételek."
+    },
+    "refundPolicy": {
+      "title": "Visszatérítési szabályzat",
+      "subtitle": "MidasBuy visszatérítési feltételek",
+      "lastUpdated": "Utolsó frissítés: 2025. január",
+      "intro": "Nincs visszatérítés 24 óra után; visszatérítés csak akkor, ha az UC nem kerül kézbesítésre a megígért időn belül.",
+      "description": "A MidasBuy-nál törekszünk a gyors és megbízható UC kézbesítésre.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Visszatérítési jogosultság",
+          "items": [
+            "Visszatérítés csak akkor lehetséges, ha az UC nem került kézbesítésre a megígért időn belül.",
+            "A visszatérítési kérelmeket a vásárlástól számított 24 órán belül kell benyújtani.",
+            "Ha az UC már kézbesítésre került a fiókjába, a visszatérítés nem lehetséges."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Nem visszatéríthető esetek",
+          "items": [
+            "Az UC sikeresen kézbesítve a helyes fiókba.",
+            "Rossz PUBG ID vagy adatok az ügyfél által.",
+            "Visszatérítési kérelem a vásárlástól számított 24 óra után.",
+            "Döntés megváltoztatása fizetés után."
+          ]
+        },
+        "process": {
+          "title": "3. Visszatérítési folyamat",
+          "content": "Visszatérítés kéréséhez küldjön nekünk e-mailt a következőkkel:",
+          "items": [
+            "A rendelés száma",
+            "Fizetési igazolás",
+            "A visszatérítési kérelem oka"
+          ],
+          "timeline": "Jóváhagyás után a visszatérítések 7-14 munkanapon belül kerülnek az eredeti fizetési módra."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Súgó központ",
+      "subtitle": "Kapjon támogatást minden MidasBuy igényéhez.",
+      "contactByPhone": "Telefonos kapcsolat",
+      "phoneDescription": "Támogatói csapatunk a hét minden napján 24 órában elérhető.",
+      "customerSupport": "Ügyfélszolgálat",
+      "clickToChat": "Kattintson a WhatsApp chateléshez",
+      "chatWithAgent": "Csevegés ügynökkel",
+      "emailSupport": "E-mail támogatás",
+      "emailDescription": "Küldjön nekünk e-mailt, és 24 órán belül válaszolunk.",
+      "supportEmail": "Támogatási e-mail",
+      "responseTime": "Válasz 24 órán belül",
+      "liveChat": "Élő chat támogatás",
+      "liveChatDescription": "Azonnal csatlakozzon egy támogatási ügynökhöz.",
+      "startLiveChat": "Élő chat indítása",
+      "available247": "A hét minden napján 24 órában elérhető",
+      "stillHaveQuestions": "Még mindig kérdései vannak? Nézze meg a GYIK-ot a gyors válaszokért."
+    },
+    "copyrightNotice": {
+      "title": "Szerzői jogi közlemény",
+      "subtitle": "Információ a szellemi tulajdonról és védjegyekről a MidasBuy-on.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Szerzői jogi védelem",
+          "content1": "A MidasBuy weboldalon és platformon található összes tartalom a nemzetközi szerzői jogi törvények által védett.",
+          "content2": "Az ezen a weboldalon található összes tartalom összeállítása a MidasBuy kizárólagos tulajdona."
+        },
+        "trademarks": {
+          "title": "2. Védjegyek",
+          "content1": "A MidasBuy® és a MidasBuy logó a MidasBuy bejegyzett védjegyei.",
+          "notice": "A PUBG MOBILE, PUBG és az összes kapcsolódó logó a PUBG vagy licencadói kizárólagos tulajdona.",
+          "content2": "Semmi ezen a weboldalon nem értelmezhető védjegy használatára vonatkozó engedélyként."
+        },
+        "useOfContent": {
+          "title": "3. Tartalom használata",
+          "intro": "A tartalmat csak személyes, nem kereskedelmi célokra érheti el, töltheti le és használhatja.",
+          "items": [
+            "Az ezen a weboldalon található anyagok módosítása",
+            "Az anyagok kereskedelmi célokra történő felhasználása",
+            "A szoftver visszafejtésének vagy visszabontásának kísérlete",
+            "Szerzői jogi vagy egyéb tulajdonosi megjegyzések eltávolítása",
+            "Az anyagok más személynek történő átadása"
+          ],
+          "termination": "Ez a licenc automatikusan megszűnik ezen korlátozások megsértése esetén."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Cookie szabályzat",
+      "lastUpdated": "Utolsó frissítés: 2025. január",
+      "intro": "Ez a Cookie szabályzat elmagyarázza, hogyan használja a MidasBuy a sütiket és hasonló technológiákat.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Mik azok a sütik?",
+          "content": "A sütik kis szöveges fájlok, amelyek az Ön eszközére kerülnek, amikor meglátogatja weboldalunkat."
+        },
+        "essentialCookies": {
+          "title": "Alapvető sütik",
+          "content": "Ezek a sütik szükségesek a weboldal megfelelő működéséhez."
+        },
+        "analyticsCookies": {
+          "title": "Analitikai sütik",
+          "content": "Ezek a sütik segítenek megérteni, hogyan lépnek kapcsolatba a látogatók weboldalunkkal."
+        },
+        "advertisingCookies": {
+          "title": "Hirdetési sütik",
+          "content": "Ezek a sütik relevánsabb hirdetések megjelenítésére szolgálnak."
+        },
+        "functionalityCookies": {
+          "title": "Funkcionális sütik",
+          "content": "Ezek a sütik lehetővé teszik a fokozott funkcionalitást és személyre szabást."
+        },
+        "thirdPartyCookies": {
+          "title": "Harmadik féltől származó sütik",
+          "content": "Egyes sütiket harmadik fél szolgáltatásai helyeznek el."
+        },
+        "managingCookies": {
+          "title": "Cookie beállítások kezelése",
+          "content": "Több lehetősége van a sütik kezelésére."
+        },
+        "cookieRetention": {
+          "title": "Cookie megőrzési időszak",
+          "content": "A sütik érvényességi ideje változó."
+        }
+      },
+      "questionsTitle": "Kérdések a Cookie szabályzattal kapcsolatban?",
+      "questionsContent": "Ha kérdése van a sütik használatával kapcsolatban, kérjük, lépjen kapcsolatba velünk."
+    }
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  },
+  "redeemTab": {
+    "title": "Beváltási kód",
+    "enterPlayerId": "Adja meg a játékos ID-t",
+    "enterRedeemCode": "Adja meg a beváltási kódot",
+    "enterUsername": "Felhasználónév (opcionális)",
+    "submitCode": "Kód beküldése",
+    "processing": "Feldolgozás...",
+    "codeSubmitted": "Kód beküldve!",
+    "codeSubmittedDesc": "A kódját beküldték ellenőrzésre."
+  },
+  "shopTab": {
+    "title": "Bolt",
+    "popularGames": "Népszerű játékok",
+    "comingSoon": "Hamarosan",
+    "newArrivals": "Új érkezések"
+  },
+  "eventsTab": {
+    "title": "Események",
+    "upcomingEvents": "Közelgő események",
+    "activeEvents": "Aktív események",
+    "noEvents": "Jelenleg nincsenek események",
+    "comingSoon": "Hamarosan!",
+    "endsIn": "Véget ér",
+    "days": "nap"
+  },
+  "countryFaq": {
+    "header": "GYIK - PUBG UC {{country}}",
+    "q1": "Hogyan vásároljon PUBG UC-t a(z) {{country}} országban?",
+    "a1": "Látogasson el a Midasbuy hivatalos boltjába, válassza ki az UC csomagot, adja meg a PUBG Player ID-t, válasszon fizetési módot ({{paymentMethods}}) és fejezze be a fizetést. Az UC 2-5 percen belül kézbesítésre kerül.",
+    "q2": "Mi a legolcsóbb PUBG UC ár a(z) {{country}} országban?",
+    "a2": "A Midasbuy a legolcsóbb PUBG UC-t kínálja {{currencySymbol}}0,99-tól 60 UC-ért. Akár 60% kedvezmény + extra 30% VIP bónusz.",
+    "q3": "Biztonságos a Midasbuy a(z) {{country}} játékosok számára?",
+    "a3": "Igen, a Midasbuy 100%-ban biztonságos, és a(z) {{country}} 10M+ játékosa bízik benne.",
+    "q4": "Milyen fizetési módok érhetők el a(z) {{country}} országban?",
+    "a4": "A(z) {{country}} országban elfogadjuk: {{paymentMethods}}. Minden fizetés biztonságos és titkosított.",
+    "q5": "Mennyi ideig tart a PUBG UC kézbesítés a(z) {{country}} országban?",
+    "a5": "Az UC kézbesítés azonnali, és sikeres fizetés után csupán 2-5 percet vesz igénybe.",
+    "q6": "Vásárolhatok Royal Pass-t {{currency}} valutában a(z) {{country}} országban?",
+    "a6": "Igen! Vásároljon elegendő UC-t {{currency}} fizetési módokkal. Ezután vásárolja meg a Royal Pass-t közvetlenül a PUBG Mobile-ból.",
+    "whyBuyTitle": "Miért vásároljon PUBG UC-t a Midasbuy-tól a(z) {{country}} országban?",
+    "whyBuyDesc": "A Midasbuy a legmegbízhatóbb PUBG Mobile UC feltöltési platform a(z) {{country}} országban. Akár 60% kedvezmény és azonnali kézbesítés 2-5 perc alatt."
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  }
+}

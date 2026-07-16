@@ -1,0 +1,25 @@
+# Security Contact Information for Midasbuy Gaming Store
+
+Contact: mailto:MidasbuyHelpline@Gmail.com
+Contact: https://middasbuy.com/contact
+
+# Preferred Languages
+Preferred-Languages: en, hi, ur, ar
+
+# Canonical URL
+Canonical: https://www.middasbuy.com/.well-known/security.txt
+
+# Policy
+Policy: https://www.middasbuy.com/privacy-policy
+
+# Acknowledgments
+Acknowledgments: https://www.middasbuy.com/about
+
+# Company Information
+# Midasbuy is a legitimate gaming currency store
+# We are an authorized Tencent partner for PUBG Mobile
+# We are verified by Stripe for secure payments
+# We DO NOT deal with cryptocurrency, bitcoin, or blockchain
+# We only sell official in-game currency for mobile games
+
+Expires: 2026-12-31T23:59:59.000Z

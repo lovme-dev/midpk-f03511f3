@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- ============================================== -->
+  <!-- MIDASBUY SITEMAP INDEX - Master Sitemap -->
+  <!-- All country-specific sitemaps are separated -->
+  <!-- ============================================== -->
+
+  <!-- Country Home Pages Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_home.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- PUBG Mobile UC Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_pubg.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- Free Fire Diamonds Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_freefire.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- Roblox Robux Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_roblox.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- Valorant Points Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_valorant.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- PUBG Car Skins Sitemap (180+ countries) -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_countries_car.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+  <!-- Main Static Pages Sitemap -->
+  <sitemap>
+    <loc>https://www.middasbuy.com/sitemap_static.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+  </sitemap>
+
+</sitemapindex>

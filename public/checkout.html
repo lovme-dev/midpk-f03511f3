@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG UC Package - Checkout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .product-image {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 20px 0;
+        }
+
+        .features {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .buy-button {
+            padding: 16px 32px;
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(45deg, #218838, #1e7e34);
+        }
+
+        .secure-notice {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .secure-icon {
+            color: #28a745;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .price {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="product-image">
+            PUBG UC
+        </div>
+        
+        <h1>PUBG UC Package</h1>
+        <p style="color: #666; font-size: 18px;">Get 10,700 UC with 700 Bonus UC!</p>
+        
+        <div class="price">₨ 3,600</div>
+        
+        <div class="features">
+            <h3>Package Includes:</h3>
+            <div class="feature-item">10,000 Base UC</div>
+            <div class="feature-item">700 Bonus UC (Extra!)</div>
+            <div class="feature-item">Total: 10,700 UC</div>
+            <div class="feature-item">Instant Delivery</div>
+            <div class="feature-item">100% Safe & Secure</div>
+        </div>
+
+        <form method="POST" action="https://xphijmjxpgkwhtysmcxb.functions.supabase.co/gopayfast">
+            <input type="hidden" name="amount" value="3600">
+            <input type="hidden" name="order_id" value="uc10700">
+            <input type="hidden" name="product_name" value="PUBG UC 10,700 (with 700 Bonus)">
+            <button type="submit" class="buy-button">
+                🛒 Buy Now - ₨ 3,600
+            </button>
+        </form>
+
+        <div class="secure-notice">
+            <span class="secure-icon">🔒</span>
+            Secured by GoPayFast - Safe & Fast Payment
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive feedback
+        document.querySelector('.buy-button').addEventListener('click', function() {
+            this.innerHTML = '🔄 Processing...';
+            this.style.background = 'linear-gradient(45deg, #6c757d, #495057)';
+        });
+    </script>
+</body>
+</html>

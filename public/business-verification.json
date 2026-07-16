@@ -1,0 +1,115 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Midasbuy Gaming Store",
+  "image": "https://www.middasbuy.com/favicon.png",
+  "priceRange": "$1-$500",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Global",
+    "addressRegion": "Worldwide"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "0",
+    "longitude": "0"
+  },
+  "url": "https://www.middasbuy.com",
+  "telephone": "+1-800-MIDASBUY",
+  "email": "help@midasbuy.com.co",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "paymentAccepted": "Stripe, Credit Card, Debit Card, Bank Transfer",
+  "currenciesAccepted": "USD, PKR, EUR, GBP",
+  "areaServed": "Worldwide",
+  "availableLanguage": ["English", "Hindi", "Urdu", "Arabic"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mobile Gaming Currency",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "PUBG Mobile UC",
+          "description": "Official in-game currency for PUBG Mobile"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Free Fire Diamonds",
+          "description": "Official in-game currency for Free Fire"
+        }
+      }
+    ]
+  },
+  "additionalType": "OnlineStore",
+  "serviceType": "Digital Gaming Products",
+  "isVerified": true,
+  "verificationFactCheck": [
+    {
+      "@type": "Claim",
+      "name": "Stripe Verified Merchant",
+      "claimReviewed": "Midasbuy is verified by Stripe for secure payment processing",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Claim",
+      "name": "Tencent Official Partner",
+      "claimReviewed": "Authorized partner for PUBG Mobile and BGMI currency distribution",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Claim",
+      "name": "NOT a Cryptocurrency Platform",
+      "claimReviewed": "Midasbuy does not deal with cryptocurrency, bitcoin, ethereum, or any blockchain services. We only sell legitimate in-game currency for mobile games.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ],
+  "slogan": "World's Most Trusted Gaming Store - Official Tencent Partner",
+  "foundingDate": "2020",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "50"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "500000",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Gaming Community"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Fastest and most reliable service for PUBG UC. Instant delivery every time!"
+    }
+  ]
+}

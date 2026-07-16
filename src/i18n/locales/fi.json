@@ -1,0 +1,944 @@
+{
+  "installApp": "Asenna sovellus",
+  "language": "Kieli",
+  "followUs": "Seuraa meitä",
+  "home": "Koti",
+  "purchase": "Osta",
+  "dashboard": "Hallintapaneeli",
+  "buyUCPackages": "Osta UC-paketteja",
+  "selectLanguage": "Valitse kieli",
+  "support": "Tuki",
+  "helpCenter": "Ohjekeskus",
+  "contactUs": "Ota yhteyttä",
+  "faqs": "Usein kysytyt kysymykset",
+  "paymentIssues": "Maksuongelmat",
+  "security": "Turvallisuus",
+  "legal": "Oikeudellinen",
+  "termsOfService": "Käyttöehdot",
+  "privacyPolicy": "Tietosuojakäytäntö",
+  "cookiePolicy": "Evästekäytäntö",
+  "refundPolicy": "Palautuskäytäntö",
+  "copyrightNotice": "Tekijänoikeusilmoitus",
+  "aboutUs": "Tietoa meistä",
+  "aboutMidasbuy": "Tietoa Midasbuystä",
+  "blogs": "Blogit",
+  "careers": "Urat",
+  "press": "Lehdistö",
+  "partners": "Kumppanit",
+  "popularGames": "Suositut pelit",
+  "allGames": "Kaikki pelit",
+  "latestNews": "Viimeisimmät uutiset",
+  "viewAll": "Näytä kaikki",
+  "miniGamesLabel": "Minipelit",
+  "featured": "SUOSITELTU",
+  "goButton": "MENE",
+  "games": "Pelit",
+  "all": "Kaikki",
+  "endsIn": "Päättyy",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR: SILENT GODS"
+  },
+  "buyNow": "Osta nyt",
+  "addToCart": "Lisää koriin",
+  "selectPackage": "Valitse paketti",
+  "enterPlayerId": "Syötä pelaaja-ID",
+  "playerId": "Pelaaja-ID",
+  "username": "Käyttäjänimi",
+  "email": "Sähköposti",
+  "password": "Salasana",
+  "login": "Kirjaudu sisään",
+  "logout": "Kirjaudu ulos",
+  "signUp": "Rekisteröidy",
+  "forgotPassword": "Unohditko salasanan?",
+  "rememberMe": "Muista minut",
+  "noAccount": "Eikö sinulla ole tiliä?",
+  "haveAccount": "Onko sinulla jo tili?",
+  "orderHistory": "Tilaushistoria",
+  "orderStatus": "Tilauksen tila",
+  "pending": "Odottaa",
+  "completed": "Valmis",
+  "failed": "Epäonnistui",
+  "processing": "Käsitellään",
+  "payment": "Maksu",
+  "paymentMethod": "Maksutapa",
+  "totalAmount": "Kokonaissumma",
+  "discount": "Alennus",
+  "couponCode": "Kuponkikoodi",
+  "applyCoupon": "Käytä kuponkia",
+  "checkout": {
+    "enterPlayerIdNow": "Syötä pelaaja-ID:si nyt",
+    "playerId": "Pelaaja-ID",
+    "enterPlayerId": "Syötä pelaaja-ID",
+    "enterPlayerId10": "Syötä 10-numeroinen pelaaja-ID",
+    "enterUsername": "Syötä käyttäjänimi",
+    "enterPlayerIdToPurchase": "Syötä pelaaja-ID ostaaksesi",
+    "selectPlayerIdToRecharge": "Valitse tai täytä pelaaja-ID, jonka haluat ladata",
+    "couldntFindPlayerId": "Etkö löytänyt pelaaja-ID:täsi?",
+    "coupon": "Kuponki",
+    "noAvailableCoupon": "Ei saatavilla olevaa kuponkia",
+    "selectPaymentChannels": "Valitse maksukanavat",
+    "creditDebitCard": "Luotto-/Debit-/Prepaid-kortti",
+    "vipExtraPoints": "VIP-lisäpisteet",
+    "payNow": "Maksa nyt",
+    "total": "Yhteensä",
+    "purchaseItem": "Ostostuote",
+    "extraForYou": "Lisää sinulle",
+    "playerIdRequired": "Pelaaja-ID vaaditaan",
+    "pleaseEnterPlayerId": "Syötä ensin pelaaja-ID:si",
+    "invalidPlayerId": "Virheellinen pelaaja-ID",
+    "enterValidPlayerId": "Syötä kelvollinen pelaaja-ID",
+    "invalidUsername": "Virheellinen käyttäjänimi",
+    "enterValidUsername": "Syötä kelvollinen käyttäjänimi",
+    "paymentError": "Maksuvirhe",
+    "paymentFailed": "Maksun alustaminen epäonnistui. Yritä uudelleen.",
+    "paymentSuccessful": "Maksu onnistui!",
+    "cryptoConfirmed": "Kryptomaksusi on vahvistettu.",
+    "recentPlayerIds": "Viimeaikaiset pelaaja-ID:t",
+    "enterNewPlayerId": "Syötä uusi pelaaja-ID",
+    "saveAndContinue": "Tallenna ja jatka",
+    "signInFirst": "Kirjaudu ensin sisään",
+    "securityPayment": "TURVALLINEN MAKSU",
+    "orderSummary": "TILAUSYHTEENVETO"
+  },
+  "proceedToPayment": "Jatka maksuun",
+  "back": "Takaisin",
+  "backToHome": "Takaisin etusivulle",
+  "next": "Seuraava",
+  "submit": "Lähetä",
+  "cancel": "Peruuta",
+  "confirm": "Vahvista",
+  "close": "Sulje",
+  "search": "Hae",
+  "loading": "Ladataan...",
+  "error": "Virhe",
+  "success": "Onnistui",
+  "warning": "Varoitus",
+  "info": "Tiedot",
+  "welcome": "Tervetuloa",
+  "welcomeBack": "Tervetuloa takaisin",
+  "getStarted": "Aloita",
+  "learnMore": "Lue lisää",
+  "seeMore": "Näytä lisää",
+  "readMore": "Lue lisää",
+  "showLess": "Näytä vähemmän",
+  "notifications": "Ilmoitukset",
+  "settings": "Asetukset",
+  "profile": "Profiili",
+  "myOrders": "Tilaukseni",
+  "myAccount": "Tilini",
+  "editProfile": "Muokkaa profiilia",
+  "changePassword": "Vaihda salasana",
+  "saveChanges": "Tallenna muutokset",
+  "deleteAccount": "Poista tili",
+  "verifiedReviews": "Vahvistetut arvostelut",
+  "customerReviews": {
+    "title": "Asiakasarvostelut",
+    "verifiedReviews": "vahvistettua arvostelua",
+    "writeReview": "Kirjoita arvostelu",
+    "loginToReview": "Kirjaudu sisään kirjoittaaksesi arvostelun",
+    "back": "Takaisin",
+    "ratingDistribution": "Arvosanajakauma",
+    "last12Months": "Viimeiset 12 kuukautta",
+    "filterByRating": "Suodata arvosanan mukaan",
+    "allRatings": "Kaikki",
+    "loadMore": "Lataa lisää arvosteluja",
+    "verifiedPurchase": "Vahvistettu ostos",
+    "submitReview": "Lähetä arvostelu",
+    "yourName": "Nimesi",
+    "rating": "Arvosana",
+    "review": "Arvostelu",
+    "shareExperience": "Jaa kokemuksesi...",
+    "helpful": "Hyödyllinen",
+    "reply": "Vastaa",
+    "delete": "Poista"
+  },
+  "writeReview": "Kirjoita arvostelu",
+  "rating": "Arvosana",
+  "instantDelivery": "Välitön toimitus",
+  "securePayment": "Turvallinen maksu",
+  "bestPrice": "Paras hinta",
+  "officialPartner": "Virallinen kumppani",
+  "trustedBy": "Miljoonien pelaajien luottama",
+  "contactSupport": "Ota yhteyttä tukeen",
+  "paymentIssuesHelp": "Apua maksuongelmiin",
+  "needHelp": "Tarvitsetko apua ostokseen?",
+  "lastUpdated": "Viimeksi päivitetty",
+  "effectiveDate": "Voimaantulopäivä",
+  "contactEmail": "Yhteyssähköposti",
+  "footer": {
+    "description": "Virallinen alusta pelivaluutan ja esineiden ostamiseen PUBG Mobileen ja muihin suosittuihin peleihin.",
+    "copyright": "© 2026 MidasBuy. Kaikki oikeudet pidätetään. Kaikki tässä mainitut tavaramerkit kuuluvat omistajilleen.",
+    "mobileDescription": "Midasbuy on Tencentin virallinen latauskauppa. Maksa turvallisesti, nopeasti ja hauskasti Midasbuylla.",
+    "contactUsTitle": "Ota yhteyttä",
+    "contactUsDesc": "Jos tarvitset apua, ota meihin yhteyttä napsauttamalla \"Asiakaspalvelu\".",
+    "customerService": "Asiakaspalvelu",
+    "cookiesPreference": "Evästeasetukset",
+    "verifiedReviews": "80 837 vahvistettua arvostelua"
+  },
+  "whyTopUp": {
+    "title": "Miksi ladata pelejä Midasbuylla?",
+    "section1Title": "1. Midasbuy: PUBG MOBILEn virallinen valtuutettu ulkomainen latauskauppa",
+    "section1Content": "PUBG MOBILEn yksinoikeudella virallisesti valtuutettuna ulkomaisena maksuparterina Midasbuy tarjoaa turvallisia ja tehokkaita UC-latauspalveluita pelaajille Hongkongissa, Japanissa, Kaakkois-Aasiassa, Euroopassa ja Amerikassa.",
+    "section2Title": "2. Midasbuy PUBG Mobile UC Bonuslunastus:",
+    "section2Content": "Aktivoi PUBG Mobile lunastuskoodit tai lahjakortit Midasbuyn virallisessa lunastusportaalissa saadaksesi 3%-7% bonus-UC:n välittömästi.",
+    "section3Title": "3. PUBG MOBILE | PARAS BATTLE ROYALE -MOBIILIPELI",
+    "section3Content": "Maailmanlaajuisesti suosittuna ilmaisena taktisena ammuntapelinä PUBG MOBILEssa on erilaisia taistelukenttejä, kuten Erangel, Miramar ja Rondo.",
+    "section4Title": "4. Kysymyksiä ja vastauksia",
+    "q1": "K: Miten teen ostoksia PUBG MOBILElle?",
+    "q2": "K: Mistä saan PUBG MOBILE UC:ni oston jälkeen?",
+    "q3": "K: Miten lunastan koodeja esineisiin Midasbuylla?",
+    "q4": "K: Miksi en saa tuotteitani oston jälkeen?"
+  },
+  "officialRechargeStore": "Olemme Tencentin virallinen latauskauppa",
+  "discoverOtherRegionGames": "LÖYDÄ MUIDEN ALUEIDEN PELEJÄ",
+  "midasbuyVideo": "MIDASBUY VIDEO",
+  "header": {
+    "midasbuyVideo": "MIDASBUY VIDEO",
+    "noNotifications": "Ei ilmoituksia vielä",
+    "notificationsHint": "Näet päivitykset täällä",
+    "signInToEnjoy": "Kirjaudu sisään nauttiaksesi",
+    "exclusiveService": "Yksinoikeuspalvelu",
+    "signInSignUp": "Kirjaudu / Rekisteröidy",
+    "coupon": "Kuponki",
+    "orderCenter": "Tilauskeskus",
+    "accountSecurity": "Tili ja turvallisuus",
+    "midasbuyEvents": "Midasbuy tapahtumat",
+    "liveVideo": "Live & Video",
+    "adminPanel": "Hallintapaneeli"
+  },
+  "miniGames": {
+    "title": "MINIPELIT",
+    "description": "Huomaa, että Midasbuyn verkkosivustolla saatavilla olevat minipelit ovat kolmansien osapuolten tarjoajien ylläpitämiä, ei Midasbuyn.",
+    "moreDetails": "Lisätietoja",
+    "tag": "Minipelit",
+    "noDownload": "Ei sovelluksen latausta tarvita! Pelaa heti Midasbuylla!",
+    "noDownloadDesktop": "Ei sovelluksen latausta tarvita! Pelaa heti",
+    "playNow": "Pelaa nyt",
+    "shop": "Kauppa"
+  },
+  "events": {
+    "title": "Tapahtumat",
+    "noEvents": "Ei tapahtumia saatavilla juuri nyt",
+    "comingSoon": "Tulossa pian",
+    "activeEvents": "Aktiiviset tapahtumat",
+    "pastEvents": "Aiemmat tapahtumat",
+    "viewDetails": "Näytä tiedot",
+    "participate": "Osallistu nyt",
+    "endsIn": "Päättyy",
+    "startsIn": "Alkaa"
+  },
+  "shop": {
+    "title": "Kauppa",
+    "categories": "Kategoriat",
+    "allItems": "Kaikki esineet",
+    "featured": "Suositeltu",
+    "newArrivals": "Uutuudet",
+    "bestSellers": "Myydyimmät",
+    "onSale": "Alennuksessa",
+    "outOfStock": "Loppu",
+    "inStock": "Varastossa",
+    "addedToCart": "Lisätty koriin",
+    "viewCart": "Näytä kori",
+    "continueShopping": "Jatka ostoksia"
+  },
+  "redeem": {
+    "title": "Lunasta koodi",
+    "enterCode": "Syötä lunastuskoodi",
+    "enterPlayerID": "Syötä pelaaja-ID",
+    "enterUsername": "Syötä käyttäjänimi (valinnainen)",
+    "submitCode": "Lähetä koodi",
+    "placeholder": "Syötä lunastuskoodisi tähän",
+    "playerIdPlaceholder": "Syötä pelaaja-ID:si",
+    "usernamePlaceholder": "Syötä käyttäjänimesi",
+    "success": "Koodi lunastettu onnistuneesti!",
+    "error": "Virheellinen koodi tai koodi on jo käytetty",
+    "instructions": "Syötä lunastuskoodisi saadaksesi palkkiosi",
+    "processing": "Käsitellään koodiasi..."
+  },
+  "tabs": {
+    "purchase": "OSTA",
+    "redeem": "LUNASTA",
+    "shop": "KAUPPA",
+    "events": "TAPAHTUMAT"
+  },
+  "news": {
+    "nikkeBonus": "Saat 100% lisä-NIKKE-bonuksen ensimmäisellä latauksella!",
+    "registerFreeSkin": "Rekisteröidy saadaksesi ilmainen skin",
+    "madDogGames": "Mad Dog Games onnekas aarteenmetsästys",
+    "hokPointsLottery": "Honor of Kings pistear­ponta",
+    "apexCoinBonanza": "Apex Coin Bonanza: Ensimmäinen ostos, 2x arvo!",
+    "pubgVipBenefits": "PUBG MOBILE VIP-edut",
+    "purchaseBonus": "Ostosbonus",
+    "extraBonus45": "LISÄBONUS VAIN MIDASBUYLLA NAUTI JOPA 45% BONUKSESTA NYT",
+    "aoeDaily": "Age of Empires päivittäiset paketit"
+  },
+  "promoBanner": {
+    "slide1": "Syötä pelaaja-ID nähdäksesi palkkiot ja avataksesi yksinoikeusbonukset. Saat erikoisalennuksia UC-ostoksista!",
+    "slide2": "Lataa & Pyöritä UC | Ystävät saavat ilmaisia kuponkeja —— 3000UC MAKS!",
+    "slide3": "100% voittomahdollisuus! Tuplaa pisteet jäsenpäivänä, vain tänään! Tule ja voita pääpalkinto!"
+  },
+  "videosPage": {
+    "title": "MIDASBUY LIVE & VIDEO",
+    "upcomingLiveStream": "TULEVA LIVESTREAM",
+    "videoAndLiveRecord": "VIDEO & LIVE-TALLENNE",
+    "video": "VIDEO",
+    "liveRecord": "LIVE-TALLENNE",
+    "chooseGame": "VALITSE PELI",
+    "noLiveRecords": "Ei live-tallenteita saatavilla",
+    "loadMore": "Lataa lisää",
+    "videoComingSoon": "Video tulossa pian",
+    "videoNotAvailable": "Tämä video ei ole vielä saatavilla. Tarkista myöhemmin!",
+    "seeAll": "Näytä kaikki",
+    "more": "Lisää"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Tietosuojakäytäntö",
+      "lastUpdated": "Viimeksi päivitetty: Tammikuu 2025",
+      "intro": "Midasbuylla olemme sitoutuneet suojaamaan yksityisyyttäsi ja varmistamaan henkilötietojesi turvallisuuden.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Keräämämme tiedot",
+          "content": "Keräämme tietoja, joita annat suoraan meille, kuten kun luot tilin, teet ostoksen tai otat yhteyttä tukitiimiin."
+        },
+        "howWeUse": {
+          "title": "Miten käytämme tietojasi",
+          "content": "Käytämme tietojasi käsitelläksemme tapahtumia, toimittaaksemme ostoksesi, tarjotaksemme asiakastukea ja parantaaksemme palveluitamme."
+        },
+        "informationSharing": {
+          "title": "Tietojen jakaminen",
+          "content": "Emme myy henkilötietojasi. Saatamme jakaa tietoja luotettujen kolmansien osapuolten kanssa, jotka auttavat meitä käyttämään alustaamme."
+        },
+        "dataSecurity": {
+          "title": "Tietoturva",
+          "content": "Toteutamme alan standardin mukaisia turvatoimia suojataksemme tietojasi luvattomalta käytöltä."
+        },
+        "yourRights": {
+          "title": "Yksityisyysoikeutesi",
+          "content": "Sinulla on oikeus päästä käsiksi, korjata tai poistaa henkilötietojasi."
+        },
+        "internationalTransfers": {
+          "title": "Kansainväliset tiedonsiirrot",
+          "content": "Tietosi voidaan siirtää ja säilyttää kotimaasi ulkopuolisissa maissa."
+        },
+        "dataRetention": {
+          "title": "Tietojen säilytys",
+          "content": "Säilytämme henkilötietojasi niin kauan kuin on tarpeen niiden keräämisen tarkoitusten täyttämiseksi."
+        },
+        "childrensPrivacy": {
+          "title": "Lasten yksityisyys",
+          "content": "Palvelumme eivät ole tarkoitettu alle 13-vuotiaille lapsille."
+        },
+        "updates": {
+          "title": "Tämän käytännön päivitykset",
+          "content": "Saatamme päivittää tätä tietosuojakäytäntöä aika ajoin."
+        },
+        "contactUs": {
+          "title": "Ota meihin yhteyttä yksityisyysasioissa",
+          "content": "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä, ota meihin yhteyttä tukisivumme kautta."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Evästekäytäntö",
+      "lastUpdated": "Viimeksi päivitetty: Tammikuu 2025",
+      "intro": "Tämä evästekäytäntö selittää, miten Midasbuy käyttää evästeitä ja vastaavia teknologioita.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Mitä evästeet ovat?",
+          "content": "Evästeet ovat pieniä tekstitiedostoja, jotka asetetaan laitteellesi kun vierailet verkkosivustollamme."
+        },
+        "essentialCookies": {
+          "title": "Välttämättömät evästeet",
+          "content": "Nämä evästeet ovat välttämättömiä verkkosivuston oikealle toiminnalle."
+        },
+        "analyticsCookies": {
+          "title": "Analytiikkaevästeet",
+          "content": "Nämä evästeet auttavat meitä ymmärtämään, miten kävijät vuorovaikuttavat verkkosivustomme kanssa."
+        },
+        "advertisingCookies": {
+          "title": "Mainos- ja markkinointievästeet",
+          "content": "Näitä evästeitä käytetään sinulle osuvampien mainosten toimittamiseen."
+        },
+        "functionalityCookies": {
+          "title": "Toiminnallisuusevästeet",
+          "content": "Nämä evästeet mahdollistavat parannetun toiminnallisuuden ja personoinnin."
+        },
+        "thirdPartyCookies": {
+          "title": "Kolmansien osapuolten evästeet",
+          "content": "Jotkin evästeet asettavat kolmansien osapuolten palvelut, jotka näkyvät sivuillamme."
+        },
+        "managingCookies": {
+          "title": "Evästeasetustesi hallinta",
+          "content": "Sinulla on useita vaihtoehtoja evästeiden hallintaan."
+        },
+        "cookieRetention": {
+          "title": "Evästeiden säilytysaika",
+          "content": "Eri evästeillä on eri elinikä."
+        }
+      },
+      "questionsTitle": "Kysymyksiä evästekäytännöstämme?",
+      "questionsContent": "Jos sinulla on kysymyksiä evästeiden käytöstämme, ota meihin yhteyttä."
+    },
+    "termsOfService": {
+      "title": "Käyttöehdot",
+      "subtitle": "Midasbuyn ehdot",
+      "lastUpdated": "Viimeksi päivitetty: Tammikuu 2025",
+      "intro": "Käyttämällä Midasbuya hyväksyt nämä ehdot. Palautus vain jos ei toimitettu 24 tunnin kuluessa.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Palvelukatsaus",
+          "content": "Midasbuy myy UC-paketteja PUBG Mobilelle ja vastaavia pelikredittejä turvallisten verkkotapahtumien kautta."
+        },
+        "userResponsibilities": {
+          "title": "2. Käyttäjän vastuut",
+          "items": [
+            "Anna oikea PUBG-ID ja maksutiedot.",
+            "Varmista, että sinulla on lupa tehdä ostoksia valitulla maksutavalla.",
+            "Vältä palveluidemme petollista tai väärinkäyttöä."
+          ]
+        },
+        "delivery": {
+          "title": "3. Toimitus",
+          "items": [
+            "UC-ostokset toimitetaan yleensä välittömästi, mutta harvinaisissa tapauksissa voi kestää jopa 30 minuuttia.",
+            "Jos toimitus viivästyy ilmoitettua aikaa pidempään, voit ottaa yhteyttä tukitiimiin."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Palautuskäytäntö",
+          "items": [
+            "Palautuspyynnöt on tehtävä 24 tunnin kuluessa ostoksesta, jos UC:ta ei ole toimitettu.",
+            "Palautuksia ei myönnetä 24 tunnin jälkeen.",
+            "Kaikki palautukset ovat palautuskäytäntömme alaisia."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Ehtojen muutokset",
+          "content": "Saatamme päivittää näitä ehtoja milloin tahansa. Verkkosivustomme jatkuva käyttö tarkoittaa, että hyväksyt päivitetyt ehdot."
+        }
+      },
+      "acknowledgment": "Käyttämällä Midasbuya vahvistat, että olet lukenut, ymmärtänyt ja hyväksyt nämä käyttöehdot."
+    },
+    "refundPolicy": {
+      "title": "Palautuskäytäntö",
+      "subtitle": "Midasbuyn palautusehdot",
+      "lastUpdated": "Viimeksi päivitetty: Tammikuu 2025",
+      "intro": "Ei palautuksia 24 tunnin jälkeen; palautus vain jos UC:ta ei toimiteta luvatussa ajassa.",
+      "description": "Midasbuylla pyrimme tarjoamaan nopean ja luotettavan UC-toimituksen.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Palautuskelpoisuus",
+          "items": [
+            "Palautukset ovat saatavilla vain, jos UC:ta ei ole toimitettu luvatussa toimitusajassa.",
+            "Palautuspyynnöt on tehtävä 24 tunnin kuluessa ostoksesta.",
+            "Jos UC on jo toimitettu tilillesi, palautukset eivät ole mahdollisia."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Ei-palautettavat tapaukset",
+          "items": [
+            "UC toimitettu onnistuneesti oikealle tilille.",
+            "Väärä PUBG-ID tai tiedot asiakkaan toimittamana.",
+            "Palautuspyyntö tehty 24 tuntia oston jälkeen.",
+            "Mielenmuutos maksun jälkeen."
+          ]
+        },
+        "process": {
+          "title": "3. Palautusprosessi",
+          "content": "Palautuksen pyytämiseksi lähetä meille sähköposti seuraavilla tiedoilla:",
+          "items": [
+            "Tilausnumerosi",
+            "Maksutodiste",
+            "Syy palautuspyynnölle"
+          ],
+          "timeline": "Hyväksyttyään palautukset lähetetään alkuperäiselle maksutavalle 7–14 arkipäivän kuluessa."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Ohjekeskus",
+      "subtitle": "Saat tukea kaikkiin Midasbuy-tarpeisiisi.",
+      "contactByPhone": "Ota yhteyttä puhelimitse",
+      "phoneDescription": "Tukitiimimme on käytettävissä 24/7.",
+      "customerSupport": "Asiakastuki",
+      "clickToChat": "Napsauta keskustellaksesi WhatsAppissa",
+      "chatWithAgent": "Keskustele agentin kanssa",
+      "emailSupport": "Sähköpostituki",
+      "emailDescription": "Lähetä meille sähköposti, niin vastaamme 24 tunnin kuluessa.",
+      "supportEmail": "Tuki-sähköposti",
+      "responseTime": "Vastaus 24 tunnin kuluessa",
+      "liveChat": "Live-chat-tuki",
+      "liveChatDescription": "Yhdistä tukihenkilöön välittömästi.",
+      "startLiveChat": "Aloita live-chat",
+      "available247": "Käytettävissä 24/7",
+      "stillHaveQuestions": "Onko sinulla vielä kysymyksiä? Tarkista usein kysytyt kysymykset."
+    },
+    "copyrightNotice": {
+      "title": "Tekijänoikeusilmoitus",
+      "subtitle": "Tietoa immateriaalioikeuksista, tavaramerkeistä ja tekijänoikeudellisesti suojatusta materiaalista Midasbuylla.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Tekijänoikeussuoja",
+          "content1": "Kaikki sisältö Midasbuyn verkkosivustolla ja alustalla on Midasbuyn tai sen sisällöntoimittajien omaisuutta.",
+          "content2": "Kaiken tämän sivuston sisällön kokoelma on Midasbuyn yksinomaista omaisuutta."
+        },
+        "trademarks": {
+          "title": "2. Tavaramerkit",
+          "content1": "Midasbuy® ja Midasbuy-logo ovat rekisteröityjä tavaramerkkejä.",
+          "notice": "PUBG MOBILE, PUBG ja kaikki liittyvät logot kuuluvat yksinomaan PUBG Corporationille.",
+          "content2": "Mikään tällä sivustolla ei anna lisenssiä minkään tavaramerkin käyttöön."
+        },
+        "useOfContent": {
+          "title": "3. Sisällön käyttö",
+          "intro": "Saat käyttää sisältöä vain henkilökohtaiseen, ei-kaupalliseen käyttöön.",
+          "items": [
+            "Älä muokkaa mitään tämän sivuston materiaalia",
+            "Älä käytä materiaaleja kaupallisiin tarkoituksiin",
+            "Älä yritä purkaa tai kääntää mitään ohjelmistoa",
+            "Älä poista tekijänoikeus- tai omistusoikeusmerkintöjä"
+          ],
+          "termination": "Tämä lisenssi päättyy automaattisesti, jos rikot mitään näistä rajoituksista."
+        },
+        "userGeneratedContent": {
+          "title": "4. Käyttäjien luoma sisältö",
+          "content1": "Julkaisemalla sisältöä Midasbuylle annat meille oikeuden käyttää sitä.",
+          "content2": "Vakuutat ja takaat, että omistat tai hallitset sisällön oikeuksia."
+        },
+        "copyrightInfringement": {
+          "title": "5. Tekijänoikeusrikkomusvaatimukset",
+          "intro": "Midasbuy kunnioittaa muiden immateriaalioikeuksia.",
+          "items": [
+            "Valtuutetun henkilön sähköinen tai fyysinen allekirjoitus",
+            "Kuvaus tekijänoikeudella suojatusta teoksesta",
+            "Kuvaus loukkaavan materiaalin sijainnista",
+            "Osoitteesi, puhelinnumerosi ja sähköpostiosoitteesi"
+          ],
+          "contactTitle": "Midasbuyn tekijänoikeusagentti:",
+          "contactInfo": "Copyright Agent, Legal Department\nMidasbuy Inc."
+        },
+        "dmca": {
+          "title": "6. DMCA-käytäntö",
+          "content1": "Midasbuy noudattaa DMCA:n säännöksiä.",
+          "content2": "Vastaanotettuaan kelvollisen DMCA-ilmoituksen Midasbuy:",
+          "items": [
+            "Poistaa tai estää pääsyn materiaaliin",
+            "Ilmoittaa sisällöntoimittajalle",
+            "Antaa tietoa vastailmoituksen lähettämisestä"
+          ]
+        },
+        "changes": {
+          "title": "7. Tekijänoikeusilmoituksen muutokset",
+          "content": "Midasbuy pidättää oikeuden muuttaa tätä ilmoitusta milloin tahansa."
+        },
+        "contactUs": {
+          "title": "8. Yhteystiedot",
+          "intro": "Jos sinulla on kysymyksiä, ota meihin yhteyttä:",
+          "contactInfo": "Sähköposti: legal@midasbuy.com"
+        }
+      },
+      "lastUpdated": "Viimeksi päivitetty: 1. maaliskuuta 2026",
+      "relatedPolicies": "Lisätietoja käytännöistämme:"
+    },
+    "faqs": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Löydä vastauksia yleisiin kysymyksiin PUBG MOBILE UC:n ostamisesta.",
+      "searchPlaceholder": "Etsi kysymyksiä...",
+      "noResults": "Ei tuloksia haulle",
+      "tryDifferent": "Kokeile eri hakusanaa tai selaa kategorioittain",
+      "cantFindAnswer": "Etkö löydä etsimääsi?",
+      "contactSupport": "Ota yhteyttä tukeen",
+      "categories": {
+        "all": "Kaikki usein kysytyt kysymykset",
+        "purchases": "Ostokset",
+        "payments": "Maksuongelmat",
+        "account": "Tili",
+        "security": "Turvallisuus",
+        "refunds": "Palautukset"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "Miten ostan UC:ta PUBG Mobilessa?",
+          "answer": "Ostaaksesi UC:ta PUBG Mobilessa Midasbuyn kautta, valitse haluamasi UC-paketti, syötä PUBG Mobile -ID:si, valitse haluamasi maksutapa ja suorita tapahtuma."
+        },
+        "isSafe": {
+          "question": "Onko UC:n ostaminen Midasbuyltä turvallista?",
+          "answer": "Kyllä, Midasbuy on PUBG Mobilen virallinen latauspalvelu. Käytämme alan standardin mukaista salausta."
+        },
+        "deliveryTime": {
+          "question": "Kuinka kauan kestää saada UC oston jälkeen?",
+          "answer": "Useimmissa tapauksissa UC hyvitetään PUBG Mobile -tiliisi välittömästi. Harvinaisissa tapauksissa se voi kestää jopa 30 minuuttia."
+        },
+        "paymentMethods": {
+          "question": "Mitä maksutapoja hyväksytään?",
+          "answer": "Midasbuy hyväksyy erilaisia maksutapoja, kuten luotto-/pankkikortteja, PayPal, Google Pay, Apple Pay."
+        },
+        "ucNotReceived": {
+          "question": "Maksoin, mutta en saanut UC:tani. Mitä minun pitäisi tehdä?",
+          "answer": "Vahvista ensin, että maksusi käsiteltiin. Jos maksu onnistui, mutta et ole saanut UC:ta 30 minuutin kuluessa, ota yhteyttä tukitiimiimme."
+        },
+        "purchaseForOthers": {
+          "question": "Voinko ostaa UC:ta toiselle pelaajalle?",
+          "answer": "Kyllä, voit ostaa UC:ta mille tahansa PUBG Mobile -pelaajalle, kunhan sinulla on oikea pelaaja-ID."
+        },
+        "findPlayerId": {
+          "question": "Miten löydän PUBG Mobile -ID:ni?",
+          "answer": "Löydät PUBG Mobile -ID:si avaamalla pelin, napauttamalla profiilikuvaasi ja etsimällä ID-numeron."
+        },
+        "bonuses": {
+          "question": "Onko suurempien UC-pakettien ostamisesta bonuksia?",
+          "answer": "Kyllä, suuremmat UC-paketit sisältävät usein bonus-UC:ta. Määrä näkyy selvästi jokaisessa pakettivaihtoehdossa."
+        },
+        "ucExpire": {
+          "question": "Vanheneeko UC:ni, jos en käytä sitä?",
+          "answer": "Ei, UC ei vanhene. Kun se on hyvitetty tilillesi, se pysyy siellä, kunnes käytät sen."
+        },
+        "refund": {
+          "question": "Voinko saada palautuksen UC-ostoksestani?",
+          "answer": "Palautuskäytäntömme mukaan kaikki UC-ostokset ovat lopullisia eikä niitä palauteta, kun UC on hyvitetty tilillesi."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Ota yhteyttä",
+      "subtitle": "Onko sinulla kysymyksiä tai tarvitsetko apua? Tiimimme on valmis auttamaan sinua.",
+      "sendMessage": "Lähetä meille viesti",
+      "yourName": "Nimesi",
+      "enterName": "Syötä nimesi",
+      "emailAddress": "Sähköpostiosoite",
+      "enterEmail": "Syötä sähköpostisi",
+      "subject": "Aihe",
+      "whatIsThis": "Mitä tämä koskee?",
+      "message": "Viesti",
+      "howCanWeHelp": "Miten voimme auttaa sinua?",
+      "sending": "Lähetetään...",
+      "sendMessageBtn": "Lähetä viesti",
+      "messageSent": "Viesti lähetetty",
+      "messageSuccess": "Kiitos yhteydenotostasi. Vastaamme tiedusteluusi pian.",
+      "messageError": "Virhe viestin lähettämisessä",
+      "messageErrorDesc": "Tapahtui ongelma. Yritä uudelleen tai ota meihin suoraan yhteyttä.",
+      "contactInfo": "Yhteystiedot",
+      "whatsappSupport": "WhatsApp-tuki",
+      "support247": "24/7 asiakastuki WhatsAppilla",
+      "emailSupportTitle": "Sähköpostituki",
+      "forAllInquiries": "Kaikkiin tiedusteluihin ja tukeen",
+      "liveChatTitle": "Live-chat",
+      "availableOnWebsite": "Käytettävissä 24/7 verkkosivustollamme",
+      "startChat": "Aloita chat",
+      "ourOffice": "Toimistomme",
+      "headquarters": "Midasbuyn pääkonttori",
+      "address": "One Midasbuy Plaza, Gaming District\nLos Angeles, CA 90210\nUSA",
+      "officeHours": "Toimistoajat: Maanantaista perjantaihin, 9:00 - 18:00 (PST)"
+    },
+    "security": {
+      "title": "Turvallisuuskeskus",
+      "subtitle": "Opi, miten Midasbuy suojaa tietojasi.",
+      "howWeProtect": "Miten suojaamme sinua",
+      "securePayments": "Turvalliset maksut",
+      "securePaymentsDesc": "Kaikki Midasbuyn maksutapahtumat on salattu TLS-protokollilla.",
+      "securePaymentsNote": "Emme koskaan tallenna täydellisiä korttitietojasi palvelimillemme.",
+      "accountProtection": "Tilin suojaus",
+      "accountProtectionDesc": "Tilisi on suojattu turvallisella todennusjärjestelmällä.",
+      "accountProtectionNote": "Tarkistamme säännöllisesti järjestelmiämme.",
+      "dataPrivacy": "Tietosuoja",
+      "dataPrivacyDesc": "Noudatamme tiukkoja tietosuojakäytäntöjä.",
+      "dataPrivacyNote": "Voit pyytää pääsyä tai poistamaan henkilötietojasi.",
+      "fraudPrevention": "Petosten estäminen",
+      "fraudPreventionDesc": "Edistykselliset petostentunnistusjärjestelmämme valvovat tapahtumia reaaliajassa.",
+      "fraudPreventionNote": "Työskentelemme tiiviisti maksupalveluntarjoajien kanssa.",
+      "bestPractices": "Parhaat turvallisuuskäytännöt käyttäjille",
+      "useStrongPasswords": "Käytä vahvoja, yksilöllisiä salasanoja",
+      "useStrongPasswordsDesc": "Luo monimutkaisia salasanoja kirjaimilla, numeroilla ja erikoismerkeillä.",
+      "enable2FA": "Ota käyttöön kaksivaiheinen todennus",
+      "enable2FADesc": "Lisää ylimääräinen turvallisuuskerros ottamalla käyttöön 2FA.",
+      "useOfficialSites": "Käytä vain virallisia verkkosivustoja",
+      "useOfficialSitesDesc": "Varmista aina, että olet virallisella Midasbuy-verkkosivustolla.",
+      "keepDevicesSecure": "Pidä laitteesi turvassa",
+      "keepDevicesSecureDesc": "Päivitä säännöllisesti laitteidesi käyttöjärjestelmät.",
+      "bewarePhishing": "Varo tietojenkalasteluyrityksiä",
+      "bewarePhishingDesc": "Midasbuy ei koskaan pyydä salasanaasi sähköpostitse.",
+      "monitorTransactions": "Seuraa tapahtumiasi",
+      "monitorTransactionsDesc": "Tarkista säännöllisesti ostohistoriasi.",
+      "reportConcerns": "Ilmoita turvallisuushuolista",
+      "reportConcernsDesc": "Jos epäilet luvatonta käyttöä, ilmoita siitä välittömästi.",
+      "reportSecurityIssue": "Ilmoita turvallisuusongelmasta",
+      "securityFAQ": "Turvallisuus-UKK",
+      "urgentContact": "Kiireellisissä turvallisuusasioissa ota yhteyttä security@midasbuy.com"
+    },
+    "paymentIssues": {
+      "title": "Maksuongelmat",
+      "subtitle": "Löydä ratkaisuja yleisiin maksuongelmiin.",
+      "commonIssues": "Yleiset maksuongelmat",
+      "paymentDeclined": "Maksu hylätty",
+      "paymentDeclinedReasons": "Jos maksusi hylättiin, se voi johtua:",
+      "paymentDeclinedItems": [
+        "Tilillä ei ole riittävästi varoja",
+        "Virheelliset korttitiedot",
+        "Pankkisi on saattanut estää tapahtuman",
+        "Korttisi on saattanut vanhentua",
+        "Korttisi tapahtumarajat"
+      ],
+      "howToResolve": "Näin ratkaiset tämän:",
+      "paymentDeclinedSteps": [
+        "Varmista, että korttitietosi ovat oikein",
+        "Tarkista pankistasi, onko tapahtuma estetty",
+        "Kokeile toista maksutapaa",
+        "Varmista, että sinulla on riittävästi varoja",
+        "Ota yhteyttä pankkiisi valtuuttaaksesi tapahtumat"
+      ],
+      "ucNotReceived": "Maksu onnistui, mutta UC:ta ei vastaanotettu",
+      "ucNotReceivedReasons": "Jos maksusi onnistui, mutta et ole saanut UC:ta, se voi johtua:",
+      "ucNotReceivedItems": [
+        "Palvelinviiveitä",
+        "Virheellinen pelaaja-ID syötetty",
+        "Tilapäisiä synkronointiongelmia",
+        "Järjestelmähuoltoa"
+      ],
+      "ucNotReceivedSteps": [
+        "Odota vähintään 30 minuuttia",
+        "Tarkista pelinsisäinen postisi",
+        "Varmista, että syötit oikean pelaaja-ID:n",
+        "Kirjaudu ulos ja sisään peliin",
+        "Ota yhteyttä asiakastukeen, jos ongelma jatkuu"
+      ],
+      "multipleCharges": "Useita veloituksia yhdestä ostoksesta",
+      "multipleChargesReasons": "Jos näet useita veloituksia yhdestä ostoksesta, se voi johtua:",
+      "multipleChargesItems": [
+        "Maksunkäsittelyvirheistä",
+        "Ostonappin painamisesta useita kertoja",
+        "Tilapäisistä valtuutuspidätyksistä",
+        "Selain- tai yhteysongelmista"
+      ],
+      "multipleChargesSteps": [
+        "Tarkista, ovatko ne todellisia veloituksia vai valtuutuspidätyksiä",
+        "Odota 3-5 arkipäivää",
+        "Ota yhteyttä asiakastukeen kuvakaappauksilla",
+        "Anna tiliotteesi"
+      ],
+      "needMoreHelp": "Tarvitsetko lisää apua?",
+      "needMoreHelpDesc": "Jos sinulla on edelleen maksuongelmia, tukitiimimme on valmis auttamaan.",
+      "visitHelpCenter": "Vieraile ohjekeskuksessa",
+      "paymentNote": "Suuriin summiin liittyvissä maksuongelmissa ota myös yhteyttä pankkiisi."
+    },
+    "aboutMidasbuy": {
+      "title": "Tietoa Midasbuystä",
+      "subtitle": "Luotettu kumppanisi mobiilipelaamisessa",
+      "whoWeAre": "Keitä me olemme",
+      "whoWeAreContent1": "Midasbuy on maailman johtava digitaalinen pelikauppa.",
+      "whoWeAreContent2": "Virallisena kumppanina suurten pelikustantajien kanssa toimitamme aitoa, valtuutettua digitaalista sisältöä.",
+      "ourMission": "Tehtävämme",
+      "ourMissionContent1": "Tehtävämme on tarjota pelaajille ympäri maailman välitön, turvallinen pääsy rakastamaansa pelisisältöön.",
+      "ourMissionContent2": "Olemme sitoutuneet murtamaan esteitä digitaalisessa pelikaupassa.",
+      "whyChooseUs": "Miksi valita Midasbuy?",
+      "officialPartnership": "Virallinen kumppanuus",
+      "officialPartnershipDesc": "Valtuutettu jakelija PUBG Mobilelle, Free Firelle, Honor of Kingsille ja 30+ pelille.",
+      "lightningDelivery": "Salamannopea toimitus",
+      "lightningDeliveryDesc": "Keskimääräinen toimitusaika alle 2 minuuttia 98,7% välittömällä toimitusprosentilla.",
+      "bankGradeSecurity": "Pankkitason turvallisuus",
+      "bankGradeSecurityDesc": "SSL-salaus, PCI DSS -vaatimustenmukaisuus ja monikerroksinen petossuojaus.",
+      "globalPayments": "Maailmanlaajuiset maksuvaihtoehdot",
+      "globalPaymentsDesc": "Tuki yli 150 maksutavalle.",
+      "gamersServed": "Palveltuja pelaajia",
+      "countries": "Maata",
+      "successRate": "Onnistumisprosentti",
+      "avgDelivery": "Keskim. toimitus",
+      "joinCommunity": "Liity yhteisöön",
+      "joinCommunityDesc": "Tule osaksi Midasbuy-yhteisöä ja pysy ajan tasalla."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ur": "اردو",
+    "ar": "العربية",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "pt": "Português",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "th": "ไทย",
+    "vi": "Tiếng Việt"
+  },
+  "redeemPage": {
+    "title": "LUNASTA KUPONKI",
+    "enterRedeemCode": "Syötä lunastuskoodi",
+    "codeNumber": "Koodinumero",
+    "pasteCode": "Liitä koodi",
+    "confirm": "Vahvista",
+    "submitting": "Lähetetään...",
+    "limitReached": "Raja saavutettu",
+    "reminder": "Muistutus",
+    "reminderItem1": "Saat vastaavat esineet välittömästi lunastuksen jälkeen.",
+    "reminderItem2": "Lunastuskoodi voidaan käyttää vain kerran.",
+    "reminderItem3": "Jos sinulla on kysymyksiä, ota yhteyttä jälleenmyyjään, jolta ostit kupongit."
+  },
+  "couponsPage": {
+    "title": "KUPONKINI",
+    "redeem": "Lunasta",
+    "noEligibleCoupons": "Ei kelvollisia kuponkeja",
+    "historicalCoupons": "Historialliset kupongit"
+  },
+  "orderCenterPage": {
+    "title": "TILAUSKESKUS",
+    "all": "KAIKKI",
+    "toPay": "MAKSETTAVAT",
+    "completed": "VALMIIT",
+    "cancelled": "PERUUTETUT",
+    "trackOrder": "SEURAA TILAUSTA",
+    "searchPlaceholder": "Syötä tapahtumatunnus",
+    "search": "Hae",
+    "noOrdersFound": "Tilauksia ei löytynyt",
+    "pending": "Odottaa",
+    "processing": "Käsitellään",
+    "failed": "Epäonnistui",
+    "viewDetails": "Näytä tiedot"
+  },
+  "faqsPage": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Löydä vastauksia yleisiin kysymyksiin.",
+    "searchPlaceholder": "Etsi kysymyksiä...",
+    "allFaqs": "Kaikki usein kysytyt kysymykset",
+    "purchases": "Ostokset",
+    "paymentIssues": "Maksuongelmat",
+    "account": "Tili",
+    "security": "Turvallisuus",
+    "refunds": "Palautukset",
+    "noResults": "Ei tuloksia",
+    "tryDifferent": "Kokeile eri hakusanaa",
+    "cantFind": "Etkö löydä etsimääsi?",
+    "contactSupport": "Ota yhteyttä tukeen",
+    "backToHome": "Takaisin etusivulle"
+  },
+  "authPage": {
+    "login": "Kirjaudu sisään",
+    "register": "Rekisteröidy",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "confirmPassword": "Vahvista salasana",
+    "fullName": "Koko nimi",
+    "signIn": "Kirjaudu sisään",
+    "signUp": "Rekisteröidy",
+    "signingIn": "Kirjaudutaan...",
+    "signingUp": "Rekisteröidään...",
+    "orContinueWith": "Tai jatka",
+    "continueWithGoogle": "Jatka Googlella",
+    "dontHaveAccount": "Eikö sinulla ole tiliä?",
+    "alreadyHaveAccount": "Onko sinulla jo tili?",
+    "welcomeBack": "Tervetuloa takaisin",
+    "createAccount": "Luo tili",
+    "secureLogin": "Turvallinen kirjautuminen",
+    "secureRegistration": "Turvallinen rekisteröinti",
+    "enterEmail": "Syötä sähköpostisi",
+    "enterPassword": "Syötä salasanasi",
+    "enterFullName": "Syötä koko nimesi"
+  },
+  "profilePage": {
+    "title": "Profiili",
+    "personalInfo": "Henkilötiedot",
+    "fullName": "Koko nimi",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "gamerTag": "Pelaajatunniste",
+    "saveChanges": "Tallenna muutokset",
+    "saving": "Tallennetaan...",
+    "logout": "Kirjaudu ulos",
+    "editProfile": "Muokkaa profiilia",
+    "cancel": "Peruuta",
+    "notificationSettings": "Ilmoitusasetukset"
+  },
+  "banners": {
+    "8ball": "Pelaa 8-palloa Midasbuylla!",
+    "freefire": "Free Fire -timantit parhaaseen hintaan - Välitön toimitus taattu!",
+    "pubgRecharge": "PUBG Mobile Total Recharge -palkkiot - Saat 60 UC-bonuksen!",
+    "deltaBlue": "Delta Force Blue Camo Collection - Premium-aseskinit!",
+    "deltaGold": "Delta Force Gold Edition - Eksklusiiviset kolikot ja palkkiot!",
+    "ageOfEmpires": "Age of Empires kuukausittainen ensimmäinen lataus - Erikoistarjoukset!",
+    "deltaFire": "Delta Force Fire Edition - Rajoitettu sotilas­paketti!",
+    "deltaPink": "Delta Force Pink Collection - Ainutlaatuinen aseskini!",
+    "honorOfKings": "Honor of Kings - Kutsu ystäviä ja saat 4000 rahaketta!",
+    "apexCoin": "Apex Coin Bonanza - Ensimmäinen ostos, 2x arvo!",
+    "pubgUcDrops": "PUBG Mobile päivittäiset UC-pudotukset - 3x Squad-apu, 3000 UC maks!",
+    "pubgFree": "PUBG Mobile ilmaiset palkkiot - Saat ilmaista UC:ta, asun ja aseskinin!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "SYÖTÄ PELAAJA-ID",
+    "signInEnterPlayerId": "KIRJAUDU JA SYÖTÄ PELAAJA-ID",
+    "player": "Pelaaja",
+    "signInMidasbuy": "Kirjaudu Midasbuy-tilille",
+    "enterRedeemCode": "SYÖTÄ LUNASTUSKOODI",
+    "pleaseEnterRedeemCode": "Syötä lunastuskoodi",
+    "submitting": "Lähetetään...",
+    "ok": "OK",
+    "aboutMidasbuy": "TIETOA MIDASBUYSTÄ",
+    "paySafeLine1": "MAKSA TURVALLISESTI, NOPEASTI",
+    "paySafeLine2": "JA HAUSKASTI",
+    "paySafeLine3": "MIDASBUYLLA.",
+    "vipExtraUcFull": "Sait ylimääräistä UC:ta +3~7%",
+    "vipExtraUcShort": "+3~7% UC",
+    "completeRecharge": "Suorita latauksesi!",
+    "extraBonus": "Lisäbonus!"
+  },
+  "shopTab": {
+    "popularGames": "SUOSITUT PELIT",
+    "gameSelected": "{{name}} valittu",
+    "notAvailableYet": "Tämä tuote ei ole vielä saatavilla. Tulossa pian!"
+  },
+  "eventsTab": {
+    "title": "PUBG Mobile tapahtumat",
+    "liveEvents": "Live-tapahtumat",
+    "upcomingEvents": "Tulevat tapahtumat",
+    "ucBonusEvent": "UC-bonustapahtuma",
+    "ucBonusDesc": "Saat ylimääräistä UC:ta kaikista ostoksista",
+    "endsIn": "Päättyy",
+    "threeDays": "3 päivää",
+    "royalPassSeason": "Royal Pass -kausi",
+    "royalPassDesc": "Uusi kausi alkaa pian",
+    "startsIn": "Alkaa",
+    "fiveDays": "5 päivää",
+    "limitedTimeOffer": "Rajoitetun ajan tarjous",
+    "limitedTimeDesc": "Erikoisalennukset valituista esineistä",
+    "availableFor": "Saatavilla",
+    "twentyFourHours": "24 tuntia"
+  },
+  "filters": {
+    "paymentChannels": "MAKSUTAVAT",
+    "uc": "UC"
+  },
+  "countryFaq": {
+    "header": "UKK - PUBG UC {{country}}",
+    "q1": "Miten ostaa PUBG UC maassa {{country}}?",
+    "a1": "Käy Midasbuyn virallisessa kaupassa, valitse UC-pakettisi, syötä PUBG Player ID, valitse maksutapa ({{paymentMethods}}) ja suorita maksu. UC toimitetaan 2-5 minuutissa.",
+    "q2": "Mikä on halvin PUBG UC hinta maassa {{country}}?",
+    "a2": "Midasbuy tarjoaa halvimmat PUBG UC alkaen {{currencySymbol}}0,99 60 UC:sta. Saat jopa 60% alennuksen + 30% VIP-bonuksen.",
+    "q3": "Onko Midasbuy turvallinen pelaajille maassa {{country}}?",
+    "a3": "Kyllä, Midasbuy on 100% turvallinen ja yli 10M pelaajaa luottaa siihen maassa {{country}}.",
+    "q4": "Mitkä maksutavat ovat käytettävissä maassa {{country}}?",
+    "a4": "Maassa {{country}} hyväksymme {{paymentMethods}}. Kaikki maksut ovat turvallisia ja salattuja.",
+    "q5": "Kuinka kauan PUBG UC toimitus kestää maassa {{country}}?",
+    "a5": "UC-toimitus on välitön ja kestää vain 2-5 minuuttia onnistuneen maksun jälkeen.",
+    "q6": "Voinko ostaa Royal Passin valuutalla {{currency}} maassa {{country}}?",
+    "a6": "Kyllä! Osta tarpeeksi UC {{currency}}-maksutavoilla maassa {{country}}. Osta sitten Royal Pass suoraan PUBG Mobile -pelistä.",
+    "whyBuyTitle": "Miksi ostaa PUBG UC Midasbuylta maassa {{country}}?",
+    "whyBuyDesc": "Midasbuy on luotettavin PUBG Mobile UC -latauspalvelu maassa {{country}}. Jopa 60% alennus ja välitön toimitus 2-5 minuutissa."
+  },
+  "packageGrid": {
+    "popular": "Suosittu",
+    "from": "Alkaen"
+  }
+}

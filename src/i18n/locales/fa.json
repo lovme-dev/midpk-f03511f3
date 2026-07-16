@@ -1,0 +1,750 @@
+{
+  "installApp": "نصب اپلیکیشن",
+  "language": "زبان",
+  "followUs": "ما را دنبال کنید",
+  "home": "خانه",
+  "purchase": "خرید",
+  "dashboard": "داشبورد",
+  "buyUCPackages": "خرید پکیج UC",
+  "selectLanguage": "انتخاب زبان",
+  "support": "پشتیبانی",
+  "helpCenter": "مرکز کمک",
+  "contactUs": "تماس با ما",
+  "faqs": "سوالات متداول",
+  "paymentIssues": "مشکلات پرداخت",
+  "security": "امنیت",
+  "legal": "حقوقی",
+  "termsOfService": "شرایط خدمات",
+  "privacyPolicy": "سیاست حفظ حریم خصوصی",
+  "cookiePolicy": "سیاست کوکی",
+  "refundPolicy": "سیاست بازپرداخت",
+  "copyrightNotice": "اعلان حق نشر",
+  "aboutUs": "درباره ما",
+  "aboutMidasbuy": "درباره Midasbuy",
+  "blogs": "بلاگ‌ها",
+  "careers": "مشاغل",
+  "press": "رسانه",
+  "partners": "شرکا",
+  "popularGames": "بازی‌های محبوب",
+  "allGames": "همه بازی‌ها",
+  "latestNews": "آخرین اخبار",
+  "viewAll": "مشاهده همه",
+  "miniGamesLabel": "مینی بازی‌ها",
+  "featured": "ویژه",
+  "goButton": "برو",
+  "games": "بازی‌ها",
+  "all": "همه",
+  "endsIn": "پایان در",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR: SILENT GODS"
+  },
+  "buyNow": "همین الان بخرید",
+  "addToCart": "افزودن به سبد",
+  "selectPackage": "انتخاب پکیج",
+  "enterPlayerId": "وارد کردن شناسه بازیکن",
+  "playerId": "شناسه بازیکن",
+  "username": "نام کاربری",
+  "email": "ایمیل",
+  "password": "رمز عبور",
+  "login": "ورود",
+  "logout": "خروج",
+  "signUp": "ثبت نام",
+  "forgotPassword": "فراموشی رمز عبور",
+  "rememberMe": "مرا به خاطر بسپار",
+  "noAccount": "حساب کاربری ندارید؟",
+  "haveAccount": "قبلاً حساب دارید؟",
+  "orderHistory": "تاریخچه سفارشات",
+  "orderStatus": "وضعیت سفارش",
+  "pending": "در انتظار",
+  "completed": "تکمیل شده",
+  "failed": "ناموفق",
+  "processing": "در حال پردازش",
+  "payment": "پرداخت",
+  "paymentMethod": "روش پرداخت",
+  "totalAmount": "مبلغ کل",
+  "discount": "تخفیف",
+  "couponCode": "کد تخفیف",
+  "applyCoupon": "اعمال کد",
+  "checkout": {
+    "enterPlayerIdNow": "شناسه بازیکن خود را وارد کنید",
+    "playerId": "شناسه بازیکن",
+    "enterPlayerId": "شناسه بازیکن را وارد کنید",
+    "enterPlayerId10": "شناسه بازیکن ۱۰ رقمی را وارد کنید",
+    "enterUsername": "نام کاربری را وارد کنید",
+    "enterPlayerIdToPurchase": "برای خرید شناسه بازیکن را وارد کنید",
+    "selectPlayerIdToRecharge": "شناسه بازیکن را برای شارژ انتخاب کنید",
+    "couldntFindPlayerId": "شناسه بازیکن خود را پیدا نکردید؟",
+    "coupon": "کوپن",
+    "noAvailableCoupon": "کوپن موجود نیست",
+    "selectPaymentChannels": "کانال پرداخت را انتخاب کنید",
+    "creditDebitCard": "کارت اعتباری/نقدی",
+    "vipExtraPoints": "امتیاز اضافی VIP",
+    "payNow": "پرداخت",
+    "total": "کل",
+    "purchaseItem": "آیتم خرید",
+    "extraForYou": "ویژه برای شما",
+    "playerIdRequired": "شناسه بازیکن الزامی است",
+    "pleaseEnterPlayerId": "لطفاً ابتدا شناسه بازیکن را وارد کنید",
+    "invalidPlayerId": "شناسه بازیکن نامعتبر",
+    "enterValidPlayerId": "لطفاً شناسه بازیکن معتبر وارد کنید",
+    "invalidUsername": "نام کاربری نامعتبر",
+    "enterValidUsername": "لطفاً نام کاربری معتبر وارد کنید",
+    "paymentError": "خطای پرداخت",
+    "paymentFailed": "پرداخت ناموفق بود. لطفاً دوباره تلاش کنید.",
+    "paymentSuccessful": "پرداخت موفق!",
+    "cryptoConfirmed": "پرداخت کریپتو تأیید شد.",
+    "recentPlayerIds": "شناسه‌های اخیر",
+    "enterNewPlayerId": "شناسه جدید وارد کنید",
+    "saveAndContinue": "ذخیره و ادامه",
+    "signInFirst": "ابتدا وارد شوید",
+    "securityPayment": "پرداخت امن",
+    "orderSummary": "خلاصه سفارش"
+  },
+  "proceedToPayment": "ادامه به پرداخت",
+  "back": "بازگشت",
+  "backToHome": "بازگشت به خانه",
+  "next": "بعدی",
+  "submit": "ارسال",
+  "cancel": "لغو",
+  "confirm": "تأیید",
+  "close": "بستن",
+  "search": "جستجو",
+  "loading": "در حال بارگذاری...",
+  "error": "خطا",
+  "success": "موفق",
+  "warning": "هشدار",
+  "info": "اطلاعات",
+  "welcome": "خوش آمدید",
+  "welcomeBack": "خوش برگشتید",
+  "getStarted": "شروع کنید",
+  "learnMore": "بیشتر بدانید",
+  "seeMore": "بیشتر ببینید",
+  "readMore": "بیشتر بخوانید",
+  "showLess": "کمتر نمایش بده",
+  "notifications": "اعلان‌ها",
+  "settings": "تنظیمات",
+  "profile": "پروفایل",
+  "myOrders": "سفارشات من",
+  "myAccount": "حساب من",
+  "editProfile": "ویرایش پروفایل",
+  "changePassword": "تغییر رمز عبور",
+  "saveChanges": "ذخیره تغییرات",
+  "deleteAccount": "حذف حساب",
+  "verifiedReviews": "نظرات تأیید شده",
+  "customerReviews": {
+    "title": "نظرات مشتریان",
+    "verifiedReviews": "نظرات تأیید شده",
+    "writeReview": "نوشتن نظر",
+    "loginToReview": "برای نوشتن نظر وارد شوید",
+    "back": "بازگشت",
+    "ratingDistribution": "توزیع امتیاز",
+    "last12Months": "۱۲ ماه گذشته",
+    "filterByRating": "فیلتر بر اساس امتیاز",
+    "allRatings": "همه",
+    "loadMore": "بارگذاری بیشتر",
+    "verifiedPurchase": "خرید تأیید شده",
+    "submitReview": "ارسال نظر",
+    "yourName": "نام شما",
+    "rating": "امتیاز",
+    "review": "نظر",
+    "shareExperience": "تجربه خود را به اشتراک بگذارید...",
+    "helpful": "مفید",
+    "reply": "پاسخ",
+    "delete": "حذف"
+  },
+  "writeReview": "نوشتن نظر",
+  "rating": "امتیاز",
+  "instantDelivery": "تحویل فوری",
+  "securePayment": "پرداخت امن",
+  "bestPrice": "بهترین قیمت",
+  "officialPartner": "شریک رسمی",
+  "trustedBy": "مورد اعتماد میلیون‌ها گیمر",
+  "contactSupport": "تماس با پشتیبانی",
+  "paymentIssuesHelp": "کمک در مورد مشکلات پرداخت",
+  "needHelp": "به کمک نیاز دارید؟",
+  "lastUpdated": "آخرین به‌روزرسانی",
+  "effectiveDate": "تاریخ اجرا",
+  "contactEmail": "ایمیل تماس",
+  "footer": {
+    "description": "پلتفرم رسمی خرید ارز و آیتم‌های درون بازی برای PUBG Mobile و سایر بازی‌های محبوب.",
+    "copyright": "© 2026 MidasBuy. تمامی حقوق محفوظ است.",
+    "mobileDescription": "Midasbuy فروشگاه رسمی شارژ Tencent است.",
+    "contactUsTitle": "تماس با ما",
+    "contactUsDesc": "اگر به کمک نیاز دارید، لطفاً با ما تماس بگیرید.",
+    "customerService": "خدمات مشتری",
+    "cookiesPreference": "ترجیحات کوکی",
+    "verifiedReviews": "۸۰,۸۳۷ نظر تأیید شده"
+  },
+  "whyTopUp": {
+    "title": "چرا در Midasbuy شارژ کنید؟",
+    "section1Title": "۱. Midasbuy: فروشگاه رسمی شارژ خارجی PUBG MOBILE",
+    "section1Content": "به عنوان شریک رسمی پرداخت خارجی PUBG MOBILE، Midasbuy خدمات شارژ UC امن و کارآمد را برای بازیکنان در مناطق مختلف ارائه می‌دهد.",
+    "section2Title": "۲. بازخرید جایزه UC در Midasbuy:",
+    "section2Content": "کدهای بازخرید PUBG Mobile را فعال کنید و UC جایزه ۳٪-۷٪ دریافت کنید.",
+    "section3Title": "۳. PUBG MOBILE | بهترین بازی موبایل بتل رویال",
+    "section3Content": "PUBG MOBILE یک شوتر تاکتیکی رایگان محبوب جهانی است.",
+    "section4Title": "۴. سوالات متداول",
+    "q1": "س: چگونه برای PUBG MOBILE خرید کنم؟",
+    "q2": "س: UC را بعد از خرید کجا دریافت می‌کنم؟",
+    "q3": "س: چگونه کدها را در Midasbuy بازخرید کنم؟",
+    "q4": "س: چرا بعد از خرید محصول را دریافت نمی‌کنم؟"
+  },
+  "officialRechargeStore": "ما فروشگاه رسمی شارژ Tencent هستیم",
+  "discoverOtherRegionGames": "بازی‌های مناطق دیگر را کشف کنید",
+  "midasbuyVideo": "ویدیوی MIDASBUY",
+  "header": {
+    "midasbuyVideo": "ویدیوی MIDASBUY",
+    "noNotifications": "هنوز اعلانی نیست",
+    "notificationsHint": "به‌روزرسانی‌ها را اینجا خواهید دید",
+    "signInToEnjoy": "برای لذت بردن وارد شوید",
+    "exclusiveService": "خدمات ویژه",
+    "signInSignUp": "ورود / ثبت نام",
+    "coupon": "کوپن",
+    "orderCenter": "مرکز سفارشات",
+    "accountSecurity": "حساب و امنیت",
+    "midasbuyEvents": "رویدادهای Midasbuy",
+    "liveVideo": "پخش زنده و ویدیو",
+    "adminPanel": "پنل مدیریت"
+  },
+  "miniGames": {
+    "title": "مینی بازی‌ها",
+    "description": "لطفاً توجه داشته باشید که مینی بازی‌های موجود توسط ارائه‌دهندگان شخص ثالث اداره می‌شوند.",
+    "moreDetails": "جزئیات بیشتر",
+    "tag": "مینی بازی‌ها",
+    "noDownload": "نیاز به دانلود نیست! فوراً بازی کنید!",
+    "noDownloadDesktop": "نیاز به دانلود نیست!",
+    "playNow": "همین الان بازی کنید",
+    "shop": "فروشگاه"
+  },
+  "events": {
+    "title": "رویدادها",
+    "noEvents": "در حال حاضر رویدادی موجود نیست",
+    "comingSoon": "به زودی",
+    "activeEvents": "رویدادهای فعال",
+    "pastEvents": "رویدادهای گذشته",
+    "viewDetails": "مشاهده جزئیات",
+    "participate": "شرکت کنید",
+    "endsIn": "پایان در",
+    "startsIn": "شروع در"
+  },
+  "shop": {
+    "title": "فروشگاه",
+    "categories": "دسته‌بندی‌ها",
+    "allItems": "همه آیتم‌ها",
+    "featured": "ویژه",
+    "newArrivals": "تازه‌ها",
+    "bestSellers": "پرفروش‌ترین‌ها",
+    "onSale": "حراج",
+    "outOfStock": "ناموجود",
+    "inStock": "موجود",
+    "addedToCart": "به سبد اضافه شد",
+    "viewCart": "مشاهده سبد",
+    "continueShopping": "ادامه خرید"
+  },
+  "redeem": {
+    "title": "بازخرید کد",
+    "enterCode": "کد بازخرید را وارد کنید",
+    "enterPlayerID": "شناسه بازیکن را وارد کنید",
+    "enterUsername": "نام کاربری را وارد کنید (اختیاری)",
+    "submitCode": "ارسال کد",
+    "placeholder": "کد بازخرید خود را اینجا وارد کنید",
+    "playerIdPlaceholder": "شناسه بازیکن خود را وارد کنید",
+    "usernamePlaceholder": "نام کاربری خود را وارد کنید",
+    "success": "کد با موفقیت بازخرید شد!",
+    "error": "کد نامعتبر یا قبلاً استفاده شده",
+    "instructions": "کد بازخرید خود را وارد کنید تا پاداش خود را دریافت کنید",
+    "processing": "در حال پردازش کد شما..."
+  },
+  "tabs": {
+    "purchase": "خرید",
+    "redeem": "بازخرید",
+    "shop": "فروشگاه",
+    "events": "رویدادها"
+  },
+  "news": {
+    "nikkeBonus": "۱۰۰٪ جایزه NIKKE در اولین شارژ!",
+    "registerFreeSkin": "ثبت نام کنید و اسکین رایگان بگیرید",
+    "madDogGames": "شکار گنج Mad Dog Games",
+    "hokPointsLottery": "قرعه‌کشی امتیاز Honor of Kings",
+    "apexCoinBonanza": "Apex Coin: اولین خرید، ۲ برابر ارزش!",
+    "pubgVipBenefits": "مزایای VIP PUBG MOBILE",
+    "purchaseBonus": "جایزه خرید",
+    "extraBonus45": "تا ۴۵٪ جایزه اضافی!",
+    "aoeDaily": "پکیج‌های روزانه Age of Empires"
+  },
+  "promoBanner": {
+    "slide1": "شناسه بازیکن را وارد کنید تا پاداش‌ها را ببینید و جوایز ویژه باز کنید!",
+    "slide2": "شارژ کنید و بچرخانید | دوستان کوپن رایگان می‌گیرند - حداکثر 3000UC!",
+    "slide3": "۱۰۰٪ شانس برنده شدن! امتیاز دوبرابر در روز اعضا!"
+  },
+  "videosPage": {
+    "title": "پخش زنده و ویدیو MIDASBUY",
+    "upcomingLiveStream": "پخش زنده آینده",
+    "videoAndLiveRecord": "ویدیو و ضبط زنده",
+    "video": "ویدیو",
+    "liveRecord": "ضبط زنده",
+    "chooseGame": "بازی را انتخاب کنید",
+    "noLiveRecords": "ضبط زنده موجود نیست",
+    "loadMore": "بارگذاری بیشتر",
+    "videoComingSoon": "ویدیو به زودی",
+    "videoNotAvailable": "این ویدیو هنوز موجود نیست.",
+    "seeAll": "مشاهده همه",
+    "more": "بیشتر"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "سیاست حفظ حریم خصوصی",
+      "lastUpdated": "آخرین به‌روزرسانی: ژانویه ۲۰۲۵",
+      "intro": "در Midasbuy، ما متعهد به حفاظت از حریم خصوصی و امنیت اطلاعات شخصی شما هستیم.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "اطلاعاتی که جمع‌آوری می‌کنیم",
+          "content": "ما اطلاعاتی را که مستقیماً ارائه می‌دهید جمع‌آوری می‌کنیم."
+        },
+        "howWeUse": {
+          "title": "نحوه استفاده از اطلاعات شما",
+          "content": "ما از اطلاعات شما برای پردازش تراکنش‌ها و ارائه پشتیبانی استفاده می‌کنیم."
+        },
+        "informationSharing": {
+          "title": "اشتراک اطلاعات",
+          "content": "ما اطلاعات شخصی شما را نمی‌فروشیم."
+        },
+        "dataSecurity": {
+          "title": "امنیت داده‌ها",
+          "content": "ما از اقدامات امنیتی استاندارد صنعت استفاده می‌کنیم."
+        },
+        "yourRights": {
+          "title": "حقوق حریم خصوصی شما",
+          "content": "شما حق دسترسی، اصلاح یا حذف اطلاعات شخصی خود را دارید."
+        },
+        "internationalTransfers": {
+          "title": "انتقال بین‌المللی داده‌ها",
+          "content": "داده‌های شما ممکن است به کشورهای دیگر منتقل شود."
+        },
+        "dataRetention": {
+          "title": "نگهداری داده‌ها",
+          "content": "ما اطلاعات شخصی شما را تا زمان لازم نگه می‌داریم."
+        },
+        "childrensPrivacy": {
+          "title": "حریم خصوصی کودکان",
+          "content": "خدمات ما برای کودکان زیر ۱۳ سال نیست."
+        },
+        "updates": {
+          "title": "به‌روزرسانی این سیاست",
+          "content": "ما ممکن است این سیاست را به‌روزرسانی کنیم."
+        },
+        "contactUs": {
+          "title": "تماس با ما درباره حریم خصوصی",
+          "content": "اگر سوالی دارید، با ما تماس بگیرید."
+        }
+      }
+    },
+    "termsOfService": {
+      "title": "شرایط خدمات",
+      "subtitle": "شرایط و ضوابط Midasbuy",
+      "lastUpdated": "آخرین به‌روزرسانی: ژانویه ۲۰۲۵",
+      "intro": "با استفاده از Midasbuy، شما با این شرایط موافقت می‌کنید.",
+      "sections": {
+        "serviceOverview": {
+          "title": "۱. مرور خدمات",
+          "content": "Midasbuy پکیج‌های UC برای PUBG Mobile می‌فروشد."
+        },
+        "userResponsibilities": {
+          "title": "۲. مسئولیت‌های کاربر",
+          "items": [
+            "اطلاعات دقیق ارائه دهید",
+            "از استفاده تقلبی اجتناب کنید"
+          ]
+        },
+        "delivery": {
+          "title": "۳. تحویل",
+          "items": [
+            "خرید UC معمولاً فوری تحویل داده می‌شود"
+          ]
+        },
+        "refundPolicy": {
+          "title": "۴. سیاست بازپرداخت",
+          "items": [
+            "بازپرداخت باید ظرف ۲۴ ساعت درخواست شود"
+          ]
+        },
+        "changesToTerms": {
+          "title": "۵. تغییرات در شرایط",
+          "content": "ما ممکن است این شرایط را به‌روزرسانی کنیم."
+        }
+      },
+      "acknowledgment": "با استفاده از Midasbuy، شما تأیید می‌کنید که این شرایط را خوانده و پذیرفته‌اید."
+    },
+    "refundPolicy": {
+      "title": "سیاست بازپرداخت",
+      "subtitle": "شرایط بازپرداخت Midasbuy",
+      "lastUpdated": "آخرین به‌روزرسانی: ژانویه ۲۰۲۵",
+      "intro": "بعد از ۲۴ ساعت بازپرداختی وجود ندارد.",
+      "description": "هدف ما تحویل سریع و قابل اعتماد UC است.",
+      "sections": {
+        "eligibility": {
+          "title": "۱. واجد شرایط بودن برای بازپرداخت",
+          "items": [
+            "بازپرداخت فقط در صورت عدم تحویل موجود است"
+          ]
+        },
+        "nonRefundable": {
+          "title": "۲. موارد غیرقابل بازپرداخت",
+          "items": [
+            "UC با موفقیت تحویل داده شده",
+            "شناسه اشتباه"
+          ]
+        },
+        "process": {
+          "title": "۳. فرآیند بازپرداخت",
+          "content": "برای درخواست بازپرداخت، ایمیل بزنید با:",
+          "items": [
+            "شناسه سفارش",
+            "اثبات پرداخت",
+            "دلیل درخواست"
+          ],
+          "timeline": "بازپرداخت ظرف ۷-۱۴ روز کاری انجام می‌شود."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "مرکز کمک",
+      "subtitle": "برای همه نیازهای Midasbuy پشتیبانی دریافت کنید.",
+      "contactByPhone": "تماس تلفنی",
+      "phoneDescription": "تیم پشتیبانی ما ۲۴/۷ در دسترس است.",
+      "customerSupport": "پشتیبانی مشتری",
+      "clickToChat": "برای چت در واتس‌اپ کلیک کنید",
+      "chatWithAgent": "چت با نماینده",
+      "emailSupport": "پشتیبانی ایمیل",
+      "emailDescription": "ایمیل بزنید و ظرف ۲۴ ساعت پاسخ می‌دهیم.",
+      "supportEmail": "ایمیل پشتیبانی",
+      "responseTime": "پاسخ ظرف ۲۴ ساعت",
+      "liveChat": "چت زنده",
+      "liveChatDescription": "فوراً با نماینده پشتیبانی ارتباط برقرار کنید.",
+      "startLiveChat": "شروع چت زنده",
+      "available247": "۲۴/۷ در دسترس",
+      "stillHaveQuestions": "هنوز سوال دارید؟ سوالات متداول را بررسی کنید."
+    },
+    "faqs": {
+      "title": "سوالات متداول",
+      "subtitle": "پاسخ سوالات رایج را پیدا کنید.",
+      "searchPlaceholder": "جستجوی سوالات...",
+      "noResults": "نتیجه‌ای یافت نشد",
+      "tryDifferent": "عبارت جستجوی دیگری امتحان کنید",
+      "cantFindAnswer": "آنچه می‌خواهید را پیدا نمی‌کنید؟",
+      "contactSupport": "تماس با پشتیبانی",
+      "categories": {
+        "all": "همه",
+        "purchases": "خریدها",
+        "payments": "پرداخت‌ها",
+        "account": "حساب",
+        "security": "امنیت",
+        "refunds": "بازپرداخت"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "چگونه UC در PUBG Mobile بخرم؟",
+          "answer": "پکیج UC مورد نظر را انتخاب کنید، شناسه را وارد کنید و پرداخت کنید."
+        },
+        "isSafe": {
+          "question": "آیا خرید از Midasbuy امن است؟",
+          "answer": "بله، Midasbuy پلتفرم رسمی شارژ PUBG Mobile است."
+        },
+        "deliveryTime": {
+          "question": "چقدر طول می‌کشد UC دریافت کنم؟",
+          "answer": "معمولاً فوری، گاهی تا ۳۰ دقیقه."
+        },
+        "paymentMethods": {
+          "question": "چه روش‌های پرداختی پذیرفته می‌شود؟",
+          "answer": "کارت اعتباری، PayPal، و روش‌های منطقه‌ای."
+        },
+        "ucNotReceived": {
+          "question": "پرداخت کردم اما UC نگرفتم. چکار کنم؟",
+          "answer": "ابتدا تأیید پرداخت را بررسی کنید، سپس با پشتیبانی تماس بگیرید."
+        },
+        "purchaseForOthers": {
+          "question": "آیا می‌توانم برای بازیکن دیگری UC بخرم؟",
+          "answer": "بله، فقط شناسه بازیکن آنها را وارد کنید."
+        },
+        "findPlayerId": {
+          "question": "شناسه PUBG Mobile خود را چگونه پیدا کنم؟",
+          "answer": "در بازی روی عکس پروفایل کلیک کنید."
+        },
+        "bonuses": {
+          "question": "آیا برای پکیج‌های بزرگتر جایزه وجود دارد؟",
+          "answer": "بله، پکیج‌های بزرگتر اغلب UC جایزه دارند."
+        },
+        "ucExpire": {
+          "question": "آیا UC منقضی می‌شود؟",
+          "answer": "خیر، UC منقضی نمی‌شود."
+        },
+        "refund": {
+          "question": "آیا می‌توانم بازپرداخت بگیرم؟",
+          "answer": "خریدهای UC پس از تحویل غیرقابل بازپرداخت هستند."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "تماس با ما",
+      "subtitle": "سوال دارید؟ تیم ما آماده کمک است.",
+      "sendMessage": "ارسال پیام",
+      "yourName": "نام شما",
+      "enterName": "نام خود را وارد کنید",
+      "emailAddress": "آدرس ایمیل",
+      "enterEmail": "ایمیل خود را وارد کنید",
+      "subject": "موضوع",
+      "whatIsThis": "این درباره چیست؟",
+      "message": "پیام",
+      "howCanWeHelp": "چگونه می‌توانیم کمک کنیم؟",
+      "sending": "در حال ارسال...",
+      "sendMessageBtn": "ارسال پیام",
+      "messageSent": "پیام با موفقیت ارسال شد",
+      "messageSuccess": "با تشکر از تماس شما. به زودی پاسخ می‌دهیم.",
+      "messageError": "خطا در ارسال پیام",
+      "messageErrorDesc": "مشکلی در ارسال پیام وجود داشت.",
+      "contactInfo": "اطلاعات تماس",
+      "whatsappSupport": "پشتیبانی واتس‌اپ",
+      "support247": "پشتیبانی مشتری ۲۴/۷",
+      "emailSupportTitle": "پشتیبانی ایمیل",
+      "forAllInquiries": "برای همه سوالات",
+      "liveChatTitle": "چت زنده",
+      "availableOnWebsite": "۲۴/۷ در وب‌سایت",
+      "startChat": "شروع چت",
+      "ourOffice": "دفتر ما",
+      "headquarters": "دفتر مرکزی Midasbuy",
+      "address": "یک پلازای Midasbuy، منطقه گیمینگ\nلس آنجلس، CA 90210\nایالات متحده",
+      "officeHours": "ساعات کاری: دوشنبه تا جمعه، ۹ صبح تا ۶ عصر"
+    },
+    "security": {
+      "title": "مرکز امنیت",
+      "subtitle": "بیاموزید Midasbuy چگونه از اطلاعات شما محافظت می‌کند.",
+      "howWeProtect": "چگونه از شما محافظت می‌کنیم",
+      "securePayments": "پرداخت‌های امن",
+      "securePaymentsDesc": "تمام تراکنش‌ها رمزگذاری شده‌اند.",
+      "securePaymentsNote": "ما هرگز اطلاعات کامل کارت را ذخیره نمی‌کنیم.",
+      "accountProtection": "محافظت از حساب",
+      "accountProtectionDesc": "حساب شما با سیستم احراز هویت امن محافظت می‌شود.",
+      "accountProtectionNote": "ما به طور منظم سیستم‌ها را بررسی می‌کنیم.",
+      "dataPrivacy": "حریم خصوصی داده‌ها",
+      "dataPrivacyDesc": "ما از شیوه‌های حریم خصوصی سختگیرانه پیروی می‌کنیم.",
+      "dataPrivacyNote": "می‌توانید درخواست دسترسی یا حذف داده‌ها بدهید.",
+      "fraudPrevention": "پیشگیری از تقلب",
+      "fraudPreventionDesc": "سیستم‌های پیشرفته تشخیص تقلب تراکنش‌ها را نظارت می‌کنند.",
+      "fraudPreventionNote": "ما با ارائه‌دهندگان پرداخت همکاری می‌کنیم.",
+      "bestPractices": "بهترین شیوه‌های امنیتی برای کاربران",
+      "useStrongPasswords": "از رمزهای عبور قوی استفاده کنید",
+      "useStrongPasswordsDesc": "رمزهای پیچیده با ترکیب حروف، اعداد و کاراکترهای خاص بسازید.",
+      "enable2FA": "احراز هویت دو مرحله‌ای را فعال کنید",
+      "enable2FADesc": "لایه امنیتی اضافی اضافه کنید.",
+      "useOfficialSites": "فقط از وب‌سایت‌های رسمی استفاده کنید",
+      "useOfficialSitesDesc": "همیشه مطمئن شوید در وب‌سایت رسمی Midasbuy هستید.",
+      "keepDevicesSecure": "دستگاه‌ها را امن نگه دارید",
+      "keepDevicesSecureDesc": "سیستم عامل را به‌روز نگه دارید.",
+      "bewarePhishing": "از فیشینگ بترسید",
+      "bewarePhishingDesc": "Midasbuy هرگز رمز عبور نمی‌خواهد.",
+      "monitorTransactions": "تراکنش‌ها را نظارت کنید",
+      "monitorTransactionsDesc": "تاریخچه خرید را بررسی کنید.",
+      "reportConcerns": "گزارش نگرانی‌های امنیتی",
+      "reportConcernsDesc": "اگر دسترسی غیرمجاز مشکوک است، فوراً گزارش دهید.",
+      "reportSecurityIssue": "گزارش مشکل امنیتی",
+      "securityFAQ": "سوالات متداول امنیتی",
+      "urgentContact": "برای مسائل امنیتی فوری با security@midasbuy.com تماس بگیرید"
+    },
+    "paymentIssues": {
+      "title": "مشکلات پرداخت",
+      "subtitle": "راه‌حل‌های مشکلات پرداخت رایج را پیدا کنید.",
+      "commonIssues": "مشکلات پرداخت رایج",
+      "paymentDeclined": "پرداخت رد شد",
+      "paymentDeclinedReasons": "اگر پرداخت رد شد، می‌تواند به دلایل زیر باشد:",
+      "paymentDeclinedItems": [
+        "موجودی ناکافی",
+        "اطلاعات کارت اشتباه",
+        "مسدود شدن توسط بانک"
+      ],
+      "howToResolve": "چگونه حل کنید:",
+      "paymentDeclinedSteps": [
+        "اطلاعات کارت را بررسی کنید",
+        "با بانک تماس بگیرید"
+      ],
+      "ucNotReceived": "پرداخت موفق اما UC دریافت نشد",
+      "ucNotReceivedReasons": "می‌تواند به دلیل موارد زیر باشد:",
+      "ucNotReceivedItems": [
+        "تأخیر سرور",
+        "شناسه اشتباه"
+      ],
+      "ucNotReceivedSteps": [
+        "۳۰ دقیقه صبر کنید",
+        "با پشتیبانی تماس بگیرید"
+      ],
+      "multipleCharges": "چند کسر برای یک خرید",
+      "multipleChargesReasons": "می‌تواند به دلیل موارد زیر باشد:",
+      "multipleChargesItems": [
+        "خطای پردازش",
+        "کلیک چندباره"
+      ],
+      "multipleChargesSteps": [
+        "۳-۵ روز کاری صبر کنید",
+        "با پشتیبانی تماس بگیرید"
+      ],
+      "needMoreHelp": "به کمک بیشتری نیاز دارید؟",
+      "needMoreHelpDesc": "تیم پشتیبانی ما آماده کمک است.",
+      "visitHelpCenter": "مرکز کمک",
+      "paymentNote": "برای مشکلات مهم با بانک نیز تماس بگیرید."
+    },
+    "aboutMidasbuy": {
+      "title": "درباره Midasbuy",
+      "subtitle": "شریک قابل اعتماد شما در بازی‌های موبایل",
+      "whoWeAre": "ما کیستیم",
+      "whoWeAreContent1": "Midasbuy پیشرو جهانی فروشگاه دیجیتال بازی است.",
+      "whoWeAreContent2": "به عنوان شریک رسمی ناشران بزرگ بازی.",
+      "ourMission": "مأموریت ما",
+      "ourMissionContent1": "مأموریت ما توانمندسازی گیمرها در سراسر جهان است.",
+      "ourMissionContent2": "ما متعهد به شکستن موانع در تجارت دیجیتال بازی هستیم.",
+      "whyChooseUs": "چرا Midasbuy را انتخاب کنید؟",
+      "officialPartnership": "شراکت رسمی",
+      "officialPartnershipDesc": "توزیع‌کننده مجاز برای PUBG Mobile و ۳۰+ عنوان بازی.",
+      "lightningDelivery": "تحویل فوری",
+      "lightningDeliveryDesc": "میانگین زمان تحویل کمتر از ۲ دقیقه.",
+      "bankGradeSecurity": "امنیت سطح بانکی",
+      "bankGradeSecurityDesc": "رمزگذاری SSL و انطباق PCI DSS.",
+      "globalPayments": "گزینه‌های پرداخت جهانی",
+      "globalPaymentsDesc": "پشتیبانی از ۱۵۰+ روش پرداخت.",
+      "gamersServed": "گیمرهای خدمت‌رسانی شده",
+      "countries": "کشورها",
+      "successRate": "نرخ موفقیت",
+      "avgDelivery": "میانگین تحویل",
+      "joinCommunity": "به جامعه بپیوندید",
+      "joinCommunityDesc": "ما را در شبکه‌های اجتماعی دنبال کنید."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "fa": "فارسی",
+    "ar": "العربية"
+  },
+  "authPage": {
+    "login": "ورود",
+    "register": "ثبت نام",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "confirmPassword": "تأیید رمز عبور",
+    "fullName": "نام کامل",
+    "signIn": "ورود",
+    "signUp": "ثبت نام",
+    "signingIn": "در حال ورود...",
+    "signingUp": "در حال ثبت نام...",
+    "orContinueWith": "یا ادامه با",
+    "continueWithGoogle": "ادامه با گوگل",
+    "dontHaveAccount": "حساب ندارید؟",
+    "alreadyHaveAccount": "قبلاً حساب دارید؟",
+    "welcomeBack": "خوش برگشتید",
+    "createAccount": "ایجاد حساب",
+    "secureLogin": "ورود امن",
+    "secureRegistration": "ثبت نام امن",
+    "enterEmail": "ایمیل خود را وارد کنید",
+    "enterPassword": "رمز عبور خود را وارد کنید",
+    "enterFullName": "نام کامل خود را وارد کنید"
+  },
+  "profilePage": {
+    "title": "پروفایل",
+    "personalInfo": "اطلاعات شخصی",
+    "fullName": "نام کامل",
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "gamerTag": "تگ گیمر",
+    "saveChanges": "ذخیره تغییرات",
+    "saving": "در حال ذخیره...",
+    "logout": "خروج",
+    "editProfile": "ویرایش پروفایل",
+    "cancel": "لغو",
+    "notificationSettings": "تنظیمات اعلان"
+  },
+  "banners": {
+    "8ball": "بیلیارد ۸ توپ را در Midasbuy بازی کنید!",
+    "freefire": "الماس Free Fire با بهترین قیمت!",
+    "pubgRecharge": "پاداش شارژ کامل PUBG Mobile!",
+    "deltaBlue": "مجموعه استتار آبی Delta Force!",
+    "deltaGold": "نسخه طلایی Delta Force!",
+    "ageOfEmpires": "اولین شارژ ماهانه Age of Empires!",
+    "deltaFire": "نسخه آتش Delta Force!",
+    "deltaPink": "مجموعه صورتی Delta Force!",
+    "honorOfKings": "Honor of Kings - دوستان را دعوت کنید!",
+    "apexCoin": "Apex Coin - اولین خرید، ۲ برابر ارزش!",
+    "pubgUcDrops": "PUBG Mobile UC روزانه!",
+    "pubgFree": "پاداش‌های رایگان PUBG Mobile!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "شناسه بازیکن را وارد کنید",
+    "signInEnterPlayerId": "وارد شوید و شناسه را وارد کنید",
+    "player": "بازیکن",
+    "signInMidasbuy": "وارد حساب Midasbuy شوید",
+    "enterRedeemCode": "کد بازخرید را وارد کنید",
+    "pleaseEnterRedeemCode": "لطفاً کد بازخرید وارد کنید",
+    "submitting": "در حال ارسال...",
+    "ok": "تأیید",
+    "aboutMidasbuy": "درباره MIDASBUY",
+    "paySafeLine1": "پرداخت امن و سریع",
+    "paySafeLine2": "و سرگرم‌کننده با",
+    "paySafeLine3": "MIDASBUY.",
+    "vipExtraUcFull": "UC اضافی ۳~۷٪ گرفتید",
+    "vipExtraUcShort": "+۳~۷٪ UC",
+    "completeRecharge": "لطفاً شارژ را تکمیل کنید!",
+    "extraBonus": "جایزه اضافی!"
+  },
+  "shopTab": {
+    "popularGames": "بازی‌های محبوب",
+    "gameSelected": "{{name}} انتخاب شد",
+    "notAvailableYet": "این محصول هنوز موجود نیست. به زودی!"
+  },
+  "eventsTab": {
+    "title": "رویدادهای PUBG Mobile",
+    "liveEvents": "رویدادهای زنده",
+    "upcomingEvents": "رویدادهای آینده",
+    "ucBonusEvent": "رویداد جایزه UC",
+    "ucBonusDesc": "UC اضافی در همه خریدها",
+    "endsIn": "پایان در",
+    "threeDays": "۳ روز",
+    "royalPassSeason": "فصل Royal Pass",
+    "royalPassDesc": "فصل جدید به زودی",
+    "startsIn": "شروع در",
+    "fiveDays": "۵ روز",
+    "limitedTimeOffer": "پیشنهاد محدود",
+    "limitedTimeDesc": "تخفیف ویژه روی آیتم‌های منتخب",
+    "availableFor": "موجود برای",
+    "twentyFourHours": "۲۴ ساعت"
+  },
+  "countryFaq": {
+    "header": "سوالات متداول - PUBG UC {{country}}",
+    "q1": "چگونه PUBG UC در {{country}} بخریم؟",
+    "a1": "به فروشگاه رسمی Midasbuy بروید، بسته UC خود را انتخاب کنید، شناسه بازیکن PUBG خود را وارد کنید، روش پرداخت ({{paymentMethods}}) را انتخاب کنید و پرداخت را تکمیل کنید. UC ظرف ۲-۵ دقیقه فوراً به حساب PUBG Mobile شما تحویل داده می‌شود.",
+    "q2": "ارزان‌ترین قیمت PUBG UC در {{country}} چقدر است؟",
+    "a2": "Midasbuy ارزان‌ترین PUBG UC را از {{currencySymbol}}۰.۹۹ برای ۶۰ UC ارائه می‌دهد. تا ۶۰٪ تخفیف + ۳۰٪ پاداش VIP اضافی در خریدهای عمده دریافت کنید. ما {{paymentMethods}} را قبول می‌کنیم.",
+    "q3": "آیا Midasbuy برای بازیکنان {{country}} امن است؟",
+    "a3": "بله، Midasbuy ۱۰۰٪ امن است و مورد اعتماد بیش از ۱۰ میلیون بازیکن در {{country}} است. ما از درگاه‌های پرداخت امن، API رسمی PUBG استفاده می‌کنیم و تحویل فوری با پشتیبانی ۲۴/۷ ارائه می‌دهیم.",
+    "q4": "چه روش‌های پرداختی در {{country}} موجود است؟",
+    "a4": "در {{country}}، ما {{paymentMethods}} را قبول می‌کنیم. همه پرداخت‌ها امن، رمزگذاری شده و برای تحویل سریع UC فوراً پردازش می‌شوند.",
+    "q5": "تحویل PUBG UC در {{country}} چقدر طول می‌کشد؟",
+    "a5": "تحویل UC فوری است و فقط ۲-۵ دقیقه پس از تأیید پرداخت طول می‌کشد. اگر در {{country}} با تأخیری مواجه شدید، فوراً با تیم پشتیبانی ۲۴/۷ ما تماس بگیرید.",
+    "q6": "آیا می‌توانم با {{currency}} در {{country}} Royal Pass بخرم؟",
+    "a6": "بله! UC کافی بخرید (۶۰۰ UC برای Elite Pass، ۱۸۰۰ UC برای Elite Plus) با استفاده از روش‌های پرداخت {{currency}} در {{country}}. سپس Royal Pass را مستقیماً از بازی PUBG Mobile خریداری کنید.",
+    "whyBuyTitle": "چرا PUBG UC را از Midasbuy در {{country}} بخریم؟",
+    "whyBuyDesc": "Midasbuy رسمی‌ترین و قابل اعتمادترین پلتفرم شارژ PUBG Mobile UC در {{country}} است. ما ارزان‌ترین قیمت‌های UC را با تخفیف‌های انحصاری تا ۶۰٪ و پاداش VIP اضافی در خریدهای عمده ارائه می‌دهیم. سیستم تحویل فوری ما تضمین می‌کند UC شما ظرف ۲-۵ دقیقه به حساب شما برسد. با پشتیبانی ۲۴/۷ و پردازش پرداخت امن، میلیون‌ها گیمر در {{country}} به ما اعتماد دارند."
+  },
+  "packageGrid": {
+    "popular": "محبوب",
+    "from": "از"
+  },
+  "filters": {
+    "paymentChannels": "کانال‌های پرداخت",
+    "uc": "UC"
+  }
+}

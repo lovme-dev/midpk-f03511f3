@@ -1,0 +1,944 @@
+{
+  "installApp": "Installera app",
+  "language": "Språk",
+  "followUs": "Följ oss",
+  "home": "Hem",
+  "purchase": "Köp",
+  "dashboard": "Instrumentpanel",
+  "buyUCPackages": "Köp UC-paket",
+  "selectLanguage": "Välj språk",
+  "support": "Support",
+  "helpCenter": "Hjälpcenter",
+  "contactUs": "Kontakta oss",
+  "faqs": "Vanliga frågor",
+  "paymentIssues": "Betalningsproblem",
+  "security": "Säkerhet",
+  "legal": "Juridiskt",
+  "termsOfService": "Användarvillkor",
+  "privacyPolicy": "Integritetspolicy",
+  "cookiePolicy": "Cookie-policy",
+  "refundPolicy": "Återbetalningspolicy",
+  "copyrightNotice": "Upphovsrättsmeddelande",
+  "aboutUs": "Om oss",
+  "aboutMidasbuy": "Om Midasbuy",
+  "blogs": "Bloggar",
+  "careers": "Karriär",
+  "press": "Press",
+  "partners": "Partners",
+  "popularGames": "Populära spel",
+  "allGames": "Alla spel",
+  "latestNews": "Senaste nytt",
+  "viewAll": "Visa alla",
+  "miniGamesLabel": "Minispel",
+  "featured": "UTVALT",
+  "goButton": "GÅ",
+  "games": "Spel",
+  "all": "Alla",
+  "endsIn": "Slutar om",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR: SILENT GODS"
+  },
+  "buyNow": "Köp nu",
+  "addToCart": "Lägg i varukorgen",
+  "selectPackage": "Välj paket",
+  "enterPlayerId": "Ange spelar-ID",
+  "playerId": "Spelar-ID",
+  "username": "Användarnamn",
+  "email": "E-post",
+  "password": "Lösenord",
+  "login": "Logga in",
+  "logout": "Logga ut",
+  "signUp": "Registrera dig",
+  "forgotPassword": "Glömt lösenord?",
+  "rememberMe": "Kom ihåg mig",
+  "noAccount": "Har du inget konto?",
+  "haveAccount": "Har du redan ett konto?",
+  "orderHistory": "Orderhistorik",
+  "orderStatus": "Orderstatus",
+  "pending": "Väntar",
+  "completed": "Slutförd",
+  "failed": "Misslyckades",
+  "processing": "Bearbetar",
+  "payment": "Betalning",
+  "paymentMethod": "Betalningsmetod",
+  "totalAmount": "Totalt belopp",
+  "discount": "Rabatt",
+  "couponCode": "Kupongkod",
+  "applyCoupon": "Använd kupong",
+  "checkout": {
+    "enterPlayerIdNow": "Ange ditt spelar-ID nu",
+    "playerId": "Spelar-ID",
+    "enterPlayerId": "Ange spelar-ID",
+    "enterPlayerId10": "Ange 10-siffrigt spelar-ID",
+    "enterUsername": "Ange användarnamn",
+    "enterPlayerIdToPurchase": "Ange spelar-ID för att köpa",
+    "selectPlayerIdToRecharge": "Välj eller fyll i ditt spelar-ID du vill ladda upp",
+    "couldntFindPlayerId": "Kunde inte hitta ditt spelar-ID?",
+    "coupon": "Kupong",
+    "noAvailableCoupon": "Ingen tillgänglig kupong",
+    "selectPaymentChannels": "Välj betalningskanaler",
+    "creditDebitCard": "Kredit-/Betalkort/Förbetalda kort",
+    "vipExtraPoints": "VIP-extrapoäng",
+    "payNow": "Betala nu",
+    "total": "Totalt",
+    "purchaseItem": "Köpobjekt",
+    "extraForYou": "Extra för dig",
+    "playerIdRequired": "Spelar-ID krävs",
+    "pleaseEnterPlayerId": "Ange ditt spelar-ID först",
+    "invalidPlayerId": "Ogiltigt spelar-ID",
+    "enterValidPlayerId": "Ange ett giltigt spelar-ID",
+    "invalidUsername": "Ogiltigt användarnamn",
+    "enterValidUsername": "Ange ett giltigt användarnamn",
+    "paymentError": "Betalningsfel",
+    "paymentFailed": "Kunde inte initiera betalning. Försök igen.",
+    "paymentSuccessful": "Betalningen lyckades!",
+    "cryptoConfirmed": "Din kryptobetalning har bekräftats.",
+    "recentPlayerIds": "Senaste spelar-ID:n",
+    "enterNewPlayerId": "Ange nytt spelar-ID",
+    "saveAndContinue": "Spara och fortsätt",
+    "signInFirst": "Logga in först",
+    "securityPayment": "SÄKER BETALNING",
+    "orderSummary": "ORDERSAMMANFATTNING"
+  },
+  "proceedToPayment": "Fortsätt till betalning",
+  "back": "Tillbaka",
+  "backToHome": "Tillbaka till startsidan",
+  "next": "Nästa",
+  "submit": "Skicka",
+  "cancel": "Avbryt",
+  "confirm": "Bekräfta",
+  "close": "Stäng",
+  "search": "Sök",
+  "loading": "Laddar...",
+  "error": "Fel",
+  "success": "Framgång",
+  "warning": "Varning",
+  "info": "Information",
+  "welcome": "Välkommen",
+  "welcomeBack": "Välkommen tillbaka",
+  "getStarted": "Kom igång",
+  "learnMore": "Läs mer",
+  "seeMore": "Se mer",
+  "readMore": "Läs mer",
+  "showLess": "Visa mindre",
+  "notifications": "Aviseringar",
+  "settings": "Inställningar",
+  "profile": "Profil",
+  "myOrders": "Mina beställningar",
+  "myAccount": "Mitt konto",
+  "editProfile": "Redigera profil",
+  "changePassword": "Ändra lösenord",
+  "saveChanges": "Spara ändringar",
+  "deleteAccount": "Radera konto",
+  "verifiedReviews": "Verifierade recensioner",
+  "customerReviews": {
+    "title": "Kundrecensioner",
+    "verifiedReviews": "verifierade recensioner",
+    "writeReview": "Skriv en recension",
+    "loginToReview": "Logga in för att skriva recension",
+    "back": "Tillbaka",
+    "ratingDistribution": "Betygsfördelning",
+    "last12Months": "Senaste 12 månaderna",
+    "filterByRating": "Filtrera efter betyg",
+    "allRatings": "Alla",
+    "loadMore": "Ladda fler recensioner",
+    "verifiedPurchase": "Verifierat köp",
+    "submitReview": "Skicka recension",
+    "yourName": "Ditt namn",
+    "rating": "Betyg",
+    "review": "Recension",
+    "shareExperience": "Dela din upplevelse...",
+    "helpful": "Hjälpsam",
+    "reply": "Svara",
+    "delete": "Radera"
+  },
+  "writeReview": "Skriv en recension",
+  "rating": "Betyg",
+  "instantDelivery": "Omedelbar leverans",
+  "securePayment": "Säker betalning",
+  "bestPrice": "Bästa pris",
+  "officialPartner": "Officiell partner",
+  "trustedBy": "Betrodd av miljontals spelare",
+  "contactSupport": "Kontakta support",
+  "paymentIssuesHelp": "Hjälp med betalningsproblem",
+  "needHelp": "Behöver du hjälp med ett köp?",
+  "lastUpdated": "Senast uppdaterad",
+  "effectiveDate": "Giltighetsdatum",
+  "contactEmail": "Kontakt e-post",
+  "footer": {
+    "description": "Den officiella plattformen för att köpa spelvaluta och föremål för PUBG Mobile och andra populära spel.",
+    "copyright": "© 2026 MidasBuy. Alla rättigheter förbehållna. Alla varumärken som refereras häri tillhör sina respektive ägare.",
+    "mobileDescription": "Midasbuy är den officiella påfyllningsbutiken från Tencent. Betala säkert, snabbt och roligt på Midasbuy.",
+    "contactUsTitle": "Kontakta oss",
+    "contactUsDesc": "Om du behöver hjälp, kontakta oss genom att klicka på \"Kundtjänst\" för att komma i kontakt med oss.",
+    "customerService": "Kundtjänst",
+    "cookiesPreference": "Cookie-preferenser",
+    "verifiedReviews": "80 837 verifierade recensioner"
+  },
+  "whyTopUp": {
+    "title": "Varför ladda upp spel på Midasbuy?",
+    "section1Title": "1. Midasbuy: PUBG MOBILEs officiella auktoriserade utländska påfyllningsbutik",
+    "section1Content": "Som PUBG MOBILEs exklusivt officiellt auktoriserade utländska betalningspartner erbjuder Midasbuy säkra och effektiva UC-påfyllningstjänster för spelare i regioner som Hongkong, Japan, Sydostasien, Europa och Amerika. Med stöd för Alipay, PayPal och 10+ betalningsmetoder erbjuder vi exklusiva rabatter och begränsade föremål jämfört med inofficiella kanaler.",
+    "section2Title": "2. Midasbuy PUBG Mobile UC Bonusinlösen:",
+    "section2Content": "Aktivera PUBG Mobile-inlösenkoder eller presentkort på Midasbuys officiella inlösenportal för att få 3%-7% bonus-UC direkt. Säkra dina gratis UC-belöningar genom ePin-kuponger eller kampanjkoder.",
+    "section3Title": "3. PUBG MOBILE | DET BÄSTA BATTLE ROYALE-MOBILSPELET",
+    "section3Content": "Som ett globalt populärt gratis-att-spela taktiskt skjutspel har PUBG MOBILE olika slagfält som Erangel, Miramar och Rondo. Spelare planerar fallskärmslandningar för att samla automatkarbiner, krypskyttegevär och rustningar.",
+    "section4Title": "4. Frågor och svar",
+    "q1": "F: Hur gör jag köp för PUBG MOBILE?",
+    "q2": "F: Var får jag min PUBG MOBILE UC efter att jag köpt den?",
+    "q3": "F: Hur löser jag in koder för föremål på Midasbuy?",
+    "q4": "F: Varför kan jag inte få mina produkter efter köpet?"
+  },
+  "officialRechargeStore": "Vi är den officiella påfyllningsbutiken från Tencent",
+  "discoverOtherRegionGames": "UPPTÄCK ANDRA REGIONSSPEL",
+  "midasbuyVideo": "MIDASBUY VIDEO",
+  "header": {
+    "midasbuyVideo": "MIDASBUY VIDEO",
+    "noNotifications": "Inga aviseringar ännu",
+    "notificationsHint": "Du kommer se uppdateringar här",
+    "signInToEnjoy": "Logga in för att njuta",
+    "exclusiveService": "Exklusiv service",
+    "signInSignUp": "Logga in / Registrera dig",
+    "coupon": "Kupong",
+    "orderCenter": "Ordercenter",
+    "accountSecurity": "Konto och säkerhet",
+    "midasbuyEvents": "Midasbuy evenemang",
+    "liveVideo": "Live & Video",
+    "adminPanel": "Adminpanel"
+  },
+  "miniGames": {
+    "title": "MINISPEL",
+    "description": "Observera att minispelen som finns tillgängliga på Midasbuys webbplats drivs av tredjepartsleverantörer och inte av Midasbuy.",
+    "moreDetails": "Mer detaljer",
+    "tag": "Minispel",
+    "noDownload": "Ingen appnedladdning behövs! Spela direkt på Midasbuy!",
+    "noDownloadDesktop": "Ingen appnedladdning behövs! Spela direkt på",
+    "playNow": "Spela nu",
+    "shop": "Butik"
+  },
+  "events": {
+    "title": "Evenemang",
+    "noEvents": "Inga evenemang tillgängliga just nu",
+    "comingSoon": "Kommer snart",
+    "activeEvents": "Aktiva evenemang",
+    "pastEvents": "Tidigare evenemang",
+    "viewDetails": "Visa detaljer",
+    "participate": "Delta nu",
+    "endsIn": "Slutar om",
+    "startsIn": "Börjar om"
+  },
+  "shop": {
+    "title": "Butik",
+    "categories": "Kategorier",
+    "allItems": "Alla föremål",
+    "featured": "Utvalt",
+    "newArrivals": "Nyheter",
+    "bestSellers": "Bästsäljare",
+    "onSale": "Rea",
+    "outOfStock": "Slut i lager",
+    "inStock": "I lager",
+    "addedToCart": "Tillagd i varukorgen",
+    "viewCart": "Visa varukorg",
+    "continueShopping": "Fortsätt handla"
+  },
+  "redeem": {
+    "title": "Lös in kod",
+    "enterCode": "Ange inlösenkod",
+    "enterPlayerID": "Ange spelar-ID",
+    "enterUsername": "Ange användarnamn (valfritt)",
+    "submitCode": "Skicka kod",
+    "placeholder": "Ange din inlösenkod här",
+    "playerIdPlaceholder": "Ange ditt spelar-ID",
+    "usernamePlaceholder": "Ange ditt användarnamn",
+    "success": "Koden har lösts in!",
+    "error": "Ogiltig kod eller koden har redan använts",
+    "instructions": "Ange din inlösenkod för att hämta dina belöningar",
+    "processing": "Bearbetar din kod..."
+  },
+  "tabs": {
+    "purchase": "KÖP",
+    "redeem": "LÖS IN",
+    "shop": "BUTIK",
+    "events": "EVENEMANG"
+  },
+  "news": {
+    "nikkeBonus": "Få extra 100% NIKKE-bonus vid första påfyllningen!",
+    "registerFreeSkin": "Registrera dig för att få gratis skin",
+    "madDogGames": "Mad Dog Games lyckoskattjakt",
+    "hokPointsLottery": "Honor of Kings poänglotteri",
+    "apexCoinBonanza": "Apex Coin Bonanza: Första köpet, 2x värde!",
+    "pubgVipBenefits": "PUBG MOBILE VIP-fördelar",
+    "purchaseBonus": "Köpbonus",
+    "extraBonus45": "EXTRA BONUS ENDAST PÅ MIDASBUY NJUT AV UPP TILL 45% BONUS NU",
+    "aoeDaily": "Age of Empires dagliga paket"
+  },
+  "promoBanner": {
+    "slide1": "Ange spelar-ID för att visa belöningar och låsa upp exklusiva bonusar. Få specialrabatter på UC-köp!",
+    "slide2": "Ladda upp & Snurra UC | Vänner får gratis kuponger —— 3000UC MAX!",
+    "slide3": "100% vinstchans! Dubbla poäng på medlemsdag, bara idag! Kom och vinn storvinsten!"
+  },
+  "videosPage": {
+    "title": "MIDASBUY LIVE & VIDEO",
+    "upcomingLiveStream": "KOMMANDE LIVESTREAM",
+    "videoAndLiveRecord": "VIDEO & LIVE-INSPELNING",
+    "video": "VIDEO",
+    "liveRecord": "LIVE-INSPELNING",
+    "chooseGame": "VÄLJ SPEL",
+    "noLiveRecords": "Inga live-inspelningar tillgängliga",
+    "loadMore": "Ladda mer",
+    "videoComingSoon": "Video kommer snart",
+    "videoNotAvailable": "Denna video är inte tillgänglig ännu. Kolla tillbaka senare!",
+    "seeAll": "Se alla",
+    "more": "Mer"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Integritetspolicy",
+      "lastUpdated": "Senast uppdaterad: Januari 2025",
+      "intro": "På Midasbuy är vi engagerade i att skydda din integritet och säkerställa säkerheten för din personliga information. Denna integritetspolicy förklarar hur vi samlar in, använder, avslöjar och skyddar dina data när du använder våra tjänster.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Information vi samlar in",
+          "content": "Vi samlar in information som du tillhandahåller direkt till oss, som när du skapar ett konto, gör ett köp eller kontaktar vårt supportteam. Detta inkluderar ditt namn, e-postadress, spelar-ID, betalningsinformation och transaktionshistorik."
+        },
+        "howWeUse": {
+          "title": "Hur vi använder din information",
+          "content": "Vi använder din information för att bearbeta transaktioner, leverera dina köp, tillhandahålla kundsupport, skicka uppdateringar om dina beställningar och förbättra våra tjänster."
+        },
+        "informationSharing": {
+          "title": "Informationsdelning",
+          "content": "Vi säljer inte din personliga information. Vi kan dela dina data med betrodda tredje parter som hjälper oss att driva vår plattform, som betalningsprocessorer och analysleverantörer."
+        },
+        "dataSecurity": {
+          "title": "Datasäkerhet",
+          "content": "Vi implementerar branschstandard säkerhetsåtgärder för att skydda dina data från obehörig åtkomst, ändring eller förstörelse."
+        },
+        "yourRights": {
+          "title": "Dina integritetsrättigheter",
+          "content": "Du har rätt att få tillgång till, korrigera eller radera din personliga information. Du kan också välja bort marknadsföringskommunikation."
+        },
+        "internationalTransfers": {
+          "title": "Internationella dataöverföringar",
+          "content": "Dina data kan överföras till och lagras i länder utanför ditt hemland. Vi säkerställer lämpliga skyddsåtgärder."
+        },
+        "dataRetention": {
+          "title": "Datalagring",
+          "content": "Vi behåller din personliga information så länge det är nödvändigt för att uppfylla de syften för vilka den samlades in."
+        },
+        "childrensPrivacy": {
+          "title": "Barns integritet",
+          "content": "Våra tjänster är inte avsedda för barn under 13 år. Vi samlar inte medvetet in personlig information från barn."
+        },
+        "updates": {
+          "title": "Uppdateringar av denna policy",
+          "content": "Vi kan uppdatera denna integritetspolicy från tid till annan. Vi meddelar dig om eventuella väsentliga ändringar."
+        },
+        "contactUs": {
+          "title": "Kontakta oss om integritet",
+          "content": "Om du har några frågor om denna integritetspolicy eller våra integritetspraxis, kontakta oss via vår kontaktsupportssida."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Cookie-policy",
+      "lastUpdated": "Senast uppdaterad: Januari 2025",
+      "intro": "Denna cookie-policy förklarar hur Midasbuy använder cookies och liknande tekniker när du besöker vår webbplats.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Vad är cookies?",
+          "content": "Cookies är små textfiler som placeras på din enhet när du besöker vår webbplats. De hjälper oss att ge dig en bättre upplevelse genom att komma ihåg dina preferenser."
+        },
+        "essentialCookies": {
+          "title": "Nödvändiga cookies",
+          "content": "Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt och kan inte stängas av."
+        },
+        "analyticsCookies": {
+          "title": "Analyscookies",
+          "content": "Dessa cookies hjälper oss att förstå hur besökare interagerar med vår webbplats genom att samla in och rapportera information anonymt."
+        },
+        "advertisingCookies": {
+          "title": "Reklam- och marknadsföringscookies",
+          "content": "Dessa cookies används för att leverera annonser som är mer relevanta för dig och dina intressen."
+        },
+        "functionalityCookies": {
+          "title": "Funktionalitetscookies",
+          "content": "Dessa cookies möjliggör förbättrad funktionalitet och personalisering."
+        },
+        "thirdPartyCookies": {
+          "title": "Tredjepartscookies",
+          "content": "Vissa cookies placeras av tredjepartstjänster som visas på våra sidor."
+        },
+        "managingCookies": {
+          "title": "Hantera dina cookie-preferenser",
+          "content": "Du har flera alternativ för att hantera cookies. De flesta webbläsare låter dig kontrollera cookies genom sina inställningar."
+        },
+        "cookieRetention": {
+          "title": "Cookie-lagringsperiod",
+          "content": "Olika cookies har olika livslängder. Sessionscookies raderas när webbläsaren stängs."
+        }
+      },
+      "questionsTitle": "Frågor om vår cookie-policy?",
+      "questionsContent": "Om du har några frågor om vår användning av cookies eller denna policy, kontakta oss."
+    },
+    "termsOfService": {
+      "title": "Användarvillkor",
+      "subtitle": "Midasbuy villkor",
+      "lastUpdated": "Senast uppdaterad: Januari 2025",
+      "intro": "Genom att använda Midasbuy godkänner du dessa villkor. Återbetalning endast om ej levererat inom 24 timmar.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Tjänsteöversikt",
+          "content": "Midasbuy säljer UC-paket för PUBG Mobile och liknande spelkrediter genom säkra onlinetransaktioner."
+        },
+        "userResponsibilities": {
+          "title": "2. Användaransvar",
+          "items": [
+            "Tillhandahåll korrekt PUBG-ID och betalningsuppgifter.",
+            "Se till att du har tillstånd att göra köp med den valda betalningsmetoden.",
+            "Undvik bedräglig eller missbrukande användning av våra tjänster."
+          ]
+        },
+        "delivery": {
+          "title": "3. Leverans",
+          "items": [
+            "UC-köp levereras vanligtvis omedelbart, men kan i sällsynta fall ta upp till 30 minuter.",
+            "Om leveransen försenas utöver angiven tid kan du kontakta vårt supportteam."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Återbetalningspolicy",
+          "items": [
+            "Återbetalningar måste begäras inom 24 timmar efter köpet om UC inte har levererats.",
+            "Inga återbetalningar kommer att utfärdas efter 24 timmar.",
+            "Alla återbetalningar omfattas av vår återbetalningspolicy."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Ändringar av villkor",
+          "content": "Vi kan uppdatera dessa villkor när som helst. Fortsatt användning av vår webbplats innebär att du accepterar de uppdaterade villkoren."
+        }
+      },
+      "acknowledgment": "Genom att använda Midasbuy bekräftar du att du har läst, förstått och godkänner att vara bunden av dessa användarvillkor."
+    },
+    "refundPolicy": {
+      "title": "Återbetalningspolicy",
+      "subtitle": "Midasbuy återbetalningsvillkor",
+      "lastUpdated": "Senast uppdaterad: Januari 2025",
+      "intro": "Inga återbetalningar efter 24 timmar; återbetalning endast om UC inte levereras inom utlovad tid.",
+      "description": "På Midasbuy strävar vi efter att tillhandahålla snabb och pålitlig UC-leverans.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Berättigande till återbetalning",
+          "items": [
+            "Återbetalningar är endast tillgängliga om UC inte har levererats inom utlovad leveranstid.",
+            "Återbetalningsförfrågningar måste göras inom 24 timmar efter köpet.",
+            "Om UC redan har levererats till ditt konto är återbetalningar inte möjliga."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Icke-återbetalningsbara fall",
+          "items": [
+            "UC framgångsrikt levererat till rätt konto.",
+            "Fel PUBG-ID eller uppgifter angivna av kunden.",
+            "Återbetalningsförfrågan gjord efter 24 timmar efter köpet.",
+            "Ändrat sig efter betalning."
+          ]
+        },
+        "process": {
+          "title": "3. Återbetalningsprocess",
+          "content": "För att begära återbetalning, mejla oss med:",
+          "items": [
+            "Ditt order-ID",
+            "Betalningsbevis",
+            "Anledning till återbetalningsförfrågan"
+          ],
+          "timeline": "När godkänd skickas återbetalningar till din ursprungliga betalningsmetod inom 7–14 arbetsdagar."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Hjälpcenter",
+      "subtitle": "Få support för alla dina Midasbuy-behov.",
+      "contactByPhone": "Kontakta via telefon",
+      "phoneDescription": "Vårt supportteam är tillgängligt 24/7.",
+      "customerSupport": "Kundsupport",
+      "clickToChat": "Klicka för att chatta på WhatsApp",
+      "chatWithAgent": "Chatta med agent",
+      "emailSupport": "E-postsupport",
+      "emailDescription": "Skicka ett e-postmeddelande så återkommer vi inom 24 timmar.",
+      "supportEmail": "Support-e-post",
+      "responseTime": "Svar inom 24 timmar",
+      "liveChat": "Live-chatt support",
+      "liveChatDescription": "Anslut till en supportagent direkt.",
+      "startLiveChat": "Starta live-chatt",
+      "available247": "Tillgänglig 24/7",
+      "stillHaveQuestions": "Har du fortfarande frågor? Kolla våra vanliga frågor."
+    },
+    "copyrightNotice": {
+      "title": "Upphovsrättsmeddelande",
+      "subtitle": "Information om immateriella rättigheter, varumärken och upphovsrättsskyddat material på Midasbuy.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Upphovsrättsskydd",
+          "content1": "Allt innehåll på Midasbuys webbplats och plattform är Midasbuys eller dess innehållsleverantörers egendom.",
+          "content2": "Sammanställningen av allt innehåll på denna webbplats är Midasbuys exklusiva egendom."
+        },
+        "trademarks": {
+          "title": "2. Varumärken",
+          "content1": "Midasbuy® och Midasbuy-logotypen är registrerade varumärken.",
+          "notice": "PUBG MOBILE, PUBG och alla relaterade logotyper tillhör exklusivt PUBG Corporation.",
+          "content2": "Inget på denna webbplats ska tolkas som att det ger licens att använda något varumärke."
+        },
+        "useOfContent": {
+          "title": "3. Användning av innehåll",
+          "intro": "Du får endast använda innehåll för personligt, icke-kommersiellt bruk.",
+          "items": [
+            "Modifiera inget material på denna webbplats",
+            "Använd inte materialen för kommersiella ändamål",
+            "Försök inte att dekompilera eller baklängeskonstruera någon programvara",
+            "Ta inte bort några upphovsrätts- eller äganderättsmeddelanden"
+          ],
+          "termination": "Denna licens upphör automatiskt om du bryter mot någon av dessa restriktioner."
+        },
+        "userGeneratedContent": {
+          "title": "4. Användargenererat innehåll",
+          "content1": "Genom att lägga upp innehåll på Midasbuy ger du oss rätt att använda det.",
+          "content2": "Du representerar och garanterar att du äger eller kontrollerar rättigheterna till innehållet."
+        },
+        "copyrightInfringement": {
+          "title": "5. Upphovsrättsintrångskrav",
+          "intro": "Midasbuy respekterar andras immateriella rättigheter.",
+          "items": [
+            "En elektronisk eller fysisk signatur från den behöriga personen",
+            "En beskrivning av det upphovsrättsskyddade verket",
+            "En beskrivning av var det intrångande materialet finns",
+            "Din adress, telefonnummer och e-postadress"
+          ],
+          "contactTitle": "Midasbuys upphovsrättsagent:",
+          "contactInfo": "Copyright Agent, Legal Department\nMidasbuy Inc."
+        },
+        "dmca": {
+          "title": "6. DMCA-policy",
+          "content1": "Midasbuy följer DMCA-bestämmelserna.",
+          "content2": "Vid mottagande av ett giltigt DMCA-meddelande kommer Midasbuy att:",
+          "items": [
+            "Ta bort eller inaktivera åtkomst till materialet",
+            "Meddela innehållsleverantören",
+            "Ge information om hur man skickar ett motmeddelande"
+          ]
+        },
+        "changes": {
+          "title": "7. Ändringar av upphovsrättsmeddelande",
+          "content": "Midasbuy förbehåller sig rätten att ändra detta meddelande när som helst."
+        },
+        "contactUs": {
+          "title": "8. Kontaktinformation",
+          "intro": "Om du har frågor, kontakta oss på:",
+          "contactInfo": "E-post: legal@midasbuy.com"
+        }
+      },
+      "lastUpdated": "Senast uppdaterad: 1 mars 2026",
+      "relatedPolicies": "För mer information om våra policyer, granska:"
+    },
+    "faqs": {
+      "title": "Vanliga frågor",
+      "subtitle": "Hitta svar på vanliga frågor om att köpa PUBG MOBILE UC.",
+      "searchPlaceholder": "Sök efter frågor...",
+      "noResults": "Inga resultat hittades för",
+      "tryDifferent": "Prova ett annat sökord eller bläddra efter kategori",
+      "cantFindAnswer": "Hittar du inte det du letar efter?",
+      "contactSupport": "Kontakta support",
+      "categories": {
+        "all": "Alla vanliga frågor",
+        "purchases": "Köp",
+        "payments": "Betalningsproblem",
+        "account": "Konto",
+        "security": "Säkerhet",
+        "refunds": "Återbetalningar"
+      },
+      "questions": {
+        "howToPurchaseUC": {
+          "question": "Hur köper jag UC i PUBG Mobile?",
+          "answer": "För att köpa UC i PUBG Mobile via Midasbuy, välj ditt önskade UC-paket, ange ditt PUBG Mobile-ID, välj din föredragna betalningsmetod och slutför transaktionen."
+        },
+        "isSafe": {
+          "question": "Är det säkert att köpa UC från Midasbuy?",
+          "answer": "Ja, Midasbuy är den officiella påfyllningsplattformen för PUBG Mobile. Vi använder branschstandard kryptering."
+        },
+        "deliveryTime": {
+          "question": "Hur lång tid tar det att få UC efter köpet?",
+          "answer": "I de flesta fall krediteras UC till ditt PUBG Mobile-konto omedelbart. I sällsynta fall kan det ta upp till 30 minuter."
+        },
+        "paymentMethods": {
+          "question": "Vilka betalningsmetoder accepteras?",
+          "answer": "Midasbuy accepterar olika betalningsmetoder inklusive kredit-/betalkort, PayPal, Google Pay, Apple Pay."
+        },
+        "ucNotReceived": {
+          "question": "Jag gjorde en betalning men fick inte min UC. Vad ska jag göra?",
+          "answer": "Verifiera först att din betalning behandlades framgångsrikt. Om betalningen lyckades men du inte fått din UC inom 30 minuter, kontakta vårt supportteam."
+        },
+        "purchaseForOthers": {
+          "question": "Kan jag köpa UC åt en annan spelare?",
+          "answer": "Ja, du kan köpa UC åt vilken PUBG Mobile-spelare som helst så länge du har deras korrekta spelar-ID."
+        },
+        "findPlayerId": {
+          "question": "Hur hittar jag mitt PUBG Mobile-ID?",
+          "answer": "Du kan hitta ditt PUBG Mobile-ID genom att öppna spelet, trycka på din profilbild och leta efter ID-numret."
+        },
+        "bonuses": {
+          "question": "Finns det några bonusar för att köpa större UC-paket?",
+          "answer": "Ja, större UC-paket kommer ofta med bonus-UC. Mängden visas tydligt på varje paketalternativ."
+        },
+        "ucExpire": {
+          "question": "Kommer min UC att löpa ut om jag inte använder den?",
+          "answer": "Nej, UC löper inte ut. När den krediterats till ditt konto stannar den där tills du spenderar den."
+        },
+        "refund": {
+          "question": "Kan jag få återbetalning för mitt UC-köp?",
+          "answer": "Enligt vår återbetalningspolicy är alla UC-köp slutgiltiga och icke-återbetalningsbara när UC har krediterats till ditt konto."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Kontakta oss",
+      "subtitle": "Har du frågor eller behöver hjälp? Vårt team är redo att hjälpa dig.",
+      "sendMessage": "Skicka ett meddelande",
+      "yourName": "Ditt namn",
+      "enterName": "Ange ditt namn",
+      "emailAddress": "E-postadress",
+      "enterEmail": "Ange din e-post",
+      "subject": "Ämne",
+      "whatIsThis": "Vad gäller det?",
+      "message": "Meddelande",
+      "howCanWeHelp": "Hur kan vi hjälpa dig?",
+      "sending": "Skickar...",
+      "sendMessageBtn": "Skicka meddelande",
+      "messageSent": "Meddelande skickat",
+      "messageSuccess": "Tack för att du kontaktar oss. Vi svarar på din förfrågan snart.",
+      "messageError": "Fel vid sändning av meddelande",
+      "messageErrorDesc": "Det uppstod ett problem. Försök igen eller kontakta oss direkt.",
+      "contactInfo": "Kontaktinformation",
+      "whatsappSupport": "WhatsApp-support",
+      "support247": "24/7 kundsupport via WhatsApp",
+      "emailSupportTitle": "E-postsupport",
+      "forAllInquiries": "För alla förfrågningar och support",
+      "liveChatTitle": "Live-chatt",
+      "availableOnWebsite": "Tillgänglig 24/7 på vår webbplats",
+      "startChat": "Starta chatt",
+      "ourOffice": "Vårt kontor",
+      "headquarters": "Midasbuy huvudkontor",
+      "address": "One Midasbuy Plaza, Gaming District\nLos Angeles, CA 90210\nUSA",
+      "officeHours": "Kontorstider: Måndag till fredag, 9:00 - 18:00 (PST)"
+    },
+    "security": {
+      "title": "Säkerhetscenter",
+      "subtitle": "Lär dig hur Midasbuy skyddar din information.",
+      "howWeProtect": "Hur vi skyddar dig",
+      "securePayments": "Säkra betalningar",
+      "securePaymentsDesc": "Alla betalningstransaktioner på Midasbuy är krypterade med TLS-protokoll.",
+      "securePaymentsNote": "Vi lagrar aldrig dina fullständiga kortuppgifter på våra servrar.",
+      "accountProtection": "Kontoskydd",
+      "accountProtectionDesc": "Ditt konto skyddas av ett säkert autentiseringssystem.",
+      "accountProtectionNote": "Vi granskar regelbundet våra system.",
+      "dataPrivacy": "Dataintegritet",
+      "dataPrivacyDesc": "Vi följer strikta dataintegritetspraxis.",
+      "dataPrivacyNote": "Du kan begära åtkomst till eller radering av dina personuppgifter.",
+      "fraudPrevention": "Bedrägeriförebyggande",
+      "fraudPreventionDesc": "Våra avancerade bedrägeridetekteringssystem övervakar transaktioner i realtid.",
+      "fraudPreventionNote": "Vi samarbetar nära med betalningsleverantörer.",
+      "bestPractices": "Bästa säkerhetspraxis för användare",
+      "useStrongPasswords": "Använd starka, unika lösenord",
+      "useStrongPasswordsDesc": "Skapa komplexa lösenord med bokstäver, siffror och specialtecken.",
+      "enable2FA": "Aktivera tvåfaktorsautentisering",
+      "enable2FADesc": "Lägg till ett extra säkerhetslager genom att aktivera 2FA.",
+      "useOfficialSites": "Använd endast officiella webbplatser",
+      "useOfficialSitesDesc": "Se alltid till att du är på den officiella Midasbuy-webbplatsen.",
+      "keepDevicesSecure": "Håll dina enheter säkra",
+      "keepDevicesSecureDesc": "Uppdatera regelbundet dina enheters operativsystem.",
+      "bewarePhishing": "Var försiktig med nätfiskeförsök",
+      "bewarePhishingDesc": "Midasbuy kommer aldrig att be om ditt lösenord via e-post.",
+      "monitorTransactions": "Övervaka dina transaktioner",
+      "monitorTransactionsDesc": "Kontrollera regelbundet din köphistorik.",
+      "reportConcerns": "Rapportera säkerhetsproblem",
+      "reportConcernsDesc": "Om du misstänker obehörig åtkomst, rapportera det omedelbart.",
+      "reportSecurityIssue": "Rapportera säkerhetsproblem",
+      "securityFAQ": "Säkerhets-FAQ",
+      "urgentContact": "För brådskande säkerhetsfrågor, kontakta security@midasbuy.com"
+    },
+    "paymentIssues": {
+      "title": "Betalningsproblem",
+      "subtitle": "Hitta lösningar på vanliga betalningsproblem.",
+      "commonIssues": "Vanliga betalningsproblem",
+      "paymentDeclined": "Betalning nekad",
+      "paymentDeclinedReasons": "Om din betalning nekades kan det bero på:",
+      "paymentDeclinedItems": [
+        "Otillräckliga medel på ditt konto",
+        "Felaktig kortinformation",
+        "Din bank kan ha blockerat transaktionen",
+        "Ditt kort kan ha gått ut",
+        "Transaktionsgränser på ditt kort"
+      ],
+      "howToResolve": "Så här löser du detta:",
+      "paymentDeclinedSteps": [
+        "Verifiera att dina kortuppgifter är korrekta",
+        "Kontrollera med din bank om transaktionen blockerades",
+        "Prova en annan betalningsmetod",
+        "Se till att du har tillräckliga medel",
+        "Kontakta din bank för att auktorisera transaktioner"
+      ],
+      "ucNotReceived": "Betalning lyckades men UC ej mottagen",
+      "ucNotReceivedReasons": "Om din betalning lyckades men du inte fått din UC kan det bero på:",
+      "ucNotReceivedItems": [
+        "Serverfördröjningar",
+        "Felaktigt spelar-ID angivet",
+        "Tillfälliga synkroniseringsproblem",
+        "Systemunderhåll"
+      ],
+      "ucNotReceivedSteps": [
+        "Vänta minst 30 minuter",
+        "Kontrollera din spelpost",
+        "Verifiera att du angav rätt spelar-ID",
+        "Logga in och ut ur spelet",
+        "Kontakta kundsupport om problemet kvarstår"
+      ],
+      "multipleCharges": "Flera debiteringar för ett köp",
+      "multipleChargesReasons": "Om du ser flera debiteringar för ett enda köp kan det bero på:",
+      "multipleChargesItems": [
+        "Betalningsbearbetningsfel",
+        "Klickade på köpknappen flera gånger",
+        "Tillfälliga auktoriseringshållningar",
+        "Webbläsar- eller anslutningsproblem"
+      ],
+      "multipleChargesSteps": [
+        "Kontrollera om det är faktiska debiteringar eller auktoriseringshållningar",
+        "Vänta 3-5 arbetsdagar",
+        "Kontakta kundsupport med skärmdumpar",
+        "Tillhandahåll ditt kontoutdrag"
+      ],
+      "needMoreHelp": "Behöver du mer hjälp?",
+      "needMoreHelpDesc": "Om du fortfarande har betalningsproblem är vårt supportteam redo att hjälpa dig.",
+      "visitHelpCenter": "Besök hjälpcenter",
+      "paymentNote": "För betalningsproblem som involverar stora belopp, kontakta även din bank."
+    },
+    "aboutMidasbuy": {
+      "title": "Om Midasbuy",
+      "subtitle": "Din betrodda partner inom mobilspel",
+      "whoWeAre": "Vilka vi är",
+      "whoWeAreContent1": "Midasbuy är världens ledande digitala spelbutik.",
+      "whoWeAreContent2": "Som officiell partner med stora spelutgivare levererar vi autentiskt, auktoriserat digitalt innehåll.",
+      "ourMission": "Vårt uppdrag",
+      "ourMissionContent1": "Vårt uppdrag är att ge spelare världen över omedelbar, säker åtkomst till spelinnehållet de älskar.",
+      "ourMissionContent2": "Vi är engagerade i att bryta ned barriärer inom digital spelhandel.",
+      "whyChooseUs": "Varför välja Midasbuy?",
+      "officialPartnership": "Officiellt partnerskap",
+      "officialPartnershipDesc": "Auktoriserad distributör för PUBG Mobile, Free Fire, Honor of Kings och 30+ speltitlar.",
+      "lightningDelivery": "Blixtsnabb leverans",
+      "lightningDeliveryDesc": "Genomsnittlig leveranstid under 2 minuter med 98,7% omedelbar leveransgrad.",
+      "bankGradeSecurity": "Banknivåsäkerhet",
+      "bankGradeSecurityDesc": "SSL-kryptering, PCI DSS-efterlevnad och flerlagers bedrägerskydd.",
+      "globalPayments": "Globala betalningsalternativ",
+      "globalPaymentsDesc": "Stöd för 150+ betalningsmetoder.",
+      "gamersServed": "Spelare betjänade",
+      "countries": "Länder",
+      "successRate": "Framgångsgrad",
+      "avgDelivery": "Genomsnittlig leverans",
+      "joinCommunity": "Gå med i gemenskapen",
+      "joinCommunityDesc": "Bli en del av Midasbuy-gemenskapen och håll dig uppdaterad."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ur": "اردو",
+    "ar": "العربية",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "pt": "Português",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "th": "ไทย",
+    "vi": "Tiếng Việt"
+  },
+  "redeemPage": {
+    "title": "LÖS IN KUPONG",
+    "enterRedeemCode": "Ange inlösenkod",
+    "codeNumber": "Kodnummer",
+    "pasteCode": "Klistra in kod",
+    "confirm": "Bekräfta",
+    "submitting": "Skickar...",
+    "limitReached": "Gräns nådd",
+    "reminder": "Påminnelse",
+    "reminderItem1": "Få motsvarande föremål omedelbart efter inlösen.",
+    "reminderItem2": "Inlösenkoden kan endast användas en gång.",
+    "reminderItem3": "Om du har frågor, kontakta återförsäljaren där du köpte kupongerna."
+  },
+  "couponsPage": {
+    "title": "MINA KUPONGER",
+    "redeem": "Lös in",
+    "noEligibleCoupons": "Inga berättigade kuponger",
+    "historicalCoupons": "Historiska kuponger"
+  },
+  "orderCenterPage": {
+    "title": "ORDERCENTER",
+    "all": "ALLA",
+    "toPay": "ATT BETALA",
+    "completed": "SLUTFÖRDA",
+    "cancelled": "AVBRUTNA",
+    "trackOrder": "SPÅRA ORDER",
+    "searchPlaceholder": "Ange transaktions-ID",
+    "search": "Sök",
+    "noOrdersFound": "Inga ordrar hittades",
+    "pending": "Väntar",
+    "processing": "Bearbetar",
+    "failed": "Misslyckades",
+    "viewDetails": "Visa detaljer"
+  },
+  "faqsPage": {
+    "title": "Vanliga frågor",
+    "subtitle": "Hitta svar på vanliga frågor.",
+    "searchPlaceholder": "Sök efter frågor...",
+    "allFaqs": "Alla vanliga frågor",
+    "purchases": "Köp",
+    "paymentIssues": "Betalningsproblem",
+    "account": "Konto",
+    "security": "Säkerhet",
+    "refunds": "Återbetalningar",
+    "noResults": "Inga resultat hittades",
+    "tryDifferent": "Prova ett annat sökord",
+    "cantFind": "Hittar du inte det du letar efter?",
+    "contactSupport": "Kontakta support",
+    "backToHome": "Tillbaka till startsidan"
+  },
+  "authPage": {
+    "login": "Logga in",
+    "register": "Registrera",
+    "email": "E-post",
+    "password": "Lösenord",
+    "confirmPassword": "Bekräfta lösenord",
+    "fullName": "Fullständigt namn",
+    "signIn": "Logga in",
+    "signUp": "Registrera dig",
+    "signingIn": "Loggar in...",
+    "signingUp": "Registrerar...",
+    "orContinueWith": "Eller fortsätt med",
+    "continueWithGoogle": "Fortsätt med Google",
+    "dontHaveAccount": "Har du inget konto?",
+    "alreadyHaveAccount": "Har du redan ett konto?",
+    "welcomeBack": "Välkommen tillbaka",
+    "createAccount": "Skapa konto",
+    "secureLogin": "Säker inloggning",
+    "secureRegistration": "Säker registrering",
+    "enterEmail": "Ange din e-post",
+    "enterPassword": "Ange ditt lösenord",
+    "enterFullName": "Ange ditt fullständiga namn"
+  },
+  "profilePage": {
+    "title": "Profil",
+    "personalInfo": "Personlig information",
+    "fullName": "Fullständigt namn",
+    "email": "E-post",
+    "phone": "Telefon",
+    "gamerTag": "Spelartagg",
+    "saveChanges": "Spara ändringar",
+    "saving": "Sparar...",
+    "logout": "Logga ut",
+    "editProfile": "Redigera profil",
+    "cancel": "Avbryt",
+    "notificationSettings": "Aviseringsinställningar"
+  },
+  "banners": {
+    "8ball": "Spela 8-boll på Midasbuy!",
+    "freefire": "Free Fire-diamanter till bästa priser - Omedelbar leverans garanterad!",
+    "pubgRecharge": "PUBG Mobile Total Recharge-belöningar - Få 60 UC-bonus!",
+    "deltaBlue": "Delta Force Blue Camo Collection - Premium vapenskins!",
+    "deltaGold": "Delta Force Gold Edition - Exklusiva mynt & belöningar!",
+    "ageOfEmpires": "Age of Empires månatlig första påfyllning - Specialerbjudanden!",
+    "deltaFire": "Delta Force Fire Edition - Begränsat soldatpaket!",
+    "deltaPink": "Delta Force Pink Collection - Unikt vapenskin!",
+    "honorOfKings": "Honor of Kings - Bjud in vänner & få 4000 tokens!",
+    "apexCoin": "Apex Coin Bonanza - Första köpet, 2x värde!",
+    "pubgUcDrops": "PUBG Mobile dagliga UC-drops - 3x Squad-hjälp, 3000 UC max!",
+    "pubgFree": "PUBG Mobile gratis belöningar - Få gratis UC, outfit & vapenskin!"
+  },
+  "redeemTab": {
+    "enterPlayerId": "ANGE SPELAR-ID",
+    "signInEnterPlayerId": "LOGGA IN & ANGE SPELAR-ID",
+    "player": "Spelare",
+    "signInMidasbuy": "Logga in på Midasbuy-konto",
+    "enterRedeemCode": "ANGE INLÖSENKOD",
+    "pleaseEnterRedeemCode": "Ange en inlösenkod",
+    "submitting": "Skickar...",
+    "ok": "OK",
+    "aboutMidasbuy": "OM MIDASBUY",
+    "paySafeLine1": "BETALA SÄKERT, SNABBT",
+    "paySafeLine2": "OCH ROLIGT MED",
+    "paySafeLine3": "MIDASBUY.",
+    "vipExtraUcFull": "Du fick extra UC +3~7%",
+    "vipExtraUcShort": "+3~7% UC",
+    "completeRecharge": "Slutför din påfyllning!",
+    "extraBonus": "Extra bonus!"
+  },
+  "shopTab": {
+    "popularGames": "POPULÄRA SPEL",
+    "gameSelected": "{{name}} valt",
+    "notAvailableYet": "Denna produkt är inte tillgänglig ännu. Kommer snart!"
+  },
+  "eventsTab": {
+    "title": "PUBG Mobile evenemang",
+    "liveEvents": "Live-evenemang",
+    "upcomingEvents": "Kommande evenemang",
+    "ucBonusEvent": "UC-bonusevenemang",
+    "ucBonusDesc": "Få extra UC på alla köp",
+    "endsIn": "Slutar om",
+    "threeDays": "3 dagar",
+    "royalPassSeason": "Royal Pass-säsong",
+    "royalPassDesc": "Ny säsong startar snart",
+    "startsIn": "Börjar om",
+    "fiveDays": "5 dagar",
+    "limitedTimeOffer": "Begränsat erbjudande",
+    "limitedTimeDesc": "Specialrabatter på utvalda föremål",
+    "availableFor": "Tillgänglig för",
+    "twentyFourHours": "24 timmar"
+  },
+  "filters": {
+    "paymentChannels": "BETALNINGSKANALER",
+    "uc": "UC"
+  },
+  "countryFaq": {
+    "header": "Vanliga frågor - PUBG UC {{country}}",
+    "q1": "Hur köper man PUBG UC i {{country}}?",
+    "a1": "Besök Midasbuys officiella butik, välj ditt UC-paket, ange ditt PUBG Player ID, välj betalningsmetod ({{paymentMethods}}) och slutför betalningen. UC levereras inom 2-5 minuter.",
+    "q2": "Vad är det billigaste PUBG UC-priset i {{country}}?",
+    "a2": "Midasbuy erbjuder billigaste PUBG UC från {{currencySymbol}}0,99 för 60 UC. Få upp till 60% rabatt + extra 30% VIP-bonus.",
+    "q3": "Är Midasbuy säkert för spelare i {{country}}?",
+    "a3": "Ja, Midasbuy är 100% säkert och betrott av 10M+ spelare i {{country}}.",
+    "q4": "Vilka betalningsmetoder finns i {{country}}?",
+    "a4": "I {{country}} accepterar vi {{paymentMethods}}. Alla betalningar är säkra och krypterade.",
+    "q5": "Hur lång tid tar PUBG UC-leverans i {{country}}?",
+    "a5": "UC-leverans är omedelbar och tar bara 2-5 minuter efter lyckad betalning.",
+    "q6": "Kan jag köpa Royal Pass med {{currency}} i {{country}}?",
+    "a6": "Ja! Köp tillräckligt med UC med {{currency}} i {{country}}. Köp sedan Royal Pass direkt från PUBG Mobile.",
+    "whyBuyTitle": "Varför köpa PUBG UC från Midasbuy i {{country}}?",
+    "whyBuyDesc": "Midasbuy är den mest pålitliga PUBG Mobile UC-plattformen i {{country}}. Upp till 60% rabatt och omedelbar leverans på 2-5 minuter."
+  },
+  "packageGrid": {
+    "popular": "Populär",
+    "from": "Från"
+  }
+}

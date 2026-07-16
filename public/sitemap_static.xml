@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- ============================================== -->
+  <!-- STATIC PAGES - Main Website URLs -->
+  <!-- Only PUBLIC, non-redirecting pages included -->
+  <!-- Private pages (auth, profile, dashboard, etc.) are EXCLUDED -->
+  <!-- Game redirect pages (/pubg-mobile, /free-fire, etc.) are EXCLUDED -->
+  <!-- ============================================== -->
+
+  <!-- Homepage - Final Destination URL -->
+  <url>
+    <loc>https://www.middasbuy.com/midasbuy/us</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.middasbuy.com/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png</image:loc>
+      <image:title>Midasbuy Official - Buy PUBG UC Cheapest Price</image:title>
+      <image:caption>Buy PUBG Mobile UC, Free Fire Diamonds, BGMI UC at cheapest prices with instant delivery</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- ========== GAME PAGES (non-redirect only) ========== -->
+  
+  <!-- BGMI Page (India Only - No redirect, direct page) -->
+  <url>
+    <loc>https://www.middasbuy.com/bgmi</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- BGMI India Specific URL -->
+  <url>
+    <loc>https://www.middasbuy.com/midasbuy/in/buy/bgmi</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+  </url>
+  
+  <!-- PUBG Accounts -->
+  <url>
+    <loc>https://www.middasbuy.com/pubg-accounts</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Honor of Kings -->
+  <url>
+    <loc>https://www.middasbuy.com/honor-of-kings</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Customer Reviews Page -->
+  <url>
+    <loc>https://www.middasbuy.com/customer-reviews</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ========== INFORMATIONAL PAGES ========== -->
+  
+  <!-- Blog -->
+  <url>
+    <loc>https://www.middasbuy.com/blogs</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- About Us -->
+  <url>
+    <loc>https://www.middasbuy.com/about-midasbuy</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Help Center -->
+  <url>
+    <loc>https://www.middasbuy.com/help-center</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQs -->
+  <url>
+    <loc>https://www.middasbuy.com/faqs</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Us -->
+  <url>
+    <loc>https://www.middasbuy.com/contact-us</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Press -->
+  <url>
+    <loc>https://www.middasbuy.com/press</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Careers -->
+  <url>
+    <loc>https://www.middasbuy.com/careers</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Partners -->
+  <url>
+    <loc>https://www.middasbuy.com/partners</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ========== LEGAL & POLICY PAGES ========== -->
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.middasbuy.com/privacy-policy</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Cookie Policy -->
+  <url>
+    <loc>https://www.middasbuy.com/cookie-policy</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://www.middasbuy.com/terms-of-service</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Refund Policy -->
+  <url>
+    <loc>https://www.middasbuy.com/refund-policy</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Security -->
+  <url>
+    <loc>https://www.middasbuy.com/security</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Copyright Notice -->
+  <url>
+    <loc>https://www.middasbuy.com/copyright-notice</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
