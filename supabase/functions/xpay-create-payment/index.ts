@@ -38,6 +38,25 @@ serve(async (req) => {
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
+    // Server-side kill switch
+    try {
+      if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
+        const admin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+        const { data: pm } = await admin
+          .from("payment_method_settings")
+          .select("enabled")
+          .in("method_key", ["xpay", "stripe_card"])
+          .eq("enabled", true)
+          .limit(1);
+        if (!pm || pm.length === 0) {
+          return new Response(
+            JSON.stringify({ success: false, error: "Card payments are currently disabled by the admin." }),
+            { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          );
+        }
+      }
+    } catch (_e) {}
+
     if (!XPAY_SECRET_KEY || !XPAY_ACCOUNT_ID || !XPAY_API_SIGNATURE_SECRET) {
       console.error("Missing XPay configuration");
       return new Response(JSON.stringify({ success: false, error: "Payment service not configured" }), {

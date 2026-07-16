@@ -43,6 +43,7 @@ import {
   ttqPlaceAnOrder,
   ttqIdentify
 } from "@/utils/tiktokTracking";
+import { usePaymentMethodSettings } from "@/hooks/usePaymentMethodSettings";
 
 interface MidasCheckoutModalProps {
   open: boolean;
@@ -137,6 +138,10 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   };
   
   const [selectedMethod, setSelectedMethod] = useState<string>('card');
+  const { isEnabled: isPmEnabled } = usePaymentMethodSettings();
+  const cardEnabled = isPmEnabled('xpay') || isPmEnabled('stripe_card');
+  const payfastEnabled = isPmEnabled('gopayfast') || isPmEnabled('paypro');
+  const binanceEnabled = isPmEnabled('binance');
   const [showPriceDetails, setShowPriceDetails] = useState<boolean>(false);
   const [showPlayerIdModal, setShowPlayerIdModal] = useState<boolean>(false);
   const [showCouponModal, setShowCouponModal] = useState<boolean>(false);
@@ -1474,6 +1479,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                    {/* Payment Methods */}
                    <div className="px-4 space-y-3 md:px-0">
                       {/* Credit Card / Global Payment */}
+                      {cardEnabled && (
                       <div 
                         onClick={() => setSelectedMethod('card')}
                         className={`relative rounded-xl p-4 pt-6 transition-all duration-200 border-[1.5px] overflow-hidden cursor-pointer ${
@@ -1541,9 +1547,10 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           </div>
                         </div>
                       </div>
+                      )}
 
                       {/* PayFast - Only for Pakistan */}
-                      {isPakistan && (
+                      {isPakistan && payfastEnabled && (
                         <div className="space-y-0">
                           <div 
                             onClick={() => setSelectedMethod('payfast')}
@@ -1637,6 +1644,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                       )}
 
                       {/* Binance Pay */}
+                      {binanceEnabled && (
                       <div className="space-y-0">
                         <div 
                           onClick={() => {
@@ -1685,8 +1693,15 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           </div>
                         )}
                       </div>
+                      )}
+                      {!cardEnabled && !payfastEnabled && !binanceEnabled && (
+                        <div className="text-center text-gray-400 text-sm py-8 border border-dashed border-[#2a3042] rounded-xl">
+                          {t('checkout.noMethods', 'All payment methods are currently disabled. Please check back soon.')}
+                        </div>
+                      )}
                    </div>
                 </div>
+
 
                 {/* RIGHT COLUMN (Order Summary) - Desktop Only */}
                 <div className="hidden md:block w-[400px] shrink-0">
