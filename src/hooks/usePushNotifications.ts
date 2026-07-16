@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
-function urlBase64ToUint8Array(base64String: string): Uint8Array {
+function urlBase64ToArrayBuffer(base64String: string): ArrayBuffer {
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding)
     .replace(/-/g, '+')
@@ -14,7 +14,7 @@ function urlBase64ToUint8Array(base64String: string): Uint8Array {
     outputArray[i] = rawData.charCodeAt(i);
   }
 
-  return outputArray;
+  return outputArray.buffer;
 }
 
 // Fetch VAPID public key from server
@@ -176,7 +176,7 @@ export function usePushNotifications() {
       }
 
       // 5. Subscribe to push with server's VAPID key
-      const applicationServerKey = urlBase64ToUint8Array(vapidPublicKey);
+      const applicationServerKey = urlBase64ToArrayBuffer(vapidPublicKey);
       console.log('[Push] Subscribing with server VAPID key...');
 
       const subscription = await registration.pushManager.subscribe({
