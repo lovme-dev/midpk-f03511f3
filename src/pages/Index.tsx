@@ -208,9 +208,9 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
   // Banners state - loaded from database
   const [mobileBanner, setMobileBanner] = useState<string | null>(null);
   const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [desktopBanner, setDesktopBanner] = useState<string | null>("/images/pubg-desktop-banner-new.jpeg");
+  const [desktopBanner, setDesktopBanner] = useState<string | null>(null);
   const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [charactersImage, setCharactersImage] = useState<string>("/assets/pubg-characters-banner.png");
+  const [charactersImage, setCharactersImage] = useState<string | null>(null);
   const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
   const [bannersLoaded, setBannersLoaded] = useState(false);
   
