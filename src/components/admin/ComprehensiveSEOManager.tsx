@@ -334,8 +334,8 @@ const ComprehensiveSEOManager = () => {
         
         return {
           ...page,
-          canonicalUrl: page.canonicalUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
-          ogImageUrl: page.ogImageUrl?.replace('midasbuy.com', 'midasbuy.com.pk')
+          canonicalUrl: page.canonicalUrl?.replace('midasbuy.com.pk', 'midasbuy.com.pk'),
+          ogImageUrl: page.ogImageUrl?.replace('midasbuy.com.pk', 'midasbuy.com.pk')
         };
       });
 
@@ -444,8 +444,8 @@ const ComprehensiveSEOManager = () => {
       page.id === pageId 
         ? { 
             ...originalPage, 
-            canonicalUrl: originalPage.canonicalUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
-            ogImageUrl: originalPage.ogImageUrl?.replace('midasbuy.com', 'midasbuy.com.pk'),
+            canonicalUrl: originalPage.canonicalUrl?.replace('midasbuy.com.pk', 'midasbuy.com.pk'),
+            ogImageUrl: originalPage.ogImageUrl?.replace('midasbuy.com.pk', 'midasbuy.com.pk'),
             dirty: false 
           }
         : page

@@ -528,7 +528,7 @@
             "بيان منك، تحت طائلة العقوبة لحنث اليمين، بأن المعلومات الواردة أعلاه في إشعارك دقيقة وأنك مالك حقوق النشر أو مفوض للتصرف نيابة عن مالك حقوق النشر"
           ],
           "contactTitle": "وكيل حقوق النشر في ميداس باي للإخطار بمطالبات انتهاك حقوق النشر:",
-          "contactInfo": "وكيل حقوق النشر، الإدارة القانونية\nشركة ميداس باي\nOne Midasbuy Plaza, Gaming District, CA 90210, USA\nالبريد الإلكتروني: copyright@midasbuy.com"
+          "contactInfo": "وكيل حقوق النشر، الإدارة القانونية\nشركة ميداس باي\nOne Midasbuy Plaza, Gaming District, CA 90210, USA\nالبريد الإلكتروني: copyright@midasbuy.com.pk"
         },
         "dmca": {
           "title": "6. سياسة قانون الألفية الرقمية لحقوق النشر (DMCA)",
@@ -547,7 +547,7 @@
         "contactUs": {
           "title": "8. معلومات الاتصال",
           "intro": "إذا كانت لديك أي أسئلة حول إشعار حقوق النشر هذا، يرجى الاتصال بنا على:",
-          "contactInfo": "البريد الإلكتروني: legal@midasbuy.com\nالعنوان: One Midasbuy Plaza, Gaming District, CA 90210, USA"
+          "contactInfo": "البريد الإلكتروني: legal@midasbuy.com.pk\nالعنوان: One Midasbuy Plaza, Gaming District, CA 90210, USA"
         }
       },
       "lastUpdated": "آخر تحديث: 1 مارس 2026",
@@ -623,7 +623,7 @@
       "enable2FA": "قم بتمكين المصادقة الثنائية عند توفرها",
       "enable2FADesc": "أضف طبقة إضافية من الأمان عن طريق تمكين 2FA على حسابات الألعاب ومنصات الدفع الخاصة بك.",
       "useOfficialSites": "استخدم المواقع والتطبيقات الرسمية فقط",
-      "useOfficialSitesDesc": "تأكد دائمًا من أنك على موقع ميداس باي الرسمي (midasbuy.com) قبل إدخال أي معلومات شخصية أو دفع.",
+      "useOfficialSitesDesc": "تأكد دائمًا من أنك على موقع ميداس باي الرسمي (midasbuy.com.pk) قبل إدخال أي معلومات شخصية أو دفع.",
       "keepDevicesSecure": "حافظ على أمان أجهزتك",
       "keepDevicesSecureDesc": "قم بتحديث أنظمة تشغيل أجهزتك وتطبيقاتها بانتظام لإصلاح الثغرات الأمنية.",
       "bewarePhishing": "احذر من محاولات التصيد الاحتيالي",
@@ -634,7 +634,7 @@
       "reportConcernsDesc": "إذا كنت تشك في أي وصول غير مصرح به إلى حسابك أو معاملات غير عادية أو مشكلات أمنية أخرى، يرجى الإبلاغ عنها فورًا.",
       "reportSecurityIssue": "الإبلاغ عن مشكلة أمنية",
       "securityFAQ": "الأسئلة الشائعة حول الأمان",
-      "urgentContact": "للأمور الأمنية العاجلة، يرجى الاتصال بفريق الأمان لدينا مباشرة على security@midasbuy.com"
+      "urgentContact": "للأمور الأمنية العاجلة، يرجى الاتصال بفريق الأمان لدينا مباشرة على security@midasbuy.com.pk"
     },
     "paymentIssues": {
       "title": "مشاكل الدفع",

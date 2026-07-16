@@ -52,7 +52,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
       <p className="text-gray-400 text-[11px] md:text-sm mb-6">
         {t('miniGames.description', 'Please note that the mini games available on the Midasbuy website are operated by third party providers and not by Midasbuy.')}{" "}
         <a 
-          href="https://www.midasbuy.com" 
+          href="https://www.midasbuy.com.pk" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -190,7 +190,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
               >
                 <div className="flex gap-3">
                   <button
-                    onClick={() => handleShop("https://www.midasbuy.com/midasbuy/pk/buy/poolcity8ball")}
+                    onClick={() => handleShop("https://www.midasbuy.com.pk/midasbuy/pk/buy/poolcity8ball")}
                     className="w-12 h-12 rounded-lg flex items-center justify-center transition-all hover:brightness-110"
                     style={{
                       background: "linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)",
@@ -200,7 +200,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                     <ShoppingCart className="w-5 h-5 text-white" />
                   </button>
                   <button
-                    onClick={() => handlePlayNow("https://www.midasbuy.com/midasbuy/pk/buy/poolcity8ball")}
+                    onClick={() => handlePlayNow("https://www.midasbuy.com.pk/midasbuy/pk/buy/poolcity8ball")}
                     className="flex-1 py-3 rounded-lg flex items-center justify-center gap-2 font-semibold text-white transition-all hover:brightness-110"
                     style={{
                       background: "linear-gradient(180deg, #fb923c 0%, #f97316 50%, #ea580c 100%)",
@@ -295,7 +295,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                 <div className="flex gap-3 items-center">
                   {/* Shop Button - Navigation gradient like Ludo World Play Now */}
                   <button
-                    onClick={() => handleShop("https://www.midasbuy.com/midasbuy/pk/buy/poolcity8ball")}
+                    onClick={() => handleShop("https://www.midasbuy.com.pk/midasbuy/pk/buy/poolcity8ball")}
                     className="w-12 h-12 rounded-lg flex items-center justify-center transition-all hover:brightness-110"
                     style={{
                       background: "linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)",
@@ -307,7 +307,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                   
                   {/* Play Now Button - Orange gradient, wide */}
                   <button
-                    onClick={() => handlePlayNow("https://www.midasbuy.com/midasbuy/pk/buy/poolcity8ball")}
+                    onClick={() => handlePlayNow("https://www.midasbuy.com.pk/midasbuy/pk/buy/poolcity8ball")}
                     className="px-20 py-3 rounded-lg flex items-center justify-center gap-2 font-semibold text-white transition-all hover:brightness-110"
                     style={{
                       background: "linear-gradient(180deg, #fb923c 0%, #f97316 50%, #ea580c 100%)",
@@ -409,7 +409,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
             <div className="flex gap-2">
               {/* Shop Button - with navigation gradient border */}
               <button
-                onClick={() => handleShop("https://www.midasbuy.com/midasbuy/pk/shop/ludo")}
+                onClick={() => handleShop("https://www.midasbuy.com.pk/midasbuy/pk/shop/ludo")}
                 className="px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-all hover:brightness-110"
                 style={{
                   background: "rgba(30, 40, 60, 0.8)",
@@ -423,7 +423,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
               
               {/* Play Now Button - Navigation gradient */}
               <button
-                onClick={() => handlePlayNow("https://www.midasbuy.com/midasbuy/pk/shop/ludo")}
+                onClick={() => handlePlayNow("https://www.midasbuy.com.pk/midasbuy/pk/shop/ludo")}
                 className="px-5 py-2 rounded-lg flex items-center gap-2 text-sm font-semibold text-white transition-all hover:brightness-110"
                 style={{
                   background: "linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)",

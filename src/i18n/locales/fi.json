@@ -543,7 +543,7 @@
         "contactUs": {
           "title": "8. Yhteystiedot",
           "intro": "Jos sinulla on kysymyksiä, ota meihin yhteyttä:",
-          "contactInfo": "Sähköposti: legal@midasbuy.com"
+          "contactInfo": "Sähköposti: legal@midasbuy.com.pk"
         }
       },
       "lastUpdated": "Viimeksi päivitetty: 1. maaliskuuta 2026",
@@ -672,7 +672,7 @@
       "reportConcernsDesc": "Jos epäilet luvatonta käyttöä, ilmoita siitä välittömästi.",
       "reportSecurityIssue": "Ilmoita turvallisuusongelmasta",
       "securityFAQ": "Turvallisuus-UKK",
-      "urgentContact": "Kiireellisissä turvallisuusasioissa ota yhteyttä security@midasbuy.com"
+      "urgentContact": "Kiireellisissä turvallisuusasioissa ota yhteyttä security@midasbuy.com.pk"
     },
     "paymentIssues": {
       "title": "Maksuongelmat",

@@ -527,7 +527,7 @@
             "Yeminli beyan"
           ],
           "contactTitle": "Midasbuy Telif Hakkı Temsilcisi:",
-          "contactInfo": "E-posta: copyright@midasbuy.com"
+          "contactInfo": "E-posta: copyright@midasbuy.com.pk"
         },
         "dmca": {
           "title": "6. DMCA Politikası",
@@ -546,7 +546,7 @@
         "contactUs": {
           "title": "8. İletişim Bilgileri",
           "intro": "Sorularınız varsa, bize ulaşın:",
-          "contactInfo": "E-posta: legal@midasbuy.com"
+          "contactInfo": "E-posta: legal@midasbuy.com.pk"
         }
       },
       "lastUpdated": "Son Güncelleme: 1 Mart 2026",
@@ -675,7 +675,7 @@
       "reportConcernsDesc": "Yetkisiz erişimden şüpheleniyorsanız, hemen bildirin.",
       "reportSecurityIssue": "Güvenlik Sorunu Bildir",
       "securityFAQ": "Güvenlik SSS",
-      "urgentContact": "Acil güvenlik konuları için security@midasbuy.com ile iletişime geçin"
+      "urgentContact": "Acil güvenlik konuları için security@midasbuy.com.pk ile iletişime geçin"
     },
     "paymentIssues": {
       "title": "Ödeme Sorunları",

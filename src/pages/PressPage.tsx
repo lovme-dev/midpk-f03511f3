@@ -180,7 +180,7 @@ const PressPage = ({ onLogout }: PressPageProps) => {
                 <div className="p-3 bg-midasbuy-navy/30 rounded-lg">
                   <p className="text-sm text-gray-400">Press Contact:</p>
                   <p className="text-white font-medium">Sarah Johnson</p>
-                  <p className="text-midasbuy-blue">press@midasbuy.com</p>
+                  <p className="text-midasbuy-blue">press@midasbuy.com.pk</p>
                 </div>
                 <div className="p-3 bg-midasbuy-navy/30 rounded-lg">
                   <p className="text-sm text-gray-400">Media Relations:</p>

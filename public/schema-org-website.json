@@ -35,7 +35,7 @@
         "height": 512
       },
       "description": "Midasbuy is the world's most trusted gaming store for PUBG Mobile UC, Free Fire Diamonds, and BGMI UC. Trusted by 10M+ gamers worldwide.",
-      "sameAs": ["https://www.facebook.com/midasbuy", "https://x.com/middasbuy", "https://www.instagram.com/midasbuy"],
+      "sameAs": ["https://www.facebook.com/midasbuy", "https://x.com/midasbuy", "https://www.instagram.com/midasbuy"],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",

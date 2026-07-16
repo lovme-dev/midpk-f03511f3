@@ -125,7 +125,7 @@ serve(async (req) => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "MidasBuy <no-reply@midasbuy.com>",
+      from: "MidasBuy <no-reply@midasbuy.com.pk>",
       to: [buyer_email],
       subject: "Your Purchased PUBG Account Details",
       html: emailContent,

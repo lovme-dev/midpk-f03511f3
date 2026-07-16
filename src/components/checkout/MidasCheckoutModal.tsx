@@ -814,7 +814,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         body: {
           amount: selectedPackage.price,
           item_name: itemName,
-          email_address: emailToUse || 'guest@midasbuy.com',
+          email_address: emailToUse || 'guest@midasbuy.com.pk',
           player_id: userInfo.id,
           username: userInfo.name,
           package_id: String(selectedPackage.id),
@@ -890,7 +890,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         body: {
           amount: usdPrice,
           item_name: itemName,
-          email_address: emailToUse || 'guest@midasbuy.com',
+          email_address: emailToUse || 'guest@midasbuy.com.pk',
           player_id: userInfo.id,
           username: userInfo.name,
           package_id: String(selectedPackage.id),

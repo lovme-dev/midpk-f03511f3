@@ -73,7 +73,7 @@ const AdvancedSEOHelmet = ({
       `${baseUrl}`,
       `${baseUrl}/about-midasbuy`,
       "https://www.facebook.com/midasbuy",
-      "https://x.com/middasbuy",
+      "https://x.com/midasbuy",
       "https://www.instagram.com/midasbuy"
     ],
     "contactPoint": {

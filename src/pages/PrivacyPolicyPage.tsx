@@ -51,7 +51,7 @@ const PrivacyPolicyPage = ({ onLogout }: PrivacyPolicyPageProps) => {
       title: t('pages.privacyPolicy.sections.yourRights.title', 'Your Privacy Rights'),
       content: t(
         'pages.privacyPolicy.sections.yourRights.content',
-        `Depending on your location, you may have various rights regarding your personal data.\n\nYou have the right to access and portability, meaning you can request a copy of your personal data and receive it in a commonly used, machine-readable format.\n\nRegarding correction and deletion, you may update any inaccurate information in your account, request deletion of your personal data, and restrict certain processing of your information.\n\nFor consent and objection rights, you can withdraw your consent at any time, opt-out of marketing communications through your account settings or by clicking unsubscribe links, and object to automated decision-making processes.\n\nTo exercise any of these rights, please contact us at privacy@midasbuy.com or through our Contact Us page. We will respond to your request within 30 days.`
+        `Depending on your location, you may have various rights regarding your personal data.\n\nYou have the right to access and portability, meaning you can request a copy of your personal data and receive it in a commonly used, machine-readable format.\n\nRegarding correction and deletion, you may update any inaccurate information in your account, request deletion of your personal data, and restrict certain processing of your information.\n\nFor consent and objection rights, you can withdraw your consent at any time, opt-out of marketing communications through your account settings or by clicking unsubscribe links, and object to automated decision-making processes.\n\nTo exercise any of these rights, please contact us at privacy@midasbuy.com.pk or through our Contact Us page. We will respond to your request within 30 days.`
       )
     },
     {
@@ -161,7 +161,7 @@ const PrivacyPolicyPage = ({ onLogout }: PrivacyPolicyPageProps) => {
                   </p>
                   <div className="space-y-2 text-sm text-gray-300 mb-4">
                     <p>
-                      {t('pages.privacyPolicy.contact.emailLabel', 'Email')}: <span className="text-[#00c6ff]">privacy@midasbuy.com</span>
+                      {t('pages.privacyPolicy.contact.emailLabel', 'Email')}: <span className="text-[#00c6ff]">privacy@midasbuy.com.pk</span>
                     </p>
                     <p>
                       {t('pages.privacyPolicy.contact.addressLabel', 'Address')}: {t('pages.privacyPolicy.contact.addressValue', 'Midasbuy Privacy Team, Data Protection Office')}

@@ -379,7 +379,7 @@ const PubgAccountCheckoutPage = ({ onLogout }: PubgAccountCheckoutPageProps) => 
                <Link to="/terms-of-service" className="text-gray-400 hover:text-gray-300 mx-2">Terms of Service</Link>
                <span className="text-gray-600">|</span>
                <a 
-                 href="https://cdn.midasbuy.com/static_page/privacy/Privacy%20Policy.html" 
+                 href="https://cdn.midasbuy.com.pk/static_page/privacy/Privacy%20Policy.html" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  className="text-gray-400 hover:text-gray-300 mx-2"

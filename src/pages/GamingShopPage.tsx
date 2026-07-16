@@ -114,7 +114,7 @@ const popularGames: PopularGame[] = [
     icon: "fire",
     variant: "red",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/hok"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/hok"
   },
   {
     id: "delta-002",
@@ -125,7 +125,7 @@ const popularGames: PopularGame[] = [
     icon: "fire",
     variant: "red",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/dfm"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/dfm"
   },
   {
     id: "warpath-004",
@@ -136,7 +136,7 @@ const popularGames: PopularGame[] = [
     icon: "fire",
     variant: "green",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/dragonheir-silent-gods?from=self.midasbuy_saas"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/dragonheir-silent-gods?from=self.midasbuy_saas"
   },
   {
     id: "assasin-007",
@@ -147,7 +147,7 @@ const popularGames: PopularGame[] = [
     icon: "fire",
     variant: "red",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/undawngl"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/undawngl"
   },
   {
     id: "pubg-008",
@@ -158,7 +158,7 @@ const popularGames: PopularGame[] = [
     icon: "fire",
     variant: "red",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/uamo#/pages/shop/currency"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/uamo#/pages/shop/currency"
   },
   {
     id: "huang-010",
@@ -188,7 +188,7 @@ const popularGames: PopularGame[] = [
     tagColor: "bg-blue-500",
     icon: "fire",
     hideBadge: true,
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/nba?from=self.midasbuy_saas"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/nba?from=self.midasbuy_saas"
   },
   {
     id: "ludo-world-014",
@@ -198,7 +198,7 @@ const popularGames: PopularGame[] = [
     tagColor: "bg-yellow-500",
     variant: "red",
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/shop/ludo?from=self.midasbuy_saas#/pages/shop/items"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/shop/ludo?from=self.midasbuy_saas#/pages/shop/items"
   }
 ];
 
@@ -218,7 +218,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-5),
     endDate: generateNewsDate(25),
     publisher: "Midasbuy",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-002",
@@ -227,7 +227,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-7),
     endDate: generateNewsDate(23),
     publisher: "Arena Breakout",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-004",
@@ -236,7 +236,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-14),
     endDate: generateNewsDate(16),
     publisher: "Arena Breakout",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-005",
@@ -245,7 +245,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-16),
     endDate: generateNewsDate(14),
     publisher: "Honor of Kings",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-006",
@@ -254,7 +254,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-19),
     endDate: generateNewsDate(11),
     publisher: "Age of Empires",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-007",
@@ -263,7 +263,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-24),
     endDate: generateNewsDate(6),
     publisher: "PUBG MOBILE",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-008",
@@ -272,7 +272,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-29),
     endDate: generateNewsDate(1),
     publisher: "PUBG MOBILE",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-009",
@@ -281,7 +281,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-34),
     endDate: generateNewsDate(-4),
     publisher: "Delta Force",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   },
   {
     id: "news-010",
@@ -290,7 +290,7 @@ const getNewsItems = (t: any) => [
     date: generateNewsDate(-39),
     endDate: generateNewsDate(-9),
     publisher: "Age of Empires",
-    link: "https://www.midasbuy.com/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
+    link: "https://www.midasbuy.com.pk/pagedoo-s/one?s=1VeMe1443Oa&adtag=banner.promotions#/"
   }
 ];
 

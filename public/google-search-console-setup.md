@@ -50,7 +50,7 @@ https://www.midasbuy.com.pk/pubg-accounts
 
 ```
 https://www.midasbuy.com.pk/help-center
-https://www.midasbuy.com/contact-us
+https://www.midasbuy.com.pk/contact-us
 https://www.midasbuy.com.pk/faqs
 https://www.midasbuy.com.pk/about-midasbuy
 https://www.midasbuy.com.pk/terms-of-service

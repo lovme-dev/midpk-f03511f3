@@ -58,11 +58,11 @@ const ExternalGameIframePage = ({ gameKey }: ExternalGameIframePageProps) => {
   const country = countryCode?.toLowerCase() || 'pk';
   
   // Build the external URL
-  const externalUrl = `https://www.midasbuy.com/midasbuy/${country}/${gameConfig?.externalPath || ''}`;
+  const externalUrl = `https://www.midasbuy.com.pk/midasbuy/${country}/${gameConfig?.externalPath || ''}`;
   
   useEffect(() => {
     // Redirect to external URL immediately
-    // External sites like midasbuy.com block iframe embedding due to security policies
+    // External sites like midasbuy.com.pk block iframe embedding due to security policies
     // So we redirect directly to the external URL
     if (gameConfig) {
       window.location.href = externalUrl;

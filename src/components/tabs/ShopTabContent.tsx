@@ -71,7 +71,7 @@ const popularGames = [
     icon: "fire" as const,
     variant: "red" as const,
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/hok"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/hok"
   },
   {
     id: "delta-002",
@@ -82,7 +82,7 @@ const popularGames = [
     icon: "fire" as const,
     variant: "red" as const,
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/dfm"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/dfm"
   },
   {
     id: "warpath-004",
@@ -93,7 +93,7 @@ const popularGames = [
     icon: "fire" as const,
     variant: "green" as const,
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/dragonheir-silent-gods?from=self.midasbuy_saas"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/dragonheir-silent-gods?from=self.midasbuy_saas"
   },
   {
     id: "assasin-007",
@@ -104,7 +104,7 @@ const popularGames = [
     icon: "fire" as const,
     variant: "red" as const,
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/undawngl"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/undawngl"
   },
   {
     id: "pubg-008",
@@ -115,7 +115,7 @@ const popularGames = [
     icon: "fire" as const,
     variant: "red" as const,
     badgeImage: "/images/extra-bonus-badge.png",
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/uamo#/pages/shop/currency"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/uamo#/pages/shop/currency"
   },
   {
     id: "huang-010",
@@ -143,7 +143,7 @@ const popularGames = [
     tagColor: "bg-blue-500",
     icon: "fire" as const,
     hideBadge: true,
-    link: "https://www.midasbuy.com/midasbuy/pk/buy/nba?from=self.midasbuy_saas"
+    link: "https://www.midasbuy.com.pk/midasbuy/pk/buy/nba?from=self.midasbuy_saas"
   }
 ];
 
