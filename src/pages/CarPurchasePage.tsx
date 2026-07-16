@@ -122,6 +122,8 @@ const CarPurchasePage = ({ onLogout, disableSeo = false }: CarPurchasePageProps)
 
   return (
     <div className="min-h-screen bg-midasbuy-darkBlue overflow-x-hidden relative">
+      <h1 className="sr-only">Buy PUBG Car Skins & Vehicle Packages — Official Midasbuy Store</h1>
+
       {/* SEO Meta Tags - Only render if not disabled */}
       {!disableSeo && (
         <Helmet>

@@ -425,6 +425,8 @@ const RobloxPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false }
 
   return (
     <div className="min-h-screen bg-midasbuy-darkBlue overflow-x-hidden relative">
+      <h1 className="sr-only">Buy Roblox Robux — Official Midasbuy Top Up Store | Instant Delivery</h1>
+
       {!disableSeo && (
         <AdvancedSEOHelmet
           title="Buy Robux | Cheapest Roblox Robux Top Up | Midasbuy Official Store 2026"

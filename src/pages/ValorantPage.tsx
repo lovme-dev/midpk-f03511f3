@@ -160,6 +160,8 @@ const ValorantPage = ({ onLogout, overrideCountry, linkQuery, disableSeo = false
 
   return (
     <div className="min-h-screen bg-midasbuy-darkBlue overflow-x-hidden relative">
+      <h1 className="sr-only">Buy Valorant Points — Official Midasbuy Top Up Store | Instant Delivery</h1>
+
       {!disableSeo && (
         <AdvancedSEOHelmet
           title="Buy Valorant Points | Cheapest VP Top Up | Midasbuy Official Store 2026"
