@@ -1,0 +1,102 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.middasbuy.com/#website",
+      "name": "Midasbuy Official",
+      "alternateName": ["Midasbuy", "Midasbuy Gaming Store"],
+      "url": "https://www.middasbuy.com",
+      "description": "Midasbuy Official - Trusted by 10M+ gamers worldwide for PUBG Mobile UC, Free Fire Diamonds, Brawl Stars, Honor of Kings, Nikke & more.",
+      "disambiguatingDescription": "Official gaming currency store - NOT a cryptocurrency platform. Authorized by Tencent Games for PUBG Mobile.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.middasbuy.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@id": "https://www.middasbuy.com/#organization"
+      },
+      "inLanguage": ["en", "hi", "ur", "ar"],
+      "keywords": "midasbuy official, PUBG UC, Free Fire Diamonds, BGMI UC, gaming store, buy PUBG UC, gaming currency, mobile gaming, instant delivery, secure payments"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.middasbuy.com/#organization",
+      "name": "Midasbuy Official",
+      "url": "https://www.middasbuy.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.middasbuy.com/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Midasbuy is the world's most trusted gaming store for PUBG Mobile UC, Free Fire Diamonds, and BGMI UC. Trusted by 10M+ gamers worldwide.",
+      "sameAs": ["https://www.facebook.com/midasbuy", "https://x.com/middasbuy", "https://www.instagram.com/midasbuy"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "80837",
+        "reviewCount": "80837"
+      }
+    },
+    {
+      "@type": "Store",
+      "@id": "https://www.middasbuy.com/#store",
+      "name": "Midasbuy Official Gaming Store",
+      "description": "Authorized digital gaming products retailer specializing in PUBG Mobile UC, Free Fire Diamonds, and BGMI UC",
+      "url": "https://www.middasbuy.com",
+      "priceRange": "$ - $$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "80837",
+        "reviewCount": "80837"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.middasbuy.com/#navigation",
+      "name": "Main Navigation",
+      "hasPart": [
+        {
+          "@type": "SiteNavigationElement",
+          "name": "FREE FIRE",
+          "url": "https://www.middasbuy.com/freefire"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Contact Us",
+          "url": "https://www.middasbuy.com/contact"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Official PUBG Mobile UC Store",
+          "url": "https://www.middasbuy.com/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Instant Delivery",
+          "url": "https://www.middasbuy.com/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Customer Reviews",
+          "url": "https://www.middasbuy.com/customer-reviews"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "PUBG UC, Free Fire Diamonds",
+          "url": "https://www.middasbuy.com/"
+        }
+      ]
+    }
+  ]
+}

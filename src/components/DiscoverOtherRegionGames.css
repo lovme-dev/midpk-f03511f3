@@ -1,0 +1,43 @@
+/* Discover Other Region Games - Auto Scroll (same speed as payment icons) */
+
+.discover-games-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.discover-games-scroll {
+  display: flex;
+  width: fit-content;
+  animation: discoverScroll 45s linear infinite;
+}
+
+.discover-games-scroll:hover {
+  animation-play-state: paused;
+}
+
+.discover-game-icon {
+  flex-shrink: 0;
+}
+
+@keyframes discoverScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .discover-games-scroll {
+    animation: discoverScroll 40s linear infinite;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .discover-games-scroll {
+    animation: discoverScroll 35s linear infinite;
+  }
+}

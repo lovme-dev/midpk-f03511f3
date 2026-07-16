@@ -1,0 +1,142 @@
+User-agent: *
+Allow: /
+
+# Midasbuy - Official Gaming Store
+# Buy PUBG UC, Free Fire Diamonds, BGMI UC, Roblox Robux, Valorant Points
+
+# ===== DISALLOW: Old/Removed URLs (cause "Page with redirect" errors) =====
+Disallow: /purchase/
+Disallow: /checkout/
+Disallow: /player-id
+Disallow: /gaming-shop
+Disallow: /car-purchase
+
+# ===== DISALLOW: Private/User-only pages (should NOT be indexed) =====
+Disallow: /auth
+Disallow: /profile
+Disallow: /dashboard
+Disallow: /purchase-history
+Disallow: /track-orders
+Disallow: /order-center
+Disallow: /order-cancelled
+Disallow: /thank-you
+Disallow: /notifications
+Disallow: /coupons
+Disallow: /redeem
+Disallow: /my-feedbacks
+Disallow: /ip-detector
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# ===== DISALLOW: URL parameters that create duplicates =====
+Disallow: /*?*utm_*
+Disallow: /*?*session*
+Disallow: /*?*bgmi=*
+
+# ===== DISALLOW: Old game redirect URLs =====
+Disallow: /pubg-mobile
+Disallow: /roblox
+Disallow: /valorant
+Disallow: /free-fire
+
+# ===== ALLOW: Country-specific pages (main content) =====
+Allow: /midasbuy/
+
+# ===== ALLOW: Public informational pages =====
+Allow: /bgmi
+Allow: /pubg-accounts
+Allow: /honor-of-kings
+Allow: /customer-reviews
+Allow: /blogs
+Allow: /about-midasbuy
+Allow: /help-center
+Allow: /contact-us
+Allow: /faqs
+Allow: /careers
+Allow: /partners
+Allow: /press
+Allow: /terms-of-service
+Allow: /refund-policy
+Allow: /privacy-policy
+Allow: /cookie-policy
+Allow: /security
+Allow: /copyright-notice
+
+# Sitemaps
+Sitemap: https://www.middasbuy.com/sitemap.xml
+Sitemap: https://www.middasbuy.com/sitemap_static.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_home.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_pubg.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_freefire.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_roblox.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_valorant.xml
+Sitemap: https://www.middasbuy.com/sitemap_countries_car.xml
+
+# Crawl settings
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ===== AI Crawlers / LLM Bots — Allow full scrolling & training =====
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /

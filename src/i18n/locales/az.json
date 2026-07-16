@@ -1,0 +1,650 @@
+{
+  "installApp": "Tətbiqi quraşdırın",
+  "language": "Dil",
+  "followUs": "Bizi izləyin",
+  "home": "Ana səhifə",
+  "purchase": "Satın al",
+  "dashboard": "İdarəetmə paneli",
+  "buyUCPackages": "UC paketləri al",
+  "selectLanguage": "Dil seçin",
+  "support": "Dəstək",
+  "helpCenter": "Yardım mərkəzi",
+  "contactUs": "Bizimlə əlaqə",
+  "faqs": "Tez-tez verilən suallar",
+  "paymentIssues": "Ödəniş problemləri",
+  "security": "Təhlükəsizlik",
+  "legal": "Hüquqi",
+  "termsOfService": "Xidmət şərtləri",
+  "privacyPolicy": "Məxfilik siyasəti",
+  "cookiePolicy": "Çərəz siyasəti",
+  "refundPolicy": "Geri ödəmə siyasəti",
+  "copyrightNotice": "Müəllif hüququ bildirişi",
+  "aboutUs": "Haqqımızda",
+  "aboutMidasbuy": "Midasbuy haqqında",
+  "blogs": "Bloqlar",
+  "careers": "Karyera",
+  "press": "Mətbuat",
+  "partners": "Tərəfdaşlar",
+  "popularGames": "Populyar oyunlar",
+  "allGames": "Bütün oyunlar",
+  "latestNews": "Son xəbərlər",
+  "viewAll": "Hamısına bax",
+  "miniGamesLabel": "Mini oyunlar",
+  "featured": "Seçilmiş",
+  "goButton": "Get",
+  "games": "Oyunlar",
+  "all": "Hamısı",
+  "endsIn": "Bitir",
+  "gameTitles": {
+    "pubgMobile": "PUBG MOBILE",
+    "bgmi": "BGMI",
+    "freeFire": "FREE FIRE",
+    "roblox": "ROBLOX",
+    "valorant": "VALORANT POINTS",
+    "honorOfKings": "HONOR OF KINGS",
+    "deltaForce": "DELTA FORCE",
+    "undawn": "UNDAWN",
+    "arenaBreakout": "ARENA BREAKOUT",
+    "dragonheir": "DRAGONHEIR"
+  },
+  "buyNow": "İndi al",
+  "addToCart": "Səbətə əlavə et",
+  "selectPackage": "Paket seçin",
+  "enterPlayerId": "Oyunçu ID daxil edin",
+  "playerId": "Oyunçu ID",
+  "username": "İstifadəçi adı",
+  "email": "E-poçt",
+  "password": "Şifrə",
+  "login": "Daxil ol",
+  "logout": "Çıxış",
+  "signUp": "Qeydiyyat",
+  "forgotPassword": "Şifrəni unutmusunuz?",
+  "rememberMe": "Məni xatırla",
+  "noAccount": "Hesabınız yoxdur?",
+  "haveAccount": "Artıq hesabınız var?",
+  "orderHistory": "Sifariş tarixçəsi",
+  "orderStatus": "Sifariş statusu",
+  "pending": "Gözləmədə",
+  "completed": "Tamamlandı",
+  "failed": "Uğursuz",
+  "processing": "İşlənir",
+  "payment": "Ödəniş",
+  "paymentMethod": "Ödəniş üsulu",
+  "paymentMethods": "Ödəniş üsulları",
+  "totalAmount": "Ümumi məbləğ",
+  "discount": "Endirim",
+  "couponCode": "Kupon kodu",
+  "applyCoupon": "Kuponu tətbiq et",
+  "checkout": {
+    "enterPlayerIdNow": "İndi Oyunçu ID daxil edin",
+    "playerId": "Oyunçu ID",
+    "enterPlayerId": "Oyunçu ID daxil edin",
+    "enterUsername": "İstifadəçi adı daxil edin",
+    "enterPlayerIdToPurchase": "Alış üçün Oyunçu ID daxil edin",
+    "selectPlayerIdToRecharge": "Yükləmə üçün Oyunçu ID seçin və ya daxil edin",
+    "couldntFindPlayerId": "Oyunçu ID tapa bilmədiniz?",
+    "coupon": "Kupon",
+    "noAvailableCoupon": "Mövcud kupon yoxdur",
+    "selectPaymentChannels": "Ödəniş üsulunu seçin",
+    "creditDebitCard": "Kredit / Debet / Ön ödənişli kart",
+    "vipExtraPoints": "VIP əlavə xallar",
+    "payNow": "İndi ödə",
+    "total": "Cəmi",
+    "purchaseItem": "Alış elementi",
+    "extraForYou": "Sizin üçün əlavə",
+    "playerIdRequired": "Oyunçu ID tələb olunur",
+    "pleaseEnterPlayerId": "Zəhmət olmasa əvvəlcə Oyunçu ID daxil edin",
+    "invalidPlayerId": "Yanlış Oyunçu ID",
+    "enterValidPlayerId": "Zəhmət olmasa düzgün Oyunçu ID daxil edin",
+    "invalidUsername": "Yanlış istifadəçi adı",
+    "enterValidUsername": "Zəhmət olmasa düzgün istifadəçi adı daxil edin",
+    "paymentError": "Ödəniş xətası",
+    "paymentFailed": "Ödəniş başlatma uğursuz oldu. Yenidən cəhd edin.",
+    "paymentSuccessful": "Ödəniş uğurlu oldu!",
+    "cryptoConfirmed": "Kripto ödənişiniz təsdiqləndi.",
+    "recentPlayerIds": "Son Oyunçu ID-ləri",
+    "enterNewPlayerId": "Yeni Oyunçu ID daxil edin",
+    "saveAndContinue": "Yadda saxla və davam et",
+    "signInFirst": "Əvvəlcə daxil olun",
+    "securityPayment": "Təhlükəsiz ödəniş",
+    "orderSummary": "Sifariş xülasəsi"
+  },
+  "proceedToPayment": "Ödənişə davam et",
+  "back": "Geri",
+  "backToHome": "Ana səhifəyə qayıt",
+  "next": "Növbəti",
+  "submit": "Göndər",
+  "cancel": "Ləğv et",
+  "confirm": "Təsdiq et",
+  "close": "Bağla",
+  "search": "Axtarış",
+  "loading": "Yüklənir...",
+  "error": "Xəta",
+  "success": "Uğurlu",
+  "warning": "Xəbərdarlıq",
+  "info": "Məlumat",
+  "welcome": "Xoş gəlmisiniz",
+  "welcomeBack": "Yenidən xoş gəlmisiniz",
+  "getStarted": "Başlayın",
+  "learnMore": "Daha çox öyrənin",
+  "seeMore": "Daha çox göstər",
+  "readMore": "Daha çox oxu",
+  "showLess": "Daha az göstər",
+  "notifications": "Bildirişlər",
+  "settings": "Parametrlər",
+  "profile": "Profil",
+  "myOrders": "Sifarişlərim",
+  "myAccount": "Hesabım",
+  "editProfile": "Profili redaktə et",
+  "changePassword": "Şifrəni dəyişdir",
+  "saveChanges": "Dəyişiklikləri yadda saxla",
+  "deleteAccount": "Hesabı sil",
+  "verifiedReviews": "Təsdiqlənmiş rəylər",
+  "customerReviews": {
+    "title": "Müştəri rəyləri",
+    "verifiedReviews": "Təsdiqlənmiş rəy",
+    "writeReview": "Rəy yazın",
+    "loginToReview": "Rəy yazmaq üçün daxil olun",
+    "back": "Geri",
+    "ratingDistribution": "Reytinq paylanması",
+    "last12Months": "Son 12 ay",
+    "filterByRating": "Reytinqə görə süzgəc",
+    "allRatings": "Hamısı",
+    "loadMore": "Daha çox rəy yüklə",
+    "verifiedPurchase": "Təsdiqlənmiş alış",
+    "submitReview": "Rəyi göndər",
+    "yourName": "Adınız",
+    "rating": "Reytinq",
+    "review": "Rəy",
+    "shareExperience": "Təcrübənizi paylaşın...",
+    "helpful": "Faydalı",
+    "reply": "Cavab",
+    "delete": "Sil"
+  },
+  "writeReview": "Rəy yazın",
+  "rating": "Reytinq",
+  "instantDelivery": "Ani çatdırılma",
+  "securePayment": "Təhlükəsiz ödəniş",
+  "bestPrice": "Ən yaxşı qiymət",
+  "officialPartner": "Rəsmi tərəfdaş",
+  "trustedBy": "Milyonlarla oyunçu tərəfindən etibar edilir",
+  "contactSupport": "Dəstəklə əlaqə saxlayın",
+  "paymentIssuesHelp": "Ödəniş problemləri üçün yardım",
+  "needHelp": "Alışla bağlı köməyə ehtiyacınız var?",
+  "lastUpdated": "Son yenilənmə",
+  "effectiveDate": "Qüvvəyə minmə tarixi",
+  "contactEmail": "Əlaqə e-poçtu",
+  "selectYourRegion": "Regionunuzu seçin",
+  "searchCountry": "Ölkə axtar...",
+  "noCountriesFound": "Ölkə tapılmadı",
+  "africa": "Afrika",
+  "asia": "Asiya",
+  "europe": "Avropa",
+  "northAmerica": "Şimali Amerika",
+  "southAmerica": "Cənubi Amerika",
+  "oceania": "Okeaniya",
+  "middleEast": "Yaxın Şərq",
+  "recommended": "Tövsiyə olunan",
+  "searchPlaceholder": "Ölkə və ya region axtar...",
+  "selectRegion": "Region seçin",
+  "allRegions": "Bütün regionlar",
+  "popular": "Populyar",
+  "searchGames": "Oyun axtar...",
+  "noGamesFound": "Oyun tapılmadı",
+  "featuredGames": "Seçilmiş oyunlar",
+  "newReleases": "Yeni buraxılışlar",
+  "topRated": "Ən yüksək reytinqli",
+  "comingSoon": "Tezliklə",
+  "seeLess": "Daha az gör",
+  "viewDetails": "Təfərrüatlara bax",
+  "outOfStock": "Stokda yoxdur",
+  "inStock": "Stokda var",
+  "quantity": "Miqdar",
+  "subtotal": "Ara cəm",
+  "tax": "Vergi",
+  "total": "Cəmi",
+  "continueShopping": "Alış-verişə davam et",
+  "proceedToCheckout": "Ödənişə davam et",
+  "emptyCart": "Səbətiniz boşdur",
+  "removeItem": "Elementi sil",
+  "updateQuantity": "Miqdarı yenilə",
+  "apply": "Tətbiq et",
+  "promoCode": "Promo kod",
+  "invalidPromoCode": "Yanlış promo kod",
+  "promoApplied": "Promo kod tətbiq edildi",
+  "orderConfirmation": "Sifariş təsdiqi",
+  "orderNumber": "Sifariş nömrəsi",
+  "orderDate": "Sifariş tarixi",
+  "deliveryAddress": "Çatdırılma ünvanı",
+  "billingAddress": "Faktura ünvanı",
+  "orderItems": "Sifariş elementləri",
+  "orderTotal": "Sifariş cəmi",
+  "continueBrowsing": "Gözdən keçirməyə davam et",
+  "accountSettings": "Hesab parametrləri",
+  "personalInfo": "Şəxsi məlumat",
+  "firstName": "Ad",
+  "lastName": "Soyad",
+  "phoneNumber": "Telefon nömrəsi",
+  "dateOfBirth": "Doğum tarixi",
+  "gender": "Cins",
+  "male": "Kişi",
+  "female": "Qadın",
+  "other": "Digər",
+  "preferNotToSay": "Deməməyə üstünlük verirəm",
+  "currentPassword": "Cari şifrə",
+  "newPassword": "Yeni şifrə",
+  "confirmNewPassword": "Yeni şifrəni təsdiq edin",
+  "updatePassword": "Şifrəni yenilə",
+  "deleteAccountWarning": "Bu əməliyyat geri qaytarıla bilməz. Bütün məlumatlarınız həmişəlik silinəcək.",
+  "deleteAccountConfirm": "Bəli, hesabımı sil",
+  "subscribe": "Abunə ol",
+  "official": "Rəsmi",
+  "local": "Yerli",
+  "footer": {
+    "description": "PUBG Mobile və digər populyar oyunlar üçün oyun valyutası almaq üçün rəsmi platforma.",
+    "copyright": "© 2026 MidasBuy. Bütün hüquqlar qorunur. Burada qeyd olunan bütün ticarət nişanları öz sahiblərinin mülkiyyətidir.",
+    "mobileDescription": "MidasBuy Tencent-in rəsmi yenidən yükləmə mağazasıdır. MidasBuy-da təhlükəsiz, sürətli və xoş ödəyin.",
+    "contactUsTitle": "Bizimlə əlaqə",
+    "contactUsDesc": "Köməyə ehtiyacınız varsa, zəhmət olmasa \"Müştəri Xidməti\"nə klikləyərək bizimlə əlaqə saxlayın.",
+    "customerService": "Müştəri Xidməti",
+    "cookiesPreference": "Çərəz tərcihləri",
+    "verifiedReviews": "80,837 təsdiqlənmiş rəy",
+    "company": "Şirkət",
+    "aboutUs": "Haqqımızda",
+    "careers": "Karyera",
+    "press": "Mətbuat",
+    "blog": "Bloq",
+    "support": "Dəstək",
+    "helpCenter": "Yardım mərkəzi",
+    "contactUs": "Əlaqə",
+    "faqs": "TVS",
+    "paymentIssues": "Ödəniş problemləri",
+    "legal": "Hüquqi",
+    "termsOfService": "Xidmət şərtləri",
+    "privacyPolicy": "Məxfilik siyasəti",
+    "cookiePolicy": "Çərəz siyasəti",
+    "refundPolicy": "Geri ödəmə siyasəti",
+    "followUs": "Bizi izləyin",
+    "paymentMethods": "Ödəniş üsulları",
+    "securePayment": "Təhlükəsiz ödəniş"
+  },
+  "whyTopUp": {
+    "title": "Niyə Midasbuy-da oyunları yükləməlisiniz?",
+    "section1Title": "1. Midasbuy: PUBG MOBILE-ın rəsmi yenidən yükləmə mağazası",
+    "section1Content": "PUBG MOBILE üçün rəsmi ödəniş tərəfdaşı olaraq, Midasbuy Honq Konq, Yaponiya, Cənub-Şərqi Asiya, Avropa və Amerikadakı oyunçulara təhlükəsiz və səmərəli UC yükləmə xidmətləri təqdim edir.",
+    "section2Title": "2. Midasbuy-dan bonus UC əldə edin:",
+    "section2Content": "3%-7% ani bonus UC almaq üçün rəsmi istifadə portalında istifadə kodlarını və ya hədiyyə kartlarını aktivləşdirin.",
+    "section3Title": "3. PUBG MOBILE | Ən yaxşı mobil Battle Royale oyunu",
+    "section3Content": "Qlobal məşhur pulsuz taktiki oyun olaraq, PUBG MOBILE Erangel, Miramar və Rondo kimi müxtəlif döyüş meydanlarına malikdir.",
+    "section4Title": "4. Suallar və cavablar",
+    "q1": "S: PUBG MOBILE üçün necə alış edim?",
+    "q2": "S: Alışdan sonra UC-ni haradan alıram?",
+    "q3": "S: Midasbuy-da elementlər üçün kodları necə istifadə edim?",
+    "q4": "S: Niyə alışdan sonra məhsullarımı almıram?"
+  },
+  "officialRechargeStore": "Biz Tencent-in rəsmi yenidən yükləmə mağazasıyıq",
+  "discoverOtherRegionGames": "Digər regionların oyunlarını kəşf edin",
+  "midasbuyVideo": "Midasbuy video",
+  "header": {
+    "midasbuyVideo": "Midasbuy video",
+    "noNotifications": "Hələ bildiriş yoxdur",
+    "notificationsHint": "Yeniliklər burada görünəcək",
+    "signInToEnjoy": "Zövq almaq üçün daxil olun",
+    "exclusiveService": "eksklüziv xidmət ilə",
+    "signInSignUp": "Daxil ol / Qeydiyyat",
+    "coupon": "Kupon",
+    "orderCenter": "Sifariş mərkəzi",
+    "accountSecurity": "Hesab və Təhlükəsizlik",
+    "midasbuyEvents": "Midasbuy tədbirləri",
+    "liveVideo": "Canlı və Video",
+    "adminPanel": "Admin paneli"
+  },
+  "miniGames": {
+    "title": "Mini oyunlar",
+    "description": "Nəzərə alın ki, MidasBuy veb saytında mövcud olan mini oyunlar üçüncü tərəf provayderlər tərəfindən idarə olunur.",
+    "moreDetails": "Daha çox məlumat",
+    "tag": "Mini oyunlar",
+    "noDownload": "Tətbiq yükləməyə ehtiyac yoxdur! MidasBuy-da dərhal oynayın!",
+    "noDownloadDesktop": "Tətbiq yükləməyə ehtiyac yoxdur! Dərhal oynayın",
+    "playNow": "İndi oynayın",
+    "shop": "Mağaza"
+  },
+  "events": {
+    "title": "Tədbirlər",
+    "noEvents": "Hazırda tədbir yoxdur",
+    "comingSoon": "Tezliklə",
+    "activeEvents": "Aktiv tədbirlər",
+    "pastEvents": "Keçmiş tədbirlər",
+    "viewDetails": "Təfərrüatlara bax",
+    "participate": "İndi iştirak edin",
+    "endsIn": "Bitir",
+    "startsIn": "Başlayır"
+  },
+  "shop": {
+    "title": "Mağaza",
+    "categories": "Kateqoriyalar",
+    "allItems": "Bütün elementlər",
+    "featured": "Seçilmiş",
+    "newArrivals": "Yeni gələnlər",
+    "bestSellers": "Ən çox satılanlar",
+    "onSale": "Endirimdə",
+    "outOfStock": "Stokda yoxdur",
+    "inStock": "Stokda var",
+    "addedToCart": "Səbətə əlavə edildi",
+    "viewCart": "Səbətə bax",
+    "continueShopping": "Alış-verişə davam et"
+  },
+  "redeem": {
+    "title": "Kodu istifadə et",
+    "enterCode": "İstifadə kodunu daxil edin",
+    "enterPlayerID": "Oyunçu ID daxil edin",
+    "enterUsername": "İstifadəçi adı daxil edin (isteğe bağlı)",
+    "submitCode": "Kodu göndər",
+    "placeholder": "İstifadə kodunu bura daxil edin",
+    "playerIdPlaceholder": "Oyunçu ID-nizi daxil edin",
+    "usernamePlaceholder": "İstifadəçi adınızı daxil edin",
+    "success": "Kod uğurla istifadə edildi!",
+    "error": "Yanlış kod və ya artıq istifadə edilib",
+    "instructions": "Mükafatları almaq üçün istifadə kodunu daxil edin",
+    "processing": "Kod işlənir..."
+  },
+  "tabs": {
+    "purchase": "Satın al",
+    "redeem": "İstifadə et",
+    "shop": "Mağaza",
+    "events": "Tədbirlər"
+  },
+  "news": {
+    "nikkeBonus": "NIKKE-dən ilk yükləmə üçün 100% əlavə bonus əldə edin!",
+    "registerFreeSkin": "Qeydiyyatdan keçin və pulsuz skin əldə edin",
+    "madDogGames": "Mad Dog Games şanslı xəzinə ovu",
+    "hokPointsLottery": "Honor of Kings xalları lotereyası",
+    "apexCoinBonanza": "Apex Coin təklifləri: İlk alış, ikiqat dəyər!",
+    "pubgVipBenefits": "PUBG MOBILE VIP üstünlükləri",
+    "purchaseBonus": "Alış bonusu",
+    "extraBonus45": "Yalnız MIDASBUY-da əlavə bonus İndi 45%-ə qədər bonus əldə edin",
+    "aoeDaily": "Gündəlik Age of Empires paketləri"
+  },
+  "promoBanner": {
+    "slide1": "Mükafatları görmək və eksklüziv bonusları açmaq üçün Oyunçu ID daxil edin. UC alışlarında xüsusi endirimlər əldə edin!",
+    "slide2": "Yenidən yükləyin və UC qazanın | Dostlar pulsuz kuponlar alır —— maksimum 3000UC!",
+    "slide3": "100% qazanma nisbəti! Üzvlük günündə ikiqat xallar, yalnız bu gün! Gəlin və böyük mükafatı qazanın!"
+  },
+  "videosPage": {
+    "title": "Midasbuy video və canlı yayım",
+    "upcomingLiveStream": "Gələcək canlı yayım",
+    "videoAndLiveRecord": "Video və canlı qeyd",
+    "video": "Video",
+    "liveRecord": "Canlı qeyd",
+    "chooseGame": "Oyun seçin",
+    "noLiveRecords": "Canlı qeyd mövcud deyil",
+    "loadMore": "Daha çox yüklə",
+    "videoComingSoon": "Video tezliklə",
+    "videoNotAvailable": "Bu video hələ mövcud deyil. Zəhmət olmasa sonra cəhd edin!",
+    "seeAll": "Hamısına bax",
+    "more": "Daha çox"
+  },
+  "pages": {
+    "privacyPolicy": {
+      "title": "Məxfilik siyasəti",
+      "lastUpdated": "Son yenilənmə: Yanvar 2025",
+      "intro": "MidasBuy-da məxfiliyinizi qorumağa və şəxsi məlumatlarınızın təhlükəsizliyini təmin etməyə sadiqik.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Topladığımız məlumatlar",
+          "content": "Hesab yaratdığınızda, alış etdiyiniz və ya dəstək komandamızla əlaqə saxladığınız zaman birbaşa bizə verdiyiniz məlumatları toplayırıq."
+        },
+        "howWeUse": {
+          "title": "Məlumatlarınızı necə istifadə edirik",
+          "content": "Məlumatlarınızı əməliyyatları emal etmək, alışlarınızı çatdırmaq, müştəri dəstəyi göstərmək və xidmətlərimizi yaxşılaşdırmaq üçün istifadə edirik."
+        },
+        "informationSharing": {
+          "title": "Məlumat paylaşımı",
+          "content": "Şəxsi məlumatlarınızı satmırıq. Platformamızı idarə etməyə kömək edən etibarlı üçüncü tərəflərlə məlumatlarınızı paylaşa bilərik."
+        },
+        "dataSecurity": {
+          "title": "Məlumat təhlükəsizliyi",
+          "content": "Məlumatlarınızı icazəsiz girişdən qorumaq üçün sənaye standartı təhlükəsizlik tədbirləri tətbiq edirik."
+        },
+        "yourRights": {
+          "title": "Məxfilik hüquqlarınız",
+          "content": "Şəxsi məlumatlarınıza daxil olmaq, düzəltmək və ya silmək hüququnuz var."
+        },
+        "internationalTransfers": {
+          "title": "Beynəlxalq məlumat ötürmələri",
+          "content": "Məlumatlarınız yaşadığınız ölkədən kənarda ötürülə və saxlanıla bilər."
+        },
+        "dataRetention": {
+          "title": "Məlumatların saxlanması",
+          "content": "Şəxsi məlumatlarınızı toplandıqları məqsədlər üçün lazım olduğu müddət ərzində saxlayırıq."
+        },
+        "childrensPrivacy": {
+          "title": "Uşaqların məxfiliyi",
+          "content": "Xidmətlərimiz 13 yaşdan kiçik uşaqlar üçün nəzərdə tutulmayıb."
+        },
+        "updates": {
+          "title": "Bu siyasətin yenilənməsi",
+          "content": "Bu Məxfilik siyasətini zaman-zaman yeniləyə bilərik."
+        },
+        "contactUs": {
+          "title": "Məxfilik barədə bizimlə əlaqə",
+          "content": "Bu Məxfilik siyasəti ilə bağlı suallarınız varsa, bizimlə əlaqə saxlayın."
+        }
+      }
+    },
+    "termsOfService": {
+      "title": "Xidmət şərtləri",
+      "subtitle": "MidasBuy şərtləri",
+      "lastUpdated": "Son yenilənmə: Yanvar 2025",
+      "intro": "MidasBuy-dan istifadə etməklə bu şərtləri qəbul edirsiniz. Geri ödəmə yalnız 24 saat ərzində çatdırılma olmadıqda.",
+      "sections": {
+        "serviceOverview": {
+          "title": "1. Xidmətin icmalı",
+          "content": "MidasBuy PUBG Mobile üçün UC paketləri və oxşar oyun daxili kreditləri təhlükəsiz elektron əməliyyatlar vasitəsilə satır."
+        },
+        "userResponsibilities": {
+          "title": "2. İstifadəçi məsuliyyətləri",
+          "items": [
+            "Düzgün PUBG ID və ödəniş məlumatları təqdim edin.",
+            "Seçilmiş ödəniş üsulu ilə alış etmək səlahiyyətiniz olduğundan əmin olun.",
+            "Xidmətlərimizdən saxtakarlıq və ya sui-istifadə etməkdən çəkinin."
+          ]
+        },
+        "delivery": {
+          "title": "3. Çatdırılma",
+          "items": [
+            "UC alışları adətən dərhal çatdırılır, lakin nadir hallarda 30 dəqiqəyə qədər çəkə bilər.",
+            "Çatdırılma müəyyən edilmiş vaxtdan gec olarsa, dəstək komandamızla əlaqə saxlaya bilərsiniz."
+          ]
+        },
+        "refundPolicy": {
+          "title": "4. Geri ödəmə siyasəti",
+          "items": [
+            "UC çatdırılmayıbsa, alışdan 24 saat ərzində geri ödəmə tələb edilməlidir.",
+            "24 saatdan sonra heç bir geri ödəmə verilməyəcək.",
+            "Bütün geri ödəmələr Geri ödəmə siyasətimizə tabedir."
+          ]
+        },
+        "changesToTerms": {
+          "title": "5. Şərtlərdə dəyişikliklər",
+          "content": "Bu şərtləri istənilən vaxt yeniləyə bilərik. Saytımızdan istifadəyə davam etməyiniz yenilənmiş şərtləri qəbul etmək deməkdir."
+        }
+      },
+      "acknowledgment": "MidasBuy-dan istifadə etməklə bu Xidmət şərtlərini oxuduğunuzu, başa düşdüyünüzü və qəbul etdiyinizi təsdiqləyirsiniz."
+    },
+    "refundPolicy": {
+      "title": "Geri ödəmə siyasəti",
+      "subtitle": "MidasBuy geri ödəmə şərtləri",
+      "lastUpdated": "Son yenilənmə: Yanvar 2025",
+      "intro": "24 saatdan sonra geri ödəmə yoxdur; geri ödəmə yalnız UC vəd edilən vaxtda çatdırılmayıbsa.",
+      "description": "MidasBuy-da sürətli və etibarlı UC çatdırılması təmin etməyə çalışırıq.",
+      "sections": {
+        "eligibility": {
+          "title": "1. Geri ödəmə uyğunluğu",
+          "items": [
+            "Geri ödəmə yalnız UC vəd edilən vaxtda çatdırılmayıbsa mümkündür.",
+            "Geri ödəmə tələbləri alışdan 24 saat ərzində təqdim edilməlidir.",
+            "UC artıq hesabınıza çatdırılıbsa, geri ödəmə mümkün deyil."
+          ]
+        },
+        "nonRefundable": {
+          "title": "2. Geri ödənilməyən hallar",
+          "items": [
+            "UC düzgün hesaba uğurla çatdırıldı.",
+            "Müştəri tərəfindən yanlış PUBG ID və ya məlumatlar verildi.",
+            "Alışdan 24 saatdan sonra geri ödəmə tələbi.",
+            "Ödənişdən sonra fikir dəyişikliyi."
+          ]
+        },
+        "process": {
+          "title": "3. Geri ödəmə prosesi",
+          "content": "Geri ödəmə tələb etmək üçün bizə aşağıdakıları göndərin:",
+          "items": [
+            "Sifariş nömrəniz",
+            "Ödəniş sübutu",
+            "Geri ödəmə tələbinin səbəbi"
+          ],
+          "timeline": "Təsdiqləndikdən sonra, geri ödəmələr 7-14 iş günü ərzində orijinal ödəniş üsulunuza göndəriləcək."
+        }
+      }
+    },
+    "helpCenter": {
+      "title": "Yardım mərkəzi",
+      "subtitle": "Bütün MidasBuy ehtiyaclarınız üçün dəstək alın.",
+      "contactByPhone": "Telefonla əlaqə",
+      "phoneDescription": "Dəstək komandamız 24/7 əlçatandır.",
+      "customerSupport": "Müştəri dəstəyi",
+      "clickToChat": "WhatsApp-da söhbət üçün klikləyin",
+      "chatWithAgent": "Agentlə söhbət edin",
+      "emailSupport": "E-poçt dəstəyi",
+      "emailDescription": "Bizə e-poçt göndərin və 24 saat ərzində cavab verəcəyik.",
+      "supportEmail": "Dəstək e-poçtu",
+      "responseTime": "24 saat ərzində cavab",
+      "liveChat": "Canlı söhbət dəstəyi",
+      "liveChatDescription": "Dəstək agenti ilə dərhal əlaqə saxlayın.",
+      "startLiveChat": "Canlı söhbətə başla",
+      "available247": "24/7 əlçatandır",
+      "stillHaveQuestions": "Hələ də suallarınız var? Sürətli cavablar üçün TVS-ə baxın."
+    },
+    "copyrightNotice": {
+      "title": "Müəllif hüququ bildirişi",
+      "subtitle": "MidasBuy-da intellektual mülkiyyət və ticarət nişanları haqqında məlumat.",
+      "sections": {
+        "copyrightProtection": {
+          "title": "1. Müəllif hüququ qorunması",
+          "content1": "MidasBuy veb saytı və platformasındakı bütün məzmun beynəlxalq müəllif hüququ qanunları ilə qorunur.",
+          "content2": "Bu saytdakı bütün məzmunun kompilyasiyası MidasBuy-un eksklüziv mülkiyyətidir."
+        },
+        "trademarks": {
+          "title": "2. Ticarət nişanları",
+          "content1": "MidasBuy® və MidasBuy loqosu MidasBuy-un qeydiyyatdan keçmiş ticarət nişanlarıdır.",
+          "notice": "PUBG MOBILE, PUBG və bütün əlaqəli loqolar PUBG və ya onun lisenziya verənlərinin eksklüziv mülkiyyətidir.",
+          "content2": "Bu saytdakı heç bir şey ticarət nişanından istifadə lisenziyası kimi şərh edilməməlidir."
+        },
+        "useOfContent": {
+          "title": "3. Məzmundan istifadə",
+          "intro": "Məzmuna yalnız şəxsi, qeyri-kommersiya istifadəsi üçün daxil ola, yükləyə və istifadə edə bilərsiniz.",
+          "items": [
+            "Bu saytdakı materialları dəyişdirmək",
+            "Materiallardan kommersiya məqsədləri üçün istifadə etmək",
+            "Proqram təminatını dekompile və ya tərsinə mühəndislik etməyə cəhd etmək",
+            "Müəllif hüququ və ya digər mülkiyyət bildirişlərini silmək",
+            "Materialları başqa şəxsə ötürmək"
+          ],
+          "termination": "Bu məhdudiyyətlərin hər hansı birini pozduqda bu lisenziya avtomatik olaraq ləğv ediləcək."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "title": "Çərəz siyasəti",
+      "lastUpdated": "Son yenilənmə: Yanvar 2025",
+      "intro": "Bu Çərəz siyasəti MidasBuy-un çərəzləri və oxşar texnologiyaları necə istifadə etdiyini izah edir.",
+      "sections": {
+        "whatAreCookies": {
+          "title": "Çərəzlər nədir?",
+          "content": "Çərəzlər saytımızı ziyarət etdiyiniz zaman cihazınıza yerləşdirilən kiçik mətn fayllarıdır."
+        },
+        "essentialCookies": {
+          "title": "Əsas çərəzlər",
+          "content": "Bu çərəzlər saytın düzgün işləməsi üçün lazımdır."
+        },
+        "analyticsCookies": {
+          "title": "Analitik çərəzlər",
+          "content": "Bu çərəzlər ziyarətçilərin saytımızla necə qarşılıqlı əlaqədə olduğunu anlamağa kömək edir."
+        },
+        "advertisingCookies": {
+          "title": "Reklam çərəzləri",
+          "content": "Bu çərəzlər daha uyğun reklamlar göstərmək üçün istifadə olunur."
+        },
+        "functionalityCookies": {
+          "title": "Funksional çərəzlər",
+          "content": "Bu çərəzlər təkmilləşdirilmiş funksionallıq və fərdiləşdirməyə imkan verir."
+        },
+        "thirdPartyCookies": {
+          "title": "Üçüncü tərəf çərəzləri",
+          "content": "Bəzi çərəzlər üçüncü tərəf xidmətləri tərəfindən yerləşdirilir."
+        },
+        "managingCookies": {
+          "title": "Çərəz seçimlərinin idarə edilməsi",
+          "content": "Çərəzləri idarə etmək üçün bir neçə seçiminiz var."
+        },
+        "cookieRetention": {
+          "title": "Çərəz saxlama müddəti",
+          "content": "Çərəzlərin etibarlılıq müddətləri fərqlidir."
+        }
+      },
+      "questionsTitle": "Çərəz siyasəti ilə bağlı suallar?",
+      "questionsContent": "Çərəzlərdən istifadəmiz barədə suallarınız varsa, bizimlə əlaqə saxlayın."
+    }
+  },
+  "filters": {
+    "paymentChannels": "PAYMENT CHANNELS",
+    "uc": "UC"
+  },
+  "redeemTab": {
+    "title": "İstifadə kodu",
+    "enterPlayerId": "Oyunçu ID daxil edin",
+    "enterRedeemCode": "İstifadə kodunu daxil edin",
+    "enterUsername": "İstifadəçi adı (isteğe bağlı)",
+    "submitCode": "Kodu göndər",
+    "processing": "İşlənir...",
+    "codeSubmitted": "Kod göndərildi!",
+    "codeSubmittedDesc": "Kodunuz nəzərdən keçirilmək üçün göndərildi."
+  },
+  "shopTab": {
+    "title": "Mağaza",
+    "popularGames": "Populyar oyunlar",
+    "comingSoon": "Tezliklə",
+    "newArrivals": "Yeni gələnlər"
+  },
+  "eventsTab": {
+    "title": "Tədbirlər",
+    "upcomingEvents": "Gələcək tədbirlər",
+    "activeEvents": "Aktiv tədbirlər",
+    "noEvents": "Hazırda tədbir yoxdur",
+    "comingSoon": "Tezliklə!",
+    "endsIn": "Bitir",
+    "days": "gün"
+  },
+  "countryFaq": {
+    "header": "Tez-tez verilən suallar - PUBG UC {{country}}",
+    "q1": "{{country}}-da PUBG UC necə almaq olar?",
+    "a1": "Midasbuy rəsmi mağazasına daxil olun, UC paketinizi seçin, PUBG Player ID-nizi daxil edin, ödəniş üsulunu seçin ({{paymentMethods}}) və ödənişi tamamlayın. UC 2-5 dəqiqə ərzində çatdırılacaq.",
+    "q2": "{{country}}-da ən ucuz PUBG UC qiyməti nədir?",
+    "a2": "Midasbuy 60 UC üçün {{currencySymbol}}0.99-dan başlayan ən ucuz PUBG UC təklif edir. 60%-ə qədər endirim + əlavə 30% VIP bonus əldə edin.",
+    "q3": "Midasbuy {{country}} oyunçuları üçün təhlükəsizdir?",
+    "a3": "Bəli, Midasbuy 100% təhlükəsizdir və {{country}}-da 10M+ oyunçu tərəfindən etibar edilir.",
+    "q4": "{{country}}-da hansı ödəniş üsulları mövcuddur?",
+    "a4": "{{country}}-da biz {{paymentMethods}} qəbul edirik. Bütün ödənişlər təhlükəsiz və şifrələnmişdir.",
+    "q5": "{{country}}-da PUBG UC çatdırılması nə qədər vaxt alır?",
+    "a5": "UC çatdırılması ani olur və uğurlu ödənişdən sonra cəmi 2-5 dəqiqə çəkir.",
+    "q6": "{{country}}-da {{currency}} ilə Royal Pass ala bilərəmmi?",
+    "a6": "Bəli! {{country}}-da {{currency}} ödəniş üsulları ilə kifayət qədər UC alın. Sonra birbaşa PUBG Mobile oyunundan Royal Pass alın.",
+    "whyBuyTitle": "Niyə {{country}}-da Midasbuy-dan PUBG UC almalısınız?",
+    "whyBuyDesc": "Midasbuy {{country}}-da ən etibarlı PUBG Mobile UC yükləmə platformasıdır. 60%-ə qədər endirim və 2-5 dəqiqə ərzində ani çatdırılma."
+  },
+  "packageGrid": {
+    "popular": "Popular",
+    "from": "From"
+  }
+}

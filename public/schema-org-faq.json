@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Midasbuy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy is the world's #1 official gaming store for purchasing PUBG Mobile UC, Free Fire Diamonds, BGMI UC, and other gaming currency. We provide instant delivery within 2 minutes, 100% secure transactions, and the cheapest prices worldwide with 60% discount and 30% VIP bonus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Midasbuy safe and legit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Midasbuy is 100% safe, secure, and legitimate. We are an official authorized dealer with bank-level 256-bit SSL encryption and PCI-DSS compliant payment processing. Trusted by over 10 million gamers worldwide with zero tolerance for fraud and 24/7 customer support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to buy PUBG UC from Midasbuy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Step 1: Visit Midasbuy official website. Step 2: Select PUBG Mobile UC package. Step 3: Enter your PUBG Player ID. Step 4: Choose payment method (UPI/PayPal/Card). Step 5: Complete payment. Step 6: Receive UC instantly in 2 minutes!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast is Midasbuy UC delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy provides lightning-fast delivery within 2 minutes! Once payment is confirmed, PUBG UC, Free Fire Diamonds, or BGMI UC is instantly credited to your game account. We guarantee the fastest delivery in the gaming currency industry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods does Midasbuy accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy accepts all major payment methods including UPI, PhonePe, Paytm, GPay, PayPal, Credit Cards, Debit Cards, Bank Transfer, and digital wallets. All transactions are 100% secure with advanced fraud protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest PUBG UC price on Midasbuy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy offers the cheapest PUBG Mobile UC prices worldwide starting from just ₹83 with 60% discount and additional 30% VIP bonus. We guarantee the lowest prices with best value packages for all gaming currency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Midasbuy sell BGMI UC for India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Midasbuy is India's #1 official BGMI UC store. We offer Battlegrounds Mobile India Unknown Cash starting from ₹83 with instant delivery, UPI/Paytm/PhonePe support, and 24/7 Hindi/English customer service. Trusted by millions of Indian BGMI players."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a refund from Midasbuy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy offers refunds for failed deliveries, incorrect orders, or technical issues within 3-5 business days. Digital goods are non-refundable once successfully delivered to your game account. Please check our detailed refund policy for eligibility criteria."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What games does Midasbuy support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midasbuy supports all major mobile games including PUBG Mobile, Free Fire, BGMI (Battlegrounds Mobile India), Honor of Kings, and many more. We provide official gaming currency, diamonds, UC, coins, and credits for multiple platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Midasbuy available in Pakistan, India, USA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Midasbuy operates worldwide including Pakistan, India, USA, Canada, UK, Australia, UAE, and 100+ countries. We support local currencies (PKR, INR, USD), regional payment methods, and provide 24/7 multilingual customer support."
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Midasbuy Official",
+  "short_name": "Midasbuy Official",
+  "description": "Official platform for purchasing PUBG Mobile UC, Free Fire diamonds and gaming items worldwide",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1e40af",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "display_override": ["standalone", "minimal-ui"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/c6fd77e7-3682-428e-8154-140308b4a06b.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "lang": "en",
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

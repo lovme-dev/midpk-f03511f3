@@ -1,0 +1,215 @@
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.payment-logos-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+}
+
+.payment-logos-scroll {
+  display: flex;
+  width: fit-content;
+  animation: scroll 35s linear infinite;
+}
+
+.payment-logos-scroll:hover {
+  animation-play-state: paused;
+}
+
+.payment-logo {
+  transition: all 0.3s ease;
+  margin: 0 1rem;
+}
+
+.payment-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.social-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+}
+
+.social-icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover .social-icon-circle {
+  box-shadow: 0 0 15px rgba(0, 145, 255, 0.4);
+  border-color: rgba(0, 145, 255, 0.6);
+}
+
+.social-icon-label {
+  font-size: 12px;
+  color: #8E9196;
+  font-weight: 500;
+}
+
+.social-heading {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  padding-left: 16px;
+  border-left: 3px solid #0091FF;
+}
+
+.payment-methods-container {
+  margin-top: 2rem;
+}
+
+.payment-methods-heading {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  padding-left: 16px;
+  border-left: 3px solid #0091FF;
+}
+
+.payment-methods-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.payment-method-logo {
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.payment-method-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.payment-method-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .payment-logos-scroll {
+    animation: scroll 25s linear infinite;
+  }
+  
+  .payment-logos-container {
+    padding: 0.75rem 0;
+  }
+  
+  .payment-logo {
+    margin: 0 0.85rem;
+  }
+  
+  .social-icons-container {
+    gap: 12px;
+  }
+  
+  .social-icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .payment-method-logo {
+    height: 28px;
+    padding: 5px 10px;
+  }
+  
+  .social-heading, .payment-methods-heading {
+    text-align: left;
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-logos-scroll {
+    animation: scroll 20s linear infinite;
+  }
+  
+  .payment-logos-container {
+    padding: 0.65rem 0;
+  }
+  
+  .payment-logo {
+    margin: 0 0.75rem;
+  }
+  
+  .social-icons-container {
+    gap: 10px;
+  }
+  
+  .social-icon-circle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .social-icon-label {
+    font-size: 10px;
+  }
+  
+  .payment-method-logo {
+    height: 24px;
+    padding: 4px 8px;
+  }
+  
+  .social-heading, .payment-methods-heading {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+}

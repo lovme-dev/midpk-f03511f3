@@ -1,0 +1,131 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Midasbuy Official",
+  "legalName": "Midasbuy Gaming Store",
+  "alternateName": ["Middasbuy", "Midasbuy Official", "Midasbuy Gaming Store"],
+  "url": "https://www.middasbuy.com",
+  "logo": "https://www.middasbuy.com/favicon.png",
+  "description": "Midasbuy is the world's most trusted official gaming store specializing exclusively in mobile gaming currency. We are an authorized partner of PUBG Mobile (Tencent Games) and verified Stripe merchant. We DO NOT offer cryptocurrency, bitcoin, or any blockchain services. We only sell legitimate in-game currency for PUBG Mobile UC, Free Fire Diamonds, and BGMI UC with instant delivery and 100% secure transactions.",
+  "foundingDate": "2020",
+  "slogan": "Your #1 Choice for Gaming Currency - Official Tencent Partner",
+  "disambiguatingDescription": "Legitimate mobile gaming currency store - NOT a cryptocurrency or bitcoin platform. We are a verified gaming merchant specializing in PUBG Mobile, Free Fire, and BGMI in-game purchases only.",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1 4502322003",
+      "contactType": "Customer Service",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English", "Hindi", "Urdu", "Arabic"],
+      "contactOption": "TollFree"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "help@midasbuy.com.co",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English", "Hindi", "Urdu", "Arabic"]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/midasbuy",
+    "https://x.com/midasbuy",
+    "https://www.instagram.com/midasbuy",
+    "https://www.youtube.com/midasbuy",
+    "https://www.linkedin.com/company/midasbuy"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "500000",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "Midasbuy",
+    "logo": "https://www.middasbuy.com/favicon.png"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Global",
+    "addressRegion": "Worldwide"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "knowsAbout": [
+    "PUBG Mobile UC",
+    "Free Fire Diamonds",
+    "BGMI Unknown Cash",
+    "Gaming Currency",
+    "Mobile Gaming",
+    "Esports",
+    "Game Credits",
+    "Digital Gaming Store",
+    "In-Game Purchases",
+    "Mobile Game Monetization",
+    "Virtual Game Items"
+  ],
+  "award": [
+    "Best Gaming Currency Platform 2024",
+    "#1 Trusted Gaming Store Worldwide",
+    "Most Secure Gaming Payment Platform"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "PUBG Mobile UC (Unknown Cash)",
+        "description": "Official PUBG Mobile in-game currency for purchasing skins, outfits, and battle passes",
+        "category": "Gaming Currency"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "Free Fire Diamonds",
+        "description": "Official Free Fire in-game currency for characters, skins, and items",
+        "category": "Gaming Currency"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "BGMI UC (Unknown Cash)",
+        "description": "Official Battlegrounds Mobile India in-game currency",
+        "category": "Gaming Currency"
+      }
+    }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Business Verification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Stripe Inc.",
+        "description": "Verified Stripe merchant with secure payment processing"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Official Partnership",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Tencent Games",
+        "description": "Authorized partner for PUBG Mobile and BGMI currency distribution"
+      }
+    }
+  ],
+  "serviceType": "Digital Gaming Products Store",
+  "additionalType": ["OnlineStore", "DigitalProductStore", "GamingMerchant"],
+  "knowsLanguage": ["English", "Hindi", "Urdu", "Arabic"],
+  "paymentAccepted": ["Stripe", "Credit Card", "Debit Card", "Bank Transfer", "Mobile Banking"],
+  "currenciesAccepted": ["USD", "PKR", "EUR", "GBP"],
+  "priceRange": "$1 - $500"
+}

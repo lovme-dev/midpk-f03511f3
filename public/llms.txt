@@ -1,0 +1,26 @@
+# Midasbuy
+
+> Midasbuy is the official global gaming top-up store for PUBG Mobile UC, Free Fire Diamonds, Roblox Robux, Valorant Points and more — instant delivery, secure payments, localized pricing in 190+ countries.
+
+## Pages
+
+- [Home](/): Browse top-ups for PUBG Mobile, Free Fire, Roblox, Valorant and Honor of Kings.
+- [PUBG Mobile UC](/midasbuy/us/buy/pubgm): Buy PUBG Mobile UC packages with instant delivery.
+- [Free Fire Diamonds](/midasbuy/us/buy/freefire): Buy Free Fire Diamonds at the cheapest price.
+- [Roblox Robux](/midasbuy/us/buy/roblox): Top up Roblox Robux securely.
+- [Valorant Points](/midasbuy/us/buy/valorant): Buy Valorant Points with instant delivery.
+- [About Midasbuy](/about): Our story, mission and authorized partner status.
+- [Contact](/contact-us): 24/7 customer support for orders and payment issues.
+- [FAQs](/faqs): Common questions about UC, diamonds, payments and delivery.
+- [Help Center](/help-center): Step-by-step guides for buying and redeeming.
+- [Refund Policy](/refund-policy): Our refund and order-cancellation rules.
+- [Privacy Policy](/privacy-policy): How we handle your data.
+- [Terms of Service](/terms-of-service): Terms governing use of Midasbuy.
+- [Blogs](/blogs): Gaming news, guides and updates.
+
+## Optional
+
+- [Customer Reviews](/customer-reviews): Verified buyer reviews and ratings.
+- [Coupons](/coupons): Active discount codes and seasonal offers.
+- [Careers](/careers): Open roles at Midasbuy.
+- [Press](/press): Brand assets and press contacts.

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3756302413439008"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- ===== PWA META TAGS ===== -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Midasbuy" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ===== PRELOAD BADGE IMAGES ===== -->
+    <link rel="preload" as="image" href="/images/extra-discount-badge.png" />
+    <link rel="preload" as="image" href="/images/extra-bonus-badge.png" />
+
+    <!-- ===== FAVICONS ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#050505" />
+    
+    <!-- Tech-style font for payment pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- XPay SDK V4 for card payments (LIVE CDN for production) -->
+    <script defer src="https://js.xstak.com/v4/xpay.js"></script>
+
+    <!-- Fallback canonical/og:url/title/description for crawlers before JS-heavy render -->
+    <script>
+      (function () {
+        var baseUrl = 'https://www.middasbuy.com';
+
+        function normalizePath(pathname) {
+          if (!pathname) return '/';
+          return pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+        }
+
+        function upsertMeta(selector, attrName, attrValue, content) {
+          var el = document.querySelector(selector);
+          if (!el) {
+            el = document.createElement('meta');
+            el.setAttribute(attrName, attrValue);
+            document.head.appendChild(el);
+          }
+          el.setAttribute('content', content);
+        }
+
+        function upsertCanonical(href) {
+          var canonicalEl = document.getElementById('canonical-link');
+          if (!canonicalEl) {
+            canonicalEl = document.createElement('link');
+            canonicalEl.setAttribute('id', 'canonical-link');
+            canonicalEl.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonicalEl);
+          }
+          canonicalEl.setAttribute('href', href);
+        }
+
+        function applyDynamicSeo() {
+          var path = normalizePath(window.location.pathname || '/');
+          var canonicalHref = baseUrl + path;
+
+          upsertCanonical(canonicalHref);
+          upsertMeta('meta#og-url-meta, meta[property="og:url"]', 'property', 'og:url', canonicalHref);
+
+          // ===== DYNAMIC TITLE & DESCRIPTION FOR EACH COUNTRY/GAME URL =====
+          var CN = {
+            pk:'Pakistan',in:'India',us:'United States',bd:'Bangladesh',ae:'UAE',sa:'Saudi Arabia',
+            gb:'United Kingdom',de:'Germany',fr:'France',tr:'Turkey',id:'Indonesia',my:'Malaysia',
+            ph:'Philippines',th:'Thailand',vn:'Vietnam',jp:'Japan',kr:'South Korea',br:'Brazil',
+            eg:'Egypt',iq:'Iraq',jo:'Jordan',kw:'Kuwait',qa:'Qatar',om:'Oman',bh:'Bahrain',
+            lb:'Lebanon',ye:'Yemen',ly:'Libya',dz:'Algeria',ma:'Morocco',tn:'Tunisia',sd:'Sudan',
+            ng:'Nigeria',ke:'Kenya',gh:'Ghana',za:'South Africa',tz:'Tanzania',ug:'Uganda',
+            et:'Ethiopia',sn:'Senegal',cm:'Cameroon',ci:'Ivory Coast',zw:'Zimbabwe',
+            au:'Australia',nz:'New Zealand',sg:'Singapore',hk:'Hong Kong',tw:'Taiwan',
+            ca:'Canada',mx:'Mexico',ar:'Argentina',co:'Colombia',cl:'Chile',pe:'Peru',
+            ec:'Ecuador',ve:'Venezuela',bo:'Bolivia',py:'Paraguay',uy:'Uruguay',
+            es:'Spain',it:'Italy',nl:'Netherlands',be:'Belgium',pt:'Portugal',pl:'Poland',
+            se:'Sweden',no:'Norway',dk:'Denmark',fi:'Finland',at:'Austria',ch:'Switzerland',
+            ie:'Ireland',gr:'Greece',cz:'Czech Republic',hu:'Hungary',ro:'Romania',bg:'Bulgaria',
+            hr:'Croatia',sk:'Slovakia',rs:'Serbia',ua:'Ukraine',ru:'Russia',kz:'Kazakhstan',
+            uz:'Uzbekistan',az:'Azerbaijan',ge:'Georgia',am:'Armenia',by:'Belarus',md:'Moldova',
+            np:'Nepal',lk:'Sri Lanka',af:'Afghanistan',mm:'Myanmar',kh:'Cambodia',la:'Laos',
+            bn:'Brunei',mv:'Maldives',bt:'Bhutan',tl:'Timor-Leste',mn:'Mongolia',
+            ir:'Iran',ps:'Palestine',sy:'Syria',il:'Israel',cy:'Cyprus',mt:'Malta',
+            jm:'Jamaica',tt:'Trinidad and Tobago',ht:'Haiti',do:'Dominican Republic',
+            cu:'Cuba',pr:'Puerto Rico',gt:'Guatemala',hn:'Honduras',sv:'El Salvador',
+            ni:'Nicaragua',cr:'Costa Rica',pa:'Panama',bz:'Belize',gy:'Guyana',sr:'Suriname',
+            ao:'Angola',mz:'Mozambique',mg:'Madagascar',cd:'DR Congo',rw:'Rwanda',
+            zm:'Zambia',mw:'Malawi',bw:'Botswana',na:'Namibia',ls:'Lesotho',sz:'Eswatini',
+            mu:'Mauritius',sc:'Seychelles',km:'Comoros',dj:'Djibouti',er:'Eritrea',so:'Somalia',
+            gm:'Gambia',gn:'Guinea',sl:'Sierra Leone',lr:'Liberia',tg:'Togo',bj:'Benin',
+            bf:'Burkina Faso',ne:'Niger',td:'Chad',cf:'Central African Republic',cg:'Congo',
+            ga:'Gabon',gq:'Equatorial Guinea',st:'Sao Tome',cv:'Cape Verde',mr:'Mauritania',
+            ml:'Mali',bi:'Burundi',ss:'South Sudan',
+            is:'Iceland',lu:'Luxembourg',ee:'Estonia',lv:'Latvia',lt:'Lithuania',
+            si:'Slovenia',ba:'Bosnia',me:'Montenegro',mk:'North Macedonia',al:'Albania',xk:'Kosovo'
+          };
+
+          var GM = { pubgm:'PUBG Mobile UC', freefire:'Free Fire Diamonds', roblox:'Roblox Robux', valorant:'Valorant Points', car:'PUBG Car Skins' };
+          var parts = path.split('/');
+
+          if (parts[1] === 'midasbuy' && parts[2]) {
+            var cc = parts[2].toLowerCase();
+            var country = CN[cc] || cc.toUpperCase();
+            var game = parts[4] ? GM[parts[4]] : null;
+            var dynTitle = '';
+            var dynDesc = '';
+
+            if (game) {
+              dynTitle = 'Buy ' + game + ' in ' + country + ' | 60% OFF Instant Delivery | Midasbuy';
+              dynDesc = 'Buy ' + game + ' in ' + country + ' at the cheapest price. Up to 60% discount + VIP bonus, instant delivery, secure payments.';
+            } else {
+              dynTitle = "Tencent\'s official recharge, top-up and redeem " + country + ' | Midasbuy';
+              dynDesc = 'Midasbuy ' + country + ' official store. Buy gaming credits at best prices with fast delivery and secure payment methods.';
+            }
+
+            document.title = dynTitle;
+            upsertMeta('meta[name="description"]', 'name', 'description', dynDesc);
+            upsertMeta('meta[property="og:title"]', 'property', 'og:title', dynTitle);
+            upsertMeta('meta[property="og:description"]', 'property', 'og:description', dynDesc);
+            upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', dynTitle);
+            upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', dynDesc);
+          }
+        }
+
+        applyDynamicSeo();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', applyDynamicSeo, { once: true });
+        } else {
+          setTimeout(applyDynamicSeo, 0);
+        }
+      })();
+    </script>
+
+    <!-- ===== JSON-LD STRUCTURED DATA FOR SEO ===== -->
+    <!-- ORGANIZATION & WEBSITE SCHEMA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Midasbuy",
+            "legalName": "Midasbuy",
+            "alternateName": ["Midasbuy Official", "Midasbuy Store", "Midasbuy Official Store", "Middasbuy", "Midasbuy Gaming"],
+            "url": "https://www.middasbuy.com",
+            "logo": "https://www.middasbuy.com/favicon.png",
+            "description": "Midasbuy is the official PUBG Mobile UC top-up platform and trusted gaming store. Buy cheap UC, Free Fire Diamonds, Roblox Robux with instant delivery. Authorized Tencent partner, verified by Stripe.",
+            "sameAs": [
+              "https://www.facebook.com/midasbuy",
+              "https://x.com/middasbuy",
+              "https://www.instagram.com/midasbuy"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "500000",
+              "bestRating": "5"
+            },
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Stripe Verified Merchant",
+                "credentialCategory": "Business Verification"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Tencent Official Partner",
+                "credentialCategory": "Official Partnership"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.middasbuy.com/#website",
+            "name": "Midasbuy",
+            "alternateName": ["Midasbuy Official", "Midasbuy Store", "Middasbuy", "Midasbuy UC"],
+            "url": "https://www.middasbuy.com",
+            "description": "Midasbuy is the #1 official gaming top-up platform. Buy PUBG Mobile UC, Free Fire Diamonds, BGMI UC at cheapest prices with instant delivery and secure payments.",
+            "inLanguage": "en",
+            "copyrightYear": 2020,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Midasbuy Official Store",
+              "@id": "https://www.middasbuy.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.middasbuy.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "name": "Midasbuy Official Store",
+            "priceRange": "$1-$500",
+            "paymentAccepted": "Stripe, Credit Card, Debit Card",
+            "openingHours": "Mo-Su 00:00-23:59",
+            "telephone": "+1-800-MIDASBUY",
+            "email": "help@midasbuy.com.co"
+          }
+        ]
+      }
+    </script>
+
+    <!-- ===== ADVANCED SEO (Brand: Midasbuy) - TARGETING #1 RANKINGS ===== -->
+    <title>Midasbuy — Official PUBG Mobile UC &amp; Game Top Up Store</title>
+    <meta
+      name="title"
+      content="Midasbuy — Official PUBG Mobile UC &amp; Game Top Up Store"
+    />
+    <meta name="description" content="Buy PUBG Mobile UC, Free Fire Diamonds and Roblox Robux on Midasbuy. Up to 60% off, instant delivery and secure payments trusted by 10M+ gamers.">
+    <meta name="author" content="Midasbuy" />
+    <meta
+      name="keywords"
+      content="midasbuy, midasbuy official, midasbuy.com, midasbuy store, midasbuy website, midasbuy pubg, midasbuy uc, midasbuy pubg mobile, buy uc midasbuy, midasbuy pakistan, midasbuy india, midasbuy app, midasbuy download, midasbuy login, midasbuy free fire, midasbuy roblox, midasbuy valorant, midasbuy redeem code, midasbuy easypaisa, midasbuy jazzcash, cheap pubg uc, buy pubg uc online, official midasbuy, is midasbuy safe, is midasbuy legit, midasbuy review, midasbuy top up"
+    />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="generator" content="Midasbuy" />
+    <meta name="application-name" content="Midasbuy" />
+    <meta name="apple-mobile-web-app-title" content="Midasbuy" />
+    <meta name="classification" content="Gaming Store, Digital Products, Mobile Gaming" />
+    <meta name="category" content="Gaming" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="target" content="all" />
+
+    <!-- Geographic Targeting -->
+    <meta name="geo.region" content="PK;IN;US" />
+    <meta name="geo.placename" content="Pakistan;India;United States" />
+
+    <!-- Business Verification Meta Tags -->
+    <meta name="business-type" content="Gaming Currency Store" />
+    <meta name="verified-by" content="Stripe Payment Processing" />
+    <meta name="partner-of" content="Tencent Games - PUBG Mobile Official" />
+
+    <!-- ===== OPEN GRAPH (WhatsApp/Facebook) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Midasbuy Official Store" />
+
+    <!-- og:url set dynamically by React-Helmet for each page -->
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/O1Gyf4pVPFQWKdlDIH5FwjUBnsM2/social-images/social-1771300303076-IMG_3216.webp">
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/O1Gyf4pVPFQWKdlDIH5FwjUBnsM2/social-images/social-1771300303076-IMG_3216.webp">
+
+    <!-- ===== GOOGLE ANALYTICS & ADS TRACKING ===== -->
+    <!-- Google tag (gtag.js) - GA4 + Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D152QYKZPQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Google Ads Tracking ID (for conversion tracking from ads)
+      gtag('config', 'G-D152QYKZPQ');
+      
+      // Also keep existing GA4 property
+      gtag('config', 'G-V58GVVDSKB');
+    </script>
+
+    <!-- ===== TIKTOK PIXEL CODE START ===== -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+      var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+      ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D62IRV3C77U69UNGJPLG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- ===== TIKTOK PIXEL CODE END ===== -->
+
+    
+    
+    
+    
+    <!-- ===== PWA INSTALL PROMPT EARLY CAPTURE ===== -->
+    <script>
+      // Capture beforeinstallprompt IMMEDIATELY before React loads
+      window.__pwaInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window.__pwaInstallPrompt = e;
+        console.log('[PWA] Install prompt captured globally');
+      });
+    </script>
+    
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Midasbuy — Official PUBG Mobile UC & Game Top Up Store">
+  <meta name="twitter:title" content="Midasbuy — Official PUBG Mobile UC & Game Top Up Store">
+  <meta property="og:description" content="Buy PUBG Mobile UC, Free Fire Diamonds and Roblox Robux on Midasbuy. Up to 60% off, instant delivery and secure payments.">
+  <meta name="twitter:description" content="Buy PUBG Mobile UC, Free Fire Diamonds and Roblox Robux on Midasbuy. Up to 60% off, instant delivery and secure payments.">
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
+</head>
+
+  <body style="background-color: #13182B;">
+    <div id="root" style="background-color: #13182B;"></div>
+
+    <!-- External scripts removed for domain configuration -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

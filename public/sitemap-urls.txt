@@ -1,0 +1,48 @@
+# MIDASBUY SITEMAP URLS - Copy these directly to Google Search Console
+
+# Main sitemap
+https://www.middasbuy.com/sitemap.xml
+
+# Individual page URLs for manual submission
+https://www.middasbuy.com/
+https://www.middasbuy.com/pubg-mobile
+https://www.middasbuy.com/free-fire
+https://www.middasbuy.com/bgmi
+https://www.middasbuy.com/gaming-shop
+https://www.middasbuy.com/pubg-accounts
+https://www.middasbuy.com/honor-of-kings
+https://www.middasbuy.com/about-midasbuy
+https://www.middasbuy.com/contact-us
+https://www.middasbuy.com/help-center
+https://www.middasbuy.com/faqs
+https://www.middasbuy.com/blogs
+https://www.middasbuy.com/security
+https://www.middasbuy.com/terms-of-service
+https://www.middasbuy.com/refund-policy
+https://www.middasbuy.com/track-orders
+
+# Priority URLs for PUBG UC packages (18 packages)
+https://www.middasbuy.com/purchase/2250uc
+https://www.middasbuy.com/purchase/4250uc
+https://www.middasbuy.com/purchase/10904uc
+https://www.middasbuy.com/purchase/14668uc
+https://www.middasbuy.com/purchase/18341uc
+https://www.middasbuy.com/purchase/22014uc
+https://www.middasbuy.com/purchase/25687uc
+https://www.middasbuy.com/purchase/29360uc
+https://www.middasbuy.com/purchase/33033uc
+https://www.middasbuy.com/purchase/36706uc
+https://www.middasbuy.com/purchase/40379uc
+https://www.middasbuy.com/purchase/44052uc
+https://www.middasbuy.com/purchase/47725uc
+https://www.middasbuy.com/purchase/51398uc
+https://www.middasbuy.com/purchase/55071uc
+https://www.middasbuy.com/purchase/58744uc
+https://www.middasbuy.com/purchase/62417uc
+https://www.middasbuy.com/purchase/66090uc
+
+# International URLs
+https://www.middasbuy.com/midasbuy/pk/buy/pubgm
+https://www.middasbuy.com/midasbuy/in/buy/pubgm
+https://www.middasbuy.com/midasbuy/us/buy/pubgm
+https://www.middasbuy.com/midasbuy/global/buy/pubgm
