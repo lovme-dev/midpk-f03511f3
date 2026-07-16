@@ -306,16 +306,22 @@
       });
     </script>
 
-    <!-- ===== ANTI-INSPECT / SOURCE PROTECTION ===== -->
+    <!-- ===== ANTI-INSPECT / SOURCE PROTECTION (bot-safe for SEO) ===== -->
     <script>
       (function () {
+        // SEO SAFETY: skip all protections for search engine / social bots
+        // so Googlebot, Bingbot etc. can crawl and render normally.
+        var ua = (navigator.userAgent || '').toLowerCase();
+        var isBot = /bot|crawler|spider|crawling|googlebot|bingbot|slurp|duckduckbot|baiduspider|yandex|facebookexternalhit|twitterbot|linkedinbot|embedly|quora link preview|whatsapp|applebot|pinterest|redditbot|telegrambot|discordbot|ia_archiver|chatgpt|gptbot|claudebot|perplexitybot|ccbot/i.test(ua);
+        if (isBot) return;
+
         // Block right-click context menu
         document.addEventListener('contextmenu', function (e) {
           e.preventDefault();
           return false;
         }, { capture: true });
 
-        // Block image drag & text selection copy shortcuts
+        // Block image drag
         document.addEventListener('dragstart', function (e) {
           if (e.target && e.target.tagName === 'IMG') e.preventDefault();
         }, { capture: true });
@@ -323,24 +329,19 @@
         // Block DevTools keyboard shortcuts
         document.addEventListener('keydown', function (e) {
           var k = (e.key || '').toLowerCase();
-          // F12
           if (e.key === 'F12') { e.preventDefault(); return false; }
-          // Ctrl+U (view source)
           if (e.ctrlKey && k === 'u') { e.preventDefault(); return false; }
-          // Ctrl+S (save page)
           if (e.ctrlKey && k === 's') { e.preventDefault(); return false; }
-          // Ctrl+Shift+I / J / C / K (devtools/console)
           if ((e.ctrlKey && e.shiftKey) && ['i','j','c','k'].indexOf(k) !== -1) {
             e.preventDefault(); return false;
           }
-          // Cmd+Opt+I / J / C / U on Mac
           if (e.metaKey && e.altKey && ['i','j','c'].indexOf(k) !== -1) {
             e.preventDefault(); return false;
           }
           if (e.metaKey && k === 'u') { e.preventDefault(); return false; }
         }, { capture: true });
 
-        // Suppress console output on production hostnames
+        // Suppress console output on production hostnames only
         try {
           var h = location.hostname;
           if (h && h.indexOf('lovable') === -1 && h.indexOf('localhost') === -1) {
@@ -352,6 +353,7 @@
         } catch (_) {}
       })();
     </script>
+
 
 
     
