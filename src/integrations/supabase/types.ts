@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      payment_method_settings: {
+        Row: {
+          created_at: string
+          description: string | null
+          display_name: string
+          enabled: boolean
+          id: string
+          method_key: string
+          sort_order: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          display_name: string
+          enabled?: boolean
+          id?: string
+          method_key: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          display_name?: string
+          enabled?: boolean
+          id?: string
+          method_key?: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null

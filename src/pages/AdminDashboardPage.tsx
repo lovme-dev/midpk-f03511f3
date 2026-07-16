@@ -18,6 +18,7 @@ import { NotificationSettings } from '@/components/admin/NotificationSettings';
 import { CustomerInquiries } from '@/components/admin/CustomerInquiries';
 import { RevenueAnalytics } from '@/components/admin/RevenueAnalytics';
 import { RedeemCodesManagement } from '@/components/admin/RedeemCodesManagement';
+import PaymentMethodsManagement from '@/components/admin/PaymentMethodsManagement';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -579,12 +580,17 @@ export default function AdminDashboardPage() {
       </div>
 
       <Tabs defaultValue="meta" className="w-full">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="meta">SEO & Meta</TabsTrigger>
           <TabsTrigger value="content">Content Blocks</TabsTrigger>
           <TabsTrigger value="packages">UC Packages</TabsTrigger>
+          <TabsTrigger value="payments">Payment Methods</TabsTrigger>
           <TabsTrigger value="preview">Live Preview</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="payments" className="space-y-6">
+          <PaymentMethodsManagement />
+        </TabsContent>
 
         <TabsContent value="meta" className="space-y-6">
           <ComprehensiveSEOManager />
