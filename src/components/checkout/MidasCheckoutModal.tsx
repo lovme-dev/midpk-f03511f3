@@ -1644,6 +1644,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                       )}
 
                       {/* Binance Pay */}
+                      {binanceEnabled && (
                       <div className="space-y-0">
                         <div 
                           onClick={() => {
