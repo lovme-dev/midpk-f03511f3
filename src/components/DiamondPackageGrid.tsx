@@ -80,7 +80,7 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
 
   // Use the Free Fire diamond icon as the main package logo (same as the icon left of the value)
   const getChestImage = (_index: number): string => {
-    return "/images/free-fire-diamond-icon.png";
+    return "/images/free-fire-diamond-icon.jpeg";
   };
 
   return (
@@ -142,8 +142,8 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
                     <div className="flex justify-center items-end relative z-[1]">
                       <motion.img
                         src={getChestImage(index)}
-                        alt="Diamond Chest"
-                        className={`object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem] transition-opacity duration-200 ${imagesLoaded[pkg.id] ? "opacity-100" : "opacity-0"}`}
+                        alt="Free Fire Diamond"
+                        className="object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem] opacity-100"
                         animate={{
                           y: [0, -6, 0, 6, 0],
                         }}
