@@ -28,7 +28,7 @@ export const useXPayPayment = () => {
   const [paymentStatus, setPaymentStatus] = useState<'idle' | 'processing' | 'success' | 'failed'>('idle');
 
   const createPaymentIntent = async (request: PaymentRequest) => {
-    const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    const orderId = generateOrderId(18);
     
     const successUrl = `${window.location.origin}/payment/success?orderId=${orderId}`;
     const cancelUrl = `${window.location.origin}/payment/cancel?orderId=${orderId}`;
