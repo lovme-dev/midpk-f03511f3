@@ -350,6 +350,53 @@ export function NotificationSettings() {
           </div>
         </CardContent>
       </Card>
+
+      <TestEmailCard />
     </div>
+  );
+}
+
+function TestEmailCard() {
+  const { toast } = useToast();
+  const [to, setTo] = useState('');
+  const [sending, setSending] = useState(false);
+
+  const sendTest = async () => {
+    if (!to) return;
+    setSending(true);
+    const { data, error } = await supabase.functions.invoke('send-test-email', {
+      body: { to, subject: 'Midasbuy Test Email', message: 'Yeh test email hai — agar mil gai to email delivery working hai ✅' },
+    });
+    setSending(false);
+    if (error || (data as any)?.success === false) {
+      const details = (data as any)?.error?.message || (data as any)?.error || error?.message;
+      toast({ title: 'Failed to send', description: String(details), variant: 'destructive' });
+    } else {
+      toast({ title: 'Test email sent', description: `Sent to ${to}` });
+    }
+  };
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Send Test Email</CardTitle>
+        <CardDescription>
+          Verify email delivery from <code>noreply@midasbuy.com.pk</code>. If this fails with a
+          domain error, verify <code>midasbuy.com.pk</code> in your Resend dashboard.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <input
+          type="email"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+          placeholder="recipient@example.com"
+          className="w-full px-3 py-2 rounded-md border bg-background text-sm"
+        />
+        <Button onClick={sendTest} disabled={!to || sending}>
+          {sending ? 'Sending…' : 'Send Test Email'}
+        </Button>
+      </CardContent>
+    </Card>
   );
 }
