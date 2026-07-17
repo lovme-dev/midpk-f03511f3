@@ -237,8 +237,9 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
   const { metaData: adminPageMeta } = usePageMeta('home');
 
   // Determine which banner page_name to use based on gameBrand
-  const bannerPageName = gameBrand === 'BGMI' ? 'BGMI' : 'PUBG UC';
-  const bannerKeyPrefix = gameBrand === 'BGMI' ? 'bgmi' : 'pubg_uc';
+  // BGMI uses the same banners as PUBG UC
+  const bannerPageName = 'PUBG UC';
+  const bannerKeyPrefix = 'pubg_uc';
   const brandDisplayName = gameBrand === 'BGMI' ? 'BGMI MOBILE' : 'PUBG MOBILE';
 
   // Fetch banners from database with realtime updates
