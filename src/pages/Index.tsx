@@ -205,14 +205,25 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     }));
   };
   
-  // Banners state - loaded from database
-  const [mobileBanner, setMobileBanner] = useState<string | null>(null);
-  const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [desktopBanner, setDesktopBanner] = useState<string | null>(null);
-  const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [charactersImage, setCharactersImage] = useState<string | null>(null);
-  const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [bannersLoaded, setBannersLoaded] = useState(false);
+  // Banner cache key based on gameBrand — enables instant hydration from localStorage
+  const bannerCacheKey = `bannerCache_${gameBrand}`;
+  const readBannerCache = (): any => {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = localStorage.getItem(bannerCacheKey);
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+  };
+  const initialCache = readBannerCache();
+
+  // Banners state - loaded from database (with cache for instant paint)
+  const [mobileBanner, setMobileBanner] = useState<string | null>(initialCache?.mobileBanner ?? null);
+  const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.mobileBannerStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [desktopBanner, setDesktopBanner] = useState<string | null>(initialCache?.desktopBanner ?? null);
+  const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.desktopBannerStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [charactersImage, setCharactersImage] = useState<string | null>(initialCache?.charactersImage ?? null);
+  const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.charactersStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [bannersLoaded, setBannersLoaded] = useState(!!initialCache);
   
   // Light effect state for banner
   const [lightEffect, setLightEffect] = useState<{
@@ -220,7 +231,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     intensity: number;
     color: string;
     spread: number;
-  }>({ enabled: true, intensity: 45, color: '#003C78', spread: 70 });
+  }>(initialCache?.lightEffect ?? { enabled: true, intensity: 45, color: '#003C78', spread: 70 });
   
   // Use the new page meta hook
   const { metaData: adminPageMeta } = usePageMeta('home');
