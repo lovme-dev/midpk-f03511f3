@@ -689,7 +689,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             alt="PUBG Desktop Banner"
             width={1920}
             height={280}
-            className="w-full h-auto max-h-[280px] object-contain"
+            className="w-full h-auto max-h-[291px] object-contain"
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -700,24 +700,24 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           />
 
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
-          <div className="absolute left-0 bottom-6 flex items-center gap-3 px-6 z-20" dir="ltr">
+          <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
             <img 
               src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
               alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
-              className="w-16 h-16 rounded-lg object-cover shadow-lg"
+              className="w-12 h-12 rounded-lg object-cover shadow-lg"
             />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               <h1 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h1>
-              <div aria-hidden="true" className="text-white text-xl font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-1 bg-white/90 text-gray-900 px-1.5 h-5 rounded text-[9px] font-semibold shadow-sm">
-                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <div aria-hidden="true" className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
+              <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                   </svg>
                   <span>Official</span>
                 </div>
                 <div 
-                  className="flex items-center gap-1 bg-white/15 backdrop-blur-md text-white px-2 h-[22px] rounded-full text-[9px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
+                  className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
                   onClick={() => {
                     toast({
                       title: `Subscribe to ${brandDisplayName}`,
@@ -725,7 +725,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                     });
                   }}
                 >
-                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 8v8M8 12h8"/>
                   </svg>
@@ -744,13 +744,13 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           <div className="relative w-full">
             {/* Mobile Banner - show if uploaded from admin, full image visible with capped height */}
             {mobileBanner && (
-              <div className={`w-full overflow-hidden relative bg-midasbuy-darkBlue ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}>
+              <div className={`w-full overflow-hidden relative bg-midasbuy-darkBlue ${gameBrand === 'BGMI' ? 'max-h-[135px]' : 'max-h-[187px]'}`}>
                 <img 
                   src={mobileBanner}
                   alt={gameBrand === 'BGMI' ? "BGMI Banner" : "PUBG Mobile Banner"}
                   width={750}
                   height={400}
-                  className={`w-full h-auto object-contain ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}
+                  className={`w-full h-auto object-contain ${gameBrand === 'BGMI' ? 'max-h-[135px]' : 'max-h-[187px]'}`}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -773,7 +773,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             
             {/* Banner placeholder space - maintains layout when no banner */}
             {!mobileBanner && bannersLoaded && (
-              <div className={`w-full bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80 ${gameBrand === 'BGMI' ? 'h-[100px]' : 'h-[180px]'}`} />
+              <div className={`w-full bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80 ${gameBrand === 'BGMI' ? 'h-[100px]' : 'h-[187px]'}`} />
             )}
             
             {/* Characters Image - only show if admin uploaded one */}
