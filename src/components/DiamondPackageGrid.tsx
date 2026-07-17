@@ -219,27 +219,27 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
                       />
                     </div>
 
-                    {/* Diamond values centered with Free Fire diamond icon on left */}
-                    <div className="flex items-center justify-center mb-2 sm:mb-3">
-                      <div className="mr-1.5 sm:mr-2">
-                        <img
-                          src="/images/free-fire-diamond-icon.jpeg"
-                          alt="Diamond"
-                          className="w-5 h-5 sm:w-7 sm:h-7"
-                          width="28"
-                          height="28"
-                          loading="eager"
-                          decoding="async"
-                        />
-                      </div>
-                      <span className="text-xl sm:text-2xl font-bold text-white">
-                        {pkg.baseAmount.toLocaleString()}
-                      </span>
-                      {pkg.bonusAmount > 0 && (
-                        <span className="text-sm sm:text-base font-semibold text-midasbuy-gold ml-1">
-                          +{pkg.bonusAmount.toLocaleString()}
+                    {/* Diamond icon centered ABOVE the values */}
+                    <div className="flex flex-col items-center mb-2 sm:mb-3">
+                      <img
+                        src="/images/free-fire-diamond-icon.png"
+                        alt="Diamond"
+                        className="w-8 h-8 sm:w-10 sm:h-10 mb-1"
+                        width="40"
+                        height="40"
+                        loading="eager"
+                        decoding="async"
+                      />
+                      <div className="flex items-center justify-center">
+                        <span className="text-xl sm:text-2xl font-bold text-white">
+                          {pkg.baseAmount.toLocaleString()}
                         </span>
-                      )}
+                        {pkg.bonusAmount > 0 && (
+                          <span className="text-sm sm:text-base font-semibold text-midasbuy-gold ml-1">
+                            +{pkg.bonusAmount.toLocaleString()}
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     {/* Price centered — gold color matching the +bonus text */}
