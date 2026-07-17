@@ -7,6 +7,10 @@ import OptimizedImage from "./OptimizedImage";
 import MidasCheckoutModal from "./checkout/MidasCheckoutModal";
 import { UCPackage } from "@/data/ucPackages";
 import { DiamondPackage } from "@/data/diamondPackages";
+import ffChest1 from "@/assets/ff-chest-1.webp.asset.json";
+import ffChest2 from "@/assets/ff-chest-2.webp.asset.json";
+import ffChest3 from "@/assets/ff-chest-3.webp.asset.json";
+import ffChest4 from "@/assets/ff-chest-4.webp.asset.json";
 
 interface DiamondPackageGridProps {
   packages: DiamondPackage[];
