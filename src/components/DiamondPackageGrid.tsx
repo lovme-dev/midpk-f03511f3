@@ -150,7 +150,7 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
                     />
                     <div className="flex justify-center items-end relative z-[1]">
                       <motion.img
-                        src={getChestImage(index)}
+                        src={getChestImage(index, packages.length)}
                         alt="Free Fire Diamond"
                         className="object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem] opacity-100"
                         animate={{
