@@ -85,16 +85,19 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
     }
 
     const trimmedCode = codeNumber.trim();
-    
-    // Detect non-coupon inputs: emails, URLs, names, etc.
+    const rawCode = codeNumber;
+
+    // Detect non-coupon inputs: emails, URLs, names, digits-only, or codes containing spaces
+    const hasSpace = /\s/.test(rawCode);
     const looksLikeEmail = /[@]/.test(trimmedCode);
     const looksLikeUrl = /^(https?:\/\/|www\.)|(\.(com|net|org|io|pk|co|dev|info|xyz))/i.test(trimmedCode);
     const looksLikeName = /^[a-zA-Z\s]{2,}$/.test(trimmedCode) && !/\d/.test(trimmedCode);
     const isOnlyDigits = /^\d+$/.test(trimmedCode);
-    const isNonCoupon = looksLikeEmail || looksLikeUrl || looksLikeName || isOnlyDigits;
-    
-    // Valid codes are 18-20 characters
-    const isValidLength = trimmedCode.length >= 18 && trimmedCode.length <= 20 && !isNonCoupon;
+    const isAlphanumericMixed = /^[a-zA-Z0-9]+$/.test(trimmedCode) && /[a-zA-Z]/.test(trimmedCode) && /\d/.test(trimmedCode);
+    const isNonCoupon = hasSpace || looksLikeEmail || looksLikeUrl || looksLikeName || isOnlyDigits;
+
+    // Valid codes: mixed alphanumeric (letters + digits), 18-24 chars, no spaces
+    const isValidLength = !isNonCoupon && isAlphanumericMixed && trimmedCode.length >= 18 && trimmedCode.length <= 24;
 
     // Check rate limit before submission (for logged in users)
     if (user) {
