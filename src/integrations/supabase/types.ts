@@ -1007,6 +1007,54 @@ export type Database = {
         }
         Relationships: []
       }
+      redeem_codes_archive: {
+        Row: {
+          archived_at: string
+          archived_by: string | null
+          created_at: string | null
+          id: string
+          notes: string | null
+          original_id: string | null
+          player_id: string | null
+          redeem_code: string | null
+          reviewed_at: string | null
+          reviewed_by: string | null
+          status: string | null
+          updated_at: string | null
+          username: string | null
+        }
+        Insert: {
+          archived_at?: string
+          archived_by?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          original_id?: string | null
+          player_id?: string | null
+          redeem_code?: string | null
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string | null
+          updated_at?: string | null
+          username?: string | null
+        }
+        Update: {
+          archived_at?: string
+          archived_by?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          original_id?: string | null
+          player_id?: string | null
+          redeem_code?: string | null
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string | null
+          updated_at?: string | null
+          username?: string | null
+        }
+        Relationships: []
+      }
       saved_cards: {
         Row: {
           card_brand: string | null
