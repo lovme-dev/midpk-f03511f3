@@ -354,7 +354,7 @@ const getConfirmationEmailHtml = (
       <!-- Footer Note -->
       <p style="color: #64748b; font-size: 13px; text-align: center; margin-top: 30px; line-height: 1.6;">
         ${t.contactMessage}<br>
-        <a href="mailto:help@midasbuy.com.co" style="color: #60a5fa; text-decoration: none;">help@midasbuy.com.co</a><br>
+        <a href="mailto:help@midasbuy.com.pk" style="color: #60a5fa; text-decoration: none;">help@midasbuy.com.pk</a><br>
         ${t.thankYouMessage}
       </p>
     </div>
@@ -474,7 +474,7 @@ const getRefundEmailHtml = (
       <div style="background: rgba(59, 130, 246, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(59, 130, 246, 0.2);">
         <p style="color: #60a5fa; margin: 0; font-size: 14px; line-height: 1.6;">
           📧 ${t.contactMessage}<br>
-          <a href="mailto:help@midasbuy.com.co" style="color: #93c5fd; text-decoration: none; font-weight: 600;">help@midasbuy.com.co</a>
+          <a href="mailto:help@midasbuy.com.pk" style="color: #93c5fd; text-decoration: none; font-weight: 600;">help@midasbuy.com.pk</a>
         </p>
       </div>
       
@@ -557,8 +557,8 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Midasbuy <noreply@midasbuy.com.co>",
-      replyTo: "help@midasbuy.com.co",
+      from: "Midasbuy <noreply@midasbuy.com.pk>",
+      replyTo: "help@midasbuy.com.pk",
       to: [userEmail],
       subject,
       html,
