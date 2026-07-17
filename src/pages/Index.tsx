@@ -268,37 +268,53 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       const desktopBannerData = data.find((b: any) => b.banner_key === desktopKey);
       const charactersData = data.find((b: any) => b.banner_key === charactersKey);
       
+      const cachePayload: any = {};
+
       if (mobileBannerData?.image_url) {
         setMobileBanner(mobileBannerData.image_url);
-        setMobileBannerStyle({
+        const mbs = {
           x: mobileBannerData.position_x || 0,
           y: mobileBannerData.position_y || 0,
           zoom: mobileBannerData.zoom_level || 100
-        });
-        // Update light effect from mobile banner data
-        setLightEffect({
+        };
+        setMobileBannerStyle(mbs);
+        const le = {
           enabled: mobileBannerData.light_enabled ?? true,
           intensity: mobileBannerData.light_intensity ?? 45,
           color: mobileBannerData.light_color || '#003C78',
           spread: mobileBannerData.light_spread ?? 70
-        });
+        };
+        setLightEffect(le);
+        cachePayload.mobileBanner = mobileBannerData.image_url;
+        cachePayload.mobileBannerStyle = mbs;
+        cachePayload.lightEffect = le;
       }
       if (desktopBannerData?.image_url) {
         setDesktopBanner(desktopBannerData.image_url);
-        setDesktopBannerStyle({
+        const dbs = {
           x: desktopBannerData.position_x || 0,
           y: desktopBannerData.position_y || 0,
           zoom: desktopBannerData.zoom_level || 100
-        });
+        };
+        setDesktopBannerStyle(dbs);
+        cachePayload.desktopBanner = desktopBannerData.image_url;
+        cachePayload.desktopBannerStyle = dbs;
       }
       if (charactersData?.image_url) {
         setCharactersImage(charactersData.image_url);
-        setCharactersStyle({
+        const cs = {
           x: charactersData.position_x || 0,
           y: charactersData.position_y || 0,
           zoom: charactersData.zoom_level || 100
-        });
+        };
+        setCharactersStyle(cs);
+        cachePayload.charactersImage = charactersData.image_url;
+        cachePayload.charactersStyle = cs;
       }
+
+      try {
+        localStorage.setItem(bannerCacheKey, JSON.stringify(cachePayload));
+      } catch {}
     };
     
     fetchBanners();
