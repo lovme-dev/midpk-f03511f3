@@ -261,9 +261,9 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     
     const updateBannersFromData = (data: any[]) => {
       // Find mobile, desktop banners and characters image - use dynamic key prefix
-      const mobileKey = gameBrand === 'BGMI' ? 'bgmi_mobile' : 'pubg_uc_mobile';
-      const desktopKey = gameBrand === 'BGMI' ? 'bgmi_desktop' : 'pubg_uc_desktop';
-      const charactersKey = gameBrand === 'BGMI' ? 'bgmi_characters' : 'pubg_uc_characters';
+      const mobileKey = 'pubg_uc_mobile';
+      const desktopKey = 'pubg_uc_desktop';
+      const charactersKey = 'pubg_uc_characters';
       
       const mobileBannerData = data.find((b: any) => b.banner_key === mobileKey);
       const desktopBannerData = data.find((b: any) => b.banner_key === desktopKey);
