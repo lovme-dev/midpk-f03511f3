@@ -26,6 +26,7 @@ import { getPageKeywords, getAllKeywords } from "@/data/seoKeywords";
 import TrustedReviews from "@/components/TrustedReviews";
 // subscribeButton import removed - now using custom glass blur style
 import { supabase } from "@/integrations/supabase/client";
+import freeFireLogoNew from "@/assets/free-fire-logo-new.png.asset.json";
 
 interface FreeFireProps {
   onLogout: () => void;
