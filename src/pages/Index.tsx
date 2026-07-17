@@ -700,18 +700,18 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           />
 
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
-          <div className="absolute left-0 bottom-6 flex items-center gap-3 px-6 z-20" dir="ltr">
+          <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
             <img 
               src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
               alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
-              className="w-16 h-16 rounded-lg object-cover shadow-lg"
+              className="w-12 h-12 rounded-lg object-cover shadow-lg"
             />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               <h1 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h1>
-              <div aria-hidden="true" className="text-white text-xl font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-1 bg-white/90 text-gray-900 px-1.5 h-5 rounded text-[9px] font-semibold shadow-sm">
-                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <div aria-hidden="true" className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
+              <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                   </svg>
                   <span>Official</span>
