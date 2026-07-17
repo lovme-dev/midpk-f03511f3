@@ -726,6 +726,23 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             }}
           />
 
+          {/* Desktop Characters Image - right side, same as mobile */}
+          {gameBrand !== 'BGMI' && charactersImage && (
+            <img
+              src={charactersImage}
+              alt="PUBG Characters"
+              className="absolute top-0 right-0 h-full w-auto max-w-[55%] object-contain object-right z-10 pointer-events-none"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              style={{
+                transform: `translate(${charactersStyle.x}px, ${charactersStyle.y}px) scale(${charactersStyle.zoom / 100})`,
+                transformOrigin: 'right center'
+              }}
+            />
+          )}
+
+
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
           <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
             <img 
