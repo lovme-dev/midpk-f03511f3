@@ -26,6 +26,7 @@ import { getPageKeywords, getAllKeywords } from "@/data/seoKeywords";
 import TrustedReviews from "@/components/TrustedReviews";
 // subscribeButton import removed - now using custom glass blur style
 import { supabase } from "@/integrations/supabase/client";
+import freeFireLogoNew from "@/assets/free-fire-logo-new.png.asset.json";
 
 interface FreeFireProps {
   onLogout: () => void;
@@ -567,43 +568,40 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
               <div className="w-full h-[100px] bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80" />
             )}
             
-            {/* Free Fire Logo, Title, Official Badge & Subscribe - OVER banner - Always LTR */}
+            {/* Free Fire Logo, Official Badge & Subscribe - OVER banner - Always LTR */}
             <div className="absolute bottom-6 left-0 flex items-center gap-2 px-3 z-20" dir="ltr">
               {/* Free Fire Logo */}
               <img 
-                src="/lovable-uploads/free-fire-logo.webp"
+                src={freeFireLogoNew.url}
                 alt="Free Fire Logo"
                 className="w-12 h-12 rounded-lg object-cover shadow-lg"
               />
               
-              {/* Title and Badges */}
-              <div className="flex flex-col gap-1.5">
-                <h2 className="text-white text-base font-bold tracking-wide drop-shadow-lg">FREE FIRE</h2>
-                <div className="flex items-center gap-1.5">
-                  {/* Official Badge */}
-                  <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
-                    <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                    </svg>
-                    <span>Official</span>
-                  </div>
-                  
-                  {/* Subscribe Button - Custom glass blur style */}
-                  <div 
-                    className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
-                    onClick={() => {
-                      toast({
-                        title: "Subscribe to FREE FIRE",
-                        description: "Sign up to receive updates and exclusive offers!",
-                      });
-                    }}
-                  >
-                    <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="12" cy="12" r="10"/>
-                      <path d="M12 8v8M8 12h8"/>
-                    </svg>
-                    <span>Subscribe</span>
-                  </div>
+              {/* Badges */}
+              <div className="flex items-center gap-1.5">
+                {/* Official Badge */}
+                <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                  </svg>
+                  <span>Official</span>
+                </div>
+                
+                {/* Subscribe Button - Custom glass blur style */}
+                <div 
+                  className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
+                  onClick={() => {
+                    toast({
+                      title: "Subscribe to FREE FIRE",
+                      description: "Sign up to receive updates and exclusive offers!",
+                    });
+                  }}
+                >
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v8M8 12h8"/>
+                  </svg>
+                  <span>Subscribe</span>
                 </div>
               </div>
             </div>
