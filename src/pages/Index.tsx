@@ -744,13 +744,13 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           <div className="relative w-full">
             {/* Mobile Banner - show if uploaded from admin, full image visible with capped height */}
             {mobileBanner && (
-              <div className={`w-full overflow-hidden relative bg-midasbuy-darkBlue ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}>
+              <div className={`w-full overflow-hidden relative bg-midasbuy-darkBlue ${gameBrand === 'BGMI' ? 'max-h-[135px]' : 'max-h-[187px]'}`}>
                 <img 
                   src={mobileBanner}
                   alt={gameBrand === 'BGMI' ? "BGMI Banner" : "PUBG Mobile Banner"}
                   width={750}
                   height={400}
-                  className={`w-full h-auto object-contain ${gameBrand === 'BGMI' ? 'max-h-[130px]' : 'max-h-[180px]'}`}
+                  className={`w-full h-auto object-contain ${gameBrand === 'BGMI' ? 'max-h-[135px]' : 'max-h-[187px]'}`}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -773,7 +773,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             
             {/* Banner placeholder space - maintains layout when no banner */}
             {!mobileBanner && bannersLoaded && (
-              <div className={`w-full bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80 ${gameBrand === 'BGMI' ? 'h-[100px]' : 'h-[180px]'}`} />
+              <div className={`w-full bg-gradient-to-b from-midasbuy-darkBlue to-midasbuy-darkBlue/80 ${gameBrand === 'BGMI' ? 'h-[100px]' : 'h-[187px]'}`} />
             )}
             
             {/* Characters Image - only show if admin uploaded one */}
