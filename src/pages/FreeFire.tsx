@@ -529,6 +529,38 @@ const FreeFire = ({ onLogout, disableSeo = false }: FreeFireProps) => {
               transformOrigin: 'center center'
             }}
           />
+
+          {/* Desktop: Logo, Official Badge & Subscribe - same as mobile, left aligned */}
+          <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
+            <img 
+              src={freeFireLogoNew.url}
+              alt="Free Fire Logo"
+              className="w-12 h-12 rounded-lg object-cover shadow-lg"
+            />
+            <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-0.5 bg-white/90 text-gray-900 px-1 h-4 rounded text-[7px] font-semibold shadow-sm">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                </svg>
+                <span>Official</span>
+              </div>
+              <div 
+                className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
+                onClick={() => {
+                  toast({
+                    title: "Subscribe to FREE FIRE",
+                    description: "Sign up to receive updates and exclusive offers!",
+                  });
+                }}
+              >
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v8M8 12h8"/>
+                </svg>
+                <span>Subscribe</span>
+              </div>
+            </div>
+          </div>
         </div>
       )}
       
