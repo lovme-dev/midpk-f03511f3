@@ -12,17 +12,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 1
   {
     id: "diamond-001",
-    baseAmount: 4000,
+    baseAmount: 2800,
     bonusAmount: 2500,
-    price: 2660,
+    price: 3192,
     discount: "35%",
     image: "/lovable-uploads/ff-package-1.png"
   },
   {
     id: "diamond-002",
-    baseAmount: 7000,
+    baseAmount: 4900,
     bonusAmount: 4985,
-    price: 5880,
+    price: 7056,
     discount: "28%",
     image: "/lovable-uploads/ff-package-2.png"
   },
@@ -30,18 +30,18 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 2
   {
     id: "diamond-003",
-    baseAmount: 12000,
+    baseAmount: 8400,
     bonusAmount: 7500,
-    price: 8820,
+    price: 10584,
     discount: "45%",
     image: "/lovable-uploads/ff-package-3.png",
     featured: true
   },
   {
     id: "diamond-004",
-    baseAmount: 20000,
+    baseAmount: 14000,
     bonusAmount: 12500,
-    price: 14700,
+    price: 17640,
     discount: "33%",
     image: "/lovable-uploads/ff-package-4.png"
   },
@@ -49,18 +49,18 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 3
   {
     id: "diamond-005",
-    baseAmount: 30000,
+    baseAmount: 21000,
     bonusAmount: 7439,
-    price: 29400,
+    price: 35280,
     discount: "42%",
     image: "/lovable-uploads/ff-package-5.png",
     featured: true
   },
   {
     id: "diamond-006",
-    baseAmount: 37000,
+    baseAmount: 25900,
     bonusAmount: 13950,
-    price: 32749,
+    price: 39299,
     discount: "38%",
     image: "/lovable-uploads/ff-package-6.png"
   },
@@ -68,17 +68,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 4
   {
     id: "diamond-007",
-    baseAmount: 39000,
+    baseAmount: 27300,
     bonusAmount: 14500,
-    price: 34825,
+    price: 41790,
     discount: "40%",
     image: "/lovable-uploads/ff-package-1.png"
   },
   {
     id: "diamond-008",
-    baseAmount: 41000,
+    baseAmount: 28700,
     bonusAmount: 15250,
-    price: 37205,
+    price: 44646,
     discount: "29%",
     image: "/lovable-uploads/ff-package-2.png"
   },
@@ -86,17 +86,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 5
   {
     id: "diamond-009",
-    baseAmount: 43000,
+    baseAmount: 30100,
     bonusAmount: 16000,
-    price: 39655,
+    price: 47586,
     discount: "36%",
     image: "/lovable-uploads/ff-package-3.png"
   },
   {
     id: "diamond-010",
-    baseAmount: 45000,
+    baseAmount: 31500,
     bonusAmount: 16750,
-    price: 42035,
+    price: 50442,
     discount: "44%",
     image: "/lovable-uploads/ff-package-4.png"
   },
@@ -104,17 +104,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 6
   {
     id: "diamond-011",
-    baseAmount: 47000,
+    baseAmount: 32900,
     bonusAmount: 17500,
-    price: 44485,
+    price: 53382,
     discount: "31%",
     image: "/lovable-uploads/ff-package-5.png"
   },
   {
     id: "diamond-012",
-    baseAmount: 49000,
+    baseAmount: 34300,
     bonusAmount: 18250,
-    price: 46935,
+    price: 56322,
     discount: "48%",
     image: "/lovable-uploads/ff-package-6.png"
   },
@@ -122,17 +122,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 7
   {
     id: "diamond-013",
-    baseAmount: 51000,
+    baseAmount: 35700,
     bonusAmount: 19000,
-    price: 49385,
+    price: 59262,
     discount: "27%",
     image: "/lovable-uploads/ff-package-1.png"
   },
   {
     id: "diamond-014",
-    baseAmount: 53000,
+    baseAmount: 37100,
     bonusAmount: 19750,
-    price: 51835,
+    price: 62202,
     discount: "41%",
     image: "/lovable-uploads/ff-package-2.png"
   },
@@ -140,17 +140,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 8
   {
     id: "diamond-015",
-    baseAmount: 55000,
+    baseAmount: 38500,
     bonusAmount: 20500,
-    price: 54285,
+    price: 65142,
     discount: "34%",
     image: "/lovable-uploads/ff-package-3.png"
   },
   {
     id: "diamond-016",
-    baseAmount: 80000,
+    baseAmount: 56000,
     bonusAmount: 50000,
-    price: 58800,
+    price: 70560,
     discount: "46%",
     image: "/lovable-uploads/ff-package-4.png"
   },
@@ -158,17 +158,17 @@ export const diamondPackages: DiamondPackage[] = [
   // Row 9
   {
     id: "diamond-017",
-    baseAmount: 120000,
+    baseAmount: 84000,
     bonusAmount: 75000,
-    price: 88200,
+    price: 105840,
     discount: "50%",
     image: "/lovable-uploads/ff-package-5.png"
   },
   {
     id: "diamond-018",
-    baseAmount: 200000,
+    baseAmount: 140000,
     bonusAmount: 125000,
-    price: 147000,
+    price: 176400,
     discount: "30%",
     image: "/lovable-uploads/ff-package-6.png"
   },
