@@ -78,11 +78,9 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
     };
   };
 
-  // Get the chest image based on package index (Free Fire-specific assets)
-  const getChestImage = (index: number): string => {
-    if (index === 0) return "/lovable-uploads/ff-diamond-chest-1.webp";
-    if (index >= 1 && index <= 5) return "/lovable-uploads/ff-diamond-chest-2.webp";
-    return "/lovable-uploads/ff-diamond-chest-3.webp";
+  // Use the Free Fire diamond icon as the main package logo (same as the icon left of the value)
+  const getChestImage = (_index: number): string => {
+    return "/images/free-fire-diamond-icon.png";
   };
 
   return (
