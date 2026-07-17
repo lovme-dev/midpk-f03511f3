@@ -728,7 +728,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
           />
 
           {/* Desktop Characters Image - right side, same as mobile */}
-          {gameBrand !== 'BGMI' && charactersImage && (
+          {charactersImage && (
             <img
               src={charactersImage}
               alt="PUBG Characters"
@@ -822,7 +822,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             )}
             
             {/* Characters Image - only show if admin uploaded one */}
-            {gameBrand !== 'BGMI' && charactersImage && (
+            {charactersImage && (
               <img 
                 src={charactersImage} 
                 alt="PUBG Characters" 
