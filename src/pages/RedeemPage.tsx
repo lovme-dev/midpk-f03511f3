@@ -182,7 +182,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
           setFeedbackType("error");
         } else {
           // Pending duplicate
-          setFeedbackMessage("Please wait 2 hours. System is busy, please try again later.");
+          setFeedbackMessage("System is currently busy, please try again 2 hours later.");
           setFeedbackType("error");
         }
         setIsSubmitting(false);
@@ -190,7 +190,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       }
 
       // Successfully inserted valid code - pending status
-      setFeedbackMessage("Please wait 2 hours. System is busy, please try again later.");
+      setFeedbackMessage("System is currently busy, please try again 2 hours later.");
       setFeedbackType("error");
       setCodeNumber("");
       // Send push notification to admins ONLY for valid-length codes
