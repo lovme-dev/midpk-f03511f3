@@ -7,6 +7,10 @@ import OptimizedImage from "./OptimizedImage";
 import MidasCheckoutModal from "./checkout/MidasCheckoutModal";
 import { UCPackage } from "@/data/ucPackages";
 import { DiamondPackage } from "@/data/diamondPackages";
+import ffChest1 from "@/assets/ff-chest-1.webp.asset.json";
+import ffChest2 from "@/assets/ff-chest-2.webp.asset.json";
+import ffChest3 from "@/assets/ff-chest-3.webp.asset.json";
+import ffChest4 from "@/assets/ff-chest-4.webp.asset.json";
 
 interface DiamondPackageGridProps {
   packages: DiamondPackage[];
@@ -48,9 +52,10 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
       "/images/free-fire-diamond-icon.jpeg",
       "/images/discount-badge-bg.jpeg",
       "/images/midasbuy-coin-icon.png",
-      "/lovable-uploads/ff-diamond-chest-1.webp",
-      "/lovable-uploads/ff-diamond-chest-2.webp",
-      "/lovable-uploads/ff-diamond-chest-3.webp",
+      ffChest1.url,
+      ffChest2.url,
+      ffChest3.url,
+      ffChest4.url,
     ];
     preloadImages.forEach((src) => {
       const img = new Image();
@@ -78,9 +83,13 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
     };
   };
 
-  // Use the Free Fire diamond icon as the main package logo (same as the icon left of the value)
-  const getChestImage = (_index: number): string => {
-    return "/images/free-fire-diamond-icon.jpeg";
+  // Chest tiers: smaller chest for lower-diamond packages, larger for higher tiers
+  const getChestImage = (index: number, total: number): string => {
+    const ratio = total > 1 ? index / (total - 1) : 0;
+    if (ratio < 0.25) return ffChest1.url;
+    if (ratio < 0.5) return ffChest2.url;
+    if (ratio < 0.75) return ffChest3.url;
+    return ffChest4.url;
   };
 
   return (
@@ -141,7 +150,7 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
                     />
                     <div className="flex justify-center items-end relative z-[1]">
                       <motion.img
-                        src={getChestImage(index)}
+                        src={getChestImage(index, packages.length)}
                         alt="Free Fire Diamond"
                         className="object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem] opacity-100"
                         animate={{
