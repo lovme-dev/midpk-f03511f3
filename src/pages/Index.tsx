@@ -698,6 +698,42 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               transformOrigin: 'center center'
             }}
           />
+
+          {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
+          <div className="absolute left-0 bottom-6 flex items-center gap-3 px-6 z-20" dir="ltr">
+            <img 
+              src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
+              alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
+              className="w-16 h-16 rounded-lg object-cover shadow-lg"
+            />
+            <div className="flex flex-col gap-2">
+              <h1 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h1>
+              <div aria-hidden="true" className="text-white text-xl font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 bg-white/90 text-gray-900 px-1.5 h-5 rounded text-[9px] font-semibold shadow-sm">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                  </svg>
+                  <span>Official</span>
+                </div>
+                <div 
+                  className="flex items-center gap-1 bg-white/15 backdrop-blur-md text-white px-2 h-[22px] rounded-full text-[9px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
+                  onClick={() => {
+                    toast({
+                      title: `Subscribe to ${brandDisplayName}`,
+                      description: "Sign up to receive updates and exclusive offers!",
+                    });
+                  }}
+                >
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v8M8 12h8"/>
+                  </svg>
+                  <span>Subscribe</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
       
