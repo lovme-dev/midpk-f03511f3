@@ -219,8 +219,10 @@ serve(async (req: Request) => {
     const authToken = authResult.token;
     console.log("Step 1 SUCCESS: Authenticated with PayPro");
 
-    // Generate unique order ID
-    const orderId = `MIDAS-${Date.now()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+    // Generate unique order ID (random mixed uppercase letters)
+    const _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let orderId = "";
+    for (let i = 0; i < 18; i++) orderId += _chars[Math.floor(Math.random() * 26)];
 
     // Step 2: Create order with PayPro per API v2 spec
     console.log("Step 2: Creating PayPro order...");

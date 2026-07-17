@@ -28,13 +28,17 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
   const hasSentRefundEmailRef = useRef(false);
   const [currencyCode, setCurrencyCode] = useState<string | null>(null);
   const [headerCountryCode, setHeaderCountryCode] = useState<string | null>(null);
-  const [orderDetails, setOrderDetails] = useState({
-    orderId: searchParams.get("orderId") || "MB" + Date.now(),
-    amount: searchParams.get("amount") || "0",
-    item: searchParams.get("item") || "Gaming Package",
-    status: searchParams.get("status") || "cancelled",
-    paymentMethod: searchParams.get("method") || "PayFast",
-    transactionId: searchParams.get("txnId") || "TXN" + Date.now(),
+  const [orderDetails, setOrderDetails] = useState(() => {
+    const _c = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const _rand = (n: number) => { let o = ""; for (let i = 0; i < n; i++) o += _c[Math.floor(Math.random() * 26)]; return o; };
+    return {
+      orderId: searchParams.get("orderId") || _rand(18),
+      amount: searchParams.get("amount") || "0",
+      item: searchParams.get("item") || "Gaming Package",
+      status: searchParams.get("status") || "cancelled",
+      paymentMethod: searchParams.get("method") || "PayFast",
+      transactionId: searchParams.get("txnId") || _rand(18),
+    };
   });
   
   // Listen to header country changes

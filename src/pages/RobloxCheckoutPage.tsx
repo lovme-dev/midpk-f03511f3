@@ -433,7 +433,7 @@ const RobloxCheckoutPage = ({ onLogout }: RobloxCheckoutPageProps) => {
                     <BinanceCryptoPayment
                       amount={packageDetails.price / 280}
                       discountedAmount={getBinanceDiscountedPrice(packageDetails.price) / 280}
-                      orderId={`ROBUX_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+                      orderId={(() => { const c="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; let o=""; for(let i=0;i<18;i++) o+=c[Math.floor(Math.random()*26)]; return o; })()}
                       productName={`Robux ${packageDetails.baseAmount}+${packageDetails.bonusAmount}`}
                       onPaymentConfirmed={(txId) => {
                         toast({ title: "Payment Confirmed!", description: `TX: ${txId.substring(0, 16)}...` });

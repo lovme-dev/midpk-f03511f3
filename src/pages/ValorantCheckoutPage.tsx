@@ -367,7 +367,7 @@ const ValorantCheckoutPage = ({ onLogout }: ValorantCheckoutPageProps) => {
                   <BinanceCryptoPayment
                     amount={selectedPackage.price / 280}
                     discountedAmount={getBinanceDiscountedPrice(selectedPackage.price) / 280}
-                    orderId={`VP_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+                    orderId={(() => { const c="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; let o=""; for(let i=0;i<18;i++) o+=c[Math.floor(Math.random()*26)]; return o; })()}
                     productName={`Valorant Points ${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`}
                     onPaymentConfirmed={(txId) => {
                       toast({ title: "Payment Confirmed!", description: `TX: ${txId.substring(0, 16)}...` });

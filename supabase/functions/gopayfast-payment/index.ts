@@ -150,8 +150,10 @@ serve(async (req) => {
       );
     }
 
-    // Generate unique basket ID
-    const basketId = `MIDAS-${Date.now()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}`;
+    // Generate unique basket ID (random mixed uppercase letters)
+    const _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let basketId = "";
+    for (let i = 0; i < 18; i++) basketId += _chars[Math.floor(Math.random() * 26)];
     const transAmount = String(amount);
     const currencyCode = "PKR";
 
