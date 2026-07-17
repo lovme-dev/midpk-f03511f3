@@ -717,7 +717,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                   <span>Official</span>
                 </div>
                 <div 
-                  className="flex items-center gap-1 bg-white/15 backdrop-blur-md text-white px-2 h-[22px] rounded-full text-[9px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
+                  className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
                   onClick={() => {
                     toast({
                       title: `Subscribe to ${brandDisplayName}`,
