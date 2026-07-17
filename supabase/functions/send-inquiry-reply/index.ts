@@ -70,7 +70,7 @@ const handler = async (req: Request): Promise<Response> => {
       <!-- Contact Info -->
       <div style="background: rgba(34, 197, 94, 0.1); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(34, 197, 94, 0.3);">
         <p style="color: #94a3b8; margin: 0 0 10px 0; font-size: 14px;">Need further assistance?</p>
-        <a href="mailto:help@midasbuy.com.co" style="color: #22c55e; text-decoration: none; font-size: 16px; font-weight: 600;">help@midasbuy.com.co</a>
+        <a href="mailto:help@midasbuy.com.pk" style="color: #22c55e; text-decoration: none; font-size: 16px; font-weight: 600;">help@midasbuy.com.pk</a>
       </div>
       
       <!-- Sign Off -->
@@ -91,7 +91,8 @@ const handler = async (req: Request): Promise<Response> => {
 `;
 
     const emailResponse = await resend.emails.send({
-      from: "Midasbuy Support <noreply@midasbuy.com.co>",
+      from: "Midasbuy Support <noreply@midasbuy.com.pk>",
+      reply_to: "help@midasbuy.com.pk",
       to: [customerEmail],
       subject: subject,
       html: emailHtml,
