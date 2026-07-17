@@ -83,9 +83,13 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
     };
   };
 
-  // Use the Free Fire diamond icon as the main package logo (same as the icon left of the value)
-  const getChestImage = (_index: number): string => {
-    return "/images/free-fire-diamond-icon.jpeg";
+  // Chest tiers: smaller chest for lower-diamond packages, larger for higher tiers
+  const getChestImage = (index: number, total: number): string => {
+    const ratio = total > 1 ? index / (total - 1) : 0;
+    if (ratio < 0.25) return ffChest1.url;
+    if (ratio < 0.5) return ffChest2.url;
+    if (ratio < 0.75) return ffChest3.url;
+    return ffChest4.url;
   };
 
   return (
