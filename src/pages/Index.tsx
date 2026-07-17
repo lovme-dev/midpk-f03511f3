@@ -689,7 +689,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             alt="PUBG Desktop Banner"
             width={1920}
             height={280}
-            className="w-full h-auto max-h-[280px] object-contain"
+            className="w-full h-auto max-h-[291px] object-contain"
             loading="eager"
             fetchPriority="high"
             decoding="async"
