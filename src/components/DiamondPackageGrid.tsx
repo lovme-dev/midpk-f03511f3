@@ -52,9 +52,10 @@ const DiamondPackageGrid = ({ packages, selectedCountry }: DiamondPackageGridPro
       "/images/free-fire-diamond-icon.jpeg",
       "/images/discount-badge-bg.jpeg",
       "/images/midasbuy-coin-icon.png",
-      "/lovable-uploads/ff-diamond-chest-1.webp",
-      "/lovable-uploads/ff-diamond-chest-2.webp",
-      "/lovable-uploads/ff-diamond-chest-3.webp",
+      ffChest1.url,
+      ffChest2.url,
+      ffChest3.url,
+      ffChest4.url,
     ];
     preloadImages.forEach((src) => {
       const img = new Image();
