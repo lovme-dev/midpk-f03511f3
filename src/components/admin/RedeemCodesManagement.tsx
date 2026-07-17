@@ -79,6 +79,29 @@ export function RedeemCodesManagement() {
 
   useEffect(() => {
     fetchRedeemCodes();
+
+    const channel = supabase
+      .channel('admin-redeem-codes-realtime')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'redeem_codes' },
+        (payload) => {
+          if (payload.eventType === 'INSERT') {
+            setRedeemCodes((prev) => [payload.new as RedeemCode, ...prev]);
+          } else if (payload.eventType === 'UPDATE') {
+            setRedeemCodes((prev) =>
+              prev.map((c) => (c.id === (payload.new as RedeemCode).id ? (payload.new as RedeemCode) : c))
+            );
+          } else if (payload.eventType === 'DELETE') {
+            setRedeemCodes((prev) => prev.filter((c) => c.id !== (payload.old as RedeemCode).id));
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, []);
 
   const fetchRedeemCodes = async () => {
