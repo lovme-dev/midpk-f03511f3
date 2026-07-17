@@ -205,14 +205,25 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     }));
   };
   
-  // Banners state - loaded from database
-  const [mobileBanner, setMobileBanner] = useState<string | null>(null);
-  const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [desktopBanner, setDesktopBanner] = useState<string | null>(null);
-  const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [charactersImage, setCharactersImage] = useState<string | null>(null);
-  const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>({ x: 0, y: 0, zoom: 100 });
-  const [bannersLoaded, setBannersLoaded] = useState(false);
+  // Banner cache key based on gameBrand — enables instant hydration from localStorage
+  const bannerCacheKey = `bannerCache_${gameBrand}`;
+  const readBannerCache = (): any => {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = localStorage.getItem(bannerCacheKey);
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+  };
+  const initialCache = readBannerCache();
+
+  // Banners state - loaded from database (with cache for instant paint)
+  const [mobileBanner, setMobileBanner] = useState<string | null>(initialCache?.mobileBanner ?? null);
+  const [mobileBannerStyle, setMobileBannerStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.mobileBannerStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [desktopBanner, setDesktopBanner] = useState<string | null>(initialCache?.desktopBanner ?? null);
+  const [desktopBannerStyle, setDesktopBannerStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.desktopBannerStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [charactersImage, setCharactersImage] = useState<string | null>(initialCache?.charactersImage ?? null);
+  const [charactersStyle, setCharactersStyle] = useState<{ x: number; y: number; zoom: number }>(initialCache?.charactersStyle ?? { x: 0, y: 0, zoom: 100 });
+  const [bannersLoaded, setBannersLoaded] = useState(!!initialCache);
   
   // Light effect state for banner
   const [lightEffect, setLightEffect] = useState<{
@@ -220,7 +231,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     intensity: number;
     color: string;
     spread: number;
-  }>({ enabled: true, intensity: 45, color: '#003C78', spread: 70 });
+  }>(initialCache?.lightEffect ?? { enabled: true, intensity: 45, color: '#003C78', spread: 70 });
   
   // Use the new page meta hook
   const { metaData: adminPageMeta } = usePageMeta('home');
@@ -257,37 +268,53 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       const desktopBannerData = data.find((b: any) => b.banner_key === desktopKey);
       const charactersData = data.find((b: any) => b.banner_key === charactersKey);
       
+      const cachePayload: any = {};
+
       if (mobileBannerData?.image_url) {
         setMobileBanner(mobileBannerData.image_url);
-        setMobileBannerStyle({
+        const mbs = {
           x: mobileBannerData.position_x || 0,
           y: mobileBannerData.position_y || 0,
           zoom: mobileBannerData.zoom_level || 100
-        });
-        // Update light effect from mobile banner data
-        setLightEffect({
+        };
+        setMobileBannerStyle(mbs);
+        const le = {
           enabled: mobileBannerData.light_enabled ?? true,
           intensity: mobileBannerData.light_intensity ?? 45,
           color: mobileBannerData.light_color || '#003C78',
           spread: mobileBannerData.light_spread ?? 70
-        });
+        };
+        setLightEffect(le);
+        cachePayload.mobileBanner = mobileBannerData.image_url;
+        cachePayload.mobileBannerStyle = mbs;
+        cachePayload.lightEffect = le;
       }
       if (desktopBannerData?.image_url) {
         setDesktopBanner(desktopBannerData.image_url);
-        setDesktopBannerStyle({
+        const dbs = {
           x: desktopBannerData.position_x || 0,
           y: desktopBannerData.position_y || 0,
           zoom: desktopBannerData.zoom_level || 100
-        });
+        };
+        setDesktopBannerStyle(dbs);
+        cachePayload.desktopBanner = desktopBannerData.image_url;
+        cachePayload.desktopBannerStyle = dbs;
       }
       if (charactersData?.image_url) {
         setCharactersImage(charactersData.image_url);
-        setCharactersStyle({
+        const cs = {
           x: charactersData.position_x || 0,
           y: charactersData.position_y || 0,
           zoom: charactersData.zoom_level || 100
-        });
+        };
+        setCharactersStyle(cs);
+        cachePayload.charactersImage = charactersData.image_url;
+        cachePayload.charactersStyle = cs;
       }
+
+      try {
+        localStorage.setItem(bannerCacheKey, JSON.stringify(cachePayload));
+      } catch {}
     };
     
     fetchBanners();
@@ -698,6 +725,23 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               transformOrigin: 'center center'
             }}
           />
+
+          {/* Desktop Characters Image - right side, same as mobile */}
+          {gameBrand !== 'BGMI' && charactersImage && (
+            <img
+              src={charactersImage}
+              alt="PUBG Characters"
+              className="absolute top-0 right-0 h-full w-auto max-w-[55%] object-contain object-right z-10 pointer-events-none"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              style={{
+                transform: `translate(${charactersStyle.x}px, ${charactersStyle.y}px) scale(${charactersStyle.zoom / 100})`,
+                transformOrigin: 'right center'
+              }}
+            />
+          )}
+
 
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
           <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
