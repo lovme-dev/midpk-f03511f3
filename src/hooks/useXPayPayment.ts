@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useXpay } from '@/components/XPayProvider';
+import { generateOrderId } from '@/utils/generateOrderId';
 
 interface PaymentRequest {
   amount: number;
