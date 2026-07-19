@@ -1113,7 +1113,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         price: selectedPackage.price,
         pkr_amount: selectedPackage.price,
         currency_code: currencyCode,
-        status: 'pending',
+        status: 'cancelled',
         payment_method: 'test_payment',
         transaction_id: `TEST-${friendlyId}`,
         player_id: userInfo.id,
@@ -1125,9 +1125,31 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         customer_name: buyerName,
       } as any).select('id').single();
       if (error) throw error;
-      // Mirror real card-payment flow: land on /payment/success which auto-cancels
-      // the pending order, sends refund email, notifies admin & triggers push.
-      // The DB cron then converts cancelled → refund_review after 1 minute.
+      try {
+        await supabase.functions.invoke('send-order-email', {
+          body: {
+            userId: user.id,
+            orderId: inserted.id,
+            emailType: 'refund',
+            orderDetails: {
+              packageName: itemName,
+              ucAmount: selectedPackage.baseAmount + selectedPackage.bonusAmount,
+              price: selectedPackage.price,
+              paymentMethod: 'test_payment',
+              playerId: userInfo.id,
+              transactionId: `TEST-${friendlyId}`,
+              productType,
+              productName: itemName,
+              productAmount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+              currencyCode,
+            },
+          },
+        });
+      } catch (emailError) {
+        console.error('Test payment refund email failed:', emailError);
+      }
+      // Test Payment mirrors a cancelled card payment immediately.
+      // Backend cron converts cancelled → refund_review after 30 seconds.
       onOpenChange(false);
       const params = new URLSearchParams({
         orderId: friendlyId,

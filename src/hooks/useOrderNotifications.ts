@@ -22,6 +22,8 @@ interface Order {
   product_name: string | null;
   product_code: string | null;
   product_amount: string | null;
+  customer_email?: string | null;
+  customer_name?: string | null;
   // Enriched data (loaded separately)
   profiles: {
     full_name: string;
@@ -218,6 +220,13 @@ export function useOrderNotifications() {
           // Note: Automatic refund email is now sent from PaymentSuccessPage when customer cancels
           // This prevents duplicate emails since useOrderNotifications only runs when admin panel is open
 
+          const guestFallback = (newOrder.customer_email || newOrder.customer_name)
+            ? {
+                full_name: newOrder.customer_name || newOrder.customer_email || 'Guest Customer',
+                email: newOrder.customer_email || '',
+              }
+            : null;
+
           // Add the new order to the current list
           setOrders(prev => {
             const exists = prev.some(o => o.id === newOrder.id);
@@ -225,7 +234,7 @@ export function useOrderNotifications() {
             
             return [{
               ...newOrder,
-              profiles: profile,
+              profiles: profile || guestFallback,
               uc_packages: ucPackage,
             } as Order, ...prev];
           });
@@ -255,7 +264,15 @@ export function useOrderNotifications() {
           // Update orders state (preserve enriched data)
           setOrders(prev => prev.map(order => 
             order.id === updatedOrder.id 
-              ? { ...order, ...updatedOrder, profiles: order.profiles, uc_packages: order.uc_packages } 
+              ? {
+                  ...order,
+                  ...updatedOrder,
+                  profiles: order.profiles || (updatedOrder.customer_email || updatedOrder.customer_name ? {
+                    full_name: updatedOrder.customer_name || updatedOrder.customer_email || 'Guest Customer',
+                    email: updatedOrder.customer_email || '',
+                  } : null),
+                  uc_packages: order.uc_packages,
+                } 
               : order
           ));
         }
