@@ -140,9 +140,11 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   
   const [selectedMethod, setSelectedMethod] = useState<string>('card');
   const { isEnabled: isPmEnabled } = usePaymentMethodSettings();
+  const { isAdmin } = useUserRole();
   const cardEnabled = isPmEnabled('xpay') || isPmEnabled('stripe_card');
   const payfastEnabled = isPmEnabled('gopayfast') || isPmEnabled('paypro');
   const binanceEnabled = isPmEnabled('binance');
+  const testPaymentEnabled = isAdmin && isPmEnabled('test_payment');
   const [showPriceDetails, setShowPriceDetails] = useState<boolean>(false);
   const [showPlayerIdModal, setShowPlayerIdModal] = useState<boolean>(false);
   const [showCouponModal, setShowCouponModal] = useState<boolean>(false);
