@@ -1621,62 +1621,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                             </div>
                           </div>
                           
-                          {/* Quick Email Checkout for non-logged PK users */}
-                          {selectedMethod === 'payfast' && !isLoggedIn && (
-                            <div className="bg-[#151a2e] border-[1.5px] border-t-0 border-[#307bf5] rounded-b-xl p-4">
-                              <div className="space-y-3">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <svg 
-                                    className="w-4 h-4 text-[#3a7bfd]" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path 
-                                      strokeLinecap="round" 
-                                      strokeLinejoin="round" 
-                                      strokeWidth={2} 
-                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
-                                    />
-                                  </svg>
-                                  <span className="text-[12px] text-gray-300 font-medium">
-                                    Enter your email for order updates
-                                  </span>
-                                </div>
-                                
-                                <div className="relative">
-                                  <input 
-                                    type="email"
-                                    placeholder="your@email.com"
-                                    value={quickCheckoutEmail}
-                                    onChange={handleQuickEmailChange}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className={`w-full bg-[#1c2133] border ${
-                                      quickCheckoutEmailError 
-                                        ? 'border-red-500/50 focus:border-red-500' 
-                                        : 'border-[#2a3042] focus:border-[#3a7bfd]'
-                                    } rounded-lg px-4 py-3 text-white text-[13px] placeholder-gray-500 outline-none transition-colors`}
-                                    autoComplete="email"
-                                  />
-                                  {quickCheckoutEmail && isValidEmail(quickCheckoutEmail) && (
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                                      <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                      </svg>
-                                    </div>
-                                  )}
-                                </div>
-                                
-                                {quickCheckoutEmailError && (
-                                  <p className="text-red-400 text-[11px] mt-1">{quickCheckoutEmailError}</p>
-                                )}
-                                
-                                <p className="text-gray-500 text-[10px] leading-tight">
-                                  We'll send your order confirmation and UC delivery status to this email
-                                </p>
-                              </div>
-                            </div>
-                          )}
+                          {/* Inline quick email removed - now shown globally above payment methods */}
+
                         </div>
                       )}
 
