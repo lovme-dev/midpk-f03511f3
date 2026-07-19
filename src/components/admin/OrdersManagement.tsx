@@ -1318,7 +1318,7 @@ export function OrdersManagement() {
                 ) : (
                   filteredOrders.map((order) => (
                     <TableRow key={order.id} className="hover:bg-muted/20">
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <Checkbox
                           checked={selectedOrders.has(order.id)}
                           onCheckedChange={() => toggleOrderSelection(order.id)}
@@ -1326,15 +1326,15 @@ export function OrdersManagement() {
                       </TableCell>
                       
                       {/* Order ID with Copy Button - Same as customer sees */}
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <OrderIdCell transactionId={order.transaction_id} />
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2 align-top">
                         <div className="space-y-1">
                           <div className="flex items-center gap-1 sm:gap-2">
                             <User className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-                            <p className="font-medium text-xs sm:text-sm text-foreground truncate max-w-[80px] sm:max-w-full">{order.profiles?.full_name || 'No name'}</p>
+                            <p className="font-medium text-xs text-foreground truncate max-w-[90px] lg:max-w-[150px]" title={getCustomerName(order)}>{getCustomerName(order)}</p>
                           </div>
                           <InlineEmailEditor 
                             order={order} 
@@ -1343,9 +1343,9 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2 align-top">
                         <div className="space-y-1">
-                          <p className="font-medium text-xs sm:text-sm text-foreground truncate max-w-[80px] sm:max-w-[120px]">{order.uc_packages?.name || order.product_name || 'N/A'}</p>
+                          <p className="font-medium text-xs text-foreground truncate max-w-[80px] lg:max-w-[120px]" title={order.uc_packages?.name || order.product_name || 'N/A'}>{order.uc_packages?.name || order.product_name || 'N/A'}</p>
                           <p className="text-xs text-muted-foreground flex items-center gap-1">
                             <Package className="h-3 w-3" />
                             {order.uc_packages?.uc_amount || order.product_amount || 'N/A'} {order.product_type || 'UC'}
@@ -1353,25 +1353,24 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden md:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden md:table-cell">
                         <PlayerIdCell playerId={order.player_id} />
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <div className="flex items-center gap-1">
-                          <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-                          <span className="font-semibold text-xs sm:text-sm text-foreground">{formatCurrency(order.price, order.currency_code)}</span>
+                          <span className="font-semibold text-xs text-foreground truncate" title={formatCurrency(order.price, order.currency_code)}>{formatCurrency(order.price, order.currency_code)}</span>
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <Badge className={`${getStatusColor(order.status)} text-xs`}>
                           {order.status}
                         </Badge>
                       </TableCell>
                       
                       {/* Email Language */}
-                      <TableCell className="p-2 sm:p-4 hidden xl:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden xl:table-cell">
                         {(() => {
                           const langInfo = getEmailLanguageInfo(order.currency_code);
                           return (
@@ -1382,7 +1381,7 @@ export function OrdersManagement() {
                         })()}
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden lg:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden lg:table-cell">
                         <Badge className={`${getPaymentMethodBadge(order.payment_method)} text-xs`}>
                           {isPakistaniOrder(order.currency_code) && '🇵🇰 '}
                           {order.payment_method === 'gopayfast' ? 'GoPayFast' : 
@@ -1390,7 +1389,7 @@ export function OrdersManagement() {
                         </Badge>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden sm:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden 2xl:table-cell">
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
                           <span className="text-xs sm:text-sm text-foreground">
@@ -1399,12 +1398,12 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
-                        <div className="flex gap-1 flex-wrap items-center">
+                      <TableCell className="p-1 sm:p-2">
+                        <div className="flex gap-1 flex-nowrap items-center">
                           {/* Email Delivered Tag - shows when email was sent */}
                           {order.email_sent_at && (
                             <Badge className="bg-green-500/20 text-green-400 border-green-500 text-xs px-2 py-0.5 h-6 sm:h-7">
-                              ✓ Delivered
+                              ✓
                             </Badge>
                           )}
                           {/* Email Preview Buttons */}
@@ -1413,26 +1412,25 @@ export function OrdersManagement() {
                             size="sm"
                             className="text-green-400 border-green-500 hover:bg-green-500/20 text-xs px-2 py-1 h-7 sm:h-8"
                             onClick={() => openEmailPreview(order, 'confirmation')}
+                            title="Send confirmation email"
                           >
-                            <Send className="h-3 w-3 sm:mr-1" />
-                            <span className="hidden sm:inline">Confirm</span>
+                            <Send className="h-3 w-3" />
                           </Button>
                           <Button 
                             variant="outline" 
                             size="sm"
                             className="text-red-400 border-red-500 hover:bg-red-500/20 text-xs px-2 py-1 h-7 sm:h-8"
                             onClick={() => openEmailPreview(order, 'refund')}
+                            title="Send refund email"
                           >
-                            <DollarSign className="h-3 w-3 sm:mr-1" />
-                            <span className="hidden sm:inline">Refund</span>
+                            <DollarSign className="h-3 w-3" />
                           </Button>
 
                           {/* View Details */}
                           <Dialog>
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" className="text-foreground text-xs px-2 py-1 h-7 sm:h-8">
-                                <Eye className="h-3 w-3 sm:h-4 sm:w-4 sm:mr-1" />
-                                <span className="hidden sm:inline">View</span>
+                                <Eye className="h-3 w-3 sm:h-4 sm:w-4" />
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
