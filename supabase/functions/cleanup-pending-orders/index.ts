@@ -39,7 +39,7 @@ serve(async (req) => {
     }
   }
 
-  console.log(`Cleaned up ${count} pending orders older than 20 minutes`);
+  console.log(`Cleaned up ${count} pending orders older than 30 minutes`);
   return new Response(JSON.stringify({ success: true, deleted: count }), {
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
