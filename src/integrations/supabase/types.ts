@@ -465,6 +465,8 @@ export type Database = {
         Row: {
           created_at: string | null
           currency_code: string | null
+          customer_email: string | null
+          customer_name: string | null
           email_sent_at: string | null
           exchange_rate: number | null
           id: string
@@ -489,6 +491,8 @@ export type Database = {
         Insert: {
           created_at?: string | null
           currency_code?: string | null
+          customer_email?: string | null
+          customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
           id?: string
@@ -513,6 +517,8 @@ export type Database = {
         Update: {
           created_at?: string | null
           currency_code?: string | null
+          customer_email?: string | null
+          customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
           id?: string
@@ -541,6 +547,8 @@ export type Database = {
           archived_at: string
           archived_reason: string | null
           currency_code: string | null
+          customer_email: string | null
+          customer_name: string | null
           email_sent_at: string | null
           exchange_rate: number | null
           id: string
@@ -566,6 +574,8 @@ export type Database = {
           archived_at?: string
           archived_reason?: string | null
           currency_code?: string | null
+          customer_email?: string | null
+          customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
           id?: string
@@ -591,6 +601,8 @@ export type Database = {
           archived_at?: string
           archived_reason?: string | null
           currency_code?: string | null
+          customer_email?: string | null
+          customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
           id?: string

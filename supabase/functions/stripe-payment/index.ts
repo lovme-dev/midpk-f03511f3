@@ -89,6 +89,8 @@ serve(async (req) => {
         player_id: player_id || null,
         server_name: username || null,
         user_id: null, // Will be updated when we have user auth
+        customer_email: email_address || null,
+        customer_name: username || null,
       });
     } catch (dbError) {
       console.error('Database insert error:', dbError);

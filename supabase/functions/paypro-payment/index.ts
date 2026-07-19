@@ -462,6 +462,9 @@ serve(async (req: Request) => {
       product_type: product_type,
       product_name: product_name || item_name,
       product_amount: product_amount,
+      customer_email: email_address,
+      customer_name: realCustomerName || username,
+      username: username,
     });
 
     if (dbError) {

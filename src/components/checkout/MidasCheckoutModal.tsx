@@ -44,6 +44,7 @@ import {
   ttqIdentify
 } from "@/utils/tiktokTracking";
 import { usePaymentMethodSettings } from "@/hooks/usePaymentMethodSettings";
+import { useUserRole } from "@/hooks/useUserRole";
 
 interface MidasCheckoutModalProps {
   open: boolean;
@@ -139,9 +140,11 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   
   const [selectedMethod, setSelectedMethod] = useState<string>('card');
   const { isEnabled: isPmEnabled } = usePaymentMethodSettings();
+  const { isAdmin } = useUserRole();
   const cardEnabled = isPmEnabled('xpay') || isPmEnabled('stripe_card');
   const payfastEnabled = isPmEnabled('gopayfast') || isPmEnabled('paypro');
   const binanceEnabled = isPmEnabled('binance');
+  const testPaymentEnabled = isAdmin && isPmEnabled('test_payment');
   const [showPriceDetails, setShowPriceDetails] = useState<boolean>(false);
   const [showPlayerIdModal, setShowPlayerIdModal] = useState<boolean>(false);
   const [showCouponModal, setShowCouponModal] = useState<boolean>(false);
@@ -1072,8 +1075,86 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
     } else if (selectedMethod === 'binance') {
       // Show Binance crypto payment section inline
       setShowCryptoPayment(true);
+    } else if (selectedMethod === 'test_payment') {
+      handleTestPaymentSubmit();
     }
   };
+
+  // Admin-only Test Payment: creates a pending order end-to-end for QA
+  const handleTestPaymentSubmit = async () => {
+    if (!selectedPackage || !userInfo) {
+      setShowPlayerIdModal(true);
+      return;
+    }
+    setIsPaymentLoading(true);
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      const buyerEmail = user?.email || guestEmail || quickCheckoutEmail || '';
+      const buyerName = (user?.user_metadata as any)?.full_name || userInfo.name || 'Test Buyer';
+      if (!buyerEmail) {
+        toast({ title: 'Email required', description: 'Enter an email above to run a test order.', variant: 'destructive' });
+        setIsPaymentLoading(false);
+        return;
+      }
+      const { generateOrderId } = await import('@/utils/generateOrderId');
+      const orderId = generateOrderId();
+      const itemName = getItemName(selectedPackage);
+      const { error } = await supabase.from('orders').insert({
+        id: orderId,
+        user_id: user?.id || `guest_${Date.now()}`,
+        package_id: String(selectedPackage.id),
+        price: selectedPackage.price,
+        pkr_amount: selectedPackage.price,
+        currency_code: currencyCode,
+        status: 'pending',
+        payment_method: 'test_payment',
+        transaction_id: `TEST-${orderId}`,
+        player_id: userInfo.id,
+        username: userInfo.name,
+        product_type: productType,
+        product_name: itemName,
+        product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+        customer_email: buyerEmail,
+        customer_name: buyerName,
+      } as any);
+      if (error) throw error;
+      toast({ title: '✅ Test order created', description: `Order ${orderId} placed as pending. Cancel it from admin panel to trigger refund email.` });
+      onOpenChange(false);
+      navigate('/thank-you');
+    } catch (e: any) {
+      console.error('Test payment error:', e);
+      toast({ title: 'Test payment failed', description: e?.message || 'Could not create test order', variant: 'destructive' });
+    } finally {
+      setIsPaymentLoading(false);
+    }
+  };
+
+  // Unified checkout button handler: supports guest checkout via email for any method
+  const handleCheckoutClick = () => {
+    if (!userInfo) {
+      setShowPlayerIdModal(true);
+      return;
+    }
+    if (!isLoggedIn) {
+      if (!quickCheckoutEmail || !isValidEmail(quickCheckoutEmail)) {
+        setQuickCheckoutEmailError('Please enter a valid email above to continue');
+        return;
+      }
+      // Persist guest email for downstream flows
+      setGuestEmail(quickCheckoutEmail);
+      if (!guestUserId) {
+        setGuestUserId(`guest_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`);
+      }
+      if (isPakistan && selectedMethod === 'payfast') {
+        handleQuickPayWithEmail();
+        return;
+      }
+    }
+    handlePayNow();
+  };
+
+
+
 
   if (!selectedPackage) return null;
 
@@ -1476,8 +1557,42 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                       </svg>
                    </div>
 
+                   {/* Guest Email input - required for non-logged users to enable payment channels */}
+                   {!isLoggedIn && (
+                     <div className="px-4 mb-3 md:px-0">
+                       <div className="bg-[#151a2e] border border-[#2a3042] rounded-xl p-4">
+                         <div className="flex items-center gap-2 mb-2">
+                           <svg className="w-4 h-4 text-[#3a7bfd]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span className="text-[12px] text-gray-200 font-medium">
+                             Enter your email to continue <span className="text-red-400">*</span>
+                           </span>
+                         </div>
+                         <input
+                           type="email"
+                           placeholder="your@email.com"
+                           value={quickCheckoutEmail}
+                           onChange={handleQuickEmailChange}
+                           className={`w-full bg-[#1c2133] border ${
+                             quickCheckoutEmailError ? 'border-red-500/50 focus:border-red-500'
+                               : 'border-[#2a3042] focus:border-[#3a7bfd]'
+                           } rounded-lg px-4 py-3 text-white text-[13px] placeholder-gray-500 outline-none transition-colors`}
+                           autoComplete="email"
+                         />
+                         {quickCheckoutEmailError && (
+                           <p className="text-red-400 text-[11px] mt-1">{quickCheckoutEmailError}</p>
+                         )}
+                         <p className="text-gray-500 text-[10px] mt-2 leading-tight">
+                           Login optional. We'll send order confirmation & delivery status here.
+                         </p>
+                       </div>
+                     </div>
+                   )}
+
                    {/* Payment Methods */}
-                   <div className="px-4 space-y-3 md:px-0">
+                   <div className={`px-4 space-y-3 md:px-0 ${(!isLoggedIn && !isValidEmail(quickCheckoutEmail)) ? 'opacity-50 pointer-events-none' : ''}`}>
+
                       {/* Credit Card / Global Payment */}
                       {cardEnabled && (
                       <div 
@@ -1584,62 +1699,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                             </div>
                           </div>
                           
-                          {/* Quick Email Checkout for non-logged PK users */}
-                          {selectedMethod === 'payfast' && !isLoggedIn && (
-                            <div className="bg-[#151a2e] border-[1.5px] border-t-0 border-[#307bf5] rounded-b-xl p-4">
-                              <div className="space-y-3">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <svg 
-                                    className="w-4 h-4 text-[#3a7bfd]" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path 
-                                      strokeLinecap="round" 
-                                      strokeLinejoin="round" 
-                                      strokeWidth={2} 
-                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
-                                    />
-                                  </svg>
-                                  <span className="text-[12px] text-gray-300 font-medium">
-                                    Enter your email for order updates
-                                  </span>
-                                </div>
-                                
-                                <div className="relative">
-                                  <input 
-                                    type="email"
-                                    placeholder="your@email.com"
-                                    value={quickCheckoutEmail}
-                                    onChange={handleQuickEmailChange}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className={`w-full bg-[#1c2133] border ${
-                                      quickCheckoutEmailError 
-                                        ? 'border-red-500/50 focus:border-red-500' 
-                                        : 'border-[#2a3042] focus:border-[#3a7bfd]'
-                                    } rounded-lg px-4 py-3 text-white text-[13px] placeholder-gray-500 outline-none transition-colors`}
-                                    autoComplete="email"
-                                  />
-                                  {quickCheckoutEmail && isValidEmail(quickCheckoutEmail) && (
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                                      <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                      </svg>
-                                    </div>
-                                  )}
-                                </div>
-                                
-                                {quickCheckoutEmailError && (
-                                  <p className="text-red-400 text-[11px] mt-1">{quickCheckoutEmailError}</p>
-                                )}
-                                
-                                <p className="text-gray-500 text-[10px] leading-tight">
-                                  We'll send your order confirmation and UC delivery status to this email
-                                </p>
-                              </div>
-                            </div>
-                          )}
+                          {/* Inline quick email removed - now shown globally above payment methods */}
+
                         </div>
                       )}
 
@@ -1694,7 +1755,34 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                         )}
                       </div>
                       )}
-                      {!cardEnabled && !payfastEnabled && !binanceEnabled && (
+
+                      {/* Test Payment - Admin Only */}
+                      {testPaymentEnabled && (
+                        <div
+                          onClick={() => setSelectedMethod('test_payment')}
+                          className={`relative flex items-center justify-between p-4 rounded-xl cursor-pointer border-[1.5px] overflow-hidden hover:bg-[#252a3d] ${
+                            selectedMethod === 'test_payment' ? 'bg-[#151a2e] border-[#307bf5]' : 'bg-[#1c2133] border-[#1c2133]'
+                          }`}
+                        >
+                          <div className="absolute top-0 left-0 bg-purple-600 text-white text-[10px] font-bold px-2 py-[2px] rounded-br-lg z-10">
+                            ADMIN TEST
+                          </div>
+                          <div className="mt-4 flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center">
+                              <span className="text-purple-400 text-lg">🧪</span>
+                            </div>
+                            <div>
+                              <div className="text-[14px] text-white leading-tight">Test Payment</div>
+                              <div className="text-[10px] text-gray-500 mt-0.5">Simulate an order end-to-end</div>
+                            </div>
+                          </div>
+                          <div className="mt-4 text-right">
+                            <span className="text-[#F0B90B] font-bold text-sm">{formatPrice(selectedPackage.price)}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {!cardEnabled && !payfastEnabled && !binanceEnabled && !testPaymentEnabled && (
                         <div className="text-center text-gray-400 text-sm py-8 border border-dashed border-[#2a3042] rounded-xl">
                           {t('checkout.noMethods', 'All payment methods are currently disabled. Please check back soon.')}
                         </div>
@@ -1895,34 +1983,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
 
                          {/* Desktop Button */}
                           <button 
-                            onClick={() => {
-                              // PK Quick checkout with email for PayFast
-                              if (isPakistan && selectedMethod === 'payfast' && !isLoggedIn) {
-                                if (!userInfo) {
-                                  setShowPlayerIdModal(true);
-                                } else if (quickCheckoutEmail && isValidEmail(quickCheckoutEmail)) {
-                                  handleQuickPayWithEmail();
-                                } else {
-                                  setQuickCheckoutEmailError('Please enter your email above');
-                                }
-                              } else if (!isLoggedIn) {
-                                openAuthModal();
-                              } else if (!userInfo) {
-                               setShowPlayerIdModal(true);
-                             } else {
-                               handlePayNow();
-                             }
-                           }}
-                           disabled={isPaymentLoading}
-                           className="w-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] hover:brightness-110 text-white font-bold py-3.5 rounded-md text-sm shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98] disabled:opacity-50"
-                         >
-                           {isPaymentLoading 
-                             ? 'Processing...' 
-                             : (isPakistan && selectedMethod === 'payfast' && !isLoggedIn)
-                               ? (!userInfo ? 'Enter Player ID' : 'Pay Now')
-                               : (!isLoggedIn ? 'Login Midasbuy' : !userInfo ? 'Enter Player ID' : 'Pay Now')
-                           }
-                         </button>
+                            onClick={handleCheckoutClick}
+                            disabled={isPaymentLoading}
+                            className="w-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] hover:brightness-110 text-white font-bold py-3.5 rounded-md text-sm shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98] disabled:opacity-50"
+                          >
+                            {isPaymentLoading ? 'Processing...' : (!userInfo ? 'Enter Player ID' : 'Order Now')}
+                          </button>
                       </div>
 
                    </div>
@@ -1957,34 +2023,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                   </div>
                   
                    <button 
-                     onClick={() => {
-                       // PK Quick checkout with email for PayFast
-                       if (isPakistan && selectedMethod === 'payfast' && !isLoggedIn) {
-                         if (!userInfo) {
-                           setShowPlayerIdModal(true);
-                         } else if (quickCheckoutEmail && isValidEmail(quickCheckoutEmail)) {
-                           handleQuickPayWithEmail();
-                         } else {
-                           setQuickCheckoutEmailError('Please enter your email above');
-                         }
-                       } else if (!isLoggedIn) {
-                         openAuthModal();
-                       } else if (!userInfo) {
-                        setShowPlayerIdModal(true);
-                      } else {
-                        handlePayNow();
-                      }
-                    }}
-                    disabled={isPaymentLoading}
-                    className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white font-bold h-10 px-6 rounded text-sm hover:brightness-110 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center min-w-[140px] disabled:opacity-50"
-                  >
-                    {isPaymentLoading 
-                      ? 'Processing...' 
-                      : (isPakistan && selectedMethod === 'payfast' && !isLoggedIn)
-                        ? (!userInfo ? 'Enter Player ID' : 'Pay Now')
-                        : (!isLoggedIn ? 'Login Midasbuy' : !userInfo ? 'Enter Player ID' : 'Pay Now')
-                    }
-                  </button>
+                     onClick={handleCheckoutClick}
+                     disabled={isPaymentLoading}
+                     className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white font-bold h-10 px-6 rounded text-sm hover:brightness-110 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center min-w-[140px] disabled:opacity-50"
+                   >
+                     {isPaymentLoading ? 'Processing...' : (!userInfo ? 'Enter Player ID' : 'Order Now')}
+                   </button>
                </div>
             </div>
           </div>
