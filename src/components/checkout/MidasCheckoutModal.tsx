@@ -44,6 +44,7 @@ import {
   ttqIdentify
 } from "@/utils/tiktokTracking";
 import { usePaymentMethodSettings } from "@/hooks/usePaymentMethodSettings";
+import { useUserRole } from "@/hooks/useUserRole";
 
 interface MidasCheckoutModalProps {
   open: boolean;
