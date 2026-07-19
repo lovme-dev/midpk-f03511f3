@@ -1286,22 +1286,22 @@ export function OrdersManagement() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="p-0 max-h-[70vh] overflow-y-auto">
-          <div className="overflow-x-auto">
-            <Table>
+        <CardContent className="p-0 max-h-[70vh] overflow-y-auto overflow-x-hidden">
+          <div className="w-full overflow-x-hidden">
+            <Table className="w-full table-fixed text-[11px] lg:text-xs">
               <TableHeader className="sticky top-0 z-10 bg-card">
                 <TableRow className="bg-muted/50">
-                  <TableHead className="w-10 sm:w-12"></TableHead>
-                  <TableHead className="min-w-[100px] text-foreground">Order ID</TableHead>
-                  <TableHead className="min-w-[120px] sm:min-w-[180px] text-foreground">Customer</TableHead>
-                  <TableHead className="min-w-[80px] sm:min-w-[120px] text-foreground">Package</TableHead>
-                  <TableHead className="text-foreground hidden md:table-cell">Player ID</TableHead>
-                  <TableHead className="text-foreground">Amount</TableHead>
-                  <TableHead className="text-foreground">Status</TableHead>
-                  <TableHead className="text-foreground hidden xl:table-cell">Email Lang</TableHead>
-                  <TableHead className="text-foreground hidden lg:table-cell">Payment</TableHead>
-                  <TableHead className="text-foreground hidden sm:table-cell">Date</TableHead>
-                  <TableHead className="min-w-[100px] sm:min-w-[180px] text-foreground">Actions</TableHead>
+                  <TableHead className="w-[3%] px-1"></TableHead>
+                  <TableHead className="w-[9%] px-1 text-foreground">Order ID</TableHead>
+                  <TableHead className="w-[18%] px-1 text-foreground">Customer</TableHead>
+                  <TableHead className="w-[13%] px-1 text-foreground">Package</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden md:table-cell">Player ID</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground">Amount</TableHead>
+                  <TableHead className="w-[9%] px-1 text-foreground">Status</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden xl:table-cell">Lang</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden lg:table-cell">Payment</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden 2xl:table-cell">Date</TableHead>
+                  <TableHead className="w-[16%] px-1 text-foreground">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
