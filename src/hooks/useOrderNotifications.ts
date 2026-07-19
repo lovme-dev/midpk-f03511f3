@@ -129,12 +129,21 @@ export function useOrderNotifications() {
         }
       }
 
-      // Step 5: Merge data
-      const enrichedOrders: Order[] = ordersData.map(order => ({
-        ...order,
-        profiles: profilesMap[order.user_id] || null,
-        uc_packages: order.package_id ? packagesMap[order.package_id] || null : null,
-      }));
+      // Step 5: Merge data - fallback to guest customer_email/customer_name on order row
+      const enrichedOrders: Order[] = ordersData.map((order: any) => {
+        const profile = profilesMap[order.user_id];
+        const guestFallback = (order.customer_email || order.customer_name)
+          ? {
+              full_name: order.customer_name || order.customer_email || 'Guest Customer',
+              email: order.customer_email || '',
+            }
+          : null;
+        return {
+          ...order,
+          profiles: profile || guestFallback,
+          uc_packages: order.package_id ? packagesMap[order.package_id] || null : null,
+        };
+      });
 
       console.log('Enriched orders:', enrichedOrders.length);
       setOrders(enrichedOrders);
