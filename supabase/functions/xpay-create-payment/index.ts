@@ -235,6 +235,8 @@ serve(async (req) => {
         product_amount: body.productAmount,  // Base+bonus format (e.g., "10+5")
         player_id: body.playerId,
         package_id: body.packageId,
+        customer_email: body.customerEmail,
+        customer_name: body.customerName || null,
       })
       .select()
       .single();
