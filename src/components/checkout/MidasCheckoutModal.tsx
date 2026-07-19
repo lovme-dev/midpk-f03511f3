@@ -1129,6 +1129,32 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
     }
   };
 
+  // Unified checkout button handler: supports guest checkout via email for any method
+  const handleCheckoutClick = () => {
+    if (!userInfo) {
+      setShowPlayerIdModal(true);
+      return;
+    }
+    if (!isLoggedIn) {
+      if (!quickCheckoutEmail || !isValidEmail(quickCheckoutEmail)) {
+        setQuickCheckoutEmailError('Please enter a valid email above to continue');
+        return;
+      }
+      // Persist guest email for downstream flows
+      setGuestEmail(quickCheckoutEmail);
+      if (!guestUserId) {
+        setGuestUserId(`guest_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`);
+      }
+      if (isPakistan && selectedMethod === 'payfast') {
+        handleQuickPayWithEmail();
+        return;
+      }
+    }
+    handlePayNow();
+  };
+
+
+
 
   if (!selectedPackage) return null;
 
