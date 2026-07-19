@@ -529,16 +529,25 @@ export function OrdersManagement() {
     fetchArchivedCount();
   }, []);
 
-  // Handle email update for customer profile
+  // Handle email update for customer/order record
   const handleEmailUpdate = async (order: Order, newEmail: string) => {
     try {
-      // Update email in profiles table
+      const previousEmail = getCustomerEmail(order);
+
+      const { error: orderError } = await supabase
+        .from('orders')
+        .update({ customer_email: newEmail, updated_at: new Date().toISOString() })
+        .eq('id', order.id);
+
+      if (orderError) throw orderError;
+
+      // Keep profile email in sync for logged-in users. Guest/test orders still use orders.customer_email.
       const { error: profileError } = await supabase
         .from('profiles')
         .update({ email: newEmail, updated_at: new Date().toISOString() })
         .eq('user_id', order.user_id);
 
-      if (profileError) throw profileError;
+      if (profileError) console.warn('Profile email sync skipped:', profileError);
 
       // Log admin action
       const { data: { user } } = await supabase.auth.getUser();
@@ -548,7 +557,7 @@ export function OrdersManagement() {
           p_action_type: 'update_customer_email',
           p_target_id: order.id,
           p_details: { 
-            old_email: order.profiles?.email,
+            old_email: previousEmail,
             new_email: newEmail,
             user_id: order.user_id
           },
