@@ -62,6 +62,8 @@ interface Order {
   product_name: string | null;
   product_code: string | null;
   product_amount: string | null;
+  customer_email?: string | null;
+  customer_name?: string | null;
   profiles: {
     full_name: string;
     email: string;
@@ -95,6 +97,12 @@ const emailTemplates: Record<string, EmailTemplate> = {
     body: "Dear {customerName},\n\nYour refund has been processed.\n\nOrder Details:\n- Package: {packageName}\n- Refund Amount: ₹{price}\n- Order ID: {orderId}\n\nThe refund will reflect in your account within 5-7 business days.\n\nBest regards,\nMidasbuy Team"
   }
 };
+
+const getCustomerEmail = (order: Order | null | undefined): string =>
+  order?.customer_email || order?.profiles?.email || '';
+
+const getCustomerName = (order: Order | null | undefined): string =>
+  order?.customer_name || order?.profiles?.full_name || getCustomerEmail(order)?.split('@')[0] || 'Customer';
 
 // Country to language mapping for email language detection
 const CURRENCY_TO_COUNTRY: Record<string, string> = {
@@ -267,11 +275,12 @@ const InlineEmailEditor = ({
   onEmailUpdate: (newEmail: string) => Promise<void>;
 }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [editedEmail, setEditedEmail] = useState(order.profiles?.email || '');
+  const currentEmail = getCustomerEmail(order);
+  const [editedEmail, setEditedEmail] = useState(currentEmail);
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSave = async () => {
-    if (!editedEmail || editedEmail === order.profiles?.email) {
+    if (!editedEmail || editedEmail === currentEmail) {
       setIsEditing(false);
       return;
     }
@@ -291,7 +300,7 @@ const InlineEmailEditor = ({
       handleSave();
     } else if (e.key === 'Escape') {
       setIsEditing(false);
-      setEditedEmail(order.profiles?.email || '');
+      setEditedEmail(currentEmail);
     }
   };
 
@@ -321,7 +330,7 @@ const InlineEmailEditor = ({
           className="h-6 px-2 text-xs"
           onClick={() => {
             setIsEditing(false);
-            setEditedEmail(order.profiles?.email || '');
+            setEditedEmail(currentEmail);
           }}
           disabled={isSaving}
         >
@@ -334,12 +343,12 @@ const InlineEmailEditor = ({
   return (
     <div className="flex items-center gap-1 sm:gap-2 group">
       <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-      <p className="text-xs sm:text-sm text-primary truncate max-w-[80px] sm:max-w-full">
-        {order.profiles?.email || 'No email'}
+      <p className="text-xs sm:text-sm text-primary truncate max-w-[90px] lg:max-w-[150px]" title={currentEmail || 'No email'}>
+        {currentEmail || 'No email'}
       </p>
       <button
         onClick={() => {
-          setEditedEmail(order.profiles?.email || '');
+          setEditedEmail(currentEmail);
           setIsEditing(true);
         }}
         className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-primary hover:underline"
@@ -360,11 +369,12 @@ const CustomerInfoSection = ({
   onEmailUpdate: (newEmail: string) => Promise<void>; 
 }) => {
   const [isEditingEmail, setIsEditingEmail] = useState(false);
-  const [editedEmail, setEditedEmail] = useState(order.profiles?.email || '');
+  const currentEmail = getCustomerEmail(order);
+  const [editedEmail, setEditedEmail] = useState(currentEmail);
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSaveEmail = async () => {
-    if (!editedEmail || editedEmail === order.profiles?.email) {
+    if (!editedEmail || editedEmail === currentEmail) {
       setIsEditingEmail(false);
       return;
     }
@@ -388,7 +398,7 @@ const CustomerInfoSection = ({
       <div className="grid grid-cols-2 gap-4">
         <div>
           <p className="text-sm text-muted-foreground">Name</p>
-          <p className="font-medium">{order.profiles?.full_name || 'No name'}</p>
+          <p className="font-medium">{getCustomerName(order)}</p>
         </div>
         <div>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
@@ -396,7 +406,7 @@ const CustomerInfoSection = ({
             {!isEditingEmail && (
               <button 
                 onClick={() => {
-                  setEditedEmail(order.profiles?.email || '');
+                  setEditedEmail(currentEmail);
                   setIsEditingEmail(true);
                 }}
                 className="text-xs text-primary hover:underline"
@@ -435,7 +445,7 @@ const CustomerInfoSection = ({
               </div>
             </div>
           ) : (
-            <p className="font-medium">{order.profiles?.email || 'No email'}</p>
+            <p className="font-medium break-all">{currentEmail || 'No email'}</p>
           )}
         </div>
       </div>
@@ -519,16 +529,25 @@ export function OrdersManagement() {
     fetchArchivedCount();
   }, []);
 
-  // Handle email update for customer profile
+  // Handle email update for customer/order record
   const handleEmailUpdate = async (order: Order, newEmail: string) => {
     try {
-      // Update email in profiles table
+      const previousEmail = getCustomerEmail(order);
+
+      const { error: orderError } = await supabase
+        .from('orders')
+        .update({ customer_email: newEmail, updated_at: new Date().toISOString() })
+        .eq('id', order.id);
+
+      if (orderError) throw orderError;
+
+      // Keep profile email in sync for logged-in users. Guest/test orders still use orders.customer_email.
       const { error: profileError } = await supabase
         .from('profiles')
         .update({ email: newEmail, updated_at: new Date().toISOString() })
         .eq('user_id', order.user_id);
 
-      if (profileError) throw profileError;
+      if (profileError) console.warn('Profile email sync skipped:', profileError);
 
       // Log admin action
       const { data: { user } } = await supabase.auth.getUser();
@@ -538,7 +557,7 @@ export function OrdersManagement() {
           p_action_type: 'update_customer_email',
           p_target_id: order.id,
           p_details: { 
-            old_email: order.profiles?.email,
+            old_email: previousEmail,
             new_email: newEmail,
             user_id: order.user_id
           },
@@ -768,8 +787,8 @@ export function OrdersManagement() {
         const amount = order.uc_packages?.uc_amount || order.product_amount || 'N/A';
         return [
           order.id,
-          order.profiles?.full_name || 'Unknown',
-          order.profiles?.email || 'Unknown',
+          getCustomerName(order),
+          getCustomerEmail(order) || 'Unknown',
           packageName,
           amount,
           order.price,
@@ -802,7 +821,7 @@ export function OrdersManagement() {
       const amount = order.uc_packages?.uc_amount || order.product_amount || '0';
       const populatedSubject = template.subject;
       const populatedBody = template.body
-        .replace('{customerName}', order.profiles?.full_name || order.profiles?.email || 'Customer')
+        .replace('{customerName}', getCustomerName(order))
         .replace('{packageName}', packageName)
         .replace('{amount}', String(amount))
         .replace('{price}', order.price.toString())
@@ -824,7 +843,7 @@ export function OrdersManagement() {
 
     // In a real implementation, you would send the email via an API
     // For now, we'll just open the user's email client
-    const mailtoLink = `mailto:${selectedOrder.profiles?.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:${getCustomerEmail(selectedOrder)}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     window.open(mailtoLink);
 
     // Log the email action
@@ -835,7 +854,7 @@ export function OrdersManagement() {
         p_action_type: 'send_email',
         p_target_id: selectedOrder.id,
         p_details: { 
-          email: selectedOrder.profiles?.email,
+          email: getCustomerEmail(selectedOrder),
           subject: emailSubject 
         },
       });
@@ -878,7 +897,7 @@ export function OrdersManagement() {
       
       toast({
         title: "Sending Email...",
-        description: `Sending ${emailType} email to ${order.profiles?.email} (${countryCode})`,
+        description: `Sending ${emailType} email to ${getCustomerEmail(order)} (${countryCode})`,
       });
 
       const { data, error } = await supabase.functions.invoke('send-order-email', {
@@ -928,7 +947,7 @@ export function OrdersManagement() {
           p_action_type: `send_${emailType}_email`,
           p_target_id: order.id,
           p_details: { 
-            email: order.profiles?.email,
+            email: getCustomerEmail(order),
             emailType,
             productType: order.product_type,
             productName: order.product_name,
@@ -939,7 +958,7 @@ export function OrdersManagement() {
 
       toast({
         title: "Email Sent!",
-        description: `${emailType === 'confirmation' ? 'Confirmation' : 'Refund'} email sent to ${order.profiles?.email}`,
+        description: `${emailType === 'confirmation' ? 'Confirmation' : 'Refund'} email sent to ${getCustomerEmail(order)}`,
       });
     } catch (error: any) {
       console.error('Failed to send email:', error);
@@ -992,8 +1011,8 @@ export function OrdersManagement() {
   // Memoized filtered orders to prevent unnecessary re-calculations
   const filteredOrders = useMemo(() => orders.filter(order => {
     const matchesSearch = 
-      order.profiles?.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      order.profiles?.full_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      getCustomerEmail(order).toLowerCase().includes(searchTerm.toLowerCase()) ||
+      getCustomerName(order).toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.transaction_id?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.player_id?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.id.toLowerCase().includes(searchTerm.toLowerCase());
@@ -1267,22 +1286,22 @@ export function OrdersManagement() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="p-0 max-h-[70vh] overflow-y-auto">
-          <div className="overflow-x-auto">
-            <Table>
+        <CardContent className="p-0 max-h-[70vh] overflow-y-auto overflow-x-hidden">
+          <div className="w-full overflow-x-hidden">
+            <Table className="w-full table-fixed text-[11px] lg:text-xs">
               <TableHeader className="sticky top-0 z-10 bg-card">
                 <TableRow className="bg-muted/50">
-                  <TableHead className="w-10 sm:w-12"></TableHead>
-                  <TableHead className="min-w-[100px] text-foreground">Order ID</TableHead>
-                  <TableHead className="min-w-[120px] sm:min-w-[180px] text-foreground">Customer</TableHead>
-                  <TableHead className="min-w-[80px] sm:min-w-[120px] text-foreground">Package</TableHead>
-                  <TableHead className="text-foreground hidden md:table-cell">Player ID</TableHead>
-                  <TableHead className="text-foreground">Amount</TableHead>
-                  <TableHead className="text-foreground">Status</TableHead>
-                  <TableHead className="text-foreground hidden xl:table-cell">Email Lang</TableHead>
-                  <TableHead className="text-foreground hidden lg:table-cell">Payment</TableHead>
-                  <TableHead className="text-foreground hidden sm:table-cell">Date</TableHead>
-                  <TableHead className="min-w-[100px] sm:min-w-[180px] text-foreground">Actions</TableHead>
+                  <TableHead className="w-[3%] px-1"></TableHead>
+                  <TableHead className="w-[9%] px-1 text-foreground">Order ID</TableHead>
+                  <TableHead className="w-[18%] px-1 text-foreground">Customer</TableHead>
+                  <TableHead className="w-[13%] px-1 text-foreground">Package</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden md:table-cell">Player ID</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground">Amount</TableHead>
+                  <TableHead className="w-[9%] px-1 text-foreground">Status</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden xl:table-cell">Lang</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden lg:table-cell">Payment</TableHead>
+                  <TableHead className="w-[8%] px-1 text-foreground hidden 2xl:table-cell">Date</TableHead>
+                  <TableHead className="w-[16%] px-1 text-foreground">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -1299,7 +1318,7 @@ export function OrdersManagement() {
                 ) : (
                   filteredOrders.map((order) => (
                     <TableRow key={order.id} className="hover:bg-muted/20">
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <Checkbox
                           checked={selectedOrders.has(order.id)}
                           onCheckedChange={() => toggleOrderSelection(order.id)}
@@ -1307,15 +1326,15 @@ export function OrdersManagement() {
                       </TableCell>
                       
                       {/* Order ID with Copy Button - Same as customer sees */}
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <OrderIdCell transactionId={order.transaction_id} />
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2 align-top">
                         <div className="space-y-1">
                           <div className="flex items-center gap-1 sm:gap-2">
                             <User className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-                            <p className="font-medium text-xs sm:text-sm text-foreground truncate max-w-[80px] sm:max-w-full">{order.profiles?.full_name || 'No name'}</p>
+                            <p className="font-medium text-xs text-foreground truncate max-w-[90px] lg:max-w-[150px]" title={getCustomerName(order)}>{getCustomerName(order)}</p>
                           </div>
                           <InlineEmailEditor 
                             order={order} 
@@ -1324,9 +1343,9 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2 align-top">
                         <div className="space-y-1">
-                          <p className="font-medium text-xs sm:text-sm text-foreground truncate max-w-[80px] sm:max-w-[120px]">{order.uc_packages?.name || order.product_name || 'N/A'}</p>
+                          <p className="font-medium text-xs text-foreground truncate max-w-[80px] lg:max-w-[120px]" title={order.uc_packages?.name || order.product_name || 'N/A'}>{order.uc_packages?.name || order.product_name || 'N/A'}</p>
                           <p className="text-xs text-muted-foreground flex items-center gap-1">
                             <Package className="h-3 w-3" />
                             {order.uc_packages?.uc_amount || order.product_amount || 'N/A'} {order.product_type || 'UC'}
@@ -1334,25 +1353,24 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden md:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden md:table-cell">
                         <PlayerIdCell playerId={order.player_id} />
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <div className="flex items-center gap-1">
-                          <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-                          <span className="font-semibold text-xs sm:text-sm text-foreground">{formatCurrency(order.price, order.currency_code)}</span>
+                          <span className="font-semibold text-xs text-foreground truncate" title={formatCurrency(order.price, order.currency_code)}>{formatCurrency(order.price, order.currency_code)}</span>
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
+                      <TableCell className="p-1 sm:p-2">
                         <Badge className={`${getStatusColor(order.status)} text-xs`}>
                           {order.status}
                         </Badge>
                       </TableCell>
                       
                       {/* Email Language */}
-                      <TableCell className="p-2 sm:p-4 hidden xl:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden xl:table-cell">
                         {(() => {
                           const langInfo = getEmailLanguageInfo(order.currency_code);
                           return (
@@ -1363,7 +1381,7 @@ export function OrdersManagement() {
                         })()}
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden lg:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden lg:table-cell">
                         <Badge className={`${getPaymentMethodBadge(order.payment_method)} text-xs`}>
                           {isPakistaniOrder(order.currency_code) && '🇵🇰 '}
                           {order.payment_method === 'gopayfast' ? 'GoPayFast' : 
@@ -1371,7 +1389,7 @@ export function OrdersManagement() {
                         </Badge>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4 hidden sm:table-cell">
+                      <TableCell className="p-1 sm:p-2 hidden 2xl:table-cell">
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
                           <span className="text-xs sm:text-sm text-foreground">
@@ -1380,12 +1398,12 @@ export function OrdersManagement() {
                         </div>
                       </TableCell>
                       
-                      <TableCell className="p-2 sm:p-4">
-                        <div className="flex gap-1 flex-wrap items-center">
+                      <TableCell className="p-1 sm:p-2">
+                        <div className="flex gap-1 flex-nowrap items-center">
                           {/* Email Delivered Tag - shows when email was sent */}
                           {order.email_sent_at && (
                             <Badge className="bg-green-500/20 text-green-400 border-green-500 text-xs px-2 py-0.5 h-6 sm:h-7">
-                              ✓ Delivered
+                              ✓
                             </Badge>
                           )}
                           {/* Email Preview Buttons */}
@@ -1394,26 +1412,25 @@ export function OrdersManagement() {
                             size="sm"
                             className="text-green-400 border-green-500 hover:bg-green-500/20 text-xs px-2 py-1 h-7 sm:h-8"
                             onClick={() => openEmailPreview(order, 'confirmation')}
+                            title="Send confirmation email"
                           >
-                            <Send className="h-3 w-3 sm:mr-1" />
-                            <span className="hidden sm:inline">Confirm</span>
+                            <Send className="h-3 w-3" />
                           </Button>
                           <Button 
                             variant="outline" 
                             size="sm"
                             className="text-red-400 border-red-500 hover:bg-red-500/20 text-xs px-2 py-1 h-7 sm:h-8"
                             onClick={() => openEmailPreview(order, 'refund')}
+                            title="Send refund email"
                           >
-                            <DollarSign className="h-3 w-3 sm:mr-1" />
-                            <span className="hidden sm:inline">Refund</span>
+                            <DollarSign className="h-3 w-3" />
                           </Button>
 
                           {/* View Details */}
                           <Dialog>
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" className="text-foreground text-xs px-2 py-1 h-7 sm:h-8">
-                                <Eye className="h-3 w-3 sm:h-4 sm:w-4 sm:mr-1" />
-                                <span className="hidden sm:inline">View</span>
+                                <Eye className="h-3 w-3 sm:h-4 sm:w-4" />
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
@@ -1567,7 +1584,7 @@ export function OrdersManagement() {
           </DialogHeader>
           <div className="space-y-4">
             <div>
-              <p className="text-sm text-muted-foreground mb-2">To: {selectedOrder?.profiles?.email}</p>
+              <p className="text-sm text-muted-foreground mb-2">To: {getCustomerEmail(selectedOrder)}</p>
             </div>
             <div>
               <label className="text-sm font-medium">Subject</label>

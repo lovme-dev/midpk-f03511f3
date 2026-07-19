@@ -518,15 +518,27 @@ const handler = async (req: Request): Promise<Response> => {
     const languageCode = getLanguageFromCountry(orderDetails.countryCode);
     console.log(`Using language: ${languageCode} for country: ${orderDetails.countryCode}`);
 
-    // Fetch user email from profiles, fallback to auth.users
+    const { data: orderRecord } = orderId
+      ? await supabase
+          .from("orders")
+          .select("customer_email, customer_name")
+          .eq("id", orderId)
+          .maybeSingle()
+      : { data: null } as any;
+
+    // Always prefer the email/name saved on the order row. This is required for guest checkout and admin Test Payment.
+    let userEmail = orderRecord?.customer_email as string | undefined;
+    let userName = orderRecord?.customer_name as string | undefined;
+
+    // Fallback to profiles/auth only when the order row has no customer email.
     const { data: profile } = await supabase
       .from("profiles")
       .select("email, full_name, username")
       .eq("user_id", userId)
       .maybeSingle();
 
-    let userEmail = profile?.email as string | undefined;
-    let userName = (profile?.full_name || profile?.username) as string | undefined;
+    if (!userEmail) userEmail = profile?.email as string | undefined;
+    if (!userName) userName = (profile?.full_name || profile?.username) as string | undefined;
 
     if (!userEmail || !userName) {
       const { data: authUser } = await supabase.auth.admin.getUserById(userId);

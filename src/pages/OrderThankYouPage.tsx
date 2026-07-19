@@ -245,7 +245,7 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         const { data: orderData, error: orderError } = await supabase
           .from("orders")
           .select(
-            "id, status, price, currency_code, player_id, payment_method, product_name, product_type, product_code, product_amount, transaction_id, email_sent_at, uc_packages(name, uc_amount), created_at"
+            "id, status, price, currency_code, player_id, payment_method, product_name, product_type, product_code, product_amount, transaction_id, email_sent_at, customer_email, customer_name, uc_packages(name, uc_amount), created_at"
           )
           .eq("user_id", user.id)
           .eq("transaction_id", basketId)
@@ -260,7 +260,7 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         const { data: recentOrder, error: recentError } = await supabase
           .from("orders")
           .select(
-            "id, status, price, currency_code, player_id, payment_method, product_name, product_type, product_code, product_amount, transaction_id, email_sent_at, uc_packages(name, uc_amount), created_at"
+            "id, status, price, currency_code, player_id, payment_method, product_name, product_type, product_code, product_amount, transaction_id, email_sent_at, customer_email, customer_name, uc_packages(name, uc_amount), created_at"
           )
           .eq("user_id", user.id)
           .eq("status", "pending")
@@ -287,26 +287,6 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         if (updateError) {
           console.error("[payment-success] failed to update order status:", updateError);
           return;
-        }
-
-        // Notify admin + log into admin_notification_history
-        try {
-          await supabase.functions.invoke("notify-admin-new-order", {
-            body: {
-              event_type: "order_cancelled",
-              order_details: {
-                order_id: order.id,
-                package_name: order.product_name || order.uc_packages?.name || "Package",
-                price: order.price,
-                currency_code: order.currency_code || "PKR",
-                player_id: order.player_id,
-                payment_method: order.payment_method || "gopayfast",
-                status: newStatus,
-              },
-            },
-          });
-        } catch (notifyError) {
-          console.error("[payment-success] failed to notify admin:", notifyError);
         }
 
         // Send refund email on /payment/success as well (for cancelled/failed states)
