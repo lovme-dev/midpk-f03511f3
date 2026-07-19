@@ -1957,34 +1957,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
 
                          {/* Desktop Button */}
                           <button 
-                            onClick={() => {
-                              // PK Quick checkout with email for PayFast
-                              if (isPakistan && selectedMethod === 'payfast' && !isLoggedIn) {
-                                if (!userInfo) {
-                                  setShowPlayerIdModal(true);
-                                } else if (quickCheckoutEmail && isValidEmail(quickCheckoutEmail)) {
-                                  handleQuickPayWithEmail();
-                                } else {
-                                  setQuickCheckoutEmailError('Please enter your email above');
-                                }
-                              } else if (!isLoggedIn) {
-                                openAuthModal();
-                              } else if (!userInfo) {
-                               setShowPlayerIdModal(true);
-                             } else {
-                               handlePayNow();
-                             }
-                           }}
-                           disabled={isPaymentLoading}
-                           className="w-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] hover:brightness-110 text-white font-bold py-3.5 rounded-md text-sm shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98] disabled:opacity-50"
-                         >
-                           {isPaymentLoading 
-                             ? 'Processing...' 
-                             : (isPakistan && selectedMethod === 'payfast' && !isLoggedIn)
-                               ? (!userInfo ? 'Enter Player ID' : 'Pay Now')
-                               : (!isLoggedIn ? 'Login Midasbuy' : !userInfo ? 'Enter Player ID' : 'Pay Now')
-                           }
-                         </button>
+                            onClick={handleCheckoutClick}
+                            disabled={isPaymentLoading}
+                            className="w-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] hover:brightness-110 text-white font-bold py-3.5 rounded-md text-sm shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98] disabled:opacity-50"
+                          >
+                            {isPaymentLoading ? 'Processing...' : (!userInfo ? 'Enter Player ID' : 'Order Now')}
+                          </button>
                       </div>
 
                    </div>
