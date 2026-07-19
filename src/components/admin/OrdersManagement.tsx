@@ -787,8 +787,8 @@ export function OrdersManagement() {
         const amount = order.uc_packages?.uc_amount || order.product_amount || 'N/A';
         return [
           order.id,
-          order.profiles?.full_name || 'Unknown',
-          order.profiles?.email || 'Unknown',
+          getCustomerName(order),
+          getCustomerEmail(order) || 'Unknown',
           packageName,
           amount,
           order.price,
@@ -821,7 +821,7 @@ export function OrdersManagement() {
       const amount = order.uc_packages?.uc_amount || order.product_amount || '0';
       const populatedSubject = template.subject;
       const populatedBody = template.body
-        .replace('{customerName}', order.profiles?.full_name || order.profiles?.email || 'Customer')
+        .replace('{customerName}', getCustomerName(order))
         .replace('{packageName}', packageName)
         .replace('{amount}', String(amount))
         .replace('{price}', order.price.toString())
@@ -843,7 +843,7 @@ export function OrdersManagement() {
 
     // In a real implementation, you would send the email via an API
     // For now, we'll just open the user's email client
-    const mailtoLink = `mailto:${selectedOrder.profiles?.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:${getCustomerEmail(selectedOrder)}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     window.open(mailtoLink);
 
     // Log the email action
@@ -854,7 +854,7 @@ export function OrdersManagement() {
         p_action_type: 'send_email',
         p_target_id: selectedOrder.id,
         p_details: { 
-          email: selectedOrder.profiles?.email,
+          email: getCustomerEmail(selectedOrder),
           subject: emailSubject 
         },
       });
@@ -897,7 +897,7 @@ export function OrdersManagement() {
       
       toast({
         title: "Sending Email...",
-        description: `Sending ${emailType} email to ${order.profiles?.email} (${countryCode})`,
+        description: `Sending ${emailType} email to ${getCustomerEmail(order)} (${countryCode})`,
       });
 
       const { data, error } = await supabase.functions.invoke('send-order-email', {
@@ -947,7 +947,7 @@ export function OrdersManagement() {
           p_action_type: `send_${emailType}_email`,
           p_target_id: order.id,
           p_details: { 
-            email: order.profiles?.email,
+            email: getCustomerEmail(order),
             emailType,
             productType: order.product_type,
             productName: order.product_name,
@@ -958,7 +958,7 @@ export function OrdersManagement() {
 
       toast({
         title: "Email Sent!",
-        description: `${emailType === 'confirmation' ? 'Confirmation' : 'Refund'} email sent to ${order.profiles?.email}`,
+        description: `${emailType === 'confirmation' ? 'Confirmation' : 'Refund'} email sent to ${getCustomerEmail(order)}`,
       });
     } catch (error: any) {
       console.error('Failed to send email:', error);
@@ -1011,8 +1011,8 @@ export function OrdersManagement() {
   // Memoized filtered orders to prevent unnecessary re-calculations
   const filteredOrders = useMemo(() => orders.filter(order => {
     const matchesSearch = 
-      order.profiles?.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      order.profiles?.full_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      getCustomerEmail(order).toLowerCase().includes(searchTerm.toLowerCase()) ||
+      getCustomerName(order).toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.transaction_id?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.player_id?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.id.toLowerCase().includes(searchTerm.toLowerCase());
@@ -1586,7 +1586,7 @@ export function OrdersManagement() {
           </DialogHeader>
           <div className="space-y-4">
             <div>
-              <p className="text-sm text-muted-foreground mb-2">To: {selectedOrder?.profiles?.email}</p>
+              <p className="text-sm text-muted-foreground mb-2">To: {getCustomerEmail(selectedOrder)}</p>
             </div>
             <div>
               <label className="text-sm font-medium">Subject</label>
