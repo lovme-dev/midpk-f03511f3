@@ -305,11 +305,13 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         if (user) {
           setCurrentUserId(user.id);
           
-          // Fetch orders
+          // Hide refund_review / refunded orders from customer view after 22 days
+          const cutoff22 = new Date(Date.now() - 22 * 24 * 60 * 60 * 1000).toISOString();
           const { data: ordersRaw, error } = await supabase
             .from('orders')
             .select('*')
             .eq('user_id', user.id)
+            .or(`status.not.in.(refund_review,refunded),created_at.gte.${cutoff22}`)
             .order('created_at', { ascending: false });
           
           if (!isMounted) return;
