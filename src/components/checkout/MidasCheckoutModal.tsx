@@ -1125,9 +1125,19 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         customer_name: buyerName,
       } as any).select('id').single();
       if (error) throw error;
-      toast({ title: '✅ Test order created', description: `Order ${inserted?.id?.toString().slice(0,8)} placed as pending. Cancel it from admin panel to trigger refund email.` });
+      // Mirror real card-payment flow: land on /payment/success which auto-cancels
+      // the pending order, sends refund email, notifies admin & triggers push.
+      // The DB cron then converts cancelled → refund_review after 1 minute.
       onOpenChange(false);
-      navigate('/thank-you');
+      const params = new URLSearchParams({
+        orderId: friendlyId,
+        amount: String(selectedPackage.price),
+        item: itemName,
+        status: 'cancelled',
+        method: 'Test Payment',
+        txnId: `TEST-${friendlyId}`,
+      });
+      navigate(`/payment/success?${params.toString()}`);
     } catch (e: any) {
       console.error('Test payment error:', e);
       toast({ title: 'Test payment failed', description: e?.message || 'Could not create test order', variant: 'destructive' });
