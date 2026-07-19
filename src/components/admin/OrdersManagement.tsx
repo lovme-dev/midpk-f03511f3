@@ -62,6 +62,8 @@ interface Order {
   product_name: string | null;
   product_code: string | null;
   product_amount: string | null;
+  customer_email?: string | null;
+  customer_name?: string | null;
   profiles: {
     full_name: string;
     email: string;
@@ -95,6 +97,12 @@ const emailTemplates: Record<string, EmailTemplate> = {
     body: "Dear {customerName},\n\nYour refund has been processed.\n\nOrder Details:\n- Package: {packageName}\n- Refund Amount: ₹{price}\n- Order ID: {orderId}\n\nThe refund will reflect in your account within 5-7 business days.\n\nBest regards,\nMidasbuy Team"
   }
 };
+
+const getCustomerEmail = (order: Order | null | undefined): string =>
+  order?.customer_email || order?.profiles?.email || '';
+
+const getCustomerName = (order: Order | null | undefined): string =>
+  order?.customer_name || order?.profiles?.full_name || getCustomerEmail(order)?.split('@')[0] || 'Customer';
 
 // Country to language mapping for email language detection
 const CURRENCY_TO_COUNTRY: Record<string, string> = {
@@ -267,11 +275,12 @@ const InlineEmailEditor = ({
   onEmailUpdate: (newEmail: string) => Promise<void>;
 }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [editedEmail, setEditedEmail] = useState(order.profiles?.email || '');
+  const currentEmail = getCustomerEmail(order);
+  const [editedEmail, setEditedEmail] = useState(currentEmail);
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSave = async () => {
-    if (!editedEmail || editedEmail === order.profiles?.email) {
+    if (!editedEmail || editedEmail === currentEmail) {
       setIsEditing(false);
       return;
     }
@@ -291,7 +300,7 @@ const InlineEmailEditor = ({
       handleSave();
     } else if (e.key === 'Escape') {
       setIsEditing(false);
-      setEditedEmail(order.profiles?.email || '');
+      setEditedEmail(currentEmail);
     }
   };
 
@@ -321,7 +330,7 @@ const InlineEmailEditor = ({
           className="h-6 px-2 text-xs"
           onClick={() => {
             setIsEditing(false);
-            setEditedEmail(order.profiles?.email || '');
+            setEditedEmail(currentEmail);
           }}
           disabled={isSaving}
         >
@@ -334,12 +343,12 @@ const InlineEmailEditor = ({
   return (
     <div className="flex items-center gap-1 sm:gap-2 group">
       <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
-      <p className="text-xs sm:text-sm text-primary truncate max-w-[80px] sm:max-w-full">
-        {order.profiles?.email || 'No email'}
+      <p className="text-xs sm:text-sm text-primary truncate max-w-[90px] lg:max-w-[150px]" title={currentEmail || 'No email'}>
+        {currentEmail || 'No email'}
       </p>
       <button
         onClick={() => {
-          setEditedEmail(order.profiles?.email || '');
+          setEditedEmail(currentEmail);
           setIsEditing(true);
         }}
         className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-primary hover:underline"
@@ -360,11 +369,12 @@ const CustomerInfoSection = ({
   onEmailUpdate: (newEmail: string) => Promise<void>; 
 }) => {
   const [isEditingEmail, setIsEditingEmail] = useState(false);
-  const [editedEmail, setEditedEmail] = useState(order.profiles?.email || '');
+  const currentEmail = getCustomerEmail(order);
+  const [editedEmail, setEditedEmail] = useState(currentEmail);
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSaveEmail = async () => {
-    if (!editedEmail || editedEmail === order.profiles?.email) {
+    if (!editedEmail || editedEmail === currentEmail) {
       setIsEditingEmail(false);
       return;
     }
@@ -388,7 +398,7 @@ const CustomerInfoSection = ({
       <div className="grid grid-cols-2 gap-4">
         <div>
           <p className="text-sm text-muted-foreground">Name</p>
-          <p className="font-medium">{order.profiles?.full_name || 'No name'}</p>
+          <p className="font-medium">{getCustomerName(order)}</p>
         </div>
         <div>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
@@ -396,7 +406,7 @@ const CustomerInfoSection = ({
             {!isEditingEmail && (
               <button 
                 onClick={() => {
-                  setEditedEmail(order.profiles?.email || '');
+                  setEditedEmail(currentEmail);
                   setIsEditingEmail(true);
                 }}
                 className="text-xs text-primary hover:underline"
@@ -435,7 +445,7 @@ const CustomerInfoSection = ({
               </div>
             </div>
           ) : (
-            <p className="font-medium">{order.profiles?.email || 'No email'}</p>
+            <p className="font-medium break-all">{currentEmail || 'No email'}</p>
           )}
         </div>
       </div>
