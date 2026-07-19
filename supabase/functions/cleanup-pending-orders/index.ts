@@ -14,7 +14,7 @@ serve(async (req) => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
-  const cutoff = new Date(Date.now() - 20 * 60 * 1000).toISOString();
+  const cutoff = new Date(Date.now() - 30 * 60 * 1000).toISOString();
 
   const { data: expired, error: selErr } = await supabase
     .from("orders")
@@ -39,7 +39,7 @@ serve(async (req) => {
     }
   }
 
-  console.log(`Cleaned up ${count} pending orders older than 20 minutes`);
+  console.log(`Cleaned up ${count} pending orders older than 30 minutes`);
   return new Response(JSON.stringify({ success: true, deleted: count }), {
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });

@@ -1096,19 +1096,26 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         setIsPaymentLoading(false);
         return;
       }
+      if (!user?.id) {
+        toast({ title: 'Admin login required', description: 'Test payment is only available for admins.', variant: 'destructive' });
+        setIsPaymentLoading(false);
+        return;
+      }
       const { generateOrderId } = await import('@/utils/generateOrderId');
-      const orderId = generateOrderId();
+      const friendlyId = generateOrderId();
       const itemName = getItemName(selectedPackage);
-      const { error } = await supabase.from('orders').insert({
-        id: orderId,
-        user_id: user?.id || `guest_${Date.now()}`,
-        package_id: String(selectedPackage.id),
+      const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+      const pkgIdStr = String(selectedPackage.id);
+      const pkgIdForDb = uuidRegex.test(pkgIdStr) ? pkgIdStr : null;
+      const { data: inserted, error } = await supabase.from('orders').insert({
+        user_id: user.id,
+        package_id: pkgIdForDb,
         price: selectedPackage.price,
         pkr_amount: selectedPackage.price,
         currency_code: currencyCode,
         status: 'pending',
         payment_method: 'test_payment',
-        transaction_id: `TEST-${orderId}`,
+        transaction_id: `TEST-${friendlyId}`,
         player_id: userInfo.id,
         username: userInfo.name,
         product_type: productType,
@@ -1116,9 +1123,9 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
         customer_email: buyerEmail,
         customer_name: buyerName,
-      } as any);
+      } as any).select('id').single();
       if (error) throw error;
-      toast({ title: '✅ Test order created', description: `Order ${orderId} placed as pending. Cancel it from admin panel to trigger refund email.` });
+      toast({ title: '✅ Test order created', description: `Order ${inserted?.id?.toString().slice(0,8)} placed as pending. Cancel it from admin panel to trigger refund email.` });
       onOpenChange(false);
       navigate('/thank-you');
     } catch (e: any) {
