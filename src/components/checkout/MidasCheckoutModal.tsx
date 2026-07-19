@@ -1135,7 +1135,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         item: itemName,
         status: 'cancelled',
         method: 'Test Payment',
-        txnId: `TEST-${friendlyId}`,
+        basket_id: `TEST-${friendlyId}`,
+        transaction_id: `TEST-${friendlyId}`,
       });
       navigate(`/payment/success?${params.toString()}`);
     } catch (e: any) {
