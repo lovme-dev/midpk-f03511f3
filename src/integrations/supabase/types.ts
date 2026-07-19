@@ -1364,6 +1364,7 @@ export type Database = {
     Functions: {
       assign_default_role: { Args: { p_user_id: string }; Returns: undefined }
       check_auth_rate_limit: { Args: { p_email: string }; Returns: boolean }
+      delete_old_pending_failed_orders: { Args: never; Returns: undefined }
       grant_role_by_email: {
         Args: {
           target_role: Database["public"]["Enums"]["app_role"]

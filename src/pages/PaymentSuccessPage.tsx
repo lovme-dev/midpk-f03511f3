@@ -96,26 +96,9 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
             } else {
               console.log('Order updated - status:', newStatus);
               
-              // Notify admin about cancelled order - using correct currency from order
-              try {
-                await supabase.functions.invoke('notify-admin-new-order', {
-                  body: {
-                    event_type: 'order_cancelled',
-                    order_details: {
-                      order_id: order.id,
-                      package_name: order.product_name || order.uc_packages?.name || 'Package',
-                      price: order.price || 0,
-                      currency_code: order.currency_code || 'PKR',
-                      player_id: order.player_id,
-                      payment_method: order.payment_method || 'gopayfast',
-                      status: newStatus,
-                    },
-                  },
-                });
-                console.log('Admin notification sent for order cancelled with currency:', order.currency_code);
-              } catch (notifyError) {
-                console.error('Failed to notify admin:', notifyError);
-              }
+              // Admin is intentionally NOT notified for customer-cancelled/refund orders
+              // (per requirement: refund email should go to customer only)
+
 
               // Send automatic refund email to customer
               try {
