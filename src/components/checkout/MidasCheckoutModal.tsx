@@ -1479,8 +1479,42 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                       </svg>
                    </div>
 
+                   {/* Guest Email input - required for non-logged users to enable payment channels */}
+                   {!isLoggedIn && (
+                     <div className="px-4 mb-3 md:px-0">
+                       <div className="bg-[#151a2e] border border-[#2a3042] rounded-xl p-4">
+                         <div className="flex items-center gap-2 mb-2">
+                           <svg className="w-4 h-4 text-[#3a7bfd]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span className="text-[12px] text-gray-200 font-medium">
+                             Enter your email to continue <span className="text-red-400">*</span>
+                           </span>
+                         </div>
+                         <input
+                           type="email"
+                           placeholder="your@email.com"
+                           value={quickCheckoutEmail}
+                           onChange={handleQuickEmailChange}
+                           className={`w-full bg-[#1c2133] border ${
+                             quickCheckoutEmailError ? 'border-red-500/50 focus:border-red-500'
+                               : 'border-[#2a3042] focus:border-[#3a7bfd]'
+                           } rounded-lg px-4 py-3 text-white text-[13px] placeholder-gray-500 outline-none transition-colors`}
+                           autoComplete="email"
+                         />
+                         {quickCheckoutEmailError && (
+                           <p className="text-red-400 text-[11px] mt-1">{quickCheckoutEmailError}</p>
+                         )}
+                         <p className="text-gray-500 text-[10px] mt-2 leading-tight">
+                           Login optional. We'll send order confirmation & delivery status here.
+                         </p>
+                       </div>
+                     </div>
+                   )}
+
                    {/* Payment Methods */}
-                   <div className="px-4 space-y-3 md:px-0">
+                   <div className={`px-4 space-y-3 md:px-0 ${(!isLoggedIn && !isValidEmail(quickCheckoutEmail)) ? 'opacity-50 pointer-events-none' : ''}`}>
+
                       {/* Credit Card / Global Payment */}
                       {cardEnabled && (
                       <div 
