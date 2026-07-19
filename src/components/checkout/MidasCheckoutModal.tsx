@@ -1049,7 +1049,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         productType: productType, // Product type for game identification
         productAmount: productAmount, // Base+bonus amount for database storage
         playerId: userInfo,
-        email: userEmail || '',
+        email: userEmail || guestEmail || quickCheckoutEmail || '',
         discountPercentage,
         originalPrice: displayOriginalPrice, // Display original price in user's currency
         pkrOriginalPrice: selectedPackage.originalPrice, // Original price in PKR
@@ -1135,7 +1135,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         item: itemName,
         status: 'cancelled',
         method: 'Test Payment',
-        txnId: `TEST-${friendlyId}`,
+        basket_id: `TEST-${friendlyId}`,
+        transaction_id: `TEST-${friendlyId}`,
       });
       navigate(`/payment/success?${params.toString()}`);
     } catch (e: any) {
