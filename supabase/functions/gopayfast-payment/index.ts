@@ -281,6 +281,9 @@ serve(async (req) => {
           product_name: finalProductName,
           product_code: finalProductCode,
           product_amount: finalProductAmount,
+          customer_email: email_address,
+          customer_name: username,
+          username: username,
         })
         .select()
         .single();
