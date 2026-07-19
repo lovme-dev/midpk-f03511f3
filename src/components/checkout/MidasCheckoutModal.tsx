@@ -1049,7 +1049,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         productType: productType, // Product type for game identification
         productAmount: productAmount, // Base+bonus amount for database storage
         playerId: userInfo,
-        email: userEmail || '',
+        email: userEmail || guestEmail || quickCheckoutEmail || '',
         discountPercentage,
         originalPrice: displayOriginalPrice, // Display original price in user's currency
         pkrOriginalPrice: selectedPackage.originalPrice, // Original price in PKR
