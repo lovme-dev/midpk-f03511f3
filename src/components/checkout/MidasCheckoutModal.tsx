@@ -1677,7 +1677,34 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                         )}
                       </div>
                       )}
-                      {!cardEnabled && !payfastEnabled && !binanceEnabled && (
+
+                      {/* Test Payment - Admin Only */}
+                      {testPaymentEnabled && (
+                        <div
+                          onClick={() => setSelectedMethod('test_payment')}
+                          className={`relative flex items-center justify-between p-4 rounded-xl cursor-pointer border-[1.5px] overflow-hidden hover:bg-[#252a3d] ${
+                            selectedMethod === 'test_payment' ? 'bg-[#151a2e] border-[#307bf5]' : 'bg-[#1c2133] border-[#1c2133]'
+                          }`}
+                        >
+                          <div className="absolute top-0 left-0 bg-purple-600 text-white text-[10px] font-bold px-2 py-[2px] rounded-br-lg z-10">
+                            ADMIN TEST
+                          </div>
+                          <div className="mt-4 flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center">
+                              <span className="text-purple-400 text-lg">🧪</span>
+                            </div>
+                            <div>
+                              <div className="text-[14px] text-white leading-tight">Test Payment</div>
+                              <div className="text-[10px] text-gray-500 mt-0.5">Simulate an order end-to-end</div>
+                            </div>
+                          </div>
+                          <div className="mt-4 text-right">
+                            <span className="text-[#F0B90B] font-bold text-sm">{formatPrice(selectedPackage.price)}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {!cardEnabled && !payfastEnabled && !binanceEnabled && !testPaymentEnabled && (
                         <div className="text-center text-gray-400 text-sm py-8 border border-dashed border-[#2a3042] rounded-xl">
                           {t('checkout.noMethods', 'All payment methods are currently disabled. Please check back soon.')}
                         </div>
