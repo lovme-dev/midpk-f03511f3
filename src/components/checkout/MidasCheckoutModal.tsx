@@ -1997,34 +1997,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                   </div>
                   
                    <button 
-                     onClick={() => {
-                       // PK Quick checkout with email for PayFast
-                       if (isPakistan && selectedMethod === 'payfast' && !isLoggedIn) {
-                         if (!userInfo) {
-                           setShowPlayerIdModal(true);
-                         } else if (quickCheckoutEmail && isValidEmail(quickCheckoutEmail)) {
-                           handleQuickPayWithEmail();
-                         } else {
-                           setQuickCheckoutEmailError('Please enter your email above');
-                         }
-                       } else if (!isLoggedIn) {
-                         openAuthModal();
-                       } else if (!userInfo) {
-                        setShowPlayerIdModal(true);
-                      } else {
-                        handlePayNow();
-                      }
-                    }}
-                    disabled={isPaymentLoading}
-                    className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white font-bold h-10 px-6 rounded text-sm hover:brightness-110 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center min-w-[140px] disabled:opacity-50"
-                  >
-                    {isPaymentLoading 
-                      ? 'Processing...' 
-                      : (isPakistan && selectedMethod === 'payfast' && !isLoggedIn)
-                        ? (!userInfo ? 'Enter Player ID' : 'Pay Now')
-                        : (!isLoggedIn ? 'Login Midasbuy' : !userInfo ? 'Enter Player ID' : 'Pay Now')
-                    }
-                  </button>
+                     onClick={handleCheckoutClick}
+                     disabled={isPaymentLoading}
+                     className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white font-bold h-10 px-6 rounded text-sm hover:brightness-110 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center min-w-[140px] disabled:opacity-50"
+                   >
+                     {isPaymentLoading ? 'Processing...' : (!userInfo ? 'Enter Player ID' : 'Order Now')}
+                   </button>
                </div>
             </div>
           </div>
