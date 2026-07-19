@@ -1075,8 +1075,60 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
     } else if (selectedMethod === 'binance') {
       // Show Binance crypto payment section inline
       setShowCryptoPayment(true);
+    } else if (selectedMethod === 'test_payment') {
+      handleTestPaymentSubmit();
     }
   };
+
+  // Admin-only Test Payment: creates a pending order end-to-end for QA
+  const handleTestPaymentSubmit = async () => {
+    if (!selectedPackage || !userInfo) {
+      setShowPlayerIdModal(true);
+      return;
+    }
+    setIsPaymentLoading(true);
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      const buyerEmail = user?.email || guestEmail || quickCheckoutEmail || '';
+      const buyerName = (user?.user_metadata as any)?.full_name || userInfo.name || 'Test Buyer';
+      if (!buyerEmail) {
+        toast({ title: 'Email required', description: 'Enter an email above to run a test order.', variant: 'destructive' });
+        setIsPaymentLoading(false);
+        return;
+      }
+      const { generateOrderId } = await import('@/utils/generateOrderId');
+      const orderId = generateOrderId();
+      const itemName = getItemName(selectedPackage);
+      const { error } = await supabase.from('orders').insert({
+        id: orderId,
+        user_id: user?.id || `guest_${Date.now()}`,
+        package_id: String(selectedPackage.id),
+        price: selectedPackage.price,
+        pkr_amount: selectedPackage.price,
+        currency_code: currencyCode,
+        status: 'pending',
+        payment_method: 'test_payment',
+        transaction_id: `TEST-${orderId}`,
+        player_id: userInfo.id,
+        username: userInfo.name,
+        product_type: productType,
+        product_name: itemName,
+        product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+        customer_email: buyerEmail,
+        customer_name: buyerName,
+      } as any);
+      if (error) throw error;
+      toast({ title: '✅ Test order created', description: `Order ${orderId} placed as pending. Cancel it from admin panel to trigger refund email.` });
+      onOpenChange(false);
+      navigate('/thank-you');
+    } catch (e: any) {
+      console.error('Test payment error:', e);
+      toast({ title: 'Test payment failed', description: e?.message || 'Could not create test order', variant: 'destructive' });
+    } finally {
+      setIsPaymentLoading(false);
+    }
+  };
+
 
   if (!selectedPackage) return null;
 
