@@ -17,14 +17,38 @@ const TermsOfServicePage = ({ onLogout }: TermsOfServicePageProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-midasbuy-navy to-black text-white" dir={isRTL ? 'rtl' : 'ltr'}>
       <SEOHelmet 
-        title={`${t('pages.termsOfService.title', 'Terms of Service')} - Midasbuy | UC Purchase Terms & Conditions`}
-        description={t('pages.termsOfService.intro', 'Read Midasbuy Terms of Service for PUBG Mobile UC purchases. Learn about refund eligibility, delivery times, user responsibilities, and service policies.')}
-        keywords="midasbuy terms, terms of service, UC purchase policy, refund policy, PUBG UC terms, gaming purchase terms"
+        title={`${t('pages.termsOfService.title', 'Terms of Service')} - Midasbuy Pakistan | UC Purchase Terms & Conditions`}
+        description={t('pages.termsOfService.intro', 'Read Midasbuy Pakistan Terms of Service for PUBG Mobile UC purchases. Learn about refund eligibility (24h), delivery times, user responsibilities, and service policies.')}
+        keywords="midasbuy terms, terms of service pakistan, UC purchase policy, refund policy, PUBG UC terms, gaming purchase terms, midasbuy pk terms"
         canonicalUrl="/terms-of-service"
         ogImage="/og-image.png"
-        ogType="website"
+        ogType="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Terms of Service - Midasbuy Pakistan",
+          "url": "https://www.midasbuy.com.pk/terms-of-service",
+          "description": "Official Terms of Service for Midasbuy Pakistan covering PUBG Mobile UC purchases, refund policy, delivery, and user responsibilities.",
+          "publisher": { "@type": "Organization", "name": "Midasbuy Pakistan", "url": "https://www.midasbuy.com.pk" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.midasbuy.com.pk/" },
+              { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://www.midasbuy.com.pk/terms-of-service" }
+            ]
+          },
+          "dateModified": new Date().toISOString().split('T')[0]
+        }}
       />
       <Header onLogout={onLogout} />
+
+      {/* Crawler-friendly rich content */}
+      <div className="sr-only">
+        <h2>Midasbuy Pakistan Terms of Service Overview</h2>
+        <p>These Terms of Service govern your use of Midasbuy Pakistan (midasbuy.com.pk), the officially trusted platform for buying PUBG Mobile UC, BGMI UC, Free Fire Diamonds, Roblox Robux, Valorant Points and Honor of Kings tokens in Pakistan. By accessing our website you agree to comply with these terms in accordance with the laws of the Islamic Republic of Pakistan.</p>
+        <p>Refunds are eligible only when UC or in-game currency is not delivered within 24 hours of a successful payment via JazzCash, EasyPaisa, Debit/Credit Card, Bank Transfer, USDT (TRC20) or PayPro. Orders with wrong Player ID are non-refundable. All disputes are handled by our Karachi-based support team within 24 business hours.</p>
+        <p>Related pages: <a href="/refund-policy">Refund Policy</a>, <a href="/privacy-policy">Privacy Policy</a>, <a href="/cookie-policy">Cookie Policy</a>, <a href="/copyright-notice">Copyright Notice</a>, <a href="/security">Security Center</a>, <a href="/contact">Contact Support</a>.</p>
+      </div>
       
       <div className="container mx-auto px-4 pt-24 pb-16">
         <motion.div 
