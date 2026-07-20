@@ -1125,6 +1125,28 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         customer_name: buyerName,
       } as any).select('id').single();
       if (error) throw error;
+
+      try {
+        const { error: notifyError } = await supabase.functions.invoke('notify-admin-new-order', {
+          body: {
+            event_type: 'order_cancelled',
+            order_details: {
+              order_id: inserted.id,
+              package_name: itemName,
+              price: selectedPackage.price,
+              player_id: userInfo.id,
+              currency_code: currencyCode || 'PKR',
+            },
+          },
+        });
+
+        if (notifyError) {
+          console.error('Test payment admin push failed:', notifyError);
+        }
+      } catch (notifyError) {
+        console.error('Test payment admin push failed:', notifyError);
+      }
+
       try {
         await supabase.functions.invoke('send-order-email', {
           body: {
