@@ -546,10 +546,10 @@ const GamingShopPage = ({ onLogout, disableSeo = false, beforeFooterSlot }: Gami
                     {t('seeAll', 'See All')}
                     <ChevronDown className="w-3 h-3 md:w-4 md:h-4" />
                   </button>
-                </div>
-                
-                
-                {/* Mobile Layout - Single unified scrollable container with 2-row grid */}
+                 </div>
+                 <h2 className="sr-only">Popular Games — Midasbuy Recharge Store</h2>
+                 
+                 {/* Mobile Layout - Single unified scrollable container with 2-row grid */}
                 {isMobile ? (
                   <div 
                     className="overflow-x-auto scrollbar-hide scroll-smooth pb-4"
