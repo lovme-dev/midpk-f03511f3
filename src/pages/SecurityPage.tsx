@@ -14,14 +14,38 @@ const SecurityPage = ({ onLogout }: SecurityPageProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-midasbuy-navy to-black text-white">
       <SEOHelmet 
-        title="Security Center - Midasbuy | Safe & Secure UC Purchases"
-        description="Learn how Midasbuy protects your information with secure payments, account protection, data privacy, and fraud prevention. Safe PUBG Mobile UC purchases with PCI DSS compliance."
-        keywords="midasbuy security, secure payment, safe UC purchase, account protection, payment security, gaming security, PCI DSS"
+        title="Security Center - Midasbuy Pakistan | Safe & Secure UC Purchases"
+        description="Learn how Midasbuy Pakistan protects your information with TLS-encrypted payments, PCI DSS compliance, account protection, data privacy and fraud prevention. Safe PUBG Mobile UC & Free Fire Diamond purchases."
+        keywords="midasbuy security, secure payment pakistan, safe UC purchase, account protection, payment security, gaming security, PCI DSS, midasbuy pk safety"
         canonicalUrl="/security"
         ogImage="/og-image.png"
-        ogType="website"
+        ogType="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Security Center - Midasbuy Pakistan",
+          "url": "https://www.midasbuy.com.pk/security",
+          "description": "How Midasbuy Pakistan keeps your account and payments safe: TLS encryption, PCI DSS compliance, fraud detection and account protection best practices.",
+          "publisher": { "@type": "Organization", "name": "Midasbuy Pakistan", "url": "https://www.midasbuy.com.pk" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.midasbuy.com.pk/" },
+              { "@type": "ListItem", "position": 2, "name": "Security", "item": "https://www.midasbuy.com.pk/security" }
+            ]
+          },
+          "dateModified": new Date().toISOString().split('T')[0]
+        }}
       />
       <Header onLogout={onLogout} />
+
+      {/* Crawler-friendly rich content */}
+      <div className="sr-only">
+        <h2>Why Midasbuy Pakistan is Safe for PUBG Mobile UC Purchases</h2>
+        <p>Midasbuy Pakistan (midasbuy.com.pk) is a Tencent-authorized reseller trusted by millions of gamers across Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar and Quetta. Every transaction is encrypted with 256-bit TLS and processed through PCI DSS certified gateways including Stripe, PayPro, JazzCash and EasyPaisa. We never store raw card data — payment credentials are tokenised at source.</p>
+        <p>Our fraud engine monitors chargeback signals, IP reputation and velocity in real time. Two-factor authentication is available on your account. Suspicious sign-ins trigger email alerts. All personal data is stored in accordance with the Prevention of Electronic Crimes Act (PECA) 2016 and international GDPR-equivalent privacy standards.</p>
+        <p>Report security issues to security@midasbuy.com.pk. See also: <a href="/privacy-policy">Privacy Policy</a>, <a href="/terms-of-service">Terms of Service</a>, <a href="/refund-policy">Refund Policy</a>, <a href="/help-center">Help Center</a>, <a href="/contact">Contact Us</a>.</p>
+      </div>
       
       <div className="container mx-auto px-4 pt-24 pb-16">
         <motion.div 

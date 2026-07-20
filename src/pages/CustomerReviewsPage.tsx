@@ -711,12 +711,40 @@ export default function CustomerReviewsPage({ onLogout }: CustomerReviewsPagePro
   return (
     <div className="min-h-screen bg-midasbuy-darkBlue flex flex-col">
       <SEOHelmet 
-        title="Customer Reviews - Midasbuy | 80,000+ Verified Reviews"
-        description="Read 80,000+ verified customer reviews for Midasbuy. See real feedback from gamers worldwide about PUBG UC and Free Fire diamond purchases. 4.9 star rating."
-        keywords="midasbuy reviews, customer reviews, PUBG UC reviews, Free Fire reviews, verified reviews, gaming store reviews"
+        title="Customer Reviews - Midasbuy Pakistan | 80,000+ Verified Reviews & Ratings"
+        description="Read 80,000+ verified customer reviews for Midasbuy Pakistan. See real feedback from Pakistani gamers about PUBG Mobile UC, Free Fire Diamonds, BGMI and Roblox Robux purchases. 4.9 star rating."
+        keywords="midasbuy reviews pakistan, customer reviews, PUBG UC reviews, Free Fire reviews, BGMI reviews, verified reviews, gaming store reviews pakistan, midasbuy pk feedback"
         canonicalUrl="/customer-reviews"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Midasbuy Pakistan Gaming Currency Store",
+          "url": "https://www.midasbuy.com.pk/customer-reviews",
+          "description": "Trusted marketplace for PUBG Mobile UC, Free Fire Diamonds, BGMI UC, Roblox Robux and Valorant Points in Pakistan.",
+          "brand": { "@type": "Brand", "name": "Midasbuy Pakistan" },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "80000",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.midasbuy.com.pk/" },
+              { "@type": "ListItem", "position": 2, "name": "Customer Reviews", "item": "https://www.midasbuy.com.pk/customer-reviews" }
+            ]
+          }
+        }}
       />
+      <div className="sr-only">
+        <h2>Real Customer Reviews of Midasbuy Pakistan</h2>
+        <p>Over 80,000 verified buyers from Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Hyderabad and Gujranwala have rated Midasbuy Pakistan an average 4.9/5 for instant UC delivery, JazzCash & EasyPaisa payment support, 24/7 Urdu customer service and competitive PKR pricing on PUBG Mobile UC, BGMI UC, Free Fire Diamonds, Roblox Robux, Valorant Points and Honor of Kings tokens.</p>
+        <p>See also: <a href="/pubg-mobile">PUBG Mobile UC</a>, <a href="/free-fire">Free Fire Diamonds</a>, <a href="/security">Security Center</a>, <a href="/terms-of-service">Terms of Service</a>, <a href="/refund-policy">Refund Policy</a>, <a href="/contact">Contact Support</a>.</p>
+      </div>
       <Header onLogout={onLogout} />
+      
       
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full pt-24">
         

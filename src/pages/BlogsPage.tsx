@@ -95,9 +95,26 @@ const BlogsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHelmet 
-        title="Gaming Blogs & Articles - Midasbuy | Latest Gaming News & Tips"
-        description="Discover the latest PUBG Mobile, Free Fire, and gaming articles from Midasbuy. Get expert tips, game updates, and exclusive content from the gaming community."
-        keywords="gaming blogs, PUBG Mobile articles, Free Fire tips, gaming news, midasbuy blog, gaming guides"
+        title="Gaming Blogs & Articles - Midasbuy Pakistan | PUBG Mobile, Free Fire, BGMI Tips"
+        description="Read the latest PUBG Mobile UC guides, Free Fire Diamond tips, BGMI updates, Roblox Robux news and Valorant Points articles from Midasbuy Pakistan. Expert gaming insights for Pakistani players."
+        keywords="gaming blogs pakistan, PUBG Mobile articles, Free Fire tips, BGMI guides, gaming news pakistan, midasbuy blog, roblox robux guide, valorant points tips"
+        canonicalUrl="/blogs"
+        ogType="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Midasbuy Pakistan Gaming Blog",
+          "url": "https://www.midasbuy.com.pk/blogs",
+          "description": "Expert gaming guides, tips and news for PUBG Mobile UC, Free Fire Diamonds, BGMI, Roblox Robux and Valorant Points buyers in Pakistan.",
+          "publisher": { "@type": "Organization", "name": "Midasbuy Pakistan", "url": "https://www.midasbuy.com.pk" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.midasbuy.com.pk/" },
+              { "@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://www.midasbuy.com.pk/blogs" }
+            ]
+          }
+        }}
       />
       
       <main className="container mx-auto px-4 py-8">
@@ -106,9 +123,16 @@ const BlogsPage = () => {
             Gaming Blogs & Articles
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay updated with the latest gaming trends, tips, and exclusive content from the Midasbuy community
+            Stay updated with the latest gaming trends, tips, and exclusive content from the Midasbuy Pakistan community — covering PUBG Mobile UC, Free Fire Diamonds, BGMI, Roblox Robux and Valorant Points.
           </p>
         </header>
+
+        {/* Crawler-friendly rich content */}
+        <div className="sr-only">
+          <h2>Latest Gaming Guides from Midasbuy Pakistan</h2>
+          <p>Our editorial team covers PUBG Mobile season updates, Royal Pass leaks, best UC top-up deals in Pakistan, BGMI redeem codes, Free Fire diamond earning tricks, Roblox Robux gift card comparison, Valorant Points region pricing, and Honor of Kings tournaments. Content is refreshed weekly for Pakistani players buying via JazzCash, EasyPaisa, bank transfer, USDT or credit/debit card.</p>
+          <p>Explore related sections: <a href="/pubg-mobile">Buy PUBG Mobile UC</a>, <a href="/free-fire">Free Fire Diamonds</a>, <a href="/bgmi">BGMI UC</a>, <a href="/roblox">Roblox Robux</a>, <a href="/valorant">Valorant Points</a>, <a href="/honor-of-kings">Honor of Kings Tokens</a>, <a href="/customer-reviews">Customer Reviews</a>, <a href="/help-center">Help Center</a>.</p>
+        </div>
 
         {blogs.length === 0 ? (
           <div className="text-center py-12">
