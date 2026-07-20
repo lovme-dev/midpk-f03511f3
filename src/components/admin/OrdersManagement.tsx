@@ -29,7 +29,8 @@ import {
   User,
   Package,
   Copy,
-  Check
+  Check,
+  Trash2
 } from 'lucide-react';
 import {
   Dialog,
