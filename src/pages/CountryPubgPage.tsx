@@ -7,6 +7,8 @@ import Index from "./Index";
 import { useCurrencyFromURL } from "@/utils/urlCurrencyDetector";
 import { getGameSEOConfig, getCountryData, ALL_COUNTRY_CODES, COUNTRY_DATA } from "@/utils/gameSeoConfigs";
 import CountryFAQSection from "@/components/CountryFAQSection";
+import { getCountryPubgFact } from "@/data/countryPubgFacts";
+
 
 interface CountryPubgPageProps {
   onLogout?: () => void;
