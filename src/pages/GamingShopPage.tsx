@@ -735,6 +735,7 @@ const GamingShopPage = ({ onLogout, disableSeo = false, beforeFooterSlot }: Gami
                 ref={(el) => (sectionRefs.current["mini-games"] = el)}
                 id="mini-games"
               >
+                <h2 className="sr-only">Mini Games on Midasbuy</h2>
                 <MiniGamesSection />
               </div>
               
@@ -743,6 +744,7 @@ const GamingShopPage = ({ onLogout, disableSeo = false, beforeFooterSlot }: Gami
                 ref={(el) => (sectionRefs.current["midasbuy-video"] = el)}
                 id="midasbuy-video"
               >
+                <h2 className="sr-only">Midasbuy Video — Gaming Highlights & Tutorials</h2>
                 <MidasbuyVideoSection />
               </div>
               
