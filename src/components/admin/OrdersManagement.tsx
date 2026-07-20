@@ -104,6 +104,9 @@ const getCustomerEmail = (order: Order | null | undefined): string =>
 const getCustomerName = (order: Order | null | undefined): string =>
   order?.customer_name || order?.profiles?.full_name || getCustomerEmail(order)?.split('@')[0] || 'Customer';
 
+const getStatusLabel = (status: string) =>
+  status === 'refund_review' ? 'Refund Review' : status.replace(/_/g, ' ');
+
 // Country to language mapping for email language detection
 const CURRENCY_TO_COUNTRY: Record<string, string> = {
   'PKR': 'PK', 'INR': 'IN', 'BDT': 'BD', 'NPR': 'NP', 'LKR': 'LK',
@@ -627,17 +630,7 @@ export function OrdersManagement() {
         // Notify admins when order is cancelled or failed
         if (newStatus === 'cancelled' || newStatus === 'failed') {
           try {
-            await supabase.functions.invoke('notify-admin-new-order', {
-              body: {
-                event_type: 'order_cancelled',
-                order_details: {
-                  order_id: orderToUpdate.id,
-                  package_name: packageName,
-                  price: orderToUpdate.price || 0,
-                  player_id: orderToUpdate.player_id || 'N/A',
-                },
-              },
-            });
+            await notifyAdminsForCancelledOrder(orderToUpdate, newStatus === 'failed' ? 'order_failed' : 'order_cancelled');
             console.log('[OrdersManagement] Admin notification sent for cancelled order');
           } catch (notifyError) {
             console.error('Failed to notify admins about cancellation:', notifyError);
@@ -759,6 +752,15 @@ export function OrdersManagement() {
             p_details: { new_status: bulkStatus },
           });
         }
+      }
+
+      if (bulkStatus === 'cancelled' || bulkStatus === 'failed') {
+        const eventType = bulkStatus === 'failed' ? 'order_failed' : 'order_cancelled';
+        await Promise.allSettled(
+          orders
+            .filter((order) => orderIds.includes(order.id))
+            .map((order) => notifyAdminsForCancelledOrder(order, eventType))
+        );
       }
 
       toast({
@@ -1055,6 +1057,51 @@ export function OrdersManagement() {
     return formatOrderPrice(price, currencyCode);
   };
 
+  const notifyAdminsForCancelledOrder = useCallback(async (order: Order, eventType: 'order_cancelled' | 'order_failed' = 'order_cancelled') => {
+    const packageName = order.uc_packages?.name || order.product_name || 'Package';
+
+    const { error } = await supabase.functions.invoke('notify-admin-new-order', {
+      body: {
+        event_type: eventType,
+        order_details: {
+          order_id: order.id,
+          package_name: packageName,
+          price: order.price || 0,
+          player_id: order.player_id || 'N/A',
+          currency_code: order.currency_code || 'PKR',
+        },
+      },
+    });
+
+    if (error) throw error;
+  }, []);
+
+  const runCleanupAndRefresh = useCallback(async () => {
+    try {
+      const { data, error } = await supabase.functions.invoke('cleanup-pending-orders', {
+        body: { source: 'admin_orders' },
+      });
+
+      if (error) {
+        console.warn('[OrdersManagement] Cleanup skipped:', error.message);
+        return;
+      }
+
+      const changedCount = Number(data?.movedToRefundReview || 0) + Number(data?.testOrdersCancelled || 0) + Number(data?.pendingArchived || 0) + Number(data?.failedArchived || 0);
+      if (changedCount > 0) {
+        await loadOrders();
+      }
+    } catch (error) {
+      console.warn('[OrdersManagement] Cleanup failed:', error);
+    }
+  }, [loadOrders]);
+
+  useEffect(() => {
+    runCleanupAndRefresh();
+    const intervalId = window.setInterval(runCleanupAndRefresh, 30_000);
+    return () => window.clearInterval(intervalId);
+  }, [runCleanupAndRefresh]);
+
   const isPakistaniOrder = (currencyCode: string | null) => {
     return currencyCode?.toUpperCase() === 'PKR';
   };
@@ -1287,7 +1334,161 @@ export function OrdersManagement() {
           </div>
         </CardHeader>
         <CardContent className="p-0 max-h-[70vh] overflow-y-auto overflow-x-hidden">
-          <div className="w-full overflow-x-hidden">
+          <div className="md:hidden divide-y divide-border">
+            {filteredOrders.length === 0 ? (
+              <div className="flex flex-col items-center gap-2 py-10 px-4 text-center">
+                <Package className="h-10 w-10 text-muted-foreground" />
+                <p className="text-sm font-medium text-muted-foreground">No orders found</p>
+                <p className="text-xs text-muted-foreground">Try adjusting your search filters</p>
+              </div>
+            ) : (
+              filteredOrders.map((order) => {
+                const packageName = order.uc_packages?.name || order.product_name || 'N/A';
+                const amount = order.uc_packages?.uc_amount || order.product_amount || 'N/A';
+                const langInfo = getEmailLanguageInfo(order.currency_code);
+
+                return (
+                  <div key={order.id} className="p-3 space-y-3 bg-card">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="min-w-0 space-y-1">
+                        <OrderIdCell transactionId={order.transaction_id} />
+                        <p className="text-xs text-muted-foreground truncate">{new Date(order.created_at).toLocaleString()}</p>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Checkbox
+                          checked={selectedOrders.has(order.id)}
+                          onCheckedChange={() => toggleOrderSelection(order.id)}
+                        />
+                        <Badge className={`${getStatusColor(order.status)} text-[10px] px-2 py-0.5 capitalize`}>
+                          {getStatusLabel(order.status)}
+                        </Badge>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div className="rounded-md bg-muted/30 p-2 min-w-0">
+                        <p className="text-muted-foreground">Customer</p>
+                        <p className="font-medium text-foreground truncate" title={getCustomerName(order)}>{getCustomerName(order)}</p>
+                        <p className="text-primary truncate" title={getCustomerEmail(order)}>{getCustomerEmail(order) || 'No email'}</p>
+                      </div>
+                      <div className="rounded-md bg-muted/30 p-2 min-w-0">
+                        <p className="text-muted-foreground">Amount</p>
+                        <p className="font-semibold text-foreground truncate">{formatCurrency(order.price, order.currency_code)}</p>
+                        <p className="text-muted-foreground truncate">{amount} {order.product_type || 'UC'}</p>
+                      </div>
+                      <div className="rounded-md bg-muted/30 p-2 min-w-0">
+                        <p className="text-muted-foreground">Package</p>
+                        <p className="font-medium text-foreground truncate" title={packageName}>{packageName}</p>
+                      </div>
+                      <div className="rounded-md bg-muted/30 p-2 min-w-0">
+                        <p className="text-muted-foreground">Payment</p>
+                        <p className="font-medium text-foreground truncate capitalize">
+                          {order.payment_method === 'gopayfast' ? 'GoPayFast' : order.payment_method?.replace('_', ' ') || 'N/A'}
+                        </p>
+                        <p className="text-muted-foreground truncate">{langInfo.flag} {langInfo.name}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between gap-2">
+                      <PlayerIdCell playerId={order.player_id} />
+                      <div className="flex items-center gap-1 shrink-0">
+                        {order.email_sent_at && (
+                          <Badge className="bg-green-500/20 text-green-400 border-green-500 text-xs px-2 h-8">✓</Badge>
+                        )}
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          className="text-green-400 border-green-500 hover:bg-green-500/20 px-2 h-8"
+                          onClick={() => openEmailPreview(order, 'confirmation')}
+                          title="Send confirmation email"
+                        >
+                          <Send className="h-3 w-3" />
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          className="text-red-400 border-red-500 hover:bg-red-500/20 px-2 h-8"
+                          onClick={() => openEmailPreview(order, 'refund')}
+                          title="Send refund email"
+                        >
+                          <DollarSign className="h-3 w-3" />
+                        </Button>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" size="sm" className="text-foreground px-2 h-8">
+                              <Eye className="h-3 w-3" />
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="w-[calc(100vw-1.5rem)] max-w-2xl max-h-[90vh] overflow-y-auto">
+                            <DialogHeader>
+                              <DialogTitle className="flex items-center gap-2 text-base">
+                                Order Details
+                                {isPakistaniOrder(order.currency_code) && (
+                                  <Badge className="bg-emerald-100 text-emerald-800">🇵🇰 Pakistani</Badge>
+                                )}
+                              </DialogTitle>
+                            </DialogHeader>
+                            <div className="space-y-4">
+                              <CustomerInfoSection 
+                                order={order} 
+                                onEmailUpdate={(newEmail) => handleEmailUpdate(order, newEmail)}
+                              />
+                              <div className="grid grid-cols-1 gap-3 text-sm">
+                                <div className="bg-muted/20 p-3 rounded-lg">
+                                  <p className="text-muted-foreground">Order ID</p>
+                                  <p className="font-mono break-all">{order.id}</p>
+                                </div>
+                                <div className="grid grid-cols-2 gap-3">
+                                  <div className="bg-muted/20 p-3 rounded-lg">
+                                    <p className="text-muted-foreground">Package</p>
+                                    <p className="font-medium">{packageName}</p>
+                                  </div>
+                                  <div className="bg-muted/20 p-3 rounded-lg">
+                                    <p className="text-muted-foreground">Price</p>
+                                    <p className="font-bold">{formatCurrency(order.price, order.currency_code)}</p>
+                                  </div>
+                                  <div className="bg-muted/20 p-3 rounded-lg">
+                                    <p className="text-muted-foreground">Status</p>
+                                    <Badge className={getStatusColor(order.status)}>{getStatusLabel(order.status)}</Badge>
+                                  </div>
+                                  <div className="bg-muted/20 p-3 rounded-lg">
+                                    <p className="text-muted-foreground">Player ID</p>
+                                    <p className="font-mono break-all">{parsePlayerId(order.player_id)}</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="border-t pt-4">
+                                <h4 className="font-semibold mb-3">Update Order Status</h4>
+                                <Select 
+                                  value={order.status} 
+                                  onValueChange={(value) => updateOrderStatus(order.id, value)}
+                                >
+                                  <SelectTrigger>
+                                    <SelectValue />
+                                  </SelectTrigger>
+                                  <SelectContent>
+                                    <SelectItem value="pending">Pending</SelectItem>
+                                    <SelectItem value="processing">Processing</SelectItem>
+                                    <SelectItem value="completed">Completed</SelectItem>
+                                    <SelectItem value="failed">Failed</SelectItem>
+                                    <SelectItem value="refunded">Refunded</SelectItem>
+                                    <SelectItem value="refund_review">Refund Review</SelectItem>
+                                    <SelectItem value="cancelled">Cancelled</SelectItem>
+                                  </SelectContent>
+                                </Select>
+                              </div>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
+
+          <div className="hidden md:block w-full overflow-x-hidden">
             <Table className="w-full table-fixed text-[11px] lg:text-xs">
               <TableHeader className="sticky top-0 z-10 bg-card">
                 <TableRow className="bg-muted/50">
@@ -1365,7 +1566,7 @@ export function OrdersManagement() {
                       
                       <TableCell className="p-1 sm:p-2">
                         <Badge className={`${getStatusColor(order.status)} text-xs`}>
-                          {order.status}
+                          {getStatusLabel(order.status)}
                         </Badge>
                       </TableCell>
                       
@@ -1496,7 +1697,7 @@ export function OrdersManagement() {
                                     <div>
                                       <p className="text-sm text-muted-foreground">Status</p>
                                       <Badge className={getStatusColor(order.status)}>
-                                        {order.status}
+                                        {getStatusLabel(order.status)}
                                       </Badge>
                                     </div>
                                     <div>

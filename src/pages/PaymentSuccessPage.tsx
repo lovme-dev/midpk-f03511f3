@@ -26,6 +26,28 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
   const errMsg = searchParams.get('err_msg') || '';
   const isSuccess = errCode === '000' || errMsg?.toLowerCase() === 'success';
 
+  const notifyAdminCancelled = async (order: any) => {
+    try {
+      const { error } = await supabase.functions.invoke('notify-admin-new-order', {
+        body: {
+          event_type: 'order_cancelled',
+          order_details: {
+            order_id: order.id,
+            package_name: order.product_name || order.uc_packages?.name || 'Package',
+            price: order.price || 0,
+            player_id: order.player_id || 'N/A',
+            currency_code: order.currency_code || 'PKR',
+          },
+        },
+      });
+
+      if (error) throw error;
+      console.log('Admin cancel notification sent for order:', order.id);
+    } catch (notifyError) {
+      console.error('Failed to send admin cancel notification:', notifyError);
+    }
+  };
+
   useEffect(() => {
     const processPayment = async () => {
       if (hasProcessedRef.current) return;
@@ -95,10 +117,8 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
               console.error('Error updating order:', updateError);
             } else {
               console.log('Order updated - status:', newStatus);
-              
-              // Admin is intentionally NOT notified for customer-cancelled/refund orders
-              // (per requirement: refund email should go to customer only)
 
+              await notifyAdminCancelled(order);
 
               // Send automatic refund email to customer
               try {

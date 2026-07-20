@@ -230,6 +230,28 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         }
       };
 
+      const notifyAdminCancelled = async (order: any) => {
+        try {
+          const { error } = await supabase.functions.invoke("notify-admin-new-order", {
+            body: {
+              event_type: "order_cancelled",
+              order_details: {
+                order_id: order.id,
+                package_name: order.product_name || order.uc_packages?.name || "Package",
+                price: order.price || 0,
+                player_id: order.player_id || "N/A",
+                currency_code: order.currency_code || "PKR",
+              },
+            },
+          });
+
+          if (error) throw error;
+          console.log("[payment-success] admin cancel notification sent:", order.id);
+        } catch (notifyError) {
+          console.error("[payment-success] failed to notify admin:", notifyError);
+        }
+      };
+
       // Try to identify the exact order (gateway usually returns basket_id / transaction_id)
       const basketId =
         searchParams.get("transaction_id") ||
@@ -288,6 +310,8 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
           console.error("[payment-success] failed to update order status:", updateError);
           return;
         }
+
+        await notifyAdminCancelled(order);
 
         // Send refund email on /payment/success as well (for cancelled/failed states)
         await sendRefundEmail(order, newStatus);
