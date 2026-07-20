@@ -782,6 +782,50 @@ export function OrdersManagement() {
     }
   };
 
+  const bulkDeleteOrders = async () => {
+    if (selectedOrders.size === 0) return;
+    const count = selectedOrders.size;
+    if (!window.confirm(`Are you sure you want to permanently delete ${count} order(s)? This cannot be undone.`)) return;
+
+    try {
+      const orderIds = Array.from(selectedOrders);
+      const { error } = await supabase
+        .from('orders')
+        .delete()
+        .in('id', orderIds);
+
+      if (error) throw error;
+
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        for (const orderId of orderIds) {
+          await supabase.rpc('log_admin_action', {
+            p_admin_id: user.id,
+            p_action_type: 'delete_order',
+            p_target_id: orderId,
+            p_details: {},
+          });
+        }
+      }
+
+      toast({
+        title: "Deleted",
+        description: `${count} order(s) deleted successfully`,
+      });
+
+      setSelectedOrders(new Set());
+      setOrders((prev) => prev.filter((o) => !orderIds.includes(o.id)));
+    } catch (error) {
+      console.error('Error deleting orders:', error);
+      toast({
+        title: "Error",
+        description: "Failed to delete orders",
+        variant: "destructive",
+      });
+    }
+  };
+
+
   const exportOrders = () => {
     const csv = [
       ['Order ID', 'Customer Name', 'Email', 'Package', 'Amount', 'Price', 'Status', 'Payment Method', 'Player ID', 'Product Type', 'Transaction ID', 'Created Date', 'Updated Date'],
