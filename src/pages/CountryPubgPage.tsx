@@ -233,8 +233,10 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
           </a>
         ))}
       </nav>
+      {nativeFingerprintSlot}
     </section>
   );
+
 
   const faqSlot = (
     <div className="sr-only" aria-hidden="false">
