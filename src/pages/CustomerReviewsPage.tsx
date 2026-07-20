@@ -743,6 +743,8 @@ export default function CustomerReviewsPage({ onLogout }: CustomerReviewsPagePro
         <p>Over 80,000 verified buyers from Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Hyderabad and Gujranwala have rated Midasbuy Pakistan an average 4.9/5 for instant UC delivery, JazzCash & EasyPaisa payment support, 24/7 Urdu customer service and competitive PKR pricing on PUBG Mobile UC, BGMI UC, Free Fire Diamonds, Roblox Robux, Valorant Points and Honor of Kings tokens.</p>
         <p>See also: <a href="/pubg-mobile">PUBG Mobile UC</a>, <a href="/free-fire">Free Fire Diamonds</a>, <a href="/security">Security Center</a>, <a href="/terms-of-service">Terms of Service</a>, <a href="/refund-policy">Refund Policy</a>, <a href="/contact">Contact Support</a>.</p>
       </div>
+      <Header onLogout={onLogout} />
+      
       
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full pt-24">
         
