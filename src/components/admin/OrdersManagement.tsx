@@ -814,7 +814,7 @@ export function OrdersManagement() {
       });
 
       setSelectedOrders(new Set());
-      setOrders((prev) => prev.filter((o) => !orderIds.includes(o.id)));
+      loadOrders();
     } catch (error) {
       console.error('Error deleting orders:', error);
       toast({
