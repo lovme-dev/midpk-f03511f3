@@ -7,6 +7,8 @@ import Index from "./Index";
 import { useCurrencyFromURL } from "@/utils/urlCurrencyDetector";
 import { getGameSEOConfig, getCountryData, ALL_COUNTRY_CODES, COUNTRY_DATA } from "@/utils/gameSeoConfigs";
 import CountryFAQSection from "@/components/CountryFAQSection";
+import { getCountryPubgFact } from "@/data/countryPubgFacts";
+
 
 interface CountryPubgPageProps {
   onLogout?: () => void;
@@ -169,6 +171,54 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
   const priorityCountryLinks = ['pk', 'in', 'us', 'gb', 'ae', 'sa', 'id', 'my', 'ph', 'bd', 'br', 'tr']
     .filter((code) => code !== normalizedCountryCode && COUNTRY_DATA[code.toUpperCase()]);
 
+  // Per-country unique fingerprint (native script keywords, cities, esports, rivals)
+  const fact = getCountryPubgFact(
+    upperCountryCode,
+    seoConfig.countryName,
+    countryData.currency,
+    countryData.paymentMethods
+  );
+  const rivalLinks = fact.regionalRivals
+    .filter((r) => r.toLowerCase() !== normalizedCountryCode && COUNTRY_DATA[r.toUpperCase()])
+    .slice(0, 4);
+
+  const nativeFingerprintSlot = (
+    <section
+      aria-hidden="false"
+      style={{
+        position: 'absolute',
+        width: '1px',
+        height: '1px',
+        padding: 0,
+        margin: '-1px',
+        overflow: 'hidden',
+        clip: 'rect(0, 0, 0, 0)',
+        whiteSpace: 'nowrap',
+        border: 0,
+      }}
+    >
+      <h2>{seoConfig.countryName} — local search terms</h2>
+      <ul>
+        {fact.nativeKeywords.map((kw, i) => (
+          <li key={i} lang={countryData.language?.split('-')[0] || 'en'}>{kw}</li>
+        ))}
+      </ul>
+      <p>
+        Serving PUBG Mobile players from {fact.capital} and cities including {fact.cities.join(', ')}.
+        {' '}{fact.esportsNote} Peak activity from the {fact.playerNickname} runs during {fact.peakHours}.
+        Local checkout supports {countryData.paymentMethods.join(', ')} for fast {countryData.currency} top ups.
+      </p>
+      <nav aria-label="Regional PUBG Mobile UC stores">
+        {rivalLinks.map((code) => (
+          <a key={code} href={`/midasbuy/${code}/buy/pubgm`}>
+            PUBG Mobile UC {COUNTRY_DATA[code.toUpperCase()].name}
+          </a>
+        ))}
+      </nav>
+    </section>
+  );
+
+
   const topSeoSlot = (
     <section className="sr-only" aria-hidden="false">
       <h1>Buy PUBG Mobile UC in {seoConfig.countryName}</h1>
@@ -183,8 +233,10 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
           </a>
         ))}
       </nav>
+      {nativeFingerprintSlot}
     </section>
   );
+
 
   const faqSlot = (
     <div className="sr-only" aria-hidden="false">

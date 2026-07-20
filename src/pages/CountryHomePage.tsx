@@ -164,7 +164,8 @@ const CountryHomePage = ({ onLogout = () => {} }: CountryHomePageProps) => {
   // Unique country-specific content for SEO - prevents Google "Duplicate" errors
   // IMPORTANT: Each section has country-specific data to ensure Google sees unique content
   const countryContentBlock = (
-    <div className="w-full px-4 py-8 space-y-6">
+    <div className="sr-only" aria-hidden="false">
+
       <div className="max-w-5xl mx-auto space-y-6">
 
         {/* Section 1: Country Overview */}
