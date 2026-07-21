@@ -145,33 +145,6 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
   // Restore auth session and update order status when returning from payment gateway
   useEffect(() => {
     const restoreSessionAndUpdateOrder = async () => {
-      // Helper to get country code from currency code
-      const getCountryFromCurrency = (currencyCode: string): string => {
-        const currencyToCountry: Record<string, string> = {
-          'PKR': 'PK', 'USD': 'US', 'EUR': 'DE', 'GBP': 'GB', 'RUB': 'RU',
-          'INR': 'IN', 'AED': 'AE', 'SAR': 'SA', 'BDT': 'BD', 'MYR': 'MY',
-          'IDR': 'ID', 'PHP': 'PH', 'THB': 'TH', 'VND': 'VN', 'TRY': 'TR',
-          'JPY': 'JP', 'CNY': 'CN', 'KRW': 'KR', 'KZT': 'KZ', 'BRL': 'BR',
-          'ARS': 'AR', 'CLP': 'CL', 'COP': 'CO', 'PEN': 'PE', 'MXN': 'MX',
-          'ZAR': 'ZA', 'NGN': 'NG', 'EGP': 'EG', 'PLN': 'PL', 'CZK': 'CZ',
-          'HUF': 'HU', 'RON': 'RO', 'BGN': 'BG', 'UAH': 'UA', 'SEK': 'SE',
-          'NOK': 'NO', 'DKK': 'DK', 'CHF': 'CH', 'SGD': 'SG', 'HKD': 'HK',
-          'TWD': 'TW', 'NZD': 'NZ', 'AUD': 'AU', 'CAD': 'CA', 'IRR': 'IR',
-          'ILS': 'IL', 'JOD': 'JO', 'KWD': 'KW', 'QAR': 'QA', 'BHD': 'BH',
-          'OMR': 'OM', 'LBP': 'LB', 'IQD': 'IQ', 'NPR': 'NP', 'LKR': 'LK',
-          'AFN': 'AF', 'MMK': 'MM', 'KHR': 'KH', 'LAK': 'LA', 'MNT': 'MN',
-          'UZS': 'UZ', 'AZN': 'AZ', 'GEL': 'GE', 'AMD': 'AM', 'KES': 'KE',
-          'GHS': 'GH', 'TZS': 'TZ', 'UGX': 'UG', 'ETB': 'ET', 'RWF': 'RW',
-          'XOF': 'SN', 'MAD': 'MA', 'DZD': 'DZ', 'TND': 'TN', 'AOA': 'AO',
-          'MZN': 'MZ', 'ZWL': 'ZW', 'ZMW': 'ZM', 'BWP': 'BW', 'NAD': 'NA',
-          'MUR': 'MU', 'MGA': 'MG', 'CDF': 'CD', 'XAF': 'CM', 'GTQ': 'GT',
-          'HNL': 'HN', 'NIO': 'NI', 'CRC': 'CR', 'PAB': 'PA', 'JMD': 'JM',
-          'TTD': 'TT', 'DOP': 'DO', 'HTG': 'HT', 'UYU': 'UY', 'PYG': 'PY',
-          'BOB': 'BO', 'VES': 'VE', 'GYD': 'GY', 'SRD': 'SR', 'FJD': 'FJ',
-        };
-        return currencyToCountry[currencyCode?.toUpperCase()] || 'US';
-      };
-
       // Try to identify the exact order (gateway usually returns basket_id / transaction_id;
       // XPay flow passes ?orderId=ORD-xxx which is stored as transaction_id)
       const basketId =
