@@ -620,7 +620,10 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     ]
   };
 
-  const filteredPackages = ucPackages.filter(pkg => {
+  const { isAdmin } = useUserRole();
+  const basePackages = isAdmin ? [adminTestPackage, ...ucPackages] : ucPackages;
+
+  const filteredPackages = basePackages.filter(pkg => {
     // UC Range filtering
     if (ucRangeFilter !== "all") {
       if (ucRangeFilter === "small" && (pkg.baseAmount < 3896 || pkg.baseAmount > 600)) return false;
