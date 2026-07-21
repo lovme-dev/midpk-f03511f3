@@ -214,16 +214,18 @@ export default function OrderDetailSheet({ order, open, onOpenChange }: OrderDet
             <div className="border-b border-[#1a2a3f] py-1 mt-2">
               <DetailRow 
                 label="Product :" 
-                value={order.productLabel}
+                value={order.ucAmount > 0 ? `${order.productLabel} ${order.ucAmount}` : order.productLabel}
               />
               <DetailRow 
                 label="Rewards :" 
                 value={order.bonusAmount > 0 ? (
                   <span>
                     <span className="text-white">{order.productLabel} {order.ucAmount}</span>
-                    <span className="text-amber-600">* {order.bonusAmount}</span>
+                    <span className="text-amber-600"> + {order.bonusAmount}</span>
                   </span>
-                ) : "No Rewards"}
+                ) : (order.ucAmount > 0 ? (
+                  <span className="text-white">{order.productLabel} {order.ucAmount}</span>
+                ) : "No Rewards")}
               />
               {/* Account row with format like image: "52210077772 (beverserc)\nGame Name" */}
               <div className="flex py-1.5">
