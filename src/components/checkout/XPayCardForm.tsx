@@ -314,7 +314,16 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
 
     } catch (err: any) {
       console.error('[XPay] Payment error:', err);
-      
+
+      // Mark pending order as cancelled so refund email + admin notification fire
+      try {
+        await supabase.functions.invoke('mark-order-cancelled', {
+          body: { transactionId: orderId, reason: err?.message || 'card_confirm_failed' },
+        });
+      } catch (cancelErr) {
+        console.error('[XPay] mark-order-cancelled failed:', cancelErr);
+      }
+
       const errorMessage = getFriendlyErrorMessage(err.message || '');
       setError(errorMessage);
       onError(errorMessage);
