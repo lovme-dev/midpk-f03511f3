@@ -64,6 +64,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
   const [selectedCountry, setSelectedCountry] = useState(overrideCountry || getSelectedCountry());
   const { isMobile, isTablet, isDesktop } = useResponsive();
   const navigate = useNavigate();
+  const { isAdmin } = useUserRole();
   const { toast } = useToast();
   
   // Get country-specific SEO data
