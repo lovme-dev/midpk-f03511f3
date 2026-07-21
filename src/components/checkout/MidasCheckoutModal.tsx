@@ -1326,7 +1326,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
-                      <span className="text-white font-medium text-[10px] mr-0.5">x20</span>
+                      <span className="text-white font-medium text-[10px] mr-0.5">x{selectedPackage ? getVipCoinCount({ id: String(selectedPackage.id), baseAmount: selectedPackage.baseAmount }) : 20}</span>
                       <VIPCoinIcon className="w-5 h-5 -mt-0.5" />
                     </div>
                     <ChevronRight size={14} className="text-gray-500" />
@@ -1547,7 +1547,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="flex items-center">
-                            <span className="text-white font-medium text-[10px] mr-0.5">x20</span>
+                            <span className="text-white font-medium text-[10px] mr-0.5">x{selectedPackage ? getVipCoinCount({ id: String(selectedPackage.id), baseAmount: selectedPackage.baseAmount }) : 20}</span>
                             <VIPCoinIcon className="w-6 h-6 -mt-0.5" />
                           </div>
                           <ChevronRight size={16} className="text-gray-500" />
@@ -2022,7 +2022,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                              <span className="text-[#8b91a0] text-sm">Midasbuy VIP Points:</span>
                              <div className="flex items-center gap-2">
                                  <VIPCoinIcon className="w-5 h-5" />
-                                 <span className="text-[#3a7bfd] font-bold text-sm">x20</span>
+                                 <span className="text-[#3a7bfd] font-bold text-sm">x{selectedPackage ? getVipCoinCount({ id: String(selectedPackage.id), baseAmount: selectedPackage.baseAmount }) : 20}</span>
                              </div>
                          </div>
                       </div>
@@ -2455,7 +2455,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                      <span className="text-[#8b91a0] text-[14px]">Midasbuy VIP Points:</span>
                      <div className="flex items-center gap-2">
                          <VIPCoinIcon className="w-6 h-6" />
-                         <span className="text-white font-bold text-[14px]">x20</span>
+                         <span className="text-white font-bold text-[14px]">x{selectedPackage ? getVipCoinCount({ id: String(selectedPackage.id), baseAmount: selectedPackage.baseAmount }) : 20}</span>
                      </div>
                   </div>
                 </div>
