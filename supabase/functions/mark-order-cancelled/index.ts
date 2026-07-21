@@ -6,6 +6,24 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+const getCountryFromCurrency = (currencyCode: string): string => {
+  const currencyToCountry: Record<string, string> = {
+    PKR: "PK", USD: "US", EUR: "DE", GBP: "GB", RUB: "RU", INR: "IN",
+    AED: "AE", SAR: "SA", BDT: "BD", MYR: "MY", IDR: "ID", PHP: "PH",
+    THB: "TH", VND: "VN", TRY: "TR", JPY: "JP", CNY: "CN", KRW: "KR",
+    KZT: "KZ", BRL: "BR", MXN: "MX", CAD: "CA", AUD: "AU",
+  };
+  return currencyToCountry[currencyCode?.toUpperCase()] || "US";
+};
+
+const parsePrimaryAmount = (productAmount?: string | null): number => {
+  const first = String(productAmount || "").split("+")[0];
+  const parsed = parseInt(first, 10);
+  return Number.isFinite(parsed) ? parsed : 0;
+};
+
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -39,9 +57,27 @@ serve(async (req) => {
       });
     }
 
+    const moveToRefundReviewAfterDelay = async (orderId: string) => {
+      await delay(30_000);
+      const { error } = await supabase
+        .from("orders")
+        .update({ status: "refund_review", updated_at: new Date().toISOString() })
+        .eq("id", orderId)
+        .eq("status", "cancelled");
+
+      if (error) console.error("refund_review transition failed:", error.message);
+      else console.log("order moved to refund_review:", orderId);
+    };
+
     if (order.status !== "pending") {
+      if (order.status === "cancelled") {
+        const runtime = (globalThis as any).EdgeRuntime;
+        const task = moveToRefundReviewAfterDelay(order.id);
+        if (runtime?.waitUntil) runtime.waitUntil(task);
+      }
+
       return new Response(
-        JSON.stringify({ success: true, alreadyProcessed: true, status: order.status }),
+        JSON.stringify({ success: true, alreadyProcessed: true, status: order.status, order }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
@@ -51,6 +87,8 @@ serve(async (req) => {
       .update({ status: nextStatus, updated_at: new Date().toISOString() })
       .eq("id", order.id);
     if (updateError) throw updateError;
+
+    const updatedOrder = { ...order, status: nextStatus, updated_at: new Date().toISOString() };
 
     // Only for "cancelled" (real charge, refund owed) fire admin push + refund email.
     if (nextStatus === "cancelled") {
@@ -82,9 +120,10 @@ serve(async (req) => {
               productName: order.product_name || "Package",
               productAmount: order.product_amount,
               productType: order.product_type || "pubg_uc",
-              ucAmount: order.product_amount ? parseInt(order.product_amount) : 0,
+              ucAmount: parsePrimaryAmount(order.product_amount),
               price: order.price || 0,
               currencyCode: order.currency_code || "PKR",
+              countryCode: getCountryFromCurrency(order.currency_code || "PKR"),
               playerId: order.player_id || "",
               transactionId: order.transaction_id || "",
               paymentMethod: order.payment_method || "card",
@@ -95,10 +134,14 @@ serve(async (req) => {
       } catch (e) {
         console.error("refund email failed:", e);
       }
+
+      const runtime = (globalThis as any).EdgeRuntime;
+      const task = moveToRefundReviewAfterDelay(order.id);
+      if (runtime?.waitUntil) runtime.waitUntil(task);
     }
 
     return new Response(
-      JSON.stringify({ success: true, status: nextStatus, reason }),
+      JSON.stringify({ success: true, status: nextStatus, reason, order: updatedOrder }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (error) {

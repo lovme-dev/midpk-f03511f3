@@ -75,7 +75,7 @@ export default function OrderDetailSheet({ order, open, onOpenChange }: OrderDet
         return 'Success';
       case 'pending':
       case 'processing':
-        return 'Incomplete';
+        return 'Pending';
       case 'cancelled':
         return 'Cancelled';
       case 'failed':
