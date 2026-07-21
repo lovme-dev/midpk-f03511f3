@@ -367,25 +367,25 @@ export function AIChatbotWidget() {
         if (error.message === 'RATE_LIMIT') {
           // Rate limit - provide helpful response with package info
           const responses = [
-            "سروس میں تھوڑا بہت لوڈ ہے۔ میں آپ کو PUBG UC پیکجز کی معلومات دے سکتا ہوں:\n\n• 3,697 + 976 Bonus UC - PKR 3,600\n• 7,394 + 1,952 Bonus UC - PKR 8,400\n• 11,091 + 3,904 Bonus UC - PKR 12,350\n\nمزید معلومات کے لیے WhatsApp: +1 450 232 2003",
+            "سروس میں تھوڑا بہت لوڈ ہے۔ میں آپ کو PUBG UC پیکجز کی معلومات دے سکتا ہوں:\n\n• 3,697 + 976 Bonus UC - PKR 3,600\n• 7,394 + 1,952 Bonus UC - PKR 8,400\n• 11,091 + 3,904 Bonus UC - PKR 12,350\n\nمزید معلومات کے لیے WhatsApp: +1 450 232 4500",
             
-            "I can help you with our current packages while the system is busy:\n\n• PUBG UC: Starting from PKR 3,600 ($12.86)\n• Free Fire Diamonds: Starting from PKR 3,800 ($13.57)\n• 24/7 Support: WhatsApp +1 450 232 2003\n\nWhat specific package do you need?",
+            "I can help you with our current packages while the system is busy:\n\n• PUBG UC: Starting from PKR 3,600 ($12.86)\n• Free Fire Diamonds: Starting from PKR 3,800 ($13.57)\n• 24/7 Support: WhatsApp +1 450 232 4500\n\nWhat specific package do you need?",
             
-            "سسٹم میں تھوڑا وقفہ ہے۔ یہ پیکجز دستیاب ہیں:\n\n🎮 PUBG UC پیکجز: PKR 3,600 سے شروع\n💎 Free Fire Diamonds: PKR 3,800 سے\n📞 فوری مدد: +1 450 232 2003\n\nکیا چاہیے آپ کو?"
+            "سسٹم میں تھوڑا وقفہ ہے۔ یہ پیکجز دستیاب ہیں:\n\n🎮 PUBG UC پیکجز: PKR 3,600 سے شروع\n💎 Free Fire Diamonds: PKR 3,800 سے\n📞 فوری مدد: +1 450 232 4500\n\nکیا چاہیے آپ کو?"
           ];
           
           // Random response for variety
           fallbackResponse = responses[Math.floor(Math.random() * responses.length)];
           
         } else if (error.message.includes('Invalid response')) {
-          fallbackResponse = "Let me help you directly! What do you need:\n\n🎮 PUBG UC Packages?\n💎 Free Fire Diamonds?\n❓ Support or FAQs?\n\nWhatsApp: +1 450 232 2003 (24/7)";
+          fallbackResponse = "Let me help you directly! What do you need:\n\n🎮 PUBG UC Packages?\n💎 Free Fire Diamonds?\n❓ Support or FAQs?\n\nWhatsApp: +1 450 232 4500 (24/7)";
           
         } else {
-          fallbackResponse = "I'm here to help with MidasBuy services! Available options:\n\n• PUBG UC Packages (PKR 3,600+)\n• Free Fire Diamonds (PKR 3,800+)\n• Instant Support: +1 450 232 2003\n\nWhat can I help you with?";
+          fallbackResponse = "I'm here to help with MidasBuy services! Available options:\n\n• PUBG UC Packages (PKR 3,600+)\n• Free Fire Diamonds (PKR 3,800+)\n• Instant Support: +1 450 232 4500\n\nWhat can I help you with?";
         }
       } else {
         // Generic fallback with useful info
-        fallbackResponse = "مجھے آپ کی مدد کرنے دیں! کیا چاہیے:\n\n🎮 PUBG UC پیکجز\n💎 Free Fire Diamonds  \n📞 WhatsApp Support: +1 450 232 2003\n\nکوئی سوال ہے؟";
+        fallbackResponse = "مجھے آپ کی مدد کرنے دیں! کیا چاہیے:\n\n🎮 PUBG UC پیکجز\n💎 Free Fire Diamonds  \n📞 WhatsApp Support: +1 450 232 4500\n\nکوئی سوال ہے؟";
       }
 
       const botMessage: Message = {
@@ -943,7 +943,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
             <div className="flex gap-2 max-w-3xl mx-auto items-center">
               {/* WhatsApp Button - Professional Design */}
               <a
-                href="https://wa.me/14502322003"
+                href="https://wa.me/14502324500"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 h-11 w-11 rounded-lg flex items-center justify-center transition-all hover:scale-105 active:scale-95"
