@@ -315,13 +315,19 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
     } catch (err: any) {
       console.error('[XPay] Payment error:', err);
 
-      // Mark pending order as cancelled so refund email + admin notification fire
+      // Card actually failed (3DS decline, card decline, network error).
+      // Mark the pending order as `failed` so admin panel doesn't show it as pending forever.
+      // NO refund email + NO admin push here — the customer was never charged.
       try {
         await supabase.functions.invoke('mark-order-cancelled', {
-          body: { transactionId: orderId, reason: err?.message || 'card_confirm_failed' },
+          body: {
+            transactionId: orderId,
+            targetStatus: 'failed',
+            reason: err?.message || 'card_confirm_failed',
+          },
         });
       } catch (cancelErr) {
-        console.error('[XPay] mark-order-cancelled failed:', cancelErr);
+        console.error('[XPay] mark-order-failed invoke failed:', cancelErr);
       }
 
       const errorMessage = getFriendlyErrorMessage(err.message || '');
