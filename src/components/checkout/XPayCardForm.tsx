@@ -206,11 +206,11 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
     setDebugInfo(null);
 
     let paymentIntentId: string | null = null;
+    const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
     try {
       // Step 1: Create payment intent via backend function
       console.log('[XPay] Creating payment intent...');
-      const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       
       console.log('💳 [XPay Card Form] Creating payment with:', {
         productName,
