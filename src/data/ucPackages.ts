@@ -195,6 +195,19 @@ export const ucPackages: UCPackage[] = [
   }
 ];
 
+// Admin-only test package for QA'ing real card payments cheaply.
+// Only injected into the visible list when the current user has the admin role.
+export const adminTestPackage: UCPackage = {
+  id: "admin-test-100uc",
+  baseAmount: 100,
+  bonusAmount: 0,
+  discount: "-98%",
+  price: 10,
+  originalPrice: 510,
+  bonusPercent: "0%",
+  image: "/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png",
+};
+
 export const getPackageById = (id: string): UCPackage | undefined => {
   return ucPackages.find(pkg => pkg.id === id);
 };
