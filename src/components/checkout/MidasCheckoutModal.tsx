@@ -23,7 +23,7 @@ import {
   CardPaymentIcons
 } from '@/components/checkout/CheckoutIcons';
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { UCPackage, ucPackages } from "@/data/ucPackages";
+import { UCPackage, ucPackages, getVipCoinCount } from "@/data/ucPackages";
 import { diamondPackages } from "@/data/diamondPackages";
 import { robuxPackages } from "@/data/robuxPackages";
 import { toast } from "@/hooks/use-toast";
