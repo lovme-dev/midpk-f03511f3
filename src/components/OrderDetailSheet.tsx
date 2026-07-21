@@ -6,7 +6,7 @@ import FeedbackRequestSheet from "./FeedbackRequestSheet";
 import FeedbackQuestionsSheet from "./FeedbackQuestionsSheet";
 import { formatOrderPrice } from "@/utils/formatOrderPrice";
 import { getVipCoinCount } from "@/data/ucPackages";
-import VIPCoinIcon from "@/components/icons/VIPCoinIcon";
+import { VIPCoinIcon } from "@/components/checkout/CheckoutIcons";
 
 interface OrderItem {
   id: string;
