@@ -209,6 +209,7 @@ export const adminTestPackage: UCPackage = {
 };
 
 export const getPackageById = (id: string): UCPackage | undefined => {
+  if (id === adminTestPackage.id) return adminTestPackage;
   return ucPackages.find(pkg => pkg.id === id);
 };
 
