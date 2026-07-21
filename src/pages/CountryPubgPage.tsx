@@ -17,17 +17,17 @@ interface CountryPubgPageProps {
 const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
   const { countryCode } = useParams<{ countryCode: string }>();
   const { t } = useTranslation();
+  useCurrencyFromURL();
+
   const normalizedCountryCode = (countryCode || "us").toLowerCase();
   const upperCountryCode = normalizedCountryCode.toUpperCase();
 
   if (!COUNTRY_DATA[upperCountryCode]) {
     return <Navigate to="/midasbuy/us/buy/pubgm" replace />;
   }
-  
+
   const seoConfig = getGameSEOConfig(upperCountryCode, 'pubgm');
   const countryData = getCountryData(upperCountryCode);
-  
-  useCurrencyFromURL();
   
   const baseUrl = "https://www.midasbuy.com.pk";
   const canonicalUrl = `/midasbuy/${normalizedCountryCode}/buy/pubgm`;
