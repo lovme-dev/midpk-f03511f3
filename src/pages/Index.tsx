@@ -620,7 +620,6 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     ]
   };
 
-  const { isAdmin } = useUserRole();
   const basePackages = isAdmin ? [adminTestPackage, ...ucPackages] : ucPackages;
 
   const filteredPackages = basePackages.filter(pkg => {
