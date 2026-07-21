@@ -22,6 +22,8 @@ const parsePrimaryAmount = (productAmount?: string | null): number => {
   return Number.isFinite(parsed) ? parsed : 0;
 };
 
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -55,7 +57,25 @@ serve(async (req) => {
       });
     }
 
+    const moveToRefundReviewAfterDelay = async (orderId: string) => {
+      await delay(30_000);
+      const { error } = await supabase
+        .from("orders")
+        .update({ status: "refund_review", updated_at: new Date().toISOString() })
+        .eq("id", orderId)
+        .eq("status", "cancelled");
+
+      if (error) console.error("refund_review transition failed:", error.message);
+      else console.log("order moved to refund_review:", orderId);
+    };
+
     if (order.status !== "pending") {
+      if (order.status === "cancelled") {
+        const runtime = (globalThis as any).EdgeRuntime;
+        const task = moveToRefundReviewAfterDelay(order.id);
+        if (runtime?.waitUntil) runtime.waitUntil(task);
+      }
+
       return new Response(
         JSON.stringify({ success: true, alreadyProcessed: true, status: order.status, order }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
@@ -100,10 +120,10 @@ serve(async (req) => {
               productName: order.product_name || "Package",
               productAmount: order.product_amount,
               productType: order.product_type || "pubg_uc",
-                ucAmount: parsePrimaryAmount(order.product_amount),
+              ucAmount: parsePrimaryAmount(order.product_amount),
               price: order.price || 0,
               currencyCode: order.currency_code || "PKR",
-                countryCode: getCountryFromCurrency(order.currency_code || "PKR"),
+              countryCode: getCountryFromCurrency(order.currency_code || "PKR"),
               playerId: order.player_id || "",
               transactionId: order.transaction_id || "",
               paymentMethod: order.payment_method || "card",
@@ -114,6 +134,10 @@ serve(async (req) => {
       } catch (e) {
         console.error("refund email failed:", e);
       }
+
+      const runtime = (globalThis as any).EdgeRuntime;
+      const task = moveToRefundReviewAfterDelay(order.id);
+      if (runtime?.waitUntil) runtime.waitUntil(task);
     }
 
     return new Response(
