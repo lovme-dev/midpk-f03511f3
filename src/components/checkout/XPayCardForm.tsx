@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { ttqPurchase, ttqIdentify } from "@/utils/tiktokTracking";
+import { generateOrderId } from "@/utils/generateOrderId";
 
 export interface XPayCardFormRef {
   submit: () => Promise<void>;
@@ -206,7 +207,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
     setDebugInfo(null);
 
     let paymentIntentId: string | null = null;
-    const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    const orderId = generateOrderId(18);
 
     try {
       // Step 1: Create payment intent via backend function
@@ -301,7 +302,8 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       // Users will always use new card flow
       
       onSuccess({
-        orderId: paymentIntentId || orderId,
+        orderId: data.orderId || orderId,
+        paymentIntentId,
         amount,
         currency,
         paymentMethod: "Credit Card",

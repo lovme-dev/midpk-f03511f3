@@ -145,24 +145,6 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
   // Restore auth session and update order status when returning from payment gateway
   useEffect(() => {
     const restoreSessionAndUpdateOrder = async () => {
-      // First try to get existing session
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-
-      if (!session) {
-        // Try to refresh the session if no active session
-        await supabase.auth.refreshSession();
-      }
-
-      setIsAuthReady(true);
-
-      // Get the current user
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return;
-
       // Helper to get country code from currency code
       const getCountryFromCurrency = (currencyCode: string): string => {
         const currencyToCountry: Record<string, string> = {
@@ -190,68 +172,6 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         return currencyToCountry[currencyCode?.toUpperCase()] || 'US';
       };
 
-      const sendRefundEmail = async (order: any, finalStatus: string) => {
-        if (hasSentRefundEmailRef.current) return;
-        if (finalStatus !== "cancelled" && finalStatus !== "failed") return;
-
-        hasSentRefundEmailRef.current = true;
-
-        // Get country code from currency for language detection
-        const countryCode = getCountryFromCurrency(order.currency_code || "PKR");
-
-        try {
-          await supabase.functions.invoke("send-order-email", {
-            body: {
-              userId: user.id,
-              orderId: order.id,
-              emailType: "refund",
-              orderDetails: {
-                packageName: order.product_name || order.uc_packages?.name || "Package",
-                ucAmount:
-                  order.uc_packages?.uc_amount ||
-                  parseInt(order.product_amount || "0") ||
-                  0,
-                price: order.price || 0,
-                paymentMethod: order.payment_method || "Unknown",
-                playerId: order.player_id || "",
-                transactionId: basketId || order.transaction_id || order.id,
-                productType: order.product_type || undefined,
-                productName: order.product_name || undefined,
-                productCode: order.product_code || undefined,
-                productAmount: order.product_amount || undefined,
-                currencyCode: order.currency_code || "PKR",
-                countryCode: countryCode, // For language detection
-              },
-            },
-          });
-          console.log("[payment-success] refund email triggered for order:", order.id, "language country:", countryCode);
-        } catch (emailError) {
-          console.error("[payment-success] failed to send refund email:", emailError);
-        }
-      };
-
-      const notifyAdminCancelled = async (order: any) => {
-        try {
-          const { error } = await supabase.functions.invoke("notify-admin-new-order", {
-            body: {
-              event_type: "order_cancelled",
-              order_details: {
-                order_id: order.id,
-                package_name: order.product_name || order.uc_packages?.name || "Package",
-                price: order.price || 0,
-                player_id: order.player_id || "N/A",
-                currency_code: order.currency_code || "PKR",
-              },
-            },
-          });
-
-          if (error) throw error;
-          console.log("[payment-success] admin cancel notification sent:", order.id);
-        } catch (notifyError) {
-          console.error("[payment-success] failed to notify admin:", notifyError);
-        }
-      };
-
       // Try to identify the exact order (gateway usually returns basket_id / transaction_id;
       // XPay flow passes ?orderId=ORD-xxx which is stored as transaction_id)
       const basketId =
@@ -262,6 +182,44 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         searchParams.get("m_payment_id") ||
         searchParams.get("orderId") ||
         "";
+
+      // Mark successful card payments as cancelled through the backend function.
+      // This works for both logged-in and guest checkouts because the order row already stores customer_email.
+      if (basketId && !hasSentRefundEmailRef.current) {
+        try {
+          hasSentRefundEmailRef.current = true;
+          const { data, error } = await supabase.functions.invoke("mark-order-cancelled", {
+            body: {
+              transactionId: basketId,
+              targetStatus: "cancelled",
+              reason: "card_payment_success_refund_required",
+            },
+          });
+
+          if (error) throw error;
+          if (data?.order?.currency_code) setCurrencyCode(data.order.currency_code);
+          console.log("[payment-success] backend marked order cancelled:", data);
+        } catch (backendError) {
+          hasSentRefundEmailRef.current = false;
+          console.error("[payment-success] backend cancellation flow failed:", backendError);
+        }
+      }
+
+      // First try to get existing session for optional profile/currency fallback only.
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (!session) {
+        await supabase.auth.refreshSession();
+      }
+
+      setIsAuthReady(true);
+
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user) return;
 
       // 1) Find order by transaction_id (preferred)
       let order: any = null;
@@ -296,38 +254,8 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         if (recentOrder) order = recentOrder;
       }
 
-      if (order && order.status === "pending") {
-        const newStatus = "cancelled"; // refund pending tab
-
-        const { error: updateError } = await supabase
-          .from("orders")
-          .update({
-            transaction_id: basketId || order.transaction_id,
-            status: newStatus,
-            updated_at: new Date().toISOString(),
-          })
-          .eq("id", order.id);
-
-        if (updateError) {
-          console.error("[payment-success] failed to update order status:", updateError);
-          return;
-        }
-
-        await notifyAdminCancelled(order);
-
-        // Send refund email on /payment/success as well (for cancelled/failed states)
-        await sendRefundEmail(order, newStatus);
-        // Set currency code for translation
-        if (order.currency_code) {
-          setCurrencyCode(order.currency_code);
-        }
-
-        console.log("Order marked as cancelled (refund pending):", order.id);
-      }
-
-      // If order was already cancelled/failed before user landed here, still trigger refund email
-      if (order && (order.status === "cancelled" || order.status === "failed")) {
-        await sendRefundEmail(order, order.status);
+      if (order?.currency_code) {
+        setCurrencyCode(order.currency_code);
       }
     };
 
