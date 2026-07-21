@@ -8,7 +8,7 @@ interface CustomerServiceWidgetProps {
 
 export function CustomerServiceWidget({ whatsappNumber }: CustomerServiceWidgetProps) {
   const [showMessage, setShowMessage] = useState(false);
-  const [activeWhatsAppNumber, setActiveWhatsAppNumber] = useState(whatsappNumber || "+14502322003");
+  const [activeWhatsAppNumber, setActiveWhatsAppNumber] = useState(whatsappNumber || "+14502324500");
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   const messages = [
@@ -24,7 +24,7 @@ export function CustomerServiceWidget({ whatsappNumber }: CustomerServiceWidgetP
   useEffect(() => {
     // For now, use a default WhatsApp number
     // This can be configured through admin panel later
-    setActiveWhatsAppNumber('+14502322003');
+    setActiveWhatsAppNumber('+14502324500');
     
     if (!whatsappNumber) {
       // Future: fetch WhatsApp number from admin settings
