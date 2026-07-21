@@ -213,6 +213,26 @@ export const getPackageById = (id: string): UCPackage | undefined => {
   return ucPackages.find(pkg => pkg.id === id);
 };
 
+// VIP Coin "Extra for you" reward count. Scales with package size:
+// smallest package = x20, and each larger tier adds +10 (x30, x40, ..., x180).
+// Admin test package always returns x20.
+export const getVipCoinCount = (input: { id?: string; baseAmount?: number; ucAmount?: number } | string | number): number => {
+  let idx = -1;
+  if (typeof input === 'string') {
+    if (input === adminTestPackage.id) return 20;
+    idx = ucPackages.findIndex(p => p.id === input);
+  } else if (typeof input === 'number') {
+    idx = ucPackages.findIndex(p => p.baseAmount === input);
+  } else if (input && typeof input === 'object') {
+    if (input.id === adminTestPackage.id) return 20;
+    if (input.id) idx = ucPackages.findIndex(p => p.id === input.id);
+    if (idx < 0 && input.baseAmount != null) idx = ucPackages.findIndex(p => p.baseAmount === input.baseAmount);
+    if (idx < 0 && input.ucAmount != null) idx = ucPackages.findIndex(p => p.baseAmount === input.ucAmount);
+  }
+  if (idx < 0) return 20;
+  return 20 + idx * 10;
+};
+
 // Get currently selected country from localStorage
 export const getSelectedCountry = (): { code: string; currency: string } => {
   try {
