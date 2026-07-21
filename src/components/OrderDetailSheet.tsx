@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import FeedbackRequestSheet from "./FeedbackRequestSheet";
 import FeedbackQuestionsSheet from "./FeedbackQuestionsSheet";
 import { formatOrderPrice } from "@/utils/formatOrderPrice";
+import { getVipCoinCount } from "@/data/ucPackages";
+import { VIPCoinIcon } from "@/components/checkout/CheckoutIcons";
 
 interface OrderItem {
   id: string;
@@ -218,15 +220,14 @@ export default function OrderDetailSheet({ order, open, onOpenChange }: OrderDet
               />
               <DetailRow 
                 label="Rewards :" 
-                value={order.bonusAmount > 0 ? (
-                  <span>
-                    <span className="text-white">{order.productLabel} {order.ucAmount}</span>
-                    <span className="text-amber-600"> + {order.bonusAmount}</span>
+                value={
+                  <span className="inline-flex items-center gap-1">
+                    <span className="text-white">x{getVipCoinCount({ ucAmount: order.ucAmount })}</span>
+                    <VIPCoinIcon className="w-4 h-4" />
                   </span>
-                ) : (order.ucAmount > 0 ? (
-                  <span className="text-white">{order.productLabel} {order.ucAmount}</span>
-                ) : "No Rewards")}
+                }
               />
+
               {/* Account row with format like image: "52210077772 (beverserc)\nGame Name" */}
               <div className="flex py-1.5">
                 <span className="text-[#8b9cb8] text-[13px] w-[120px] flex-shrink-0">Account:</span>
