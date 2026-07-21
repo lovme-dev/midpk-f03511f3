@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import bgmiLogo from "@/assets/bgmi-logo.jpeg";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { ucPackages, getSelectedCountry } from "@/data/ucPackages";
+import { ucPackages, adminTestPackage, getSelectedCountry } from "@/data/ucPackages";
+import { useUserRole } from "@/hooks/useUserRole";
 import { useMobile, useResponsive } from "@/hooks/use-mobile";
 import InPageNavigationTabs, { TabType } from "@/components/InPageNavigationTabs";
 import PrivacyPolicyModal from "@/components/PrivacyPolicyModal";
@@ -619,7 +620,10 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     ]
   };
 
-  const filteredPackages = ucPackages.filter(pkg => {
+  const { isAdmin } = useUserRole();
+  const basePackages = isAdmin ? [adminTestPackage, ...ucPackages] : ucPackages;
+
+  const filteredPackages = basePackages.filter(pkg => {
     // UC Range filtering
     if (ucRangeFilter !== "all") {
       if (ucRangeFilter === "small" && (pkg.baseAmount < 3896 || pkg.baseAmount > 600)) return false;

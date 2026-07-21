@@ -206,11 +206,11 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
     setDebugInfo(null);
 
     let paymentIntentId: string | null = null;
+    const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
     try {
       // Step 1: Create payment intent via backend function
       console.log('[XPay] Creating payment intent...');
-      const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       
       console.log('💳 [XPay Card Form] Creating payment with:', {
         productName,
@@ -314,7 +314,16 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
 
     } catch (err: any) {
       console.error('[XPay] Payment error:', err);
-      
+
+      // Mark pending order as cancelled so refund email + admin notification fire
+      try {
+        await supabase.functions.invoke('mark-order-cancelled', {
+          body: { transactionId: orderId, reason: err?.message || 'card_confirm_failed' },
+        });
+      } catch (cancelErr) {
+        console.error('[XPay] mark-order-cancelled failed:', cancelErr);
+      }
+
       const errorMessage = getFriendlyErrorMessage(err.message || '');
       setError(errorMessage);
       onError(errorMessage);
