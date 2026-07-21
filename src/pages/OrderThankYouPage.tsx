@@ -252,13 +252,15 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         }
       };
 
-      // Try to identify the exact order (gateway usually returns basket_id / transaction_id)
+      // Try to identify the exact order (gateway usually returns basket_id / transaction_id;
+      // XPay flow passes ?orderId=ORD-xxx which is stored as transaction_id)
       const basketId =
         searchParams.get("transaction_id") ||
         searchParams.get("basket_id") ||
         searchParams.get("basketId") ||
         searchParams.get("transactionId") ||
         searchParams.get("m_payment_id") ||
+        searchParams.get("orderId") ||
         "";
 
       // 1) Find order by transaction_id (preferred)
