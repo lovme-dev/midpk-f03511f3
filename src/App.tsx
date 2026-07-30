@@ -39,6 +39,8 @@ const FreeFire = lazy(() => import("@/pages/FreeFire"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const PurchaseHistoryPage = lazy(() => import("./pages/PurchaseHistoryPage"));
 const PubgAccountsPage = lazy(() => import("./pages/PubgAccountsPage"));
+const CountriesDirectoryPage = lazy(() => import("./pages/CountriesDirectoryPage"));
+
 const PubgAccountCheckoutPage = lazy(() => import("./pages/PubgAccountCheckoutPage"));
 const GamingShopPage = lazy(() => import("./pages/GamingShopPage"));
 const HonorOfKingsPage = lazy(() => import("./pages/HonorOfKingsPage"));
