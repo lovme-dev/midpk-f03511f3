@@ -598,7 +598,10 @@ const CreditCardPaymentPage: React.FC = () => {
                   <div className="space-y-4 animate-in slide-in-from-top-1 duration-300">
                     {/* XPay Card Form - Using XPayProvider pattern */}
                     {/* Payment is always processed in PKR for proper settlement */}
-                    <XPayProvider email={orderInfo.email} customerName="Customer">
+                    <XPayProvider
+                      email={orderInfo.email}
+                      customerName={orderInfo.customerName || orderInfo.email?.split('@')[0] || 'Customer'}
+                    >
                       <XPayCardForm
                         ref={xpayFormRef}
                         amount={orderInfo.pkrAmount || convertToPKR(orderInfo.amount, orderInfo.currency || 'PKR')}
@@ -606,7 +609,9 @@ const CreditCardPaymentPage: React.FC = () => {
                         originalAmount={parseFloat(orderInfo.amount)}
                         originalCurrency={orderInfo.currency || 'PKR'}
                         customerEmail={orderInfo.email}
+                        customerName={orderInfo.customerName || orderInfo.email?.split('@')[0] || 'Customer'}
                         customerPhone={(orderInfo as any).phone || ''}
+
                         productName={orderInfo.productName}
                         productType={orderInfo.productType}
                         productAmount={orderInfo.productAmount}

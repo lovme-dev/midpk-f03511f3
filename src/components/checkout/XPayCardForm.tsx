@@ -19,6 +19,8 @@ interface XPayCardFormProps {
   originalAmount?: number;      // User's original amount in their currency
   originalCurrency?: string;    // User's original currency (USD, RUB, EUR etc.)
   customerEmail: string;
+  customerName?: string;
+
   customerPhone: string;
   productName?: string;
   productType?: string;         // Product type for game identification (roblox_robux, freefire_diamonds, etc.)
