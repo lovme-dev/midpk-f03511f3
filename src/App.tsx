@@ -200,6 +200,8 @@ function AppRoutes() {
       <Route path="/car-purchase" element={<CarPurchaseRedirect />} />
       <Route path="/purchase-history" element={<PurchaseHistoryPage onLogout={logout} />} />
       <Route path="/pubg-accounts" element={<PubgAccountsPage />} />
+      <Route path="/countries" element={<CountriesDirectoryPage />} />
+
       <Route path="/pubg-accounts/checkout/:id" element={<PubgAccountCheckoutPage onLogout={logout} />} />
       <Route path="/gaming-shop" element={<Navigate to="/" replace />} />
       {/* Redirect old /honor-of-kings to country-specific URL */}
