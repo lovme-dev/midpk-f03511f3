@@ -6,6 +6,8 @@ import { componentTagger } from "lovable-tagger";
 import { VitePWA } from "vite-plugin-pwa";
 import type { Plugin } from "vite";
 import { COUNTRY_DATA, getGameSEOConfig } from "./src/utils/gameSeoConfigs";
+import { buildCountryPageContent } from "./src/utils/prerenderSeoContent";
+import type { PrerenderContent, GameSlug } from "./src/utils/prerenderSeoContent";
 
 // Plugin to make CSS non-render-blocking
 const asyncCssPlugin = (): Plugin => ({
