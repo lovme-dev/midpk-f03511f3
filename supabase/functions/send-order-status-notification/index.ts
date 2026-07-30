@@ -1,4 +1,5 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { getDisplayOrderId } from "../_shared/orderIdentity.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -113,7 +114,7 @@ async function encryptPayload(
 // ============ Status message helpers ============
 function getStatusNotificationContent(status: string, orderDetails: any): { title: string; body: string; icon: string } {
   const packageName = orderDetails.packageName || 'Your order';
-  const orderId = orderDetails.orderId?.slice(0, 8) || '';
+  const orderId = orderDetails.orderId ? getDisplayOrderId(orderDetails.orderId, (orderDetails as any).transactionId) : '';
   
   switch (status) {
     case 'completed':

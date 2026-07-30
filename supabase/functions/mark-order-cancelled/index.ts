@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { getDisplayOrderId } from "../_shared/orderIdentity.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
@@ -125,7 +126,7 @@ serve(async (req) => {
               currencyCode: order.currency_code || "PKR",
               countryCode: getCountryFromCurrency(order.currency_code || "PKR"),
               playerId: order.player_id || "",
-              transactionId: order.transaction_id || "",
+              transactionId: getDisplayOrderId(order.id, order.transaction_id),
               paymentMethod: order.payment_method || "card",
               customerEmail: order.customer_email,
             },

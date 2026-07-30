@@ -18,6 +18,7 @@ import { diamondPackages } from "@/data/diamondPackages";
 import { getCarPackageById } from "@/data/carPackages";
 import { getRobuxPackageById } from "@/data/robuxPackages";
 import { valorantPackages } from "@/data/valorantPackages";
+import { getDisplayOrderId } from "@/utils/displayOrderId";
 
 // Product logos (fallbacks) for different order types
 const FALLBACK_UC_LOGO = '/lovable-uploads/761111e0-3658-46db-b3d2-11cf3617f3d1.png';
@@ -276,7 +277,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
         currencyCode: (order as any).currency_code || 'PKR',
         date: new Date(order.created_at || Date.now()),
         status: order.status as OrderItem['status'],
-        transactionId: order.transaction_id || '',
+        transactionId: getDisplayOrderId(order),
         playerId: order.player_id || 'N/A',
         productType: order.product_type,
         packageId: order.package_id,
@@ -359,7 +360,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
         currencyCode: order.currency_code || 'PKR',
         date: new Date(order.created_at || Date.now()),
         status: order.status as OrderItem['status'],
-        transactionId: order.transaction_id || `TXN${order.id.slice(0, 8)}`,
+        transactionId: getDisplayOrderId(order),
         playerId: order.player_id || 'N/A',
         productType: order.product_type,
         packageId: order.package_id,
@@ -378,7 +379,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
         currencyCode: order.currency_code || 'PKR',
         date: new Date(order.created_at || Date.now()),
         status: order.status === 'refunded' ? 'completed' : getRefundStatus(new Date(order.created_at || Date.now())),
-        transactionId: order.transaction_id || `TXN${order.id.slice(0, 8)}`,
+        transactionId: getDisplayOrderId(order),
         productType: order.product_type,
         packageId: order.package_id,
       };
@@ -478,7 +479,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
               currencyCode: newOrder.currency_code || 'PKR',
               date: new Date(newOrder.created_at || Date.now()),
               status: newOrder.status as OrderItem['status'],
-              transactionId: newOrder.transaction_id || `TXN${newOrder.id.slice(0, 8)}`,
+              transactionId: getDisplayOrderId(newOrder),
               playerId: newOrder.player_id || 'N/A',
               productType: newOrder.product_type,
               packageId: newOrder.package_id,
@@ -511,7 +512,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                   currencyCode: updatedOrder.currency_code || 'PKR',
                   date: new Date(updatedOrder.created_at || Date.now()),
                   status: updatedOrder.status === 'refunded' ? 'completed' : getRefundStatus(new Date(updatedOrder.created_at || Date.now())),
-                  transactionId: updatedOrder.transaction_id || `TXN${updatedOrder.id.slice(0, 8)}`,
+                  transactionId: getDisplayOrderId(updatedOrder),
                   productType: updatedOrder.product_type,
                   packageId: updatedOrder.package_id,
                 };

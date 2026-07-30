@@ -35,6 +35,7 @@ import {
   DialogDescription
 } from "@/components/ui/dialog";
 import { toast } from "@/components/ui/use-toast";
+import { getDisplayOrderId } from "@/utils/displayOrderId";
 
 interface PurchaseHistoryProps {
   onLogout: () => void;
@@ -135,7 +136,7 @@ const PurchaseHistoryPage = ({ onLogout }: PurchaseHistoryProps) => {
           const currencySymbol = isPakistani ? 'Rs.' : '₹';
           
           return {
-            id: order.transaction_id || order.id,
+            id: getDisplayOrderId(order),
             date: order.created_at,
             product: packageName,
             price: `${currencySymbol}${order.price}`,

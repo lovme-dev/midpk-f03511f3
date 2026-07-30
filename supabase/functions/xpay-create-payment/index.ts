@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { createHmac } from "https://deno.land/std@0.177.0/node/crypto.ts";
+import { generateDummyEmail, generateDummyPhone } from "../_shared/orderIdentity.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -84,8 +85,12 @@ serve(async (req) => {
     // XPay API base URL (LIVE production)
     const XPAY_API_BASE = "https://xstak-pay.xstak.com";
 
-    // Use a default phone if not provided (XPay requires non-empty phone)
-    const customerPhone = body.customerPhone && body.customerPhone.length >= 10 ? body.customerPhone : "03001234567";
+    // Gateway identity is intentionally anonymised: XPay never receives the
+    // customer's real phone/email. A fresh random (but valid-looking) pair is
+    // generated per order. The REAL email/name is stored in our own DB only.
+    const gatewayPhone = generateDummyPhone();
+    const gatewayEmail = generateDummyEmail();
+
 
     // XPay/Meezan Bank ONLY supports PKR for card processing
     // Convert all currencies to PKR before sending to XPay
@@ -151,9 +156,9 @@ serve(async (req) => {
       amount: amountInPKR,
       currency: "PKR", // Always PKR for XPay/Meezan Bank
       customer: {
-        email: body.customerEmail,
+        email: gatewayEmail,
         name: body.customerName || "Customer",
-        phone: customerPhone,
+        phone: gatewayPhone,
       },
       metadata: {
         product_name: body.productName,
