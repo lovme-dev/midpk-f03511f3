@@ -16,6 +16,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Country directory hub (crawl path into all country stores) -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/countries</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/us</loc>
     <changefreq>daily</changefreq>

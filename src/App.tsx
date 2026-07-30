@@ -39,6 +39,8 @@ const FreeFire = lazy(() => import("@/pages/FreeFire"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const PurchaseHistoryPage = lazy(() => import("./pages/PurchaseHistoryPage"));
 const PubgAccountsPage = lazy(() => import("./pages/PubgAccountsPage"));
+const CountriesDirectoryPage = lazy(() => import("./pages/CountriesDirectoryPage"));
+
 const PubgAccountCheckoutPage = lazy(() => import("./pages/PubgAccountCheckoutPage"));
 const GamingShopPage = lazy(() => import("./pages/GamingShopPage"));
 const HonorOfKingsPage = lazy(() => import("./pages/HonorOfKingsPage"));
@@ -200,6 +202,8 @@ function AppRoutes() {
       <Route path="/car-purchase" element={<CarPurchaseRedirect />} />
       <Route path="/purchase-history" element={<PurchaseHistoryPage onLogout={logout} />} />
       <Route path="/pubg-accounts" element={<PubgAccountsPage />} />
+      <Route path="/countries" element={<CountriesDirectoryPage />} />
+
       <Route path="/pubg-accounts/checkout/:id" element={<PubgAccountCheckoutPage onLogout={logout} />} />
       <Route path="/gaming-shop" element={<Navigate to="/" replace />} />
       {/* Redirect old /honor-of-kings to country-specific URL */}

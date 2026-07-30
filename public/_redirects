@@ -8,6 +8,7 @@ https://midasbuy.com.pk/* https://www.midasbuy.com.pk/:splat 301!
 /midasbuy/:cc              /midasbuy/:cc/index.html             200
 
 # Static info pages (prerendered)
+/countries                 /countries/index.html                200
 /about-midasbuy            /about-midasbuy/index.html           200
 /cookie-policy             /cookie-policy/index.html            200
 /customer-reviews          /customer-reviews/index.html         200
@@ -15,6 +16,7 @@ https://midasbuy.com.pk/* https://www.midasbuy.com.pk/:splat 301!
 /privacy-policy            /privacy-policy/index.html           200
 /security                  /security/index.html                 200
 /pubg-accounts             /pubg-accounts/index.html            200
+
 
 # SPA fallback - must be last
 /*    /index.html   200
