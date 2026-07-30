@@ -13,6 +13,24 @@ interface SEOHelmetProps {
   noIndex?: boolean;
 }
 
+// Google truncates titles beyond ~60 characters. Drop middle "|" segments
+// (keeping the first hook and the brand) instead of shipping a cut-off title.
+const normalizeTitle = (raw: string): string => {
+  const title = raw.trim();
+  if (title.length <= 60) return title;
+
+  const parts = title.split("|").map((p) => p.trim()).filter(Boolean);
+  while (parts.length > 2) {
+    parts.splice(parts.length - 2, 1);
+    const candidate = parts.join(" | ");
+    if (candidate.length <= 60) return candidate;
+  }
+
+  const twoPart = parts.join(" | ");
+  if (twoPart.length <= 60) return twoPart;
+  return `${twoPart.slice(0, 57).trimEnd()}...`;
+};
+
 const SEOHelmet = ({ 
   title, 
   description, 
