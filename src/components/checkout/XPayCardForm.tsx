@@ -108,6 +108,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
   originalAmount,
   originalCurrency,
   customerEmail,
+  customerName,
   customerPhone,
   productName = "UC Package",
   productType = "uc_package",
@@ -232,7 +233,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
           originalCurrency: originalCurrency || currency,
           orderId,
           customerEmail,
-          customerName: 'Customer',
+          customerName: customerName || customerEmail?.split('@')[0] || 'Customer',
           customerPhone,
           productName,
           productType,
@@ -265,7 +266,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       // Step 2: Confirm payment with XPay SDK (handles 3DS)
       console.log('[XPay] Confirming payment with SDK...');
       const customer = { 
-        name: 'Customer',
+        name: customerName || customerEmail?.split('@')[0] || 'Customer',
         email: customerEmail,
         phone: phoneNumber
       };
