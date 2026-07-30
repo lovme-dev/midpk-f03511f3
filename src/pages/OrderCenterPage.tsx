@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import pubgMobileLogo from "@/assets/pubg-mobile-logo.png";
 import bgmiLogo from "@/assets/bgmi-logo.jpeg";
 import robloxLogo from "@/assets/roblox-logo.jpeg";
+import { getDisplayOrderId } from "@/utils/displayOrderId";
 
 // Game logos from public folder (matching ShopTabContent)
 const FREEFIRE_LOGO = '/lovable-uploads/624ac7f0-c182-4f1e-b919-938374f4af9d.png';
@@ -281,7 +282,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         currencyCode: order.currency_code || 'PKR',
         date: new Date(order.created_at || Date.now()),
         status: order.status as OrderItem['status'],
-        transactionId: order.transaction_id || `TXN${order.id.slice(0, 8)}`,
+        transactionId: getDisplayOrderId(order),
         playerId: playerData.id,
         productType: order.product_type,
         paymentMethod: order.payment_method || 'redeem',
@@ -517,7 +518,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         currencyCode: orderData.currency_code || 'PKR',
         date: new Date(orderData.created_at || Date.now()),
         status: orderData.status as OrderItem['status'],
-        transactionId: orderData.transaction_id || `TXN${orderData.id.slice(0, 8)}`,
+        transactionId: getDisplayOrderId(orderData),
         playerId: playerData.id,
         productType: orderData.product_type,
         paymentMethod: orderData.payment_method || 'redeem',
@@ -777,7 +778,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between py-2 border-b border-[#1a2a3f]">
                           <span className="text-[#8b9cb8]">Order ID</span>
-                          <span className="text-white font-mono text-xs">{searchResult.id.slice(0, 8)}...</span>
+                          <span className="text-white font-mono text-xs">{searchResult.transactionId}</span>
                         </div>
                         <div className="flex justify-between py-2 border-b border-[#1a2a3f]">
                           <span className="text-[#8b9cb8]">Player ID</span>
