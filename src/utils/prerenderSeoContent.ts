@@ -372,7 +372,7 @@ export function buildCountryPageContent(
   // Internal links: neighbours + sibling games. This is what gives Google crawl
   // paths into the long tail instead of leaving URLs "discovered, not crawled".
   const lower = cc.toLowerCase();
-  const siblings: GameSlug[] = ["pubgm", "freefire", "roblox", "valorant", "car"];
+  const siblings: Array<Exclude<GameSlug, "home">> = ["pubgm", "freefire", "roblox", "valorant", "car"];
   const relatedLinks: Array<{ href: string; label: string }> = [];
 
   for (const s of siblings) {
