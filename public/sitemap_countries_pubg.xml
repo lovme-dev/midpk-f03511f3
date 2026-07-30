@@ -1,2019 +1,1113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- ============================================== -->
-  <!-- PUBG MOBILE UC - 180+ COUNTRY-SPECIFIC PAGES -->
-  <!-- Each URL has unique Title, Description & Keywords -->
-  <!-- Format: PUBG Mobile UC {Country} | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <!-- ============================================== -->
-
-  <!-- ========== SOUTH ASIA ========== -->
-  
-  <!-- PAKISTAN | Title: PUBG Mobile UC Pakistan | 60% discount & VIP 30% extra UC | Midasbuy -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/pk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ur-pk" href="https://www.midasbuy.com.pk/midasbuy/pk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.98</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- INDIA | Title: PUBG Mobile UC India | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/in/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="hi-in" href="https://www.midasbuy.com.pk/midasbuy/in/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.98</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BANGLADESH | Title: PUBG Mobile UC Bangladesh | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/bd/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="bn-bd" href="https://www.midasbuy.com.pk/midasbuy/bd/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- NEPAL | Title: PUBG Mobile UC Nepal | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/np/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ne-np" href="https://www.midasbuy.com.pk/midasbuy/np/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SRI LANKA | Title: PUBG Mobile UC Sri Lanka | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/lk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="si-lk" href="https://www.midasbuy.com.pk/midasbuy/lk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BHUTAN | Title: PUBG Mobile UC Bhutan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="dz-bt" href="https://www.midasbuy.com.pk/midasbuy/bt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- MALDIVES | Title: PUBG Mobile UC Maldives | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mv/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="dv-mv" href="https://www.midasbuy.com.pk/midasbuy/mv/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- AFGHANISTAN | Title: PUBG Mobile UC Afghanistan | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/af/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ps-af" href="https://www.midasbuy.com.pk/midasbuy/af/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== NORTH AMERICA ========== -->
-  
-  <!-- UNITED STATES | Title: PUBG Mobile UC USA | 60% discount & VIP 30% extra UC | Midasbuy -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bt/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mv/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CANADA | Title: PUBG Mobile UC Canada | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/ca/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.midasbuy.com.pk/midasbuy/ca/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MEXICO | Title: PUBG Mobile UC Mexico | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/mx/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://www.midasbuy.com.pk/midasbuy/mx/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== CENTRAL AMERICA ========== -->
-
-  <!-- GUATEMALA | Title: PUBG Mobile UC Guatemala | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/gt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-gt" href="https://www.midasbuy.com.pk/midasbuy/gt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BELIZE | Title: PUBG Mobile UC Belize | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-bz" href="https://www.midasbuy.com.pk/midasbuy/bz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- HONDURAS | Title: PUBG Mobile UC Honduras | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/hn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-hn" href="https://www.midasbuy.com.pk/midasbuy/hn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- EL SALVADOR | Title: PUBG Mobile UC El Salvador | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/sv/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-sv" href="https://www.midasbuy.com.pk/midasbuy/sv/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- NICARAGUA | Title: PUBG Mobile UC Nicaragua | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/ni/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-ni" href="https://www.midasbuy.com.pk/midasbuy/ni/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- COSTA RICA | Title: PUBG Mobile UC Costa Rica | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/cr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-cr" href="https://www.midasbuy.com.pk/midasbuy/cr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- PANAMA | Title: PUBG Mobile UC Panama | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/pa/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-pa" href="https://www.midasbuy.com.pk/midasbuy/pa/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== CARIBBEAN ========== -->
-
-  <!-- CUBA | Title: PUBG Mobile UC Cuba | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cu/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-cu" href="https://www.midasbuy.com.pk/midasbuy/cu/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- JAMAICA | Title: PUBG Mobile UC Jamaica | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/jm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-jm" href="https://www.midasbuy.com.pk/midasbuy/jm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- HAITI | Title: PUBG Mobile UC Haiti | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ht/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-ht" href="https://www.midasbuy.com.pk/midasbuy/ht/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- DOMINICAN REPUBLIC | Title: PUBG Mobile UC Dominican Republic | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/do/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-do" href="https://www.midasbuy.com.pk/midasbuy/do/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- PUERTO RICO | Title: PUBG Mobile UC Puerto Rico | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/pr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://www.midasbuy.com.pk/midasbuy/pr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- TRINIDAD AND TOBAGO | Title: PUBG Mobile UC Trinidad | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/tt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-tt" href="https://www.midasbuy.com.pk/midasbuy/tt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BAHAMAS | Title: PUBG Mobile UC Bahamas | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bs/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-bs" href="https://www.midasbuy.com.pk/midasbuy/bs/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- BARBADOS | Title: PUBG Mobile UC Barbados | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/bb/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-bb" href="https://www.midasbuy.com.pk/midasbuy/bb/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SAINT LUCIA | Title: PUBG Mobile UC Saint Lucia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lc/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-lc" href="https://www.midasbuy.com.pk/midasbuy/lc/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- GRENADA | Title: PUBG Mobile UC Grenada | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gd/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-gd" href="https://www.midasbuy.com.pk/midasbuy/gd/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- SAINT VINCENT | Title: PUBG Mobile UC Saint Vincent | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/vc/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-vc" href="https://www.midasbuy.com.pk/midasbuy/vc/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ANTIGUA AND BARBUDA | Title: PUBG Mobile UC Antigua | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ag/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ag" href="https://www.midasbuy.com.pk/midasbuy/ag/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- DOMINICA | Title: PUBG Mobile UC Dominica | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/dm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-dm" href="https://www.midasbuy.com.pk/midasbuy/dm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- SAINT KITTS AND NEVIS | Title: PUBG Mobile UC Saint Kitts | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-kn" href="https://www.midasbuy.com.pk/midasbuy/kn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ========== SOUTH AMERICA ========== -->
-
-  <!-- BRAZIL | Title: PUBG Mobile UC Brazil | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/br/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://www.midasbuy.com.pk/midasbuy/br/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ARGENTINA | Title: PUBG Mobile UC Argentina | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ar/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-ar" href="https://www.midasbuy.com.pk/midasbuy/ar/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bs/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- COLOMBIA | Title: PUBG Mobile UC Colombia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/co/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-co" href="https://www.midasbuy.com.pk/midasbuy/co/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cu/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CHILE | Title: PUBG Mobile UC Chile | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cl/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-cl" href="https://www.midasbuy.com.pk/midasbuy/cl/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/do/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- PERU | Title: PUBG Mobile UC Peru | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/pe/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-pe" href="https://www.midasbuy.com.pk/midasbuy/pe/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ht/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- VENEZUELA | Title: PUBG Mobile UC Venezuela | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ve/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-ve" href="https://www.midasbuy.com.pk/midasbuy/ve/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ECUADOR | Title: PUBG Mobile UC Ecuador | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ec/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-ec" href="https://www.midasbuy.com.pk/midasbuy/ec/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- BOLIVIA | Title: PUBG Mobile UC Bolivia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bo/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-bo" href="https://www.midasbuy.com.pk/midasbuy/bo/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- PARAGUAY | Title: PUBG Mobile UC Paraguay | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/py/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-py" href="https://www.midasbuy.com.pk/midasbuy/py/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- URUGUAY | Title: PUBG Mobile UC Uruguay | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/uy/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-uy" href="https://www.midasbuy.com.pk/midasbuy/uy/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- GUYANA | Title: PUBG Mobile UC Guyana | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gy/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-gy" href="https://www.midasbuy.com.pk/midasbuy/gy/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SURINAME | Title: PUBG Mobile UC Suriname | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="nl-sr" href="https://www.midasbuy.com.pk/midasbuy/sr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ========== WESTERN EUROPE ========== -->
-
-  <!-- UNITED KINGDOM | Title: PUBG Mobile UC UK | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/gb/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.midasbuy.com.pk/midasbuy/gb/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- GERMANY | Title: PUBG Mobile UC Germany | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/de/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="de-de" href="https://www.midasbuy.com.pk/midasbuy/de/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- FRANCE | Title: PUBG Mobile UC France | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/fr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://www.midasbuy.com.pk/midasbuy/fr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ITALY | Title: PUBG Mobile UC Italy | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/it/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="it-it" href="https://www.midasbuy.com.pk/midasbuy/it/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- SPAIN | Title: PUBG Mobile UC Spain | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/es/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-es" href="https://www.midasbuy.com.pk/midasbuy/es/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- PORTUGAL | Title: PUBG Mobile UC Portugal | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/pt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://www.midasbuy.com.pk/midasbuy/pt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/it/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- NETHERLANDS | Title: PUBG Mobile UC Netherlands | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/nl/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="nl-nl" href="https://www.midasbuy.com.pk/midasbuy/nl/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BELGIUM | Title: PUBG Mobile UC Belgium | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/be/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="nl-be" href="https://www.midasbuy.com.pk/midasbuy/be/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AUSTRIA | Title: PUBG Mobile UC Austria | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/at/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="de-at" href="https://www.midasbuy.com.pk/midasbuy/at/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SWITZERLAND | Title: PUBG Mobile UC Switzerland | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ch/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="de-ch" href="https://www.midasbuy.com.pk/midasbuy/ch/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- IRELAND | Title: PUBG Mobile UC Ireland | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ie/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ie" href="https://www.midasbuy.com.pk/midasbuy/ie/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- LUXEMBOURG | Title: PUBG Mobile UC Luxembourg | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lu/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-lu" href="https://www.midasbuy.com.pk/midasbuy/lu/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- MONACO | Title: PUBG Mobile UC Monaco | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mc/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-mc" href="https://www.midasbuy.com.pk/midasbuy/mc/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- LIECHTENSTEIN | Title: PUBG Mobile UC Liechtenstein | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/li/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="de-li" href="https://www.midasbuy.com.pk/midasbuy/li/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ANDORRA | Title: PUBG Mobile UC Andorra | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ad/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ca-ad" href="https://www.midasbuy.com.pk/midasbuy/ad/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ========== NORTHERN EUROPE ========== -->
-
-  <!-- SWEDEN | Title: PUBG Mobile UC Sweden | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/se/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sv-se" href="https://www.midasbuy.com.pk/midasbuy/se/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- NORWAY | Title: PUBG Mobile UC Norway | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/no/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="no-no" href="https://www.midasbuy.com.pk/midasbuy/no/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- DENMARK | Title: PUBG Mobile UC Denmark | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/dk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="da-dk" href="https://www.midasbuy.com.pk/midasbuy/dk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- FINLAND | Title: PUBG Mobile UC Finland | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/fi/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fi-fi" href="https://www.midasbuy.com.pk/midasbuy/fi/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ICELAND | Title: PUBG Mobile UC Iceland | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/is/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="is-is" href="https://www.midasbuy.com.pk/midasbuy/is/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ESTONIA | Title: PUBG Mobile UC Estonia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ee/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="et-ee" href="https://www.midasbuy.com.pk/midasbuy/ee/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- LATVIA | Title: PUBG Mobile UC Latvia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lv/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="lv-lv" href="https://www.midasbuy.com.pk/midasbuy/lv/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- LITHUANIA | Title: PUBG Mobile UC Lithuania | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="lt-lt" href="https://www.midasbuy.com.pk/midasbuy/lt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ========== EASTERN EUROPE ========== -->
-
-  <!-- POLAND | Title: PUBG Mobile UC Poland | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/pl/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pl-pl" href="https://www.midasbuy.com.pk/midasbuy/pl/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CZECHIA | Title: PUBG Mobile UC Czech Republic | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/cz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="cs-cz" href="https://www.midasbuy.com.pk/midasbuy/cz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- HUNGARY | Title: PUBG Mobile UC Hungary | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/hu/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="hu-hu" href="https://www.midasbuy.com.pk/midasbuy/hu/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ROMANIA | Title: PUBG Mobile UC Romania | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/ro/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ro-ro" href="https://www.midasbuy.com.pk/midasbuy/ro/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BULGARIA | Title: PUBG Mobile UC Bulgaria | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/bg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="bg-bg" href="https://www.midasbuy.com.pk/midasbuy/bg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SLOVAKIA | Title: PUBG Mobile UC Slovakia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sk-sk" href="https://www.midasbuy.com.pk/midasbuy/sk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/at/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- UKRAINE | Title: PUBG Mobile UC Ukraine | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ua/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="uk-ua" href="https://www.midasbuy.com.pk/midasbuy/ua/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ch/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- RUSSIA | Title: PUBG Mobile UC Russia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ru/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://www.midasbuy.com.pk/midasbuy/ru/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/be/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BELARUS | Title: PUBG Mobile UC Belarus | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/by/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="be-by" href="https://www.midasbuy.com.pk/midasbuy/by/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ie/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MOLDOVA | Title: PUBG Mobile UC Moldova | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/md/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ro-md" href="https://www.midasbuy.com.pk/midasbuy/md/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pt/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== BALKANS ========== -->
-
-  <!-- GREECE | Title: PUBG Mobile UC Greece | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/gr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="el-gr" href="https://www.midasbuy.com.pk/midasbuy/gr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- TURKEY | Title: PUBG Mobile UC Turkey | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="tr-tr" href="https://www.midasbuy.com.pk/midasbuy/tr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- CROATIA | Title: PUBG Mobile UC Croatia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/hr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="hr-hr" href="https://www.midasbuy.com.pk/midasbuy/hr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SERBIA | Title: PUBG Mobile UC Serbia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/rs/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sr-rs" href="https://www.midasbuy.com.pk/midasbuy/rs/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SLOVENIA | Title: PUBG Mobile UC Slovenia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/si/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sl-si" href="https://www.midasbuy.com.pk/midasbuy/si/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BOSNIA AND HERZEGOVINA | Title: PUBG Mobile UC Bosnia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ba/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="bs-ba" href="https://www.midasbuy.com.pk/midasbuy/ba/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sk/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- NORTH MACEDONIA | Title: PUBG Mobile UC North Macedonia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="mk-mk" href="https://www.midasbuy.com.pk/midasbuy/mk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ee/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MONTENEGRO | Title: PUBG Mobile UC Montenegro | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/me/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sr-me" href="https://www.midasbuy.com.pk/midasbuy/me/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lv/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ALBANIA | Title: PUBG Mobile UC Albania | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/al/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sq-al" href="https://www.midasbuy.com.pk/midasbuy/al/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lt/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- KOSOVO | Title: PUBG Mobile UC Kosovo | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/xk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sq-xk" href="https://www.midasbuy.com.pk/midasbuy/xk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lu/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CYPRUS | Title: PUBG Mobile UC Cyprus | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cy/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="el-cy" href="https://www.midasbuy.com.pk/midasbuy/cy/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- MALTA | Title: PUBG Mobile UC Malta | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/mt/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="mt-mt" href="https://www.midasbuy.com.pk/midasbuy/mt/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== MIDDLE EAST ========== -->
-
-  <!-- SAUDI ARABIA | Title: PUBG Mobile UC Saudi Arabia | 60% discount & VIP 30% extra UC | Midasbuy -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cy/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/is/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ua/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ru/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/by/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/md/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/rs/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ba/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/me/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mk/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/al/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/xk/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/sa/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-sa" href="https://www.midasbuy.com.pk/midasbuy/sa/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.98</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- UAE | Title: PUBG Mobile UC UAE | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/ae/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-ae" href="https://www.midasbuy.com.pk/midasbuy/ae/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- QATAR | Title: PUBG Mobile UC Qatar | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/qa/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-qa" href="https://www.midasbuy.com.pk/midasbuy/qa/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- KUWAIT | Title: PUBG Mobile UC Kuwait | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-kw" href="https://www.midasbuy.com.pk/midasbuy/kw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- BAHRAIN | Title: PUBG Mobile UC Bahrain | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bh/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-bh" href="https://www.midasbuy.com.pk/midasbuy/bh/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- OMAN | Title: PUBG Mobile UC Oman | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/om/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-om" href="https://www.midasbuy.com.pk/midasbuy/om/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- IRAQ | Title: PUBG Mobile UC Iraq | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/iq/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-iq" href="https://www.midasbuy.com.pk/midasbuy/iq/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- JORDAN | Title: PUBG Mobile UC Jordan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/jo/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-jo" href="https://www.midasbuy.com.pk/midasbuy/jo/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- LEBANON | Title: PUBG Mobile UC Lebanon | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lb/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-lb" href="https://www.midasbuy.com.pk/midasbuy/lb/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SYRIA | Title: PUBG Mobile UC Syria | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sy/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-sy" href="https://www.midasbuy.com.pk/midasbuy/sy/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- PALESTINE | Title: PUBG Mobile UC Palestine | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ps/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-ps" href="https://www.midasbuy.com.pk/midasbuy/ps/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- YEMEN | Title: PUBG Mobile UC Yemen | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ye/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-ye" href="https://www.midasbuy.com.pk/midasbuy/ye/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- IRAN | Title: PUBG Mobile UC Iran | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ir/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fa-ir" href="https://www.midasbuy.com.pk/midasbuy/ir/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ISRAEL | Title: PUBG Mobile UC Israel | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/il/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="he-il" href="https://www.midasbuy.com.pk/midasbuy/il/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ========== CENTRAL ASIA ========== -->
-
-  <!-- KAZAKHSTAN | Title: PUBG Mobile UC Kazakhstan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="kk-kz" href="https://www.midasbuy.com.pk/midasbuy/kz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- UZBEKISTAN | Title: PUBG Mobile UC Uzbekistan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/uz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="uz-uz" href="https://www.midasbuy.com.pk/midasbuy/uz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- TURKMENISTAN | Title: PUBG Mobile UC Turkmenistan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="tk-tm" href="https://www.midasbuy.com.pk/midasbuy/tm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- TAJIKISTAN | Title: PUBG Mobile UC Tajikistan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tj/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="tg-tj" href="https://www.midasbuy.com.pk/midasbuy/tj/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- KYRGYZSTAN | Title: PUBG Mobile UC Kyrgyzstan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ky-kg" href="https://www.midasbuy.com.pk/midasbuy/kg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- AZERBAIJAN | Title: PUBG Mobile UC Azerbaijan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/az/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="az-az" href="https://www.midasbuy.com.pk/midasbuy/az/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- GEORGIA | Title: PUBG Mobile UC Georgia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ge/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ka-ge" href="https://www.midasbuy.com.pk/midasbuy/ge/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ARMENIA | Title: PUBG Mobile UC Armenia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/am/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="hy-am" href="https://www.midasbuy.com.pk/midasbuy/am/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- MONGOLIA | Title: PUBG Mobile UC Mongolia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="mn-mn" href="https://www.midasbuy.com.pk/midasbuy/mn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ========== EAST ASIA ========== -->
-
-  <!-- JAPAN | Title: PUBG Mobile UC Japan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/jp/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ja-jp" href="https://www.midasbuy.com.pk/midasbuy/jp/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- SOUTH KOREA | Title: PUBG Mobile UC South Korea | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ko-kr" href="https://www.midasbuy.com.pk/midasbuy/kr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- CHINA | Title: PUBG Mobile UC China | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://www.midasbuy.com.pk/midasbuy/cn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- TAIWAN | Title: PUBG Mobile UC Taiwan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="zh-tw" href="https://www.midasbuy.com.pk/midasbuy/tw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- HONG KONG | Title: PUBG Mobile UC Hong Kong | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/hk/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://www.midasbuy.com.pk/midasbuy/hk/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- MACAU | Title: PUBG Mobile UC Macau | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mo/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="zh-mo" href="https://www.midasbuy.com.pk/midasbuy/mo/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ========== SOUTHEAST ASIA ========== -->
-
-  <!-- INDONESIA | Title: PUBG Mobile UC Indonesia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/id/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="id-id" href="https://www.midasbuy.com.pk/midasbuy/id/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.98</priority>
-  </url>
-
-  <!-- PHILIPPINES | Title: PUBG Mobile UC Philippines | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ph/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fil-ph" href="https://www.midasbuy.com.pk/midasbuy/ph/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- VIETNAM | Title: PUBG Mobile UC Vietnam | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/vn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://www.midasbuy.com.pk/midasbuy/vn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- THAILAND | Title: PUBG Mobile UC Thailand | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/th/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="th-th" href="https://www.midasbuy.com.pk/midasbuy/th/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- MALAYSIA | Title: PUBG Mobile UC Malaysia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/my/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ms-my" href="https://www.midasbuy.com.pk/midasbuy/my/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- SINGAPORE | Title: PUBG Mobile UC Singapore | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-sg" href="https://www.midasbuy.com.pk/midasbuy/sg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- MYANMAR | Title: PUBG Mobile UC Myanmar | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="my-mm" href="https://www.midasbuy.com.pk/midasbuy/mm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- CAMBODIA | Title: PUBG Mobile UC Cambodia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/kh/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="km-kh" href="https://www.midasbuy.com.pk/midasbuy/kh/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- LAOS | Title: PUBG Mobile UC Laos | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/la/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="lo-la" href="https://www.midasbuy.com.pk/midasbuy/la/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- BRUNEI | Title: PUBG Mobile UC Brunei | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ms-bn" href="https://www.midasbuy.com.pk/midasbuy/bn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- TIMOR-LESTE | Title: PUBG Mobile UC Timor-Leste | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tl/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-tl" href="https://www.midasbuy.com.pk/midasbuy/tl/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ========== OCEANIA ========== -->
-
-  <!-- AUSTRALIA | Title: PUBG Mobile UC Australia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/au/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-au" href="https://www.midasbuy.com.pk/midasbuy/au/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- NEW ZEALAND | Title: PUBG Mobile UC New Zealand | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/nz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-nz" href="https://www.midasbuy.com.pk/midasbuy/nz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- FIJI | Title: PUBG Mobile UC Fiji | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/fj/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-fj" href="https://www.midasbuy.com.pk/midasbuy/fj/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- PAPUA NEW GUINEA | Title: PUBG Mobile UC Papua New Guinea | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/pg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-pg" href="https://www.midasbuy.com.pk/midasbuy/pg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SAMOA | Title: PUBG Mobile UC Samoa | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ws/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sm-ws" href="https://www.midasbuy.com.pk/midasbuy/ws/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- TONGA | Title: PUBG Mobile UC Tonga | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/to/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="to-to" href="https://www.midasbuy.com.pk/midasbuy/to/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- VANUATU | Title: PUBG Mobile UC Vanuatu | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/vu/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="bi-vu" href="https://www.midasbuy.com.pk/midasbuy/vu/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- SOLOMON ISLANDS | Title: PUBG Mobile UC Solomon Islands | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sb/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-sb" href="https://www.midasbuy.com.pk/midasbuy/sb/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- KIRIBATI | Title: PUBG Mobile UC Kiribati | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ki/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ki" href="https://www.midasbuy.com.pk/midasbuy/ki/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- MICRONESIA | Title: PUBG Mobile UC Micronesia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/fm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-fm" href="https://www.midasbuy.com.pk/midasbuy/fm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- PALAU | Title: PUBG Mobile UC Palau | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/pw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-pw" href="https://www.midasbuy.com.pk/midasbuy/pw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- MARSHALL ISLANDS | Title: PUBG Mobile UC Marshall Islands | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mh/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-mh" href="https://www.midasbuy.com.pk/midasbuy/mh/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- NAURU | Title: PUBG Mobile UC Nauru | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/nr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-nr" href="https://www.midasbuy.com.pk/midasbuy/nr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- TUVALU | Title: PUBG Mobile UC Tuvalu | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tv/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-tv" href="https://www.midasbuy.com.pk/midasbuy/tv/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ========== NORTH AFRICA ========== -->
-
-  <!-- EGYPT | Title: PUBG Mobile UC Egypt | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/eg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-eg" href="https://www.midasbuy.com.pk/midasbuy/eg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MOROCCO | Title: PUBG Mobile UC Morocco | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ma/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-ma" href="https://www.midasbuy.com.pk/midasbuy/ma/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/jo/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ALGERIA | Title: PUBG Mobile UC Algeria | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/dz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-dz" href="https://www.midasbuy.com.pk/midasbuy/dz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lb/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- TUNISIA | Title: PUBG Mobile UC Tunisia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-tn" href="https://www.midasbuy.com.pk/midasbuy/tn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- LIBYA | Title: PUBG Mobile UC Libya | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ly/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-ly" href="https://www.midasbuy.com.pk/midasbuy/ly/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- SUDAN | Title: PUBG Mobile UC Sudan | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sd/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-sd" href="https://www.midasbuy.com.pk/midasbuy/sd/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ========== WEST AFRICA ========== -->
-
-  <!-- NIGERIA | Title: PUBG Mobile UC Nigeria | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ng/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ng" href="https://www.midasbuy.com.pk/midasbuy/ng/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kw/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- GHANA | Title: PUBG Mobile UC Ghana | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gh/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-gh" href="https://www.midasbuy.com.pk/midasbuy/gh/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SENEGAL | Title: PUBG Mobile UC Senegal | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-sn" href="https://www.midasbuy.com.pk/midasbuy/sn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- IVORY COAST | Title: PUBG Mobile UC Ivory Coast | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ci/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-ci" href="https://www.midasbuy.com.pk/midasbuy/ci/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- CAMEROON | Title: PUBG Mobile UC Cameroon | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-cm" href="https://www.midasbuy.com.pk/midasbuy/cm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- MALI | Title: PUBG Mobile UC Mali | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ml/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-ml" href="https://www.midasbuy.com.pk/midasbuy/ml/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- BURKINA FASO | Title: PUBG Mobile UC Burkina Faso | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bf/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-bf" href="https://www.midasbuy.com.pk/midasbuy/bf/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- NIGER | Title: PUBG Mobile UC Niger | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ne/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-ne" href="https://www.midasbuy.com.pk/midasbuy/ne/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- GUINEA | Title: PUBG Mobile UC Guinea | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gn/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-gn" href="https://www.midasbuy.com.pk/midasbuy/gn/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- BENIN | Title: PUBG Mobile UC Benin | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bj/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-bj" href="https://www.midasbuy.com.pk/midasbuy/bj/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- TOGO | Title: PUBG Mobile UC Togo | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-tg" href="https://www.midasbuy.com.pk/midasbuy/tg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- SIERRA LEONE | Title: PUBG Mobile UC Sierra Leone | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sl/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-sl" href="https://www.midasbuy.com.pk/midasbuy/sl/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- LIBERIA | Title: PUBG Mobile UC Liberia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/lr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-lr" href="https://www.midasbuy.com.pk/midasbuy/lr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- GAMBIA | Title: PUBG Mobile UC Gambia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-gm" href="https://www.midasbuy.com.pk/midasbuy/gm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- GUINEA-BISSAU | Title: PUBG Mobile UC Guinea-Bissau | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-gw" href="https://www.midasbuy.com.pk/midasbuy/gw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- MAURITANIA | Title: PUBG Mobile UC Mauritania | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mr/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-mr" href="https://www.midasbuy.com.pk/midasbuy/mr/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- CAPE VERDE | Title: PUBG Mobile UC Cape Verde | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cv/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-cv" href="https://www.midasbuy.com.pk/midasbuy/cv/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <!-- ========== EAST AFRICA ========== -->
-
-  <!-- KENYA | Title: PUBG Mobile UC Kenya | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ke/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sw-ke" href="https://www.midasbuy.com.pk/midasbuy/ke/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.midasbuy.com.pk/midasbuy/qa/buy/pubgm</loc>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ETHIOPIA | Title: PUBG Mobile UC Ethiopia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/et/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="am-et" href="https://www.midasbuy.com.pk/midasbuy/et/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bh/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- TANZANIA | Title: PUBG Mobile UC Tanzania | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/tz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="sw-tz" href="https://www.midasbuy.com.pk/midasbuy/tz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/om/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- UGANDA | Title: PUBG Mobile UC Uganda | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ug/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ug" href="https://www.midasbuy.com.pk/midasbuy/ug/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/iq/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- RWANDA | Title: PUBG Mobile UC Rwanda | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/rw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="rw-rw" href="https://www.midasbuy.com.pk/midasbuy/rw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sy/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- BURUNDI | Title: PUBG Mobile UC Burundi | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/bi/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="rn-bi" href="https://www.midasbuy.com.pk/midasbuy/bi/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ye/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SOMALIA | Title: PUBG Mobile UC Somalia | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/so/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="so-so" href="https://www.midasbuy.com.pk/midasbuy/so/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ps/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ERITREA | Title: PUBG Mobile UC Eritrea | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/er/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ti-er" href="https://www.midasbuy.com.pk/midasbuy/er/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/il/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- DJIBOUTI | Title: PUBG Mobile UC Djibouti | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/dj/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-dj" href="https://www.midasbuy.com.pk/midasbuy/dj/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ir/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SOUTH SUDAN | Title: PUBG Mobile UC South Sudan | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ss/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ss" href="https://www.midasbuy.com.pk/midasbuy/ss/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/au/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MAURITIUS | Title: PUBG Mobile UC Mauritius | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mu/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-mu" href="https://www.midasbuy.com.pk/midasbuy/mu/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/nz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SEYCHELLES | Title: PUBG Mobile UC Seychelles | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/sc/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-sc" href="https://www.midasbuy.com.pk/midasbuy/sc/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/my/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- COMOROS | Title: PUBG Mobile UC Comoros | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/km/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="ar-km" href="https://www.midasbuy.com.pk/midasbuy/km/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/id/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MADAGASCAR | Title: PUBG Mobile UC Madagascar | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="mg-mg" href="https://www.midasbuy.com.pk/midasbuy/mg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ph/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== CENTRAL AFRICA ========== -->
-
-  <!-- DR CONGO | Title: PUBG Mobile UC DR Congo | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cd/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-cd" href="https://www.midasbuy.com.pk/midasbuy/cd/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CONGO | Title: PUBG Mobile UC Congo | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cg/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-cg" href="https://www.midasbuy.com.pk/midasbuy/cg/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/th/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CENTRAL AFRICAN REPUBLIC | Title: PUBG Mobile UC Central African Republic | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/cf/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-cf" href="https://www.midasbuy.com.pk/midasbuy/cf/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/vn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- GABON | Title: PUBG Mobile UC Gabon | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ga/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-ga" href="https://www.midasbuy.com.pk/midasbuy/ga/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/jp/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- EQUATORIAL GUINEA | Title: PUBG Mobile UC Equatorial Guinea | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/gq/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="es-gq" href="https://www.midasbuy.com.pk/midasbuy/gq/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- SAO TOME AND PRINCIPE | Title: PUBG Mobile UC Sao Tome | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/st/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-st" href="https://www.midasbuy.com.pk/midasbuy/st/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.55</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- CHAD | Title: PUBG Mobile UC Chad | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/td/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="fr-td" href="https://www.midasbuy.com.pk/midasbuy/td/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/hk/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ========== SOUTHERN AFRICA ========== -->
-
-  <!-- SOUTH AFRICA | Title: PUBG Mobile UC South Africa | 60% discount & VIP 30% extra UC | Midasbuy -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mo/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kh/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/la/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tl/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/uz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tj/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/az/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ge/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/am/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/za/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-za" href="https://www.midasbuy.com.pk/midasbuy/za/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ANGOLA | Title: PUBG Mobile UC Angola | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/ao/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-ao" href="https://www.midasbuy.com.pk/midasbuy/ao/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ng/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MOZAMBIQUE | Title: PUBG Mobile UC Mozambique | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="pt-mz" href="https://www.midasbuy.com.pk/midasbuy/mz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ke/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ZAMBIA | Title: PUBG Mobile UC Zambia | 60% discount & VIP 30% extra UC | Midasbuy -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gh/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ma/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/dz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ly/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sd/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/et/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ug/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/rw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/zm/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-zm" href="https://www.midasbuy.com.pk/midasbuy/zm/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ZIMBABWE | Title: PUBG Mobile UC Zimbabwe | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/zw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-zw" href="https://www.midasbuy.com.pk/midasbuy/zw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- MALAWI | Title: PUBG Mobile UC Malawi | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/mw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-mw" href="https://www.midasbuy.com.pk/midasbuy/mw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- NAMIBIA | Title: PUBG Mobile UC Namibia | 60% discount & VIP 30% extra UC | Midasbuy -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/na/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-na" href="https://www.midasbuy.com.pk/midasbuy/na/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- BOTSWANA | Title: PUBG Mobile UC Botswana | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/bw/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-bw" href="https://www.midasbuy.com.pk/midasbuy/bw/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- LESOTHO | Title: PUBG Mobile UC Lesotho | 60% discount & VIP 30% extra UC | Midasbuy -->
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/na/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mz/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ao/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ci/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mu/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/br/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ar/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cl/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/co/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pe/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ve/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/uy/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/py/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bo/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ec/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gy/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/fj/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ws/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/to/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/vu/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/nc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pf/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sb/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gu/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/fm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mh/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/pw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ki/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tv/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/nr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ml/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bf/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ne/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bj/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ga/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cd/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cf/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/td/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sl/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mr/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cv/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/st/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gq/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bi/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/dj/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/er/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/so/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ss/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/ls/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-ls" href="https://www.midasbuy.com.pk/midasbuy/ls/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <!-- ESWATINI | Title: PUBG Mobile UC Eswatini | 60% discount & VIP 30% extra UC | Midasbuy -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/sz/buy/pubgm</loc>
-    <xhtml:link rel="alternate" hreflang="en-sz" href="https://www.midasbuy.com.pk/midasbuy/sz/buy/pubgm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"/>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/km/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/re/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/yt/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/fo/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gl/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gi/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/im/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/je/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/li/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ad/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/sm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/va/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gf/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/mq/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gp/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/aw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/cw/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/vi/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/vg/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ky/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/bm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/tc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/lc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ag/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/gd/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/vc/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/dm/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/kn/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ai/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.midasbuy.com.pk/midasbuy/ms/buy/pubgm</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

@@ -6,6 +6,8 @@ import { componentTagger } from "lovable-tagger";
 import { VitePWA } from "vite-plugin-pwa";
 import type { Plugin } from "vite";
 import { COUNTRY_DATA, getGameSEOConfig } from "./src/utils/gameSeoConfigs";
+import { buildCountryPageContent } from "./src/utils/prerenderSeoContent";
+import type { PrerenderContent, GameSlug } from "./src/utils/prerenderSeoContent";
 
 // Plugin to make CSS non-render-blocking
 const asyncCssPlugin = (): Plugin => ({
@@ -142,9 +144,60 @@ const buildPrerenderBody = ({
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 24px;">
         ${bullets.map((bullet) => `<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;font-size:15px;line-height:1.6;color:rgba(248,250,252,.88);">${escapeHtml(bullet)}</div>`).join('')}
       </div>
-      <p style="margin:0;font-size:14px;line-height:1.7;color:rgba(248,250,252,.62);">${escapeHtml(title)} — pre-rendered HTML snapshot for search engines before the React app loads.</p>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:rgba(248,250,252,.62);">${escapeHtml(title)}</p>
     </section>
   </main>`;
+
+// Rich, per-URL unique body for country/game pages. Every page gets its own H1,
+// its own H2 set, local facts, FAQs and internal links so Google has both unique
+// content and a crawl path into the long tail.
+const buildRichCountryBody = (content: PrerenderContent, canonicalUrl: string) => `
+  <main style="min-height:100vh;background:#13182B;color:#F8FAFC;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:32px 16px;">
+    <article style="max-width:960px;margin:0 auto;">
+      <h1 style="margin:0 0 16px;font-size:clamp(26px,4vw,42px);line-height:1.15;">${escapeHtml(content.h1)}</h1>
+      <p style="margin:0 0 28px;font-size:17px;line-height:1.75;color:rgba(248,250,252,.85);">${escapeHtml(content.intro)}</p>
+      ${content.sections
+        .map(
+          (section) => `<section style="margin:0 0 28px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);line-height:1.25;">${escapeHtml(section.h2)}</h2>
+        ${section.paragraphs.map((p) => `<p style="margin:0 0 12px;font-size:15px;line-height:1.75;color:rgba(248,250,252,.8);">${escapeHtml(p)}</p>`).join('')}
+        ${section.bullets && section.bullets.length ? `<ul style="margin:0;padding-left:20px;">${section.bullets.map((b) => `<li style="margin:0 0 6px;font-size:15px;line-height:1.65;color:rgba(248,250,252,.78);">${escapeHtml(b)}</li>`).join('')}</ul>` : ''}
+      </section>`,
+        )
+        .join('')}
+      <section style="margin:0 0 28px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);">Frequently Asked Questions</h2>
+        ${content.faqs
+          .map(
+            (faq) => `<div style="margin:0 0 14px;">
+          <h3 style="margin:0 0 6px;font-size:16px;line-height:1.4;">${escapeHtml(faq.q)}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.7;color:rgba(248,250,252,.78);">${escapeHtml(faq.a)}</p>
+        </div>`,
+          )
+          .join('')}
+      </section>
+      <nav style="margin:0 0 20px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);">Related Midasbuy Pages</h2>
+        <ul style="margin:0;padding-left:20px;">
+          ${content.relatedLinks.map((link) => `<li style="margin:0 0 6px;font-size:15px;"><a href="${escapeHtml(link.href)}" style="color:#7DD3FC;">${escapeHtml(link.label)}</a></li>`).join('')}
+        </ul>
+      </nav>
+      <p style="margin:0;font-size:13px;line-height:1.7;color:rgba(248,250,252,.5);">${escapeHtml(content.keywordLine)}</p>
+      <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
+    </article>
+  </main>`;
+
+const faqJsonLd = (content: PrerenderContent) =>
+  `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: content.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  })}</script>`;
+
 
 const createPrerenderedHtml = ({
   template,
@@ -153,6 +206,7 @@ const createPrerenderedHtml = ({
   description,
   canonicalUrl,
   body,
+  extraHead = '',
 }: {
   template: string;
   lang: string;
@@ -160,6 +214,7 @@ const createPrerenderedHtml = ({
   description: string;
   canonicalUrl: string;
   body: string;
+  extraHead?: string;
 }) => {
   let html = template;
 
@@ -172,10 +227,12 @@ const createPrerenderedHtml = ({
   html = upsertHeadTag(html, /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/i, `<meta name="twitter:description" content="${escapeHtml(description)}">`);
   html = upsertHeadTag(html, /<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:url" content="${escapeHtml(canonicalUrl)}">`);
   html = upsertHeadTag(html, /<link\s+[^>]*rel="canonical"[^>]*>/i, `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">`);
+  if (extraHead) html = html.replace('</head>', `  ${extraHead}\n</head>`);
   html = html.replace(/<div id="root"[^>]*><\/div>/i, `<div id="root">${body}</div>`);
 
   return html;
 };
+
 
 const countryPrerenderPlugin = (): Plugin => ({
   name: 'country-prerender',
@@ -187,23 +244,16 @@ const countryPrerenderPlugin = (): Plugin => ({
     const template = fs.readFileSync(distIndexPath, 'utf8');
     const baseUrl = 'https://www.midasbuy.com.pk';
     const countryEntries = Object.entries(COUNTRY_DATA);
+    const allCodes = countryEntries.map(([code]) => code);
 
     for (const [code, country] of countryEntries) {
       const lowerCode = code.toLowerCase();
 
       const homePath = `/midasbuy/${lowerCode}`;
-      const homeTitle = `Tencent's official recharge, top-up and redeem ${country.name} | Midasbuy`;
-      const homeDescription = `Midasbuy ${country.name} official store. Buy gaming credits at best prices with fast delivery and secure payment methods.`;
-      const homeBody = buildPrerenderBody({
-        title: homeTitle,
-        heading: `Midasbuy ${country.name} official store`,
-        description: `Players in ${country.name} can buy PUBG Mobile UC and other gaming top-ups with ${country.currency} pricing, secure checkout, and fast delivery.`,
-        bullets: [
-          `Local currency: ${country.currency} (${country.currencySymbol})`,
-          `Popular payments: ${country.paymentMethods.slice(0, 3).join(', ')}`,
-          `Country storefront URL: ${baseUrl}${homePath}`,
-        ],
-      });
+      const homeContent = buildCountryPageContent(code, country, 'home', allCodes);
+      const homeTitle = `${homeContent.h1} | ${country.currency} Prices`.slice(0, 65);
+      const homeDescription = homeContent.intro.slice(0, 158);
+      const homeBody = buildRichCountryBody(homeContent, `${baseUrl}${homePath}`);
 
       const homeHtml = createPrerenderedHtml({
         template,
@@ -212,6 +262,7 @@ const countryPrerenderPlugin = (): Plugin => ({
         description: homeDescription,
         canonicalUrl: `${baseUrl}${homePath}`,
         body: homeBody,
+        extraHead: faqJsonLd(homeContent),
       });
 
       const homeDir = path.resolve(`dist/midasbuy/${lowerCode}`);
@@ -222,35 +273,20 @@ const countryPrerenderPlugin = (): Plugin => ({
       fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}.html`), homeHtml, 'utf8');
 
       // Generate prerendered HTML for all 5 game routes per country
-      const gameRoutes: Array<{ slug: string; label: string; product: string; seoSlug: string | null }> = [
-        { slug: 'pubgm', label: 'PUBG Mobile UC', product: 'PUBG Mobile UC', seoSlug: 'pubgm' },
-        { slug: 'freefire', label: 'Free Fire Diamonds', product: 'Free Fire Diamonds', seoSlug: 'freefire' },
-        { slug: 'roblox', label: 'Roblox Robux', product: 'Roblox Robux', seoSlug: 'roblox' },
-        { slug: 'valorant', label: 'Valorant Points', product: 'Valorant Points', seoSlug: 'valorant' },
-        { slug: 'car', label: 'PUBG Car Skins', product: 'PUBG Mobile Car Skins', seoSlug: null },
+      const gameRoutes: Array<{ slug: Exclude<GameSlug, 'home'>; seoSlug: string | null }> = [
+        { slug: 'pubgm', seoSlug: 'pubgm' },
+        { slug: 'freefire', seoSlug: 'freefire' },
+        { slug: 'roblox', seoSlug: 'roblox' },
+        { slug: 'valorant', seoSlug: 'valorant' },
+        { slug: 'car', seoSlug: null },
       ];
 
       for (const game of gameRoutes) {
-        const seoConfig = game.seoSlug
-          ? getGameSEOConfig(code, game.seoSlug as 'pubgm' | 'freefire' | 'roblox' | 'valorant')
-          : {
-              title: `Buy ${game.label} in ${country.name} - Best Prices | Midasbuy`,
-              description: `Buy ${game.product} in ${country.name} with instant delivery, ${country.currency} pricing and secure payments at Midasbuy.`,
-            };
+        const gameContent = buildCountryPageContent(code, country, game.slug, allCodes);
         const gamePath = `/midasbuy/${lowerCode}/buy/${game.slug}`;
-        const gameTitle = `${seoConfig.title} | ${country.name}`;
-        const gameDescription = `${seoConfig.description} Available in ${country.name} with ${country.currency} pricing.`;
-        const gameBody = buildPrerenderBody({
-          title: gameTitle,
-          heading: `Buy ${game.label} in ${country.name}`,
-          description: `${game.product} players in ${country.name} can top up with instant delivery, ${country.currency} (${country.currencySymbol}) pricing, and trusted local payment methods before the SPA finishes loading.`,
-          bullets: [
-            `Local currency: ${country.currency} (${country.currencySymbol})`,
-            `Top payment methods: ${country.paymentMethods.slice(0, 4).join(', ')}`,
-            `Canonical URL: ${baseUrl}${gamePath}`,
-            `Country: ${country.name}`,
-          ],
-        });
+        const gameTitle = `${gameContent.h1} | Midasbuy`.slice(0, 65);
+        const gameDescription = gameContent.intro.slice(0, 158);
+        const gameBody = buildRichCountryBody(gameContent, `${baseUrl}${gamePath}`);
 
         const gameHtml = createPrerenderedHtml({
           template,
@@ -259,6 +295,7 @@ const countryPrerenderPlugin = (): Plugin => ({
           description: gameDescription,
           canonicalUrl: `${baseUrl}${gamePath}`,
           body: gameBody,
+          extraHead: faqJsonLd(gameContent),
         });
 
         const gameDir = path.resolve(`dist/midasbuy/${lowerCode}/buy/${game.slug}`);
@@ -269,6 +306,8 @@ const countryPrerenderPlugin = (): Plugin => ({
         fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}/buy/${game.slug}.html`), gameHtml, 'utf8');
       }
     }
+
+
 
     // Prerender India-only BGMI route
     if (COUNTRY_DATA.IN) {
