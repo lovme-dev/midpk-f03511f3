@@ -368,9 +368,63 @@ const countryPrerenderPlugin = (): Plugin => ({
       fs.writeFileSync(path.resolve(`dist${page.path}.html`), html, 'utf8');
     }
 
-    console.log(`🕷️ Generated prerendered HTML for ${countryEntries.length} countries × 6 routes (home + 5 games) + ${staticPages.length} static pages + BGMI`);
+    // ---- Country hub page: the crawl path Google was missing ----
+    const gameList: Array<{ slug: string; label: string }> = [
+      { slug: 'pubgm', label: 'PUBG UC' },
+      { slug: 'freefire', label: 'Free Fire Diamonds' },
+      { slug: 'roblox', label: 'Robux' },
+      { slug: 'valorant', label: 'Valorant Points' },
+      { slug: 'car', label: 'Car Skins' },
+    ];
+
+    const hubRows = countryEntries
+      .map(([code, country]) => {
+        const cc = code.toLowerCase();
+        const links = gameList
+          .map((g) => `<a href="/midasbuy/${cc}/buy/${g.slug}" style="color:#7DD3FC;margin-right:10px;font-size:13px;">${escapeHtml(g.label)}</a>`)
+          .join('');
+        return `<li style="margin:0 0 10px;font-size:15px;"><a href="/midasbuy/${cc}" style="color:#FFD166;font-weight:600;">Midasbuy ${escapeHtml(country.name)}</a><br>${links}</li>`;
+      })
+      .join('');
+
+    const hubTitle = 'All Countries — Midasbuy Game Top-Up Store Directory';
+    const hubDescription = `Browse Midasbuy top-up stores for ${countryEntries.length} countries: PUBG Mobile UC, Free Fire Diamonds, Roblox Robux, Valorant Points and PUBG car skins in local currency.`;
+    const hubBody = `
+  <main style="min-height:100vh;background:#13182B;color:#F8FAFC;font-family:system-ui,-apple-system,sans-serif;padding:32px 16px;">
+    <article style="max-width:1100px;margin:0 auto;">
+      <h1 style="margin:0 0 16px;font-size:clamp(26px,4vw,42px);">Midasbuy Country Directory</h1>
+      <p style="margin:0 0 24px;font-size:16px;line-height:1.75;color:rgba(248,250,252,.85);">${escapeHtml(hubDescription)}</p>
+      <ul style="margin:0;padding-left:20px;columns:2;column-gap:32px;">${hubRows}</ul>
+    </article>
+  </main>`;
+    const hubHtml = createPrerenderedHtml({
+      template,
+      lang: 'en',
+      title: hubTitle,
+      description: hubDescription,
+      canonicalUrl: `${baseUrl}/countries`,
+      body: hubBody,
+    });
+    fs.mkdirSync(path.resolve('dist/countries'), { recursive: true });
+    fs.writeFileSync(path.resolve('dist/countries/index.html'), hubHtml, 'utf8');
+    fs.writeFileSync(path.resolve('dist/countries.html'), hubHtml, 'utf8');
+
+    // ---- Static crawlable footer on the homepage shell (outside #root so React never removes it) ----
+    const topMarkets = countryEntries.slice(0, 40);
+    const footerNav = `<footer id="seo-country-nav" style="background:#0F1425;color:#94A3B8;font:13px/1.7 system-ui,sans-serif;padding:24px 16px;">
+      <h2 style="font-size:15px;color:#E2E8F0;margin:0 0 10px;">Midasbuy Stores by Country</h2>
+      <p style="margin:0 0 8px;">${topMarkets.map(([code, c]) => `<a href="/midasbuy/${code.toLowerCase()}" style="color:#7DD3FC;margin-right:10px;">${escapeHtml(c.name)}</a>`).join('')}</p>
+      <p style="margin:0;"><a href="/countries" style="color:#FFD166;font-weight:600;">View all ${countryEntries.length} country stores →</a></p>
+    </footer>`;
+    const homeShell = fs.readFileSync(distIndexPath, 'utf8');
+    if (!homeShell.includes('id="seo-country-nav"')) {
+      fs.writeFileSync(distIndexPath, homeShell.replace('</body>', `${footerNav}\n</body>`), 'utf8');
+    }
+
+    console.log(`🕷️ Generated prerendered HTML for ${countryEntries.length} countries × 6 routes + ${staticPages.length} static pages + BGMI + /countries hub`);
   }
 });
+
 
 // Fix source files immediately when config is loaded (during dev start)
 console.log('🔧 Fixing sitemap x-default URLs in source files...');
