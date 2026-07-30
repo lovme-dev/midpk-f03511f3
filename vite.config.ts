@@ -206,6 +206,7 @@ const createPrerenderedHtml = ({
   description,
   canonicalUrl,
   body,
+  extraHead = '',
 }: {
   template: string;
   lang: string;
@@ -213,6 +214,7 @@ const createPrerenderedHtml = ({
   description: string;
   canonicalUrl: string;
   body: string;
+  extraHead?: string;
 }) => {
   let html = template;
 
@@ -225,10 +227,12 @@ const createPrerenderedHtml = ({
   html = upsertHeadTag(html, /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/i, `<meta name="twitter:description" content="${escapeHtml(description)}">`);
   html = upsertHeadTag(html, /<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:url" content="${escapeHtml(canonicalUrl)}">`);
   html = upsertHeadTag(html, /<link\s+[^>]*rel="canonical"[^>]*>/i, `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">`);
+  if (extraHead) html = html.replace('</head>', `  ${extraHead}\n</head>`);
   html = html.replace(/<div id="root"[^>]*><\/div>/i, `<div id="root">${body}</div>`);
 
   return html;
 };
+
 
 const countryPrerenderPlugin = (): Plugin => ({
   name: 'country-prerender',
