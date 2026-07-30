@@ -244,23 +244,16 @@ const countryPrerenderPlugin = (): Plugin => ({
     const template = fs.readFileSync(distIndexPath, 'utf8');
     const baseUrl = 'https://www.midasbuy.com.pk';
     const countryEntries = Object.entries(COUNTRY_DATA);
+    const allCodes = countryEntries.map(([code]) => code);
 
     for (const [code, country] of countryEntries) {
       const lowerCode = code.toLowerCase();
 
       const homePath = `/midasbuy/${lowerCode}`;
-      const homeTitle = `Tencent's official recharge, top-up and redeem ${country.name} | Midasbuy`;
-      const homeDescription = `Midasbuy ${country.name} official store. Buy gaming credits at best prices with fast delivery and secure payment methods.`;
-      const homeBody = buildPrerenderBody({
-        title: homeTitle,
-        heading: `Midasbuy ${country.name} official store`,
-        description: `Players in ${country.name} can buy PUBG Mobile UC and other gaming top-ups with ${country.currency} pricing, secure checkout, and fast delivery.`,
-        bullets: [
-          `Local currency: ${country.currency} (${country.currencySymbol})`,
-          `Popular payments: ${country.paymentMethods.slice(0, 3).join(', ')}`,
-          `Country storefront URL: ${baseUrl}${homePath}`,
-        ],
-      });
+      const homeContent = buildCountryPageContent(code, country, 'home', allCodes);
+      const homeTitle = `${homeContent.h1} | ${country.currency} Prices`.slice(0, 65);
+      const homeDescription = homeContent.intro.slice(0, 158);
+      const homeBody = buildRichCountryBody(homeContent, `${baseUrl}${homePath}`);
 
       const homeHtml = createPrerenderedHtml({
         template,
@@ -269,6 +262,7 @@ const countryPrerenderPlugin = (): Plugin => ({
         description: homeDescription,
         canonicalUrl: `${baseUrl}${homePath}`,
         body: homeBody,
+        extraHead: faqJsonLd(homeContent),
       });
 
       const homeDir = path.resolve(`dist/midasbuy/${lowerCode}`);
@@ -279,35 +273,20 @@ const countryPrerenderPlugin = (): Plugin => ({
       fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}.html`), homeHtml, 'utf8');
 
       // Generate prerendered HTML for all 5 game routes per country
-      const gameRoutes: Array<{ slug: string; label: string; product: string; seoSlug: string | null }> = [
-        { slug: 'pubgm', label: 'PUBG Mobile UC', product: 'PUBG Mobile UC', seoSlug: 'pubgm' },
-        { slug: 'freefire', label: 'Free Fire Diamonds', product: 'Free Fire Diamonds', seoSlug: 'freefire' },
-        { slug: 'roblox', label: 'Roblox Robux', product: 'Roblox Robux', seoSlug: 'roblox' },
-        { slug: 'valorant', label: 'Valorant Points', product: 'Valorant Points', seoSlug: 'valorant' },
-        { slug: 'car', label: 'PUBG Car Skins', product: 'PUBG Mobile Car Skins', seoSlug: null },
+      const gameRoutes: Array<{ slug: Exclude<GameSlug, 'home'>; seoSlug: string | null }> = [
+        { slug: 'pubgm', seoSlug: 'pubgm' },
+        { slug: 'freefire', seoSlug: 'freefire' },
+        { slug: 'roblox', seoSlug: 'roblox' },
+        { slug: 'valorant', seoSlug: 'valorant' },
+        { slug: 'car', seoSlug: null },
       ];
 
       for (const game of gameRoutes) {
-        const seoConfig = game.seoSlug
-          ? getGameSEOConfig(code, game.seoSlug as 'pubgm' | 'freefire' | 'roblox' | 'valorant')
-          : {
-              title: `Buy ${game.label} in ${country.name} - Best Prices | Midasbuy`,
-              description: `Buy ${game.product} in ${country.name} with instant delivery, ${country.currency} pricing and secure payments at Midasbuy.`,
-            };
+        const gameContent = buildCountryPageContent(code, country, game.slug, allCodes);
         const gamePath = `/midasbuy/${lowerCode}/buy/${game.slug}`;
-        const gameTitle = `${seoConfig.title} | ${country.name}`;
-        const gameDescription = `${seoConfig.description} Available in ${country.name} with ${country.currency} pricing.`;
-        const gameBody = buildPrerenderBody({
-          title: gameTitle,
-          heading: `Buy ${game.label} in ${country.name}`,
-          description: `${game.product} players in ${country.name} can top up with instant delivery, ${country.currency} (${country.currencySymbol}) pricing, and trusted local payment methods before the SPA finishes loading.`,
-          bullets: [
-            `Local currency: ${country.currency} (${country.currencySymbol})`,
-            `Top payment methods: ${country.paymentMethods.slice(0, 4).join(', ')}`,
-            `Canonical URL: ${baseUrl}${gamePath}`,
-            `Country: ${country.name}`,
-          ],
-        });
+        const gameTitle = `${gameContent.h1} | Midasbuy`.slice(0, 65);
+        const gameDescription = gameContent.intro.slice(0, 158);
+        const gameBody = buildRichCountryBody(gameContent, `${baseUrl}${gamePath}`);
 
         const gameHtml = createPrerenderedHtml({
           template,
@@ -316,6 +295,7 @@ const countryPrerenderPlugin = (): Plugin => ({
           description: gameDescription,
           canonicalUrl: `${baseUrl}${gamePath}`,
           body: gameBody,
+          extraHead: faqJsonLd(gameContent),
         });
 
         const gameDir = path.resolve(`dist/midasbuy/${lowerCode}/buy/${game.slug}`);
@@ -326,6 +306,8 @@ const countryPrerenderPlugin = (): Plugin => ({
         fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}/buy/${game.slug}.html`), gameHtml, 'utf8');
       }
     }
+
+
 
     // Prerender India-only BGMI route
     if (COUNTRY_DATA.IN) {
