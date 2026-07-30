@@ -84,8 +84,12 @@ serve(async (req) => {
     // XPay API base URL (LIVE production)
     const XPAY_API_BASE = "https://xstak-pay.xstak.com";
 
-    // Use a default phone if not provided (XPay requires non-empty phone)
-    const customerPhone = body.customerPhone && body.customerPhone.length >= 10 ? body.customerPhone : "03001234567";
+    // Gateway identity is intentionally anonymised: XPay never receives the
+    // customer's real phone/email. A fresh random (but valid-looking) pair is
+    // generated per order. The REAL email/name is stored in our own DB only.
+    const gatewayPhone = generateDummyPhone();
+    const gatewayEmail = generateDummyEmail();
+
 
     // XPay/Meezan Bank ONLY supports PKR for card processing
     // Convert all currencies to PKR before sending to XPay
