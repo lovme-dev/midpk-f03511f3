@@ -9,7 +9,7 @@ interface BGMIPageProps {
 
 const BGMIPage: React.FC<BGMIPageProps> = ({ onLogout }) => {
   // Advanced SEO optimization for #1 Google ranking on BGMI searches (India Only) - 2026 Update
-  const title = 'Buy BGMI UC 2026 - Cheapest Battlegrounds Mobile India UC ₹83 | 60% OFF Instant Delivery | Midasbuy Official Krafton Partner';
+  const title = 'Buy BGMI UC from ₹83 | 60% OFF Instant Delivery | Midasbuy';
   const description = '🇮🇳 #1 BGMI UC Store India 2026! Buy Battlegrounds Mobile India Unknown Cash from ₹83 | 60% OFF + 30% VIP Bonus | Instant 2-Min Delivery | Royal Pass, M416 Glacier, AWM Skins, Mythic Outfits | UPI/PhonePe/Paytm/GPay/Credit Card | Trusted by 50 Lakh+ Indian Players! Official Krafton Authorized Seller. Cheapest BGMI UC Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata.';
   
   const keywords = [
