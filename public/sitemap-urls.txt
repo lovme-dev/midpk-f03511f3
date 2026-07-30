@@ -1,48 +1,15 @@
-# MIDASBUY SITEMAP URLS - Copy these directly to Google Search Console
+# MIDASBUY — sitemaps to submit in Google Search Console
 
-# Main sitemap
-https://www.midasbuy.com.pk/sitemap.xml
+https://www.midasbuy.com.pk/sitemap.xml            (index — covers everything below)
+https://www.midasbuy.com.pk/sitemap_static.xml
+https://www.midasbuy.com.pk/sitemap_countries_home.xml
+https://www.midasbuy.com.pk/sitemap_countries_pubg.xml
+https://www.midasbuy.com.pk/sitemap_countries_freefire.xml
+https://www.midasbuy.com.pk/sitemap_countries_roblox.xml
+https://www.midasbuy.com.pk/sitemap_countries_valorant.xml
+https://www.midasbuy.com.pk/sitemap_countries_car.xml
 
-# Individual page URLs for manual submission
-https://www.midasbuy.com.pk/
-https://www.midasbuy.com.pk/pubg-mobile
-https://www.midasbuy.com.pk/free-fire
-https://www.midasbuy.com.pk/bgmi
-https://www.midasbuy.com.pk/gaming-shop
-https://www.midasbuy.com.pk/pubg-accounts
-https://www.midasbuy.com.pk/honor-of-kings
-https://www.midasbuy.com.pk/about-midasbuy
-https://www.midasbuy.com.pk/contact-us
-https://www.midasbuy.com.pk/help-center
-https://www.midasbuy.com.pk/faqs
-https://www.midasbuy.com.pk/blogs
-https://www.midasbuy.com.pk/security
-https://www.midasbuy.com.pk/terms-of-service
-https://www.midasbuy.com.pk/refund-policy
-https://www.midasbuy.com.pk/track-orders
-
-# Priority URLs for PUBG UC packages (18 packages)
-https://www.midasbuy.com.pk/purchase/2250uc
-https://www.midasbuy.com.pk/purchase/4250uc
-https://www.midasbuy.com.pk/purchase/10904uc
-https://www.midasbuy.com.pk/purchase/14668uc
-https://www.midasbuy.com.pk/purchase/18341uc
-https://www.midasbuy.com.pk/purchase/22014uc
-https://www.midasbuy.com.pk/purchase/25687uc
-https://www.midasbuy.com.pk/purchase/29360uc
-https://www.midasbuy.com.pk/purchase/33033uc
-https://www.midasbuy.com.pk/purchase/36706uc
-https://www.midasbuy.com.pk/purchase/40379uc
-https://www.midasbuy.com.pk/purchase/44052uc
-https://www.midasbuy.com.pk/purchase/47725uc
-https://www.midasbuy.com.pk/purchase/51398uc
-https://www.midasbuy.com.pk/purchase/55071uc
-https://www.midasbuy.com.pk/purchase/58744uc
-https://www.midasbuy.com.pk/purchase/62417uc
-https://www.midasbuy.com.pk/purchase/66090uc
-
-# International URLs
-https://www.midasbuy.com.pk/midasbuy/pk/buy/pubgm
-https://www.midasbuy.com.pk/midasbuy/in/buy/pubgm
-https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm
-https://www.midasbuy.com.pk/midasbuy/global/buy/pubgm
+# Note: /purchase/*, /checkout/*, /pubg-mobile, /free-fire, /roblox, /valorant
+# and /gaming-shop are blocked in robots.txt (redirects / duplicates) and must
+# NOT be submitted. Country URLs live under /midasbuy/{cc} and
+# /midasbuy/{cc}/buy/{game}.
