@@ -102,8 +102,18 @@ const emailTemplates: Record<string, EmailTemplate> = {
 const getCustomerEmail = (order: Order | null | undefined): string =>
   order?.customer_email || order?.profiles?.email || '';
 
-const getCustomerName = (order: Order | null | undefined): string =>
-  order?.customer_name || order?.profiles?.full_name || getCustomerEmail(order)?.split('@')[0] || 'Customer';
+const getCustomerName = (order: Order | null | undefined): string => {
+  const raw = (order?.customer_name || '').trim();
+  const stored = raw && raw.toLowerCase() !== 'customer' ? raw : '';
+  return (
+    stored ||
+    (order as any)?.username ||
+    order?.profiles?.full_name ||
+    getCustomerEmail(order)?.split('@')[0] ||
+    'Customer'
+  );
+};
+
 
 const getStatusLabel = (status: string) =>
   status === 'refund_review' ? 'Refund Review' : status.replace(/_/g, ' ');

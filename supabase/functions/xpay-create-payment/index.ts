@@ -237,6 +237,8 @@ serve(async (req) => {
         package_id: body.packageId,
         customer_email: body.customerEmail,
         customer_name: body.customerName || null,
+        username: body.customerName || null,
+
       })
       .select()
       .single();
