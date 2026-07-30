@@ -85,29 +85,29 @@ const fixSitemapFiles = (files: string[], isDistFolder = false) => {
   return totalReplacements;
 };
 
-// Update sitemap dates to today
-const updateSitemapDates = (files: string[], isDistFolder = false) => {
-  const today = new Date().toISOString().split('T')[0];
+// Remove build-time <lastmod> values. They were derived from the build date, not
+// from a real page-specific content change, so Google ignores (or distrusts) them.
+const stripSitemapLastmod = (files: string[], isDistFolder = false) => {
   let updated = 0;
-  
-  // Also update sitemap.xml index and static
+
   const allFiles = [...files, 'public/sitemap.xml', 'public/sitemap_static.xml'];
-  
+
   for (const file of allFiles) {
     const filePath = path.resolve(isDistFolder ? file.replace('public/', 'dist/') : file);
     if (!fs.existsSync(filePath)) continue;
-    
-    let content = fs.readFileSync(filePath, 'utf8');
-    const newContent = content.replace(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g, `<lastmod>${today}</lastmod>`);
-    
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    const newContent = content.replace(/[ \t]*<lastmod>[^<]*<\/lastmod>\r?\n?/g, '');
+
     if (content !== newContent) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       updated++;
     }
   }
-  
-  if (updated > 0) console.log(`📅 Updated dates to ${today} in ${updated} sitemap files`);
+
+  if (updated > 0) console.log(`🧹 Removed build-date <lastmod> from ${updated} sitemap files`);
 };
+
 
 const escapeHtml = (value: string) =>
   value
@@ -375,7 +375,7 @@ const countryPrerenderPlugin = (): Plugin => ({
 // Fix source files immediately when config is loaded (during dev start)
 console.log('🔧 Fixing sitemap x-default URLs in source files...');
 fixSitemapFiles(SITEMAP_FILES);
-updateSitemapDates(SITEMAP_FILES);
+stripSitemapLastmod(SITEMAP_FILES);
 
 // Plugin to fix sitemap x-default URLs and dates at build time
 const sitemapFixPlugin = (): Plugin => ({
@@ -388,8 +388,8 @@ const sitemapFixPlugin = (): Plugin => ({
     const distFiles = SITEMAP_FILES.map(f => f.replace('public/', 'dist/'));
     const distReplacements = fixSitemapFiles(distFiles.map(f => f.replace('dist/', 'public/')), true);
     
-    // Update dates in dist
-    updateSitemapDates(SITEMAP_FILES, true);
+    // Drop build-date lastmod in dist
+    stripSitemapLastmod(SITEMAP_FILES, true);
     
     console.log(`🎉 Sitemap fix complete: ${distReplacements} x-default URLs updated in dist`);
   }

@@ -18,7 +18,6 @@
 
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/us</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -35,7 +34,6 @@
   <!-- BGMI India Specific URL -->
   <url>
     <loc>https://www.midasbuy.com.pk/midasbuy/in/buy/bgmi</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.98</priority>
   </url>
@@ -43,7 +41,6 @@
   <!-- PUBG Accounts -->
   <url>
     <loc>https://www.midasbuy.com.pk/pubg-accounts</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -51,7 +48,6 @@
   <!-- Honor of Kings -->
   <url>
     <loc>https://www.midasbuy.com.pk/honor-of-kings</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -59,7 +55,6 @@
   <!-- Customer Reviews Page -->
   <url>
     <loc>https://www.midasbuy.com.pk/customer-reviews</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -69,7 +64,6 @@
   <!-- Blog -->
   <url>
     <loc>https://www.midasbuy.com.pk/blogs</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -77,7 +71,6 @@
   <!-- About Us -->
   <url>
     <loc>https://www.midasbuy.com.pk/about-midasbuy</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -85,7 +78,6 @@
   <!-- Help Center -->
   <url>
     <loc>https://www.midasbuy.com.pk/help-center</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -93,7 +85,6 @@
   <!-- FAQs -->
   <url>
     <loc>https://www.midasbuy.com.pk/faqs</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -101,7 +92,6 @@
   <!-- Contact Us -->
   <url>
     <loc>https://www.midasbuy.com.pk/contact-us</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -109,7 +99,6 @@
   <!-- Press -->
   <url>
     <loc>https://www.midasbuy.com.pk/press</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -117,7 +106,6 @@
   <!-- Careers -->
   <url>
     <loc>https://www.midasbuy.com.pk/careers</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -125,7 +113,6 @@
   <!-- Partners -->
   <url>
     <loc>https://www.midasbuy.com.pk/partners</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -135,7 +122,6 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://www.midasbuy.com.pk/privacy-policy</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -143,7 +129,6 @@
   <!-- Cookie Policy -->
   <url>
     <loc>https://www.midasbuy.com.pk/cookie-policy</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -151,7 +136,6 @@
   <!-- Terms of Service -->
   <url>
     <loc>https://www.midasbuy.com.pk/terms-of-service</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -159,7 +143,6 @@
   <!-- Refund Policy -->
   <url>
     <loc>https://www.midasbuy.com.pk/refund-policy</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -167,7 +150,6 @@
   <!-- Security -->
   <url>
     <loc>https://www.midasbuy.com.pk/security</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -175,7 +157,6 @@
   <!-- Copyright Notice -->
   <url>
     <loc>https://www.midasbuy.com.pk/copyright-notice</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
