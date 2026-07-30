@@ -1050,6 +1050,11 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         productAmount: productAmount, // Base+bonus amount for database storage
         playerId: userInfo,
         email: userEmail || guestEmail || quickCheckoutEmail || '',
+        customerName:
+          userInfo?.name ||
+          (userEmail || guestEmail || quickCheckoutEmail || '').split('@')[0] ||
+          '',
+
         discountPercentage,
         originalPrice: displayOriginalPrice, // Display original price in user's currency
         pkrOriginalPrice: selectedPackage.originalPrice, // Original price in PKR

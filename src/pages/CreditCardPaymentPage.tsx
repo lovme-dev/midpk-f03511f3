@@ -41,6 +41,8 @@ interface OrderInfo {
   productAmount?: string; // Base+bonus amount format (e.g., "10+5")
   playerId: string;
   email: string;
+  customerName?: string;
+
   productImage?: string;
   packageId?: string;
   discountPercentage?: number;
