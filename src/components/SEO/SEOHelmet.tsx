@@ -51,7 +51,7 @@ const SEOHelmet = ({
   const { metaData } = usePageMeta(currentPath);
   
   // Priority: explicit props > database values > defaults
-  const finalTitle = title || metaData?.meta_title || "Midasbuy - Official Gaming Store | PUBG UC, Free Fire Diamonds";
+  const finalTitle = normalizeTitle(title || metaData?.meta_title || "Midasbuy - Official Gaming Store | PUBG UC, Free Fire Diamonds");
   const finalDescription = description || metaData?.meta_description || "Midasbuy Official - Trusted gaming store for PUBG Mobile UC, Free Fire Diamonds, and BGMI UC. Instant delivery, secure payments, best prices worldwide.";
   const finalKeywords = keywords || metaData?.meta_keywords || "Midasbuy, midasbuy official, PUBG UC, Free Fire Diamonds, BGMI UC, gaming store, buy PUBG UC, gaming currency, mobile gaming";
   const finalOgImage = ogImage !== "/og-image.png" ? ogImage : (metaData?.og_image_url || ogImage);
