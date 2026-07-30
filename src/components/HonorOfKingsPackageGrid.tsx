@@ -171,7 +171,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
                       {/* Mobile layout: logo next to text */}
                       <OptimizedImage 
                         src="/lovable-uploads/f4b0c93e-e2ae-4b42-9186-031879f1364f.png" 
-                        alt="Logo" 
+                        alt="Midasbuy logo" 
                         className="w-5 h-5 sm:hidden [@media(max-width:390px)_and_(-webkit-min-device-pixel-ratio:3)]:hidden"
                         width={24}
                         height={24}
@@ -185,7 +185,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
                     <div className="hidden [@media(max-width:390px)_and_(-webkit-min-device-pixel-ratio:3)]:absolute [@media(max-width:390px)_and_(-webkit-min-device-pixel-ratio:3)]:right-1 [@media(max-width:390px)_and_(-webkit-min-device-pixel-ratio:3)]:flex [@media(max-width:390px)_and_(-webkit-min-device-pixel-ratio:3)]:items-center">
                       <OptimizedImage 
                         src="/lovable-uploads/f4b0c93e-e2ae-4b42-9186-031879f1364f.png" 
-                        alt="Logo" 
+                        alt="Midasbuy logo" 
                         className="w-4 h-4"
                         width={24}
                         height={24}
@@ -199,7 +199,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
                     <div className="hidden sm:flex items-center absolute right-2">
                       <OptimizedImage 
                         src="/lovable-uploads/f4b0c93e-e2ae-4b42-9186-031879f1364f.png" 
-                        alt="Logo" 
+                        alt="Midasbuy logo" 
                         className="w-6 h-6"
                         width={24}
                         height={24}

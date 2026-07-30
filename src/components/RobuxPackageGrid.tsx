@@ -160,7 +160,7 @@ const RobuxPackageGrid = ({ packages, selectedCountry, linkQuery }: RobuxPackage
                   <div className="absolute right-1 sm:right-2 flex items-center">
                     <OptimizedImage 
                       src="/lovable-uploads/f4b0c93e-e2ae-4b42-9186-031879f1364f.png" 
-                      alt="Logo" 
+                      alt="Midasbuy logo" 
                       className="w-5 h-5 sm:w-6 sm:h-6"
                       width={24}
                       height={24}

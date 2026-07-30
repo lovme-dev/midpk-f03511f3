@@ -18,7 +18,7 @@ const PrivacyPolicyModal = ({ onClose }: PrivacyPolicyModalProps) => (
         <div className="flex items-center">
           <img 
             src="/lovable-uploads/c6fd77e7-3682-428e-8154-140308b4a06b.png" 
-            alt="Logo" 
+            alt="Midasbuy logo" 
             className="h-8 mr-3"
             width="155"
             height="32"

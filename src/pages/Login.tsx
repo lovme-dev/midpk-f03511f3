@@ -129,7 +129,7 @@ const Login = ({ onLogin }: LoginProps) => {
         <div className="flex justify-center mb-8">
           <img 
             src="/lovable-uploads/c6fd77e7-3682-428e-8154-140308b4a06b.png" 
-            alt="Logo" 
+            alt="Midasbuy logo" 
             className="h-12"
             width="233"
             height="48"
