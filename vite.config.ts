@@ -142,9 +142,60 @@ const buildPrerenderBody = ({
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 24px;">
         ${bullets.map((bullet) => `<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;font-size:15px;line-height:1.6;color:rgba(248,250,252,.88);">${escapeHtml(bullet)}</div>`).join('')}
       </div>
-      <p style="margin:0;font-size:14px;line-height:1.7;color:rgba(248,250,252,.62);">${escapeHtml(title)} — pre-rendered HTML snapshot for search engines before the React app loads.</p>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:rgba(248,250,252,.62);">${escapeHtml(title)}</p>
     </section>
   </main>`;
+
+// Rich, per-URL unique body for country/game pages. Every page gets its own H1,
+// its own H2 set, local facts, FAQs and internal links so Google has both unique
+// content and a crawl path into the long tail.
+const buildRichCountryBody = (content: PrerenderContent, canonicalUrl: string) => `
+  <main style="min-height:100vh;background:#13182B;color:#F8FAFC;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:32px 16px;">
+    <article style="max-width:960px;margin:0 auto;">
+      <h1 style="margin:0 0 16px;font-size:clamp(26px,4vw,42px);line-height:1.15;">${escapeHtml(content.h1)}</h1>
+      <p style="margin:0 0 28px;font-size:17px;line-height:1.75;color:rgba(248,250,252,.85);">${escapeHtml(content.intro)}</p>
+      ${content.sections
+        .map(
+          (section) => `<section style="margin:0 0 28px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);line-height:1.25;">${escapeHtml(section.h2)}</h2>
+        ${section.paragraphs.map((p) => `<p style="margin:0 0 12px;font-size:15px;line-height:1.75;color:rgba(248,250,252,.8);">${escapeHtml(p)}</p>`).join('')}
+        ${section.bullets && section.bullets.length ? `<ul style="margin:0;padding-left:20px;">${section.bullets.map((b) => `<li style="margin:0 0 6px;font-size:15px;line-height:1.65;color:rgba(248,250,252,.78);">${escapeHtml(b)}</li>`).join('')}</ul>` : ''}
+      </section>`,
+        )
+        .join('')}
+      <section style="margin:0 0 28px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);">Frequently Asked Questions</h2>
+        ${content.faqs
+          .map(
+            (faq) => `<div style="margin:0 0 14px;">
+          <h3 style="margin:0 0 6px;font-size:16px;line-height:1.4;">${escapeHtml(faq.q)}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.7;color:rgba(248,250,252,.78);">${escapeHtml(faq.a)}</p>
+        </div>`,
+          )
+          .join('')}
+      </section>
+      <nav style="margin:0 0 20px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(19px,2.6vw,26px);">Related Midasbuy Pages</h2>
+        <ul style="margin:0;padding-left:20px;">
+          ${content.relatedLinks.map((link) => `<li style="margin:0 0 6px;font-size:15px;"><a href="${escapeHtml(link.href)}" style="color:#7DD3FC;">${escapeHtml(link.label)}</a></li>`).join('')}
+        </ul>
+      </nav>
+      <p style="margin:0;font-size:13px;line-height:1.7;color:rgba(248,250,252,.5);">${escapeHtml(content.keywordLine)}</p>
+      <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
+    </article>
+  </main>`;
+
+const faqJsonLd = (content: PrerenderContent) =>
+  `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: content.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  })}</script>`;
+
 
 const createPrerenderedHtml = ({
   template,
