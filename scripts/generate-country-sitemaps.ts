@@ -23,35 +23,21 @@ const groups: Group[] = [
   { file: "sitemap_countries_car.xml", build: (cc) => `/midasbuy/${cc}/buy/car`, priority: "0.7", changefreq: "weekly" },
 ];
 
-const hreflangFor = (cc: string) => {
-  const lang = COUNTRY_DATA[cc.toUpperCase()]?.language || `en-${cc.toUpperCase()}`;
-  return lang.toLowerCase();
-};
-
 let total = 0;
 
 for (const group of groups) {
   const urls = codes
-    .map((cc) => {
-      const loc = `${BASE}${group.build(cc)}`;
-      const alternates = codes
-        .map(
-          (alt) =>
-            `    <xhtml:link rel="alternate" hreflang="${hreflangFor(alt)}" href="${BASE}${group.build(alt)}"/>`,
-        )
-        .join("\n");
-      return `  <url>
-    <loc>${loc}</loc>
+    .map(
+      (cc) => `  <url>
+    <loc>${BASE}${group.build(cc)}</loc>
     <changefreq>${group.changefreq}</changefreq>
     <priority>${group.priority}</priority>
-${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE}${group.build("us")}"/>
-  </url>`;
-    })
+  </url>`,
+    )
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
 </urlset>`;
 
