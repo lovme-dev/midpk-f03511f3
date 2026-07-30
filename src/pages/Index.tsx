@@ -980,6 +980,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               <Button 
                 variant="ghost" 
                 className="h-7 w-7 p-0 text-gray-400 hover:text-white hover:bg-transparent"
+                aria-label="Close"
                 onClick={() => setShowPlayerIdModal(false)}
               >
                 <X className="h-5 w-5" />
@@ -1126,6 +1127,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                         <p className="text-gray-400 text-xs">Player ID: {recent.playerId}</p>
                       </div>
                       <button 
+                        aria-label="Remove saved player ID"
                         className="text-gray-500 hover:text-white p-1"
                         onClick={(e) => {
                           e.stopPropagation();
