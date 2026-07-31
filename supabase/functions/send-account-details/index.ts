@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import { Resend } from "npm:resend@4.0.0";
+import { getCallerAuth, unauthorized, forbidden } from "../_shared/adminAuth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -9,7 +10,6 @@ const corsHeaders = {
 
 interface AccountDetailsRequest {
   order_id: string;
-  buyer_email: string;
 }
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
@@ -21,7 +21,18 @@ serve(async (req) => {
   }
 
   try {
-    const { order_id, buyer_email }: AccountDetailsRequest = await req.json();
+    const { order_id }: AccountDetailsRequest = await req.json();
+
+    if (!order_id) {
+      return new Response(JSON.stringify({ success: false, error: "order_id required" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    // Caller must be authenticated
+    const auth = await getCallerAuth(req);
+    if (!auth.userId) return unauthorized(corsHeaders);
 
     // Create Supabase client with service role key to access account details
     const supabaseService = createClient(
@@ -48,6 +59,19 @@ serve(async (req) => {
 
     if (orderError || !orderData) {
       throw new Error('Order not found or not completed');
+    }
+
+    // Only the order's owner (or an admin) may receive the credentials,
+    // and they are always sent to the email stored on the order.
+    if (!auth.isAdmin && orderData.user_id !== auth.userId) {
+      return forbidden(corsHeaders, "Not allowed to access this order");
+    }
+
+    const buyer_email: string | undefined =
+      orderData.buyer_email || orderData.customer_email || orderData.email;
+
+    if (!buyer_email) {
+      throw new Error('No buyer email on record for this order');
     }
 
     const account = orderData.pubg_accounts;

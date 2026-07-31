@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { useToast } from '@/hooks/use-toast';
 import { QrCode, Send, RefreshCw, CheckCircle, XCircle, MessageSquare } from 'lucide-react';
-// Removed socket.io-client import since we're using native WebSockets
+import { supabase } from '@/integrations/supabase/client';
 
 interface WhatsAppMessage {
   id: string;
@@ -38,16 +38,26 @@ export function WhatsAppControl() {
   const [isSending, setIsSending] = useState(false);
   const { toast } = useToast();
 
-  // Initialize WebSocket connection
+  // Initialize WebSocket connection (admin-only, JWT passed via query param)
   useEffect(() => {
-    // Get the correct Supabase WebSocket URL
-    const SUPABASE_URL = window.location.origin.includes('localhost') 
-      ? 'ws://127.0.0.1:54321/functions/v1/whatsapp-control'
-      : 'wss://xphijmjxpgkwhtysmcxb.supabase.co/functions/v1/whatsapp-control';
+    let newSocket: WebSocket | null = null;
+    let cancelled = false;
 
-    console.log('Connecting to WebSocket:', SUPABASE_URL);
+    const connect = async () => {
+      const { data } = await supabase.auth.getSession();
+      const token = data.session?.access_token;
+      if (!token || cancelled) return;
 
-    const newSocket = new WebSocket(SUPABASE_URL);
+      const base = import.meta.env.VITE_SUPABASE_URL.replace(/^http/, 'ws');
+      const wsUrl = `${base}/functions/v1/whatsapp-control?token=${encodeURIComponent(token)}`;
+
+      console.log('Connecting to WhatsApp Control WebSocket');
+      newSocket = new WebSocket(wsUrl);
+      setupSocket(newSocket);
+    };
+
+    const setupSocket = (newSocket: WebSocket) => {
+
 
     newSocket.onopen = () => {
       console.log('Connected to WhatsApp Control server');
@@ -135,14 +145,19 @@ export function WhatsAppControl() {
       });
     };
 
-    setSocket(newSocket);
+      setSocket(newSocket);
+    };
+
+    connect();
 
     return () => {
-      if (newSocket.readyState === WebSocket.OPEN) {
+      cancelled = true;
+      if (newSocket && newSocket.readyState === WebSocket.OPEN) {
         newSocket.close();
       }
     };
   }, [toast]);
+
 
   // Connect WhatsApp
   const handleConnect = () => {

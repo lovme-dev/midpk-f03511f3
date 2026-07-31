@@ -41,7 +41,15 @@ serve(async (req) => {
     // Verify webhook signature
     const receivedSignature = req.headers.get('x-xpay-signature') || req.headers.get('X-XPay-Signature');
     
-    if (receivedSignature) {
+    if (!receivedSignature) {
+      console.error('Missing webhook signature header');
+      return new Response(
+        JSON.stringify({ error: 'Missing signature' }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    {
       const hmac = createHmac('sha256', XPAY_WEBHOOK_SIGNATURE_SECRET);
       hmac.update(rawBody);
       const expectedSignature = hmac.digest('hex');
@@ -54,8 +62,6 @@ serve(async (req) => {
         );
       }
       console.log('Webhook signature verified');
-    } else {
-      console.log('No signature header found - processing anyway for staging');
     }
 
     // Parse webhook payload
