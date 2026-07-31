@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { getDisplayOrderId } from "../_shared/orderIdentity.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { getCallerAuth, forbidden } from "../_shared/adminAuth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -56,6 +57,14 @@ serve(async (req) => {
       return new Response(JSON.stringify({ success: false, error: "Order not found" }), {
         status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
+    }
+
+    // Only the order's owner (or an admin) may cancel a registered user's order.
+    if (order.user_id) {
+      const auth = await getCallerAuth(req);
+      if (!auth.isAdmin && auth.userId !== order.user_id) {
+        return forbidden(corsHeaders, "Not allowed to cancel this order");
+      }
     }
 
     const moveToRefundReviewAfterDelay = async (orderId: string) => {
