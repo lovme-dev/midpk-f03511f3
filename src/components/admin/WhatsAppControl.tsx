@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { useToast } from '@/hooks/use-toast';
 import { QrCode, Send, RefreshCw, CheckCircle, XCircle, MessageSquare } from 'lucide-react';
-// Removed socket.io-client import since we're using native WebSockets
+import { supabase } from '@/integrations/supabase/client';
 
 interface WhatsAppMessage {
   id: string;
