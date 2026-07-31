@@ -145,14 +145,19 @@ export function WhatsAppControl() {
       });
     };
 
-    setSocket(newSocket);
+      setSocket(newSocket);
+    };
+
+    connect();
 
     return () => {
-      if (newSocket.readyState === WebSocket.OPEN) {
+      cancelled = true;
+      if (newSocket && newSocket.readyState === WebSocket.OPEN) {
         newSocket.close();
       }
     };
   }, [toast]);
+
 
   // Connect WhatsApp
   const handleConnect = () => {
