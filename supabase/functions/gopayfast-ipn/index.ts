@@ -7,6 +7,18 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
 };
 
+async function hmacHex(secret: string, message: string): Promise<string> {
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign'],
+  );
+  const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(message));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -14,22 +26,57 @@ serve(async (req) => {
 
   try {
     const contentType = req.headers.get('content-type') || '';
+    const rawBody = req.method === 'GET' ? '' : await req.text();
     let payload: any = {};
 
     if (contentType.includes('application/json')) {
-      payload = await req.json();
-    } else if (contentType.includes('application/x-www-form-urlencoded')) {
-      const form = await req.formData();
-      form.forEach((v, k) => (payload[k] = v));
+      try { payload = JSON.parse(rawBody); } catch (_) { payload = {}; }
     } else if (req.method === 'GET') {
       const url = new URL(req.url);
       url.searchParams.forEach((v, k) => (payload[k] = v));
     } else {
-      const text = await req.text();
-      try { new URLSearchParams(text).forEach((v, k) => (payload[k] = v)); } catch (_) {}
+      try { new URLSearchParams(rawBody).forEach((v, k) => (payload[k] = v)); } catch (_) {}
     }
 
     console.log('GoPayFast IPN received:', payload);
+
+    // --- Authenticity check: reject anything we cannot verify ---
+    const securedKey = Deno.env.get('GOPAYFAST_SECURED_KEY') || '';
+    const merchantId = Deno.env.get('GOPAYFAST_MERCHANT_ID') || '';
+
+    if (!securedKey) {
+      console.error('GoPayFast IPN rejected: GOPAYFAST_SECURED_KEY not configured');
+      return new Response('UNAUTHORIZED', { status: 401, headers: { ...corsHeaders, 'Content-Type': 'text/plain' } });
+    }
+
+    const providedHash = String(
+      req.headers.get('x-signature') ||
+      req.headers.get('signature') ||
+      payload?.validation_hash ||
+      payload?.VALIDATION_HASH ||
+      payload?.signature || '',
+    ).toLowerCase();
+
+    if (!providedHash) {
+      console.error('GoPayFast IPN rejected: missing signature');
+      return new Response('UNAUTHORIZED', { status: 401, headers: { ...corsHeaders, 'Content-Type': 'text/plain' } });
+    }
+
+    const basketForHash = String(payload?.BASKET_ID || payload?.basket_id || payload?.m_payment_id || '');
+    const amountForHash = String(payload?.TRANSACTION_AMOUNT ?? payload?.transaction_amount ?? payload?.amount ?? '');
+    const errForHash = String(payload?.err_code ?? payload?.ERR_CODE ?? '');
+
+    const candidates = await Promise.all([
+      hmacHex(securedKey, rawBody),
+      hmacHex(securedKey, `${basketForHash}${amountForHash}${errForHash}`),
+      hmacHex(securedKey, `${merchantId}${basketForHash}${amountForHash}${errForHash}`),
+    ]);
+
+    if (!candidates.includes(providedHash)) {
+      console.error('GoPayFast IPN rejected: signature mismatch');
+      return new Response('UNAUTHORIZED', { status: 401, headers: { ...corsHeaders, 'Content-Type': 'text/plain' } });
+    }
+    console.log('GoPayFast IPN signature verified');
 
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
