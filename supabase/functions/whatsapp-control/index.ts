@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { WhatsAppSocketHandler } from './socket-handler.ts';
+import { requireAdmin } from '../_shared/adminAuth.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -18,6 +19,10 @@ serve(async (req) => {
   if (upgradeHeader.toLowerCase() !== "websocket") {
     return new Response("Expected WebSocket connection", { status: 400, headers: corsHeaders });
   }
+
+  // Admin-only: browsers cannot set headers on WS, so a ?token= JWT is accepted too.
+  const denied = await requireAdmin(req, corsHeaders);
+  if (denied) return denied;
 
   try {
     const { socket, response } = Deno.upgradeWebSocket(req);

@@ -1,4 +1,5 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { getCallerAuth, unauthorized, forbidden } from '../_shared/adminAuth.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -219,8 +220,14 @@ Deno.serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  const auth = await getCallerAuth(req);
+  if (!auth.userId) return unauthorized(corsHeaders);
+
   try {
     const { user_id, payload } = await req.json();
+
+    // Only admins may push to arbitrary users; others may only push to themselves.
+    if (!auth.isAdmin && user_id !== auth.userId) return forbidden(corsHeaders);
 
     if (!user_id || !payload) {
       return new Response(
