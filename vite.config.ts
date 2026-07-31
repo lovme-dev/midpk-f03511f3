@@ -411,10 +411,11 @@ const countryPrerenderPlugin = (): Plugin => ({
 
     // ---- Static crawlable footer on the homepage shell (outside #root so React never removes it) ----
     const topMarkets = countryEntries.slice(0, 40);
-    const footerNav = `<footer id="seo-country-nav" style="background:#0F1425;color:#94A3B8;font:13px/1.7 system-ui,sans-serif;padding:24px 16px;">
-      <h2 style="font-size:15px;color:#E2E8F0;margin:0 0 10px;">Midasbuy Stores by Country</h2>
-      <p style="margin:0 0 8px;">${topMarkets.map(([code, c]) => `<a href="/midasbuy/${code.toLowerCase()}" style="color:#7DD3FC;margin-right:10px;">${escapeHtml(c.name)}</a>`).join('')}</p>
-      <p style="margin:0;"><a href="/countries" style="color:#FFD166;font-weight:600;">View all ${countryEntries.length} country stores →</a></p>
+    const srOnly = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;';
+    const footerNav = `<footer id="seo-country-nav" aria-hidden="true" style="${srOnly}">
+      <h2>Midasbuy Stores by Country</h2>
+      <p>${topMarkets.map(([code, c]) => `<a href="/midasbuy/${code.toLowerCase()}">${escapeHtml(c.name)}</a>`).join(' ')}</p>
+      <p><a href="/countries">View all ${countryEntries.length} country stores</a></p>
     </footer>`;
     const homeShell = fs.readFileSync(distIndexPath, 'utf8');
     if (!homeShell.includes('id="seo-country-nav"')) {
