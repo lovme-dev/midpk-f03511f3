@@ -1,5 +1,5 @@
 // Baileys WhatsApp Web handler
-import makeWASocket, { DisconnectReason, useMultiFileAuthState } from 'https://esm.sh/@whiskeysockets/baileys@7.0.0-rc.3?target=deno';
+import makeWASocket, { DisconnectReason, useMultiFileAuthState } from 'https://esm.sh/@whiskeysockets/baileys@7.0.0-rc14?target=deno';
 import { Boom } from 'https://esm.sh/@hapi/boom@10.0.1?target=deno';
 // pino removed due to Deno incompatibility in Edge Functions
 import QRCode from 'https://esm.sh/qrcode@1.5.3?target=deno';
