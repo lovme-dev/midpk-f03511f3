@@ -132,7 +132,7 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
                     orderDetails: {
                       packageName: order.product_name || (order.uc_packages as any)?.name || 'Package',
                       productName: order.product_name || (order.uc_packages as any)?.name || 'Package',
-                      productAmount: order.product_amount,
+                      productAmount: order.product_amount ?? undefined,
                       productType: order.product_type || 'pubg_uc',
                       ucAmount: order.product_amount ? parseInt(order.product_amount) : 0,
                       price: order.price || 0,

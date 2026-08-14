@@ -505,7 +505,7 @@ export const markOrderCancelled = createServerFn({ method: 'POST' })
               orderDetails: {
                 packageName: order.product_name || 'Package',
                 productName: order.product_name || 'Package',
-                productAmount: order.product_amount,
+                productAmount: order.product_amount ?? undefined,
                 productType: order.product_type || 'pubg_uc',
                 ucAmount: parsePrimaryAmount(order.product_amount),
                 price: order.price || 0,
