@@ -264,7 +264,7 @@ const VideoCard = ({ video, onPlay, size = "normal" }: VideoCardProps) => {
       {/* Thumbnail */}
       <div className={`relative rounded-lg overflow-hidden ${isFeatured ? 'aspect-video' : 'aspect-video'} mb-2`}>
         {video.thumbnail ? (
-          <img 
+          <img loading="lazy" decoding="async" 
             src={video.thumbnail} 
             alt={video.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -360,7 +360,7 @@ const VideosPage = ({ onLogout }: VideosPageProps) => {
         
         {/* Purple Header Banner */}
         <div className="relative w-full h-16 md:h-20 overflow-hidden">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/videos-header-banner.png"
             alt="Videos Header"
             className={`w-full h-full object-cover ${isMobile ? 'object-center' : 'object-right'}`}
@@ -387,7 +387,7 @@ const VideosPage = ({ onLogout }: VideosPageProps) => {
                 onClick={() => handlePlayVideo(featuredVideo.youtubeUrl)}
               >
                 {featuredVideo.thumbnail ? (
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={featuredVideo.thumbnail} 
                     alt={featuredVideo.title}
                     className="w-full h-full object-cover"

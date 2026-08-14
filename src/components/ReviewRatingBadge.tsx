@@ -24,7 +24,7 @@ const ReviewRatingBadge = ({
       className={`flex flex-col items-center gap-1 cursor-pointer group ${className}`}
     >
       {/* Star Image */}
-      <img 
+      <img loading="lazy" decoding="async" 
         src={reviewStars} 
         alt="Review Stars" 
         className="h-5 w-auto object-contain"

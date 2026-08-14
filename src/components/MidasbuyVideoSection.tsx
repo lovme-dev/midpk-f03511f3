@@ -107,7 +107,7 @@ const VideoCard = ({ video, onPlay, isMobile = false }: VideoCardProps) => {
     >
       {/* Thumbnail */}
       <div className="relative rounded-lg overflow-hidden aspect-video mb-2">
-        <img 
+        <img loading="lazy" decoding="async" 
           src={video.thumbnail} 
           alt={video.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

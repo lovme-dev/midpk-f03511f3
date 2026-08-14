@@ -680,7 +680,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                     <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
                        {/* Placeholder for Game Lobby Image */}
                        <div className="absolute inset-0 flex items-center justify-center">
-                         <img 
+                         <img loading="lazy" decoding="async" 
                            src="https://img.freepik.com/free-vector/video-game-concept-illustration_114360-6379.jpg" 
                            alt="Game Lobby" 
                            className="w-full h-full object-cover opacity-60"
@@ -697,7 +697,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                     <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
                         {/* Placeholder for Profile Image */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <img 
+                          <img loading="lazy" decoding="async" 
                             src="https://img.freepik.com/free-vector/hud-interface-futuristic-blue-virtual-graphic-touch-user-interface-target_1150-37146.jpg" 
                             alt="Profile Page" 
                             className="w-full h-full object-cover opacity-60"

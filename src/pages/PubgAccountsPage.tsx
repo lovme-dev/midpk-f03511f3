@@ -171,7 +171,7 @@ export default function PubgAccountsPage() {
             <ArrowLeft className="h-2 w-2 md:h-2.5 md:w-2.5" />
             Go Back
           </Button>
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/lovable-uploads/f9014f76-d71e-47a5-a559-8cad50748020.png" 
             alt="Midasbuy Logo" 
             className="h-8 md:h-10 object-contain"
@@ -181,7 +181,7 @@ export default function PubgAccountsPage() {
         {/* Page Title */}
         <div className="text-center mb-4">
           <div className="flex justify-center items-center gap-2 mb-2">
-            <img 
+            <img loading="lazy" decoding="async" 
               src="/lovable-uploads/c1bc564c-d6a4-4bb3-b141-6dd354f122bf.png" 
               alt="PUBG Logo" 
               className="h-6 w-6 md:h-8 md:w-8 object-contain rounded-lg"

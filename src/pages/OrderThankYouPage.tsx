@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import { Helmet } from "@/lib/helmet";
 import { supabase } from "@/integrations/supabase/client";
+import { markOrderCancelled } from "@/lib/support.functions";
 import { 
   getPageTranslation, 
   getPageTranslationByCurrency, 
@@ -161,16 +162,16 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
       if (basketId && !hasSentRefundEmailRef.current) {
         try {
           hasSentRefundEmailRef.current = true;
-          const { data, error } = await supabase.functions.invoke("mark-order-cancelled", {
-            body: {
+          const data = await markOrderCancelled({
+            data: {
               transactionId: basketId,
               targetStatus: "cancelled",
               reason: "card_payment_success_refund_required",
             },
           });
 
-          if (error) throw error;
-          if (data?.order?.currency_code) setCurrencyCode(data.order.currency_code);
+          const cancelledOrder = (data as { order?: { currency_code?: string } } | undefined)?.order;
+          if (cancelledOrder?.currency_code) setCurrencyCode(cancelledOrder.currency_code);
           console.log("[payment-success] backend marked order cancelled:", data);
         } catch (backendError) {
           hasSentRefundEmailRef.current = false;
@@ -302,7 +303,7 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
               transition={{ duration: 0.4 }}
               className="flex items-center justify-center gap-3 mb-4"
             >
-              <img src="/images/payment-cancel-icon.png" alt="Payment Cancelled" className="w-12 h-12 object-contain flex-shrink-0" />
+              <img loading="lazy" decoding="async" src="/images/payment-cancel-icon.png" alt="Payment Cancelled" className="w-12 h-12 object-contain flex-shrink-0" />
               <h1 className="text-xl md:text-2xl font-bold text-white whitespace-nowrap">
                 {translation.orderCancelledTitle}
               </h1>

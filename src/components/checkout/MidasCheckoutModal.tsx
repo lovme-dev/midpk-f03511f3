@@ -1297,14 +1297,14 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                   {isShopProduct ? (
                     <div className="flex items-center gap-2">
                       {shopProductImage && (
-                        <img src={shopProductImage} alt={shopProductTitle} className="w-7 h-7 object-cover rounded-md" />
+                        <img loading="lazy" decoding="async" src={shopProductImage} alt={shopProductTitle} className="w-7 h-7 object-cover rounded-md" />
                       )}
                       <span className="text-[14px] font-bold text-white truncate max-w-[200px]">{shopProductTitle}</span>
                       <span className="text-[#8b91a0] text-[12px] ml-1">Total: 1 {shopProductLabel}</span>
                     </div>
                   ) : (
                     <div className="flex items-center gap-2">
-                      <img src={isRoblox ? selectedPackage?.image : "/images/uc-small-icon.png"} alt={isRoblox ? "Robux" : "UC"} className="w-6 h-5 object-contain" />
+                      <img loading="lazy" decoding="async" src={isRoblox ? selectedPackage?.image : "/images/uc-small-icon.png"} alt={isRoblox ? "Robux" : "UC"} className="w-6 h-5 object-contain" />
                       <span className="text-[16px] font-bold text-white">{selectedPackage.baseAmount}</span>
                       {selectedPackage.bonusAmount > 0 && (
                         <>
@@ -1396,14 +1396,14 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#ffc400]/20 via-transparent to-transparent rounded-lg blur-sm"></div>
                                 {isShopProduct ? (
                                   shopProductImage ? (
-                                    <img src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                    <img loading="lazy" decoding="async" src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                   ) : (
-                                    <img src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                    <img loading="lazy" decoding="async" src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                   )
                                 ) : isPubgCar ? (
-                                  <img src={selectedPackage.image} alt={carName || "Car Skin"} className="w-full h-full object-contain rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                  <img loading="lazy" decoding="async" src={selectedPackage.image} alt={carName || "Car Skin"} className="w-full h-full object-contain rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                 ) : isFreeFire ? (
-                                  <img
+                                  <img loading="lazy" decoding="async"
                                     src={selectedPackage?.image || "/images/free-fire-diamond-icon.jpeg"}
                                     alt="Diamonds"
                                     className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]"
@@ -1413,9 +1413,9 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                     }}
                                   />
                                 ) : isRoblox ? (
-                                  <img src={selectedPackage?.image} alt="Robux" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                  <img loading="lazy" decoding="async" src={selectedPackage?.image} alt="Robux" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                 ) : (
-                                  <img src="/images/uc-stack-icon.png" alt="UC Stack" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                  <img loading="lazy" decoding="async" src="/images/uc-stack-icon.png" alt="UC Stack" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                 )}
                             </div>
                             <div className="flex flex-col">
@@ -1457,9 +1457,9 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                   <>
                                      <div className="flex items-center gap-1">
                                       {isRoblox ? (
-                                        <img src={selectedPackage?.image} alt="Robux" className="w-7 h-6 object-contain" />
+                                        <img loading="lazy" decoding="async" src={selectedPackage?.image} alt="Robux" className="w-7 h-6 object-contain" />
                                       ) : (
-                                        <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                        <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
                                       )}
                                       <span className="text-[18px] font-bold text-white leading-none">{selectedPackage.baseAmount}</span>
                                       {selectedPackage.bonusAmount > 0 && (
@@ -1496,17 +1496,17 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                             <span className="text-white font-medium text-[14px] truncate max-w-[180px]">{shopProductTitle}</span>
                                           ) : isFreeFire ? (
                                             <>
-                                              <img src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
+                                              <img loading="lazy" decoding="async" src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{selectedPackage.baseAmount}</span>
                                             </>
                                           ) : isRoblox ? (
                                             <>
-                                              <img src={selectedPackage?.image} alt="Robux" className="w-6 h-6 object-contain" />
+                                              <img loading="lazy" decoding="async" src={selectedPackage?.image} alt="Robux" className="w-6 h-6 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{selectedPackage.baseAmount}</span>
                                             </>
                                           ) : (
                                             <>
-                                              <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
+                                              <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{selectedPackage.baseAmount}</span>
                                             </>
                                           )}
@@ -1520,17 +1520,17 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                             <span className="text-white font-bold text-[16px]">1 {shopProductLabel}</span>
                                           ) : isFreeFire ? (
                                             <>
-                                              <img src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
+                                              <img loading="lazy" decoding="async" src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{totalUC}</span>
                                             </>
                                           ) : isRoblox ? (
                                             <>
-                                              <img src={selectedPackage?.image} alt="Robux" className="w-6 h-6 object-contain" />
+                                              <img loading="lazy" decoding="async" src={selectedPackage?.image} alt="Robux" className="w-6 h-6 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{totalUC}</span>
                                             </>
                                           ) : (
                                             <>
-                                              <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
+                                              <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{totalUC}</span>
                                             </>
                                           )}
@@ -1682,7 +1682,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                         <div className="mt-4 flex items-center justify-between w-full">
                           <div className="flex items-center gap-3">
                             <div className="w-[58px] h-[40px] flex items-center justify-center">
-                              <img 
+                              <img loading="lazy" decoding="async" 
                                 src="/images/credit-card-icon.png" 
                                 alt="Credit Card" 
                                 className="w-full h-full object-contain"
@@ -1752,7 +1752,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                             </div>
 
                             <div className="mt-4 flex items-center justify-between w-full">
-                                <img 
+                                <img loading="lazy" decoding="async" 
                                   src="/images/pk-payment-methods.png" 
                                   alt="Payment Methods" 
                                   className="h-7 w-auto object-contain"
@@ -1795,7 +1795,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           </div>
 
                           <div className="mt-4 flex items-center gap-3">
-                              <img 
+                              <img loading="lazy" decoding="async" 
                                 src={binanceLogoFull} 
                                 alt="Binance" 
                                 className="h-6 w-auto"
@@ -1882,18 +1882,18 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                <div className="absolute inset-0 bg-gradient-to-br from-[#ffc400]/15 via-transparent to-transparent rounded-lg blur-sm"></div>
                                {isShopProduct ? (
                                  shopProductImage ? (
-                                   <img src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
+                                   <img loading="lazy" decoding="async" src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
                                  ) : (
-                                   <img src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
+                                   <img loading="lazy" decoding="async" src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
                                  )
                                ) : isPubgCar ? (
-                                 <img
+                                 <img loading="lazy" decoding="async"
                                    src={selectedPackage.image}
                                    alt={carName || "Car Skin"}
                                    className="w-full h-full object-contain rounded-lg relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]"
                                  />
                                 ) : isFreeFire ? (
-                                  <img
+                                  <img loading="lazy" decoding="async"
                                     src={selectedPackage?.image || "/images/free-fire-diamond-icon.jpeg"}
                                     alt="Diamonds"
                                     className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]"
@@ -1903,7 +1903,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                     }}
                                   />
                                 ) : (
-                                 <img
+                                 <img loading="lazy" decoding="async"
                                    src="/images/uc-stack-icon.png"
                                    alt="UC Stack"
                                    className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]"
@@ -1939,7 +1939,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                ) : (
                                  <>
                                    <div className="flex items-center gap-1">
-                                       <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                       <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
                                        <span className="text-white font-bold text-lg">{selectedPackage.baseAmount}</span>
                                        {selectedPackage.bonusAmount > 0 && (
                                          <span className="text-midasbuy-gold font-bold">+{selectedPackage.bonusAmount}</span>
@@ -1970,7 +1970,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                               }}
                             >
                               <div className="flex items-center gap-2">
-                                {!isFreeFire && <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />}
+                                {!isFreeFire && <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />}
                                 <span className="text-white">{pkg.baseAmount}</span>
                                 <span className="text-midasbuy-gold">+{pkg.bonusAmount}</span>
                               </div>
@@ -1992,12 +1992,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                  <span className="text-white font-medium">1 Car Skin</span>
                                ) : isFreeFire ? (
                                  <div className="flex items-center gap-1.5">
-                                   <img src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
+                                   <img loading="lazy" decoding="async" src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
                                    <span className="text-white font-medium">{selectedPackage.baseAmount}</span>
                                  </div>
                                ) : (
                                  <div className="flex items-center gap-1.5">
-                                     <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                     <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
                                      <span className="text-white font-medium">{selectedPackage.baseAmount}</span>
                                  </div>
                                )}
@@ -2010,12 +2010,12 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                  <span className="text-white font-medium">1 Car Skin</span>
                                ) : isFreeFire ? (
                                  <div className="flex items-center gap-1.5">
-                                   <img src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
+                                   <img loading="lazy" decoding="async" src="/images/free-fire-diamond-icon.jpeg" alt="Diamonds" className="w-6 h-6 object-contain" />
                                    <span className="text-white font-medium">{totalUC} Diamonds</span>
                                  </div>
                                ) : (
                                  <div className="flex items-center gap-1.5">
-                                     <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                     <img loading="lazy" decoding="async" src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
                                      <span className="text-white font-medium">{totalUC}</span>
                                  </div>
                                )}
@@ -2310,7 +2310,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           <div>
                             <p className="text-[#8b91a0] text-[13px] mb-2.5">1. Find your ID in your profile page</p>
                             <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
-                               <img 
+                               <img loading="lazy" decoding="async" 
                                  src="/assets/freefire-player-id-help.webp" 
                                  alt="Finding Player ID in Free Fire Profile" 
                                  className="w-full h-full object-cover"
@@ -2328,7 +2328,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           <div>
                             <p className="text-[#8b91a0] text-[13px] mb-2.5">1.1. Enter the game</p>
                             <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
-                               <img 
+                               <img loading="lazy" decoding="async" 
                                  src="/images/pubg-player-id-step1.jpeg" 
                                  alt="Game Lobby - Click on your profile" 
                                  className="w-full h-full object-cover"
@@ -2339,7 +2339,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                           <div>
                             <p className="text-[#8b91a0] text-[13px] mb-2.5">1.2. Find your player ID</p>
                             <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
-                               <img 
+                               <img loading="lazy" decoding="async" 
                                  src="/images/pubg-player-id-step2.jpeg" 
                                  alt="Profile Page - Copy your UID" 
                                  className="w-full h-full object-cover"

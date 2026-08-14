@@ -226,8 +226,9 @@ Thank you for choosing Midasbuy! We appreciate your business.`
 
     setIsSending(true);
     try {
-      const { error } = await supabase.functions.invoke('send-inquiry-reply', {
-        body: {
+      const { sendInquiryReply } = await import('@/lib/emails.functions');
+      const result = await sendInquiryReply({
+        data: {
           customerEmail: targetEmail,
           customerName: targetName || 'Valued Customer',
           subject: emailSubject,
@@ -237,7 +238,7 @@ Thank you for choosing Midasbuy! We appreciate your business.`
         },
       });
 
-      if (error) throw error;
+      if ('error' in result && result.error) throw new Error(String(result.error));
 
       // Log the email send
       const { data: { user } } = await supabase.auth.getUser();

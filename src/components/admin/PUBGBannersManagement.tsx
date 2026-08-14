@@ -414,7 +414,7 @@ export default function PUBGBannersManagement() {
                 {/* Image Preview */}
                 {banner?.image_url ? (
                   <div className="relative">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={banner.image_url} 
                       alt={bannerType.title}
                       className="w-full max-w-lg rounded-lg shadow-lg border border-border"

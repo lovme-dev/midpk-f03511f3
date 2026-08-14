@@ -119,7 +119,7 @@ const PartnersPage = ({ onLogout }: PartnersPageProps) => {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-white rounded-lg p-2 mr-4 flex items-center justify-center">
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={partner.logo} 
                         alt={partner.name} 
                         className="max-w-full max-h-full object-contain"

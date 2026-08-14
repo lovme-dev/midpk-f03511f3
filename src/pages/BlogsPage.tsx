@@ -186,7 +186,7 @@ const BlogsPage = () => {
                 >
                   {blog.featured_image_url && (
                     <div className="aspect-video overflow-hidden">
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={blog.featured_image_url} 
                         alt={blog.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

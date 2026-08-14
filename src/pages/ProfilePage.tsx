@@ -239,7 +239,7 @@ export default function ProfilePage() {
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full p-[3px] bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-all duration-500">
                     <div className="relative w-full h-full rounded-full overflow-hidden bg-slate-950 flex items-center justify-center">
                       {formState.avatarUrl ? (
-                        <img 
+                        <img loading="lazy" decoding="async" 
                           src={formState.avatarUrl} 
                           alt="Profile" 
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

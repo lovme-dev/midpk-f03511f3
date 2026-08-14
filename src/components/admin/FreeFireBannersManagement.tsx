@@ -208,7 +208,7 @@ export default function FreeFireBannersManagement() {
               <CardContent className="space-y-4">
                 {banner?.image_url && (
                   <div className="relative rounded-lg overflow-hidden bg-gray-900 p-2">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={banner.image_url} 
                       alt={bannerType.title}
                       className="w-full h-32 object-contain rounded"

@@ -754,7 +754,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                       {/* Game Info */}
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg overflow-hidden bg-[#1a2a3f]">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={getGameLogo(searchResult.productType, searchResult.gameName)}
                             alt={searchResult.gameName}
                             className="w-full h-full object-cover"
@@ -864,7 +864,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                         <div className="flex items-start gap-3">
                           {/* Game Logo - Smaller square icon like in banner */}
                           <div className="flex-shrink-0 w-8 h-8 rounded-lg overflow-hidden bg-[#1a2a3f]">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src={getGameLogo(order.productType, order.gameName)}
                               alt={order.gameName}
                               className="w-full h-full object-cover"

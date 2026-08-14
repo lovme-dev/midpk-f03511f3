@@ -298,7 +298,7 @@ const RedeemTabContent = ({ gameBrand = 'PUBG MOBILE', onOpenPlayerIdModal, save
                   </div>
 
                   {/* VIP icon (not clipped) */}
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={vipRedeemLogo}
                     alt="VIP"
                     className="absolute left-0 top-0 w-9 h-9 object-contain -translate-y-1/4 -translate-x-[22%]"
@@ -443,7 +443,7 @@ const RedeemTabContent = ({ gameBrand = 'PUBG MOBILE', onOpenPlayerIdModal, save
                 <span className="text-white text-sm md:text-xl lg:text-2xl font-bold tracking-wide" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '0.05em' }}>Tencent</span>
                 <div className="w-px h-4 md:h-7 bg-gray-400/50"></div>
                 <div className="flex items-center gap-2">
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={midasbuyLogo} 
                     alt="Midasbuy" 
                     className="h-5 md:h-9 lg:h-10 object-contain"

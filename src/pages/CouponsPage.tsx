@@ -56,7 +56,7 @@ const CouponsPage = ({ onLogout }: CouponsPageProps) => {
         <div className="flex-1 flex flex-col items-center justify-center px-4 py-20">
           {/* Coupon Icon Image */}
           <div className="mb-6">
-            <img 
+            <img loading="lazy" decoding="async" 
               src={couponEmptyIcon} 
               alt="No coupons" 
               className="w-24 h-24 object-contain"

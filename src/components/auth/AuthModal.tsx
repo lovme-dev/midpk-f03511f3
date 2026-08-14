@@ -328,7 +328,7 @@ export function AuthModal() {
         {/* Header - only logo, sticky */}
         <div className="px-4 py-1 flex justify-between items-center sticky top-0 z-40 bg-transparent">
           <div className="flex items-center">
-            <img
+            <img loading="lazy" decoding="async"
               src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png"
               alt="Midasbuy Logo"
               className="h-4"
@@ -583,7 +583,7 @@ export function AuthModal() {
                 <div className="space-y-3">
                   <div className="flex gap-3 items-center">
                     <div className="w-11 h-11 flex-shrink-0 flex items-center justify-center">
-                      <img src={authShieldIcon} alt="Official" className="w-10 h-10 object-contain" />
+                      <img loading="lazy" decoding="async" src={authShieldIcon} alt="Official" className="w-10 h-10 object-contain" />
                     </div>
                     <div className="space-y-0">
                       <h4 className="text-[13px] font-bold text-white">Official Recharge Store by Tencent</h4>
@@ -595,7 +595,7 @@ export function AuthModal() {
 
                   <div className="flex gap-3 items-center">
                     <div className="w-11 h-11 flex-shrink-0 flex items-center justify-center">
-                      <img src={authGiftIcon} alt="Benefits" className="w-10 h-10 object-contain" />
+                      <img loading="lazy" decoding="async" src={authGiftIcon} alt="Benefits" className="w-10 h-10 object-contain" />
                     </div>
                     <div className="space-y-0">
                       <h4 className="text-[13px] font-bold text-white">Benefits</h4>

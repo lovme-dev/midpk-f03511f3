@@ -711,7 +711,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img 
+          <img loading="lazy" decoding="async" 
             src={miraIcon} 
             alt="Mira - Click to chat" 
             className="w-18 h-18 md:w-24 md:h-24 object-contain drop-shadow-lg"
@@ -797,7 +797,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                     <div className="flex items-start gap-3 max-w-[90%] md:max-w-[80%]">
                       {/* Mira Profile Image */}
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 overflow-hidden border-2 border-cyan-400/50">
-                        <img 
+                        <img loading="lazy" decoding="async" 
                           src={miraProfile} 
                           alt="Mira" 
                           className="w-full h-full object-cover"
@@ -815,7 +815,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                           {/* Display image if present */}
                           {message.image && (
                             <div className="mb-2">
-                              <img 
+                              <img loading="lazy" decoding="async" 
                                 src={message.image} 
                                 alt="Uploaded content" 
                                 className="max-w-full max-h-48 rounded-lg object-cover"
@@ -873,7 +873,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                       >
                         {message.image && (
                           <div className="mb-2">
-                            <img 
+                            <img loading="lazy" decoding="async" 
                               src={message.image} 
                               alt="Uploaded content" 
                               className="max-w-full max-h-48 rounded-lg object-cover"
@@ -896,7 +896,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
               {isTyping && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 overflow-hidden border-2 border-cyan-400/50">
-                    <img src={miraProfile} alt="Mira" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={miraProfile} alt="Mira" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-white/70 text-sm mb-1">Mira</span>
@@ -929,7 +929,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
             {/* Image preview section */}
             {uploadedImage && (
               <div className="mb-3 relative inline-block">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={uploadedImage} 
                   alt="Preview" 
                   className="h-16 w-16 object-cover rounded-lg border-2 border-cyan-400"
