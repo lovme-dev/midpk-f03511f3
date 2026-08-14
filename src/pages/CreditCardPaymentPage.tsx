@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate } from '@/lib/router-compat';
 import { CheckCircle, ChevronRight, ChevronDown, Trash2, X, Loader2 } from 'lucide-react';
 import shieldIcon from '@/assets/shield-secure-icon.png';
 import visaIcon from '@/assets/cards/visa.png';

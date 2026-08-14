@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import SEOHelmet from '@/components/SEO/SEOHelmet';
 
 interface AboutMidasbuyPageProps {

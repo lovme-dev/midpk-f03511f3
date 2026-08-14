@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "@/lib/router-compat";
 import { getCountryConfig } from "@/utils/countryConfigs";
 
 // Check if the current user agent is a search engine bot

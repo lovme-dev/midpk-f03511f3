@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Shield, Cookie, Eye, BarChart3, Target, Settings, Clock, Globe, Mail, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useLocalization } from '@/contexts/LocalizationContext';

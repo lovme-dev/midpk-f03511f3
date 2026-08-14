@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { CookieSettingsModal, CookiePreferences } from './CookieSettingsModal';
 
 const COOKIE_CONSENT_KEY = 'midasbuy_cookie_consent';

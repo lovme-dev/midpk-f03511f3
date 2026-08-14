@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ArrowLeft, AlertTriangle, CheckCircle, HelpCircle, CreditCard, RefreshCw, MessageSquare } from "lucide-react";
 import Header from "@/components/Header";

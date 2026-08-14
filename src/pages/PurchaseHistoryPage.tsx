@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { useResponsive } from "@/hooks/use-mobile";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { 
   Card,
   CardContent

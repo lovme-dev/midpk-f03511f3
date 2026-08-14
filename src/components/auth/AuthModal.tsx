@@ -5,7 +5,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useAuth } from "@/hooks/useAuth";
 import { useAuthModal } from "@/contexts/AuthModalContext";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import authShieldIcon from "@/assets/auth-shield-icon.png";
 import authGiftIcon from "@/assets/auth-gift-icon.png";
 import loginIconGoogle from "@/assets/login-icon-google.jpeg";

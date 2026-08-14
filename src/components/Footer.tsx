@@ -1,5 +1,5 @@
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { useState, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
 import PrivacyPolicyModal from "./PrivacyPolicyModal";

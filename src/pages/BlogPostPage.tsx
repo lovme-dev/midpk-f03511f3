@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from '@/lib/router-compat';
 import { Calendar, Clock, User, Tag, ArrowLeft, Share2 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import SEOHelmet from '@/components/SEO/SEOHelmet';

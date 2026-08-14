@@ -22,7 +22,7 @@ import {
   UCStackIcon, 
   SingleUCIcon 
 } from '@/components/checkout/CheckoutIcons';
-import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from '@/lib/router-compat';
 
 interface MidasCheckoutPageProps {
   onLogout?: () => void;

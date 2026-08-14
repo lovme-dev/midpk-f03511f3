@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ChevronRight, Filter, Search, X, Loader2, CheckCircle, Clock, XCircle, AlertCircle, ClipboardPaste } from "lucide-react";
 import Header from "@/components/Header";
