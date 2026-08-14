@@ -624,8 +624,9 @@ export function OrdersManagement() {
         const packageName = orderToUpdate.uc_packages?.name || orderToUpdate.product_name || 'Package';
         
         try {
-          await supabase.functions.invoke('send-order-status-notification', {
-            body: {
+          const { sendOrderStatusNotification } = await import('@/lib/emails.functions');
+          await sendOrderStatusNotification({
+            data: {
               user_id: orderToUpdate.user_id,
               order_id: orderToUpdate.id,
               new_status: newStatus,
@@ -655,8 +656,9 @@ export function OrdersManagement() {
           try {
             const ucAmount = orderToUpdate.uc_packages?.uc_amount || parseInt(orderToUpdate.product_amount || '0') || 0;
             
-            await supabase.functions.invoke('send-order-email', {
-              body: {
+            const { sendOrderEmail } = await import('@/lib/emails.functions');
+            await sendOrderEmail({
+              data: {
                 userId: orderToUpdate.user_id,
                 orderId: orderToUpdate.id,
                 emailType: 'refund',
@@ -667,10 +669,10 @@ export function OrdersManagement() {
                   paymentMethod: orderToUpdate.payment_method || 'Unknown',
                   playerId: orderToUpdate.player_id || 'N/A',
                   transactionId: orderToUpdate.transaction_id || orderToUpdate.id,
-                  productType: orderToUpdate.product_type || null,
-                  productName: orderToUpdate.product_name || null,
-                  productCode: orderToUpdate.product_code || null,
-                  productAmount: orderToUpdate.product_amount || null,
+                  productType: orderToUpdate.product_type || undefined,
+                  productName: orderToUpdate.product_name || undefined,
+                  productCode: orderToUpdate.product_code || undefined,
+                  productAmount: orderToUpdate.product_amount || undefined,
                   currencyCode: orderToUpdate.currency_code || 'PKR',
                 },
               },
@@ -697,8 +699,9 @@ export function OrdersManagement() {
           const ucAmount = orderToUpdate.uc_packages?.uc_amount || parseInt(orderToUpdate.product_amount || '0') || 0;
           const packageName = orderToUpdate.uc_packages?.name || orderToUpdate.product_name || 'Package';
           
-          await supabase.functions.invoke('send-order-email', {
-            body: {
+          const { sendOrderEmail } = await import('@/lib/emails.functions');
+          await sendOrderEmail({
+            data: {
               userId: orderToUpdate.user_id,
               orderId: orderToUpdate.id,
               emailType: 'refund',
@@ -709,10 +712,10 @@ export function OrdersManagement() {
                 paymentMethod: orderToUpdate.payment_method || 'Unknown',
                 playerId: orderToUpdate.player_id || 'N/A',
                 transactionId: orderToUpdate.transaction_id || orderToUpdate.id,
-                productType: orderToUpdate.product_type || null,
-                productName: orderToUpdate.product_name || null,
-                productCode: orderToUpdate.product_code || null,
-                productAmount: orderToUpdate.product_amount || null,
+                productType: orderToUpdate.product_type || undefined,
+                productName: orderToUpdate.product_name || undefined,
+                productCode: orderToUpdate.product_code || undefined,
+                productAmount: orderToUpdate.product_amount || undefined,
                 currencyCode: orderToUpdate.currency_code || 'PKR',
               },
             },
@@ -958,34 +961,41 @@ export function OrdersManagement() {
         description: `Sending ${emailType} email to ${getCustomerEmail(order)} (${countryCode})`,
       });
 
-      const { data, error } = await supabase.functions.invoke('send-order-email', {
-        body: {
-          userId: order.user_id,
-          orderId: order.id,
-          emailType: emailType,
-          orderDetails: {
-            packageName,
-            ucAmount: customizations?.customAmount ? parseInt(customizations.customAmount) || ucAmount : ucAmount,
-            price: order.price || 0,
-            paymentMethod: order.payment_method || 'Unknown',
-            playerId: order.player_id || 'N/A',
-            transactionId: order.transaction_id || order.id,
-            // Pass product type details for dynamic email content
-            productType: order.product_type || null,
-            productName: customizations?.customPackageName || order.product_name || null,
-            productCode: order.product_code || null,
-            productAmount: customizations?.customAmount || order.product_amount || null,
-            currencyCode: order.currency_code || 'PKR',
-            countryCode: countryCode, // For language detection in email
+      let data: any, error: any;
+      try {
+        const { sendOrderEmail } = await import('@/lib/emails.functions');
+        data = await sendOrderEmail({
+          data: {
+            userId: order.user_id,
+            orderId: order.id,
+            emailType: emailType,
+            orderDetails: {
+              packageName,
+              ucAmount: customizations?.customAmount ? parseInt(customizations.customAmount) || ucAmount : ucAmount,
+              price: order.price || 0,
+              paymentMethod: order.payment_method || 'Unknown',
+              playerId: order.player_id || 'N/A',
+              transactionId: order.transaction_id || order.id,
+              // Pass product type details for dynamic email content
+              productType: order.product_type || undefined,
+              productName: customizations?.customPackageName || order.product_name || undefined,
+              productCode: order.product_code || undefined,
+              productAmount: customizations?.customAmount || order.product_amount || undefined,
+              currencyCode: order.currency_code || 'PKR',
+              countryCode: countryCode, // For language detection in email
+            },
+            // Pass customizations to server function
+            customizations: customizations ? {
+              customSubject: customizations.customSubject,
+              customDeliveryMessage: customizations.customDeliveryMessage,
+              customNote: customizations.customNote,
+            } : undefined,
           },
-          // Pass customizations to edge function
-          customizations: customizations ? {
-            customSubject: customizations.customSubject,
-            customDeliveryMessage: customizations.customDeliveryMessage,
-            customNote: customizations.customNote,
-          } : undefined,
-        },
-      });
+        });
+        if (data?.error) error = data.error;
+      } catch (e: any) {
+        error = e?.message || e;
+      }
 
       if (error) {
         console.error('Email send error:', error);

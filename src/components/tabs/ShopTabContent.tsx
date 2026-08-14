@@ -237,7 +237,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
                   >
                     {/* Image Container - shifted 2% right for PC */}
                     <div className="relative w-full overflow-visible pl-[2%]" style={{ paddingBottom: '8px' }}>
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={game.image} 
                         alt={game.name} 
                         className="w-full aspect-square object-cover rounded-[1.2rem] rounded-br-[2rem] rounded-tl-[2rem] transition-transform group-hover:scale-105"
@@ -265,7 +265,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
                   >
                     {/* Image Container - shifted 2% right for PC */}
                     <div className="relative w-full overflow-visible pl-[2%]" style={{ paddingBottom: '8px' }}>
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={game.image} 
                         alt={game.name} 
                         className="w-full aspect-square object-cover rounded-[1.2rem] rounded-br-[2rem] rounded-tl-[2rem] transition-transform group-hover:scale-105"

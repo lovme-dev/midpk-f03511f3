@@ -318,7 +318,7 @@ export function WhatsAppControl() {
             </CardHeader>
             <CardContent className="flex justify-center">
               <div className="bg-white p-4 rounded-lg">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={qrCode} 
                   alt="WhatsApp QR Code" 
                   className="w-48 h-48 object-contain"

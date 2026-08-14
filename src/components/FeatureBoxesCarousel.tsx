@@ -406,7 +406,7 @@ const FeatureBoxesCarousel: React.FC<FeatureBoxesCarouselProps> = ({ className, 
                     </div>
                   )
                 ) : (
-                  <img 
+                  <img decoding="async" 
                     ref={el => {
                       if (el) imageRefs.current[index] = el;
                     }}

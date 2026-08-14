@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { usePurchaseNotifications } from "@/hooks/useAuthNotifications";
 import { supabase } from "@/integrations/supabase/client";
 import { notifyAdminNewOrder } from "@/lib/notifications.functions";
+import { sendOrderEmail } from '@/lib/emails.functions';
 
 interface PaymentSuccessPageProps {
   onLogout: () => void;
@@ -123,15 +124,15 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
 
               // Send automatic refund email to customer
               try {
-                await supabase.functions.invoke('send-order-email', {
-                  body: {
+                await sendOrderEmail({
+                  data: {
                     userId: user.id,
                     orderId: order.id,
                     emailType: 'refund',
                     orderDetails: {
                       packageName: order.product_name || (order.uc_packages as any)?.name || 'Package',
                       productName: order.product_name || (order.uc_packages as any)?.name || 'Package',
-                      productAmount: order.product_amount,
+                      productAmount: order.product_amount ?? undefined,
                       productType: order.product_type || 'pubg_uc',
                       ucAmount: order.product_amount ? parseInt(order.product_amount) : 0,
                       price: order.price || 0,

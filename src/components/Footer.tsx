@@ -82,8 +82,8 @@ const Footer = ({ showWhyTopUp = false, countryFAQSlot }: FooterProps) => {
               className="flex items-center gap-3 hover:opacity-90 transition-opacity"
             >
               <div className="flex flex-col items-start gap-1 leading-none flex-shrink-0">
-                <img src={trustpilotLogo} alt="Trustpilot rating logo" className="h-3 w-auto" />
-                <img src={trustpilotStars} alt="Trustpilot 5 star customer rating" className="h-4 w-auto" />
+                <img loading="lazy" decoding="async" src={trustpilotLogo} alt="Trustpilot rating logo" className="h-3 w-auto" />
+                <img loading="lazy" decoding="async" src={trustpilotStars} alt="Trustpilot 5 star customer rating" className="h-4 w-auto" />
               </div>
               <span className="text-xs text-gray-400 leading-tight mt-auto">{t('footer.verifiedReviews', '80,837 verified reviews')}</span>
             </Link>

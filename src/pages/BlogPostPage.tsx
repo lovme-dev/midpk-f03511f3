@@ -259,7 +259,7 @@ const BlogPostPage = () => {
         {/* Featured Image */}
         {blog.featured_image_url && (
           <div className="mb-8">
-            <img 
+            <img loading="lazy" decoding="async" 
               src={blog.featured_image_url} 
               alt={blog.title}
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
@@ -292,7 +292,7 @@ const BlogPostPage = () => {
                 >
                   {relatedBlog.featured_image_url && (
                     <div className="aspect-video overflow-hidden">
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={relatedBlog.featured_image_url} 
                         alt={relatedBlog.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

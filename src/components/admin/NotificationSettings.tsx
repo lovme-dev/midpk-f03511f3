@@ -365,12 +365,18 @@ function TestEmailCard() {
   const sendTest = async () => {
     if (!to) return;
     setSending(true);
-    const { data, error } = await supabase.functions.invoke('send-test-email', {
-      body: { to, subject: 'Midasbuy Test Email', message: 'Yeh test email hai — agar mil gai to email delivery working hai ✅' },
-    });
+    let data: any;
+    try {
+      const { sendTestEmail } = await import('@/lib/emails.functions');
+      data = await sendTestEmail({
+        data: { to, subject: 'Midasbuy Test Email', message: 'Yeh test email hai — agar mil gai to email delivery working hai ✅' },
+      });
+    } catch (error: any) {
+      data = { success: false, error: error?.message };
+    }
     setSending(false);
-    if (error || (data as any)?.success === false) {
-      const details = (data as any)?.error?.message || (data as any)?.error || error?.message;
+    if (data?.success === false) {
+      const details = data?.error?.message || data?.error;
       toast({ title: 'Failed to send', description: String(details), variant: 'destructive' });
     } else {
       toast({ title: 'Test email sent', description: `Sent to ${to}` });

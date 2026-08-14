@@ -750,7 +750,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
 
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
           <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
-            <img 
+            <img loading="lazy" decoding="async" 
               src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
               alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
               className="w-12 h-12 rounded-lg object-cover shadow-lg"
@@ -827,7 +827,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             
             {/* Characters Image - only show if admin uploaded one */}
             {charactersImage && (
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={charactersImage} 
                 alt="PUBG Characters" 
                 className="absolute top-0 right-0 w-[65%] h-full object-contain object-right z-10 pointer-events-none"
@@ -841,7 +841,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             {/* PUBG Mobile Logo, Title, Official Badge & Subscribe - OVER banner - SMALLER - Always LTR */}
             <div className={`absolute left-0 flex items-center gap-2 px-3 z-20 ${gameBrand === 'BGMI' ? 'bottom-6' : 'bottom-6'}`} dir="ltr">
               {/* PUBG Mobile Logo - smaller */}
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
                 alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
                 className="w-12 h-12 rounded-lg object-cover shadow-lg"

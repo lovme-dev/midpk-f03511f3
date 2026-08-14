@@ -398,7 +398,7 @@ ${questionDetails}
                   key={index} 
                   className="relative w-16 h-16 rounded-lg overflow-hidden bg-[#1a2a3f] border border-[#2a3a4f]"
                 >
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={URL.createObjectURL(img)} 
                     alt={`Upload ${index + 1}`}
                     className="w-full h-full object-cover"

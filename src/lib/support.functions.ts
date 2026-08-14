@@ -496,15 +496,16 @@ export const markOrderCancelled = createServerFn({ method: 'POST' })
         }
 
         try {
-          await supabaseAdmin.functions.invoke('send-order-email', {
-            body: {
+          const { sendOrderEmail } = await import('./emails.functions');
+          await sendOrderEmail({
+            data: {
               userId: order.user_id,
               orderId: order.id,
               emailType: 'refund',
               orderDetails: {
                 packageName: order.product_name || 'Package',
                 productName: order.product_name || 'Package',
-                productAmount: order.product_amount,
+                productAmount: order.product_amount ?? undefined,
                 productType: order.product_type || 'pubg_uc',
                 ucAmount: parsePrimaryAmount(order.product_amount),
                 price: order.price || 0,

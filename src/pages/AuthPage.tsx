@@ -364,7 +364,7 @@ export default function AuthPage() {
               style={{ background: "transparent" }}
             >
               <div className="flex items-center">
-                <img
+                <img loading="lazy" decoding="async"
                   src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png"
                   alt="Midasbuy Logo"
                   className="h-5"
@@ -627,7 +627,7 @@ export default function AuthPage() {
                     <div className="space-y-5">
                       <div className="flex gap-4 items-center">
                         <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center">
-                          <img src={authShieldIcon} alt="Official" className="w-12 h-12 object-contain" />
+                          <img loading="lazy" decoding="async" src={authShieldIcon} alt="Official" className="w-12 h-12 object-contain" />
                         </div>
                         <div className="space-y-0.5">
                           <h4 className="text-[14px] font-bold text-white">Official Recharge Store by Tencent</h4>
@@ -639,7 +639,7 @@ export default function AuthPage() {
 
                       <div className="flex gap-4 items-center">
                         <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center">
-                          <img src={authGiftIcon} alt="Benefits" className="w-12 h-12 object-contain" />
+                          <img loading="lazy" decoding="async" src={authGiftIcon} alt="Benefits" className="w-12 h-12 object-contain" />
                         </div>
                         <div className="space-y-0.5">
                           <h4 className="text-[14px] font-bold text-white">Benefits</h4>

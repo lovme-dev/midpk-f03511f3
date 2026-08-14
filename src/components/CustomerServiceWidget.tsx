@@ -77,7 +77,7 @@ export function CustomerServiceWidget({ whatsappNumber }: CustomerServiceWidgetP
 
         {/* Character image - moved 2% up */}
         <div className="relative" style={{ marginTop: '-2%' }}>
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/lovable-uploads/c68519df-0213-4770-ae3f-d0a385c8c373.png" 
             alt="Mira Assistant" 
             className="w-14 h-14 object-contain"

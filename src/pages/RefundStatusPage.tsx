@@ -845,7 +845,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                       {(() => {
                                         const { image, isFreeFire } = getPackageImageByOrder(item);
                                         return (
-                                          <img 
+                                          <img loading="lazy" decoding="async" 
                                             src={image} 
                                             alt={item.packageName}
                                             className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -986,7 +986,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                         {(() => {
                                           const { image, isFreeFire } = getPackageImageByOrder(item);
                                           return (
-                                            <img 
+                                            <img loading="lazy" decoding="async" 
                                               src={image} 
                                               alt={item.packageName}
                                               className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1083,7 +1083,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                           {(() => {
                                             const { image, isFreeFire } = getPackageImageByOrder(item);
                                             return (
-                                              <img 
+                                              <img loading="lazy" decoding="async" 
                                                 src={image} 
                                                 alt={item.packageName}
                                                 className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1190,7 +1190,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                     {(() => {
                                       const { image, isFreeFire } = getPackageImageByOrder(item);
                                       return (
-                                        <img 
+                                        <img loading="lazy" decoding="async" 
                                           src={image} 
                                           alt={item.packageName}
                                           className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1306,7 +1306,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                           {(() => {
                                             const { image, isFreeFire } = getPackageImageByOrder(item);
                                             return (
-                                              <img 
+                                              <img loading="lazy" decoding="async" 
                                                 src={image} 
                                                 alt={item.packageName}
                                                 className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}

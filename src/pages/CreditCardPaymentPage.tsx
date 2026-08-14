@@ -282,7 +282,7 @@ const CreditCardPaymentPage: React.FC = () => {
               </div>
             ) : (
               <div className="flex justify-center mb-4">
-                <img
+                <img loading="lazy" decoding="async"
                   src={cardVerificationGif}
                   alt="Card Verification"
                   className="w-40 h-auto"
@@ -326,7 +326,7 @@ const CreditCardPaymentPage: React.FC = () => {
                       <X className="w-5 h-5 text-white" />
                     </div>
                   ) : verificationStep > 1 ? (
-                    <img src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
+                    <img loading="lazy" decoding="async" src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
                   ) : verificationStep === 1 ? (
                     <div className="w-8 h-8 rounded-full border-[3px] border-blue-500 border-t-transparent animate-spin" />
                   ) : (
@@ -349,7 +349,7 @@ const CreditCardPaymentPage: React.FC = () => {
                       <X className="w-5 h-5 text-white" />
                     </div>
                   ) : verificationStep > 2 ? (
-                    <img src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
+                    <img loading="lazy" decoding="async" src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
                   ) : verificationStep === 2 ? (
                     <div className="w-8 h-8 rounded-full border-[3px] border-blue-500 border-t-transparent animate-spin" />
                   ) : (
@@ -372,7 +372,7 @@ const CreditCardPaymentPage: React.FC = () => {
                       <X className="w-5 h-5 text-white" />
                     </div>
                   ) : verificationStep > 3 ? (
-                    <img src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
+                    <img loading="lazy" decoding="async" src={verifiedBadge} alt="Verified" className="w-8 h-8 object-contain" />
                   ) : verificationStep === 3 ? (
                     <div className="w-8 h-8 rounded-full border-[3px] border-blue-500 border-t-transparent animate-spin" />
                   ) : (
@@ -388,7 +388,7 @@ const CreditCardPaymentPage: React.FC = () => {
             </div>
             
             <div className="flex justify-center pb-6">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={safetyPaymentBadge} 
                 alt="Safety Payment of MidasRC" 
                 className="h-6 object-contain opacity-60"
@@ -420,7 +420,7 @@ const CreditCardPaymentPage: React.FC = () => {
       {/* --- HEADER --- */}
       <header className="bg-[#121d33] text-white pt-4 lg:pt-6 pb-10 lg:pb-14 relative overflow-hidden">
         <div className="absolute right-[10px] md:right-[60px] lg:right-[120px] top-[-5px] md:top-0 lg:top-2 opacity-[0.12] pointer-events-none">
-          <img 
+          <img loading="lazy" decoding="async" 
             src={shieldIcon} 
             alt="" 
             className="w-[130px] h-[130px] md:w-[170px] md:h-[170px] lg:w-[200px] lg:h-[200px] object-contain"
@@ -429,7 +429,7 @@ const CreditCardPaymentPage: React.FC = () => {
 
         <div className="px-5 lg:px-8 xl:px-16 lg:max-w-6xl lg:mx-auto flex justify-between items-center mb-4 lg:mb-6">
           <div className="flex items-center">
-             <img 
+             <img loading="lazy" decoding="async" 
                src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png" 
                alt="Midasbuy Logo" 
                className="h-5 lg:h-7 w-auto"
@@ -512,7 +512,7 @@ const CreditCardPaymentPage: React.FC = () => {
                   <div className="flex items-center justify-between py-3 border-b border-gray-50">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                        <img src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
                       </div>
                       <span className="text-[13px] font-medium text-gray-800">{orderInfo?.productName || '60 UC'}</span>
                     </div>
@@ -524,7 +524,7 @@ const CreditCardPaymentPage: React.FC = () => {
                   <div className="flex items-center justify-between py-3 border-b border-gray-50">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                        <img src={voucherIcon} alt="Event Voucher" className="w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" src={voucherIcon} alt="Event Voucher" className="w-full h-full object-cover" />
                       </div>
                       <span className="text-[13px] font-medium text-gray-800">Event Voucher (Use in event)</span>
                     </div>
@@ -584,13 +584,13 @@ const CreditCardPaymentPage: React.FC = () => {
                   </div>
                   
                   <div className="flex flex-wrap gap-1.5 items-center">
-                    <img src={visaIcon} className="h-4 lg:h-5 object-contain" alt="Visa" />
-                    <img src={mastercardIcon} className="h-4 lg:h-5 object-contain" alt="Mastercard" />
-                    <img src={amexIcon} className="h-4 lg:h-5 object-contain" alt="Amex" />
-                    <img src={unionpayIcon} className="h-4 lg:h-5 object-contain" alt="UnionPay" />
-                    <img src={jcbIcon} className="h-4 lg:h-5 object-contain" alt="JCB" />
-                    <img src={discoverIcon} className="h-4 lg:h-5 object-contain" alt="Discover" />
-                    <img src={dinersIcon} className="h-4 lg:h-5 object-contain" alt="Diners Club" />
+                    <img loading="lazy" decoding="async" src={visaIcon} className="h-4 lg:h-5 object-contain" alt="Visa" />
+                    <img loading="lazy" decoding="async" src={mastercardIcon} className="h-4 lg:h-5 object-contain" alt="Mastercard" />
+                    <img loading="lazy" decoding="async" src={amexIcon} className="h-4 lg:h-5 object-contain" alt="Amex" />
+                    <img loading="lazy" decoding="async" src={unionpayIcon} className="h-4 lg:h-5 object-contain" alt="UnionPay" />
+                    <img loading="lazy" decoding="async" src={jcbIcon} className="h-4 lg:h-5 object-contain" alt="JCB" />
+                    <img loading="lazy" decoding="async" src={discoverIcon} className="h-4 lg:h-5 object-contain" alt="Discover" />
+                    <img loading="lazy" decoding="async" src={dinersIcon} className="h-4 lg:h-5 object-contain" alt="Diners Club" />
                   </div>
                 </div>
 
@@ -709,7 +709,7 @@ const CreditCardPaymentPage: React.FC = () => {
 
                     {/* PCI Info Row - Inside card form section */}
                     <div className="pt-3 mt-2 border-t border-gray-100 flex items-center gap-2.5">
-                      <img src={pciIcon} alt="PCI" className="h-4 lg:h-5 object-contain" />
+                      <img loading="lazy" decoding="async" src={pciIcon} alt="PCI" className="h-4 lg:h-5 object-contain" />
                       <p className="text-[9px] lg:text-[11px] text-gray-400 font-medium leading-tight">
                         Your Card Information is secured by PCI DSS compliant systems.
                       </p>
@@ -739,7 +739,7 @@ const CreditCardPaymentPage: React.FC = () => {
                  <span className="text-[11px] font-bold text-gray-800 tracking-tight">Link your card and enjoy your rewards!</span>
               </div>
               <div className="bg-[#fff7ef] rounded-md p-3 flex items-center gap-3 relative overflow-hidden">
-                 <img src={giftBoxIcon} className="w-10 h-10 object-contain animate-[wiggle_1s_ease-in-out_infinite]" alt="Gift" />
+                 <img loading="lazy" decoding="async" src={giftBoxIcon} className="w-10 h-10 object-contain animate-[wiggle_1s_ease-in-out_infinite]" alt="Gift" />
                  <div className="flex-1">
                    <p className="text-[10px] text-[#e67e22] font-bold leading-tight">
                      Save a card to get now! Just mark the checkbox below. <span className="underline cursor-pointer">Check details</span>
@@ -760,7 +760,7 @@ const CreditCardPaymentPage: React.FC = () => {
                 <div className="flex items-center justify-between py-4 border-b border-gray-50">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                      <img src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-[14px] font-medium text-gray-800">{orderInfo?.productName || '60 UC'}</span>
                   </div>
@@ -772,7 +772,7 @@ const CreditCardPaymentPage: React.FC = () => {
                 <div className="flex items-center justify-between py-4 border-b border-gray-50">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                      <img src={voucherIcon} alt="Event Voucher" className="w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" src={voucherIcon} alt="Event Voucher" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-[14px] font-medium text-gray-800">Event Voucher (Use in event)</span>
                   </div>
@@ -859,7 +859,7 @@ const CreditCardPaymentPage: React.FC = () => {
         </div>
         
         <div className="flex justify-center mt-6 mb-4">
-          <img src={safetyPaymentBadge} alt="Safety Payment of Midasbuy" className="h-6 object-contain" />
+          <img loading="lazy" decoding="async" src={safetyPaymentBadge} alt="Safety Payment of Midasbuy" className="h-6 object-contain" />
         </div>
         
         <div className="text-center px-6 pb-6">
@@ -922,7 +922,7 @@ const CreditCardPaymentPage: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-8 mb-4">
-          <img src={safetyPaymentBadge} alt="Safety Payment of Midasbuy" className="h-8 object-contain" />
+          <img loading="lazy" decoding="async" src={safetyPaymentBadge} alt="Safety Payment of Midasbuy" className="h-8 object-contain" />
         </div>
 
         <div className="text-center px-6 pb-8">
