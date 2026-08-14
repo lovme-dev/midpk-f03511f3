@@ -3,7 +3,7 @@
 
 // NOTE: Cache names are versioned. Bump these when changing caching logic
 // to force clients to drop old cached modules that can cause blank screens.
-const CACHE_NAME = 'midasbuy-v10';
+const CACHE_NAME = 'midasbuy-v9';
 const RUNTIME_CACHE = 'midasbuy-runtime-v4';
 const IMAGE_CACHE = 'midasbuy-images-v4';
 const urlsToCache = [

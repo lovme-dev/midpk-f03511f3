@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Shield, BarChart3, Target, Settings, Cookie, Check } from 'lucide-react';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 
 interface CookieSettingsModalProps {
   isOpen: boolean;

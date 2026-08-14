@@ -57,15 +57,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const { toast } = useToast();
 
   useEffect(() => {
-    let active = true;
-    const finishLoading = () => {
-      if (active) setLoading(false);
-    };
-
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, currentSession) => {
-        if (!active) return;
         // Synchronous updates only - no async operations in callback
         setSession(currentSession);
         setUser(currentSession?.user ?? null);
@@ -81,26 +75,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     );
 
     // Then verify session from server (this will update if cached was stale)
-    supabase.auth.getSession()
-      .then(({ data: { session: serverSession } }) => {
-        if (!active) return;
-        setSession(serverSession);
-        setUser(serverSession?.user ?? null);
-      })
-      .catch((error) => {
-        console.error('[Auth] Session check failed:', error);
-      })
-      .finally(finishLoading);
+    supabase.auth.getSession().then(({ data: { session: serverSession } }) => {
+      setSession(serverSession);
+      setUser(serverSession?.user ?? null);
+      setLoading(false);
+    });
 
-    // The storefront is public. A slow or unavailable auth service must never
-    // leave visitors behind a full-screen loader.
-    const loadingTimeout = window.setTimeout(finishLoading, 2500);
-
-    return () => {
-      active = false;
-      window.clearTimeout(loadingTimeout);
-      subscription.unsubscribe();
-    };
+    return () => subscription.unsubscribe();
   }, []);
 
   const checkRateLimit = async (email: string): Promise<boolean> => {

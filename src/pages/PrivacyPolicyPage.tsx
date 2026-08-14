@@ -1,6 +1,6 @@
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from 'react-helmet-async';
 import { Shield, User, Database, Lock, Globe, Share2, Clock, Mail, ChevronRight, Eye, FileText, AlertTriangle } from 'lucide-react';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -95,7 +95,7 @@ const PrivacyPolicyPage = ({ onLogout }: PrivacyPolicyPageProps) => {
         <meta name="description" content="Learn how Midasbuy collects, uses, and protects your personal information. Your privacy and data security are our top priorities." />
       </Helmet>
 
-      <Header onLogout={onLogout ?? (() => {})} />
+      <Header onLogout={onLogout} />
 
       <main className="pt-20 pb-16">
         {/* Hero Section */}

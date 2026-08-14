@@ -12,7 +12,7 @@ import { Slider } from '@/components/ui/slider';
 
 interface FreeFireBanner {
   id: string;
-  banner_key: string | null;
+  banner_key: string;
   title: string | null;
   description: string | null;
   image_url: string;
@@ -53,7 +53,7 @@ export default function FreeFireBannersManagement() {
       console.error('Error fetching banners:', error);
       toast({ variant: 'destructive', title: 'Failed to fetch banners', description: error.message });
     } else {
-      setBanners((data || []) as unknown as typeof banners);
+      setBanners(data || []);
     }
     setLoading(false);
   };
@@ -208,7 +208,7 @@ export default function FreeFireBannersManagement() {
               <CardContent className="space-y-4">
                 {banner?.image_url && (
                   <div className="relative rounded-lg overflow-hidden bg-gray-900 p-2">
-                    <img loading="lazy" decoding="async" 
+                    <img 
                       src={banner.image_url} 
                       alt={bannerType.title}
                       className="w-full h-32 object-contain rounded"

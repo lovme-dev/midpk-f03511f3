@@ -12,7 +12,7 @@ import { Slider } from '@/components/ui/slider';
 
 interface BGMIBanner {
   id: string;
-  banner_key: string | null;
+  banner_key: string;
   title: string | null;
   description: string | null;
   image_url: string;
@@ -53,7 +53,7 @@ export default function BGMIBannersManagement() {
       console.error('Error fetching banners:', error);
       toast({ variant: 'destructive', title: 'Failed to fetch banners', description: error.message });
     } else {
-      setBanners((data || []) as unknown as typeof banners);
+      setBanners(data || []);
     }
     setLoading(false);
   };
@@ -363,7 +363,7 @@ export default function BGMIBannersManagement() {
                 {/* Image Preview */}
                 {banner?.image_url ? (
                   <div className="relative">
-                    <img loading="lazy" decoding="async" 
+                    <img 
                       src={banner.image_url} 
                       alt={bannerType.title}
                       className="w-full max-w-lg rounded-lg shadow-lg border border-border"

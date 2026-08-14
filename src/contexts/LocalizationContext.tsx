@@ -6,7 +6,7 @@
  */
 
 import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
-import { useLocation } from '@/lib/router-compat';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getLanguageForCountry, isRTLLanguage, COUNTRY_LANGUAGE_MAP } from '@/utils/countryLanguageMapping';
 

@@ -1,0 +1,463 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Performance optimizations to prevent forced reflows */
+@layer utilities {
+  .optimize-animation {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .optimize-layout {
+    contain: layout style;
+  }
+  
+  .optimize-paint {
+    contain: paint;
+  }
+}
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 207 89% 50%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 207 89% 50%;
+
+    /* Brand gradient (replaces hex gradients in components) */
+    --brand-from: 194 100% 50%; /* ~#00c6ff */
+    --brand-to: 212 100% 50%; /* ~#0072ff */
+
+    /* Game card badge (All Games) */
+    --game-badge-from: 28 93% 55%;
+    --game-badge-mid: 24 94% 50%;
+    --game-badge-to: 18 92% 46%;
+    --game-badge-shadow: 24 94% 50%;
+ 
+    --radius: 0.5rem;
+
+    /* Admin sidebar tokens */
+    --sidebar: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-accent: 215.4 16.3% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+
+    /* Auth specific tokens */
+    --auth-bg: 220 39% 11%;
+    --auth-card: 220 13% 18%;
+    --auth-facebook: 221 44% 41%;
+    --auth-success: 142 76% 36%;
+    --auth-warning: 0 84% 55%;
+    --auth-glow: 207 89% 50%;
+    
+    /* Free Fire theme colors - Darker Yellow */
+    --freefire-primary: 45 75% 35%;
+    --freefire-secondary: 48 80% 40%;
+    --freefire-accent: 50 85% 45%;
+  }
+ 
+  .dark {
+    --background: 220 39% 11%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 220 13% 18%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 207 89% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 207 89% 50%;
+
+    /* Brand gradient */
+    --brand-from: 194 100% 50%;
+    --brand-to: 212 100% 50%;
+
+    /* Game card badge (All Games) */
+    --game-badge-from: 28 93% 55%;
+    --game-badge-mid: 24 94% 50%;
+    --game-badge-to: 18 92% 46%;
+    --game-badge-shadow: 24 94% 50%;
+
+    /* Auth specific tokens for dark mode */
+    --auth-bg: 220 39% 11%;
+    --auth-card: 220 13% 18%;
+    --auth-facebook: 221 44% 41%;
+    --auth-success: 142 76% 36%;
+    --auth-warning: 0 84% 55%;
+    --auth-glow: 207 89% 50%;
+    
+    /* Free Fire theme colors - Darker Yellow */
+    --freefire-primary: 45 75% 35%;
+    --freefire-secondary: 48 80% 40%;
+    --freefire-accent: 50 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    /* Prevent zoom */
+    touch-action: pan-x pan-y;
+    -ms-touch-action: pan-x pan-y;
+  }
+
+  /* Prevent image downloads and interactions */
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+  }
+
+  /* Re-enable selection for input fields and text areas */
+  input, textarea, [contenteditable], button {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    pointer-events: auto;
+  }
+  
+  button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-white rounded-md bg-midasbuy-blue hover:bg-midasbuy-blue/80 transition-colors;
+  }
+  .btn-secondary {
+    @apply text-white rounded-md bg-midasbuy-navy border border-gray-700 hover:border-midasbuy-blue/60 transition-colors;
+  }
+  
+  /* Auto-scaling text for translations that may overflow */
+  .text-fit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .text-fit-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Scale text to fit container width */
+  .text-scale-fit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: clamp(0.65rem, 2.5vw, 1rem);
+  }
+  
+  .text-scale-fit-sm {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: clamp(0.5rem, 2vw, 0.875rem);
+  }
+}
+
+/* Blue corner light effect */
+.corner-light-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle at 0 0, rgba(51, 195, 240, 0.15) 0%, rgba(10, 19, 40, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hide scrollbar for all browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Banner container styles */
+.banner-container {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1 !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.banner-container img {
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Universal styles for all devices (mobile, tablet, and desktop) */
+html, body, #root {
+  background-color: #13182B !important;
+}
+
+/* Mobile header styling for all devices */
+.mobile-header-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background-image: url('/lovable-uploads/e33ca810-fb7f-4547-93f5-5bebd483dd05.png?v=3');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Add overlay for better text visibility across all devices */
+.mobile-header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(to bottom, rgba(19, 24, 43, 0.2) 0%, rgba(19, 24, 43, 0.5) 50%, #13182B 100%);
+  z-index: 1;
+}
+
+/* Ensure content is above the banner on all devices */
+.mobile-content {
+  position: relative;
+  z-index: 5;
+  padding-top: 4rem;
+}
+
+/* Adjust header for all devices so it appears over the banner */
+.mobile-header {
+  position: relative;
+  z-index: 10;
+  background: transparent !important;
+}
+
+/* Force all content to be on top of the background on all devices */
+.mobile-main-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Adjust title styling for consistency */
+.mobile-pubg-title {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Adjust icon on all devices */
+.mobile-pubg-icon {
+  width: 28px;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .mobile-pubg-title {
+    font-size: 1.75rem;
+  }
+  
+  .corner-light-effect {
+    width: 50%;
+    height: 35%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-pubg-title {
+    font-size: 2rem;
+  }
+}
+
+html, body, #root {
+  background-color: #13182B !important;
+}
+
+.min-h-screen.bg-midasbuy-darkBlue {
+  background-color: #13182B !important;
+}
+
+/* Hide scrollbars for AutoScrollableRow */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure mobile popups are always visible */
+@media (max-width: 768px) {
+  .mobile-popup-safe {
+    max-height: 75vh !important;
+    max-width: 85vw !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+  
+  .mobile-popup-content {
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+    padding: 0.5rem !important;
+  }
+  
+  /* Ensure notification dropdown is properly sized on mobile */
+  .notification-mobile {
+    width: 85vw !important;
+    max-width: 400px !important;
+    max-height: 75vh !important;
+  }
+  
+  .notification-content-mobile {
+    max-height: 45vh !important;
+  }
+  
+  /* Compact button styles for mobile popups */
+  .mobile-popup-button {
+    padding: 0.375rem 0.5rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
+  
+  .mobile-popup-text {
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+/* Safe Area Insets for iOS PWA */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Prevent horizontal scroll on mobile and set global background */
+html, body, #root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  background-color: #13182B !important;
+}
+
+/* Mobile chat slide-up animation */
+@keyframes slide-up-mobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-mobile {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.chat-slide-up {
+  animation: slide-up-mobile 0.3s ease-out forwards;
+}
+
+.chat-slide-down {
+  animation: slide-down-mobile 0.3s ease-out forwards;
+}

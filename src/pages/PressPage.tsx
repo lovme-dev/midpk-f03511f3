@@ -1,4 +1,4 @@
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Users, TrendingUp, Award, FileText, Camera } from "lucide-react";
 import Header from "@/components/Header";

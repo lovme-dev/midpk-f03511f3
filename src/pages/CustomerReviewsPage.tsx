@@ -24,7 +24,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { useNavigate } from '@/lib/router-compat';
+import { useNavigate } from 'react-router-dom';
 import { useAuthModal } from '@/contexts/AuthModalContext';
 import defaultAvatar from '@/assets/default-avatar.jpeg';
 import SEOHelmet from '@/components/SEO/SEOHelmet';
@@ -290,7 +290,7 @@ const ReviewCard = ({ review, index, onLike, onAddComment, onDelete, isLoggedIn,
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
           <div className="relative">
-            <img loading="lazy" decoding="async" 
+            <img 
               src={review.avatar} 
               alt={review.author} 
               className="w-12 h-12 rounded-full object-cover border-2 border-slate-600"
@@ -409,7 +409,7 @@ const ReviewCard = ({ review, index, onLike, onAddComment, onDelete, isLoggedIn,
             <div className="space-y-3 mb-4 pl-2 max-h-60 overflow-y-auto pr-1">
               {review.comments.map((comment) => (
                 <div key={comment.id} className="flex gap-3 text-sm">
-                  <img loading="lazy" decoding="async" src={comment.avatar} alt={comment.author} className="w-8 h-8 rounded-full border border-slate-600 shrink-0" />
+                  <img src={comment.avatar} alt={comment.author} className="w-8 h-8 rounded-full border border-slate-600 shrink-0" />
                   <div className="bg-slate-700/40 rounded-lg p-3 flex-1">
                     <div className="flex justify-between items-center mb-1">
                       <span className="font-semibold text-slate-200 text-xs">{comment.author}</span>
@@ -425,9 +425,9 @@ const ReviewCard = ({ review, index, onLike, onAddComment, onDelete, isLoggedIn,
           <form onSubmit={handleCommentSubmit} className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center shrink-0 overflow-hidden">
               {userAvatarUrl ? (
-                <img loading="lazy" decoding="async" src={userAvatarUrl} alt="You" className="w-full h-full object-cover" />
+                <img src={userAvatarUrl} alt="You" className="w-full h-full object-cover" />
               ) : (
-                <img loading="lazy" decoding="async" src={defaultAvatar} alt="You" className="w-full h-full object-cover" />
+                <img src={defaultAvatar} alt="You" className="w-full h-full object-cover" />
               )}
             </div>
             <div className="relative flex-1">
@@ -497,7 +497,7 @@ const WriteReviewModal = ({ isOpen, onClose, onSubmit, userProfile }: WriteRevie
           {/* Profile Display (Read-only) */}
           <div className="flex justify-center mb-4">
             <div className="w-20 h-20 rounded-full bg-slate-800 border-2 border-slate-600 overflow-hidden">
-              <img loading="lazy" decoding="async" 
+              <img 
                 src={userProfile.avatarUrl || defaultAvatar} 
                 alt="Your Profile" 
                 className="w-full h-full object-cover" 

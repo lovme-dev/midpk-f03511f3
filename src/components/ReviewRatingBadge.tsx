@@ -1,4 +1,4 @@
-import { useNavigate } from "@/lib/router-compat";
+import { useNavigate } from "react-router-dom";
 import reviewStars from "@/assets/review-stars.png";
 
 interface ReviewRatingBadgeProps {
@@ -24,7 +24,7 @@ const ReviewRatingBadge = ({
       className={`flex flex-col items-center gap-1 cursor-pointer group ${className}`}
     >
       {/* Star Image */}
-      <img loading="lazy" decoding="async" 
+      <img 
         src={reviewStars} 
         alt="Review Stars" 
         className="h-5 w-auto object-contain"

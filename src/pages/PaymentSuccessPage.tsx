@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, useSearchParams } from "@/lib/router-compat";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { XCircle, ArrowLeft, RefreshCw, Loader2 } from "lucide-react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { usePurchaseNotifications } from "@/hooks/useAuthNotifications";
 import { supabase } from "@/integrations/supabase/client";
-import { notifyAdminNewOrder } from "@/lib/notifications.functions";
-import { sendOrderEmail } from '@/lib/emails.functions';
 
 interface PaymentSuccessPageProps {
   onLogout: () => void;
@@ -30,8 +28,8 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
 
   const notifyAdminCancelled = async (order: any) => {
     try {
-      const result = await notifyAdminNewOrder({
-        data: {
+      const { error } = await supabase.functions.invoke('notify-admin-new-order', {
+        body: {
           event_type: 'order_cancelled',
           order_details: {
             order_id: order.id,
@@ -43,7 +41,7 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
         },
       });
 
-      if ('error' in result && result.error) throw new Error(result.error);
+      if (error) throw error;
       console.log('Admin cancel notification sent for order:', order.id);
     } catch (notifyError) {
       console.error('Failed to send admin cancel notification:', notifyError);
@@ -124,15 +122,15 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
 
               // Send automatic refund email to customer
               try {
-                await sendOrderEmail({
-                  data: {
+                await supabase.functions.invoke('send-order-email', {
+                  body: {
                     userId: user.id,
                     orderId: order.id,
                     emailType: 'refund',
                     orderDetails: {
-                      packageName: order.product_name || (order.uc_packages as any)?.name || 'Package',
-                      productName: order.product_name || (order.uc_packages as any)?.name || 'Package',
-                      productAmount: order.product_amount ?? undefined,
+                      packageName: order.product_name || order.uc_packages?.name || 'Package',
+                      productName: order.product_name || order.uc_packages?.name || 'Package',
+                      productAmount: order.product_amount,
                       productType: order.product_type || 'pubg_uc',
                       ucAmount: order.product_amount ? parseInt(order.product_amount) : 0,
                       price: order.price || 0,

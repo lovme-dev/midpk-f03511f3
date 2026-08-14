@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
-import { broadcastNotification } from '@/lib/notifications.functions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,9 +26,9 @@ import {
 interface SentNotification {
   id: string;
   title: string;
-  message: string | null;
-  type: string | null;
-  sent_at: string | null;
+  message: string;
+  type: string;
+  sent_at: string;
   icon_url: string | null;
   action_url: string | null;
 }
@@ -153,8 +152,8 @@ export function SendNotification() {
 
     setSending(true);
     try {
-      const result = await broadcastNotification({
-        data: {
+      const response = await supabase.functions.invoke('broadcast-notification', {
+        body: {
           title: form.title,
           message: form.message,
           type: form.type,
@@ -164,10 +163,12 @@ export function SendNotification() {
         },
       });
 
-      if ('error' in result && result.error) {
-        throw new Error(result.error);
+      if (response.error) {
+        throw new Error(response.error.message);
       }
 
+      const result = response.data;
+      
       toast({
         title: 'Notification Sent!',
         description: `Sent to ${result.sent}/${result.total} devices (${result.users_notified} users)`,
@@ -415,7 +416,7 @@ export function SendNotification() {
                         </p>
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0">
-                        <Badge variant={getTypeBadgeVariant(notif.type ?? '')}>
+                        <Badge variant={getTypeBadgeVariant(notif.type)}>
                           {notif.type}
                         </Badge>
                         <AlertDialog>
@@ -454,7 +455,7 @@ export function SendNotification() {
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground mt-2">
-                      {new Date(notif.sent_at ?? Date.now()).toLocaleString()}
+                      {new Date(notif.sent_at).toLocaleString()}
                     </div>
                   </div>
                 ))}

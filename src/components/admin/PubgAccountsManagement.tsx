@@ -181,8 +181,8 @@ export function PubgAccountsManagement() {
           .from('pubg_account_credentials')
           .upsert([{
             account_id: editingAccount.id,
-            email: credentialsData.login_email ?? '',
-            password: credentialsData.login_password ?? ''
+            email: credentialsData.login_email,
+            password: credentialsData.login_password
           }]);
 
         if (credError) throw credError;
@@ -203,8 +203,8 @@ export function PubgAccountsManagement() {
             .from('pubg_account_credentials')
             .insert([{
               account_id: newAccount.id,
-              email: credentialsData.login_email ?? '',
-              password: credentialsData.login_password ?? ''
+              email: credentialsData.login_email,
+              password: credentialsData.login_password
             }]);
 
           if (credError) throw credError;

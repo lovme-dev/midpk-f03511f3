@@ -238,7 +238,7 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
         structuredData={structuredData}
       />
       
-      <Index onLogout={onLogout ?? (() => {})} />
+      <Index onLogout={onLogout} />
     </>
   );
 };

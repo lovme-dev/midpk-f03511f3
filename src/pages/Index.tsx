@@ -8,6 +8,7 @@ import { useUserRole } from "@/hooks/useUserRole";
 import { useMobile, useResponsive } from "@/hooks/use-mobile";
 import InPageNavigationTabs, { TabType } from "@/components/InPageNavigationTabs";
 import PrivacyPolicyModal from "@/components/PrivacyPolicyModal";
+import LoadingScreen from "@/components/LoadingScreen";
 import PromotionBanner from "@/components/PromotionBanner";
 import PackageGrid from "@/components/PackageGrid";
 import FilterBar from "@/components/FilterBar";
@@ -21,7 +22,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import { ChevronDown, ArrowRight, User, HelpCircle, X, Check, AlertCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useParams } from "@/lib/router-compat";
+import { useNavigate, useParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
@@ -53,6 +54,7 @@ interface IndexProps {
 const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disableSeo = false, topSeoSlot, countryFAQSlot, beforeFooterSlot }: IndexProps) => {
   const { countryCode } = useParams<{ countryCode: string }>();
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
   const [showPromotion, setShowPromotion] = useState(true);
   const [filter, setFilter] = useState("all");
   const [sortFilter, setSortFilter] = useState("default");
@@ -394,7 +396,11 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     };
 
     // Immediately show content - no loading delay
-    void preloadImages();
+    preloadImages().then(() => {
+      setIsLoading(false);
+    });
+    // Set loading to false immediately for faster banner display
+    setIsLoading(false);
   }, []);
 
   // Scroll detection for sticky filter bar (mobile only)
@@ -543,6 +549,10 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       setScrollToPackages(false);
     }
   }, [scrollToPackages]);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -740,7 +750,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
 
           {/* Desktop: Logo, Title, Official Badge & Subscribe - same as mobile, left aligned */}
           <div className="absolute left-0 bottom-5 flex items-center gap-2 px-5 z-20" dir="ltr">
-            <img loading="lazy" decoding="async" 
+            <img 
               src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
               alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
               className="w-12 h-12 rounded-lg object-cover shadow-lg"
@@ -817,7 +827,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             
             {/* Characters Image - only show if admin uploaded one */}
             {charactersImage && (
-              <img loading="lazy" decoding="async" 
+              <img 
                 src={charactersImage} 
                 alt="PUBG Characters" 
                 className="absolute top-0 right-0 w-[65%] h-full object-contain object-right z-10 pointer-events-none"
@@ -831,7 +841,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             {/* PUBG Mobile Logo, Title, Official Badge & Subscribe - OVER banner - SMALLER - Always LTR */}
             <div className={`absolute left-0 flex items-center gap-2 px-3 z-20 ${gameBrand === 'BGMI' ? 'bottom-6' : 'bottom-6'}`} dir="ltr">
               {/* PUBG Mobile Logo - smaller */}
-              <img loading="lazy" decoding="async" 
+              <img 
                 src={gameBrand === 'BGMI' ? bgmiLogo : "/lovable-uploads/pubg-mobile-logo.png"}
                 alt={gameBrand === 'BGMI' ? "BGMI Logo" : "PUBG Mobile Logo"}
                 className="w-12 h-12 rounded-lg object-cover shadow-lg"

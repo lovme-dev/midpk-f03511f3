@@ -34,7 +34,7 @@ const DiamondFilterDropdown = ({ onDiamondRangeChange, selectedRange = "all" }: 
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger asChild>
         <button className="flex items-center gap-2 px-4 py-2 bg-midasbuy-navy/50 text-white rounded-lg hover:bg-midasbuy-navy/70 transition-colors border border-freefire-primary/20 text-sm">
-          <img loading="lazy" decoding="async" 
+          <img 
             src="/lovable-uploads/diamond-logo.png" 
             alt="Diamond" 
             className="w-4 h-4"
@@ -54,7 +54,7 @@ const DiamondFilterDropdown = ({ onDiamondRangeChange, selectedRange = "all" }: 
             }`}
           >
             <div className="flex items-center gap-2 w-full">
-              <img loading="lazy" decoding="async" 
+              <img 
                 src="/lovable-uploads/diamond-logo.png" 
                 alt="Diamond" 
                 className="w-4 h-4 flex-shrink-0"

@@ -1,11 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
-import { useNavigate } from "@/lib/router-compat";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, Filter, Search, X, Loader2, CheckCircle, Clock, XCircle, AlertCircle, ClipboardPaste } from "lucide-react";
 import Header from "@/components/Header";
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
-import { trackOrder } from "@/lib/support.functions";
 import OrderDetailSheet from "@/components/OrderDetailSheet";
 import OrderFilterSheet from "@/components/OrderFilterSheet";
 import { formatOrderPrice } from "@/utils/formatOrderPrice";
@@ -320,7 +319,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
 
           if (ordersRaw && ordersRaw.length > 0) {
             // Fetch UC packages for enrichment
-            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
+            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter(Boolean))];
             let packagesMap: Record<string, { name: string; uc_amount: number }> = {};
             
             if (packageIds.length > 0) {
@@ -450,9 +449,10 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
     try {
       // Use backend function so tracking works for guests too (RLS-safe)
       const normalized = trimmedId.replace(/\s+/g, '');
-      const data = await trackOrder({
-        data: { query: normalized },
+      const { data, error } = await supabase.functions.invoke('track-order', {
+        body: { query: normalized },
       });
+      if (error) throw error;
 
       const orderData = data?.order ?? null;
       
@@ -754,7 +754,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                       {/* Game Info */}
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg overflow-hidden bg-[#1a2a3f]">
-                          <img loading="lazy" decoding="async"
+                          <img
                             src={getGameLogo(searchResult.productType, searchResult.gameName)}
                             alt={searchResult.gameName}
                             className="w-full h-full object-cover"
@@ -864,7 +864,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                         <div className="flex items-start gap-3">
                           {/* Game Logo - Smaller square icon like in banner */}
                           <div className="flex-shrink-0 w-8 h-8 rounded-lg overflow-hidden bg-[#1a2a3f]">
-                            <img loading="lazy" decoding="async"
+                            <img
                               src={getGameLogo(order.productType, order.gameName)}
                               alt={order.gameName}
                               className="w-full h-full object-cover"

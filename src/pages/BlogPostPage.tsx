@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from '@/lib/router-compat';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Calendar, Clock, User, Tag, ArrowLeft, Share2 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import SEOHelmet from '@/components/SEO/SEOHelmet';
@@ -11,16 +11,16 @@ interface Blog {
   id: string;
   title: string;
   slug: string;
-  excerpt: string | null;
-  content: string | null;
-  featured_image_url?: string | null;
-  author: string | null;
-  published: boolean | null;
-  meta_title?: string | null;
-  meta_description?: string | null;
-  tags?: string[] | null;
-  created_at: string | null;
-  updated_at: string | null;
+  excerpt: string;
+  content: string;
+  featured_image_url?: string;
+  author: string;
+  published: boolean;
+  meta_title?: string;
+  meta_description?: string;
+  tags?: string[];
+  created_at: string;
+  updated_at: string;
 }
 
 const BlogPostPage = () => {
@@ -102,7 +102,7 @@ const BlogPostPage = () => {
       try {
         await navigator.share({
           title: blog?.title,
-          text: blog?.excerpt ?? undefined,
+          text: blog?.excerpt,
           url: url,
         });
       } catch (error) {
@@ -226,11 +226,11 @@ const BlogPostPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{formatDistanceToNow(new Date(blog.created_at ?? ''), { addSuffix: true })}</span>
+              <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              <span>{getReadingTime(blog.content ?? '')} min read</span>
+              <span>{getReadingTime(blog.content)} min read</span>
             </div>
             <button
               onClick={handleShare}
@@ -259,7 +259,7 @@ const BlogPostPage = () => {
         {/* Featured Image */}
         {blog.featured_image_url && (
           <div className="mb-8">
-            <img loading="lazy" decoding="async" 
+            <img 
               src={blog.featured_image_url} 
               alt={blog.title}
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
@@ -272,7 +272,7 @@ const BlogPostPage = () => {
           <div 
             className="text-foreground leading-relaxed"
             dangerouslySetInnerHTML={{ 
-              __html: DOMPurify.sanitize(makeLinksClickable((blog.content ?? '').replace(/\n/g, '<br>')), {
+              __html: DOMPurify.sanitize(makeLinksClickable(blog.content.replace(/\n/g, '<br>')), {
                 ALLOWED_TAGS: ['p', 'br', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span', 'div'],
                 ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
               })
@@ -292,7 +292,7 @@ const BlogPostPage = () => {
                 >
                   {relatedBlog.featured_image_url && (
                     <div className="aspect-video overflow-hidden">
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={relatedBlog.featured_image_url} 
                         alt={relatedBlog.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -319,7 +319,7 @@ const BlogPostPage = () => {
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
                       <span>{relatedBlog.author}</span>
                       <span>•</span>
-                      <span>{formatDistanceToNow(new Date(relatedBlog.created_at ?? ''), { addSuffix: true })}</span>
+                      <span>{formatDistanceToNow(new Date(relatedBlog.created_at), { addSuffix: true })}</span>
                     </div>
                   </div>
                 </article>

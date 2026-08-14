@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import SEOHelmet from '@/components/SEO/SEOHelmet';
@@ -9,16 +9,16 @@ interface Blog {
   id: string;
   title: string;
   slug: string;
-  excerpt: string | null;
-  content: string | null;
-  featured_image_url?: string | null;
-  author: string | null;
-  published: boolean | null;
-  meta_title?: string | null;
-  meta_description?: string | null;
-  tags?: string[] | null;
-  created_at: string | null;
-  updated_at: string | null;
+  excerpt: string;
+  content: string;
+  featured_image_url?: string;
+  author: string;
+  published: boolean;
+  meta_title?: string;
+  meta_description?: string;
+  tags?: string[];
+  created_at: string;
+  updated_at: string;
 }
 
 const BlogsPage = () => {
@@ -186,7 +186,7 @@ const BlogsPage = () => {
                 >
                   {blog.featured_image_url && (
                     <div className="aspect-video overflow-hidden">
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={blog.featured_image_url} 
                         alt={blog.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -219,11 +219,11 @@ const BlogsPage = () => {
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
-                        <span>{formatDistanceToNow(new Date(blog.created_at ?? ''), { addSuffix: true })}</span>
+                        <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
-                        <span>{getReadingTime(blog.content ?? '')} min read</span>
+                        <span>{getReadingTime(blog.content)} min read</span>
                       </div>
                     </div>
 

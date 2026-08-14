@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Loader2, Mail, ShieldCheck, Lock, Eye, EyeOff } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { createOrGetGuestProfile } from "@/lib/support.functions";
 import { toast } from "@/hooks/use-toast";
 import { useAuthModal } from "@/contexts/AuthModalContext";
 
@@ -67,11 +66,15 @@ export function GuestEmailDialog({ open, onOpenChange, onEmailConfirmed }: Guest
     setIsLoading(true);
 
     try {
-      const responseData = await createOrGetGuestProfile({
-        data: { email: trimmedEmail, password: trimmedPassword }
+      const response = await supabase.functions.invoke('create-or-get-guest-profile', {
+        body: { email: trimmedEmail, password: trimmedPassword }
       });
 
-      const { success, user_id, email: confirmedEmail, error: responseError, is_existing } = responseData;
+      if (response.error) {
+        throw new Error(response.error.message || 'Failed to create account');
+      }
+
+      const { success, user_id, email: confirmedEmail, error: responseError, is_existing } = response.data;
 
       if (!success || !user_id) {
         throw new Error(responseError || 'Failed to create account');
@@ -86,8 +89,8 @@ export function GuestEmailDialog({ open, onOpenChange, onEmailConfirmed }: Guest
       if (signInError) {
         console.error('Sign in error after account creation:', signInError);
         // Account was created but sign in failed - still proceed with guest flow
-        localStorage.setItem('guest_user_id', user_id!);
-        localStorage.setItem('guest_email', confirmedEmail!);
+        localStorage.setItem('guest_user_id', user_id);
+        localStorage.setItem('guest_email', confirmedEmail);
       } else {
         // Clear guest storage since user is now properly signed in
         localStorage.removeItem('guest_user_id');
@@ -96,7 +99,7 @@ export function GuestEmailDialog({ open, onOpenChange, onEmailConfirmed }: Guest
 
       // Close dialog and proceed
       onOpenChange(false);
-      onEmailConfirmed(user_id!, confirmedEmail!);
+      onEmailConfirmed(user_id, confirmedEmail);
 
     } catch (err: any) {
       console.error('Account creation error:', err);

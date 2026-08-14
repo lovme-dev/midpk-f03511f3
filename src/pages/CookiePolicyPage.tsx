@@ -1,7 +1,7 @@
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Shield, Cookie, Eye, BarChart3, Target, Settings, Clock, Globe, Mail, ChevronRight } from 'lucide-react';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useLocalization } from '@/contexts/LocalizationContext';
@@ -80,7 +80,7 @@ const CookiePolicyPage = ({ onLogout }: CookiePolicyPageProps) => {
         <meta name="description" content={t('pages.cookiePolicy.intro', 'Learn about how Midasbuy uses cookies to improve your experience, analyze site traffic, and personalize content.')} />
       </Helmet>
 
-      <Header onLogout={onLogout ?? (() => {})} />
+      <Header onLogout={onLogout} />
 
       <main className="pt-20 pb-16">
         {/* Hero Section */}

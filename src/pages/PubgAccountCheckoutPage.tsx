@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "@/lib/router-compat";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Check, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { CustomerServiceWidget } from "@/components/CustomerServiceWidget";
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 import { convertPkrToUsd } from "@/utils/currencyUtils";
 
 interface PubgAccountCheckoutPageProps {
@@ -244,7 +244,7 @@ const PubgAccountCheckoutPage = ({ onLogout }: PubgAccountCheckoutPageProps) => 
             <h2 className="text-2xl font-bold mb-6 text-white">Order Information</h2>
             
             <div className="flex items-center mb-6 pb-6 border-b border-gray-700">
-              <img loading="lazy" decoding="async" 
+              <img 
                 src={accountData.thumbnail_url || "/lovable-uploads/ecae37c2-470f-4c72-8005-270d82abe96f.png"} 
                 alt={accountData.title} 
                 className="w-20 h-20 object-cover rounded-lg mr-4" 
@@ -314,7 +314,7 @@ const PubgAccountCheckoutPage = ({ onLogout }: PubgAccountCheckoutPageProps) => 
                    >
                        <div className="flex items-center justify-between w-full">
                          <div className="flex items-center">
-                           <img loading="lazy" decoding="async" src={method.icon} alt={method.name} className="h-16 w-auto object-contain mr-3" />
+                           <img src={method.icon} alt={method.name} className="h-16 w-auto object-contain mr-3" />
                            {method.name && (
                              <span className="text-white font-medium">{method.name}</span>
                            )}

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useImperativeHandle, forwardRef } from 'react';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import GameCardBadge from './GameCardBadge';
 
 interface Game {
@@ -36,7 +36,7 @@ const AutoScrollableRow = forwardRef<AutoScrollableRowRef, AutoScrollableRowProp
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isUserInteracting, setIsUserInteracting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const autoScrollRef = useRef<number | undefined>(undefined);
+  const autoScrollRef = useRef<number>();
   const maxScrollRef = useRef<number>(0);
   const isExternalScrollRef = useRef(false);
 
@@ -85,10 +85,10 @@ const AutoScrollableRow = forwardRef<AutoScrollableRowRef, AutoScrollableRowProp
                 scrollRef.current.scrollLeft += 1;
               }
               
-              autoScrollRef.current = requestAnimationFrame(scroll) as unknown as number;
+              autoScrollRef.current = requestAnimationFrame(scroll);
             }
           };
-          autoScrollRef.current = requestAnimationFrame(scroll) as unknown as number;
+          autoScrollRef.current = requestAnimationFrame(scroll);
         }
       };
 

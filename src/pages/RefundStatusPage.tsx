@@ -1,12 +1,12 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
-import { useNavigate, useSearchParams } from "@/lib/router-compat";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, CheckCircle2, Loader2, CreditCard, RefreshCw, Home, Package, XCircle, AlertCircle, ShoppingBag, Search, X, Copy, Trash2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import trackOrderIcon from "@/assets/track-order-icon.jpeg";
@@ -423,7 +423,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
           
           if (ordersRaw && ordersRaw.length > 0) {
             // Fetch UC packages for enrichment
-            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
+            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter(Boolean))];
             let packagesMap: Record<string, { name: string; uc_amount: number }> = {};
             if (packageIds.length > 0) {
               const { data: packages } = await supabase
@@ -845,7 +845,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                       {(() => {
                                         const { image, isFreeFire } = getPackageImageByOrder(item);
                                         return (
-                                          <img loading="lazy" decoding="async" 
+                                          <img 
                                             src={image} 
                                             alt={item.packageName}
                                             className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -986,7 +986,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                         {(() => {
                                           const { image, isFreeFire } = getPackageImageByOrder(item);
                                           return (
-                                            <img loading="lazy" decoding="async" 
+                                            <img 
                                               src={image} 
                                               alt={item.packageName}
                                               className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1083,7 +1083,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                           {(() => {
                                             const { image, isFreeFire } = getPackageImageByOrder(item);
                                             return (
-                                              <img loading="lazy" decoding="async" 
+                                              <img 
                                                 src={image} 
                                                 alt={item.packageName}
                                                 className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1190,7 +1190,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                     {(() => {
                                       const { image, isFreeFire } = getPackageImageByOrder(item);
                                       return (
-                                        <img loading="lazy" decoding="async" 
+                                        <img 
                                           src={image} 
                                           alt={item.packageName}
                                           className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}
@@ -1306,7 +1306,7 @@ export default function RefundStatusPage({ onLogout }: RefundStatusPageProps) {
                                           {(() => {
                                             const { image, isFreeFire } = getPackageImageByOrder(item);
                                             return (
-                                              <img loading="lazy" decoding="async" 
+                                              <img 
                                                 src={image} 
                                                 alt={item.packageName}
                                                 className={`w-10 h-10 object-contain ${isFreeFire ? 'scale-[1.4]' : ''}`}

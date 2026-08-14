@@ -1,4 +1,4 @@
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Handshake, Globe, Gamepad2, Store, Shield, Zap } from "lucide-react";
 import Header from "@/components/Header";
@@ -119,7 +119,7 @@ const PartnersPage = ({ onLogout }: PartnersPageProps) => {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-white rounded-lg p-2 mr-4 flex items-center justify-center">
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={partner.logo} 
                         alt={partner.name} 
                         className="max-w-full max-h-full object-contain"

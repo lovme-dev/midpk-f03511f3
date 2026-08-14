@@ -429,10 +429,10 @@ const countryToLanguage: Record<string, string> = {
 const rtlLanguages = ['ar', 'ur', 'he', 'fa'];
 
 export const getWhyTopUpTranslation = (countryCode?: string): WhyTopUpTranslation => {
-  if (!countryCode) return translations['en']!;
+  if (!countryCode) return translations.en;
   
   const langCode = countryToLanguage[countryCode.toLowerCase()] || 'en';
-  return translations[langCode] || translations['en']!;
+  return translations[langCode] || translations.en;
 };
 
 export const isRTLLanguage = (countryCode?: string): boolean => {

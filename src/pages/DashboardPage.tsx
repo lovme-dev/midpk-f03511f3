@@ -7,15 +7,15 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import { Home, User, Mail, Calendar, Gamepad2, ShoppingBag, Save, Link as LinkIcon, Edit3, History, HelpCircle, Upload } from 'lucide-react';
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from 'react-helmet-async';
 
 interface Profile {
   id: string;
-  email: string | null;
-  full_name: string | null;
-  avatar_url?: string | null;
+  email: string;
+  full_name: string;
+  avatar_url?: string;
   created_at: string;
 }
 
@@ -70,7 +70,7 @@ export default function DashboardPage() {
       if (profileError) {
         console.error('Error fetching profile:', profileError);
       } else {
-        setProfile(profileData as Profile | null);
+        setProfile(profileData);
         setProfileForm({
           full_name: profileData?.full_name || '',
           avatar_url: '' // Database doesn't store avatar_url yet
@@ -311,7 +311,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Avatar className="h-20 w-20">
-                  <AvatarImage src={isEditingProfile ? profileForm.avatar_url : (profile?.avatar_url ?? undefined)} />
+                  <AvatarImage src={isEditingProfile ? profileForm.avatar_url : profile?.avatar_url} />
                   <AvatarFallback className="text-lg">
                     {getInitials(isEditingProfile ? profileForm.full_name : (profile?.full_name || user?.email || ''))}
                   </AvatarFallback>

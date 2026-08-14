@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from '@/lib/router-compat';
+import { useSearchParams } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { AdminSidebar, AdminSidebarTrigger } from '@/components/admin/AdminSidebar';
@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
       setUcLoading(true);
       const { data, error } = await supabase.from('uc_packages').select('*').order('created_at', { ascending: true });
       if (error) console.error(error);
-      setUcPackages((data as unknown as UCPackage[]) || []);
+      setUcPackages(data || []);
     setUcLoading(false);
     };
     load();

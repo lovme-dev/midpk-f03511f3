@@ -1,5 +1,5 @@
 
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Phone, Mail, HelpCircle, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";

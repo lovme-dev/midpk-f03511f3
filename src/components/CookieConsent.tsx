@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from '@/lib/router-compat';
+import { Link } from 'react-router-dom';
 import { CookieSettingsModal, CookiePreferences } from './CookieSettingsModal';
 
 const COOKIE_CONSENT_KEY = 'midasbuy_cookie_consent';
@@ -23,7 +23,6 @@ export function CookieConsent() {
       }, 1500);
       return () => clearTimeout(timer);
     }
-    return undefined;
   }, []);
 
   const handleAcceptAll = () => {

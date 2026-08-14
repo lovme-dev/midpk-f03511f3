@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
     this.setState({
       error,
@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-  override render() {
+  render() {
     if (this.state.hasError) {
       const isModuleError = this.state.error?.message.includes('module') || 
                             this.state.error?.message.includes('import') ||

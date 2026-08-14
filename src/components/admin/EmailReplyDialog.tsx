@@ -226,19 +226,18 @@ Thank you for choosing Midasbuy! We appreciate your business.`
 
     setIsSending(true);
     try {
-      const { sendInquiryReply } = await import('@/lib/emails.functions');
-      const result = await sendInquiryReply({
-        data: {
+      const { error } = await supabase.functions.invoke('send-inquiry-reply', {
+        body: {
           customerEmail: targetEmail,
           customerName: targetName || 'Valued Customer',
           subject: emailSubject,
           emailContent: emailContent,
-          orderId: orderId ?? undefined,
+          orderId: orderId,
           templateType: selectedTemplate,
         },
       });
 
-      if ('error' in result && result.error) throw new Error(String(result.error));
+      if (error) throw error;
 
       // Log the email send
       const { data: { user } } = await supabase.auth.getUser();

@@ -1,4 +1,4 @@
-import { useParams } from '@/lib/router-compat';
+import { useParams } from 'react-router-dom';
 import { useMemo } from 'react';
 import { getCountryData } from '@/utils/gameSeoConfigs';
 

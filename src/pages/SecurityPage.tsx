@@ -1,5 +1,5 @@
 
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Shield, Lock, FileText, AlertCircle, CheckCircle2, Key } from "lucide-react";
 import Header from "@/components/Header";

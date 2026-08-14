@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { translateMessage } from '@/lib/support.functions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -44,7 +43,7 @@ interface CustomerInquiry {
   email: string;
   subject: string;
   message: string;
-  is_read: boolean | null;
+  is_read: boolean;
   created_at: string;
   status?: string;
   updated_at?: string;
@@ -115,7 +114,7 @@ export function CustomerInquiries() {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setInquiries((data || []) as unknown as CustomerInquiry[]);
+      setInquiries(data || []);
       await fetchEmailStats();
     } catch (error) {
       console.error('Error fetching inquiries:', error);
@@ -247,11 +246,11 @@ export function CustomerInquiries() {
     setTranslatingIds(prev => new Set(prev).add(inquiryId));
 
     try {
-      const data = await translateMessage({
-        data: { message, targetLanguage: 'Urdu' }
+      const { data, error } = await supabase.functions.invoke('translate-message', {
+        body: { message, targetLanguage: 'Urdu' }
       });
 
-      if (data?.error) throw new Error(data.error);
+      if (error) throw error;
 
       if (data?.translated) {
         setTranslatedMessages(prev => ({

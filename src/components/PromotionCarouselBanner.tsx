@@ -80,7 +80,7 @@ const PromotionCarouselBanner = ({ className = "" }: PromotionCarouselBannerProp
           {/* Full Banner Image Slide */}
           {promoSlides[currentPromoIndex].isFullBanner ? (
             <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-              <img loading="lazy" decoding="async"
+              <img
                 src={promoSlides[currentPromoIndex].image}
                 alt="Promo Banner"
                 className="w-full h-full object-cover object-center"
@@ -97,7 +97,7 @@ const PromotionCarouselBanner = ({ className = "" }: PromotionCarouselBannerProp
 
               {/* Character Image - Right corner on mobile, Left on PC */}
               <div className="absolute right-0 md:right-auto md:left-0 bottom-0 h-[120%] md:h-[130%] w-16 md:w-24 lg:w-32 pointer-events-none z-10">
-                <img loading="lazy" decoding="async"
+                <img
                   src={promoSlides[currentPromoIndex].image}
                   alt="Promo Character"
                   className="w-full h-full object-contain object-bottom drop-shadow-2xl"

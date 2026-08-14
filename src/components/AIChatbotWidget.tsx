@@ -5,7 +5,6 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { supabase } from '@/integrations/supabase/client';
-import { chatSupport } from '@/lib/support.functions';
 import { useToast } from './ui/use-toast';
 
 import chatLogo from '../assets/chat-logo.png';
@@ -39,7 +38,7 @@ export function AIChatbotWidget() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
   const [chatId, setChatId] = useState<string | null>(null);
-  const [userProfile, setUserProfile] = useState<{ full_name?: string | null; avatar_url?: string | null } | null>(null);
+  const [userProfile, setUserProfile] = useState<{ full_name?: string; avatar_url?: string } | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
@@ -322,21 +321,20 @@ export function AIChatbotWidget() {
         content: userInput
       });
 
-      let data: any;
-      try {
-        data = await chatSupport({
-          data: {
-            messages: conversationMessages,
-            includeVision: false,
-            userName: userProfile?.full_name || null,
-          },
-        });
-      } catch (err: any) {
-        throw new Error(`API Error: ${err?.message || 'Unknown error'}`.trim());
-      }
+      const { data, error } = await supabase.functions.invoke('chat-support', {
+        body: {
+          messages: conversationMessages,
+          includeVision: false,
+          userName: userProfile?.full_name || null,
+        },
+      });
 
-      if ((data as any)?.fallback) {
-        throw new Error('RATE_LIMIT');
+      if (error) {
+        const status = (error as any)?.context?.status;
+        if (status === 429) {
+          throw new Error('RATE_LIMIT');
+        }
+        throw new Error(`API Error: ${status || ''} ${error.message}`.trim());
       }
 
       if (!data || !(data as any).response) {
@@ -609,16 +607,15 @@ export function AIChatbotWidget() {
       ];
 
       // Call our edge function with vision support using supabase invoke
-      let data: any;
-      try {
-        data = await chatSupport({
-          data: {
-            messages: imageMessages,
-            includeVision: true,
-            userName: userProfile?.full_name || null,
-          },
-        });
-      } catch (err) {
+      const { data, error } = await supabase.functions.invoke('chat-support', {
+        body: {
+          messages: imageMessages,
+          includeVision: true,
+          userName: userProfile?.full_name || null,
+        },
+      });
+
+      if (error) {
         throw new Error('Failed to analyze image');
       }
 
@@ -711,7 +708,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img loading="lazy" decoding="async" 
+          <img 
             src={miraIcon} 
             alt="Mira - Click to chat" 
             className="w-18 h-18 md:w-24 md:h-24 object-contain drop-shadow-lg"
@@ -797,7 +794,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                     <div className="flex items-start gap-3 max-w-[90%] md:max-w-[80%]">
                       {/* Mira Profile Image */}
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 overflow-hidden border-2 border-cyan-400/50">
-                        <img loading="lazy" decoding="async" 
+                        <img 
                           src={miraProfile} 
                           alt="Mira" 
                           className="w-full h-full object-cover"
@@ -815,7 +812,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                           {/* Display image if present */}
                           {message.image && (
                             <div className="mb-2">
-                              <img loading="lazy" decoding="async" 
+                              <img 
                                 src={message.image} 
                                 alt="Uploaded content" 
                                 className="max-w-full max-h-48 rounded-lg object-cover"
@@ -873,7 +870,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
                       >
                         {message.image && (
                           <div className="mb-2">
-                            <img loading="lazy" decoding="async" 
+                            <img 
                               src={message.image} 
                               alt="Uploaded content" 
                               className="max-w-full max-h-48 rounded-lg object-cover"
@@ -896,7 +893,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
               {isTyping && (
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 overflow-hidden border-2 border-cyan-400/50">
-                    <img loading="lazy" decoding="async" src={miraProfile} alt="Mira" className="w-full h-full object-cover" />
+                    <img src={miraProfile} alt="Mira" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-white/70 text-sm mb-1">Mira</span>
@@ -929,7 +926,7 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
             {/* Image preview section */}
             {uploadedImage && (
               <div className="mb-3 relative inline-block">
-                <img loading="lazy" decoding="async" 
+                <img 
                   src={uploadedImage} 
                   alt="Preview" 
                   className="h-16 w-16 object-cover rounded-lg border-2 border-cyan-400"

@@ -136,7 +136,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: (typeof window !== 'undefined' ? window.localStorage.getItem('language') : null) || 'en',
+    lng: localStorage.getItem('language') || 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,

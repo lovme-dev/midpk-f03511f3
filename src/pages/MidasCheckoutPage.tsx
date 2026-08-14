@@ -22,7 +22,7 @@ import {
   UCStackIcon, 
   SingleUCIcon 
 } from '@/components/checkout/CheckoutIcons';
-import { useNavigate, useLocation, useParams } from '@/lib/router-compat';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 
 interface MidasCheckoutPageProps {
   onLogout?: () => void;
@@ -51,7 +51,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
   const [tempName, setTempName] = useState('');
 
   // Package data from location state or defaults
-  const packageData = (location.state as { packageData?: { ucAmount?: number; bonusUC?: number; price?: number; originalPrice?: number; currency?: string } } | null)?.packageData || {
+  const packageData = location.state?.packageData || {
     ucAmount: 300,
     bonusUC: 25,
     price: 249,
@@ -158,14 +158,14 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                           <div className="flex items-baseline gap-1">
                             <div className="self-center mr-1 transform scale-90"><SingleUCIcon /></div>
                             <span className="text-[22px] font-bold text-white leading-none tracking-tight">{packageData.ucAmount}</span>
-                            {(packageData.bonusUC ?? 0) > 0 && (
+                            {packageData.bonusUC > 0 && (
                               <>
                                 <span className="text-[18px] font-bold text-[#ffc400] mx-0.5">+</span>
                                 <span className="text-[22px] font-bold text-[#ffc400] leading-none tracking-tight">{packageData.bonusUC}</span>
                               </>
                             )}
                             <span className="text-[#8b91a0] text-[12px] font-normal ml-2 transform translate-y-[-1px]">
-                                Total: {(packageData.ucAmount ?? 0) + (packageData.bonusUC || 0)} UC
+                                Total: {packageData.ucAmount + (packageData.bonusUC || 0)} UC
                             </span>
                           </div>
                       </div>
@@ -192,7 +192,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                               <span className="text-white text-[14px]">Total:</span>
                               <div className="flex items-center gap-1.5">
                                   <div className="scale-90 opacity-90"><SingleUCIcon /></div>
-                                  <span className="text-white font-bold text-[18px] tracking-wide">{(packageData.ucAmount ?? 0) + (packageData.bonusUC || 0)}</span>
+                                  <span className="text-white font-bold text-[18px] tracking-wide">{packageData.ucAmount + (packageData.bonusUC || 0)}</span>
                               </div>
                           </div>
                       </div>
@@ -421,7 +421,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                              <SingleUCIcon />
                              <span className="text-white font-bold text-lg">{packageData.ucAmount}</span>
                          </div>
-                         <span className="text-[#8b91a0] text-xs">Total: {(packageData.ucAmount ?? 0) + (packageData.bonusUC || 0)} UC</span>
+                         <span className="text-[#8b91a0] text-xs">Total: {packageData.ucAmount + (packageData.bonusUC || 0)} UC</span>
                       </div>
                    </div>
                    <div className="bg-[#24293d] w-6 h-6 rounded flex items-center justify-center">
@@ -442,7 +442,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                         <span className="text-[#8b91a0] text-sm">Total:</span>
                         <div className="flex items-center gap-1">
                             <div className="scale-75 opacity-80"><SingleUCIcon /></div>
-                            <span className="text-white font-medium">{(packageData.ucAmount ?? 0) + (packageData.bonusUC || 0)}</span>
+                            <span className="text-white font-medium">{packageData.ucAmount + (packageData.bonusUC || 0)}</span>
                         </div>
                     </div>
                 </div>
@@ -570,7 +570,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
               {packageData.originalPrice && (
                 <div className="flex justify-between items-center">
                   <span className="text-[#eeb337]">Discount:</span>
-                  <span className="text-[#eeb337] font-medium">-{packageData.originalPrice - (packageData.price ?? 0)} {packageData.currency}</span>
+                  <span className="text-[#eeb337] font-medium">-{packageData.originalPrice - packageData.price} {packageData.currency}</span>
                 </div>
               )}
               <div className="flex justify-between items-center pt-2">
@@ -680,7 +680,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                     <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
                        {/* Placeholder for Game Lobby Image */}
                        <div className="absolute inset-0 flex items-center justify-center">
-                         <img loading="lazy" decoding="async" 
+                         <img 
                            src="https://img.freepik.com/free-vector/video-game-concept-illustration_114360-6379.jpg" 
                            alt="Game Lobby" 
                            className="w-full h-full object-cover opacity-60"
@@ -697,7 +697,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
                     <div className="w-full aspect-video rounded-lg overflow-hidden border border-[#232942] relative bg-[#0f1222]">
                         {/* Placeholder for Profile Image */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <img loading="lazy" decoding="async" 
+                          <img 
                             src="https://img.freepik.com/free-vector/hud-interface-futuristic-blue-virtual-graphic-touch-user-interface-target_1150-37146.jpg" 
                             alt="Profile Page" 
                             className="w-full h-full object-cover opacity-60"

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useNavigate } from "@/lib/router-compat";
+import { useNavigate } from "react-router-dom";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { X, Plus, ChevronDown, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -398,7 +398,7 @@ ${questionDetails}
                   key={index} 
                   className="relative w-16 h-16 rounded-lg overflow-hidden bg-[#1a2a3f] border border-[#2a3a4f]"
                 >
-                  <img loading="lazy" decoding="async" 
+                  <img 
                     src={URL.createObjectURL(img)} 
                     alt={`Upload ${index + 1}`}
                     className="w-full h-full object-cover"

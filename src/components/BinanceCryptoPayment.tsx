@@ -347,7 +347,7 @@ const BinanceCryptoPayment = ({
               >
                 {selectedCrypto ? (
                   <div className="flex items-center gap-3">
-                    <img loading="lazy" decoding="async" 
+                    <img 
                       src={cryptoLogos[selectedCrypto.symbol]} 
                       alt={selectedCrypto.name} 
                       className="w-8 h-8 rounded-full object-contain"
@@ -379,7 +379,7 @@ const BinanceCryptoPayment = ({
                           selectedCrypto?.symbol === crypto.symbol ? 'bg-[#F0B90B]/20' : ''
                         }`}
                       >
-                        <img loading="lazy" decoding="async" 
+                        <img 
                           src={cryptoLogos[crypto.symbol]} 
                           alt={crypto.name} 
                           className="w-8 h-8 rounded-full object-contain"
@@ -512,7 +512,7 @@ const BinanceCryptoPayment = ({
               <div className="flex flex-col items-center mb-4">
                 <div className="bg-white p-3 rounded-xl mb-3 shadow-lg">
                   {qrCodeDataUrl ? (
-                    <img loading="lazy" decoding="async" src={qrCodeDataUrl} alt="Payment QR Code" className="w-40 h-40" />
+                    <img src={qrCodeDataUrl} alt="Payment QR Code" className="w-40 h-40" />
                   ) : (
                     <div className="w-40 h-40 flex items-center justify-center">
                       <Loader2 className="w-8 h-8 animate-spin text-gray-400" />

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useParams } from '@/lib/router-compat';
+import { useParams } from 'react-router-dom';
 import { COUNTRY_CONFIGS, getCountryCurrency } from './countryConfigs';
 import { triggerCurrencyChangeEvent } from './currencyUtils';
 

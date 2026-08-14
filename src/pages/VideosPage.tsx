@@ -3,7 +3,7 @@ import { ChevronDown, Play, X } from "lucide-react";
 import { useResponsive } from "@/hooks/use-mobile";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
 
@@ -264,7 +264,7 @@ const VideoCard = ({ video, onPlay, size = "normal" }: VideoCardProps) => {
       {/* Thumbnail */}
       <div className={`relative rounded-lg overflow-hidden ${isFeatured ? 'aspect-video' : 'aspect-video'} mb-2`}>
         {video.thumbnail ? (
-          <img loading="lazy" decoding="async" 
+          <img 
             src={video.thumbnail} 
             alt={video.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -356,11 +356,11 @@ const VideosPage = ({ onLogout }: VideosPageProps) => {
       </Helmet>
 
       <div className="min-h-screen bg-[#0c1730]">
-        <Header onLogout={onLogout ?? (() => {})} />
+        <Header onLogout={onLogout} />
         
         {/* Purple Header Banner */}
         <div className="relative w-full h-16 md:h-20 overflow-hidden">
-          <img loading="lazy" decoding="async" 
+          <img 
             src="/images/videos-header-banner.png"
             alt="Videos Header"
             className={`w-full h-full object-cover ${isMobile ? 'object-center' : 'object-right'}`}
@@ -387,7 +387,7 @@ const VideosPage = ({ onLogout }: VideosPageProps) => {
                 onClick={() => handlePlayVideo(featuredVideo.youtubeUrl)}
               >
                 {featuredVideo.thumbnail ? (
-                  <img loading="lazy" decoding="async" 
+                  <img 
                     src={featuredVideo.thumbnail} 
                     alt={featuredVideo.title}
                     className="w-full h-full object-cover"

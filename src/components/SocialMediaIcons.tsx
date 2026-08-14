@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import "./SocialMediaIcons.css";
-import { Link } from "@/lib/router-compat";
+import { Link } from "react-router-dom";
 
 const SocialMediaIcons = () => {
   const socialIcons = [

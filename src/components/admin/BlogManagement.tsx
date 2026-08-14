@@ -26,16 +26,16 @@ interface Blog {
   id: string;
   title: string;
   slug: string;
-  excerpt: string | null;
-  content: string | null;
-  featured_image_url?: string | null;
-  author: string | null;
+  excerpt: string;
+  content: string;
+  featured_image_url?: string;
+  author: string;
   published: boolean;
-  meta_title?: string | null;
-  meta_description?: string | null;
-  tags?: string[] | null;
-  created_at: string | null;
-  updated_at: string | null;
+  meta_title?: string;
+  meta_description?: string;
+  tags?: string[];
+  created_at: string;
+  updated_at: string;
 }
 
 interface BlogFormData {
@@ -78,7 +78,7 @@ const BlogManagement = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setBlogs((data || []) as unknown as Blog[]);
+      setBlogs(data || []);
     } catch (error) {
       console.error('Error fetching blogs:', error);
       toast.error('Failed to fetch blogs');
@@ -96,7 +96,7 @@ const BlogManagement = () => {
     }
 
     try {
-      const blogData: Record<string, unknown> = {
+      const blogData = {
         ...formData,
         slug: formData.slug || undefined, // Let the trigger generate slug if not provided
         meta_title: formData.meta_title || undefined,
@@ -107,7 +107,7 @@ const BlogManagement = () => {
       if (editingBlog) {
         const { error } = await supabase
           .from('blogs')
-          .update(blogData as never)
+          .update(blogData)
           .eq('id', editingBlog.id);
 
         if (error) throw error;
@@ -115,7 +115,7 @@ const BlogManagement = () => {
       } else {
         const { error } = await supabase
           .from('blogs')
-          .insert([blogData as never]);
+          .insert([blogData]);
 
         if (error) throw error;
         toast.success('Blog created successfully');
@@ -166,10 +166,10 @@ const BlogManagement = () => {
     setFormData({
       title: blog.title,
       slug: blog.slug,
-      excerpt: blog.excerpt ?? '',
-      content: blog.content ?? '',
+      excerpt: blog.excerpt,
+      content: blog.content,
       featured_image_url: blog.featured_image_url || '',
-      author: blog.author ?? '',
+      author: blog.author,
       published: blog.published,
       meta_title: blog.meta_title || '',
       meta_description: blog.meta_description || '',
@@ -413,7 +413,7 @@ const BlogManagement = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      <span>{formatDistanceToNow(new Date(blog.created_at ?? Date.now()), { addSuffix: true })}</span>
+                      <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
                     </div>
                   </div>
 

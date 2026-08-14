@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "@/lib/router-compat";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Ticket, ChevronRight } from "lucide-react";
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useAuth } from "@/hooks/useAuth";
@@ -56,7 +56,7 @@ const CouponsPage = ({ onLogout }: CouponsPageProps) => {
         <div className="flex-1 flex flex-col items-center justify-center px-4 py-20">
           {/* Coupon Icon Image */}
           <div className="mb-6">
-            <img loading="lazy" decoding="async" 
+            <img 
               src={couponEmptyIcon} 
               alt="No coupons" 
               className="w-24 h-24 object-contain"

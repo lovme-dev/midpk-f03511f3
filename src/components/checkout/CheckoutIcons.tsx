@@ -56,7 +56,7 @@ export const UnionPayLogo = () => (
 
 export const MidasLogo = () => (
   <div className="flex items-center">
-    <img loading="lazy" decoding="async" 
+    <img 
       src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png" 
       alt="Midasbuy Logo" 
       className="h-5 w-auto"
@@ -84,7 +84,7 @@ export const SingleUCIcon = () => (
 
 // VIP Coin Icon
 export const VIPCoinIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
-  <img loading="lazy" decoding="async" 
+  <img 
     src="/images/vip-coin-icon.png" 
     alt="VIP Coin" 
     className={className}
@@ -119,7 +119,7 @@ export const CardPaymentIcons = () => {
             key={icon.alt}
             className={`${iconSize} rounded-full overflow-hidden flex items-center justify-center flex-shrink-0`}
           >
-            <img loading="lazy" decoding="async" 
+            <img 
               src={icon.src} 
               alt={icon.alt} 
               className="w-full h-full object-contain"

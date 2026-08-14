@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
-import { useNavigate, useSearchParams, Link } from "@/lib/router-compat";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle, XCircle, Clock, ArrowLeft, Home, Loader2, RefreshCw, HeadphonesIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 import { ttqPurchase } from "@/utils/tiktokTracking";
 
 interface PayProReturnPageProps {

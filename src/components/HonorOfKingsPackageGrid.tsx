@@ -71,7 +71,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
       image: pkg.image,
       baseAmount: pkg.baseAmount,
       bonusAmount: pkg.bonusAmount,
-      bonusPercent: pkg.bonusPercent ?? '',
+      bonusPercent: pkg.bonusPercent,
       price: pkg.price,
       originalPrice: pkg.originalPrice,
       discount: pkg.discount
@@ -139,7 +139,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
                     <span className="text-midasbuy-gold text-xs sm:text-sm">From</span>
                     <div className="flex items-center gap-2">
                       <div className="flex items-center">
-                        <img loading="lazy" decoding="async" 
+                        <img 
                           src="/lovable-uploads/fc143449-9fb4-4203-8027-be50aebec0eb.png"
                           alt="Honor of Kings Currency"
                           className="h-4 w-4 mr-1 text-midasbuy-gold"

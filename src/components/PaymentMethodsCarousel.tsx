@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { useLocation } from '@/lib/router-compat';
+import { useLocation } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import './SocialMediaIcons.css';
 

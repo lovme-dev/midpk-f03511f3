@@ -1,4 +1,4 @@
-import { useNavigate } from "@/lib/router-compat";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useResponsive } from "@/hooks/use-mobile";
 import { useTranslation } from "react-i18next";
@@ -181,7 +181,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
     }
   }, []);
 
-  const handleGameClick = (game: typeof popularGames[0] | { id: string; name: string; image: string; tag: string; tagColor: string; icon?: 'like' | 'fire'; hideBadge?: boolean; variant?: 'orange' | 'red' | 'green'; badgeImage?: string; link?: string }) => {
+  const handleGameClick = (game: typeof popularGames[0]) => {
     if (game.name === "PUBG MOBILE") {
       onTabChange?.("purchase");
     } else if (game.link) {
@@ -237,7 +237,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
                   >
                     {/* Image Container - shifted 2% right for PC */}
                     <div className="relative w-full overflow-visible pl-[2%]" style={{ paddingBottom: '8px' }}>
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={game.image} 
                         alt={game.name} 
                         className="w-full aspect-square object-cover rounded-[1.2rem] rounded-br-[2rem] rounded-tl-[2rem] transition-transform group-hover:scale-105"
@@ -265,7 +265,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
                   >
                     {/* Image Container - shifted 2% right for PC */}
                     <div className="relative w-full overflow-visible pl-[2%]" style={{ paddingBottom: '8px' }}>
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={game.image} 
                         alt={game.name} 
                         className="w-full aspect-square object-cover rounded-[1.2rem] rounded-br-[2rem] rounded-tl-[2rem] transition-transform group-hover:scale-105"

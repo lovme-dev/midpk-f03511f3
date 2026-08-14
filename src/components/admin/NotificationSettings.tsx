@@ -7,12 +7,11 @@ import { useToast } from '@/hooks/use-toast';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-import { sendPushNotification } from '@/lib/notifications.functions';
 
 interface PushSubscription {
   id: string;
   endpoint: string;
-  created_at: string | null;
+  created_at: string;
   user_id: string;
 }
 
@@ -110,8 +109,8 @@ export function NotificationSettings() {
     
     setTestingNotification(true);
     try {
-      const result = await sendPushNotification({
-        data: {
+      const { error } = await supabase.functions.invoke('send-push-notification', {
+        body: {
           user_id: user.id,
           payload: {
             title: '🔔 Test Notification',
@@ -122,7 +121,7 @@ export function NotificationSettings() {
         }
       });
 
-      if ('error' in result && result.error) throw new Error(result.error);
+      if (error) throw error;
 
       toast({
         title: 'Test notification sent',
@@ -308,7 +307,7 @@ export function NotificationSettings() {
                     <div>
                       <div className="font-medium">{getDeviceType(sub.endpoint)}</div>
                       <div className="text-sm text-muted-foreground">
-                        Added: {formatDate(sub.created_at ?? '')}
+                        Added: {formatDate(sub.created_at)}
                       </div>
                     </div>
                   </div>
@@ -365,18 +364,12 @@ function TestEmailCard() {
   const sendTest = async () => {
     if (!to) return;
     setSending(true);
-    let data: any;
-    try {
-      const { sendTestEmail } = await import('@/lib/emails.functions');
-      data = await sendTestEmail({
-        data: { to, subject: 'Midasbuy Test Email', message: 'Yeh test email hai — agar mil gai to email delivery working hai ✅' },
-      });
-    } catch (error: any) {
-      data = { success: false, error: error?.message };
-    }
+    const { data, error } = await supabase.functions.invoke('send-test-email', {
+      body: { to, subject: 'Midasbuy Test Email', message: 'Yeh test email hai — agar mil gai to email delivery working hai ✅' },
+    });
     setSending(false);
-    if (data?.success === false) {
-      const details = data?.error?.message || data?.error;
+    if (error || (data as any)?.success === false) {
+      const details = (data as any)?.error?.message || (data as any)?.error || error?.message;
       toast({ title: 'Failed to send', description: String(details), variant: 'destructive' });
     } else {
       toast({ title: 'Test email sent', description: `Sent to ${to}` });

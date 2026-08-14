@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from '@/lib/router-compat';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { COUNTRY_CONFIGS, getCountryCurrency, getCountryNameFromConfig, getCountryConfig } from '@/utils/countryConfigs';
 
 interface Country {

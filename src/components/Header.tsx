@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { Link, useLocation, useNavigate } from "@/lib/router-compat";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Bell, Globe, ChevronDown, Flag, Search, Download, Ticket, SlidersHorizontal, Settings, CreditCard, Gift, HelpCircle, Clapperboard, User, LogOut, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";

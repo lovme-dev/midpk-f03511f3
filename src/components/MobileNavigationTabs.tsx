@@ -1,5 +1,5 @@
 
-import { useNavigate, useLocation } from "@/lib/router-compat";
+import { useNavigate, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ShoppingBag, Gift, Calendar, ClipboardList } from "lucide-react";
 

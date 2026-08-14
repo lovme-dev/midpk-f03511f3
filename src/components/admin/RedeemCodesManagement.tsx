@@ -35,17 +35,15 @@ import {
 
 interface RedeemCode {
   id: string;
-  player_id: string | null;
+  player_id: string;
   username: string | null;
-  redeem_code: string | null;
-  status: string | null;
-  created_at: string | null;
-  updated_at: string | null;
+  redeem_code: string;
+  status: string;
+  created_at: string;
+  updated_at: string;
   reviewed_at: string | null;
   reviewed_by: string | null;
   notes: string | null;
-  code: string | null;
-  order_id: string | null;
 }
 
 type DateFilter = '24h' | '7d' | '30d' | 'all';
@@ -290,14 +288,14 @@ export function RedeemCodesManagement() {
 
   const filteredCodes = redeemCodes.filter(code => {
     const matchesSearch = 
-      (code.player_id ?? '').toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (code.redeem_code ?? '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+      code.player_id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      code.redeem_code.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (code.username && code.username.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesStatus = statusFilter === 'all' || code.status === statusFilter;
     
     // Date filter logic
-    const codeDate = new Date(code.created_at ?? Date.now());
+    const codeDate = new Date(code.created_at);
     const now = new Date();
     let matchesDate = true;
     
@@ -562,7 +560,7 @@ export function RedeemCodesManagement() {
                             className="inline-flex items-center justify-center h-5 w-5 md:h-6 md:w-6 rounded bg-purple-500/20 hover:bg-purple-500/40 border border-purple-500/30 transition-colors flex-shrink-0"
                             onClick={(e) => {
                               e.stopPropagation();
-                              copyToClipboard(code.redeem_code ?? '', code.id);
+                              copyToClipboard(code.redeem_code, code.id);
                             }}
                             title="Copy Code"
                           >
@@ -576,10 +574,10 @@ export function RedeemCodesManagement() {
                         <div className="text-[10px] md:text-xs text-gray-400 flex items-center gap-1 mt-0.5 truncate">
                           <Clock className="w-2.5 h-2.5 flex-shrink-0" />
                           <span className="truncate">
-                            {new Date(code.created_at ?? Date.now()).toLocaleDateString('en-GB', { 
+                            {new Date(code.created_at).toLocaleDateString('en-GB', { 
                               day: '2-digit', 
                               month: 'short' 
-                            })} • {new Date(code.created_at ?? Date.now()).toLocaleTimeString('en-US', { 
+                            })} • {new Date(code.created_at).toLocaleTimeString('en-US', { 
                               hour: '2-digit', 
                               minute: '2-digit',
                               hour12: true 
@@ -589,7 +587,7 @@ export function RedeemCodesManagement() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1.5 flex-shrink-0">
-                      {getStatusBadge(code.status ?? '')}
+                      {getStatusBadge(code.status)}
                     </div>
                   </div>
                 </AccordionTrigger>
@@ -604,7 +602,7 @@ export function RedeemCodesManagement() {
                         <button
                           type="button"
                           className="inline-flex items-center justify-center h-5 w-5 rounded bg-blue-500/20 hover:bg-blue-500/40 border border-blue-500/30 transition-colors flex-shrink-0"
-                          onClick={() => copyToClipboard(code.player_id ?? '', `pid-${code.id}`)}
+                          onClick={() => copyToClipboard(code.player_id, `pid-${code.id}`)}
                           title="Copy Player ID"
                         >
                           {copiedId === `pid-${code.id}` ? (
@@ -621,11 +619,11 @@ export function RedeemCodesManagement() {
                     </div>
                     <div>
                       <span className="text-gray-500 text-[10px]">Submitted:</span>
-                      <p className="text-white text-xs">{new Date(code.created_at ?? Date.now()).toLocaleDateString()}</p>
+                      <p className="text-white text-xs">{new Date(code.created_at).toLocaleDateString()}</p>
                     </div>
                     <div>
                       <span className="text-gray-500 text-[10px]">Status:</span>
-                      <div className="mt-0.5">{getStatusBadge(code.status ?? '')}</div>
+                      <div className="mt-0.5">{getStatusBadge(code.status)}</div>
                     </div>
                   </div>
 

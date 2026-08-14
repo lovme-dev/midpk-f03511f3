@@ -1,7 +1,7 @@
 import { useResponsive } from "@/hooks/use-mobile";
 import { ChevronRight, Play, X } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "@/lib/router-compat";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
 
@@ -107,7 +107,7 @@ const VideoCard = ({ video, onPlay, isMobile = false }: VideoCardProps) => {
     >
       {/* Thumbnail */}
       <div className="relative rounded-lg overflow-hidden aspect-video mb-2">
-        <img loading="lazy" decoding="async" 
+        <img 
           src={video.thumbnail} 
           alt={video.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

@@ -97,7 +97,7 @@ const CreditCardDisplay = ({ cardNumber, cardholderName, expiryDate }: CreditCar
         {/* New chip image */}
         <div className="w-full flex mt-2">
           <div className="w-12 h-9 overflow-hidden">
-            <img loading="lazy" decoding="async" 
+            <img 
               src="/lovable-uploads/fa64130a-28a1-4626-9961-2f87403367e7.png" 
               alt="Chip" 
               className="h-full w-full object-contain"

@@ -8,9 +8,9 @@ interface BackendNotification {
   type: string;
   action_url: string | null;
   icon_url: string | null;
-  read: boolean | null;
-  delivered: boolean | null;
-  created_at: string | null;
+  read: boolean;
+  delivered: boolean;
+  created_at: string;
   user_notification_id: string;
 }
 

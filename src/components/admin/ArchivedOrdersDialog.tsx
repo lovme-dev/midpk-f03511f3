@@ -79,8 +79,8 @@ export function ArchivedOrdersDialog({ archivedCount = 0 }: ArchivedOrdersDialog
       }
 
       // Step 2: Get unique user_ids and package_ids
-      const userIds = [...new Set(ordersData.map(o => o.user_id).filter((id): id is string => Boolean(id)))];
-      const packageIds = [...new Set(ordersData.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
+      const userIds = [...new Set(ordersData.map(o => o.user_id).filter(Boolean))];
+      const packageIds = [...new Set(ordersData.map(o => o.package_id).filter(Boolean))];
 
       // Step 3: Fetch profiles
       let profilesMap: Record<string, { full_name: string | null; email: string | null }> = {};
@@ -92,7 +92,7 @@ export function ArchivedOrdersDialog({ archivedCount = 0 }: ArchivedOrdersDialog
 
         if (profilesData) {
           profilesData.forEach(p => {
-            if (p.user_id) profilesMap[p.user_id] = { full_name: p.full_name, email: p.email };
+            profilesMap[p.user_id] = { full_name: p.full_name, email: p.email };
           });
         }
       }

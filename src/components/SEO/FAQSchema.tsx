@@ -1,4 +1,4 @@
-import { Helmet } from "@/lib/helmet";
+import { Helmet } from "react-helmet-async";
 
 interface FAQItem {
   question: string;

@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { useParams } from "@/lib/router-compat";
+import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, Gift, Crosshair, Star, Shield, CheckCircle, HelpCircle } from "lucide-react";
 import { ucPackages } from "@/data/ucPackages";

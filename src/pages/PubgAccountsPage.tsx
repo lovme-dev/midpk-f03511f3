@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from '@/lib/router-compat';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -171,7 +171,7 @@ export default function PubgAccountsPage() {
             <ArrowLeft className="h-2 w-2 md:h-2.5 md:w-2.5" />
             Go Back
           </Button>
-          <img loading="lazy" decoding="async" 
+          <img 
             src="/lovable-uploads/f9014f76-d71e-47a5-a559-8cad50748020.png" 
             alt="Midasbuy Logo" 
             className="h-8 md:h-10 object-contain"
@@ -181,7 +181,7 @@ export default function PubgAccountsPage() {
         {/* Page Title */}
         <div className="text-center mb-4">
           <div className="flex justify-center items-center gap-2 mb-2">
-            <img loading="lazy" decoding="async" 
+            <img 
               src="/lovable-uploads/c1bc564c-d6a4-4bb3-b141-6dd354f122bf.png" 
               alt="PUBG Logo" 
               className="h-6 w-6 md:h-8 md:w-8 object-contain rounded-lg"
@@ -315,11 +315,9 @@ export default function PubgAccountsPage() {
                         onClick={() => {
                           setPlayingVideo(account.id);
                           // Prefetch video for faster loading
-                          if (account.video_url) {
-                            const video = document.createElement('video');
-                            video.src = account.video_url;
-                            video.preload = 'metadata';
-                          }
+                          const video = document.createElement('video');
+                          video.src = account.video_url;
+                          video.preload = 'metadata';
                         }}
                       >
                         <div className="bg-primary rounded-full p-3 group-hover:scale-110 transition-transform shadow-lg">

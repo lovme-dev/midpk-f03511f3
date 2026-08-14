@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, X, CheckCheck, ExternalLink, Inbox } from 'lucide-react';
 import { useBackendNotifications } from '@/hooks/useBackendNotifications';
 import { formatDistanceToNow } from 'date-fns';
-import { useNavigate } from '@/lib/router-compat';
+import { useNavigate } from 'react-router-dom';
 
 interface NotificationDropdownProps {
   isMobile?: boolean;
@@ -161,7 +161,7 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({ isMobile = 
                             </p>
                             <div className="flex items-center gap-2">
                               <p className="text-gray-500 text-xs">
-                                {formatDistanceToNow(new Date(notification.created_at ?? Date.now()), { addSuffix: true })}
+                                {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
                               </p>
                               {notification.action_url && (
                                 <ExternalLink className="w-3 h-3 text-gray-500" />

@@ -150,13 +150,13 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                 <div className="relative flex items-start pt-1">
                   {/* 8 Ball Logo with glow effect - corner touch, 6% more up */}
                   <div className="relative w-24 h-24 flex-shrink-0 -ml-5 -mt-5">
-                    <img loading="lazy" decoding="async" 
+                    <img 
                       src={eightBallLogoGlow} 
                       alt="8 Ball Glow"
                       className="absolute inset-0 w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <img loading="lazy" decoding="async" 
+                      <img 
                         src={eightBallIcon} 
                         alt="8 Ball Pool"
                         className="w-[45%] h-[45%] object-contain"
@@ -226,7 +226,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                   className="overflow-hidden"
                   style={{ borderRadius: "10px" }}
                 >
-                  <img loading="lazy" decoding="async" 
+                  <img 
                     src={eightBallGameplay} 
                     alt="8 Ball Pool Gameplay"
                     className="w-full h-auto"
@@ -239,13 +239,13 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
             <div className="flex items-center py-8 px-8">
               {/* Left - 8 Ball Logo with glow - icon with proper rounded corners */}
               <div className="relative w-36 h-36 flex-shrink-0">
-                <img loading="lazy" decoding="async" 
+                <img 
                   src={eightBallLogoGlow} 
                   alt="8 Ball Glow"
                   className="absolute inset-0 w-full h-full object-contain"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img loading="lazy" decoding="async" 
+                  <img 
                     src={eightBallIcon} 
                     alt="8 Ball Pool"
                     className="w-[55%] h-[55%] object-contain"
@@ -345,7 +345,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
                     borderRadius: "0 0 17px 0",
                   }}
                 />
-                <img loading="lazy" decoding="async" 
+                <img 
                   src={eightBallGameplay} 
                   alt="8 Ball Pool Gameplay"
                   className="w-full h-full object-cover"
@@ -395,7 +395,7 @@ const MiniGamesSection = ({ className = "" }: MiniGamesSectionProps) => {
         <div className="relative z-10 flex items-center p-4">
           {/* Ludo World Logo - new icon for PC, old for mobile */}
           <div className="w-14 h-14 flex-shrink-0 mr-4">
-            <img loading="lazy" decoding="async" 
+            <img 
               src={isMobile ? ludoWorldLogo : ludoWorldIconNew} 
               alt="Ludo World"
               className="w-full h-full object-contain rounded-lg"

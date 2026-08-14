@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "@/lib/router-compat";
+import { Navigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AdvancedSEOHelmet from "@/components/SEO/AdvancedSEOHelmet";
 import FAQSchema from "@/components/SEO/FAQSchema";
