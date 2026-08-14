@@ -71,7 +71,7 @@ const HonorOfKingsPackageGrid = ({ packages, selectedCountry }: HonorOfKingsPack
       image: pkg.image,
       baseAmount: pkg.baseAmount,
       bonusAmount: pkg.bonusAmount,
-      bonusPercent: pkg.bonusPercent,
+      bonusPercent: pkg.bonusPercent ?? '',
       price: pkg.price,
       originalPrice: pkg.originalPrice,
       discount: pkg.discount

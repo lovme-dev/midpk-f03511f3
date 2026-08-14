@@ -35,15 +35,17 @@ import {
 
 interface RedeemCode {
   id: string;
-  player_id: string;
+  player_id: string | null;
   username: string | null;
-  redeem_code: string;
-  status: string;
-  created_at: string;
-  updated_at: string;
+  redeem_code: string | null;
+  status: string | null;
+  created_at: string | null;
+  updated_at: string | null;
   reviewed_at: string | null;
   reviewed_by: string | null;
   notes: string | null;
+  code: string | null;
+  order_id: string | null;
 }
 
 type DateFilter = '24h' | '7d' | '30d' | 'all';

@@ -95,7 +95,7 @@ const PrivacyPolicyPage = ({ onLogout }: PrivacyPolicyPageProps) => {
         <meta name="description" content="Learn how Midasbuy collects, uses, and protects your personal information. Your privacy and data security are our top priorities." />
       </Helmet>
 
-      <Header onLogout={onLogout} />
+      <Header onLogout={onLogout ?? (() => {})} />
 
       <main className="pt-20 pb-16">
         {/* Hero Section */}

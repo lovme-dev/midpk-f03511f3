@@ -37,10 +37,10 @@ const CURRENCY_FLAGS: Record<string, string> = {
 
 interface Order {
   id: string;
-  price: number;
+  price: number | null;
   currency_code: string | null;
-  status: string;
-  created_at: string;
+  status: string | null;
+  created_at: string | null;
 }
 
 interface CurrencyRevenue {

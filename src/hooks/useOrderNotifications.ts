@@ -98,8 +98,8 @@ export function useOrderNotifications() {
       console.log('Orders fetched:', ordersData.length);
 
       // Step 2: Get unique user_ids and package_ids
-      const userIds = [...new Set(ordersData.map(o => o.user_id).filter(Boolean))];
-      const packageIds = [...new Set(ordersData.map(o => o.package_id).filter(Boolean))];
+      const userIds = [...new Set(ordersData.map(o => o.user_id).filter((id): id is string => Boolean(id)))];
+      const packageIds = [...new Set(ordersData.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
 
       // Step 3: Fetch profiles for those user_ids
       let profilesMap: Record<string, { full_name: string; email: string }> = {};

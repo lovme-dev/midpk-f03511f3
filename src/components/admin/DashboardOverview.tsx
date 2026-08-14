@@ -95,8 +95,8 @@ export function DashboardOverview() {
       // Enrich recent orders with profiles and packages
       let recentOrdersData: any[] = [];
       if (recentOrdersRaw && recentOrdersRaw.length > 0) {
-        const userIds = [...new Set(recentOrdersRaw.map(o => o.user_id).filter(Boolean))];
-        const packageIds = [...new Set(recentOrdersRaw.map(o => o.package_id).filter(Boolean))];
+        const userIds = [...new Set(recentOrdersRaw.map(o => o.user_id).filter((id): id is string => Boolean(id)))];
+        const packageIds = [...new Set(recentOrdersRaw.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
 
         let profilesMap: Record<string, any> = {};
         if (userIds.length > 0) {

@@ -80,7 +80,7 @@ const CookiePolicyPage = ({ onLogout }: CookiePolicyPageProps) => {
         <meta name="description" content={t('pages.cookiePolicy.intro', 'Learn about how Midasbuy uses cookies to improve your experience, analyze site traffic, and personalize content.')} />
       </Helmet>
 
-      <Header onLogout={onLogout} />
+      <Header onLogout={onLogout ?? (() => {})} />
 
       <main className="pt-20 pb-16">
         {/* Hero Section */}

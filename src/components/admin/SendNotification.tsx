@@ -26,9 +26,9 @@ import {
 interface SentNotification {
   id: string;
   title: string;
-  message: string;
-  type: string;
-  sent_at: string;
+  message: string | null;
+  type: string | null;
+  sent_at: string | null;
   icon_url: string | null;
   action_url: string | null;
 }

@@ -36,7 +36,7 @@ const AutoScrollableRow = forwardRef<AutoScrollableRowRef, AutoScrollableRowProp
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isUserInteracting, setIsUserInteracting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const autoScrollRef = useRef<number>();
+  const autoScrollRef = useRef<number | undefined>(undefined);
   const maxScrollRef = useRef<number>(0);
   const isExternalScrollRef = useRef(false);
 
@@ -85,10 +85,10 @@ const AutoScrollableRow = forwardRef<AutoScrollableRowRef, AutoScrollableRowProp
                 scrollRef.current.scrollLeft += 1;
               }
               
-              autoScrollRef.current = requestAnimationFrame(scroll);
+              autoScrollRef.current = requestAnimationFrame(scroll) as unknown as number;
             }
           };
-          autoScrollRef.current = requestAnimationFrame(scroll);
+          autoScrollRef.current = requestAnimationFrame(scroll) as unknown as number;
         }
       };
 

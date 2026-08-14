@@ -12,7 +12,7 @@ import { Slider } from '@/components/ui/slider';
 
 interface FreeFireBanner {
   id: string;
-  banner_key: string;
+  banner_key: string | null;
   title: string | null;
   description: string | null;
   image_url: string;

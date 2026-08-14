@@ -319,7 +319,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
 
           if (ordersRaw && ordersRaw.length > 0) {
             // Fetch UC packages for enrichment
-            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter(Boolean))];
+            const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
             let packagesMap: Record<string, { name: string; uc_amount: number }> = {};
             
             if (packageIds.length > 0) {
