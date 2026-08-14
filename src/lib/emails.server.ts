@@ -19,6 +19,7 @@ export interface OrderDetails {
   productAmount?: string;
   currencyCode?: string;
   countryCode?: string;
+  customerEmail?: string | null;
 }
 
 export const PRODUCT_CONFIG: Record<string, {
