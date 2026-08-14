@@ -413,12 +413,12 @@ export const sendOrderEmail = createServerFn({ method: 'POST' })
 
       const { data: profile } = await supabaseAdmin
         .from('profiles')
-        .select('email, full_name, username')
+        .select('email, full_name')
         .eq('user_id', userId)
         .maybeSingle();
 
       if (!userEmail) userEmail = profile?.email as string | undefined;
-      if (!userName) userName = (profile?.full_name || profile?.username) as string | undefined;
+      if (!userName) userName = (profile?.full_name) as string | undefined;
 
       if (!userEmail || !userName) {
         const { data: authUser } = await supabaseAdmin.auth.admin.getUserById(userId);
@@ -550,7 +550,7 @@ export const sendOrderStatusNotification = createServerFn({ method: 'POST' })
 
       for (const sub of subscriptions) {
         try {
-          const response = await sendWebPush(sub.endpoint, sub.p256dh, sub.auth, payload, vapidPublicKey, vapidPrivateKey);
+          const response = await sendWebPush(sub.endpoint, sub.p256dh ?? '', sub.auth ?? '', payload, vapidPublicKey, vapidPrivateKey);
           if (response.status === 201) {
             successCount++;
           } else if (response.status === 404 || response.status === 410 || response.status === 403) {
