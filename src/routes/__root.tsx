@@ -1,4 +1,5 @@
 import {
+  ClientOnly,
   createRootRouteWithContext,
   HeadContent,
   Outlet,
@@ -258,9 +259,11 @@ function AppShell() {
     <>
       <InternationalRedirect />
       {showChatbot && (
-        <Suspense fallback={null}>
-          <AIChatbotWidget />
-        </Suspense>
+        <ClientOnly fallback={null}>
+          <Suspense fallback={null}>
+            <AIChatbotWidget />
+          </Suspense>
+        </ClientOnly>
       )}
       <ErrorBoundary>
         <Suspense fallback={<LoadingScreen message="loading..." />}>
