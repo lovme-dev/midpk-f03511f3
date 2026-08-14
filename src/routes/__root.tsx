@@ -26,7 +26,6 @@ import { GlobalPushPrompt } from "@/components/push/GlobalPushPrompt";
 import LoadingScreen from "@/components/LoadingScreen";
 import NotFound from "@/pages/NotFound";
 import { useLocation } from "@/lib/router-compat";
-import { useAuth } from "@/hooks/useAuth";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { useAnalyticsTracking } from "@/hooks/useAnalyticsTracking";
 import { useStatusBar } from "@/hooks/useStatusBar";
@@ -198,7 +197,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function AppShell() {
-  const { loading } = useAuth();
   const [isStandalone, setIsStandalone] = useState(false);
   const { isNative } = useCapacitor();
   const location = useLocation();
@@ -245,10 +243,6 @@ function AppShell() {
     }
     return undefined;
   }, [isNative]);
-
-  if (loading) {
-    return <LoadingScreen message="loading..." />;
-  }
 
   const hideChatbotPrefixes = ["/auth", "/admin", "/api/auth", "/pay/card", "/payment/success"];
   const isMidasbuyBuyFlow =
