@@ -296,8 +296,7 @@ const Header = ({ onLogout, showNavigation = false, activeSection = "popular-gam
   }, []);
   
   const navLinks = [
-    { name: "HOME", path: "/gaming-shop" },
-    { name: "PUBG VEHICLES", path: "/car-purchase" },
+    { name: "HOME", path: "/" },
     { name: "SHOP", path: "/shop" },
     { name: "CUSTOMERS REVIEWS", path: "/customer-reviews" },
   ];
@@ -553,25 +552,8 @@ const Header = ({ onLogout, showNavigation = false, activeSection = "popular-gam
     // The country flag will update from localStorage
     console.log(`[Header] Country changed to ${country.name}, staying on current page: ${currentPath}`);
     
-    // For game-related legacy routes, redirect to proper localized path
-    if (currentPath.includes('/freefire') || currentPath.includes('/free-fire')) {
-      navigate(`/midasbuy/${countryCode}/buy/freefire`, { replace: true });
-    } else if (currentPath.includes('/roblox')) {
-      navigate(`/midasbuy/${countryCode}/buy/roblox`, { replace: true });
-    } else if (currentPath.includes('/valorant')) {
-      navigate(`/midasbuy/${countryCode}/buy/valorant`, { replace: true });
-    } else if (currentPath.includes('/bgmi')) {
-      navigate(`/midasbuy/${countryCode}/buy/bgmi`, { replace: true });
-    } else if (currentPath.includes('/honor-of-kings') || currentPath.includes('/honorofkings')) {
-      navigate(`/midasbuy/${countryCode}/buy/honorofkings`, { replace: true });
-    } else if (currentPath.includes('/pubgm') || currentPath.includes('/pubg-mobile')) {
-      navigate(`/midasbuy/${countryCode}/buy/pubgm`, { replace: true });
-    } else if (currentPath.includes('/car-purchase') || currentPath.includes('/car')) {
-      navigate(`/midasbuy/${countryCode}/buy/car`, { replace: true });
-    } else if (currentPath === '/' || currentPath === '/gaming-shop') {
-      // Home page - redirect to country-specific home
-      navigate(`/midasbuy/${countryCode}`, { replace: true });
-    }
+    // Single-game store: every legacy game route resolves to the PUBG Mobile store
+    navigate(`/midasbuy/${countryCode}/buy/pubgm`, { replace: true });
     // For all other routes (/coupons, /orders, /payment-issues, /redeem, etc.)
     // No redirect - just update localStorage and stay on page
   };
