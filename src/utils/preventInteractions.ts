@@ -24,6 +24,7 @@ export const initializeInteractionPrevention = () => {
       e.preventDefault();
       return false;
     }
+    return undefined;
   });
 
   // Prevent image drag and save
@@ -32,6 +33,7 @@ export const initializeInteractionPrevention = () => {
       e.preventDefault();
       return false;
     }
+    return undefined;
   });
 
   // Prevent text selection on the entire document (optional - may affect UX)
@@ -72,6 +74,7 @@ export const initializeInteractionPrevention = () => {
       e.preventDefault();
       return false;
     }
+    return undefined;
   });
 
   // Prevent zoom gestures on touch devices

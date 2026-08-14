@@ -26,16 +26,16 @@ interface Blog {
   id: string;
   title: string;
   slug: string;
-  excerpt: string;
-  content: string;
-  featured_image_url?: string;
-  author: string;
+  excerpt: string | null;
+  content: string | null;
+  featured_image_url?: string | null;
+  author: string | null;
   published: boolean;
-  meta_title?: string;
-  meta_description?: string;
-  tags?: string[];
-  created_at: string;
-  updated_at: string;
+  meta_title?: string | null;
+  meta_description?: string | null;
+  tags?: string[] | null;
+  created_at: string | null;
+  updated_at: string | null;
 }
 
 interface BlogFormData {
@@ -96,7 +96,7 @@ const BlogManagement = () => {
     }
 
     try {
-      const blogData = {
+      const blogData: Record<string, unknown> = {
         ...formData,
         slug: formData.slug || undefined, // Let the trigger generate slug if not provided
         meta_title: formData.meta_title || undefined,

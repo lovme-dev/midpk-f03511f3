@@ -30,10 +30,10 @@ interface ArchivedInquiry {
   email: string;
   subject: string;
   message: string;
-  is_read: boolean;
-  status: string;
-  original_created_at: string;
-  archived_at: string;
+  is_read: boolean | null;
+  status: string | null;
+  original_created_at: string | null;
+  archived_at: string | null;
 }
 
 interface ArchivedInquiriesDialogProps {

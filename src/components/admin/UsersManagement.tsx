@@ -21,14 +21,14 @@ import {
 
 interface User {
   id: string;
-  email: string;
-  full_name: string;
-  status: string;
+  email: string | null;
+  full_name: string | null;
+  status: string | null;
   created_at: string;
-  total_orders: number;
-  total_spent: number;
+  total_orders: number | null;
+  total_spent: number | null;
   last_sign_in?: string;
-  blocked_at: string;
+  blocked_at: string | null;
 }
 
 export function UsersManagement() {

@@ -11,7 +11,7 @@ import { useAuth } from '@/hooks/useAuth';
 interface PushSubscription {
   id: string;
   endpoint: string;
-  created_at: string;
+  created_at: string | null;
   user_id: string;
 }
 

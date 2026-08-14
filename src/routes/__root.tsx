@@ -239,6 +239,7 @@ function AppShell() {
         window.removeEventListener("appinstalled", check);
       };
     }
+    return undefined;
   }, [isNative]);
 
   if (loading) {

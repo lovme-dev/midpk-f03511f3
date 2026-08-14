@@ -23,6 +23,7 @@ export function CookieConsent() {
       }, 1500);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, []);
 
   const handleAcceptAll = () => {

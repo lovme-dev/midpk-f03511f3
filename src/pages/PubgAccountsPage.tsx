@@ -315,9 +315,11 @@ export default function PubgAccountsPage() {
                         onClick={() => {
                           setPlayingVideo(account.id);
                           // Prefetch video for faster loading
-                          const video = document.createElement('video');
-                          video.src = account.video_url;
-                          video.preload = 'metadata';
+                          if (account.video_url) {
+                            const video = document.createElement('video');
+                            video.src = account.video_url;
+                            video.preload = 'metadata';
+                          }
                         }}
                       >
                         <div className="bg-primary rounded-full p-3 group-hover:scale-110 transition-transform shadow-lg">

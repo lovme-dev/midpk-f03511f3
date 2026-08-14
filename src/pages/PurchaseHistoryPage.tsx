@@ -107,7 +107,7 @@ const PurchaseHistoryPage = ({ onLogout }: PurchaseHistoryProps) => {
         }
 
         // Fetch profiles and packages for enrichment
-        const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter(Boolean))];
+        const packageIds = [...new Set(ordersRaw.map(o => o.package_id).filter((id): id is string => Boolean(id)))];
         let packagesMap: Record<string, { name: string; uc_amount: number }> = {};
         if (packageIds.length > 0) {
           const { data: packages } = await supabase

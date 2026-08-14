@@ -51,7 +51,7 @@ const MidasCheckoutPage: React.FC<MidasCheckoutPageProps> = ({ onLogout }) => {
   const [tempName, setTempName] = useState('');
 
   // Package data from location state or defaults
-  const packageData = location.state?.packageData || {
+  const packageData = (location.state as { packageData?: { ucAmount?: number; bonusUC?: number; price?: number; originalPrice?: number; currency?: string } } | null)?.packageData || {
     ucAmount: 300,
     bonusUC: 25,
     price: 249,

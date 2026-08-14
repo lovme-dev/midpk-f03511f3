@@ -43,7 +43,7 @@ interface CustomerInquiry {
   email: string;
   subject: string;
   message: string;
-  is_read: boolean;
+  is_read: boolean | null;
   created_at: string;
   status?: string;
   updated_at?: string;

@@ -128,8 +128,8 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
                     orderId: order.id,
                     emailType: 'refund',
                     orderDetails: {
-                      packageName: order.product_name || order.uc_packages?.name || 'Package',
-                      productName: order.product_name || order.uc_packages?.name || 'Package',
+                      packageName: order.product_name || (order.uc_packages as any)?.name || 'Package',
+                      productName: order.product_name || (order.uc_packages as any)?.name || 'Package',
                       productAmount: order.product_amount,
                       productType: order.product_type || 'pubg_uc',
                       ucAmount: order.product_amount ? parseInt(order.product_amount) : 0,

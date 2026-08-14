@@ -1,0 +1,214 @@
+{
+  "functions": [
+    {
+      "name": "archive-redeem-codes",
+      "classification": "cron target",
+      "signal": "invoked by pg_cron schedule",
+      "outcome": "left"
+    },
+    {
+      "name": "binance-crypto-deposit",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "binance-payment",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "broadcast-notification",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "chat-support",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "cleanup-pending-orders",
+      "classification": "cron target",
+      "signal": "invoked by pg_cron schedule",
+      "outcome": "left"
+    },
+    {
+      "name": "create-or-get-guest-profile",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "get-vapid-public-key",
+      "classification": "internal-only",
+      "signal": "called from src/; deferred follow-up",
+      "outcome": "left"
+    },
+    {
+      "name": "gopayfast",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "gopayfast-ipn",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "gopayfast-payment",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "mark-order-cancelled",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "notify-admin-new-order",
+      "classification": "internal-only",
+      "signal": "called from src/; deferred follow-up",
+      "outcome": "left"
+    },
+    {
+      "name": "notify-admin-redeem-code",
+      "classification": "internal-only",
+      "signal": "called from src/; deferred follow-up",
+      "outcome": "left"
+    },
+    {
+      "name": "paypro-callback",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "paypro-payment",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-account-details",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-auth-email",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-contact-email",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-inquiry-reply",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-order-email",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "send-order-status-notification",
+      "classification": "internal-only",
+      "signal": "called from src/; deferred follow-up",
+      "outcome": "left"
+    },
+    {
+      "name": "send-push-notification",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "send-test-email",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "stripe-payment",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "track-order",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "transcribe-voice",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "translate-message",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "whatsapp-chats",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "whatsapp-control",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "whatsapp-send",
+      "classification": "Deno-only dependency",
+      "signal": "imports deno.land/jsr specifier",
+      "outcome": "left"
+    },
+    {
+      "name": "whatsapp-webhook",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "xpay-config",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "xpay-create-payment",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    },
+    {
+      "name": "xpay-webhook",
+      "classification": "webhook receiver",
+      "signal": "receives external callback; fixed URL must not change",
+      "outcome": "left"
+    }
+  ]
+}

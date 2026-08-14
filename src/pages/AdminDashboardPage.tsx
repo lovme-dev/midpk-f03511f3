@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
       setUcLoading(true);
       const { data, error } = await supabase.from('uc_packages').select('*').order('created_at', { ascending: true });
       if (error) console.error(error);
-      setUcPackages(data || []);
+      setUcPackages((data as unknown as UCPackage[]) || []);
     setUcLoading(false);
     };
     load();

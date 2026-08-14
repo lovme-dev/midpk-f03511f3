@@ -38,7 +38,7 @@ export function AIChatbotWidget() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
   const [chatId, setChatId] = useState<string | null>(null);
-  const [userProfile, setUserProfile] = useState<{ full_name?: string; avatar_url?: string } | null>(null);
+  const [userProfile, setUserProfile] = useState<{ full_name?: string | null; avatar_url?: string | null } | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();

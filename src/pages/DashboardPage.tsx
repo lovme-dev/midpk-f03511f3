@@ -13,9 +13,9 @@ import { Helmet } from 'react-helmet-async';
 
 interface Profile {
   id: string;
-  email: string;
-  full_name: string;
-  avatar_url?: string;
+  email: string | null;
+  full_name: string | null;
+  avatar_url?: string | null;
   created_at: string;
 }
 
@@ -70,7 +70,7 @@ export default function DashboardPage() {
       if (profileError) {
         console.error('Error fetching profile:', profileError);
       } else {
-        setProfile(profileData);
+        setProfile(profileData as Profile | null);
         setProfileForm({
           full_name: profileData?.full_name || '',
           avatar_url: '' // Database doesn't store avatar_url yet

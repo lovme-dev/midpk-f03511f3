@@ -356,7 +356,7 @@ const VideosPage = ({ onLogout }: VideosPageProps) => {
       </Helmet>
 
       <div className="min-h-screen bg-[#0c1730]">
-        <Header onLogout={onLogout} />
+        <Header onLogout={onLogout ?? (() => {})} />
         
         {/* Purple Header Banner */}
         <div className="relative w-full h-16 md:h-20 overflow-hidden">

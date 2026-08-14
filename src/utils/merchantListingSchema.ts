@@ -159,13 +159,15 @@ export const getPubgUcMerchantSchema = () => {
 
 export const getFreeFireMerchantSchema = () => {
   const products: MerchantProductInput[] = diamondPackages.map((pkg) => {
-    const totalDiamonds = pkg.baseAmount + pkg.bonusAmount;
+    const baseAmount = pkg.baseAmount ?? 0;
+    const bonusAmount = pkg.bonusAmount ?? 0;
+    const totalDiamonds = baseAmount + bonusAmount;
     return {
       id: pkg.id,
-      name: `Free Fire ${totalDiamonds} Diamonds (${pkg.baseAmount} + ${pkg.bonusAmount} Bonus)`,
-      description: `Buy ${pkg.baseAmount} Garena Free Fire Diamonds with ${pkg.bonusAmount} bonus diamonds. Instant top-up to your Free Fire UID via Midasbuy.`,
-      image: pkg.image,
-      price: pkg.price,
+      name: `Free Fire ${totalDiamonds} Diamonds (${baseAmount} + ${bonusAmount} Bonus)`,
+      description: `Buy ${baseAmount} Garena Free Fire Diamonds with ${bonusAmount} bonus diamonds. Instant top-up to your Free Fire UID via Midasbuy.`,
+      image: pkg.image ?? "",
+      price: pkg.price ?? 0,
       currency: "PKR",
       url: `${BASE_URL}/midasbuy/pk/buy/freefire?package=${pkg.id}`,
       brandName: "Garena Free Fire",
@@ -177,13 +179,15 @@ export const getFreeFireMerchantSchema = () => {
 
 export const getRobloxMerchantSchema = () => {
   const products: MerchantProductInput[] = robuxPackages.map((pkg) => {
-    const totalRobux = pkg.baseAmount + pkg.bonusAmount;
+    const baseAmount = pkg.baseAmount ?? 0;
+    const bonusAmount = pkg.bonusAmount ?? 0;
+    const totalRobux = baseAmount + bonusAmount;
     return {
       id: pkg.id,
-      name: `Roblox ${totalRobux} Robux (${pkg.baseAmount} + ${pkg.bonusAmount} Bonus)`,
-      description: `Buy ${pkg.baseAmount} Roblox Robux with ${pkg.bonusAmount} bonus robux. Instant delivery to your Roblox account via Midasbuy official store.`,
+      name: `Roblox ${totalRobux} Robux (${baseAmount} + ${bonusAmount} Bonus)`,
+      description: `Buy ${baseAmount} Roblox Robux with ${bonusAmount} bonus robux. Instant delivery to your Roblox account via Midasbuy official store.`,
       image: typeof pkg.image === "string" ? pkg.image : "/lovable-uploads/roblox-icon.png",
-      price: pkg.price,
+      price: pkg.price ?? 0,
       currency: "PKR",
       url: `${BASE_URL}/midasbuy/pk/buy/roblox?package=${pkg.id}`,
       brandName: "Roblox",
