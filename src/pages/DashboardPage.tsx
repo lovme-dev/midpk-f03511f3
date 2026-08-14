@@ -311,7 +311,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Avatar className="h-20 w-20">
-                  <AvatarImage src={isEditingProfile ? profileForm.avatar_url : profile?.avatar_url} />
+                  <AvatarImage src={isEditingProfile ? profileForm.avatar_url : (profile?.avatar_url ?? undefined)} />
                   <AvatarFallback className="text-lg">
                     {getInitials(isEditingProfile ? profileForm.full_name : (profile?.full_name || user?.email || ''))}
                   </AvatarFallback>

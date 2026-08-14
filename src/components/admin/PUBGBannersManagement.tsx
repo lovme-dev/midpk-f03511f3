@@ -53,7 +53,7 @@ export default function PUBGBannersManagement() {
       console.error('Error fetching banners:', error);
       toast({ variant: 'destructive', title: 'Failed to fetch banners', description: error.message });
     } else {
-      setBanners(data || []);
+      setBanners((data || []) as unknown as typeof banners);
     }
     setLoading(false);
   };

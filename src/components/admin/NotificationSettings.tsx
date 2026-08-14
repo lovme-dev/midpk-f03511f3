@@ -307,7 +307,7 @@ export function NotificationSettings() {
                     <div>
                       <div className="font-medium">{getDeviceType(sub.endpoint)}</div>
                       <div className="text-sm text-muted-foreground">
-                        Added: {formatDate(sub.created_at)}
+                        Added: {formatDate(sub.created_at ?? '')}
                       </div>
                     </div>
                   </div>

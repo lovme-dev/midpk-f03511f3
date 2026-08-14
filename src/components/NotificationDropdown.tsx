@@ -161,7 +161,7 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({ isMobile = 
                             </p>
                             <div className="flex items-center gap-2">
                               <p className="text-gray-500 text-xs">
-                                {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
+                                {formatDistanceToNow(new Date(notification.created_at ?? Date.now()), { addSuffix: true })}
                               </p>
                               {notification.action_url && (
                                 <ExternalLink className="w-3 h-3 text-gray-500" />
