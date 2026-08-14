@@ -589,7 +589,7 @@ export function RedeemCodesManagement() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1.5 flex-shrink-0">
-                      {getStatusBadge(code.status)}
+                      {getStatusBadge(code.status ?? '')}
                     </div>
                   </div>
                 </AccordionTrigger>
@@ -625,7 +625,7 @@ export function RedeemCodesManagement() {
                     </div>
                     <div>
                       <span className="text-gray-500 text-[10px]">Status:</span>
-                      <div className="mt-0.5">{getStatusBadge(code.status)}</div>
+                      <div className="mt-0.5">{getStatusBadge(code.status ?? '')}</div>
                     </div>
                   </div>
 
