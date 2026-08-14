@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { COUNTRY_DATA } from "@/utils/gameSeoConfigs";
 
 const GAMES = [
-  { slug: "pubgm", label: "PUBG UC" },
-  { slug: "freefire", label: "Free Fire Diamonds" },
-  { slug: "roblox", label: "Robux" },
-  { slug: "valorant", label: "Valorant Points" },
-  { slug: "car", label: "Car Skins" },
+  { slug: "pubgm", label: "PUBG Mobile UC" },
 ];
 
 const CountriesDirectoryPage = () => {
@@ -19,7 +15,7 @@ const CountriesDirectoryPage = () => {
         <title>All Countries — Midasbuy Game Top-Up Store Directory</title>
         <meta
           name="description"
-          content={`Browse Midasbuy top-up stores for ${entries.length} countries: PUBG Mobile UC, Free Fire Diamonds, Roblox Robux, Valorant Points and car skins in local currency.`}
+          content={`Browse Midasbuy top-up stores for ${entries.length} countries: buy PUBG Mobile UC at the best price in your local currency with instant delivery.`}
         />
         <link rel="canonical" href="https://www.midasbuy.com.pk/countries" />
       </Helmet>
@@ -27,7 +23,7 @@ const CountriesDirectoryPage = () => {
       <div className="mx-auto max-w-6xl">
         <h1 className="mb-4 text-3xl font-bold">Midasbuy Country Directory</h1>
         <p className="mb-8 text-muted-foreground">
-          Choose your country to see game top-up prices in your local currency.
+          Choose your country to see PUBG Mobile UC prices in your local currency.
         </p>
 
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -35,7 +31,7 @@ const CountriesDirectoryPage = () => {
             const cc = code.toLowerCase();
             return (
               <li key={code} className="rounded-xl border border-border bg-card p-4">
-                <Link to={`/midasbuy/${cc}`} className="font-semibold text-primary">
+                <Link to={`/midasbuy/${cc}/buy/pubgm`} className="font-semibold text-primary">
                   Midasbuy {country.name}
                 </Link>
                 <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">

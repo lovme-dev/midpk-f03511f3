@@ -15,12 +15,7 @@ interface Group {
 }
 
 const groups: Group[] = [
-  { file: "sitemap_countries_home.xml", build: (cc) => `/midasbuy/${cc}`, priority: "0.9", changefreq: "daily" },
   { file: "sitemap_countries_pubg.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm`, priority: "1.0", changefreq: "daily" },
-  { file: "sitemap_countries_freefire.xml", build: (cc) => `/midasbuy/${cc}/buy/freefire`, priority: "0.9", changefreq: "daily" },
-  { file: "sitemap_countries_roblox.xml", build: (cc) => `/midasbuy/${cc}/buy/roblox`, priority: "0.8", changefreq: "weekly" },
-  { file: "sitemap_countries_valorant.xml", build: (cc) => `/midasbuy/${cc}/buy/valorant`, priority: "0.8", changefreq: "weekly" },
-  { file: "sitemap_countries_car.xml", build: (cc) => `/midasbuy/${cc}/buy/car`, priority: "0.7", changefreq: "weekly" },
 ];
 
 let total = 0;
