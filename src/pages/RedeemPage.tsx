@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, ClipboardPaste, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";

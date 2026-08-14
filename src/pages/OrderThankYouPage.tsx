@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Home, Phone, Clock, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { supabase } from "@/integrations/supabase/client";
 import { 
   getPageTranslation, 

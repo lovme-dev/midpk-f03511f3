@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Link } from '@/lib/router-compat';
 import { Home, User, Mail, Calendar, Gamepad2, ShoppingBag, Save, Link as LinkIcon, Edit3, History, HelpCircle, Upload } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "@/lib/helmet";
 
 interface Profile {
   id: string;

@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import trackOrderIcon from "@/assets/track-order-icon.jpeg";
