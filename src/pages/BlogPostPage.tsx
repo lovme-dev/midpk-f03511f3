@@ -102,7 +102,7 @@ const BlogPostPage = () => {
       try {
         await navigator.share({
           title: blog?.title,
-          text: blog?.excerpt,
+          text: blog?.excerpt ?? undefined,
           url: url,
         });
       } catch (error) {
@@ -226,11 +226,11 @@ const BlogPostPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
+              <span>{formatDistanceToNow(new Date(blog.created_at ?? ''), { addSuffix: true })}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              <span>{getReadingTime(blog.content)} min read</span>
+              <span>{getReadingTime(blog.content ?? '')} min read</span>
             </div>
             <button
               onClick={handleShare}
@@ -272,7 +272,7 @@ const BlogPostPage = () => {
           <div 
             className="text-foreground leading-relaxed"
             dangerouslySetInnerHTML={{ 
-              __html: DOMPurify.sanitize(makeLinksClickable(blog.content.replace(/\n/g, '<br>')), {
+              __html: DOMPurify.sanitize(makeLinksClickable((blog.content ?? '').replace(/\n/g, '<br>')), {
                 ALLOWED_TAGS: ['p', 'br', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span', 'div'],
                 ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
               })
@@ -319,7 +319,7 @@ const BlogPostPage = () => {
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
                       <span>{relatedBlog.author}</span>
                       <span>•</span>
-                      <span>{formatDistanceToNow(new Date(relatedBlog.created_at), { addSuffix: true })}</span>
+                      <span>{formatDistanceToNow(new Date(relatedBlog.created_at ?? ''), { addSuffix: true })}</span>
                     </div>
                   </div>
                 </article>

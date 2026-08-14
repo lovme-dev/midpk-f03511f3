@@ -104,7 +104,7 @@ export function DashboardOverview() {
             .from('profiles')
             .select('user_id, full_name, email')
             .in('user_id', userIds);
-          profiles?.forEach(p => { profilesMap[p.user_id] = p; });
+          profiles?.forEach(p => { if (p.user_id) profilesMap[p.user_id] = p; });
         }
 
         let packagesMap: Record<string, any> = {};

@@ -416,7 +416,7 @@ export function SendNotification() {
                         </p>
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0">
-                        <Badge variant={getTypeBadgeVariant(notif.type)}>
+                        <Badge variant={getTypeBadgeVariant(notif.type ?? '')}>
                           {notif.type}
                         </Badge>
                         <AlertDialog>
@@ -455,7 +455,7 @@ export function SendNotification() {
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground mt-2">
-                      {new Date(notif.sent_at).toLocaleString()}
+                      {new Date(notif.sent_at ?? Date.now()).toLocaleString()}
                     </div>
                   </div>
                 ))}

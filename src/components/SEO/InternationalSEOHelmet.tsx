@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { useParams } from "@/lib/router-compat";
 import { getCountrySEOConfig, getHreflangTags, getInternationalStructuredData } from "@/utils/internationalSeo";
 import { usePageMeta } from "@/hooks/usePageMeta";

@@ -280,11 +280,11 @@ export function ArchivedInquiriesDialog({ open, onOpenChange }: ArchivedInquirie
                       <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          Created: {format(new Date(inquiry.original_created_at), 'MMM d, yyyy h:mm a')}
+                          Created: {format(new Date(inquiry.original_created_at ?? Date.now()), 'MMM d, yyyy h:mm a')}
                         </span>
                         <span className="flex items-center gap-1">
                           <Archive className="w-3 h-3" />
-                          Archived: {format(new Date(inquiry.archived_at), 'MMM d, yyyy h:mm a')}
+                          Archived: {format(new Date(inquiry.archived_at ?? Date.now()), 'MMM d, yyyy h:mm a')}
                         </span>
                       </div>
                     </div>

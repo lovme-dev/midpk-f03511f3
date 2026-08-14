@@ -5,7 +5,7 @@ import { CheckCircle, XCircle, Clock, ArrowLeft, Home, Loader2, RefreshCw, Headp
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { ttqPurchase } from "@/utils/tiktokTracking";
 
 interface PayProReturnPageProps {

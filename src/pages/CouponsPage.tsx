@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Ticket, ChevronRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useAuth } from "@/hooks/useAuth";

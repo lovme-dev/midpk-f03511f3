@@ -3,7 +3,7 @@ import { ChevronDown, Play, X } from "lucide-react";
 import { useResponsive } from "@/hooks/use-mobile";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
 

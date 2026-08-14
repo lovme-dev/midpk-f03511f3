@@ -111,7 +111,9 @@ export function useOrderNotifications() {
 
         if (!profilesError && profilesData) {
           profilesData.forEach(p => {
-            profilesMap[p.user_id] = { full_name: p.full_name || '', email: p.email || '' };
+            if (p.user_id) {
+              profilesMap[p.user_id] = { full_name: p.full_name || '', email: p.email || '' };
+            }
           });
         }
       }

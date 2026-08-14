@@ -181,7 +181,7 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
     }
   }, []);
 
-  const handleGameClick = (game: typeof popularGames[0]) => {
+  const handleGameClick = (game: typeof popularGames[0] | { id: string; name: string; image: string; tag: string; tagColor: string; icon?: 'like' | 'fire'; hideBadge?: boolean; variant?: 'orange' | 'red' | 'green'; badgeImage?: string; link?: string }) => {
     if (game.name === "PUBG MOBILE") {
       onTabChange?.("purchase");
     } else if (game.link) {

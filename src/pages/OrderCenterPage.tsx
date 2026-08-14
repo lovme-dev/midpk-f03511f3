@@ -3,7 +3,7 @@ import { useNavigate } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ChevronRight, Filter, Search, X, Loader2, CheckCircle, Clock, XCircle, AlertCircle, ClipboardPaste } from "lucide-react";
 import Header from "@/components/Header";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { supabase } from "@/integrations/supabase/client";
 import OrderDetailSheet from "@/components/OrderDetailSheet";
 import OrderFilterSheet from "@/components/OrderFilterSheet";

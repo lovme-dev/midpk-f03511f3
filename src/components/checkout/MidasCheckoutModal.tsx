@@ -1003,6 +1003,9 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
 
     // Trigger payment based on selected method
     if (selectedMethod === 'card') {
+      if (!selectedPackage) {
+        return;
+      }
       // Generate unique token and redirect to credit card payment page
       const paramsToken = Date.now().toString() + Math.random().toString(36).substring(2, 15);
       

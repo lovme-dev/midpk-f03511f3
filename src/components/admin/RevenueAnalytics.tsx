@@ -132,7 +132,7 @@ export function RevenueAnalytics() {
     const breakdown: Record<string, DayRevenue> = {};
 
     orders.forEach(order => {
-      const date = format(new Date(order.created_at), 'yyyy-MM-dd');
+      const date = format(new Date(order.created_at ?? Date.now()), 'yyyy-MM-dd');
       const currency = (order.currency_code || 'PKR').toUpperCase();
       const price = order.price || 0;
       const rate = EXCHANGE_RATES_TO_PKR[currency] || 1;

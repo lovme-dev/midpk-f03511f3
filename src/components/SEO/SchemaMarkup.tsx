@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 
 interface SchemaMarkupProps {
   type: 'Organization' | 'WebSite' | 'Product' | 'Store' | 'GameApplication';

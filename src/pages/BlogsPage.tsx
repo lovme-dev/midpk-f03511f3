@@ -219,11 +219,11 @@ const BlogsPage = () => {
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
-                        <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
+                        <span>{formatDistanceToNow(new Date(blog.created_at ?? ''), { addSuffix: true })}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
-                        <span>{getReadingTime(blog.content)} min read</span>
+                        <span>{getReadingTime(blog.content ?? '')} min read</span>
                       </div>
                     </div>
 

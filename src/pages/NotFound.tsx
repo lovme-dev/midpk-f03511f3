@@ -1,6 +1,6 @@
 import { useLocation, Link } from "@/lib/router-compat";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { Button } from "@/components/ui/button";
 import { SEO_BASE_URL } from "@/utils/seoConstants";
 

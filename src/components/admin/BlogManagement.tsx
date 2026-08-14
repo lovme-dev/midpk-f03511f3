@@ -78,7 +78,7 @@ const BlogManagement = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setBlogs(data || []);
+      setBlogs((data || []) as unknown as Blog[]);
     } catch (error) {
       console.error('Error fetching blogs:', error);
       toast.error('Failed to fetch blogs');
@@ -107,7 +107,7 @@ const BlogManagement = () => {
       if (editingBlog) {
         const { error } = await supabase
           .from('blogs')
-          .update(blogData)
+          .update(blogData as never)
           .eq('id', editingBlog.id);
 
         if (error) throw error;
@@ -115,7 +115,7 @@ const BlogManagement = () => {
       } else {
         const { error } = await supabase
           .from('blogs')
-          .insert([blogData]);
+          .insert([blogData as never]);
 
         if (error) throw error;
         toast.success('Blog created successfully');
@@ -166,10 +166,10 @@ const BlogManagement = () => {
     setFormData({
       title: blog.title,
       slug: blog.slug,
-      excerpt: blog.excerpt,
-      content: blog.content,
+      excerpt: blog.excerpt ?? '',
+      content: blog.content ?? '',
       featured_image_url: blog.featured_image_url || '',
-      author: blog.author,
+      author: blog.author ?? '',
       published: blog.published,
       meta_title: blog.meta_title || '',
       meta_description: blog.meta_description || '',
@@ -413,7 +413,7 @@ const BlogManagement = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      <span>{formatDistanceToNow(new Date(blog.created_at), { addSuffix: true })}</span>
+                      <span>{formatDistanceToNow(new Date(blog.created_at ?? Date.now()), { addSuffix: true })}</span>
                     </div>
                   </div>
 

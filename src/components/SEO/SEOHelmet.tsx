@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { useLocation } from "@/lib/router-compat";
 import { usePageMeta } from "@/hooks/usePageMeta";
 

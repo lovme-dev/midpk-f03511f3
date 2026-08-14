@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "@/lib/helmet";
 import { useTranslation } from 'react-i18next';
 import { Shield, Cookie, Eye, BarChart3, Target, Settings, Clock, Globe, Mail, ChevronRight } from 'lucide-react';
 import { Link } from '@/lib/router-compat';
