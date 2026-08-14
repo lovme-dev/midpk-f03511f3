@@ -37,14 +37,16 @@ const buildDetectedCountry = (countryCodeLower: string): DetectedCountry => {
 };
 
 const fetchCountryCodeFromIP = async (): Promise<string | null> => {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 2500);
   try {
-    const ipRes = await fetch("https://api.ipify.org?format=json");
+    const ipRes = await fetch("https://api.ipify.org?format=json", { signal: controller.signal });
     if (!ipRes.ok) return null;
     const ipData = await ipRes.json();
     const ip = ipData?.ip as string | undefined;
     if (!ip) return null;
 
-    const geoRes = await fetch(`https://ipapi.co/${ip}/json/`);
+    const geoRes = await fetch(`https://ipapi.co/${ip}/json/`, { signal: controller.signal });
     if (!geoRes.ok) return null;
     const geoData = await geoRes.json();
     const cc = (geoData?.country_code as string | undefined)?.toLowerCase();
@@ -58,6 +60,8 @@ const fetchCountryCodeFromIP = async (): Promise<string | null> => {
     return cc;
   } catch {
     return null;
+  } finally {
+    window.clearTimeout(timeout);
   }
 };
 
