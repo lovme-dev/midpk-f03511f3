@@ -121,7 +121,7 @@ export function useEnhancedAnalytics(timeframe: string = '24') {
 
       const countryMap = new Map<string, number>();
       countryData?.forEach(row => {
-        const country = row.country_name || 'Unknown';
+        const country = (row as unknown as { country_name?: string | null }).country_name || 'Unknown';
         countryMap.set(country, (countryMap.get(country) || 0) + 1);
       });
 
