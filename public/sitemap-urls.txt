@@ -9,7 +9,3 @@ https://www.midasbuy.com.pk/sitemap_countries_roblox.xml
 https://www.midasbuy.com.pk/sitemap_countries_valorant.xml
 https://www.midasbuy.com.pk/sitemap_countries_car.xml
 
-# Note: /purchase/*, /checkout/*, /pubg-mobile, /free-fire, /roblox, /valorant
-# and /gaming-shop are blocked in robots.txt (redirects / duplicates) and must
-# NOT be submitted. Country URLs live under /midasbuy/{cc} and
-# /midasbuy/{cc}/buy/{game}.
