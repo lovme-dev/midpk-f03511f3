@@ -38,6 +38,7 @@ import { useNavigate, useParams } from "@/lib/router-compat";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useAuthModal } from "@/contexts/AuthModalContext";
 import { 
+import { sendOrderEmail } from '@/lib/emails.functions';
   ttqViewContent, 
   ttqInitiateCheckout, 
   ttqAddPaymentInfo, 
@@ -1157,8 +1158,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
       }
 
       try {
-        await supabase.functions.invoke('send-order-email', {
-          body: {
+        await sendOrderEmail({
+          data: {
             userId: user.id,
             orderId: inserted.id,
             emailType: 'refund',
