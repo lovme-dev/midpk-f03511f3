@@ -1,5 +1,6 @@
 import { createServerFn } from '@tanstack/react-start';
 import { getRequest } from '@tanstack/react-start/server';
+import type { OrderDetails, EmailCustomizations } from './emails.server';
 
 export const sendOrderEmail = createServerFn({ method: 'POST' })
   .inputValidator((input: {
