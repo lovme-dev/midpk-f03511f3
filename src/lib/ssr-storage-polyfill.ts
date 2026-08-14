@@ -29,9 +29,9 @@ function createMemoryStorage(): StorageLike {
   };
 }
 
-export function installSsrStoragePolyfill(): void {
-  const g = globalThis as unknown as Record<string, unknown>;
-  if (typeof g["window"] !== "undefined") return;
+const g = globalThis as unknown as Record<string, unknown>;
+
+if (typeof g["window"] === "undefined") {
   if (typeof g["localStorage"] === "undefined") {
     g["localStorage"] = createMemoryStorage();
   }
@@ -40,4 +40,4 @@ export function installSsrStoragePolyfill(): void {
   }
 }
 
-installSsrStoragePolyfill();
+export {};
