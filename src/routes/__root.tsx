@@ -169,15 +169,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3756302413439008",
-        async: true,
-        crossOrigin: "anonymous",
-      },
       { src: "https://js.xstak.com/v4/xpay.js", defer: true },
-      { src: "https://www.googletagmanager.com/gtag/js?id=G-D152QYKZPQ", async: true },
-      { children: GTAG_INLINE },
-      { children: TIKTOK_PIXEL },
+      { children: DEFERRED_THIRD_PARTY },
       { children: DYNAMIC_SEO_SCRIPT },
       { children: PWA_PROMPT_SCRIPT },
       { children: ANTI_INSPECT_SCRIPT },
