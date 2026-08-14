@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LegacyGameRedirect from "@/components/LegacyGameRedirect";
 
-export const Route = createFileRoute("/roblox")({
+export const Route = createFileRoute("/roblox/")({
   component: RouteComponent,
 });
 

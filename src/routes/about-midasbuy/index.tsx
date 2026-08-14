@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import AboutMidasbuyPage from "@/pages/AboutMidasbuyPage";
 import { useLogout } from "@/lib/use-logout";
 
-export const Route = createFileRoute("/about-midasbuy")({
+export const Route = createFileRoute("/about-midasbuy/")({
   component: RouteComponent,
 });
 

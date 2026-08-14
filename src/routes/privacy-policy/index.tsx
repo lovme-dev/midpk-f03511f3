@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
 import { useLogout } from "@/lib/use-logout";
 
-export const Route = createFileRoute("/privacy-policy")({
+export const Route = createFileRoute("/privacy-policy/")({
   component: RouteComponent,
 });
 

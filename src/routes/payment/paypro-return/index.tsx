@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import PayProReturnPage from "@/pages/PayProReturnPage";
 import { useLogout } from "@/lib/use-logout";
 
-export const Route = createFileRoute("/payment/paypro-return")({
+export const Route = createFileRoute("/payment/paypro-return/")({
   component: RouteComponent,
 });
 

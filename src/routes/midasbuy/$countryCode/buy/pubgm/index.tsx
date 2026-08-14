@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import CountryPubgPage from "@/pages/CountryPubgPage";
 import { useLogout } from "@/lib/use-logout";
 
-export const Route = createFileRoute("/midasbuy/:countryCode/buy/pubgm")({
+export const Route = createFileRoute("/midasbuy/$countryCode/buy/pubgm/")({
   component: RouteComponent,
 });
 

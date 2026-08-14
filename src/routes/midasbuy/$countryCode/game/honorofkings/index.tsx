@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LegacyGameRedirect from "@/components/LegacyGameRedirect";
 
-export const Route = createFileRoute("/midasbuy/:countryCode/game/honorofkings")({
+export const Route = createFileRoute("/midasbuy/$countryCode/game/honorofkings/")({
   component: RouteComponent,
 });
 
