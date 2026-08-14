@@ -27,26 +27,13 @@ const asyncCssPlugin = (): Plugin => ({
 const SITEMAP_REPLACEMENTS = [
   // PUBG Mobile - redirect URL to final URL (180+ occurrences per sitemap)
   { from: 'href="https://www.midasbuy.com.pk/pubg-mobile"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"' },
-  // Free Fire (180+ occurrences)
-  { from: 'href="https://www.midasbuy.com.pk/free-fire"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/freefire"' },
-  // Roblox (180+ occurrences)
-  { from: 'href="https://www.midasbuy.com.pk/roblox"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/roblox"' },
-  // Valorant (180+ occurrences)
-  { from: 'href="https://www.midasbuy.com.pk/valorant"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/valorant"' },
-  // Car Purchase (190+ occurrences)
-  { from: 'href="https://www.midasbuy.com.pk/car-purchase"', to: 'href="https://www.midasbuy.com.pk/midasbuy/us/buy/car"' },
   // Home page - root "/" to /midasbuy/us (180+ occurrences)
   // Match x-default with trailing /" to avoid matching country-specific URLs
-  { from: 'hreflang="x-default" href="https://www.midasbuy.com.pk/"', to: 'hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us"' }
+  { from: 'hreflang="x-default" href="https://www.midasbuy.com.pk/"', to: 'hreflang="x-default" href="https://www.midasbuy.com.pk/midasbuy/us/buy/pubgm"' }
 ];
 
 const SITEMAP_FILES = [
-  'public/sitemap_countries_pubg.xml',
-  'public/sitemap_countries_freefire.xml',
-  'public/sitemap_countries_roblox.xml',
-  'public/sitemap_countries_valorant.xml',
-  'public/sitemap_countries_car.xml',
-  'public/sitemap_countries_home.xml'
+  'public/sitemap_countries_pubg.xml'
 ];
 
 // Function to fix sitemaps - can be called at build time or directly
@@ -249,36 +236,9 @@ const countryPrerenderPlugin = (): Plugin => ({
     for (const [code, country] of countryEntries) {
       const lowerCode = code.toLowerCase();
 
-      const homePath = `/midasbuy/${lowerCode}`;
-      const homeContent = buildCountryPageContent(code, country, 'home', allCodes);
-      const homeTitle = `${homeContent.h1} | ${country.currency} Prices`.slice(0, 65);
-      const homeDescription = homeContent.intro.slice(0, 158);
-      const homeBody = buildRichCountryBody(homeContent, `${baseUrl}${homePath}`);
-
-      const homeHtml = createPrerenderedHtml({
-        template,
-        lang: country.language || 'en',
-        title: homeTitle,
-        description: homeDescription,
-        canonicalUrl: `${baseUrl}${homePath}`,
-        body: homeBody,
-        extraHead: faqJsonLd(homeContent),
-      });
-
-      const homeDir = path.resolve(`dist/midasbuy/${lowerCode}`);
-      fs.mkdirSync(homeDir, { recursive: true });
-      fs.writeFileSync(path.join(homeDir, 'index.html'), homeHtml, 'utf8');
-      // Also write flat .html so Cloudflare/Lovable hosting can serve /midasbuy/{cc} without SPA fallback
-      fs.mkdirSync(path.resolve('dist/midasbuy'), { recursive: true });
-      fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}.html`), homeHtml, 'utf8');
-
-      // Generate prerendered HTML for all 5 game routes per country
+      // Only the PUBG Mobile store is prerendered; the country root redirects to it.
       const gameRoutes: Array<{ slug: Exclude<GameSlug, 'home'>; seoSlug: string | null }> = [
         { slug: 'pubgm', seoSlug: 'pubgm' },
-        { slug: 'freefire', seoSlug: 'freefire' },
-        { slug: 'roblox', seoSlug: 'roblox' },
-        { slug: 'valorant', seoSlug: 'valorant' },
-        { slug: 'car', seoSlug: null },
       ];
 
       for (const game of gameRoutes) {
@@ -308,32 +268,6 @@ const countryPrerenderPlugin = (): Plugin => ({
     }
 
 
-
-    // Prerender India-only BGMI route
-    if (COUNTRY_DATA.IN) {
-      const inCountry = COUNTRY_DATA.IN;
-      const bgmiTitle = `Buy BGMI UC in India - Best Prices & Instant Delivery | Midasbuy India`;
-      const bgmiDescription = `Buy BGMI (Battlegrounds Mobile India) UC with instant delivery, INR pricing and secure local payment methods at Midasbuy India.`;
-      const bgmiPath = `/midasbuy/in/buy/bgmi`;
-      const bgmiBody = buildPrerenderBody({
-        title: bgmiTitle,
-        heading: `Buy BGMI UC in India`,
-        description: `BGMI players in India can top up UC instantly with INR pricing and local payment methods.`,
-        bullets: [`Currency: INR (₹)`, `Canonical URL: ${baseUrl}${bgmiPath}`, `Country: India`],
-      });
-      const bgmiHtml = createPrerenderedHtml({
-        template,
-        lang: inCountry.language || 'en',
-        title: bgmiTitle,
-        description: bgmiDescription,
-        canonicalUrl: `${baseUrl}${bgmiPath}`,
-        body: bgmiBody,
-      });
-      const bgmiDir = path.resolve(`dist/midasbuy/in/buy/bgmi`);
-      fs.mkdirSync(bgmiDir, { recursive: true });
-      fs.writeFileSync(path.join(bgmiDir, 'index.html'), bgmiHtml, 'utf8');
-      fs.writeFileSync(path.resolve(`dist/midasbuy/in/buy/bgmi.html`), bgmiHtml, 'utf8');
-    }
 
     // Prerender static info pages with unique titles/descriptions
     const staticPages: Array<{ path: string; title: string; description: string; heading: string }> = [
@@ -370,11 +304,7 @@ const countryPrerenderPlugin = (): Plugin => ({
 
     // ---- Country hub page: the crawl path Google was missing ----
     const gameList: Array<{ slug: string; label: string }> = [
-      { slug: 'pubgm', label: 'PUBG UC' },
-      { slug: 'freefire', label: 'Free Fire Diamonds' },
-      { slug: 'roblox', label: 'Robux' },
-      { slug: 'valorant', label: 'Valorant Points' },
-      { slug: 'car', label: 'Car Skins' },
+      { slug: 'pubgm', label: 'PUBG Mobile UC' },
     ];
 
     const hubRows = countryEntries
@@ -383,7 +313,7 @@ const countryPrerenderPlugin = (): Plugin => ({
         const links = gameList
           .map((g) => `<a href="/midasbuy/${cc}/buy/${g.slug}" style="color:#7DD3FC;margin-right:10px;font-size:13px;">${escapeHtml(g.label)}</a>`)
           .join('');
-        return `<li style="margin:0 0 10px;font-size:15px;"><a href="/midasbuy/${cc}" style="color:#FFD166;font-weight:600;">Midasbuy ${escapeHtml(country.name)}</a><br>${links}</li>`;
+        return `<li style="margin:0 0 10px;font-size:15px;"><a href="/midasbuy/${cc}/buy/pubgm" style="color:#FFD166;font-weight:600;">Midasbuy ${escapeHtml(country.name)}</a><br>${links}</li>`;
       })
       .join('');
 
@@ -414,7 +344,7 @@ const countryPrerenderPlugin = (): Plugin => ({
     const srOnly = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;';
     const footerNav = `<footer id="seo-country-nav" aria-hidden="true" style="${srOnly}">
       <h2>Midasbuy Stores by Country</h2>
-      <p>${topMarkets.map(([code, c]) => `<a href="/midasbuy/${code.toLowerCase()}">${escapeHtml(c.name)}</a>`).join(' ')}</p>
+      <p>${topMarkets.map(([code, c]) => `<a href="/midasbuy/${code.toLowerCase()}/buy/pubgm">${escapeHtml(c.name)}</a>`).join(' ')}</p>
       <p><a href="/countries">View all ${countryEntries.length} country stores</a></p>
     </footer>`;
     const homeShell = fs.readFileSync(distIndexPath, 'utf8');
@@ -422,7 +352,7 @@ const countryPrerenderPlugin = (): Plugin => ({
       fs.writeFileSync(distIndexPath, homeShell.replace('</body>', `${footerNav}\n</body>`), 'utf8');
     }
 
-    console.log(`🕷️ Generated prerendered HTML for ${countryEntries.length} countries × 6 routes + ${staticPages.length} static pages + BGMI + /countries hub`);
+    console.log(`🕷️ Generated prerendered HTML for ${countryEntries.length} countries × PUBG route + ${staticPages.length} static pages + BGMI + /countries hub`);
   }
 });
 
