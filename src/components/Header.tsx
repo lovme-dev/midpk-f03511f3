@@ -584,7 +584,7 @@ const Header = ({ onLogout, showNavigation = false, activeSection = "popular-gam
       
       <div className="container mx-auto px-4 py-2 flex items-center justify-between relative z-10">
         <div className="flex items-center">
-          <Link to="/gaming-shop" className="mr-4">
+          <Link to="/" className="mr-4">
             <OptimizedImage
               src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png" 
               alt="Midasbuy Logo" 
