@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
+import { broadcastNotification } from '@/lib/notifications.functions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -152,8 +153,8 @@ export function SendNotification() {
 
     setSending(true);
     try {
-      const response = await supabase.functions.invoke('broadcast-notification', {
-        body: {
+      const result = await broadcastNotification({
+        data: {
           title: form.title,
           message: form.message,
           type: form.type,
@@ -163,12 +164,10 @@ export function SendNotification() {
         },
       });
 
-      if (response.error) {
-        throw new Error(response.error.message);
+      if ('error' in result && result.error) {
+        throw new Error(result.error);
       }
 
-      const result = response.data;
-      
       toast({
         title: 'Notification Sent!',
         description: `Sent to ${result.sent}/${result.total} devices (${result.users_notified} users)`,

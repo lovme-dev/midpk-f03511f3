@@ -28,6 +28,7 @@ import { legacyPackages as diamondPackages, legacyPackages as robuxPackages } fr
 
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyAdminNewOrder } from "@/lib/notifications.functions";
 import { useCurrencyFormat, convertPkrToAnyCurrency } from "@/hooks/useCurrencyFormat";
 import { getCountryCurrency } from "@/utils/countryConfigs";
 import BinanceCryptoPayment from "@/components/BinanceCryptoPayment";
@@ -1135,8 +1136,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
       if (error) throw error;
 
       try {
-        const { error: notifyError } = await supabase.functions.invoke('notify-admin-new-order', {
-          body: {
+        const notifyResult = await notifyAdminNewOrder({
+          data: {
             event_type: 'order_cancelled',
             order_details: {
               order_id: inserted.id,
@@ -1148,8 +1149,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
           },
         });
 
-        if (notifyError) {
-          console.error('Test payment admin push failed:', notifyError);
+        if ('error' in notifyResult && notifyResult.error) {
+          console.error('Test payment admin push failed:', notifyResult.error);
         }
       } catch (notifyError) {
         console.error('Test payment admin push failed:', notifyError);

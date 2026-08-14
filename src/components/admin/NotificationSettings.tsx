@@ -7,6 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
+import { sendPushNotification } from '@/lib/notifications.functions';
 
 interface PushSubscription {
   id: string;
@@ -109,8 +110,8 @@ export function NotificationSettings() {
     
     setTestingNotification(true);
     try {
-      const { error } = await supabase.functions.invoke('send-push-notification', {
-        body: {
+      const result = await sendPushNotification({
+        data: {
           user_id: user.id,
           payload: {
             title: '🔔 Test Notification',
@@ -121,7 +122,7 @@ export function NotificationSettings() {
         }
       });
 
-      if (error) throw error;
+      if ('error' in result && result.error) throw new Error(result.error);
 
       toast({
         title: 'Test notification sent',
