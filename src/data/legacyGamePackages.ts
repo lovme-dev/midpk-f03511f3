@@ -5,9 +5,12 @@ export interface LegacyPackage {
   id: string;
   name?: string;
   amount?: number;
+  baseAmount?: number;
+  bonusAmount?: number;
   price?: number;
   image?: string;
+  [key: string]: unknown;
 }
 
 export const legacyPackages: LegacyPackage[] = [];
-export const getLegacyPackageById = (_id: string): LegacyPackage | undefined => undefined;
+export const getLegacyPackageById = (_id: string | number): LegacyPackage | undefined => undefined;
