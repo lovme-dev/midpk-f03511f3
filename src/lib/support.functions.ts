@@ -478,8 +478,9 @@ export const markOrderCancelled = createServerFn({ method: 'POST' })
       // Only for "cancelled" (real charge, refund owed) fire admin push + refund email.
       if (nextStatus === 'cancelled') {
         try {
-          await supabaseAdmin.functions.invoke('notify-admin-new-order', {
-            body: {
+          const { notifyAdminNewOrder } = await import('./notifications.functions');
+          await notifyAdminNewOrder({
+            data: {
               event_type: 'order_cancelled',
               order_details: {
                 order_id: order.id,
