@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/lib/router-compat";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 interface SEOHelmetProps {

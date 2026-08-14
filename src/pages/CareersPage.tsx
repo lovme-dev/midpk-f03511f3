@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ArrowLeft, Briefcase, Users, Globe, Target, Heart, Zap } from "lucide-react";
 import Header from "@/components/Header";

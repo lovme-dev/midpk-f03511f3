@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, X, CheckCheck, ExternalLink, Inbox } from 'lucide-react';
 import { useBackendNotifications } from '@/hooks/useBackendNotifications';
 import { formatDistanceToNow } from 'date-fns';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@/lib/router-compat';
 
 interface NotificationDropdownProps {
   isMobile?: boolean;

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from "react";
-import { useNavigate, useSearchParams, useLocation } from "react-router-dom";
+import { useNavigate, useSearchParams, useLocation } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { Home, Phone, Clock, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";

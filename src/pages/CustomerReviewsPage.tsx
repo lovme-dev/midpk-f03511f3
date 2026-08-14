@@ -24,7 +24,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@/lib/router-compat';
 import { useAuthModal } from '@/contexts/AuthModalContext';
 import defaultAvatar from '@/assets/default-avatar.jpeg';
 import SEOHelmet from '@/components/SEO/SEOHelmet';

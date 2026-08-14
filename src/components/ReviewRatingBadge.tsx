@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import reviewStars from "@/assets/review-stars.png";
 
 interface ReviewRatingBadgeProps {

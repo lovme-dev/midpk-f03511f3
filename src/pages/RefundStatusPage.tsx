@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { Clock, CheckCircle2, Loader2, CreditCard, RefreshCw, Home, Package, XCircle, AlertCircle, ShoppingBag, Search, X, Copy, Trash2 } from "lucide-react";
 import { Input } from "@/components/ui/input";

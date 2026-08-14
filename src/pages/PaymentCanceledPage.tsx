@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { XCircle, ArrowLeft, RefreshCw } from "lucide-react";
 import Header from "@/components/Header";

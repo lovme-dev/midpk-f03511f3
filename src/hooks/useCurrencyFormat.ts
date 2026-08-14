@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from '@/lib/router-compat';
 import { getSelectedCountry } from '@/data/ucPackages';
 import { EXCHANGE_RATES, getExchangeRate } from '@/utils/exchangeRates';
 import { getCurrencySymbol } from '@/utils/urlCurrencyDetector';

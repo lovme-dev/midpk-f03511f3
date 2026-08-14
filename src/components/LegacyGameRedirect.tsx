@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "@/lib/router-compat";
 
 /**
  * Redirects every retired game URL (Free Fire, Roblox, Valorant, BGMI,

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "@/lib/router-compat";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Check, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { CustomerServiceWidget } from "@/components/CustomerServiceWidget";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { convertPkrToUsd } from "@/utils/currencyUtils";
 
 interface PubgAccountCheckoutPageProps {

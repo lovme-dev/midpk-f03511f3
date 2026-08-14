@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@/lib/router-compat';
 import { Camera, User, Mail, Phone, Hash, Save, LogOut, Shield, Award, ArrowLeft } from 'lucide-react';
 import { CyberInput, CyberButton, CyberCard } from '@/components/ui/CyberUI';
 import { useAuth } from '@/hooks/useAuth';

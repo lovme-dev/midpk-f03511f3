@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Shield, User, Database, Lock, Globe, Share2, Clock, Mail, ChevronRight, Eye, FileText, AlertTriangle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { useTranslation } from 'react-i18next';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
