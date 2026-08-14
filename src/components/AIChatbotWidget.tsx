@@ -609,15 +609,16 @@ export function AIChatbotWidget() {
       ];
 
       // Call our edge function with vision support using supabase invoke
-      const { data, error } = await supabase.functions.invoke('chat-support', {
-        body: {
-          messages: imageMessages,
-          includeVision: true,
-          userName: userProfile?.full_name || null,
-        },
-      });
-
-      if (error) {
+      let data: any;
+      try {
+        data = await chatSupport({
+          data: {
+            messages: imageMessages,
+            includeVision: true,
+            userName: userProfile?.full_name || null,
+          },
+        });
+      } catch (err) {
         throw new Error('Failed to analyze image');
       }
 

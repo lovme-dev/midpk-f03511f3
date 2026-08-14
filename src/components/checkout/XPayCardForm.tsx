@@ -3,6 +3,7 @@ import { PaymentElement, useXpay } from '@xstak/xpay-element-live-v4';
 import { motion } from "framer-motion";
 import { AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { markOrderCancelled } from "@/lib/support.functions";
 import { ttqPurchase, ttqIdentify } from "@/utils/tiktokTracking";
 import { generateOrderId } from "@/utils/generateOrderId";
 
@@ -324,8 +325,8 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       // Mark the pending order as `failed` so admin panel doesn't show it as pending forever.
       // NO refund email + NO admin push here — the customer was never charged.
       try {
-        await supabase.functions.invoke('mark-order-cancelled', {
-          body: {
+        await markOrderCancelled({
+          data: {
             transactionId: orderId,
             targetStatus: 'failed',
             reason: err?.message || 'card_confirm_failed',

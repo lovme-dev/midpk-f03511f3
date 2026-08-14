@@ -14,8 +14,8 @@ export const notifyAdminNewOrder = createServerFn({ method: 'POST' })
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { sendWebPush, buildCurrencyPriceDisplay } = await import('./notifications.server');
 
-    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'];
-    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'];
+    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'] ?? null;
+    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'] ?? null;
 
     const { data: adminRoles, error: rolesError } = await supabaseAdmin
       .from('user_roles')
@@ -106,8 +106,8 @@ export const notifyAdminNewOrder = createServerFn({ method: 'POST' })
       try {
         const response = await sendWebPush(
           sub.endpoint,
-          sub.p256dh,
-          sub.auth,
+          sub.p256dh ?? '',
+          sub.auth ?? '',
           payload,
           vapidPublicKey,
           vapidPrivateKey
@@ -191,8 +191,8 @@ export const sendPushNotification = createServerFn({ method: 'POST' })
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { sendWebPush } = await import('./notifications.server');
 
-    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'];
-    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'];
+    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'] ?? null;
+    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'] ?? null;
 
     if (!vapidPublicKey || !vapidPrivateKey) {
       return { error: 'VAPID keys not configured' };
@@ -221,8 +221,8 @@ export const sendPushNotification = createServerFn({ method: 'POST' })
       try {
         const response = await sendWebPush(
           subscription.endpoint,
-          subscription.p256dh,
-          subscription.auth,
+          subscription.p256dh ?? '',
+          subscription.auth ?? '',
           notificationPayload,
           vapidPublicKey,
           vapidPrivateKey
@@ -273,8 +273,8 @@ export const broadcastNotification = createServerFn({ method: 'POST' })
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { sendWebPush } = await import('./notifications.server');
 
-    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'];
-    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'];
+    const vapidPublicKey = process.env['VAPID_PUBLIC_KEY'] ?? null;
+    const vapidPrivateKey = process.env['VAPID_PRIVATE_KEY'] ?? null;
 
     if (!vapidPublicKey || !vapidPrivateKey) {
       return { error: 'VAPID keys not configured' };
@@ -288,7 +288,6 @@ export const broadcastNotification = createServerFn({ method: 'POST' })
         type: type || 'announcement',
         icon_url: icon_url || null,
         action_url: action_url || null,
-        sent_by: admin_id || null,
       })
       .select()
       .single();
@@ -305,12 +304,14 @@ export const broadcastNotification = createServerFn({ method: 'POST' })
     }
 
     if (allProfiles && allProfiles.length > 0) {
-      const allUserNotifications = allProfiles.map((profile) => ({
-        notification_id: notification.id,
-        user_id: profile.user_id,
-        read: false,
-        delivered: false,
-      }));
+      const allUserNotifications = allProfiles
+        .filter((profile) => !!profile.user_id)
+        .map((profile) => ({
+          notification_id: notification.id,
+          user_id: profile.user_id as string,
+          read: false,
+          delivered: false,
+        }));
 
       const { error: userNotifError } = await supabaseAdmin.from('user_notifications').insert(allUserNotifications);
 
@@ -348,8 +349,8 @@ export const broadcastNotification = createServerFn({ method: 'POST' })
       try {
         const response = await sendWebPush(
           subscription.endpoint,
-          subscription.p256dh,
-          subscription.auth,
+          subscription.p256dh ?? '',
+          subscription.auth ?? '',
           notificationPayload,
           vapidPublicKey,
           vapidPrivateKey
@@ -359,7 +360,7 @@ export const broadcastNotification = createServerFn({ method: 'POST' })
           successCount++;
           await supabaseAdmin
             .from('user_notifications')
-            .update({ delivered: true, delivered_at: new Date().toISOString() })
+            .update({ delivered: true })
             .eq('notification_id', notification.id)
             .eq('user_id', subscription.user_id);
         } else if (response.status === 410 || response.status === 404 || response.status === 403) {

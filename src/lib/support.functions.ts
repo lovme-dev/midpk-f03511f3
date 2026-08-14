@@ -273,7 +273,7 @@ export const trackOrder = createServerFn({ method: 'POST' })
     }
 
     try {
-      let order: Record<string, unknown> | null = null;
+      let order: any = null;
 
       // 1) UUID (database id)
       if (isUuid(query)) {

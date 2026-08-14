@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+import { translateMessage } from '@/lib/support.functions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -246,11 +247,11 @@ export function CustomerInquiries() {
     setTranslatingIds(prev => new Set(prev).add(inquiryId));
 
     try {
-      const { data, error } = await supabase.functions.invoke('translate-message', {
-        body: { message, targetLanguage: 'Urdu' }
+      const data = await translateMessage({
+        data: { message, targetLanguage: 'Urdu' }
       });
 
-      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
 
       if (data?.translated) {
         setTranslatedMessages(prev => ({
