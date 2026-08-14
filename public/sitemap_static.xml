@@ -22,29 +22,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/us</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.midasbuy.com.pk/lovable-uploads/6a2f0c2f-451c-457f-bb64-eabf3e7698e6.png</image:loc>
-      <image:title>Midasbuy Official - Buy PUBG UC Cheapest Price</image:title>
-      <image:caption>Buy PUBG Mobile UC, Free Fire Diamonds, BGMI UC at cheapest prices with instant delivery</image:caption>
-    </image:image>
-  </url>
   
   <!-- ========== GAME PAGES (non-redirect only) ========== -->
   
   <!-- BGMI Page (India Only - No redirect, direct page) -->
 
   <!-- BGMI India Specific URL -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/midasbuy/in/buy/bgmi</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.98</priority>
-  </url>
   
   <!-- PUBG Accounts -->
   <url>
@@ -54,11 +37,6 @@
   </url>
   
   <!-- Honor of Kings -->
-  <url>
-    <loc>https://www.midasbuy.com.pk/honor-of-kings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
   <!-- Customer Reviews Page -->
   <url>

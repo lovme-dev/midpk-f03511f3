@@ -202,7 +202,7 @@ function AppRoutes() {
       <Route path="/midasbuy/buy/pubgm" element={<Index onLogout={logout} />} />
       
       {/* Country-specific Home Page Route */}
-      <Route path="/midasbuy/:countryCode" element={<CountryPubgPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode" element={<LegacyGameRedirect />} />
       
       {/* Country-specific PUBG Mobile Purchase Route */}
       <Route path="/midasbuy/:countryCode/buy/pubgm" element={<CountryPubgPage onLogout={logout} />} />
