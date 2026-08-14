@@ -978,9 +978,9 @@ export function OrdersManagement() {
               transactionId: order.transaction_id || order.id,
               // Pass product type details for dynamic email content
               productType: order.product_type || undefined,
-              productName: customizations?.customPackageName || order.product_name || null,
+              productName: customizations?.customPackageName || order.product_name || undefined,
               productCode: order.product_code || undefined,
-              productAmount: customizations?.customAmount || order.product_amount || null,
+              productAmount: customizations?.customAmount || order.product_amount || undefined,
               currencyCode: order.currency_code || 'PKR',
               countryCode: countryCode, // For language detection in email
             },

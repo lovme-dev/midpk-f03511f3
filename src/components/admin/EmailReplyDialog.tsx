@@ -233,7 +233,7 @@ Thank you for choosing Midasbuy! We appreciate your business.`
           customerName: targetName || 'Valued Customer',
           subject: emailSubject,
           emailContent: emailContent,
-          orderId: orderId,
+          orderId: orderId ?? undefined,
           templateType: selectedTemplate,
         },
       });
