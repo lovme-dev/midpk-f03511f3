@@ -38,13 +38,13 @@ import { useNavigate, useParams } from "@/lib/router-compat";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useAuthModal } from "@/contexts/AuthModalContext";
 import { 
-import { sendOrderEmail } from '@/lib/emails.functions';
   ttqViewContent, 
   ttqInitiateCheckout, 
   ttqAddPaymentInfo, 
   ttqPlaceAnOrder,
   ttqIdentify
 } from "@/utils/tiktokTracking";
+import { sendOrderEmail } from '@/lib/emails.functions';
 import { usePaymentMethodSettings } from "@/hooks/usePaymentMethodSettings";
 import { useUserRole } from "@/hooks/useUserRole";
 
