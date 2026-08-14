@@ -136,8 +136,8 @@ export const buildMerchantItemList = (
 // ---------- Game-specific helpers ----------
 
 import { ucPackages } from "@/data/ucPackages";
-import { diamondPackages } from "@/data/diamondPackages";
-import { robuxPackages } from "@/data/robuxPackages";
+import { legacyPackages as diamondPackages } from "@/data/legacyGamePackages";
+import { legacyPackages as robuxPackages } from "@/data/legacyGamePackages";
 
 export const getPubgUcMerchantSchema = () => {
   const products: MerchantProductInput[] = ucPackages.map((pkg) => {

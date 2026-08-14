@@ -24,8 +24,8 @@ import {
 } from '@/components/checkout/CheckoutIcons';
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { UCPackage, ucPackages, getVipCoinCount } from "@/data/ucPackages";
-import { diamondPackages } from "@/data/diamondPackages";
-import { robuxPackages } from "@/data/robuxPackages";
+import { legacyPackages as diamondPackages, legacyPackages as robuxPackages } from "@/data/legacyGamePackages";
+
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useCurrencyFormat, convertPkrToAnyCurrency } from "@/hooks/useCurrencyFormat";

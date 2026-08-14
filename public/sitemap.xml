@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- ============================================== -->
-  <!-- MIDASBUY SITEMAP INDEX - Master Sitemap -->
-  <!-- All country-specific sitemaps are separated -->
-  <!-- ============================================== -->
-
-  <!-- Country Home Pages Sitemap (180+ countries) -->
-  <sitemap>
-    <loc>https://www.midasbuy.com.pk/sitemap_countries_home.xml</loc>
-  </sitemap>
-
-  <!-- PUBG Mobile UC Sitemap (180+ countries) -->
   <sitemap>
     <loc>https://www.midasbuy.com.pk/sitemap_countries_pubg.xml</loc>
   </sitemap>
-
-  <!-- Free Fire Diamonds Sitemap (180+ countries) -->
-  <sitemap>
-    <loc>https://www.midasbuy.com.pk/sitemap_countries_freefire.xml</loc>
-  </sitemap>
-
-  <!-- Roblox Robux Sitemap (180+ countries) -->
-  <sitemap>
-    <loc>https://www.midasbuy.com.pk/sitemap_countries_roblox.xml</loc>
-  </sitemap>
-
-  <!-- Valorant Points Sitemap (180+ countries) -->
-  <sitemap>
-    <loc>https://www.midasbuy.com.pk/sitemap_countries_valorant.xml</loc>
-  </sitemap>
-
-  <!-- PUBG Car Skins Sitemap (180+ countries) -->
-  <sitemap>
-    <loc>https://www.midasbuy.com.pk/sitemap_countries_car.xml</loc>
-  </sitemap>
-
-  <!-- Main Static Pages Sitemap -->
   <sitemap>
     <loc>https://www.midasbuy.com.pk/sitemap_static.xml</loc>
   </sitemap>
-
 </sitemapindex>

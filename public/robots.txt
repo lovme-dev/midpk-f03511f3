@@ -2,13 +2,15 @@ User-agent: *
 Allow: /
 
 # Midasbuy - Official Gaming Store
-# Buy PUBG UC, Free Fire Diamonds, BGMI UC, Roblox Robux, Valorant Points
+# Buy PUBG Mobile UC - instant delivery worldwide
 
 # ===== DISALLOW: Old/Removed URLs (cause "Page with redirect" errors) =====
 Disallow: /purchase/
 Disallow: /checkout/
 Disallow: /player-id
 Disallow: /gaming-shop
+Disallow: /bgmi
+Disallow: /honor-of-kings
 Disallow: /car-purchase
 
 # ===== DISALLOW: Private/User-only pages (should NOT be indexed) =====
@@ -45,9 +47,7 @@ Disallow: /free-fire
 Allow: /midasbuy/
 
 # ===== ALLOW: Public informational pages =====
-Allow: /bgmi
 Allow: /pubg-accounts
-Allow: /honor-of-kings
 Allow: /customer-reviews
 Allow: /blogs
 Allow: /about-midasbuy
@@ -67,12 +67,7 @@ Allow: /copyright-notice
 # Sitemaps
 Sitemap: https://www.midasbuy.com.pk/sitemap.xml
 Sitemap: https://www.midasbuy.com.pk/sitemap_static.xml
-Sitemap: https://www.midasbuy.com.pk/sitemap_countries_home.xml
 Sitemap: https://www.midasbuy.com.pk/sitemap_countries_pubg.xml
-Sitemap: https://www.midasbuy.com.pk/sitemap_countries_freefire.xml
-Sitemap: https://www.midasbuy.com.pk/sitemap_countries_roblox.xml
-Sitemap: https://www.midasbuy.com.pk/sitemap_countries_valorant.xml
-Sitemap: https://www.midasbuy.com.pk/sitemap_countries_car.xml
 
 # Crawl settings
 User-agent: Googlebot

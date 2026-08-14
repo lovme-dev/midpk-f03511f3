@@ -35,15 +35,13 @@ const AuthPage = lazy(() => import("./pages/AuthPage"));
 const DashboardPage = lazy(() => import("./pages/DashboardPage"));
 const AdminDashboardPage = lazy(() => import("./pages/AdminDashboardPage"));
 const Index = lazy(() => import("@/pages/Index"));
-const FreeFire = lazy(() => import("@/pages/FreeFire"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const PurchaseHistoryPage = lazy(() => import("./pages/PurchaseHistoryPage"));
 const PubgAccountsPage = lazy(() => import("./pages/PubgAccountsPage"));
 const CountriesDirectoryPage = lazy(() => import("./pages/CountriesDirectoryPage"));
+const LegacyGameRedirect = lazy(() => import("./components/LegacyGameRedirect"));
 
 const PubgAccountCheckoutPage = lazy(() => import("./pages/PubgAccountCheckoutPage"));
-const GamingShopPage = lazy(() => import("./pages/GamingShopPage"));
-const HonorOfKingsPage = lazy(() => import("./pages/HonorOfKingsPage"));
 // HonorOfKingsPurchasePage removed - now uses popup checkout
 const HelpCenterPage = lazy(() => import("./pages/HelpCenterPage"));
 const ContactUsPage = lazy(() => import("./pages/ContactUsPage"));
@@ -58,7 +56,6 @@ const PaymentIssuesPage = lazy(() => import("./pages/PaymentIssuesPage"));
 const SecurityPage = lazy(() => import("./pages/SecurityPage"));
 const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage"));
 const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
-const CarPurchasePage = lazy(() => import("./pages/CarPurchasePage"));
 const GoogleAuthCallbackPage = lazy(() => import("./pages/GoogleAuthCallbackPage"));
 const PaymentSuccessPage = lazy(() => import("./pages/PaymentSuccessPage"));
 const PaymentCanceledPage = lazy(() => import("./pages/PaymentCanceledPage"));
@@ -70,22 +67,7 @@ const PayProReturnPage = lazy(() => import("./pages/PayProReturnPage"));
 const RedeemPage = lazy(() => import("./pages/RedeemPage"));
 const InternationalPubgPage = lazy(() => import("./pages/InternationalPubgPage"));
 const PubgMobileRedirect = lazy(() => import("./components/PubgMobileRedirect"));
-const InternationalFreeFirePage = lazy(() => import("./pages/InternationalFreeFirePage"));
-const FreeFireRedirect = lazy(() => import("./components/FreeFireRedirect"));
 const CountryPubgPage = lazy(() => import("./pages/CountryPubgPage"));
-const CountryFreeFirePage = lazy(() => import("./pages/CountryFreeFirePage"));
-const CountryRobloxPage = lazy(() => import("./pages/CountryRobloxPage"));
-const CountryValorantPage = lazy(() => import("./pages/CountryValorantPage"));
-const CountryHomePage = lazy(() => import("./pages/CountryHomePage"));
-const BGMIPage = lazy(() => import("./pages/BGMIPage"));
-const BGMIRedirect = lazy(() => import("./components/BGMIRedirect"));
-const RobloxPage = lazy(() => import("./pages/RobloxPage"));
-const RobloxRedirect = lazy(() => import("./components/RobloxRedirect"));
-const ValorantPage = lazy(() => import("./pages/ValorantPage"));
-const ValorantRedirect = lazy(() => import("./components/ValorantRedirect"));
-const HonorOfKingsRedirect = lazy(() => import("./components/HonorOfKingsRedirect"));
-const CarPurchaseRedirect = lazy(() => import("./components/CarPurchaseRedirect"));
-const CountryCarPurchasePage = lazy(() => import("./pages/CountryCarPurchasePage"));
 // Roblox/Valorant/HonorOfKings checkout pages removed - now uses popup checkout
 const BlogsPage = lazy(() => import("./pages/BlogsPage"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
@@ -98,7 +80,6 @@ const CreditCardPaymentPage = lazy(() => import("./pages/CreditCardPaymentPage")
 const CouponsPage = lazy(() => import("./pages/CouponsPage"));
 const MyFeedbacksPage = lazy(() => import("./pages/MyFeedbacksPage"));
 const VideosPage = lazy(() => import("./pages/VideosPage"));
-const ExternalGameIframePage = lazy(() => import("./components/ExternalGameIframePage"));
 const ResetPasswordPage = lazy(() => import("./pages/ResetPasswordPage"));
 
 // Create QueryClient outside component to avoid hook issues
@@ -177,7 +158,7 @@ function AppRoutes() {
           <Suspense fallback={<LoadingScreen message="loading..." />}>
             <Routes>
       <Route path="/auth" element={<AuthPage />} />
-      <Route path="/" element={<GamingShopPage onLogout={logout} />} />
+      <Route path="/" element={<Index onLogout={logout} />} />
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/admin" element={
         <AdminRoute redirectTo="/">
@@ -187,19 +168,19 @@ function AppRoutes() {
       {/* Redirect old /pubg-mobile to country-specific URL */}
       <Route path="/pubg-mobile" element={<PubgMobileRedirect />} />
       {/* Redirect old /free-fire to country-specific URL */}
-      <Route path="/free-fire" element={<FreeFireRedirect />} />
+      <Route path="/free-fire" element={<LegacyGameRedirect />} />
       {/* Redirect old /bgmi to country-specific URL */}
-      <Route path="/bgmi" element={<BGMIRedirect />} />
+      <Route path="/bgmi" element={<LegacyGameRedirect />} />
       {/* Redirect old /roblox to country-specific URL */}
-      <Route path="/roblox" element={<RobloxRedirect />} />
-      <Route path="/roblox/purchase/:id" element={<RobloxRedirect />} />
-      <Route path="/roblox/checkout/:id" element={<RobloxRedirect />} />
+      <Route path="/roblox" element={<LegacyGameRedirect />} />
+      <Route path="/roblox/purchase/:id" element={<LegacyGameRedirect />} />
+      <Route path="/roblox/checkout/:id" element={<LegacyGameRedirect />} />
       {/* Redirect old /valorant to country-specific URL */}
-      <Route path="/valorant" element={<ValorantRedirect />} />
-      <Route path="/valorant/purchase/:id" element={<ValorantRedirect />} />
-      <Route path="/valorant/checkout/:id" element={<ValorantRedirect />} />
+      <Route path="/valorant" element={<LegacyGameRedirect />} />
+      <Route path="/valorant/purchase/:id" element={<LegacyGameRedirect />} />
+      <Route path="/valorant/checkout/:id" element={<LegacyGameRedirect />} />
       {/* Redirect old /car-purchase to country-specific URL */}
-      <Route path="/car-purchase" element={<CarPurchaseRedirect />} />
+      <Route path="/car-purchase" element={<LegacyGameRedirect />} />
       <Route path="/purchase-history" element={<PurchaseHistoryPage onLogout={logout} />} />
       <Route path="/pubg-accounts" element={<PubgAccountsPage />} />
       <Route path="/countries" element={<CountriesDirectoryPage />} />
@@ -207,7 +188,7 @@ function AppRoutes() {
       <Route path="/pubg-accounts/checkout/:id" element={<PubgAccountCheckoutPage onLogout={logout} />} />
       <Route path="/gaming-shop" element={<Navigate to="/" replace />} />
       {/* Redirect old /honor-of-kings to country-specific URL */}
-      <Route path="/honor-of-kings" element={<HonorOfKingsRedirect />} />
+      <Route path="/honor-of-kings" element={<LegacyGameRedirect />} />
       
       {/* Old checkout routes - redirect to PUBG page */}
       <Route path="/player-id" element={<PubgMobileRedirect />} />
@@ -221,46 +202,46 @@ function AppRoutes() {
       <Route path="/midasbuy/buy/pubgm" element={<Index onLogout={logout} />} />
       
       {/* Country-specific Home Page Route */}
-      <Route path="/midasbuy/:countryCode" element={<CountryHomePage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode" element={<LegacyGameRedirect />} />
       
       {/* Country-specific PUBG Mobile Purchase Route */}
       <Route path="/midasbuy/:countryCode/buy/pubgm" element={<CountryPubgPage onLogout={logout} />} />
       
       {/* Country-specific Free Fire Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/freefire" element={<CountryFreeFirePage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/freefire" element={<LegacyGameRedirect />} />
       
       {/* Country-specific Roblox Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/roblox" element={<CountryRobloxPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/roblox" element={<LegacyGameRedirect />} />
       
       {/* Country-specific Valorant Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/valorant" element={<CountryValorantPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/valorant" element={<LegacyGameRedirect />} />
       
       {/* Country-specific BGMI Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/bgmi" element={<BGMIPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/bgmi" element={<LegacyGameRedirect />} />
       
       {/* Country-specific Honor of Kings Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/honorofkings" element={<HonorOfKingsPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/honorofkings" element={<LegacyGameRedirect />} />
       
       {/* Country-specific Car Purchase Route */}
-      <Route path="/midasbuy/:countryCode/buy/car" element={<CountryCarPurchasePage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/car" element={<LegacyGameRedirect />} />
       
       {/* External Game Iframe Routes - Games that embed official Midasbuy pages */}
-      <Route path="/midasbuy/:countryCode/game/honorofkings" element={<ExternalGameIframePage gameKey="honorofkings" />} />
-      <Route path="/midasbuy/:countryCode/game/deltaforce" element={<ExternalGameIframePage gameKey="deltaforce" />} />
-      <Route path="/midasbuy/:countryCode/game/dragonheir" element={<ExternalGameIframePage gameKey="dragonheir" />} />
-      <Route path="/midasbuy/:countryCode/game/undawn" element={<ExternalGameIframePage gameKey="undawn" />} />
-      <Route path="/midasbuy/:countryCode/game/arenabreakout" element={<ExternalGameIframePage gameKey="arenabreakout" />} />
-      <Route path="/midasbuy/:countryCode/game/nba" element={<ExternalGameIframePage gameKey="nba" />} />
-      <Route path="/midasbuy/:countryCode/game/ludo" element={<ExternalGameIframePage gameKey="ludo" />} />
+      <Route path="/midasbuy/:countryCode/game/honorofkings" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/deltaforce" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/dragonheir" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/undawn" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/arenabreakout" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/nba" element={<LegacyGameRedirect />} />
+      <Route path="/midasbuy/:countryCode/game/ludo" element={<LegacyGameRedirect />} />
       
       {/* Free Fire Purchase Route */}
-      <Route path="/midasbuy/buy/freefire" element={<FreeFire onLogout={logout} />} />
+      <Route path="/midasbuy/buy/freefire" element={<LegacyGameRedirect />} />
       
       {/* Honor of Kings checkout routes redirected */}
-      <Route path="/honor-of-kings/purchase/:id" element={<HonorOfKingsRedirect />} />
+      <Route path="/honor-of-kings/purchase/:id" element={<LegacyGameRedirect />} />
       {/* Free Fire checkout routes redirected to country-specific page */}
-      <Route path="/purchase/free-fire/:id" element={<FreeFireRedirect />} />
-      <Route path="/checkout/free-fire/:id" element={<FreeFireRedirect />} />
+      <Route path="/purchase/free-fire/:id" element={<LegacyGameRedirect />} />
+      <Route path="/checkout/free-fire/:id" element={<LegacyGameRedirect />} />
       <Route path="/help-center" element={<HelpCenterPage onLogout={logout} />} />
       <Route path="/my-feedbacks" element={<MyFeedbacksPage onLogout={logout} />} />
       <Route path="/contact-us" element={<ContactUsPage onLogout={logout} />} />

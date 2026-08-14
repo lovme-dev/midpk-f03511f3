@@ -11,7 +11,7 @@ import freeFireGameIcon from "@/assets/free-fire-game-icon.png";
 import robloxGameIcon from "@/assets/roblox-game-icon.png";
 import valorantGameIcon from "@/assets/valorant-game-icon.png";
 import PromotionCarouselBanner from "@/components/PromotionCarouselBanner";
-const popularGames = [
+const allGames = [
   {
     id: "pubg-001",
     name: "PUBG MOBILE",
@@ -147,6 +147,9 @@ const popularGames = [
   }
 ];
 
+// Single-game store: only the PUBG Mobile card is shown
+const popularGames = allGames.filter((g) => g.name === "PUBG MOBILE");
+
 interface ShopTabContentProps {
   onTabChange?: (tab: "purchase") => void;
 }
@@ -181,14 +184,6 @@ const ShopTabContent = ({ onTabChange }: ShopTabContentProps) => {
   const handleGameClick = (game: typeof popularGames[0]) => {
     if (game.name === "PUBG MOBILE") {
       onTabChange?.("purchase");
-    } else if (game.name === "BGMI") {
-      navigate("/bgmi");
-    } else if (game.name === "FREE FIRE") {
-      navigate("/free-fire");
-    } else if (game.name === "ROBLOX") {
-      navigate("/roblox");
-    } else if (game.name === "VALORANT POINTS") {
-      navigate("/valorant");
     } else if (game.link) {
       window.location.href = game.link;
     } else {

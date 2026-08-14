@@ -14,10 +14,10 @@ import ffDiamondChestOrder from "@/assets/ff-diamond-chest-order.webp";
 import robloxLogo from "@/assets/roblox-logo.jpeg";
 import { formatOrderPrice } from "@/utils/formatOrderPrice";
 
-import { diamondPackages } from "@/data/diamondPackages";
-import { getCarPackageById } from "@/data/carPackages";
-import { getRobuxPackageById } from "@/data/robuxPackages";
-import { valorantPackages } from "@/data/valorantPackages";
+import { legacyPackages as diamondPackages, legacyPackages as valorantPackages, getLegacyPackageById } from "@/data/legacyGamePackages";
+const getCarPackageById = getLegacyPackageById;
+const getRobuxPackageById = getLegacyPackageById;
+
 import { getDisplayOrderId } from "@/utils/displayOrderId";
 
 // Product logos (fallbacks) for different order types
