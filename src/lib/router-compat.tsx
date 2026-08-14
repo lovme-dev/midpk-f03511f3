@@ -1,13 +1,11 @@
 /**
  * Router-compat shim — bridges react-router-dom v6 call sites to
  * @tanstack/react-router without hand-rewriting every component.
- * This is the same load-bearing pattern used in Klar's dev-copy migration.
  */
 import {
   useNavigate as tsNavigate,
   useLocation as tsLocation,
   useParams as tsParams,
-  useSearch as tsSearch,
   useRouter,
   Link as TSLink,
   Navigate as TSNavigate,
@@ -21,8 +19,6 @@ function parseTo(to: string): { pathname: string; search?: Record<string, string
   const [beforeHash, hashStr] = (to ?? "").split("#");
   const [pathname, searchStr] = beforeHash.split("?");
   return {
-    // react-router keeps the current path for search-only ("?a=1") and
-    // hash-only ("#section") targets; TanStack's "." means current route.
     pathname: pathname || ".",
     search: searchStr ? Object.fromEntries(new URLSearchParams(searchStr)) : undefined,
     hash: hashStr || undefined,
@@ -79,7 +75,6 @@ export function useParams<T extends Record<string, string | undefined> = Record<
   return tsParams({ strict: false } as never) as T;
 }
 
-
 // ---------- useSearchParams (react-router-dom compat) ----------
 
 export function useSearchParams(): [URLSearchParams, (init: URLSearchParams | Record<string, string> | ((prev: URLSearchParams) => URLSearchParams), opts?: { replace?: boolean }) => void] {
@@ -92,9 +87,6 @@ export function useSearchParams(): [URLSearchParams, (init: URLSearchParams | Re
       init: URLSearchParams | Record<string, string> | ((prev: URLSearchParams) => URLSearchParams),
       opts?: { replace?: boolean },
     ) => {
-      // Functional updaters read the router's live location, not the render
-      // snapshot — react-router passes call-time params, and chained updates
-      // within one tick must see each other's writes.
       const live = router.state.location;
       const current = new URLSearchParams(live.searchStr ?? "");
       const next =
@@ -140,7 +132,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     </TSLink>
   );
 });
-
 
 // ---------- Navigate ----------
 
