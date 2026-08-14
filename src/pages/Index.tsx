@@ -8,7 +8,6 @@ import { useUserRole } from "@/hooks/useUserRole";
 import { useMobile, useResponsive } from "@/hooks/use-mobile";
 import InPageNavigationTabs, { TabType } from "@/components/InPageNavigationTabs";
 import PrivacyPolicyModal from "@/components/PrivacyPolicyModal";
-import LoadingScreen from "@/components/LoadingScreen";
 import PromotionBanner from "@/components/PromotionBanner";
 import PackageGrid from "@/components/PackageGrid";
 import FilterBar from "@/components/FilterBar";
@@ -54,7 +53,6 @@ interface IndexProps {
 const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disableSeo = false, topSeoSlot, countryFAQSlot, beforeFooterSlot }: IndexProps) => {
   const { countryCode } = useParams<{ countryCode: string }>();
   const { t } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
   const [showPromotion, setShowPromotion] = useState(true);
   const [filter, setFilter] = useState("all");
   const [sortFilter, setSortFilter] = useState("default");
@@ -396,11 +394,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     };
 
     // Immediately show content - no loading delay
-    preloadImages().then(() => {
-      setIsLoading(false);
-    });
-    // Set loading to false immediately for faster banner display
-    setIsLoading(false);
+    void preloadImages();
   }, []);
 
   // Scroll detection for sticky filter bar (mobile only)
@@ -549,10 +543,6 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       setScrollToPackages(false);
     }
   }, [scrollToPackages]);
-
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
 
   const structuredData = {
     "@context": "https://schema.org",
