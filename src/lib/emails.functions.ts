@@ -11,6 +11,7 @@ export const sendOrderEmail = createServerFn({ method: 'POST' })
     customizations?: EmailCustomizations;
   }) => input)
   .handler(async ({ data }) => {
+    const { detectProductType, PRODUCT_CONFIG, getConfirmationEmailHtml, getRefundEmailHtml, getStatusNotificationContent } = await import('./emails.server');
     const { userId, orderId, emailType, orderDetails, customizations } = data;
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { getEmailTranslation, getLanguageFromCountry } = await import('./email-translations-server');
@@ -105,6 +106,7 @@ export const sendOrderStatusNotification = createServerFn({ method: 'POST' })
     order_details?: { packageName?: string };
   }) => input)
   .handler(async ({ data }) => {
+    const { detectProductType, PRODUCT_CONFIG, getConfirmationEmailHtml, getRefundEmailHtml, getStatusNotificationContent } = await import('./emails.server');
     const { user_id, order_id, new_status, order_details } = data;
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { sendWebPush } = await import('./notifications.server');
@@ -181,6 +183,7 @@ export const sendInquiryReply = createServerFn({ method: 'POST' })
     templateType: string;
   }) => input)
   .handler(async ({ data }) => {
+    const { detectProductType, PRODUCT_CONFIG, getConfirmationEmailHtml, getRefundEmailHtml, getStatusNotificationContent } = await import('./emails.server');
     const { customerEmail, customerName, subject, emailContent, orderId } = data;
     const { getCallerAuth } = await import('./support.server');
     const { Resend } = await import('resend');
@@ -259,6 +262,7 @@ export const sendInquiryReply = createServerFn({ method: 'POST' })
 export const sendTestEmail = createServerFn({ method: 'POST' })
   .inputValidator((input: { to: string; subject?: string; message?: string }) => input)
   .handler(async ({ data }) => {
+    const { detectProductType, PRODUCT_CONFIG, getConfirmationEmailHtml, getRefundEmailHtml, getStatusNotificationContent } = await import('./emails.server');
     const { to, subject, message } = data;
     const { getCallerAuth } = await import('./support.server');
     const { Resend } = await import('resend');
