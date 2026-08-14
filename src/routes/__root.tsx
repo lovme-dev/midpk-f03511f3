@@ -98,6 +98,17 @@ const TIKTOK_PIXEL = `!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[
 
 const GTAG_INLINE = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D152QYKZPQ');gtag('config','G-V58GVVDSKB');`;
 
+// Third-party marketing/analytics tags are heavy; load them only once the page
+// is idle (or on first user interaction) so they never block first paint.
+const DEFERRED_THIRD_PARTY = `(function(){var done=false;function boot(){if(done)return;done=true;
+var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-D152QYKZPQ';document.head.appendChild(s);
+var g=document.createElement('script');g.text=${JSON.stringify(GTAG_INLINE)};document.head.appendChild(g);
+var t=document.createElement('script');t.text=${JSON.stringify(TIKTOK_PIXEL)};document.head.appendChild(t);
+var a=document.createElement('script');a.async=true;a.crossOrigin='anonymous';a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3756302413439008';document.head.appendChild(a);}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(e){window.addEventListener(e,boot,{once:true,passive:true});});
+var start=function(){ (window.requestIdleCallback||function(f){setTimeout(f,2500);})(boot,{timeout:5000}); };
+if(document.readyState==='complete'){start();}else{window.addEventListener('load',start,{once:true});}})();`;
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -158,15 +169,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3756302413439008",
-        async: true,
-        crossOrigin: "anonymous",
-      },
       { src: "https://js.xstak.com/v4/xpay.js", defer: true },
-      { src: "https://www.googletagmanager.com/gtag/js?id=G-D152QYKZPQ", async: true },
-      { children: GTAG_INLINE },
-      { children: TIKTOK_PIXEL },
+      { children: DEFERRED_THIRD_PARTY },
       { children: DYNAMIC_SEO_SCRIPT },
       { children: PWA_PROMPT_SCRIPT },
       { children: ANTI_INSPECT_SCRIPT },

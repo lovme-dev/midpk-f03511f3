@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { supabase } from '@/integrations/supabase/client';
+import { notifyAdminNewOrder } from '@/lib/notifications.functions';
 import { useToast } from '@/hooks/use-toast';
 import { formatOrderPrice } from '@/utils/formatOrderPrice';
 import { EmailPreviewDialog, EmailCustomizations } from '@/components/admin/EmailPreviewDialog';
@@ -1115,8 +1116,8 @@ export function OrdersManagement() {
   const notifyAdminsForCancelledOrder = useCallback(async (order: Order, eventType: 'order_cancelled' | 'order_failed' = 'order_cancelled') => {
     const packageName = order.uc_packages?.name || order.product_name || 'Package';
 
-    const { error } = await supabase.functions.invoke('notify-admin-new-order', {
-      body: {
+    const result = await notifyAdminNewOrder({
+      data: {
         event_type: eventType,
         order_details: {
           order_id: order.id,
@@ -1128,7 +1129,7 @@ export function OrdersManagement() {
       },
     });
 
-    if (error) throw error;
+    if ('error' in result && result.error) throw new Error(result.error);
   }, []);
 
   const runCleanupAndRefresh = useCallback(async () => {

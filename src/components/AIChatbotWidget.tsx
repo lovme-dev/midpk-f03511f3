@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { supabase } from '@/integrations/supabase/client';
+import { chatSupport } from '@/lib/support.functions';
 import { useToast } from './ui/use-toast';
 
 import chatLogo from '../assets/chat-logo.png';
@@ -321,20 +322,21 @@ export function AIChatbotWidget() {
         content: userInput
       });
 
-      const { data, error } = await supabase.functions.invoke('chat-support', {
-        body: {
-          messages: conversationMessages,
-          includeVision: false,
-          userName: userProfile?.full_name || null,
-        },
-      });
+      let data: any;
+      try {
+        data = await chatSupport({
+          data: {
+            messages: conversationMessages,
+            includeVision: false,
+            userName: userProfile?.full_name || null,
+          },
+        });
+      } catch (err: any) {
+        throw new Error(`API Error: ${err?.message || 'Unknown error'}`.trim());
+      }
 
-      if (error) {
-        const status = (error as any)?.context?.status;
-        if (status === 429) {
-          throw new Error('RATE_LIMIT');
-        }
-        throw new Error(`API Error: ${status || ''} ${error.message}`.trim());
+      if ((data as any)?.fallback) {
+        throw new Error('RATE_LIMIT');
       }
 
       if (!data || !(data as any).response) {
@@ -607,15 +609,16 @@ export function AIChatbotWidget() {
       ];
 
       // Call our edge function with vision support using supabase invoke
-      const { data, error } = await supabase.functions.invoke('chat-support', {
-        body: {
-          messages: imageMessages,
-          includeVision: true,
-          userName: userProfile?.full_name || null,
-        },
-      });
-
-      if (error) {
+      let data: any;
+      try {
+        data = await chatSupport({
+          data: {
+            messages: imageMessages,
+            includeVision: true,
+            userName: userProfile?.full_name || null,
+          },
+        });
+      } catch (err) {
         throw new Error('Failed to analyze image');
       }
 

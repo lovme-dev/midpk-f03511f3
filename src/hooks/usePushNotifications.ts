@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+import { getVapidPublicKey } from '@/lib/notifications.functions';
 
 function urlBase64ToArrayBuffer(base64String: string): ArrayBuffer {
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
@@ -20,12 +21,12 @@ function urlBase64ToArrayBuffer(base64String: string): ArrayBuffer {
 // Fetch VAPID public key from server
 async function fetchVapidPublicKey(): Promise<string | null> {
   try {
-    const { data, error } = await supabase.functions.invoke('get-vapid-public-key');
-    if (error) {
-      console.error('[Push] Error fetching VAPID key:', error);
+    const result = await getVapidPublicKey();
+    if ('error' in result && result.error) {
+      console.error('[Push] Error fetching VAPID key:', result.error);
       return null;
     }
-    return data?.vapid_public_key || null;
+    return (result as any)?.vapid_public_key || null;
   } catch (error) {
     console.error('[Push] Error fetching VAPID key:', error);
     return null;

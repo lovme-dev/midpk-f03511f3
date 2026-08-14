@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { usePurchaseNotifications } from "@/hooks/useAuthNotifications";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyAdminNewOrder } from "@/lib/notifications.functions";
 
 interface PaymentSuccessPageProps {
   onLogout: () => void;
@@ -28,8 +29,8 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
 
   const notifyAdminCancelled = async (order: any) => {
     try {
-      const { error } = await supabase.functions.invoke('notify-admin-new-order', {
-        body: {
+      const result = await notifyAdminNewOrder({
+        data: {
           event_type: 'order_cancelled',
           order_details: {
             order_id: order.id,
@@ -41,7 +42,7 @@ const PaymentSuccessPage = ({ onLogout }: PaymentSuccessPageProps) => {
         },
       });
 
-      if (error) throw error;
+      if ('error' in result && result.error) throw new Error(result.error);
       console.log('Admin cancel notification sent for order:', order.id);
     } catch (notifyError) {
       console.error('Failed to send admin cancel notification:', notifyError);

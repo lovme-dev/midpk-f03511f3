@@ -5,6 +5,7 @@ import { ChevronRight, Filter, Search, X, Loader2, CheckCircle, Clock, XCircle, 
 import Header from "@/components/Header";
 import { Helmet } from "@/lib/helmet";
 import { supabase } from "@/integrations/supabase/client";
+import { trackOrder } from "@/lib/support.functions";
 import OrderDetailSheet from "@/components/OrderDetailSheet";
 import OrderFilterSheet from "@/components/OrderFilterSheet";
 import { formatOrderPrice } from "@/utils/formatOrderPrice";
@@ -449,10 +450,9 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
     try {
       // Use backend function so tracking works for guests too (RLS-safe)
       const normalized = trimmedId.replace(/\s+/g, '');
-      const { data, error } = await supabase.functions.invoke('track-order', {
-        body: { query: normalized },
+      const data = await trackOrder({
+        data: { query: normalized },
       });
-      if (error) throw error;
 
       const orderData = data?.order ?? null;
       
