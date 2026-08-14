@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SplatRouteImport } from './routes/$'
+import { Route as PaymentSuccessRouteImport } from './routes/payment-success'
 import { Route as AboutMidasbuyIndexRouteImport } from './routes/about-midasbuy/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as AuthIndexRouteImport } from './routes/auth/index'
@@ -39,7 +40,6 @@ import { Route as OrderCenterIndexRouteImport } from './routes/order-center/inde
 import { Route as PartnersIndexRouteImport } from './routes/partners/index'
 import { Route as PaymentCanceledIndexRouteImport } from './routes/payment-canceled/index'
 import { Route as PaymentIssuesIndexRouteImport } from './routes/payment-issues/index'
-import { Route as PaymentSuccessIndexRouteImport } from './routes/payment-success/index'
 import { Route as PlayerIdIndexRouteImport } from './routes/player-id/index'
 import { Route as PressIndexRouteImport } from './routes/press/index'
 import { Route as PrivacyPolicyIndexRouteImport } from './routes/privacy-policy/index'
@@ -101,6 +101,11 @@ const IndexRoute = IndexRouteImport.update({
 const SplatRoute = SplatRouteImport.update({
   id: '/$',
   path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentSuccessRoute = PaymentSuccessRouteImport.update({
+  id: '/payment-success',
+  path: '/payment-success',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutMidasbuyIndexRoute = AboutMidasbuyIndexRouteImport.update({
@@ -241,11 +246,6 @@ const PaymentCanceledIndexRoute = PaymentCanceledIndexRouteImport.update({
 const PaymentIssuesIndexRoute = PaymentIssuesIndexRouteImport.update({
   id: '/payment-issues/',
   path: '/payment-issues/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PaymentSuccessIndexRoute = PaymentSuccessIndexRouteImport.update({
-  id: '/payment-success/',
-  path: '/payment-success/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayerIdIndexRoute = PlayerIdIndexRouteImport.update({
@@ -532,6 +532,7 @@ const MidasbuyCountryCodeGameUndawnIndexRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/about-midasbuy/': typeof AboutMidasbuyIndexRoute
   '/admin/': typeof AdminIndexRoute
   '/auth/': typeof AuthIndexRoute
@@ -560,7 +561,6 @@ export interface FileRoutesByFullPath {
   '/partners/': typeof PartnersIndexRoute
   '/payment-canceled/': typeof PaymentCanceledIndexRoute
   '/payment-issues/': typeof PaymentIssuesIndexRoute
-  '/payment-success/': typeof PaymentSuccessIndexRoute
   '/player-id/': typeof PlayerIdIndexRoute
   '/press/': typeof PressIndexRoute
   '/privacy-policy/': typeof PrivacyPolicyIndexRoute
@@ -617,6 +617,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/about-midasbuy': typeof AboutMidasbuyIndexRoute
   '/admin': typeof AdminIndexRoute
   '/auth': typeof AuthIndexRoute
@@ -645,7 +646,6 @@ export interface FileRoutesByTo {
   '/partners': typeof PartnersIndexRoute
   '/payment-canceled': typeof PaymentCanceledIndexRoute
   '/payment-issues': typeof PaymentIssuesIndexRoute
-  '/payment-success': typeof PaymentSuccessIndexRoute
   '/player-id': typeof PlayerIdIndexRoute
   '/press': typeof PressIndexRoute
   '/privacy-policy': typeof PrivacyPolicyIndexRoute
@@ -703,6 +703,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/about-midasbuy/': typeof AboutMidasbuyIndexRoute
   '/admin/': typeof AdminIndexRoute
   '/auth/': typeof AuthIndexRoute
@@ -731,7 +732,6 @@ export interface FileRoutesById {
   '/partners/': typeof PartnersIndexRoute
   '/payment-canceled/': typeof PaymentCanceledIndexRoute
   '/payment-issues/': typeof PaymentIssuesIndexRoute
-  '/payment-success/': typeof PaymentSuccessIndexRoute
   '/player-id/': typeof PlayerIdIndexRoute
   '/press/': typeof PressIndexRoute
   '/privacy-policy/': typeof PrivacyPolicyIndexRoute
@@ -790,6 +790,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$'
+    | '/payment-success'
     | '/about-midasbuy/'
     | '/admin/'
     | '/auth/'
@@ -818,7 +819,6 @@ export interface FileRouteTypes {
     | '/partners/'
     | '/payment-canceled/'
     | '/payment-issues/'
-    | '/payment-success/'
     | '/player-id/'
     | '/press/'
     | '/privacy-policy/'
@@ -875,6 +875,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$'
+    | '/payment-success'
     | '/about-midasbuy'
     | '/admin'
     | '/auth'
@@ -903,7 +904,6 @@ export interface FileRouteTypes {
     | '/partners'
     | '/payment-canceled'
     | '/payment-issues'
-    | '/payment-success'
     | '/player-id'
     | '/press'
     | '/privacy-policy'
@@ -960,6 +960,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$'
+    | '/payment-success'
     | '/about-midasbuy/'
     | '/admin/'
     | '/auth/'
@@ -988,7 +989,6 @@ export interface FileRouteTypes {
     | '/partners/'
     | '/payment-canceled/'
     | '/payment-issues/'
-    | '/payment-success/'
     | '/player-id/'
     | '/press/'
     | '/privacy-policy/'
@@ -1046,6 +1046,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
+  PaymentSuccessRoute: typeof PaymentSuccessRoute
   AboutMidasbuyIndexRoute: typeof AboutMidasbuyIndexRoute
   AdminIndexRoute: typeof AdminIndexRoute
   AuthIndexRoute: typeof AuthIndexRoute
@@ -1074,7 +1075,6 @@ export interface RootRouteChildren {
   PartnersIndexRoute: typeof PartnersIndexRoute
   PaymentCanceledIndexRoute: typeof PaymentCanceledIndexRoute
   PaymentIssuesIndexRoute: typeof PaymentIssuesIndexRoute
-  PaymentSuccessIndexRoute: typeof PaymentSuccessIndexRoute
   PlayerIdIndexRoute: typeof PlayerIdIndexRoute
   PressIndexRoute: typeof PressIndexRoute
   PrivacyPolicyIndexRoute: typeof PrivacyPolicyIndexRoute
@@ -1143,6 +1143,13 @@ declare module '@tanstack/react-router' {
       path: '/$'
       fullPath: '/$'
       preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-success': {
+      id: '/payment-success'
+      path: '/payment-success'
+      fullPath: '/payment-success'
+      preLoaderRoute: typeof PaymentSuccessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about-midasbuy/': {
@@ -1339,13 +1346,6 @@ declare module '@tanstack/react-router' {
       path: '/payment-issues'
       fullPath: '/payment-issues/'
       preLoaderRoute: typeof PaymentIssuesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/payment-success/': {
-      id: '/payment-success/'
-      path: '/payment-success'
-      fullPath: '/payment-success/'
-      preLoaderRoute: typeof PaymentSuccessIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/player-id/': {
@@ -1718,6 +1718,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
+  PaymentSuccessRoute: PaymentSuccessRoute,
   AboutMidasbuyIndexRoute: AboutMidasbuyIndexRoute,
   AdminIndexRoute: AdminIndexRoute,
   AuthIndexRoute: AuthIndexRoute,
@@ -1746,7 +1747,6 @@ const rootRouteChildren: RootRouteChildren = {
   PartnersIndexRoute: PartnersIndexRoute,
   PaymentCanceledIndexRoute: PaymentCanceledIndexRoute,
   PaymentIssuesIndexRoute: PaymentIssuesIndexRoute,
-  PaymentSuccessIndexRoute: PaymentSuccessIndexRoute,
   PlayerIdIndexRoute: PlayerIdIndexRoute,
   PressIndexRoute: PressIndexRoute,
   PrivacyPolicyIndexRoute: PrivacyPolicyIndexRoute,
