@@ -193,11 +193,10 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
           setFeedbackMessage("Redeem Code is Invalid. Please try a Valid code.");
           setFeedbackType("error");
         } else {
-          // Pending duplicate - still ping admins so it stays visible in pending
+          // Pending duplicate - already in admin panel, do NOT notify again
           setFeedbackMessage("System is currently busy, please try again 2 hours later.");
           setFeedbackType("error");
           setCodeNumber("");
-          notifyAdmins();
         }
         setIsSubmitting(false);
         return;
