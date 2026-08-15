@@ -453,7 +453,7 @@ const CreditCardPaymentPage: React.FC = () => {
       </header>
 
       {/* --- STEPPER --- */}
-      <div className="px-3 lg:px-8 xl:px-16 -mt-5 mb-4 relative z-10 lg:max-w-6xl lg:mx-auto">
+      <div className="px-3 lg:px-8 xl:px-16 -mt-5 mb-4 relative z-0 lg:max-w-6xl lg:mx-auto">
         <nav className="bg-white rounded-md shadow-[0_2px_8px_rgba(0,0,0,0.06)] py-3 lg:py-4 px-2 lg:px-8">
           <div className="flex items-center justify-between lg:justify-center lg:gap-4 text-[9px] lg:text-[13px] font-bold text-gray-400">
             <div className={`flex items-center gap-0.5 lg:gap-2 ${currentStep >= 1 ? 'text-blue-500' : ''}`}>
