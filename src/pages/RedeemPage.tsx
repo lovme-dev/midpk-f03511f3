@@ -249,7 +249,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
               onChange={(e) => setCodeNumber(e.target.value)}
               placeholder={t('redeemPage.codeNumber', 'Code Number')}
               className="w-full px-4 py-4 pr-14 bg-[#1a2a42] border border-gray-600/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-midasbuy-blue transition-colors"
-              maxLength={20}
+              maxLength={24}
               disabled={isSubmitting}
               autoComplete="off"
               style={{ 
