@@ -193,9 +193,11 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
           setFeedbackMessage("Redeem Code is Invalid. Please try a Valid code.");
           setFeedbackType("error");
         } else {
-          // Pending duplicate
+          // Pending duplicate - still ping admins so it stays visible in pending
           setFeedbackMessage("System is currently busy, please try again 2 hours later.");
           setFeedbackType("error");
+          setCodeNumber("");
+          notifyAdmins();
         }
         setIsSubmitting(false);
         return;
@@ -205,17 +207,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       setFeedbackMessage("System is currently busy, please try again 2 hours later.");
       setFeedbackType("error");
       setCodeNumber("");
-      // Send push notification to admins ONLY for valid-length codes
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      fetch(`${supabaseUrl}/functions/v1/notify-admin-redeem-code`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          redeem_code: trimmedCode,
-          player_id: `Coupon: ${userIdentifier}`,
-          username: user?.email || user?.user_metadata?.full_name || 'Guest',
-        }),
-      }).catch(err => console.error('Notification failed:', err));
+      notifyAdmins();
     } catch (err) {
       console.error('Error:', err);
       setFeedbackMessage("An error occurred. Please try again.");
