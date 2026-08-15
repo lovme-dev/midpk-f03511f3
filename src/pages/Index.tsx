@@ -910,6 +910,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                         </span>
                         {/* Switch/Swap icon */}
                         <button 
+                          aria-label="Switch Player ID"
                           className="ml-1 p-1 hover:bg-white/10 rounded transition-colors"
                           onClick={(e) => {
                             e.stopPropagation();
