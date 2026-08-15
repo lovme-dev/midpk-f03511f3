@@ -281,6 +281,7 @@ export default function DashboardPage() {
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-8">
           <div className="flex justify-between items-center mb-8">
+            <h1 className="text-2xl font-bold text-white">My Midasbuy Dashboard</h1>
             <Link to="/">
               <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                 <Home className="h-4 w-4 mr-2" />

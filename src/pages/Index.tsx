@@ -849,7 +849,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               
               {/* Title and Badges - Always LTR, never translate */}
               <div className="flex flex-col gap-1.5">
-                <h1 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h1>
+                <h2 className="sr-only">{gameBrand === 'BGMI' ? 'Buy BGMI UC — Official Midasbuy Top Up Store | Instant Delivery' : 'Buy PUBG Mobile UC — Official Midasbuy Top Up Store | Instant Delivery'}</h2>
                 <div aria-hidden="true" className="text-white text-base font-bold tracking-wide drop-shadow-lg">{gameBrand === 'BGMI' ? 'BGMI' : 'PUBG Mobile'}</div>
 
                 <div className="flex items-center gap-1.5">
@@ -910,6 +910,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                         </span>
                         {/* Switch/Swap icon */}
                         <button 
+                          aria-label="Switch Player ID"
                           className="ml-1 p-1 hover:bg-white/10 rounded transition-colors"
                           onClick={(e) => {
                             e.stopPropagation();
@@ -1111,7 +1112,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             {/* Recently used Player ID Section */}
             {recentPlayerIds.length > 0 && (
               <div className="space-y-2">
-                <h5 className="text-gray-400 text-sm">Recently used Player ID</h5>
+                <h2 className="text-gray-400 text-sm">Recently used Player ID</h2>
                 <div className="space-y-2">
                   {recentPlayerIds.map((recent, index) => (
                     <div 
