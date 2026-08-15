@@ -250,7 +250,7 @@ export default function PubgAccountsPage() {
             <div className="bg-slate-900 border border-slate-700 rounded-lg max-w-md w-full max-h-[80vh] overflow-y-auto">
               <div className="p-4">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-semibold text-white">Account Description</h3>
+                  <h2 className="text-lg font-semibold text-white">Account Description</h2>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -334,7 +334,7 @@ export default function PubgAccountsPage() {
               </div>
 
               <div className="bg-slate-800 p-4">
-                <h3 className="text-sm font-semibold text-white mb-2 line-clamp-2">{account.title}</h3>
+                <h2 className="text-sm font-semibold text-white mb-2 line-clamp-2">{account.title}</h2>
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-white">₨{account.price.toLocaleString()}</span>

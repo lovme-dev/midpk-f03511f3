@@ -52,7 +52,7 @@ const Footer = ({ showWhyTopUp = false, countryFAQSlot }: FooterProps) => {
             <div className="mb-4 flex justify-start md:justify-center" dir="ltr">
               <OptimizedImage 
                 src="/lovable-uploads/b032faed-8af8-43c2-90b8-b20597ef2781.png" 
-                alt="Midasbuy Logo" 
+                alt="Midasbuy brand logo" 
                 className="h-auto w-auto max-h-7 md:max-h-10 transform hover:scale-110 transition-transform object-contain"
                 width={138}
                 height={29}
