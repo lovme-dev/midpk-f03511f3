@@ -31,7 +31,7 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
     try {
       const text = await navigator.clipboard.readText();
       if (text) {
-        setCodeNumber(text.trim().slice(0, 20));
+        setCodeNumber(text.trim().slice(0, 24));
         toast({
           title: "Pasted!",
           description: "Code pasted successfully",
