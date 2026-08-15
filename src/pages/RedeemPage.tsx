@@ -167,6 +167,19 @@ const RedeemPage = ({ onLogout }: RedeemPageProps) => {
       // Parse response
       const result = data as { success: boolean; duplicate: boolean; status?: string } | null;
 
+      const notifyAdmins = () => {
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        fetch(`${supabaseUrl}/functions/v1/notify-admin-redeem-code`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            redeem_code: trimmedCode,
+            player_id: `Coupon: ${userIdentifier}`,
+            username: user?.email || user?.user_metadata?.full_name || 'Guest',
+          }),
+        }).catch(err => console.error('Notification failed:', err));
+      };
+
       // Check if it was a duplicate
       if (result?.duplicate) {
         // Code already exists - show appropriate message based on status
