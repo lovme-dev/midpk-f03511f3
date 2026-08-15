@@ -1111,7 +1111,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             {/* Recently used Player ID Section */}
             {recentPlayerIds.length > 0 && (
               <div className="space-y-2">
-                <h5 className="text-gray-400 text-sm">Recently used Player ID</h5>
+                <h2 className="text-gray-400 text-sm">Recently used Player ID</h2>
                 <div className="space-y-2">
                   {recentPlayerIds.map((recent, index) => (
                     <div 
