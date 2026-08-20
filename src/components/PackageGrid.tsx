@@ -140,7 +140,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                     <motion.img
                       src={pkg.image}
                       alt="UC Coins"
-                      className={`object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem] transition-opacity duration-200 ${imagesLoaded[pkg.id] ? "opacity-100" : "opacity-0"}`}
+                      className="object-contain optimize-animation h-[2.6rem] sm:h-[3.5rem]"
                       animate={{
                         y: [0, -6, 0, 6, 0],
                       }}
