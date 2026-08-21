@@ -216,7 +216,7 @@ const ContactUsPage = ({ onLogout }: ContactUsPageProps) => {
                     </div>
                     <div>
                       <h3 className="font-medium text-white">Email Support</h3>
-                      <p className="text-midasbuy-gold">help@midasbuy.com.co</p>
+                      <p className="text-midasbuy-gold">help@midasbuy.com.pk</p>
                       <p className="text-xs text-gray-400">For all inquiries and support</p>
                     </div>
                   </div>

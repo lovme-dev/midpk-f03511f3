@@ -120,7 +120,7 @@ const PrivacyPolicyModal = ({ onClose }: PrivacyPolicyModalProps) => (
           </p>
           <div className="mt-2 p-4 bg-midasbuy-darkBlue/50 rounded-lg">
             <p className="font-medium text-white">MidasBuy Support</p>
-            <p>Email: help@midasbuy.com.co</p>
+            <p>Email: help@midasbuy.com.pk</p>
             <p>Address: One MidasBuy Plaza, Gaming District, CA 90210, USA</p>
           </div>
         </section>

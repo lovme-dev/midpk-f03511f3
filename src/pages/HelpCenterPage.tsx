@@ -92,7 +92,7 @@ const HelpCenterPage = ({ onLogout }: HelpCenterPageProps) => {
                 </p>
                 <div className="p-4 bg-midasbuy-navy/30 rounded-lg">
                   <p className="font-medium text-white">{t('pages.helpCenter.supportEmail')}:</p>
-                  <p className="text-midasbuy-gold text-lg">help@midasbuy.com.co</p>
+                  <p className="text-midasbuy-gold text-lg">help@midasbuy.com.pk</p>
                   <p className="text-sm text-gray-400 mt-1">{t('pages.helpCenter.responseTime')}</p>
                 </div>
               </div>
