@@ -29,7 +29,6 @@ interface PackageGridProps {
 
 const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps) => {
   const slowAnimationDuration = useAnimationDuration("slow");
-  const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({});
   const [selectedPackage, setSelectedPackage] = useState<UCPackage | null>(null);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const { t } = useTranslation();
@@ -41,18 +40,6 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
   const isBGMI = selectedCountry?.currency === 'INR';
 
   useEffect(() => {
-    // Preload all package images
-    packages.forEach((pkg) => {
-      const img = new Image();
-      img.src = pkg.image;
-      img.onload = () => {
-        setImagesLoaded((prev) => ({
-          ...prev,
-          [pkg.id]: true,
-        }));
-      };
-    });
-
     // Preload critical badge images immediately
     const preloadImages = [
       "/images/vip1-badge.png",
@@ -150,14 +137,14 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                         repeat: Infinity,
                         repeatType: "reverse",
                       }}
-                      loading="eager"
+                      loading="eager" decoding="sync" fetchPriority="high"
                     />
                   {/* Assist Value Ticket - right of UC image */}
                     <img
                       src="/images/assist-value-ticket.png"
                       alt="Assist Value"
                       className="w-7 h-7 sm:w-9 sm:h-9 object-contain ml-1 -mb-1 -mt-1"
-                      loading="eager"
+                      loading="eager" decoding="sync" fetchPriority="high"
                     />
                   </div>
                 </div>
@@ -182,7 +169,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                           src="/images/bonus-bubble.png"
                           alt=""
                           className="absolute inset-0 w-full h-full object-fill sm:hidden"
-                          loading="eager"
+                          loading="eager" decoding="sync" fetchPriority="high"
                           fetchPriority="high"
                         />
                         <img
@@ -190,7 +177,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                           alt=""
                           className="absolute inset-0 hidden sm:block object-fill"
                           style={{ width: '52px', height: '24px', top: '1px', left: '10px' }}
-                          loading="eager"
+                          loading="eager" decoding="sync" fetchPriority="high"
                           fetchPriority="high"
                         />
                         <span className="relative text-white font-bold text-[8px] sm:text-[9px] drop-shadow-sm pr-1 sm:pr-0 sm:mr-[-1px]">
@@ -204,7 +191,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                       alt="VIP1"
                       className="h-5 sm:h-6 object-contain relative"
                       style={{ zIndex: 2 }}
-                      loading="eager"
+                      loading="eager" decoding="sync" fetchPriority="high"
                     />
                   </div>
                   {/* UC values centered with icon on left */}
@@ -216,7 +203,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                         className="w-5 h-5 sm:w-7 sm:h-7"
                         width="28"
                         height="28"
-                        loading="eager"
+                        loading="eager" decoding="sync" fetchPriority="high"
                         decoding="async"
                       />
                     </div>
@@ -257,7 +244,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                         src="/images/midasbuy-coin-icon.png"
                         alt=""
                         className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 object-contain mr-1"
-                        loading="eager"
+                        loading="eager" decoding="sync" fetchPriority="high"
                       />
                       <span className="text-white font-bold text-[9px] sm:text-[11px] drop-shadow-sm">
                         {pkg.discount}
