@@ -1179,6 +1179,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
             {isMobile && (
               <div ref={filterBarRef}>
                 <FilterBar
+                  currencyLabel={activeTab === "wow" ? "WOW" : undefined}
                   onFilterChange={setSortFilter}
                   onPaymentMethodChange={setPaymentMethod}
                   onUCRangeChange={setUcRangeFilter}

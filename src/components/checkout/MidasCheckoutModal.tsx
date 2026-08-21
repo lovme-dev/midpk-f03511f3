@@ -24,6 +24,7 @@ import {
 } from '@/components/checkout/CheckoutIcons';
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { UCPackage, ucPackages, getVipCoinCount } from "@/data/ucPackages";
+import wowIcon from "@/assets/wow-uc-icon.png.asset.json";
 import { legacyPackages as diamondPackages, legacyPackages as robuxPackages } from "@/data/legacyGamePackages";
 
 import { toast } from "@/hooks/use-toast";
@@ -51,6 +52,7 @@ interface MidasCheckoutModalProps {
   onOpenChange: (open: boolean) => void;
   packageData: UCPackage | null;
   isBGMI?: boolean;
+  isWow?: boolean;
   isFreeFire?: boolean;
   isRoblox?: boolean;
   isValorant?: boolean;
@@ -70,6 +72,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   onOpenChange, 
   packageData,
   isBGMI = false,
+  isWow = false,
   isFreeFire = false,
   isRoblox = false,
   isValorant = false,
@@ -105,7 +108,11 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   // Dynamic branding based on game type
   const productLabel = isShopProduct
     ? shopProductLabel
-    : (isPubgCar ? 'Car Skin' : (isFreeFire ? 'Diamonds' : (isRoblox ? 'Robux' : (isValorant ? 'VP' : (isHonorOfKings ? 'Tokens' : 'UC')))));
+    : (isPubgCar ? 'Car Skin' : (isFreeFire ? 'Diamonds' : (isRoblox ? 'Robux' : (isValorant ? 'VP' : (isHonorOfKings ? 'Tokens' : (isWow ? 'WOW' : 'UC'))))));
+
+  // WOW section uses its own branding + icon (never the UC icon)
+  const brandIcon = isWow ? wowIcon.url : {brandIcon};
+  const brandStackIcon = isWow ? wowIcon.url : {brandStackIcon};
   const productType = isShopProduct
     ? 'pubg_shop_item'
     : (isPubgCar 
@@ -134,7 +141,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
           ? 'Valorant VP' 
           : (isHonorOfKings 
             ? 'Honor of Kings Tokens' 
-            : (isBGMI ? 'BGMI UC' : 'PUBG UC'))));
+            : (isBGMI ? 'BGMI UC' : (isWow ? 'PUBG WOW' : 'PUBG UC')))));
     return `${label} ${pkg.baseAmount}${pkg.bonusAmount > 0 ? `+${pkg.bonusAmount}` : ''}`;
   };
   
@@ -1045,8 +1052,10 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
             ? `${productAmount} Robux` 
             : (isValorant 
               ? `${productAmount} VP` 
-              : `${productAmount} UC`)),
+              : `${productAmount} ${isWow ? 'WOW' : 'UC'}`)),
         productType: productType, // Product type for game identification
+        productImage: isWow ? wowIcon.url : undefined,
+        brandLabel: isWow ? 'WOW' : 'UC',
         productAmount: productAmount, // Base+bonus amount for database storage
         playerId: userInfo,
         email: userEmail || guestEmail || quickCheckoutEmail || '',
@@ -1300,7 +1309,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                     </div>
                   ) : (
                     <div className="flex items-center gap-2">
-                      <img src={isRoblox ? selectedPackage?.image : "/images/uc-small-icon.png"} alt={isRoblox ? "Robux" : "UC"} className="w-6 h-5 object-contain" />
+                      <img src={isRoblox ? selectedPackage?.image : brandIcon} alt={isRoblox ? "Robux" : "UC"} className="w-6 h-5 object-contain" />
                       <span className="text-[16px] font-bold text-white">{selectedPackage.baseAmount}</span>
                       {selectedPackage.bonusAmount > 0 && (
                         <>
@@ -1394,7 +1403,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                   shopProductImage ? (
                                     <img src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                   ) : (
-                                    <img src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                    <img src={brandStackIcon} alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                   )
                                 ) : isPubgCar ? (
                                   <img src={selectedPackage.image} alt={carName || "Car Skin"} className="w-full h-full object-contain rounded-lg relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
@@ -1411,7 +1420,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                 ) : isRoblox ? (
                                   <img src={selectedPackage?.image} alt="Robux" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                 ) : (
-                                  <img src="/images/uc-stack-icon.png" alt="UC Stack" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
+                                  <img src={brandStackIcon} alt="UC Stack" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,196,0,0.4)]" />
                                 )}
                             </div>
                             <div className="flex flex-col">
@@ -1455,7 +1464,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                       {isRoblox ? (
                                         <img src={selectedPackage?.image} alt="Robux" className="w-7 h-6 object-contain" />
                                       ) : (
-                                        <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                        <img src={brandIcon} alt="UC" className="w-7 h-6 object-contain" />
                                       )}
                                       <span className="text-[18px] font-bold text-white leading-none">{selectedPackage.baseAmount}</span>
                                       {selectedPackage.bonusAmount > 0 && (
@@ -1502,7 +1511,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                             </>
                                           ) : (
                                             <>
-                                              <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
+                                              <img src={brandIcon} alt="UC" className="w-6 h-5 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{selectedPackage.baseAmount}</span>
                                             </>
                                           )}
@@ -1526,7 +1535,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                             </>
                                           ) : (
                                             <>
-                                              <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />
+                                              <img src={brandIcon} alt="UC" className="w-6 h-5 object-contain" />
                                               <span className="text-white font-bold text-[18px] tracking-wide">{totalUC}</span>
                                             </>
                                           )}
@@ -1880,7 +1889,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                  shopProductImage ? (
                                    <img src={shopProductImage} alt={shopProductTitle} className="w-full h-full object-cover rounded-lg relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
                                  ) : (
-                                   <img src="/images/uc-stack-icon.png" alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
+                                   <img src={brandStackIcon} alt={shopProductLabel} className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]" />
                                  )
                                ) : isPubgCar ? (
                                  <img
@@ -1900,7 +1909,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                   />
                                 ) : (
                                  <img
-                                   src="/images/uc-stack-icon.png"
+                                   src={brandStackIcon}
                                    alt="UC Stack"
                                    className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,196,0,0.35)]"
                                  />
@@ -1935,7 +1944,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                ) : (
                                  <>
                                    <div className="flex items-center gap-1">
-                                       <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                       <img src={brandIcon} alt="UC" className="w-7 h-6 object-contain" />
                                        <span className="text-white font-bold text-lg">{selectedPackage.baseAmount}</span>
                                        {selectedPackage.bonusAmount > 0 && (
                                          <span className="text-midasbuy-gold font-bold">+{selectedPackage.bonusAmount}</span>
@@ -1966,7 +1975,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                               }}
                             >
                               <div className="flex items-center gap-2">
-                                {!isFreeFire && <img src="/images/uc-small-icon.png" alt="UC" className="w-6 h-5 object-contain" />}
+                                {!isFreeFire && <img src={brandIcon} alt="UC" className="w-6 h-5 object-contain" />}
                                 <span className="text-white">{pkg.baseAmount}</span>
                                 <span className="text-midasbuy-gold">+{pkg.bonusAmount}</span>
                               </div>
@@ -1993,7 +2002,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                  </div>
                                ) : (
                                  <div className="flex items-center gap-1.5">
-                                     <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                     <img src={brandIcon} alt="UC" className="w-7 h-6 object-contain" />
                                      <span className="text-white font-medium">{selectedPackage.baseAmount}</span>
                                  </div>
                                )}
@@ -2011,7 +2020,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
                                  </div>
                                ) : (
                                  <div className="flex items-center gap-1.5">
-                                     <img src="/images/uc-small-icon.png" alt="UC" className="w-7 h-6 object-contain" />
+                                     <img src={brandIcon} alt="UC" className="w-7 h-6 object-contain" />
                                      <span className="text-white font-medium">{totalUC}</span>
                                  </div>
                                )}
@@ -2485,7 +2494,7 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
               amount={selectedPackage.price}
               discountedAmount={discountedPrice}
               orderId={`order-${Date.now()}`}
-              productName={`${selectedPackage.baseAmount}+${selectedPackage.bonusAmount} UC`}
+              productName={`${selectedPackage.baseAmount}+${selectedPackage.bonusAmount} ${isWow ? 'WOW' : 'UC'}`}
               onPaymentConfirmed={handleCryptoPaymentConfirmed}
               onCancel={() => setShowCryptoPayment(false)}
             />

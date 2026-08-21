@@ -264,6 +264,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery, variant = "uc" }: P
         onOpenChange={setShowCheckoutModal}
         packageData={selectedPackage}
         isBGMI={isBGMI}
+        isWow={isWow}
       />
     </>
   );
