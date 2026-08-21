@@ -170,7 +170,6 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                           alt=""
                           className="absolute inset-0 w-full h-full object-fill sm:hidden"
                           loading="eager" decoding="sync" fetchPriority="high"
-                          fetchPriority="high"
                         />
                         <img
                           src="/images/bonus-bubble.png"
@@ -178,7 +177,6 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                           className="absolute inset-0 hidden sm:block object-fill"
                           style={{ width: '52px', height: '24px', top: '1px', left: '10px' }}
                           loading="eager" decoding="sync" fetchPriority="high"
-                          fetchPriority="high"
                         />
                         <span className="relative text-white font-bold text-[8px] sm:text-[9px] drop-shadow-sm pr-1 sm:pr-0 sm:mr-[-1px]">
                           <span className="sm:hidden" style={{ marginRight: '1px', position: 'relative', top: '-3px' }}>{pkg.bonusPercent}</span>
@@ -204,7 +202,6 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                         width="28"
                         height="28"
                         loading="eager" decoding="sync" fetchPriority="high"
-                        decoding="async"
                       />
                     </div>
                     <span className="text-xl sm:text-2xl font-bold text-white">{pkg.baseAmount}</span>
