@@ -60,7 +60,7 @@ const RefundPolicyPage = ({ onLogout }: RefundPolicyPageProps) => {
               <div className="mt-2 text-sm text-gray-400">
                 <p>{t('effectiveDate', 'Effective Date')}: January 2025</p>
                 <p>
-                  {t('contactEmail', 'Contact Email')}: <a href="mailto:help@midasbuy.com.co" className="text-midasbuy-blue hover:underline">help@midasbuy.com.co</a>
+                  {t('contactEmail', 'Contact Email')}: <a href="mailto:help@midasbuy.com.pk" className="text-midasbuy-blue hover:underline">help@midasbuy.com.pk</a>
                 </p>
               </div>
 

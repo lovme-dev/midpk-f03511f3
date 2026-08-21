@@ -220,7 +220,7 @@ const InternationalPubgPage: React.FC<InternationalPubgPageProps> = ({ onLogout 
             "@type": "ContactPoint",
             "contactType": "customer service",
             "availableLanguage": ["English"],
-            "email": "help@midasbuy.com.co"
+            "email": "help@midasbuy.com.pk"
           }
         ]
       }

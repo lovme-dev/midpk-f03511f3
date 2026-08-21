@@ -34,12 +34,12 @@ const UCFilterDropdown = ({ onUCRangeChange, selectedRange, currencyLabel }: UCF
     { id: "22500-50000", label: "22500 - 50000 Robux" },
     { id: "50000+", label: "50000 Robux +" },
   ] : [
-    { id: "2000-2500", label: "2000 - 2500 UC" },
-    { id: "4000-5000", label: "4000 - 5000 UC" },
-    { id: "7000-8000", label: "7000 - 8000 UC" },
-    { id: "10000-12000", label: "10000 - 12000 UC" },
-    { id: "13000-15000", label: "13000 - 15000 UC" },
-    { id: "16000+", label: "16000 UC +" },
+    { id: "2000-2500", label: `2000 - 2500 ${displayLabel}` },
+    { id: "4000-5000", label: `4000 - 5000 ${displayLabel}` },
+    { id: "7000-8000", label: `7000 - 8000 ${displayLabel}` },
+    { id: "10000-12000", label: `10000 - 12000 ${displayLabel}` },
+    { id: "13000-15000", label: `13000 - 15000 ${displayLabel}` },
+    { id: "16000+", label: `16000 ${displayLabel} +` },
   ];
 
   useEffect(() => {
@@ -205,7 +205,7 @@ const UCFilterDropdown = ({ onUCRangeChange, selectedRange, currencyLabel }: UCF
                     value={minUC}
                     onChange={(e) => setMinUC(e.target.value)}
                     className="w-full bg-transparent text-white text-xs outline-none"
-                    placeholder={currencyLabel === "Robux" ? "400 Robux" : "60 UC"}
+                    placeholder={currencyLabel === "Robux" ? "400 Robux" : `60 ${displayLabel}`}
                   />
                 </div>
                 <span className="text-gray-500">-</span>
@@ -216,7 +216,7 @@ const UCFilterDropdown = ({ onUCRangeChange, selectedRange, currencyLabel }: UCF
                     value={maxUC}
                     onChange={(e) => setMaxUC(e.target.value)}
                     className="w-full bg-transparent text-white text-xs outline-none"
-                    placeholder={currencyLabel === "Robux" ? "50000 Robux" : "60000 UC"}
+                    placeholder={currencyLabel === "Robux" ? "50000 Robux" : `60000 ${displayLabel}`}
                   />
                 </div>
               </div>

@@ -512,7 +512,7 @@ const CreditCardPaymentPage: React.FC = () => {
                   <div className="flex items-center justify-between py-3 border-b border-gray-50">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                        <img src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
+                        <img src={orderInfo?.productImage || ucProductIcon} alt="Product" className="w-full h-full object-cover" />
                       </div>
                       <span className="text-[13px] font-medium text-gray-800">{orderInfo?.productName || '60 UC'}</span>
                     </div>
@@ -760,7 +760,7 @@ const CreditCardPaymentPage: React.FC = () => {
                 <div className="flex items-center justify-between py-4 border-b border-gray-50">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 border border-black rounded-md flex items-center justify-center overflow-hidden bg-transparent">
-                      <img src={ucProductIcon} alt="UC Product" className="w-full h-full object-cover" />
+                      <img src={orderInfo?.productImage || ucProductIcon} alt="Product" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-[14px] font-medium text-gray-800">{orderInfo?.productName || '60 UC'}</span>
                   </div>

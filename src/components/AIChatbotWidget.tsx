@@ -641,7 +641,7 @@ export function AIChatbotWidget() {
 For gaming issues, screenshots, or payment problems, our agents can help better.
 
 💬 WhatsApp: +1 4502322003 (24/7 support)
-📧 Email: help@midasbuy.com.co`,
+📧 Email: help@midasbuy.com.pk`,
         sender: 'bot',
         timestamp: new Date(),
       };
