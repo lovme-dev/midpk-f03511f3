@@ -28,8 +28,6 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
         {navLinks.map((link, index) => {
           const IconComponent = link.icon;
           const isActive = activeTab === link.id;
-          const isFirst = index === 0;
-          const isLast = index === navLinks.length - 1;
           
           return (
             <button 
