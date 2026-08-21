@@ -14,16 +14,17 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
   const { t } = useTranslation();
   
   const navLinks = [
-    { name: t('tabs.purchase', { defaultValue: 'PURCHASE' }), id: "purchase" as TabType, icon: ThumbsUp },
-    { name: t('tabs.redeem', { defaultValue: 'REDEEM' }), id: "redeem" as TabType, icon: Gift },
+    { name: t('tabs.uc', { defaultValue: 'UC' }), id: "purchase" as TabType, icon: ThumbsUp },
+    { name: t('tabs.wow', { defaultValue: 'WOW' }), id: "wow" as TabType, icon: ShoppingBag },
+    { name: t('tabs.redeem', { defaultValue: 'REDEEM' }), id: "redeem" as TabType, icon: Ticket },
     { name: t('tabs.shop', { defaultValue: 'SHOP' }), id: "shop" as TabType, icon: ShoppingCart },
-    { name: t('tabs.events', { defaultValue: 'EVENTS' }), id: "events" as TabType, icon: Calendar },
+    { name: t('tabs.events', { defaultValue: 'EVENTS' }), id: "events" as TabType, icon: Flame },
   ];
 
   return (
     <div className="w-full bg-[#0a1628]" dir="ltr">
-      {/* Full width container with justify-between for PC spread */}
-      <div className="flex justify-between items-center overflow-x-auto max-w-4xl mx-auto px-4 md:px-8">
+      {/* Centered, tighter spacing */}
+      <div className="flex justify-center items-center gap-1 md:gap-4 overflow-x-auto max-w-4xl mx-auto px-2 md:px-8">
         {navLinks.map((link, index) => {
           const IconComponent = link.icon;
           const isActive = activeTab === link.id;
