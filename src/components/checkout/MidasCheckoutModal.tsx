@@ -111,8 +111,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
     : (isPubgCar ? 'Car Skin' : (isFreeFire ? 'Diamonds' : (isRoblox ? 'Robux' : (isValorant ? 'VP' : (isHonorOfKings ? 'Tokens' : (isWow ? 'WOW' : 'UC'))))));
 
   // WOW section uses its own branding + icon (never the UC icon)
-  const brandIcon = isWow ? wowIcon.url : {brandIcon};
-  const brandStackIcon = isWow ? wowIcon.url : {brandStackIcon};
+  const brandIcon = isWow ? wowIcon.url : "/images/uc-small-icon.png";
+  const brandStackIcon = isWow ? wowIcon.url : "/images/uc-stack-icon.png";
   const productType = isShopProduct
     ? 'pubg_shop_item'
     : (isPubgCar 
