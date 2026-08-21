@@ -16,6 +16,10 @@ interface Group {
 
 const groups: Group[] = [
   { file: "sitemap_countries_pubg.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm`, priority: "1.0", changefreq: "daily" },
+  { file: "sitemap_countries_wow.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm/wow`, priority: "0.9", changefreq: "daily" },
+  { file: "sitemap_countries_redeem.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm/redeem`, priority: "0.8", changefreq: "weekly" },
+  { file: "sitemap_countries_shop.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm/shop`, priority: "0.8", changefreq: "weekly" },
+  { file: "sitemap_countries_events.xml", build: (cc) => `/midasbuy/${cc}/buy/pubgm/events`, priority: "0.7", changefreq: "daily" },
 ];
 
 let total = 0;
