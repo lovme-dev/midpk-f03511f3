@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
-import { ThumbsUp, Gift, ShoppingCart, Calendar } from "lucide-react";
+import { ThumbsUp, ShoppingBag, Ticket, ShoppingCart, Flame } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export type TabType = "purchase" | "redeem" | "shop" | "events";
+export type TabType = "purchase" | "wow" | "redeem" | "shop" | "events";
+
 
 interface InPageNavigationTabsProps {
   activeTab: TabType;
