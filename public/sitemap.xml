@@ -4,6 +4,18 @@
     <loc>https://www.midasbuy.com.pk/sitemap_countries_pubg.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://www.midasbuy.com.pk/sitemap_countries_wow.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.midasbuy.com.pk/sitemap_countries_redeem.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.midasbuy.com.pk/sitemap_countries_shop.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.midasbuy.com.pk/sitemap_countries_events.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://www.midasbuy.com.pk/sitemap_static.xml</loc>
   </sitemap>
 </sitemapindex>
