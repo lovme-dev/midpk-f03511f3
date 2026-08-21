@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
-import { ThumbsUp, Gift, ShoppingCart, Calendar } from "lucide-react";
+import { ThumbsUp, ShoppingBag, Ticket, ShoppingCart, Flame } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export type TabType = "purchase" | "redeem" | "shop" | "events";
+export type TabType = "purchase" | "wow" | "redeem" | "shop" | "events";
+
 
 interface InPageNavigationTabsProps {
   activeTab: TabType;
@@ -13,34 +14,30 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
   const { t } = useTranslation();
   
   const navLinks = [
-    { name: t('tabs.purchase', { defaultValue: 'PURCHASE' }), id: "purchase" as TabType, icon: ThumbsUp },
-    { name: t('tabs.redeem', { defaultValue: 'REDEEM' }), id: "redeem" as TabType, icon: Gift },
+    { name: t('tabs.uc', { defaultValue: 'UC' }), id: "purchase" as TabType, icon: ThumbsUp },
+    { name: t('tabs.wow', { defaultValue: 'WOW' }), id: "wow" as TabType, icon: ShoppingBag },
+    { name: t('tabs.redeem', { defaultValue: 'REDEEM' }), id: "redeem" as TabType, icon: Ticket },
     { name: t('tabs.shop', { defaultValue: 'SHOP' }), id: "shop" as TabType, icon: ShoppingCart },
-    { name: t('tabs.events', { defaultValue: 'EVENTS' }), id: "events" as TabType, icon: Calendar },
+    { name: t('tabs.events', { defaultValue: 'EVENTS' }), id: "events" as TabType, icon: Flame },
   ];
 
   return (
     <div className="w-full bg-[#0a1628]" dir="ltr">
-      {/* Full width container with justify-between for PC spread */}
-      <div className="flex justify-between items-center overflow-x-auto max-w-4xl mx-auto px-4 md:px-8">
+      {/* Centered, tighter spacing */}
+      <div className="flex justify-center items-center gap-1 md:gap-4 overflow-x-auto max-w-4xl mx-auto px-2 md:px-8">
         {navLinks.map((link, index) => {
           const IconComponent = link.icon;
           const isActive = activeTab === link.id;
-          const isFirst = index === 0;
-          const isLast = index === navLinks.length - 1;
           
           return (
             <button 
               key={link.id}
               onClick={() => onTabChange(link.id)}
               className={cn(
-                "relative flex items-center justify-center gap-2 px-3 md:px-4 py-3 md:py-4 transition-all duration-300 whitespace-nowrap",
+                "relative flex items-center justify-center gap-1.5 px-2 md:px-4 py-3 md:py-4 transition-all duration-300 whitespace-nowrap",
                 isActive 
                   ? "text-[#33C3F0] bg-[#151a28] rounded-t-xl" 
                   : "text-gray-400 hover:text-gray-300 bg-[#0a1628]",
-                // Mobile only: move first item left, last item right
-                isFirst && "ml-[-4%] md:ml-0",
-                isLast && "mr-[-4%] md:mr-0"
               )}
             >
               {/* Cyan glow effect - spreads into background behind text */}
@@ -62,11 +59,11 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
                   }}
                 />
               )}
-              {/* Icons only visible on desktop */}
+              {/* Icon */}
               <IconComponent 
                 size={18}
                 className={cn(
-                  "transition-colors hidden md:block relative z-10",
+                  "transition-colors relative z-10",
                   isActive ? "text-[#33C3F0]" : "text-gray-400"
                 )}
               />
