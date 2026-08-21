@@ -15,7 +15,7 @@ interface CountryPubgPageProps {
 }
 
 const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
-  const { countryCode } = useParams<{ countryCode: string }>();
+  const { countryCode, section } = useParams<{ countryCode: string; section: string }>();
   const { t } = useTranslation();
   useCurrencyFromURL();
 
@@ -30,7 +30,35 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
   const countryData = getCountryData(upperCountryCode);
   
   const baseUrl = "https://www.midasbuy.com.pk";
-  const canonicalUrl = `/midasbuy/${normalizedCountryCode}/buy/pubgm`;
+  const validSections = ["wow", "redeem", "shop", "events"] as const;
+  const activeSection = (validSections as readonly string[]).includes(section || "")
+    ? (section as typeof validSections[number])
+    : undefined;
+  const canonicalUrl = `/midasbuy/${normalizedCountryCode}/buy/pubgm${activeSection ? `/${activeSection}` : ""}`;
+
+  const sectionSeo: Record<string, { title: string; description: string; keywords: string }> = {
+    wow: {
+      title: `WOW UC Vouchers ${seoConfig.countryName} | PUBG Mobile WOW Top Up`,
+      description: `Buy PUBG Mobile WOW UC vouchers in ${seoConfig.countryName} at discounted ${countryData.currency} prices. Instant delivery, secure payment, exclusive WOW bonus UC.`,
+      keywords: `pubg wow uc ${seoConfig.countryName}, wow voucher pubg mobile, buy wow uc, pubg mobile wow top up ${seoConfig.countryName}`,
+    },
+    redeem: {
+      title: `Redeem PUBG Mobile UC Code ${seoConfig.countryName} | Midasbuy`,
+      description: `Redeem your PUBG Mobile UC voucher code in ${seoConfig.countryName}. Enter your redemption code and get UC credited to your player ID instantly.`,
+      keywords: `redeem pubg uc code, pubg mobile redeem ${seoConfig.countryName}, uc voucher redeem, midasbuy redeem code`,
+    },
+    shop: {
+      title: `PUBG Mobile Shop ${seoConfig.countryName} | Items, Crates & Bundles`,
+      description: `Shop PUBG Mobile items, crates, popularity and bundles in ${seoConfig.countryName}. Official Midasbuy prices in ${countryData.currency} with instant delivery.`,
+      keywords: `pubg mobile shop ${seoConfig.countryName}, pubg crates, pubg popularity, midasbuy shop`,
+    },
+    events: {
+      title: `PUBG Mobile Events & Offers ${seoConfig.countryName} | Midasbuy`,
+      description: `Latest PUBG Mobile events, promotions and limited-time UC offers in ${seoConfig.countryName}. Grab bonus rewards before they expire.`,
+      keywords: `pubg mobile events ${seoConfig.countryName}, pubg uc offers, midasbuy events, pubg promotions`,
+    },
+  };
+  const activeSeo = activeSection ? sectionSeo[activeSection] : undefined;
 
   const interpVars = {
     country: seoConfig.countryName,
@@ -444,9 +472,9 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
   return (
     <>
       <AdvancedSEOHelmet
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
+        title={activeSeo?.title || seoConfig.title}
+        description={activeSeo?.description || seoConfig.description}
+        keywords={activeSeo?.keywords || seoConfig.keywords}
         canonicalUrl={canonicalUrl}
         ogImage="/lovable-uploads/6b0727f0-f8bd-4223-9e36-ffd7671fc90d.png"
         ogType="product"
@@ -464,7 +492,7 @@ const CountryPubgPage = ({ onLogout }: CountryPubgPageProps) => {
         totalTime="PT5M"
       />
       
-      <Index onLogout={onLogout || (() => {})} disableSeo topSeoSlot={topSeoSlot} beforeFooterSlot={faqSlot} />
+      <Index onLogout={onLogout || (() => {})} disableSeo topSeoSlot={topSeoSlot} beforeFooterSlot={faqSlot} initialTab={activeSection === "wow" ? "wow" : activeSection === "redeem" ? "redeem" : activeSection === "shop" ? "shop" : activeSection === "events" ? "events" : "purchase"} />
     </>
   );
 };
