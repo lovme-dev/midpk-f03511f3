@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import OptimizedImage from "./OptimizedImage";
 import MidasCheckoutModal from "./checkout/MidasCheckoutModal";
 import { UCPackage } from "@/data/ucPackages";
+import wowIcon from "@/assets/wow-uc-icon.png.asset.json";
 
 interface Package {
   id: string;
@@ -25,9 +26,11 @@ interface PackageGridProps {
     [key: string]: any;
   };
   linkQuery?: string;
+  variant?: "uc" | "wow";
 }
 
-const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps) => {
+const PackageGrid = ({ packages, selectedCountry, linkQuery, variant = "uc" }: PackageGridProps) => {
+  const isWow = variant === "wow";
   const slowAnimationDuration = useAnimationDuration("slow");
   const [selectedPackage, setSelectedPackage] = useState<UCPackage | null>(null);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
@@ -139,13 +142,13 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                       }}
                       loading="eager" decoding="sync" fetchPriority="high"
                     />
-                  {/* Assist Value Ticket - right of UC image */}
-                    <img
+                  {/* Assist Value Ticket - right of UC image (hidden in WOW) */}
+                    {!isWow && <img
                       src="/images/assist-value-ticket.png"
                       alt="Assist Value"
                       className="w-7 h-7 sm:w-9 sm:h-9 object-contain ml-1 -mb-1 -mt-1"
                       loading="eager" decoding="sync" fetchPriority="high"
-                    />
+                    />}
                   </div>
                 </div>
 
@@ -196,7 +199,7 @@ const PackageGrid = ({ packages, selectedCountry, linkQuery }: PackageGridProps)
                   <div className="flex items-center justify-center mb-2 sm:mb-3">
                     <div className="uc-icon mr-1.5 sm:mr-2">
                       <img
-                        src="/images/uc-icon.png"
+                        src={isWow ? wowIcon.url : "/images/uc-icon.png"}
                         alt="UC"
                         className="w-5 h-5 sm:w-7 sm:h-7"
                         width="28"

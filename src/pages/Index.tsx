@@ -4,6 +4,7 @@ import bgmiLogo from "@/assets/bgmi-logo.jpeg";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { ucPackages, adminTestPackage, getSelectedCountry } from "@/data/ucPackages";
+import { wowPackages } from "@/data/wowPackages";
 import { useUserRole } from "@/hooks/useUserRole";
 import { useMobile, useResponsive } from "@/hooks/use-mobile";
 import InPageNavigationTabs, { TabType } from "@/components/InPageNavigationTabs";
@@ -22,7 +23,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import { ChevronDown, ArrowRight, User, HelpCircle, X, Check, AlertCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
@@ -49,10 +50,12 @@ interface IndexProps {
   topSeoSlot?: React.ReactNode;
   countryFAQSlot?: React.ReactNode;
   beforeFooterSlot?: React.ReactNode;
+  initialTab?: TabType;
 }
 
-const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disableSeo = false, topSeoSlot, countryFAQSlot, beforeFooterSlot }: IndexProps) => {
-  const { countryCode } = useParams<{ countryCode: string }>();
+const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disableSeo = false, topSeoSlot, countryFAQSlot, beforeFooterSlot, initialTab }: IndexProps) => {
+  const { countryCode, section } = useParams<{ countryCode: string; section: string }>();
+  const location = useLocation();
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const [showPromotion, setShowPromotion] = useState(true);
@@ -77,7 +80,26 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
   const [packageSelectionPrompt, setPackageSelectionPrompt] = useState(false);
   const [scrollToPackages, setScrollToPackages] = useState(false);
   const [showStickyFilterBar, setShowStickyFilterBar] = useState(false);
-  const [activeTab, setActiveTab] = useState<TabType>("purchase");
+  const sectionTab = (["wow", "redeem", "shop", "events"] as const).includes(section as any)
+    ? (section as TabType)
+    : undefined;
+  const [activeTab, setActiveTab] = useState<TabType>(initialTab ?? sectionTab ?? "purchase");
+
+  // Keep tab in sync when the URL section changes (back/forward, shared links)
+  useEffect(() => {
+    const next = initialTab ?? sectionTab ?? "purchase";
+    setActiveTab(next);
+  }, [initialTab, sectionTab]);
+
+  // Tab change updates the URL so each section has its own shareable link
+  const handleTabChange = (tab: TabType) => {
+    setActiveTab(tab);
+    const match = location.pathname.match(/^(.*\/buy\/pubgm)(\/(wow|redeem|shop|events))?$/);
+    if (match) {
+      const base = match[1];
+      navigate(tab === "purchase" ? base : `${base}/${tab}`);
+    }
+  };
   const [showHelpImages, setShowHelpImages] = useState(false); // Will be set based on saved data
   const [recentPlayerIds, setRecentPlayerIds] = useState<Array<{playerId: string; username: string}>>([]);
   const [savedPlayerInfo, setSavedPlayerInfo] = useState<{id: string; username: string} | null>(null);
@@ -621,7 +643,8 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
     ]
   };
 
-  const basePackages = isAdmin ? [adminTestPackage, ...ucPackages] : ucPackages;
+  const sourcePackages = activeTab === "wow" ? wowPackages : ucPackages;
+  const basePackages = isAdmin ? [adminTestPackage, ...sourcePackages] : sourcePackages;
 
   const filteredPackages = basePackages.filter(pkg => {
     // UC Range filtering
@@ -967,7 +990,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       {topSeoSlot}
       
       {/* Navigation Tabs - directly below banner */}
-      <InPageNavigationTabs activeTab={activeTab} onTabChange={setActiveTab} />
+      <InPageNavigationTabs activeTab={activeTab} onTabChange={handleTabChange} />
       
       <Drawer open={showPlayerIdModal} onOpenChange={setShowPlayerIdModal}>
         <DrawerContent 
@@ -1182,7 +1205,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
               
               {/* Packages Grid */}
               <div ref={packagesRef} className="flex-1">
-                <PackageGrid packages={filteredPackages} selectedCountry={selectedCountry} linkQuery={linkQuery} />
+                <PackageGrid packages={filteredPackages} selectedCountry={selectedCountry} linkQuery={linkQuery} variant={activeTab === "wow" ? "wow" : "uc"} />
               </div>
             </div>
           </div>
@@ -1190,7 +1213,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
         
         {activeTab === "redeem" && <RedeemTabContent gameBrand={gameBrand === 'BGMI' ? 'BGMI' : 'PUBG MOBILE'} onOpenPlayerIdModal={() => setShowPlayerIdModal(true)} savedPlayerInfo={savedPlayerInfo} />}
         
-        {activeTab === "shop" && <ShopProductsContent onTabChange={setActiveTab} />}
+        {activeTab === "shop" && <ShopProductsContent onTabChange={handleTabChange} />}
         
         {activeTab === "events" && <EventsTabContent />}
         
