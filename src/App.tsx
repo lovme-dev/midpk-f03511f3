@@ -194,12 +194,14 @@ function AppRoutes() {
       
       {/* PUBG Mobile Purchase Route */}
       <Route path="/midasbuy/buy/pubgm" element={<Index onLogout={logout} />} />
+      <Route path="/midasbuy/buy/pubgm/:section" element={<Index onLogout={logout} />} />
       
       {/* Country-specific Home Page Route */}
       <Route path="/midasbuy/:countryCode" element={<LegacyGameRedirect />} />
       
       {/* Country-specific PUBG Mobile Purchase Route */}
       <Route path="/midasbuy/:countryCode/buy/pubgm" element={<CountryPubgPage onLogout={logout} />} />
+      <Route path="/midasbuy/:countryCode/buy/pubgm/:section" element={<CountryPubgPage onLogout={logout} />} />
       
       {/* Country-specific Free Fire Purchase Route */}
       <Route path="/midasbuy/:countryCode/buy/freefire" element={<LegacyGameRedirect />} />
