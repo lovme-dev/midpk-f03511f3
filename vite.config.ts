@@ -267,7 +267,7 @@ const countryPrerenderPlugin = (): Plugin => ({
       }
 
       // Section sub-routes (WOW / Redeem / Shop / Events) get their own indexable page
-      const countryName = country.countryName || code;
+      const countryName = country.name || code;
       const currency = country.currency || '';
       const sections: Array<{ slug: string; title: string; description: string; heading: string; bullets: string[] }> = [
         {
