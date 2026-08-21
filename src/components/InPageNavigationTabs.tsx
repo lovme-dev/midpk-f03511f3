@@ -36,13 +36,10 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
               key={link.id}
               onClick={() => onTabChange(link.id)}
               className={cn(
-                "relative flex items-center justify-center gap-2 px-3 md:px-4 py-3 md:py-4 transition-all duration-300 whitespace-nowrap",
+                "relative flex items-center justify-center gap-1.5 px-2 md:px-4 py-3 md:py-4 transition-all duration-300 whitespace-nowrap",
                 isActive 
                   ? "text-[#33C3F0] bg-[#151a28] rounded-t-xl" 
                   : "text-gray-400 hover:text-gray-300 bg-[#0a1628]",
-                // Mobile only: move first item left, last item right
-                isFirst && "ml-[-4%] md:ml-0",
-                isLast && "mr-[-4%] md:mr-0"
               )}
             >
               {/* Cyan glow effect - spreads into background behind text */}
@@ -64,11 +61,11 @@ const InPageNavigationTabs = ({ activeTab, onTabChange }: InPageNavigationTabsPr
                   }}
                 />
               )}
-              {/* Icons only visible on desktop */}
+              {/* Icon */}
               <IconComponent 
                 size={18}
                 className={cn(
-                  "transition-colors hidden md:block relative z-10",
+                  "transition-colors relative z-10",
                   isActive ? "text-[#33C3F0]" : "text-gray-400"
                 )}
               />
