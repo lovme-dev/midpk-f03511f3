@@ -265,6 +265,82 @@ const countryPrerenderPlugin = (): Plugin => ({
         fs.mkdirSync(path.resolve(`dist/midasbuy/${lowerCode}/buy`), { recursive: true });
         fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}/buy/${game.slug}.html`), gameHtml, 'utf8');
       }
+
+      // Section sub-routes (WOW / Redeem / Shop / Events) get their own indexable page
+      const countryName = country.countryName || code;
+      const currency = country.currency || '';
+      const sections: Array<{ slug: string; title: string; description: string; heading: string; bullets: string[] }> = [
+        {
+          slug: 'wow',
+          title: `PUBG Mobile WOW UC Vouchers ${countryName} | Midasbuy`,
+          description: `Buy PUBG Mobile WOW UC vouchers in ${countryName} at discounted ${currency} prices with instant delivery and secure payment.`,
+          heading: `PUBG Mobile WOW UC Vouchers in ${countryName}`,
+          bullets: [
+            `WOW UC vouchers for PUBG Mobile players in ${countryName}`,
+            `Exclusive WOW bonus UC on every voucher pack`,
+            `Pay in ${currency} with cards and local payment channels`,
+            `Instant delivery to your PUBG Mobile player ID`,
+          ],
+        },
+        {
+          slug: 'redeem',
+          title: `Redeem PUBG Mobile UC Code ${countryName} | Midasbuy`,
+          description: `Redeem your PUBG Mobile UC voucher code in ${countryName}. Enter the redemption code and get UC credited to your player ID instantly.`,
+          heading: `Redeem PUBG Mobile UC Codes in ${countryName}`,
+          bullets: [
+            `Redeem official PUBG Mobile UC voucher codes`,
+            `Codes are credited directly to your player ID`,
+            `Free to use for every player in ${countryName}`,
+            `24/7 support if a redemption code fails`,
+          ],
+        },
+        {
+          slug: 'shop',
+          title: `PUBG Mobile Shop ${countryName} - Crates & Bundles | Midasbuy`,
+          description: `Shop PUBG Mobile items, crates, popularity and bundles in ${countryName} at official Midasbuy prices in ${currency}.`,
+          heading: `PUBG Mobile Shop in ${countryName}`,
+          bullets: [
+            `Royal Pass, crates, popularity and bundles`,
+            `Official Midasbuy prices in ${currency}`,
+            `Instant delivery after payment`,
+            `Secure checkout with local payment methods`,
+          ],
+        },
+        {
+          slug: 'events',
+          title: `PUBG Mobile Events & UC Offers ${countryName} | Midasbuy`,
+          description: `Latest PUBG Mobile events, promotions and limited-time UC offers in ${countryName}. Claim bonus rewards before they expire.`,
+          heading: `PUBG Mobile Events & Offers in ${countryName}`,
+          bullets: [
+            `Limited-time UC discounts and bonus events`,
+            `Seasonal PUBG Mobile promotions for ${countryName}`,
+            `Extra rewards on selected UC packs`,
+            `Updated regularly - check back often`,
+          ],
+        },
+      ];
+
+      for (const section of sections) {
+        const sectionPath = `/midasbuy/${lowerCode}/buy/pubgm/${section.slug}`;
+        const sectionBody = buildPrerenderBody({
+          title: section.title,
+          heading: section.heading,
+          description: section.description,
+          bullets: [...section.bullets, `Main UC store: ${baseUrl}/midasbuy/${lowerCode}/buy/pubgm`],
+        });
+        const sectionHtml = createPrerenderedHtml({
+          template,
+          lang: country.language || 'en',
+          title: section.title,
+          description: section.description,
+          canonicalUrl: `${baseUrl}${sectionPath}`,
+          body: sectionBody,
+        });
+        const sectionDir = path.resolve(`dist/midasbuy/${lowerCode}/buy/pubgm/${section.slug}`);
+        fs.mkdirSync(sectionDir, { recursive: true });
+        fs.writeFileSync(path.join(sectionDir, 'index.html'), sectionHtml, 'utf8');
+        fs.writeFileSync(path.resolve(`dist/midasbuy/${lowerCode}/buy/pubgm/${section.slug}.html`), sectionHtml, 'utf8');
+      }
     }
 
 
