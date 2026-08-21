@@ -1149,7 +1149,7 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
       <main className={`pb-20 relative ${isMobile ? 'mobile-main-container pt-0' : 'z-10 pt-0'}`}>
         
         {/* Tab Content */}
-        {activeTab === "purchase" && (
+        {(activeTab === "purchase" || activeTab === "wow") && (
           <div className={`container mx-auto px-4 ${isMobile ? 'mobile-main-container' : ''}`}>
             
             {/* Mobile: FilterBar above packages */}
