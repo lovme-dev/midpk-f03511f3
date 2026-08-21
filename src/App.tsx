@@ -135,15 +135,9 @@ function AppRoutes() {
   // For /midasbuy/* country pages: show chatbot on the country home page, but hide on /buy/* flows.
   // Show on browser home page (/) only in standalone/PWA mode.
   const hideChatbotPrefixes = ['/auth', '/admin', '/api/auth', '/pay/card', '/payment/success'];
-  const isMidasbuyBuyFlow =
-    location.pathname === '/midasbuy/buy/pubgm' ||
-    (location.pathname.startsWith('/midasbuy/') && location.pathname.includes('/buy/'));
 
-  // Show chatbot: not on hidden prefixes, not on /midasbuy/*/buy/*, and either standalone mode OR not on home page
-  const showChatbot =
-    !hideChatbotPrefixes.some((prefix) => location.pathname.startsWith(prefix)) &&
-    !isMidasbuyBuyFlow &&
-    (isStandalone || location.pathname !== '/');
+  // Show chatbot everywhere except auth/admin/payment pages
+  const showChatbot = !hideChatbotPrefixes.some((prefix) => location.pathname.startsWith(prefix));
 
   return (
     <>
