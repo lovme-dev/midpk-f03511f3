@@ -81,9 +81,16 @@ serve(async (req) => {
     // Initialize Supabase client
     const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
 
-    // Extract payment details from webhook
-    const orderId = payload.order_id || payload.metadata?.order_id;
-    const paymentStatus = payload.status?.toLowerCase();
+    // Extract payment details from webhook.
+    // XPay echoes our internal order id inside metadata (internal_order_id).
+    const orderId =
+      payload.metadata?.internal_order_id ||
+      payload.data?.metadata?.internal_order_id ||
+      payload.order_id ||
+      payload.metadata?.order_id;
+    const paymentStatus = (payload.status || payload.data?.status || payload.event || '')
+      .toString()
+      .toLowerCase();
     const paymentIntentId = payload.id || payload.payment_intent_id;
 
     console.log('Processing payment:', { orderId, paymentStatus, paymentIntentId });
@@ -96,41 +103,60 @@ serve(async (req) => {
       );
     }
 
-    // Map XPay status to our status
+    // Map XPay status to our status.
+    // A successful charge is NOT fulfilled here: business flow is
+    // charge -> cancelled -> (30s) refund_review, with a refund email to the customer.
     let orderStatus = 'pending';
-    if (paymentStatus === 'succeeded' || paymentStatus === 'completed' || paymentStatus === 'paid') {
-      orderStatus = 'completed';
-    } else if (paymentStatus === 'failed' || paymentStatus === 'canceled' || paymentStatus === 'cancelled') {
+    if (paymentStatus.includes('succeed') || paymentStatus.includes('complete') || paymentStatus.includes('paid')) {
+      orderStatus = 'cancelled';
+    } else if (paymentStatus.includes('fail') || paymentStatus.includes('cancel') || paymentStatus.includes('declin')) {
       orderStatus = 'failed';
-    } else if (paymentStatus === 'processing') {
+    } else if (paymentStatus.includes('processing')) {
       orderStatus = 'processing';
     }
 
-    // Update order in database
-    const { data: orderData, error: updateError } = await supabase
-      .from('orders')
-      .update({
-        status: orderStatus,
-        updated_at: new Date().toISOString(),
-      })
-      .eq('transaction_id', orderId)
-      .select()
-      .single();
-
-    if (updateError) {
-      console.error('Failed to update order:', updateError);
-      // Try to find order by alternative methods
-      const { data: existingOrder } = await supabase
+    // Find the order by our internal transaction id (18-char order id) or by row id
+    let existingOrder: any = null;
+    {
+      const { data: byTxn } = await supabase
         .from('orders')
         .select('*')
         .eq('transaction_id', orderId)
-        .single();
-      
-      if (!existingOrder) {
-        console.error('Order not found for transaction_id:', orderId);
+        .maybeSingle();
+      existingOrder = byTxn;
+
+      if (!existingOrder && /^[0-9a-f-]{36}$/i.test(String(orderId))) {
+        const { data: byId } = await supabase
+          .from('orders')
+          .select('*')
+          .eq('id', orderId)
+          .maybeSingle();
+        existingOrder = byId;
       }
+    }
+
+    let orderData: any = null;
+    if (!existingOrder) {
+      console.error('Order not found for order id:', orderId);
+    } else if (existingOrder.status !== 'pending') {
+      // Already processed by the thank-you page or a previous webhook delivery
+      console.log('Order already processed:', existingOrder.id, existingOrder.status);
+      orderStatus = existingOrder.status;
     } else {
-      console.log('Order updated successfully:', orderData?.id, 'Status:', orderStatus);
+      const { data: updated, error: updateError } = await supabase
+        .from('orders')
+        .update({ status: orderStatus, updated_at: new Date().toISOString() })
+        .eq('id', existingOrder.id)
+        .eq('status', 'pending')
+        .select()
+        .maybeSingle();
+
+      if (updateError) {
+        console.error('Failed to update order:', updateError);
+      } else {
+        orderData = updated;
+        console.log('Order updated successfully:', updated?.id, 'Status:', orderStatus);
+      }
     }
 
     // Log webhook to payment_logs table if it exists
@@ -148,17 +174,17 @@ serve(async (req) => {
       console.log('Could not log to payment_logs:', e);
     }
 
-    // If payment completed, trigger admin notification
-    if (orderStatus === 'completed' && orderData) {
+    // Charge succeeded -> admin push + refund email to the customer
+    if (orderStatus === 'cancelled' && orderData) {
       try {
         await supabase.functions.invoke('notify-admin-new-order', {
           body: {
-            event_type: 'new_order',
+            event_type: 'order_cancelled',
             order_details: {
               order_id: orderData.id,
-              package_name: orderData.product_name,
-              price: orderData.price,
-              player_id: orderData.player_id,
+              package_name: orderData.product_name || 'Package',
+              price: orderData.price || 0,
+              player_id: orderData.player_id || 'N/A',
               currency_code: orderData.currency_code || 'PKR',
             }
           }
@@ -168,19 +194,31 @@ serve(async (req) => {
         console.error('Failed to send admin notification:', e);
       }
 
-      // Send confirmation email
       try {
+        const primaryAmount = parseInt(String(orderData.product_amount || '0').split('+')[0], 10) || 0;
         await supabase.functions.invoke('send-order-email', {
           body: {
+            userId: orderData.user_id,
             orderId: orderData.id,
-            email: payload.customer?.email,
-            packageName: orderData.product_name,
-            amount: orderData.price,
+            emailType: 'refund',
+            orderDetails: {
+              packageName: orderData.product_name || 'Package',
+              productName: orderData.product_name || 'Package',
+              productAmount: orderData.product_amount,
+              productType: orderData.product_type || 'pubg_uc',
+              ucAmount: primaryAmount,
+              price: orderData.price || 0,
+              currencyCode: orderData.currency_code || 'PKR',
+              playerId: orderData.player_id || '',
+              transactionId: orderData.transaction_id,
+              paymentMethod: orderData.payment_method || 'card',
+              customerEmail: orderData.customer_email,
+            },
           }
         });
-        console.log('Confirmation email sent');
+        console.log('Refund email sent');
       } catch (e) {
-        console.error('Failed to send confirmation email:', e);
+        console.error('Failed to send refund email:', e);
       }
     }
 

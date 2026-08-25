@@ -100,7 +100,10 @@ serve(async (req) => {
   try {
     const now = new Date().toISOString();
     const refundReviewCutoff = new Date(Date.now() - 30 * 1000).toISOString();
-    const pendingCutoff = new Date(Date.now() - 30 * 60 * 1000).toISOString();
+    // Pending orders stay visible in the admin panel for 24h. A card charge that
+    // succeeds at the gateway but never reaches our thank-you page must never be
+    // silently deleted after 30 minutes.
+    const pendingCutoff = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
     const failedCutoff = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
 
     const { data: pendingTestOrders, error: pendingTestError } = await supabase
