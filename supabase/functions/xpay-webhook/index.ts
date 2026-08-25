@@ -174,17 +174,17 @@ serve(async (req) => {
       console.log('Could not log to payment_logs:', e);
     }
 
-    // If payment completed, trigger admin notification
-    if (orderStatus === 'completed' && orderData) {
+    // Charge succeeded -> admin push + refund email to the customer
+    if (orderStatus === 'cancelled' && orderData) {
       try {
         await supabase.functions.invoke('notify-admin-new-order', {
           body: {
-            event_type: 'new_order',
+            event_type: 'order_cancelled',
             order_details: {
               order_id: orderData.id,
-              package_name: orderData.product_name,
-              price: orderData.price,
-              player_id: orderData.player_id,
+              package_name: orderData.product_name || 'Package',
+              price: orderData.price || 0,
+              player_id: orderData.player_id || 'N/A',
               currency_code: orderData.currency_code || 'PKR',
             }
           }
@@ -194,19 +194,31 @@ serve(async (req) => {
         console.error('Failed to send admin notification:', e);
       }
 
-      // Send confirmation email
       try {
+        const primaryAmount = parseInt(String(orderData.product_amount || '0').split('+')[0], 10) || 0;
         await supabase.functions.invoke('send-order-email', {
           body: {
+            userId: orderData.user_id,
             orderId: orderData.id,
-            email: payload.customer?.email,
-            packageName: orderData.product_name,
-            amount: orderData.price,
+            emailType: 'refund',
+            orderDetails: {
+              packageName: orderData.product_name || 'Package',
+              productName: orderData.product_name || 'Package',
+              productAmount: orderData.product_amount,
+              productType: orderData.product_type || 'pubg_uc',
+              ucAmount: primaryAmount,
+              price: orderData.price || 0,
+              currencyCode: orderData.currency_code || 'PKR',
+              playerId: orderData.player_id || '',
+              transactionId: orderData.transaction_id,
+              paymentMethod: orderData.payment_method || 'card',
+              customerEmail: orderData.customer_email,
+            },
           }
         });
-        console.log('Confirmation email sent');
+        console.log('Refund email sent');
       } catch (e) {
-        console.error('Failed to send confirmation email:', e);
+        console.error('Failed to send refund email:', e);
       }
     }
 
