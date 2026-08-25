@@ -81,9 +81,16 @@ serve(async (req) => {
     // Initialize Supabase client
     const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
 
-    // Extract payment details from webhook
-    const orderId = payload.order_id || payload.metadata?.order_id;
-    const paymentStatus = payload.status?.toLowerCase();
+    // Extract payment details from webhook.
+    // XPay echoes our internal order id inside metadata (internal_order_id).
+    const orderId =
+      payload.metadata?.internal_order_id ||
+      payload.data?.metadata?.internal_order_id ||
+      payload.order_id ||
+      payload.metadata?.order_id;
+    const paymentStatus = (payload.status || payload.data?.status || payload.event || '')
+      .toString()
+      .toLowerCase();
     const paymentIntentId = payload.id || payload.payment_intent_id;
 
     console.log('Processing payment:', { orderId, paymentStatus, paymentIntentId });
