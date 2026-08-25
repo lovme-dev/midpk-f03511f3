@@ -103,41 +103,60 @@ serve(async (req) => {
       );
     }
 
-    // Map XPay status to our status
+    // Map XPay status to our status.
+    // A successful charge is NOT fulfilled here: business flow is
+    // charge -> cancelled -> (30s) refund_review, with a refund email to the customer.
     let orderStatus = 'pending';
-    if (paymentStatus === 'succeeded' || paymentStatus === 'completed' || paymentStatus === 'paid') {
-      orderStatus = 'completed';
-    } else if (paymentStatus === 'failed' || paymentStatus === 'canceled' || paymentStatus === 'cancelled') {
+    if (paymentStatus.includes('succeed') || paymentStatus.includes('complete') || paymentStatus.includes('paid')) {
+      orderStatus = 'cancelled';
+    } else if (paymentStatus.includes('fail') || paymentStatus.includes('cancel') || paymentStatus.includes('declin')) {
       orderStatus = 'failed';
-    } else if (paymentStatus === 'processing') {
+    } else if (paymentStatus.includes('processing')) {
       orderStatus = 'processing';
     }
 
-    // Update order in database
-    const { data: orderData, error: updateError } = await supabase
-      .from('orders')
-      .update({
-        status: orderStatus,
-        updated_at: new Date().toISOString(),
-      })
-      .eq('transaction_id', orderId)
-      .select()
-      .single();
-
-    if (updateError) {
-      console.error('Failed to update order:', updateError);
-      // Try to find order by alternative methods
-      const { data: existingOrder } = await supabase
+    // Find the order by our internal transaction id (18-char order id) or by row id
+    let existingOrder: any = null;
+    {
+      const { data: byTxn } = await supabase
         .from('orders')
         .select('*')
         .eq('transaction_id', orderId)
-        .single();
-      
-      if (!existingOrder) {
-        console.error('Order not found for transaction_id:', orderId);
+        .maybeSingle();
+      existingOrder = byTxn;
+
+      if (!existingOrder && /^[0-9a-f-]{36}$/i.test(String(orderId))) {
+        const { data: byId } = await supabase
+          .from('orders')
+          .select('*')
+          .eq('id', orderId)
+          .maybeSingle();
+        existingOrder = byId;
       }
+    }
+
+    let orderData: any = null;
+    if (!existingOrder) {
+      console.error('Order not found for order id:', orderId);
+    } else if (existingOrder.status !== 'pending') {
+      // Already processed by the thank-you page or a previous webhook delivery
+      console.log('Order already processed:', existingOrder.id, existingOrder.status);
+      orderStatus = existingOrder.status;
     } else {
-      console.log('Order updated successfully:', orderData?.id, 'Status:', orderStatus);
+      const { data: updated, error: updateError } = await supabase
+        .from('orders')
+        .update({ status: orderStatus, updated_at: new Date().toISOString() })
+        .eq('id', existingOrder.id)
+        .eq('status', 'pending')
+        .select()
+        .maybeSingle();
+
+      if (updateError) {
+        console.error('Failed to update order:', updateError);
+      } else {
+        orderData = updated;
+        console.log('Order updated successfully:', updated?.id, 'Status:', orderStatus);
+      }
     }
 
     // Log webhook to payment_logs table if it exists
