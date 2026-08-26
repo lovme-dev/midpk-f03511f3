@@ -300,6 +300,22 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       if (customerEmail) {
         ttqIdentify({ email: customerEmail });
       }
+
+      // Persist a confirmed charge before any success UI/navigation runs.
+      // This removes the race where the customer closes the tab (or the SDK
+      // redirects) after the bank captures payment but before /thank-you loads.
+      const { data: statusData, error: statusError } = await supabase.functions.invoke('mark-order-cancelled', {
+        body: {
+          transactionId: orderId,
+          targetStatus: 'cancelled',
+          reason: 'xpay_confirmed',
+        },
+      });
+
+      if (statusError || !statusData?.success) {
+        console.error('[XPay] Confirmed payment status sync failed:', statusError || statusData);
+        throw new Error('Payment was captured but order confirmation is delayed. Please contact support with your order ID.');
+      }
       
       // Card saving has been disabled - cards are no longer stored
       // Users will always use new card flow
