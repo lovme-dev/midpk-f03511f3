@@ -48,7 +48,8 @@ export function useRedeemCodesCount(isSectionActive = false) {
   }, []);
 
   useEffect(() => {
-    fetchPendingCount();
+    if (isSectionActive) void markViewed();
+    else void fetchPendingCount();
 
     // Set up realtime subscription
     const channel = supabase

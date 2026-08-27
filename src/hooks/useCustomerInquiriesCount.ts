@@ -73,7 +73,8 @@ export function useCustomerInquiriesCount(isSectionActive = false) {
   }, []);
 
   useEffect(() => {
-    fetchUnreadCount();
+    if (isSectionActive) void markViewed();
+    else void fetchUnreadCount();
 
     // Set up realtime subscription
     const channel = supabase

@@ -250,7 +250,12 @@ serve(async (req) => {
 
     if (orderError) {
       console.error("Failed to create order:", orderError);
-      // Continue anyway - payment intent was created
+      // Never let the card flow continue without an order record. Otherwise a
+      // captured payment has nothing to reconcile into the admin panel.
+      return new Response(
+        JSON.stringify({ success: false, error: "Failed to initialize order record" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     } else {
       console.log("Order created:", orderData?.id);
     }
