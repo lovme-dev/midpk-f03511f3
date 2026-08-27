@@ -25,17 +25,31 @@ const playNotificationSound = () => {
   }
 };
 
-export function useCustomerInquiriesCount() {
+export function useCustomerInquiriesCount(isSectionActive = false) {
   const [unreadCount, setUnreadCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
   const fetchUnreadCount = useCallback(async () => {
     try {
-      const { count, error } = await supabase
+      const { data: userData } = await supabase.auth.getUser();
+      const userId = userData.user?.id;
+      let lastViewedAt: string | null = null;
+      if (userId) {
+        const { data: readState } = await supabase
+          .from('admin_section_reads')
+          .select('last_viewed_at')
+          .eq('user_id', userId)
+          .eq('section_key', 'customer_inquiries')
+          .maybeSingle();
+        lastViewedAt = readState?.last_viewed_at || null;
+      }
+      let query = supabase
         .from('customer_inquiries')
         .select('*', { count: 'exact', head: true })
         .eq('is_read', false);
+      if (lastViewedAt) query = query.gt('created_at', lastViewedAt);
+      const { count, error } = await query;
 
       if (error) throw error;
       setUnreadCount(count || 0);
@@ -44,6 +58,18 @@ export function useCustomerInquiriesCount() {
     } finally {
       setIsLoading(false);
     }
+  }, []);
+
+  const markViewed = useCallback(async () => {
+    const { data } = await supabase.auth.getUser();
+    const userId = data.user?.id;
+    if (!userId) return;
+    const { error } = await supabase.from('admin_section_reads').upsert({
+      user_id: userId,
+      section_key: 'customer_inquiries',
+      last_viewed_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,section_key' });
+    if (!error) setUnreadCount(0);
   }, []);
 
   useEffect(() => {
@@ -61,7 +87,8 @@ export function useCustomerInquiriesCount() {
         },
         (payload) => {
           // New inquiry received
-          setUnreadCount(prev => prev + 1);
+          if (isSectionActive) void markViewed();
+          else void fetchUnreadCount();
           playNotificationSound();
           
           const newInquiry = payload.new as { name?: string; subject?: string };
@@ -78,7 +105,7 @@ export function useCustomerInquiriesCount() {
           schema: 'public',
           table: 'customer_inquiries',
         },
-        () => { void fetchUnreadCount(); }
+        () => { void (isSectionActive ? markViewed() : fetchUnreadCount()); }
       )
       .on(
         'postgres_changes',
@@ -100,7 +127,11 @@ export function useCustomerInquiriesCount() {
       window.removeEventListener('focus', onFocus);
       supabase.removeChannel(channel);
     };
-  }, [fetchUnreadCount, toast]);
+  }, [fetchUnreadCount, isSectionActive, markViewed, toast]);
+
+  useEffect(() => {
+    if (isSectionActive) void markViewed();
+  }, [isSectionActive, markViewed]);
 
   return { unreadCount, isLoading, refetch: fetchUnreadCount };
 }
