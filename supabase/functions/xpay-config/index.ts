@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    // These are safe to expose to frontend (like Stripe publishable key)
+    // XPay's browser element currently requires this gateway configuration.
     const publishableKey = Deno.env.get('XPAY_PUBLIC_KEY');
     const accountId = Deno.env.get('XPAY_ACCOUNT_ID');
     const hmacSecret = Deno.env.get('XPAY_API_SIGNATURE_SECRET');
