@@ -59,6 +59,33 @@ export type Database = {
         }
         Relationships: []
       }
+      admin_section_reads: {
+        Row: {
+          created_at: string
+          id: string
+          last_viewed_at: string
+          section_key: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          last_viewed_at?: string
+          section_key: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          last_viewed_at?: string
+          section_key?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       analytics: {
         Row: {
           created_at: string | null
@@ -469,6 +496,8 @@ export type Database = {
           customer_name: string | null
           email_sent_at: string | null
           exchange_rate: number | null
+          gateway_order_id: string | null
+          gateway_payment_id: string | null
           id: string
           package_id: string | null
           payment_method: string | null
@@ -495,6 +524,8 @@ export type Database = {
           customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
+          gateway_order_id?: string | null
+          gateway_payment_id?: string | null
           id?: string
           package_id?: string | null
           payment_method?: string | null
@@ -521,6 +552,8 @@ export type Database = {
           customer_name?: string | null
           email_sent_at?: string | null
           exchange_rate?: number | null
+          gateway_order_id?: string | null
+          gateway_payment_id?: string | null
           id?: string
           package_id?: string | null
           payment_method?: string | null
