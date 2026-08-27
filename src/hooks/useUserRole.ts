@@ -15,13 +15,6 @@ export function useUserRole() {
     }
 
     try {
-      // Ensure default role assignment (admin for specific emails, else user)
-      try {
-        await supabase.rpc('assign_default_role', { p_user_id: user.id });
-      } catch (e) {
-        // Ignore errors from assign_default_role
-      }
-
       // Ask the DB if the user has admin role
       const { data, error } = await supabase.rpc('has_role', { _user_id: user.id, _role: 'admin' });
       if (error) {
