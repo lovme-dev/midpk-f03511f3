@@ -78,15 +78,7 @@ export function useCustomerInquiriesCount() {
           schema: 'public',
           table: 'customer_inquiries',
         },
-        (payload) => {
-          // If marked as read, decrement count
-          const oldData = payload.old as { is_read?: boolean };
-          const newData = payload.new as { is_read?: boolean };
-          
-          if (!oldData.is_read && newData.is_read) {
-            setUnreadCount(prev => Math.max(0, prev - 1));
-          }
-        }
+        () => { void fetchUnreadCount(); }
       )
       .on(
         'postgres_changes',
@@ -95,16 +87,17 @@ export function useCustomerInquiriesCount() {
           schema: 'public',
           table: 'customer_inquiries',
         },
-        (payload) => {
-          const deletedData = payload.old as { is_read?: boolean };
-          if (!deletedData.is_read) {
-            setUnreadCount(prev => Math.max(0, prev - 1));
-          }
-        }
+        () => { void fetchUnreadCount(); }
       )
       .subscribe();
 
+    const interval = window.setInterval(fetchUnreadCount, 15_000);
+    const onFocus = () => { void fetchUnreadCount(); };
+    window.addEventListener('focus', onFocus);
+
     return () => {
+      window.clearInterval(interval);
+      window.removeEventListener('focus', onFocus);
       supabase.removeChannel(channel);
     };
   }, [fetchUnreadCount, toast]);

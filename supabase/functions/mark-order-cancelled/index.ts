@@ -30,7 +30,7 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { transactionId, reason, targetStatus } = await req.json();
+    const { transactionId, paymentIntentId, reason, targetStatus } = await req.json();
     if (!transactionId) {
       return new Response(JSON.stringify({ success: false, error: "transactionId required" }), {
         status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -59,12 +59,14 @@ serve(async (req) => {
       });
     }
 
-    // Only the order's owner (or an admin) may cancel a registered user's order.
-    if (order.user_id) {
-      const auth = await getCallerAuth(req);
-      if (!auth.isAdmin && auth.userId !== order.user_id) {
-        return forbidden(corsHeaders, "Not allowed to cancel this order");
-      }
+    // The browser can confirm only the payment intent created for this exact
+    // order. This also supports guest orders, whose user_id is the zero UUID.
+    const auth = await getCallerAuth(req);
+    const gatewayProofMatches = Boolean(
+      paymentIntentId && order.gateway_payment_id && paymentIntentId === order.gateway_payment_id
+    );
+    if (!auth.isAdmin && auth.userId !== order.user_id && !gatewayProofMatches) {
+      return forbidden(corsHeaders, "Payment confirmation could not be verified");
     }
 
     const moveToRefundReviewAfterDelay = async (orderId: string) => {

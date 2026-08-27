@@ -258,6 +258,19 @@ serve(async (req) => {
     // XPay response is nested: { success, data: { pi_client_secret, encryptionKey, ... } }
     const intentData = xpayData.data || xpayData;
 
+    if (orderData?.id) {
+      const { error: gatewayIdError } = await supabase
+        .from("orders")
+        .update({
+          gateway_payment_id: intentData._id || null,
+          gateway_order_id: intentData.order_id || intentData.orderId || null,
+        })
+        .eq("id", orderData.id);
+      if (gatewayIdError) {
+        console.error("Failed to persist XPay identifiers:", gatewayIdError);
+      }
+    }
+
     return new Response(
       JSON.stringify({
         success: true,

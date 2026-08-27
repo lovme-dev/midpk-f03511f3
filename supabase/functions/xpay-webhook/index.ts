@@ -91,7 +91,8 @@ serve(async (req) => {
     const paymentStatus = (payload.status || payload.data?.status || payload.event || '')
       .toString()
       .toLowerCase();
-    const paymentIntentId = payload.id || payload.payment_intent_id;
+    const paymentIntentId = payload.id || payload.payment_intent_id || payload.data?.id || payload.data?.payment_intent_id;
+    const gatewayOrderId = payload.order_id || payload.data?.order_id || payload.orderId || payload.data?.orderId;
 
     console.log('Processing payment:', { orderId, paymentStatus, paymentIntentId });
 
@@ -145,7 +146,12 @@ serve(async (req) => {
     } else {
       const { data: updated, error: updateError } = await supabase
         .from('orders')
-        .update({ status: orderStatus, updated_at: new Date().toISOString() })
+        .update({
+          status: orderStatus,
+          gateway_payment_id: paymentIntentId || existingOrder.gateway_payment_id,
+          gateway_order_id: gatewayOrderId || existingOrder.gateway_order_id,
+          updated_at: new Date().toISOString(),
+        })
         .eq('id', existingOrder.id)
         .eq('status', 'pending')
         .select()

@@ -210,6 +210,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
     setDebugInfo(null);
 
     let paymentIntentId: string | null = null;
+    let paymentWasConfirmed = false;
     const orderId = generateOrderId(18);
 
     try {
@@ -285,6 +286,8 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
         throw new Error(confirmResult.message || 'Payment failed');
       }
 
+      paymentWasConfirmed = true;
+
       // Step 3: Payment successful!
       console.log('[XPay] Payment confirmed successfully!');
       
@@ -307,6 +310,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       const { data: statusData, error: statusError } = await supabase.functions.invoke('mark-order-cancelled', {
         body: {
           transactionId: orderId,
+          paymentIntentId,
           targetStatus: 'cancelled',
           reason: 'xpay_confirmed',
         },
@@ -314,7 +318,9 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
 
       if (statusError || !statusData?.success) {
         console.error('[XPay] Confirmed payment status sync failed:', statusError || statusData);
-        throw new Error('Payment was captured but order confirmation is delayed. Please contact support with your order ID.');
+        // Never route a captured charge through the failed-payment path.
+        // The persisted gateway ID lets the webhook/reconciliation process it.
+        throw new Error('Payment was captured and is awaiting order confirmation. Please keep your order ID.');
       }
       
       // Card saving has been disabled - cards are no longer stored
@@ -339,16 +345,19 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
       // Card actually failed (3DS decline, card decline, network error).
       // Mark the pending order as `failed` so admin panel doesn't show it as pending forever.
       // NO refund email + NO admin push here — the customer was never charged.
-      try {
-        await supabase.functions.invoke('mark-order-cancelled', {
-          body: {
-            transactionId: orderId,
-            targetStatus: 'failed',
-            reason: err?.message || 'card_confirm_failed',
-          },
-        });
-      } catch (cancelErr) {
-        console.error('[XPay] mark-order-failed invoke failed:', cancelErr);
+      if (!paymentWasConfirmed) {
+        try {
+          await supabase.functions.invoke('mark-order-cancelled', {
+            body: {
+              transactionId: orderId,
+              paymentIntentId,
+              targetStatus: 'failed',
+              reason: err?.message || 'card_confirm_failed',
+            },
+          });
+        } catch (cancelErr) {
+          console.error('[XPay] mark-order-failed invoke failed:', cancelErr);
+        }
       }
 
       const errorMessage = getFriendlyErrorMessage(err.message || '');

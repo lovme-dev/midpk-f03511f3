@@ -1,16 +1,30 @@
 import { useEffect, useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
-export function usePendingOrdersCount() {
+export function usePendingOrdersCount(isSectionActive = false) {
   const [pendingCount, setPendingCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchPendingCount = useCallback(async () => {
     try {
-      const { count, error } = await supabase
+      const { data: userData } = await supabase.auth.getUser();
+      const userId = userData.user?.id;
+      let lastViewedAt: string | null = null;
+      if (userId) {
+        const { data: readState } = await supabase
+          .from('admin_section_reads')
+          .select('last_viewed_at')
+          .eq('user_id', userId)
+          .eq('section_key', 'orders')
+          .maybeSingle();
+        lastViewedAt = readState?.last_viewed_at || null;
+      }
+      let query = supabase
         .from('orders')
         .select('*', { count: 'exact', head: true })
         .eq('status', 'pending');
+      if (lastViewedAt) query = query.gt('created_at', lastViewedAt);
+      const { count, error } = await query;
 
       if (error) throw error;
       setPendingCount(count || 0);
@@ -19,6 +33,18 @@ export function usePendingOrdersCount() {
     } finally {
       setIsLoading(false);
     }
+  }, []);
+
+  const markViewed = useCallback(async () => {
+    const { data } = await supabase.auth.getUser();
+    const userId = data.user?.id;
+    if (!userId) return;
+    const { error } = await supabase.from('admin_section_reads').upsert({
+      user_id: userId,
+      section_key: 'orders',
+      last_viewed_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,section_key' });
+    if (!error) setPendingCount(0);
   }, []);
 
   useEffect(() => {
@@ -34,12 +60,7 @@ export function usePendingOrdersCount() {
           schema: 'public',
           table: 'orders',
         },
-        (payload) => {
-          const newOrder = payload.new as { status?: string };
-          if (newOrder.status === 'pending') {
-            setPendingCount(prev => prev + 1);
-          }
-        }
+        () => { void (isSectionActive ? markViewed() : fetchPendingCount()); }
       )
       .on(
         'postgres_changes',
@@ -48,19 +69,7 @@ export function usePendingOrdersCount() {
           schema: 'public',
           table: 'orders',
         },
-        (payload) => {
-          const oldData = payload.old as { status?: string };
-          const newData = payload.new as { status?: string };
-          
-          // If status changed from pending to something else
-          if (oldData.status === 'pending' && newData.status !== 'pending') {
-            setPendingCount(prev => Math.max(0, prev - 1));
-          }
-          // If status changed to pending from something else
-          if (oldData.status !== 'pending' && newData.status === 'pending') {
-            setPendingCount(prev => prev + 1);
-          }
-        }
+        () => { void (isSectionActive ? markViewed() : fetchPendingCount()); }
       )
       .on(
         'postgres_changes',
@@ -69,19 +78,21 @@ export function usePendingOrdersCount() {
           schema: 'public',
           table: 'orders',
         },
-        (payload) => {
-          const deletedData = payload.old as { status?: string };
-          if (deletedData.status === 'pending') {
-            setPendingCount(prev => Math.max(0, prev - 1));
-          }
-        }
+        () => { void fetchPendingCount(); }
       )
       .subscribe();
 
+    const interval = window.setInterval(fetchPendingCount, 15_000);
+
     return () => {
+      window.clearInterval(interval);
       supabase.removeChannel(channel);
     };
-  }, [fetchPendingCount]);
+  }, [fetchPendingCount, isSectionActive, markViewed]);
+
+  useEffect(() => {
+    if (isSectionActive) void markViewed();
+  }, [isSectionActive, markViewed]);
 
   return { pendingCount, isLoading, refetch: fetchPendingCount };
 }
