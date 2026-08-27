@@ -501,6 +501,7 @@ export type Database = {
           id: string
           package_id: string | null
           payment_method: string | null
+          payment_return_token_hash: string | null
           payment_screenshot_url: string | null
           pkr_amount: number | null
           player_id: string | null
@@ -529,6 +530,7 @@ export type Database = {
           id?: string
           package_id?: string | null
           payment_method?: string | null
+          payment_return_token_hash?: string | null
           payment_screenshot_url?: string | null
           pkr_amount?: number | null
           player_id?: string | null
@@ -557,6 +559,7 @@ export type Database = {
           id?: string
           package_id?: string | null
           payment_method?: string | null
+          payment_return_token_hash?: string | null
           payment_screenshot_url?: string | null
           pkr_amount?: number | null
           player_id?: string | null
@@ -590,6 +593,7 @@ export type Database = {
           original_updated_at: string | null
           package_id: string | null
           payment_method: string | null
+          payment_return_token_hash: string | null
           payment_screenshot_url: string | null
           pkr_amount: number | null
           player_id: string | null
@@ -617,6 +621,7 @@ export type Database = {
           original_updated_at?: string | null
           package_id?: string | null
           payment_method?: string | null
+          payment_return_token_hash?: string | null
           payment_screenshot_url?: string | null
           pkr_amount?: number | null
           player_id?: string | null
@@ -644,6 +649,7 @@ export type Database = {
           original_updated_at?: string | null
           package_id?: string | null
           payment_method?: string | null
+          payment_return_token_hash?: string | null
           payment_screenshot_url?: string | null
           pkr_amount?: number | null
           player_id?: string | null
