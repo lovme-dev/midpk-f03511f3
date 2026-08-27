@@ -579,10 +579,18 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-xl md:text-2xl font-bold text-white mb-5 uppercase tracking-wide"
+              className="text-xl md:text-2xl font-bold text-white mb-2 uppercase tracking-wide"
             >
               ORDER RECORD
             </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
+              className="text-sm md:text-base font-medium text-[#8b9cb8] mb-5"
+            >
+              Track, manage and review your PUBG UC purchases
+            </motion.h2>
 
             {/* Tabs (single line + scrollable) */}
             <motion.div
