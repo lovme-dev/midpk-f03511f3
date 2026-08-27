@@ -26,11 +26,19 @@ const parsePrimaryAmount = (productAmount?: string | null): number => {
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const bytesToHex = (bytes: Uint8Array): string =>
+  Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
+
+const sha256 = async (value: string): Promise<string> => {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return bytesToHex(new Uint8Array(digest));
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { transactionId, paymentIntentId, reason, targetStatus } = await req.json();
+    const { transactionId, paymentIntentId, paymentReturnToken, reason, targetStatus } = await req.json();
     if (!transactionId) {
       return new Response(JSON.stringify({ success: false, error: "transactionId required" }), {
         status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -65,7 +73,12 @@ serve(async (req) => {
     const gatewayProofMatches = Boolean(
       paymentIntentId && order.gateway_payment_id && paymentIntentId === order.gateway_payment_id
     );
-    if (!auth.isAdmin && auth.userId !== order.user_id && !gatewayProofMatches) {
+    const returnProofMatches = Boolean(
+      paymentReturnToken &&
+      order.payment_return_token_hash &&
+      await sha256(String(paymentReturnToken)) === order.payment_return_token_hash
+    );
+    if (!auth.isAdmin && auth.userId !== order.user_id && !gatewayProofMatches && !returnProofMatches) {
       return forbidden(corsHeaders, "Payment confirmation could not be verified");
     }
 

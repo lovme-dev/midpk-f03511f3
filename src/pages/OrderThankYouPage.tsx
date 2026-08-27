@@ -155,6 +155,7 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
         searchParams.get("m_payment_id") ||
         searchParams.get("orderId") ||
         "";
+      const paymentReturnToken = searchParams.get("paymentReturnToken") || "";
 
       // Mark successful card payments as cancelled through the backend function.
       // This works for both logged-in and guest checkouts because the order row already stores customer_email.
@@ -164,6 +165,7 @@ export default function OrderThankYouPage({ onLogout }: OrderThankYouPageProps) 
           const { data, error } = await supabase.functions.invoke("mark-order-cancelled", {
             body: {
               transactionId: basketId,
+              paymentReturnToken,
               targetStatus: "cancelled",
               reason: "card_payment_success_refund_required",
             },
