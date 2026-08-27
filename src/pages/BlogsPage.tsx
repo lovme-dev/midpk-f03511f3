@@ -249,8 +249,9 @@ const BlogsPage = () => {
                     <Link 
                       to={`/blog/${blog.slug}`}
                       className="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm transition-colors"
+                      aria-label={`Read full article: ${blog.title}`}
                     >
-                      Read More →
+                      Read full article
                     </Link>
                   </div>
                 </article>

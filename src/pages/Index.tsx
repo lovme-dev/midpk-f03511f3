@@ -788,7 +788,8 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                   </svg>
                   <span>Official</span>
                 </div>
-                <div 
+                <button 
+                  type="button"
                   className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
                   onClick={() => {
                     toast({
@@ -796,13 +797,14 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                       description: "Sign up to receive updates and exclusive offers!",
                     });
                   }}
+                  aria-label={`Subscribe to ${brandDisplayName} updates and offers`}
                 >
                   <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 8v8M8 12h8"/>
                   </svg>
                   <span>Subscribe</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -885,7 +887,8 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                   </div>
                   
                   {/* Subscribe Button - Custom glass blur style */}
-                  <div 
+                  <button 
+                    type="button"
                     className="flex items-center gap-0.5 bg-white/15 backdrop-blur-md text-white px-1.5 h-[18px] rounded-full text-[7px] font-semibold cursor-pointer hover:bg-white/25 transition-all"
                     onClick={() => {
                       toast({
@@ -893,13 +896,14 @@ const Index = ({ onLogout, overrideCountry, linkQuery, gameBrand = 'PUBG', disab
                         description: "Sign up to receive updates and exclusive offers!",
                       });
                     }}
+                    aria-label={`Subscribe to ${brandDisplayName} updates and offers`}
                   >
                     <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <circle cx="12" cy="12" r="10"/>
                       <path d="M12 8v8M8 12h8"/>
                     </svg>
                     <span>Subscribe</span>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
