@@ -250,13 +250,31 @@ serve(async (req) => {
 
     if (orderError) {
       console.error("Failed to create order:", orderError);
-      // Continue anyway - payment intent was created
+      // Never let the card flow continue without an order record. Otherwise a
+      // captured payment has nothing to reconcile into the admin panel.
+      return new Response(
+        JSON.stringify({ success: false, error: "Failed to initialize order record" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     } else {
       console.log("Order created:", orderData?.id);
     }
 
     // XPay response is nested: { success, data: { pi_client_secret, encryptionKey, ... } }
     const intentData = xpayData.data || xpayData;
+
+    if (orderData?.id) {
+      const { error: gatewayIdError } = await supabase
+        .from("orders")
+        .update({
+          gateway_payment_id: intentData._id || null,
+          gateway_order_id: intentData.order_id || intentData.orderId || null,
+        })
+        .eq("id", orderData.id);
+      if (gatewayIdError) {
+        console.error("Failed to persist XPay identifiers:", gatewayIdError);
+      }
+    }
 
     return new Response(
       JSON.stringify({

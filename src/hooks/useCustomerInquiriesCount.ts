@@ -25,17 +25,31 @@ const playNotificationSound = () => {
   }
 };
 
-export function useCustomerInquiriesCount() {
+export function useCustomerInquiriesCount(isSectionActive = false) {
   const [unreadCount, setUnreadCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
   const fetchUnreadCount = useCallback(async () => {
     try {
-      const { count, error } = await supabase
+      const { data: userData } = await supabase.auth.getUser();
+      const userId = userData.user?.id;
+      let lastViewedAt: string | null = null;
+      if (userId) {
+        const { data: readState } = await supabase
+          .from('admin_section_reads')
+          .select('last_viewed_at')
+          .eq('user_id', userId)
+          .eq('section_key', 'customer_inquiries')
+          .maybeSingle();
+        lastViewedAt = readState?.last_viewed_at || null;
+      }
+      let query = supabase
         .from('customer_inquiries')
         .select('*', { count: 'exact', head: true })
         .eq('is_read', false);
+      if (lastViewedAt) query = query.gt('created_at', lastViewedAt);
+      const { count, error } = await query;
 
       if (error) throw error;
       setUnreadCount(count || 0);
@@ -46,8 +60,21 @@ export function useCustomerInquiriesCount() {
     }
   }, []);
 
+  const markViewed = useCallback(async () => {
+    const { data } = await supabase.auth.getUser();
+    const userId = data.user?.id;
+    if (!userId) return;
+    const { error } = await supabase.from('admin_section_reads').upsert({
+      user_id: userId,
+      section_key: 'customer_inquiries',
+      last_viewed_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,section_key' });
+    if (!error) setUnreadCount(0);
+  }, []);
+
   useEffect(() => {
-    fetchUnreadCount();
+    if (isSectionActive) void markViewed();
+    else void fetchUnreadCount();
 
     // Set up realtime subscription
     const channel = supabase
@@ -61,7 +88,8 @@ export function useCustomerInquiriesCount() {
         },
         (payload) => {
           // New inquiry received
-          setUnreadCount(prev => prev + 1);
+          if (isSectionActive) void markViewed();
+          else void fetchUnreadCount();
           playNotificationSound();
           
           const newInquiry = payload.new as { name?: string; subject?: string };
@@ -78,15 +106,7 @@ export function useCustomerInquiriesCount() {
           schema: 'public',
           table: 'customer_inquiries',
         },
-        (payload) => {
-          // If marked as read, decrement count
-          const oldData = payload.old as { is_read?: boolean };
-          const newData = payload.new as { is_read?: boolean };
-          
-          if (!oldData.is_read && newData.is_read) {
-            setUnreadCount(prev => Math.max(0, prev - 1));
-          }
-        }
+        () => { void (isSectionActive ? markViewed() : fetchUnreadCount()); }
       )
       .on(
         'postgres_changes',
@@ -95,19 +115,24 @@ export function useCustomerInquiriesCount() {
           schema: 'public',
           table: 'customer_inquiries',
         },
-        (payload) => {
-          const deletedData = payload.old as { is_read?: boolean };
-          if (!deletedData.is_read) {
-            setUnreadCount(prev => Math.max(0, prev - 1));
-          }
-        }
+        () => { void fetchUnreadCount(); }
       )
       .subscribe();
 
+    const interval = window.setInterval(fetchUnreadCount, 15_000);
+    const onFocus = () => { void fetchUnreadCount(); };
+    window.addEventListener('focus', onFocus);
+
     return () => {
+      window.clearInterval(interval);
+      window.removeEventListener('focus', onFocus);
       supabase.removeChannel(channel);
     };
-  }, [fetchUnreadCount, toast]);
+  }, [fetchUnreadCount, isSectionActive, markViewed, toast]);
+
+  useEffect(() => {
+    if (isSectionActive) void markViewed();
+  }, [isSectionActive, markViewed]);
 
   return { unreadCount, isLoading, refetch: fetchUnreadCount };
 }

@@ -56,9 +56,9 @@ const sidebarItems = [
 ];
 
 export function AdminSidebar({ activeTab, setActiveTab, isOpen, setIsOpen }: AdminSidebarProps) {
-  const { unreadCount } = useCustomerInquiriesCount();
-  const { pendingCount: redeemCodesCount } = useRedeemCodesCount();
-  const { pendingCount: ordersCount } = usePendingOrdersCount();
+  const { unreadCount } = useCustomerInquiriesCount(activeTab === 'customer-inquiries');
+  const { pendingCount: redeemCodesCount } = useRedeemCodesCount(activeTab === 'redeem-codes');
+  const { pendingCount: ordersCount } = usePendingOrdersCount(activeTab === 'orders');
 
   return (
     <>
