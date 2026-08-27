@@ -26,6 +26,14 @@ interface PaymentRequest {
   cancelUrl: string;
 }
 
+const bytesToHex = (bytes: Uint8Array): string =>
+  Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
+
+const sha256 = async (value: string): Promise<string> => {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return bytesToHex(new Uint8Array(digest));
+};
+
 serve(async (req) => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
@@ -151,6 +159,13 @@ serve(async (req) => {
 
     console.log(`Currency conversion: ${body.amount} ${currency} -> ${amountInPKR} PKR (rate: ${rate})`);
 
+    // A one-time return proof lets the success page safely finish guest orders
+    // when a 3DS redirect unloads the original SDK callback. Only its hash is stored.
+    const paymentReturnToken = bytesToHex(crypto.getRandomValues(new Uint8Array(32)));
+    const paymentReturnTokenHash = await sha256(paymentReturnToken);
+    const successUrl = new URL(body.successUrl);
+    successUrl.searchParams.set("paymentReturnToken", paymentReturnToken);
+
     // Create payment intent payload - XPay only accepts PKR
     const paymentPayload = {
       amount: amountInPKR,
@@ -169,7 +184,7 @@ serve(async (req) => {
         original_currency: currency,
         original_amount: body.amount,
       },
-      success_url: body.successUrl,
+      success_url: successUrl.toString(),
     };
 
     // Create HMAC signature
@@ -243,6 +258,7 @@ serve(async (req) => {
         customer_email: body.customerEmail,
         customer_name: body.customerName || null,
         username: body.customerName || null,
+        payment_return_token_hash: paymentReturnTokenHash,
 
       })
       .select()
