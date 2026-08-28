@@ -26,6 +26,8 @@ interface OrderCenterPageProps {
   onLogout: () => void;
 }
 
+import { isShopProductType, resolveShopOrderDisplay } from "@/data/shopProducts";
+
 interface OrderItem {
   id: string;
   gameName: string;
@@ -41,6 +43,8 @@ interface OrderItem {
   productType?: string | null;
   paymentMethod?: string;
   username?: string;
+  productImage?: string;
+  isShopPack?: boolean;
 }
 
 // Get game logo based on product type
@@ -269,6 +273,17 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         bonusAmount = extractBonusFromProductName(order.product_name);
       }
       
+      // Shop packs (Elite Pass / Prime / Growthgift) are independent products — never UC
+      const shopInfo = isShopProductType(order.product_type)
+        ? resolveShopOrderDisplay(order)
+        : null;
+      if (shopInfo) {
+        gameName = 'PUBG MOBILE';
+        currencyLabel = shopInfo.title;
+        ucAmount = 0;
+        bonusAmount = 0;
+      }
+
       // Parse player_id properly (handles JSON, parentheses format, and plain strings)
       const playerData = parsePlayerId(order.player_id);
       
@@ -287,6 +302,8 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         productType: order.product_type,
         paymentMethod: order.payment_method || 'redeem',
         username: playerData.name,
+        productImage: shopInfo?.image,
+        isShopPack: !!shopInfo,
       };
     });
     
@@ -506,6 +523,16 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         bonusAmount = extractBonusFromProductName(orderData.product_name);
       }
       
+      const shopInfo = isShopProductType(orderData.product_type)
+        ? resolveShopOrderDisplay(orderData)
+        : null;
+      if (shopInfo) {
+        gameName = 'PUBG MOBILE';
+        currencyLabel = shopInfo.title;
+        ucAmount = 0;
+        bonusAmount = 0;
+      }
+
       const playerData = parsePlayerId(orderData.player_id);
       
       const processedOrder: OrderItem = {
@@ -523,6 +550,8 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
         productType: orderData.product_type,
         paymentMethod: orderData.payment_method || 'redeem',
         username: playerData.name,
+        productImage: shopInfo?.image,
+        isShopPack: !!shopInfo,
       };
       
       setSearchResult(processedOrder);
@@ -763,7 +792,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg overflow-hidden bg-[#1a2a3f]">
                           <img
-                            src={getGameLogo(searchResult.productType, searchResult.gameName)}
+                            src={searchResult.productImage || getGameLogo(searchResult.productType, searchResult.gameName)}
                             alt={searchResult.gameName}
                             className="w-full h-full object-cover"
                             onError={(e) => {
@@ -873,7 +902,7 @@ export default function OrderCenterPage({ onLogout }: OrderCenterPageProps) {
                           {/* Game Logo - Smaller square icon like in banner */}
                           <div className="flex-shrink-0 w-8 h-8 rounded-lg overflow-hidden bg-[#1a2a3f]">
                             <img
-                              src={getGameLogo(order.productType, order.gameName)}
+                              src={order.productImage || getGameLogo(order.productType, order.gameName)}
                               alt={order.gameName}
                               className="w-full h-full object-cover"
                               onError={(e) => {

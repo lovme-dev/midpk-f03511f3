@@ -45,6 +45,17 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
+import { isShopProductType, resolveShopOrderDisplay } from "@/data/shopProducts";
+
+// Shop packs (Elite Pass / Prime / Growthgift) are independent products, never UC
+const getOrderAmountLabel = (order: any): string => {
+  if (isShopProductType(order.product_type)) {
+    return `${resolveShopOrderDisplay(order).title} x1`;
+  }
+  const amount = order.uc_packages?.uc_amount || order.product_amount || 'N/A';
+  return `${amount} ${order.product_type || 'UC'}`;
+};
+
 interface Order {
   id: string;
   user_id: string;
@@ -1439,7 +1450,7 @@ export function OrdersManagement() {
                       <div className="rounded-md bg-muted/30 p-2 min-w-0">
                         <p className="text-muted-foreground">Amount</p>
                         <p className="font-semibold text-foreground truncate">{formatCurrency(order.price, order.currency_code)}</p>
-                        <p className="text-muted-foreground truncate">{amount} {order.product_type || 'UC'}</p>
+                        <p className="text-muted-foreground truncate">{getOrderAmountLabel(order)}</p>
                       </div>
                       <div className="rounded-md bg-muted/30 p-2 min-w-0">
                         <p className="text-muted-foreground">Package</p>
@@ -1614,7 +1625,7 @@ export function OrdersManagement() {
                           <p className="font-medium text-xs text-foreground truncate max-w-[80px] lg:max-w-[120px]" title={order.uc_packages?.name || order.product_name || 'N/A'}>{order.uc_packages?.name || order.product_name || 'N/A'}</p>
                           <p className="text-xs text-muted-foreground flex items-center gap-1">
                             <Package className="h-3 w-3" />
-                            {order.uc_packages?.uc_amount || order.product_amount || 'N/A'} {order.product_type || 'UC'}
+                            {getOrderAmountLabel(order)}
                           </p>
                         </div>
                       </TableCell>
