@@ -9,11 +9,8 @@ import PromotionCarouselBanner from "@/components/PromotionCarouselBanner";
 import MidasCheckoutModal from "@/components/checkout/MidasCheckoutModal";
 import { UCPackage } from "@/data/ucPackages";
 
-import {
-  shopProducts,
-  getShopProductLabel,
-  type ShopProduct,
-} from "@/data/shopProducts";
+import { getShopProductLabel, type ShopProduct } from "@/data/shopProducts";
+import { useShopProducts } from "@/hooks/useShopProducts";
 
 // Categories for filtering
 const categories = [
@@ -33,6 +30,7 @@ interface ShopProductsContentProps {
 const ShopProductsContent = ({ onTabChange }: ShopProductsContentProps) => {
   const { isMobile } = useResponsive();
   const { toast } = useToast();
+  const { products: shopProducts } = useShopProducts();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
