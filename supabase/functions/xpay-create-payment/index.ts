@@ -20,6 +20,7 @@ interface PaymentRequest {
   productName: string;
   productType: string;
   productAmount?: string;       // Base+bonus amount format (e.g., "10+5")
+  productCode?: string;         // Shop pack code (Elite Pass / Prime etc.)
   playerId?: string;
   packageId?: string;
   successUrl: string;
@@ -253,6 +254,7 @@ serve(async (req) => {
         product_name: body.productName,
         product_type: body.productType,
         product_amount: body.productAmount,  // Base+bonus format (e.g., "10+5")
+        product_code: body.productCode ?? null,
         player_id: body.playerId,
         package_id: body.packageId,
         customer_email: body.customerEmail,

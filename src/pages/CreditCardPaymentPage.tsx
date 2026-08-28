@@ -39,6 +39,7 @@ interface OrderInfo {
   productName: string;
   productType?: string; // Product type for game identification (roblox_robux, freefire_diamonds, etc.)
   productAmount?: string; // Base+bonus amount format (e.g., "10+5")
+  productCode?: string; // Shop pack code (Elite Pass / Prime etc.)
   playerId: string;
   email: string;
   customerName?: string;
@@ -615,6 +616,7 @@ const CreditCardPaymentPage: React.FC = () => {
                         productName={orderInfo.productName}
                         productType={orderInfo.productType}
                         productAmount={orderInfo.productAmount}
+                        productCode={orderInfo.productCode}
                         playerId={orderInfo.playerId}
                         packageId={orderInfo.packageId}
                         saveCard={saveCard}

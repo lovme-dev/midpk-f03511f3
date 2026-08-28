@@ -25,6 +25,7 @@ interface XPayCardFormProps {
   productName?: string;
   productType?: string;         // Product type for game identification (roblox_robux, freefire_diamonds, etc.)
   productAmount?: string;       // Base+bonus amount format (e.g., "10+5")
+  productCode?: string;         // Shop pack code (Elite Pass / Prime etc.)
   playerId?: string;
   packageId?: string;
   onSuccess: (details: any) => void;
@@ -113,6 +114,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
   productName = "UC Package",
   productType = "uc_package",
   productAmount,
+  productCode,
   playerId,
   packageId,
   onSuccess,
@@ -239,6 +241,7 @@ const XPayCardFormInner = forwardRef<XPayCardFormRef, XPayCardFormPropsExtended>
           productName,
           productType,
           productAmount,
+          productCode,
           playerId,
           packageId,
           successUrl: `${window.location.origin}/thank-you?orderId=${orderId}`,
