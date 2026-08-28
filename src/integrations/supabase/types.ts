@@ -1148,6 +1148,60 @@ export type Database = {
         }
         Relationships: []
       }
+      shop_products: {
+        Row: {
+          badge: string | null
+          badge_color: string | null
+          category: string
+          created_at: string
+          discount: string | null
+          id: string
+          image_url: string | null
+          is_active: boolean
+          name: string
+          original_price: number | null
+          price: number
+          price_prefix: string | null
+          short_title: string
+          sort_order: number
+          updated_at: string
+        }
+        Insert: {
+          badge?: string | null
+          badge_color?: string | null
+          category?: string
+          created_at?: string
+          discount?: string | null
+          id: string
+          image_url?: string | null
+          is_active?: boolean
+          name: string
+          original_price?: number | null
+          price?: number
+          price_prefix?: string | null
+          short_title: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Update: {
+          badge?: string | null
+          badge_color?: string | null
+          category?: string
+          created_at?: string
+          discount?: string | null
+          id?: string
+          image_url?: string | null
+          is_active?: boolean
+          name?: string
+          original_price?: number | null
+          price?: number
+          price_prefix?: string | null
+          short_title?: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       site_assets: {
         Row: {
           asset_key: string | null
