@@ -65,6 +65,7 @@ interface MidasCheckoutModalProps {
   shopProductTitle?: string;   // e.g., "A18 Elite Pass (LV1-50)"
   shopProductImage?: string;   // small icon shown in summary
   shopProductLabel?: string;   // singular unit label, e.g., "Royal Pass", "Prime", "Pack"
+  shopProductCode?: string;    // stable shop product id, stored as product_code
 }
 
 const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({ 
@@ -83,7 +84,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
   isShopProduct = false,
   shopProductTitle = '',
   shopProductImage = '',
-  shopProductLabel = 'Pack'
+  shopProductLabel = 'Pack',
+  shopProductCode = ''
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -126,6 +128,11 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
             : (isHonorOfKings 
               ? 'honorofkings_tokens' 
               : (isBGMI ? 'bgmi_uc' : 'pubg_uc'))))));
+  // Shop packs are single fixed items — never "base+bonus" UC amounts
+  const getProductAmount = (pkg: UCPackage) =>
+    isShopProduct ? '1' : `${pkg.baseAmount}+${pkg.bonusAmount}`;
+  const productCodeValue = isShopProduct && shopProductCode ? shopProductCode : undefined;
+
   const getItemName = (pkg: UCPackage) => {
     if (isShopProduct && shopProductTitle) {
       return shopProductTitle;
@@ -836,7 +843,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
           user_id: userId || 'guest',
           product_type: productType,
           product_name: itemName,
-          product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+          product_amount: getProductAmount(selectedPackage),
+          product_code: productCodeValue,
         }
       });
       
@@ -912,7 +920,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
           user_id: userId || 'guest',
           product_type: productType,
           product_name: itemName,
-          product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+          product_amount: getProductAmount(selectedPackage),
+          product_code: productCodeValue,
           return_base_url: window.location.origin,
           currency: 'USD',
           currency_amount: usdPrice,
@@ -1039,14 +1048,16 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
       const displayOriginalPrice = convertPrice(selectedPackage.originalPrice);
       
       // Build product name with base+bonus format for proper display
-      const productAmount = `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`;
+      const productAmount = getProductAmount(selectedPackage);
       
       const orderInfo = {
         amount: displayAmount.toFixed(2),
         pkrAmount: pkrAmount, // Original PKR price for payment processing
         currency: currencyCode,
         displayCurrency: currencyCode,
-        productName: isFreeFire 
+        productName: isShopProduct
+          ? getItemName(selectedPackage)
+          : isFreeFire 
           ? `${productAmount} Diamonds` 
           : (isRoblox 
             ? `${productAmount} Robux` 
@@ -1054,8 +1065,9 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
               ? `${productAmount} VP` 
               : `${productAmount} ${isWow ? 'WOW' : 'UC'}`)),
         productType: productType, // Product type for game identification
-        productImage: isWow ? wowIcon.url : undefined,
-        brandLabel: isWow ? 'WOW' : 'UC',
+        productImage: isShopProduct ? (shopProductImage || undefined) : (isWow ? wowIcon.url : undefined),
+        brandLabel: isShopProduct ? shopProductLabel : (isWow ? 'WOW' : 'UC'),
+        productCode: productCodeValue,
         productAmount: productAmount, // Base+bonus amount for database storage
         playerId: userInfo,
         email: userEmail || guestEmail || quickCheckoutEmail || '',
@@ -1134,7 +1146,8 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
         username: userInfo.name,
         product_type: productType,
         product_name: itemName,
-        product_amount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+        product_amount: getProductAmount(selectedPackage),
+        product_code: productCodeValue ?? null,
         customer_email: buyerEmail,
         customer_name: buyerName,
       } as any).select('id').single();
@@ -1169,14 +1182,15 @@ const MidasCheckoutModal: React.FC<MidasCheckoutModalProps> = ({
             emailType: 'refund',
             orderDetails: {
               packageName: itemName,
-              ucAmount: selectedPackage.baseAmount + selectedPackage.bonusAmount,
+              ucAmount: isShopProduct ? undefined : selectedPackage.baseAmount + selectedPackage.bonusAmount,
               price: selectedPackage.price,
               paymentMethod: 'test_payment',
               playerId: userInfo.id,
               transactionId: `TEST-${friendlyId}`,
               productType,
               productName: itemName,
-              productAmount: `${selectedPackage.baseAmount}+${selectedPackage.bonusAmount}`,
+              productAmount: getProductAmount(selectedPackage),
+              productCode: productCodeValue,
               currencyCode,
             },
           },
