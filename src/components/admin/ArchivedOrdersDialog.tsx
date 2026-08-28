@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { isShopProductType, resolveShopOrderDisplay } from "@/data/shopProducts";
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -335,7 +336,9 @@ export function ArchivedOrdersDialog({ archivedCount = 0 }: ArchivedOrdersDialog
                         </div>
                         <div className="text-xs text-muted-foreground flex items-center gap-1">
                           <Package className="h-3 w-3" />
-                          {order.uc_packages?.uc_amount || order.product_amount || 'N/A'} {order.product_type || 'UC'}
+                          {isShopProductType(order.product_type)
+                            ? `${resolveShopOrderDisplay(order).title} x1`
+                            : `${order.uc_packages?.uc_amount || order.product_amount || 'N/A'} ${order.product_type || 'UC'}`}
                         </div>
                       </div>
                     </TableCell>
