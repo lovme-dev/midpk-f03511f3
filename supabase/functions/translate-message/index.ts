@@ -31,7 +31,7 @@ serve(async (req) => {
 
     console.log(`Translating message to ${targetLanguage}:`, message.substring(0, 100));
 
-    const GEMINI_MODEL = Deno.env.get("GEMINI_MODEL") || "gemini-flash-latest";
+    const GEMINI_MODEL = Deno.env.get("GEMINI_MODEL") || "gemini-3.6-flash";
 
     const systemPrompt = `You are a professional translator. Translate the given text to ${targetLanguage} (Roman script, not native script). 
 Only output the translated text, nothing else. 

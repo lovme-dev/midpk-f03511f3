@@ -160,7 +160,9 @@ Remember: You're Mira - helpful, friendly, and always here to help gamers level 
       throw new Error('GEMINI_API_KEY not configured');
     }
 
-    const GEMINI_MODEL = Deno.env.get('GEMINI_MODEL') || 'gemini-flash-latest';
+    const primaryModel = Deno.env.get('GEMINI_MODEL') || 'gemini-3.6-flash';
+    const modelCandidates = [primaryModel, 'gemini-3.1-flash-lite', 'gemini-flash-latest']
+      .filter((m, i, arr) => arr.indexOf(m) === i);
 
     // Convert chat messages to Gemini "contents" format
     const contents = messages.map((msg: any) => {
@@ -181,26 +183,37 @@ Remember: You're Mira - helpful, friendly, and always here to help gamers level 
       };
     });
 
-    const aiResponse = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
-      {
-        method: 'POST',
-        headers: {
-          'X-goog-api-key': GEMINI_API_KEY,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          systemInstruction: { parts: [{ text: systemPrompt }] },
-          contents,
-          generationConfig: {
-            maxOutputTokens: 300,
-            temperature: 0.7,
-          },
-        }),
-      }
-    );
+    const requestBody = JSON.stringify({
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+      contents,
+      generationConfig: {
+        maxOutputTokens: 1200,
+        temperature: 0.7,
+      },
+    });
 
-    if (!aiResponse.ok) {
+    let aiResponse: Response | null = null;
+    for (const model of modelCandidates) {
+      aiResponse = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: 'POST',
+          headers: {
+            'X-goog-api-key': GEMINI_API_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: requestBody,
+        }
+      );
+
+      if (aiResponse.ok) break;
+      // 503 = model overloaded, 404 = model retired -> try the next candidate
+      if (aiResponse.status !== 503 && aiResponse.status !== 404) break;
+      console.warn(`Gemini model ${model} unavailable (${aiResponse.status}), trying next`);
+    }
+
+    if (!aiResponse || !aiResponse.ok) {
+      if (!aiResponse) throw new Error('Gemini API request failed');
       const errorText = await aiResponse.text();
       console.error('Gemini API error:', aiResponse.status, errorText);
 
