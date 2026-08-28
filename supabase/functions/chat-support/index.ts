@@ -212,7 +212,8 @@ Remember: You're Mira - helpful, friendly, and always here to help gamers level 
       console.warn(`Gemini model ${model} unavailable (${aiResponse.status}), trying next`);
     }
 
-    if (!aiResponse.ok) {
+    if (!aiResponse || !aiResponse.ok) {
+      if (!aiResponse) throw new Error('Gemini API request failed');
       const errorText = await aiResponse.text();
       console.error('Gemini API error:', aiResponse.status, errorText);
 
