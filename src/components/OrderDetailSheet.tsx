@@ -23,6 +23,8 @@ interface OrderItem {
   productType?: string | null;
   paymentMethod?: string;
   username?: string;
+  productImage?: string;
+  isShopPack?: boolean;
 }
 
 interface OrderDetailSheetProps {
@@ -216,17 +218,36 @@ export default function OrderDetailSheet({ order, open, onOpenChange }: OrderDet
             <div className="border-b border-[#1a2a3f] py-1 mt-2">
               <DetailRow 
                 label="Product :" 
-                value={order.ucAmount > 0 ? `${order.productLabel} ${order.ucAmount}` : order.productLabel}
-              />
-              <DetailRow 
-                label="Rewards :" 
                 value={
-                  <span className="inline-flex items-center gap-1">
-                    <span className="text-white">x{getVipCoinCount({ ucAmount: order.ucAmount })}</span>
-                    <VIPCoinIcon className="w-4 h-4" />
-                  </span>
+                  order.isShopPack ? (
+                    <span className="inline-flex items-center gap-2">
+                      {order.productImage && (
+                        <img
+                          src={order.productImage}
+                          alt={order.productLabel}
+                          className="w-6 h-6 rounded object-cover"
+                        />
+                      )}
+                      <span className="text-white">{order.productLabel} x1</span>
+                    </span>
+                  ) : order.ucAmount > 0 ? (
+                    `${order.productLabel} ${order.ucAmount}`
+                  ) : (
+                    order.productLabel
+                  )
                 }
               />
+              {!order.isShopPack && (
+                <DetailRow 
+                  label="Rewards :" 
+                  value={
+                    <span className="inline-flex items-center gap-1">
+                      <span className="text-white">x{getVipCoinCount({ ucAmount: order.ucAmount })}</span>
+                      <VIPCoinIcon className="w-4 h-4" />
+                    </span>
+                  }
+                />
+              )}
 
               {/* Account row with format like image: "52210077772 (beverserc)\nGame Name" */}
               <div className="flex py-1.5">
