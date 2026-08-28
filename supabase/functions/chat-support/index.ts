@@ -154,53 +154,56 @@ RESPONSE ENDINGS:
 
 Remember: You're Mira - helpful, friendly, and always here to help gamers level up! 🎮`;
 
-    // Call Lovable AI
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
-    if (!LOVABLE_API_KEY) {
-      throw new Error('LOVABLE_API_KEY not configured');
+    // Call Google Gemini API (AI Studio key)
+    const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
+    if (!GEMINI_API_KEY) {
+      throw new Error('GEMINI_API_KEY not configured');
     }
 
-    // Format messages for vision support if needed
-    const formattedMessages = messages.map((msg: any) => {
+    const GEMINI_MODEL = Deno.env.get('GEMINI_MODEL') || 'gemini-flash-latest';
+
+    // Convert chat messages to Gemini "contents" format
+    const contents = messages.map((msg: any) => {
+      const parts: any[] = [];
+      if (msg.content) parts.push({ text: String(msg.content) });
+
       if (msg.image && includeVision) {
-        // Vision format for Gemini
-        return {
-          role: msg.role,
-          content: [
-            { type: 'text', text: msg.content },
-            { 
-              type: 'image_url', 
-              image_url: { 
-                url: msg.image 
-              } 
-            }
-          ]
-        };
+        const raw = String(msg.image);
+        const match = raw.match(/^data:([^;]+);base64,(.*)$/);
+        if (match) {
+          parts.push({ inline_data: { mime_type: match[1], data: match[2] } });
+        }
       }
-      return msg;
+
+      return {
+        role: msg.role === 'assistant' ? 'model' : 'user',
+        parts: parts.length ? parts : [{ text: '' }],
+      };
     });
 
-    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'google/gemini-2.5-flash',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          ...formattedMessages
-        ],
-        max_tokens: 300,
-        temperature: 0.7,
-      }),
-    });
+    const aiResponse = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+      {
+        method: 'POST',
+        headers: {
+          'X-goog-api-key': GEMINI_API_KEY,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: systemPrompt }] },
+          contents,
+          generationConfig: {
+            maxOutputTokens: 300,
+            temperature: 0.7,
+          },
+        }),
+      }
+    );
 
     if (!aiResponse.ok) {
       const errorText = await aiResponse.text();
-      console.error('AI Gateway error:', aiResponse.status, errorText);
-      
+      console.error('Gemini API error:', aiResponse.status, errorText);
+
       if (aiResponse.status === 429) {
         return new Response(
           JSON.stringify({ 
@@ -211,11 +214,15 @@ Remember: You're Mira - helpful, friendly, and always here to help gamers level 
         );
       }
       
-      throw new Error(`AI Gateway error: ${aiResponse.status}`);
+      throw new Error(`Gemini API error: ${aiResponse.status}`);
     }
 
     const data = await aiResponse.json();
-    const botResponse = data.choices?.[0]?.message?.content;
+    const botResponse = data.candidates?.[0]?.content?.parts
+      ?.map((p: any) => p.text)
+      .filter(Boolean)
+      .join('\n')
+      .trim();
 
     if (!botResponse) {
       throw new Error('No response from AI');
