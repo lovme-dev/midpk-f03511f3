@@ -15,7 +15,8 @@ import {
   BellRing,
   MessageSquare,
   TrendingUp,
-  Gift
+  Gift,
+  ShoppingBag
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -41,6 +42,7 @@ const sidebarItems = [
   { id: 'notification-history', label: 'Notification History', icon: History },
   { id: 'pubg-uc-management', label: 'PUBG UC Management', icon: Package },
   { id: 'packages', label: 'UC Packages', icon: Package },
+  { id: 'shop-products', label: 'Shop Products', icon: ShoppingBag },
   { id: 'pubg-accounts', label: 'PUBG Accounts', icon: Package },
   { id: 'blogs', label: 'Blog Management', icon: FileText },
   { id: 'banners', label: 'PUBG Banners', icon: Image },

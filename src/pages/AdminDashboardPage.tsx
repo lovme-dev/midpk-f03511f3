@@ -19,6 +19,7 @@ import { CustomerInquiries } from '@/components/admin/CustomerInquiries';
 import { RevenueAnalytics } from '@/components/admin/RevenueAnalytics';
 import { RedeemCodesManagement } from '@/components/admin/RedeemCodesManagement';
 import PaymentMethodsManagement from '@/components/admin/PaymentMethodsManagement';
+import ShopProductsManagement from '@/components/admin/ShopProductsManagement';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -335,6 +336,8 @@ export default function AdminDashboardPage() {
         return renderPubgUCManagement();
       case 'packages':
         return renderUCPackages();
+      case 'shop-products':
+        return <ShopProductsManagement />;
       case 'pubg-accounts':
         return <PubgAccountsManagement />;
       case 'blogs':
