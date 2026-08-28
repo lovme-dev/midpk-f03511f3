@@ -204,6 +204,21 @@ export const shopProducts: ShopProduct[] = [
   },
 ];
 
+/** Bundled fallback images keyed by product id (used until admin uploads one) */
+export const staticShopImages: Record<string, string> = shopProducts.reduce(
+  (acc, p) => ({ ...acc, [p.id]: p.image }),
+  {} as Record<string, string>
+);
+
+/** Live (admin-managed) catalog loaded from the database at runtime */
+let liveShopProducts: ShopProduct[] | null = null;
+
+export const setLiveShopProducts = (list: ShopProduct[]) => {
+  liveShopProducts = list.length ? list : null;
+};
+
+export const getShopProductList = (): ShopProduct[] => liveShopProducts ?? shopProducts;
+
 /** Unit label shown next to the product (Royal Pass / Prime / Pack) */
 export const getShopProductLabel = (product: ShopProduct): string => {
   if (product.category === "rp") return "Royal Pass";
@@ -216,13 +231,13 @@ export const getShopProductLabel = (product: ShopProduct): string => {
 export const getShopProductByCode = (code?: string | null): ShopProduct | undefined => {
   if (!code) return undefined;
   const key = code.toLowerCase().trim();
-  return shopProducts.find((p) => p.id.toLowerCase() === key);
+  return getShopProductList().find((p) => p.id.toLowerCase() === key);
 };
 
 export const getShopProductByName = (name?: string | null): ShopProduct | undefined => {
   if (!name) return undefined;
   const key = name.toLowerCase().trim();
-  return shopProducts.find(
+  return getShopProductList().find(
     (p) => p.name.toLowerCase() === key || p.shortTitle.toLowerCase() === key
   );
 };
