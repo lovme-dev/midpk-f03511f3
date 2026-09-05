@@ -27,8 +27,19 @@ interface QuickAction {
   action: () => void;
 }
 
+const MIRA_VIDEOS = [
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_1_alpha.mp4',
+  'https://pagedoo.midasbuy.com/videos/95b10aae8acb8c4164cada3db8c01301-standing_idle_crouch.webm',
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_sleepy_alpha.mp4',
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_wiggle_alpha.mp4',
+];
+const MIRA_MIC_ICON = 'https://pagedoo.midasbuy.com/images/613cf0aa8de4bde4a960d3d4c3805ca2-mic-icon.png';
+
 export function AIChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [miraVideoIndex, setMiraVideoIndex] = useState(0);
+  const [hasMoved, setHasMoved] = useState(false);
+
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -682,60 +693,50 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
 
   return (
     <>
-      {/* Mira Chat Widget Button - Draggable */}
+      {/* Mira Character Widget - Draggable, transparent video loop */}
       <motion.div
         drag
         dragMomentum={false}
         dragElastic={0.1}
         dragConstraints={{
           top: -window.innerHeight + 150,
-          left: -window.innerWidth + 100,
+          left: -window.innerWidth + 120,
           right: 0,
           bottom: 0,
         }}
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-center cursor-grab active:cursor-grabbing touch-none"
+        onDragStart={() => setHasMoved(true)}
+        className="fixed bottom-16 right-0 z-50 flex items-end cursor-grab active:cursor-grabbing touch-none"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
         whileDrag={{ scale: 1.05 }}
       >
-        {/* Mira Character Image - clickable to open chat */}
-        <motion.div
-          className="mb-[-22px] md:mb-[-28px] relative z-0 cursor-pointer"
-          animate={{ y: [0, -3, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        {/* Character video - click to open chat */}
+        <video
+          key={miraVideoIndex}
+          src={MIRA_VIDEOS[miraVideoIndex]}
+          autoPlay
+          muted
+          playsInline
+          onEnded={() => setMiraVideoIndex((i) => (i + 1) % MIRA_VIDEOS.length)}
           onClick={() => setIsOpen(true)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <img 
-            src={miraIcon} 
-            alt="Mira - Click to chat" 
-            className="w-18 h-18 md:w-24 md:h-24 object-contain drop-shadow-lg"
-            style={{ width: '72px', height: '72px' }}
-          />
-        </motion.div>
+          className="w-[92px] h-[92px] md:w-[120px] md:h-[120px] object-contain pointer-events-auto cursor-pointer drop-shadow-lg"
+          style={{ background: 'transparent' }}
+        />
 
-        {/* Mira Button - narrower */}
-        <motion.button
-          onClick={() => setIsOpen(true)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="relative cursor-pointer z-10"
-        >
-          <div 
-            className="flex items-center gap-1 px-2.5 md:px-3.5 py-1 md:py-1.5 rounded-full"
-            style={{
-              background: 'linear-gradient(135deg, #4FC3F7 0%, #2196F3 50%, #1976D2 100%)',
-              boxShadow: '0 0 12px 2px rgba(255, 255, 255, 0.3), 0 0 20px 4px rgba(79, 195, 247, 0.25), inset 0 1px 0 rgba(255,255,255,0.3)',
-              border: '1px solid rgba(255, 255, 255, 0.4)',
-            }}
-          >
-            <Headphones className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-white" />
-            <span className="text-white font-semibold text-[9px] md:text-xs">Mira</span>
-          </div>
-        </motion.button>
+        {/* Mic icon at screen right edge - hides once widget is moved */}
+        {!hasMoved && (
+          <motion.img
+            src={MIRA_MIC_ICON}
+            alt="Voice chat"
+            onClick={() => setIsOpen(true)}
+            className="w-11 h-11 md:w-14 md:h-14 object-contain mb-4 -ml-4 cursor-pointer pointer-events-auto"
+            animate={{ scale: [1, 1.08, 1], opacity: [0.9, 1, 0.9] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          />
+        )}
       </motion.div>
+
 
       {/* Chat Modal - Midasbuy style - mobile: bottom sheet with rounded top corners */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
