@@ -39,6 +39,7 @@ const MIRA_MIC_ICON = 'https://pagedoo.midasbuy.com/images/613cf0aa8de4bde4a960d
 export function AIChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
+  const [miraVideoIndex, setMiraVideoIndex] = useState(0);
   const [hasMoved, setHasMoved] = useState(false);
 
   const [messages, setMessages] = useState<Message[]>([]);
