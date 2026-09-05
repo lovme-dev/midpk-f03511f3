@@ -27,12 +27,8 @@ interface QuickAction {
   action: () => void;
 }
 
-const MIRA_VIDEOS = [
-  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_1_alpha.mp4',
-  'https://pagedoo.midasbuy.com/videos/95b10aae8acb8c4164cada3db8c01301-standing_idle_crouch.webm',
-  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_sleepy_alpha.mp4',
-  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_wiggle_alpha.mp4',
-];
+// Single seamless transparent (alpha) loop built from all idle animations
+const MIRA_LOOP_VIDEO = miraLoopAsset.url;
 const MIRA_MIC_ICON = 'https://pagedoo.midasbuy.com/images/613cf0aa8de4bde4a960d3d4c3805ca2-mic-icon.png';
 
 export function AIChatbotWidget() {
