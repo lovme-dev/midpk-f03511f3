@@ -28,13 +28,24 @@ interface QuickAction {
   action: () => void;
 }
 
-// Original transparent idle animations (crouch clip removed - black background)
-const MIRA_VIDEOS = [
+// Transparent idle animations.
+// Safari/iOS supports HEVC-alpha MP4; Chrome/Android needs VP9-alpha WebM.
+const MIRA_VIDEOS_MP4 = [
   'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_1_alpha.mp4',
   'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_sleepy_alpha.mp4',
   'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_wiggle_alpha.mp4',
 ];
+const MIRA_VIDEOS_WEBM = [mira1Asset.url, miraSleepyAsset.url, miraWiggleAsset.url];
+
+const isAppleWebkit = () => {
+  if (typeof navigator === 'undefined') return false;
+  const ua = navigator.userAgent;
+  return /Safari/.test(ua) && !/Chrome|Chromium|Android|CriOS|FxiOS|Edg/.test(ua);
+};
+
+const MIRA_VIDEOS = isAppleWebkit() ? MIRA_VIDEOS_MP4 : MIRA_VIDEOS_WEBM;
 const MIRA_MIC_ICON = 'https://pagedoo.midasbuy.com/images/613cf0aa8de4bde4a960d3d4c3805ca2-mic-icon.png';
+
 
 export function AIChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
