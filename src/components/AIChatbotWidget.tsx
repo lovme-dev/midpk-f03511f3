@@ -10,7 +10,7 @@ import { useToast } from './ui/use-toast';
 import chatLogo from '../assets/chat-logo.png';
 import botIcon from '../assets/bot-icon.png';
 import miraIconAsset from '../assets/mira-icon.gif.asset.json';
-import miraLoopAsset from '../assets/mira-loop.webm.asset.json';
+
 const miraIcon = miraIconAsset.url;
 import miraProfile from '../assets/mira-profile.jpeg';
 
@@ -28,8 +28,12 @@ interface QuickAction {
   action: () => void;
 }
 
-// Single seamless transparent (alpha) loop built from all idle animations
-const MIRA_LOOP_VIDEO = miraLoopAsset.url;
+// Original transparent idle animations (crouch clip removed - black background)
+const MIRA_VIDEOS = [
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_1_alpha.mp4',
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_sleepy_alpha.mp4',
+  'https://pagedoo.midasbuy.com/videos/124e405a86965a1909f203469c794801-standing_idle_wiggle_alpha.mp4',
+];
 const MIRA_MIC_ICON = 'https://pagedoo.midasbuy.com/images/613cf0aa8de4bde4a960d3d4c3805ca2-mic-icon.png';
 
 export function AIChatbotWidget() {
