@@ -713,24 +713,37 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
         transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
         whileDrag={{ scale: 1.05 }}
       >
-        {/* Character video - single seamless transparent loop, click to open chat */}
-        <video
-          src={MIRA_LOOP_VIDEO}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          onCanPlay={() => setVideoReady(true)}
+        {/* Character video - original transparent clips with seamless crossfade, click to open chat */}
+        <div
+          className="relative w-[92px] h-[92px] md:w-[120px] md:h-[120px] pointer-events-auto cursor-pointer"
           onClick={() => setIsOpen(true)}
-          className="w-[92px] h-[92px] md:w-[120px] md:h-[120px] object-contain pointer-events-auto cursor-pointer transition-opacity duration-300"
-          style={{
-            backgroundColor: 'transparent',
-            opacity: videoReady ? 1 : 0,
-            mixBlendMode: 'normal',
-          }}
-        />
+        >
+          {MIRA_VIDEOS.map((src, i) => (
+            <video
+              key={src}
+              src={src}
+              autoPlay={i === 0}
+              muted
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+              onCanPlay={() => i === 0 && setVideoReady(true)}
+              onEnded={() => setMiraVideoIndex((prev) => (prev + 1) % MIRA_VIDEOS.length)}
+              ref={(el) => {
+                if (el && i === miraVideoIndex && el.paused) {
+                  el.currentTime = 0;
+                  el.play().catch(() => {});
+                }
+              }}
+              className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300"
+              style={{
+                backgroundColor: 'transparent',
+                opacity: videoReady && i === miraVideoIndex ? 1 : 0,
+                mixBlendMode: 'normal',
+              }}
+            />
+          ))}
+        </div>
 
         {/* Mic icon at screen right edge - hides once widget is moved */}
         {!hasMoved && (
