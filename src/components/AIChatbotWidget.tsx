@@ -708,17 +708,23 @@ For gaming issues, screenshots, or payment problems, our agents can help better.
         transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
         whileDrag={{ scale: 1.05 }}
       >
-        {/* Character video - click to open chat */}
+        {/* Character video - single seamless transparent loop, click to open chat */}
         <video
-          key={miraVideoIndex}
-          src={MIRA_VIDEOS[miraVideoIndex]}
+          src={MIRA_LOOP_VIDEO}
           autoPlay
+          loop
           muted
           playsInline
-          onEnded={() => setMiraVideoIndex((i) => (i + 1) % MIRA_VIDEOS.length)}
+          preload="auto"
+          disablePictureInPicture
+          onCanPlay={() => setVideoReady(true)}
           onClick={() => setIsOpen(true)}
-          className="w-[92px] h-[92px] md:w-[120px] md:h-[120px] object-contain pointer-events-auto cursor-pointer drop-shadow-lg"
-          style={{ background: 'transparent' }}
+          className="w-[92px] h-[92px] md:w-[120px] md:h-[120px] object-contain pointer-events-auto cursor-pointer transition-opacity duration-300"
+          style={{
+            backgroundColor: 'transparent',
+            opacity: videoReady ? 1 : 0,
+            mixBlendMode: 'normal',
+          }}
         />
 
         {/* Mic icon at screen right edge - hides once widget is moved */}
