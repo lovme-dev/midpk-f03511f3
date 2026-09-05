@@ -10,6 +10,9 @@ import { useToast } from './ui/use-toast';
 import chatLogo from '../assets/chat-logo.png';
 import botIcon from '../assets/bot-icon.png';
 import miraIconAsset from '../assets/mira-icon.gif.asset.json';
+import mira1Asset from '../assets/mira-1.webm.asset.json';
+import miraSleepyAsset from '../assets/mira-sleepy.webm.asset.json';
+import miraWiggleAsset from '../assets/mira-wiggle.webm.asset.json';
 
 const miraIcon = miraIconAsset.url;
 import miraProfile from '../assets/mira-profile.jpeg';
